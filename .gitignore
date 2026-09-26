@@ -1,43 +1,78 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Compiled output
-/dist
-/build
-/tmp
-/out-tsc
-/bazel-out
+/app/dist
+/app/build
+/app/tmp
+/app/out-tsc
+/app/bazel-out
+
+/templates/dist
+/templates/build
+/templates/tmp
+/templates/out-tsc
+/templates/bazel-out
+
 
 # Node
-/node_modules
-npm-debug.log
-yarn-error.log
+/app/node_modules
+/app/npm-debug.log
+/app/yarn-error.log
+
+/templates/node_modules
+/templates/npm-debug.log
+/templates/yarn-error.log
 
 # IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+/app/.idea/
+/app/.project
+/app/.classpath
+/app/.c9/
+/app/*.launch
+/app/.settings/
+/app/*.sublime-workspace
+
+/templates/.idea/
+/templates/.project
+/templates/.classpath
+/templates/.c9/
+/templates/*.launch
+/templates/.settings/
+/templates/*.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+/app/.vscode/*
+/app/!.vscode/settings.json
+/app/!.vscode/tasks.json
+/app/!.vscode/launch.json
+/app/!.vscode/extensions.json
+/app/.history/*
+
+/templates/.vscode/*
+/templates/!.vscode/settings.json
+/templates/!.vscode/tasks.json
+/templates/!.vscode/launch.json
+/templates/!.vscode/extensions.json
+/templates/.history/*
 
 # Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+/app/.angular/cache
+/app/.sass-cache/
+/app/connect.lock
+/app/coverage
+/app/libpeerconnection.log
+/app/testem.log
+/app/typings
+
+/templates/.angular/cache
+/templates/.sass-cache/
+/templates/connect.lock
+/templates/coverage
+/templates/libpeerconnection.log
+/templates/testem.log
+/templates/typings
+
 
 # System files
-.DS_Store
-Thumbs.db
+/app/.DS_Store
+/app/Thumbs.db
