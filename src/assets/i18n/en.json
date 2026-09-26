@@ -10,7 +10,7 @@
   "empty_exam_subtitle": "Create an exam by clicking on the following button",
   "list_exam": "List of exams",
   "new": "New",
-  "new_quiz": "Create Quiz",
+  "new_quiz": "New Quiz",
   "header_settings": "Settings",
   "header_results": "Results",
   "form_name": "Name",
@@ -25,7 +25,7 @@
   "form_minutes": "Duration (minutes).",
   "form_time": "Time",
   "form_time_required": "Time is required",
-  "form_question": "Question",
+  "form_question": "New Question",
   "form_question_required": "The question is required",
   "form_answer": "New Answer",
   "form_answer_required": "The answer is required",
@@ -113,7 +113,7 @@
   "help_quiz_title": "Write a question that has multiple answer options, remember that only one option can be correct.",
   "help_quiz_options": "Enter the correct answer and click the radio button to select it",
   "answer_text_default": "Question",
-  "answer_option_text_default": "Answer",
+  "answer_option_text_default": "New Answer",
   "answer_option_correct_text_default": "Correct Answer",
   "attempt_error_generation": "An error occurred while generating the attempt; please try again."
 }

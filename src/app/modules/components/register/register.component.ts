@@ -1,4 +1,4 @@
-import { Component, OnInit, QueryList, ViewChildren, ViewEncapsulation, } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, QueryList, ViewChildren, ViewEncapsulation, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { SettingsDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
@@ -17,6 +17,7 @@ import { MorphIconComponent } from 'src/app/shared/components/morph-icon/morph-i
 })
 export class RegisterComponent implements OnInit {
   //#region INTERNAL
+  @Output() onChange = new EventEmitter();
   @ViewChildren(MorphIconComponent) morphIcons!: QueryList<MorphIconComponent>;
 
   form: FormGroup;
@@ -200,7 +201,7 @@ export class RegisterComponent implements OnInit {
 
   prev() {
     const nav = this.getCurrentNav();
-    if(nav.index > 0) {
+    if (nav.index > 0) {
       const newIndex = nav.index - 1;
       const keys = Object.keys(this.sections);
       console.log('index: ', keys[newIndex]);
@@ -209,7 +210,7 @@ export class RegisterComponent implements OnInit {
   }
   next() {
     const nav = this.getCurrentNav();
-    if(nav.index < nav.total - 1) {
+    if (nav.index < nav.total - 1) {
       const newIndex = nav.index + 1;
       const keys = Object.keys(this.sections);
       console.log('index: ', keys[newIndex]);
@@ -218,9 +219,14 @@ export class RegisterComponent implements OnInit {
   }
 
   private async _changeSection(key: string) {
+    this.changeMainBackground(key);
     this.resetSections();
     await this.uxUtils.wait(300);
     this.sections[key] = true;
+  }
+
+  changeMainBackground(value: string) {
+    this.onChange.emit({ action: 'ui_update', value: value });
   }
   //#endregion EVENTS
 }

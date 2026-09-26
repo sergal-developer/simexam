@@ -1,0 +1,71 @@
+<div class="root-header" *ngIf="false">
+
+    <ng-container *ngIf="mode == 'settings'">
+        <div class="root-header aling-left">
+            <div class="item clickable" (click)="gotoDashboard()">
+                <h1> <span class="material-icons">arrow_back</span> </h1>
+            </div>
+            <div class="item">
+                <h2>{{ 'header_settings' | translate }}</h2>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="mode == 'quiz'">
+        <div class="root-header aling-left" (click)="gotoDashboard()">
+            <div class="item clickable">
+                <h1> <span class="material-icons">arrow_back</span></h1>
+            </div>
+            <div class="item title">
+                <h2 *ngIf="title">{{ title }}</h2>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="mode == 'quizeditable'">
+        <div class="root-header aling-left">
+            <div class="item clickable" (click)="gotoDashboard()">
+                <h1> <span class="material-icons">arrow_back</span></h1>
+            </div>
+            <div class="item">
+                <h2 *ngIf="title">{{ title }}</h2>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="mode == 'result'">
+        <div class="root-header aling-left">
+            <div class="item clickable" (click)="gotoDashboard()">
+                <h1> <span class="material-icons">arrow_back</span></h1>
+            </div>
+            <div class="item">
+                <h2>{{ 'header_results' | translate }}</h2>
+            </div>
+        </div>
+    </ng-container>
+
+</div>
+
+<section-dinamic design="glass" className="rounded">
+    <ng-container *ngIf="mode == 'dashboard'">
+        <div class="_navbarBottom">
+            <div class="_nav_item">
+                <div class="avatar" *ngIf="profile">
+                    <img [attr.src]="profile.avatarUrl">
+                </div>
+
+                <div>{{ profile.userName }}</div>
+            </div>
+
+            <div class="_nav_item">
+                <lu-icon [icon]="luIcon.add" (click)="onNewQuiz()"></lu-icon>
+                <div class="_nav_title">{{ 'new' | translate }}</div>
+            </div>
+
+            <div class="_nav_item" (click)="gotoSettings()">
+                <div class="_nav_title">{{ 'header_settings' | translate }}</div>
+                <lu-icon [icon]="luIcon.settings"></lu-icon>
+            </div>
+        </div>
+    </ng-container>
+
+</section-dinamic>

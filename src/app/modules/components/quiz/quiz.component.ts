@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } from '@angular/core';
-import { AttemptAnswerDTO, AttemptDTO, AttemptState, GradeState, QuizAnswerOptionDTO, QuizDTO } from 'src/app/shared/data/entities/dtos';
+import { icons } from 'lucide';
+import { AttemptAnswerDTO, AttemptDTO, AttemptState, GradeState, QuizAnswerOptionDTO } from 'src/app/shared/data/entities/dtos';
 import { ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
@@ -18,12 +19,13 @@ export class QuizComponent implements OnInit {
   attempt: AttemptDTO = null;
   currentAnswerIndex = 0;
   currentAnswer: AttemptAnswerDTO = null;
+  numrows = '_1';
 
   readonly = false;
   progress = 0;
   progresStyle = '';
   savingData = false;
-  currentSection = 'show';
+  currentSection: 'quiz' | 'results' = 'quiz';
 
   _gradeState = GradeState;
   gradePassedScore = 75;
@@ -35,6 +37,24 @@ export class QuizComponent implements OnInit {
   settings = null
   
   redirect = { module: ScreenEnum.dashboard, action: '' };
+
+  luIcon = {
+      language: icons.Globe,
+      user: icons.UserRound,
+      avatar: icons.SquareUserRound,
+      left: icons.ChevronLeft,
+      right: icons.ChevronRight,
+      register: icons.UserPlus,
+      back: icons.ArrowLeft,
+      save: icons.SaveAll,
+
+      unchecked: icons.CircleDashed,
+      checked: icons.CircleDashedCheck,
+      selected: icons.CircleDot,
+      correct: icons.CircleCheckBig,
+      incorrect: icons.CircleX,
+      results: icons.ListChecks,
+    }
   //#endregion INTERNAL
 
   constructor(private commonServices: CommonServices,
@@ -81,6 +101,10 @@ export class QuizComponent implements OnInit {
       }
 
       if (this.attempt.state == 'completed') {
+        if(this.attempt.grade == GradeState.not_submitted) {
+          this.attempt = await this.evalueAttemptById(this.attempt.attemptId);
+        }
+
         this.attempt._score = this.attempt.score.toFixed(2);
         this.showFinishPage();
       }
@@ -105,7 +129,7 @@ export class QuizComponent implements OnInit {
 
     // this.readonly = this.attempt.state == AttemptState.completed;
     this.currentAnswerIndex = 0;
-    // this.currentAnswer = this.attempt.answers[this.currentAnswerIndex];
+    this.assigCurrentAnswer();
 
     this.getProgress();
     if (this.readonly) {
@@ -115,6 +139,11 @@ export class QuizComponent implements OnInit {
 
   async getAttemptData(id: number): Promise<AttemptDTO> {
     let attempt: AttemptDTO = await this.commonServices.getAttemptCompleteByAttemptId(id);
+    return attempt;
+  }
+
+  async evalueAttemptById(id: number): Promise<AttemptDTO> {
+    let attempt: AttemptDTO = await this.commonServices.evalueAttemptById(id);
     return attempt;
   }
 
@@ -157,7 +186,7 @@ export class QuizComponent implements OnInit {
     if (this.readonly) { return; }
 
     if (option._chosenAnswer) {
-      this.nextAnswer();
+      this.nextQuestion();
     } else {
       // reset all selections
       this.currentAnswer.options.map(opt => {
@@ -168,23 +197,22 @@ export class QuizComponent implements OnInit {
     this.currentAnswer.selectedOptionId = option.optionId;
   }
 
-  prevAnswer() {
+  prevQuestion() {
     if (this.currentAnswerIndex == 0) {
       return;
     }
 
     this.currentAnswerIndex = this.currentAnswerIndex - 1;
-    this.currentAnswer = this.attempt.answers[this.currentAnswerIndex];
-    this.updateResults();
+    this.assigCurrentAnswer();
   }
 
-  nextAnswer() {
+  nextQuestion() {
     if (this.currentAnswerIndex >= this.attempt.answers.length - 1) {
       return;
     }
 
     this.currentAnswerIndex = this.currentAnswerIndex + 1;
-    this.currentAnswer = this.attempt.answers[this.currentAnswerIndex];
+    this.assigCurrentAnswer();
     this.updateResults();
   }
 
@@ -206,28 +234,28 @@ export class QuizComponent implements OnInit {
   }
 
   showFinishPage() {
-    this.currentSection = 'show_2';
+    this.currentSection = 'results';
     this.valueChange('secondary');
   }
 
   showQuiz() {
     this.setupComponent();
-    this.currentSection = 'show';
+    this.currentSection = 'quiz';
     this.valueChange('primary');
     this.gotoQuestion(0);
   }
 
   closeResults() {
-    this.currentSection = 'show';
+    this.currentSection = 'quiz';
     this.valueChange('primary');
   }
 
   gotoQuestion(index) {
     this.currentAnswerIndex = index;
     this.getProgress();
-    this.currentSection = 'show';
+    this.currentSection = 'quiz';
     this.valueChange('primary');
-    this.currentAnswer = this.attempt.answers[this.currentAnswerIndex];
+    this.assigCurrentAnswer();
   }
 
   gotoDashboard() {
@@ -258,7 +286,6 @@ export class QuizComponent implements OnInit {
 
   //#region CONVERTERS
   async getAssessment() {
-
     const reponse = await this.commonServices.saveAllAttempt(this.attempt)
     const attempt = await this.commonServices.evalueAttemptById(reponse.attemptId);
     this.attempt = attempt;
@@ -269,6 +296,13 @@ export class QuizComponent implements OnInit {
     zoomLevel = zoomLevel || "100%";
     const num = parseInt(zoomLevel.replace('%', ''));
     return `${num / 100}x`;
+  }
+
+  assigCurrentAnswer() {
+    this.currentAnswer = this.attempt.answers[this.currentAnswerIndex];
+    const lengths = this.currentAnswer.options.map(x => { return x.content.length });
+    const maxLength = lengths.sort((a, b) => a - b);
+    this.numrows = maxLength[maxLength.length - 1] > 14 ? '_1' : '_2';
   }
   //#endregion CONVERTERS
 }

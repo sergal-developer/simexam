@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { v4 as uuidv4 } from 'uuid';
-import { AttemptAnswerDTO, AttemptDTO, AttemptState, LogDTO, QuizAnswerDTO, QuizAnswerOptionDTO, QuizDTO, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO, getAttemptDTO, getAttemptDTOValid, getPermissionsDTO, getQuizDTOValid, getSettingsDTO, normalizeAttemptDTO, normalizeQuizDTO } from '../data/entities/dtos';
+import { AttemptAnswerDTO, AttemptDTO, AttemptState, GradeState, LogDTO, QuizAnswerDTO, QuizAnswerOptionDTO, QuizDTO, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO, getAttemptDTO, getAttemptDTOValid, getGrade, getPermissionsDTO, getQuizDTOValid, getSettingsDTO, normalizeAttemptDTO, normalizeQuizDTO } from '../data/entities/dtos';
 import { DatabaseService } from './database/sql.database.service';
 
 @Injectable()
@@ -270,6 +270,8 @@ export class CommonServices {
 
     attempt.score = (correctAnswers.length * 100) / total;
     attempt.state = AttemptState.completed;
+    attempt.grade = getGrade(attempt);
+    console.log('attempt: ', attempt);
 
     attempt = await this.saveAllAttempt(attempt);
     return normalizeAttemptDTO(attempt);

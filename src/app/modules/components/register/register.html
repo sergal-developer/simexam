@@ -1,11 +1,4 @@
 <div class="_animation_state {{ uistate }}">
-    <!-- <div class="root-hero ">
-        <div class="image">
-            <img src="../../assets/people.svg" alt="">
-        </div>
-    </div> -->
-
-
     <div class="root-container register-form">
         <section-dinamic design="glass">
             <div class="simple-section" *ngIf="sections.language">
@@ -82,7 +75,7 @@
             </div>
         </section-dinamic>
 
-        <section-dinamic design="acrilic" className="rounded">
+        <section-dinamic design="glass" className="rounded">
             <div class="_navbarBottom">
 
                 <div class="_nav_item _nav_action _prev" (click)="prev()" [attr.disabled]="sections.language">
@@ -116,67 +109,5 @@
 
             </div>
         </section-dinamic>
-
-        <div class="simple-section" *ngIf="false">
-            <div class="_content">
-
-
-                <h1>{{ 'register_title_question' | translate }}</h1>
-
-                <form [formGroup]="form">
-                    <div class="mat-form-field">
-                        <mat-input [title]="'form_name' | translate" [mesageError]="'form_name_required' | translate"
-                            [formControl]="form.get('name')">
-                        </mat-input>
-                    </div>
-
-
-                    <div class="mat-form-field">
-                        <div>
-                            <div class="mat-label-text">{{ 'form_image' | translate }}</div>
-                        </div>
-                        <div class="_collection">
-                            <div class="avatar-image" *ngFor="let item of defaultAvatars"
-                                [ngClass]="{'selected': item.selected }" (click)="selectAvatar(item)">
-                                <img [attr.src]="item.url" [attr.alt]="item.url">
-                            </div>
-                        </div>
-
-                        <div class="mat-error"
-                            *ngIf="form.get('image').invalid && (form.get('image').dirty || form.get('image').touched)"
-                            [ngClass]="{'error': form.get('image').errors }">
-                            <div *ngIf="form.get('image').errors">
-                                {{ mesageError }}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mat-form-field">
-                        <div class="mat-label-text">
-                            <label for="legal" class="mat-checkbox">
-                                <input type="checkbox" id="legal" [formControl]="form.get('legal')">
-                                <div>
-                                    {{ 'help_accept_terms' | translate }}
-                                    <a href="https://sergal.site/#/legal/simexam/terms" target="_blank">{{
-                                        'terms_conditions' | translate }}</a>, {{ 'help_accept_terms_join' | translate
-                                    }}
-                                    <a href="https://sergal.site/#/legal/simexam/privacy" target="_blank">{{
-                                        'privacy_policy' | translate }} </a>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="mat-form-field">
-                        <div class="_collection">
-                            <button (click)="register()" type="submit" [disabled]="!validateData()">
-                                {{ 'singup' | translate }}
-                            </button>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-        </div>
     </div>
 </div>

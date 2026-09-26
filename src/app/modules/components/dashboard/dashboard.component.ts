@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { QuizAnswerDTO, PermissionsDTO, AttemptDTO, QuizDTO, UserDTO, AttemptState, SettingsDTO } from 'src/app/shared/data/entities/dtos';
+import { BookCheck, icons } from 'lucide';
+import { AttemptDTO, AttemptState, PermissionsDTO, QuizAnswerDTO, QuizDTO, SettingsDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
 import { TransformData } from 'src/app/shared/data/utils/transformData';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
@@ -15,8 +16,9 @@ export class DashboardComponent implements OnInit {
   @Input() selected: number = null;
 
   listQuiz: QuizDTO[] = [];
+  showListQuiz = true;
   currentQuiz: QuizDTO = null;
-  currentSection = 'show';
+  currentSection = '_one';
   listAttempts: AttemptDTO[] = [];
   uistate = 'init';
 
@@ -34,6 +36,19 @@ export class DashboardComponent implements OnInit {
   translateLabels = {
     attempt_error_generation: '',
   };
+
+  luIcon = {
+    language: icons.Globe,
+    empty: icons.SquareDashedKanban,
+    avatar: icons.SquareUserRound,
+    return: icons.ChevronLeft,
+    add: icons.CirclePlus,
+    settings: icons.Settings,
+    attempts: icons.ChevronRight,
+
+    exam: icons.NotebookText,
+    examOpen: icons.BookOpenText,
+  }
 
   constructor(private commonServices: CommonServices,
     private uiServices: UiServices,
@@ -68,7 +83,9 @@ export class DashboardComponent implements OnInit {
     this.uiServices.showLoader(true);
     const list = await this.commonServices.getAllQuizs();
     if (list) {
-      this.listQuiz = list;
+      this.listQuiz = this.normalizeQuiz(list);
+      console.log('this.listQuiz: ', this.listQuiz);
+      this.currentSection = this.listQuiz.length ? '_two' : '_one';
     }
 
     if (this.selected) {
@@ -84,6 +101,8 @@ export class DashboardComponent implements OnInit {
   async getAttempts(quiz: QuizDTO) {
     const attempts = await this.commonServices.getAttemptByQuizId(quiz.quizId);
     this.listAttempts = attempts && attempts.length ? this.normalizeAttempt(attempts) : [];
+    console.log('this.listAttempts: ', this.listAttempts);
+    // this.showListQuiz = this.listQuiz.length ? true : false;
   }
 
   async createattempt() {
@@ -138,6 +157,11 @@ export class DashboardComponent implements OnInit {
     this.commonServices.navigate('quizcreate');
   }
 
+  selectQuiz() {
+    console.log('selectQuiz: ');
+    this.commonServices.navigate('quizselection');
+  }
+
   editQuiz(quiz: QuizDTO) {
     this.commonServices.navigate('quizedit', quiz.quizId.toString());
   }
@@ -172,7 +196,7 @@ export class DashboardComponent implements OnInit {
     this.listQuiz.map((item) => {
       item._current = quiz.quizId == item.quizId;
     });
-    this.currentSection = 'show_2';
+    this.currentSection = '_three';
     this.currentQuiz = quiz;
     this.getAttempts(this.currentQuiz);
 
@@ -184,27 +208,51 @@ export class DashboardComponent implements OnInit {
 
     this.valueChange('secondary');
     this.commonServices.navigate('dashboard', this.currentQuiz.quizId.toString());
+    setTimeout(() => {
+      // this.showListQuiz = false;
+    }, 1000);
   }
 
   returnMain() {
-    this.currentSection = 'show';
-    this.listQuiz.map((item) => {
-      item._current = false;
-    });
-    this.currentQuiz = null;
-    this.valueChange('primary');
+    this.currentSection = '_two';
+    setTimeout(() => {
+      this.listQuiz.map((item) => {
+        item._current = false;
+      });
+      this.currentQuiz = null;
+      this.valueChange('primary');
 
-    this.commonServices.navigate('dashboard');
+      this.commonServices.navigate('dashboard');
+      this.showListQuiz = true;
+    }, 500);
   }
 
   valueChange(value: string) {
     this.onChange.emit({ action: 'ui_update', value: value });
+  }
+
+  onAction(evt: { event: string, value: any }) {
+    if (evt.event == 'create' && evt.value == "quiz") {
+      // this.selectQuiz();
+      this.createQuiz();
+    }
+
   }
   //#endregion EVENTS
 
   //#region CONVERTERS
   normalizeAttempt(list: AttemptDTO[]) {
     list.map((item) => {
+      item._startDate = this.transform.toDate(new Date(item.startDate), 'MMM/d/yy h:mm');
+      item._updatedDate = this.transform.toDate(new Date(item.updatedDate), 'MMM/d/yy h:mm');
+      item._score = `${item.score}%`;
+    })
+    return list;
+  }
+
+  normalizeQuiz(list: QuizDTO[]) {
+    list.map((item) => {
+      item._creationDate = this.transform.toDate(new Date(item.creationDate), 'MMM/d/yy h:mm');
       item._startDate = this.transform.toDate(new Date(item.startDate), 'MMM/d/yy h:mm');
       item._updatedDate = this.transform.toDate(new Date(item.updatedDate), 'MMM/d/yy h:mm');
     })

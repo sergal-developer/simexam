@@ -10,7 +10,7 @@
   "empty_exam_subtitle": "Crea un examen dando clic en el siguiente botón",
   "list_exam": "Lista de exámenes",
   "new": "Nuevo",
-  "new_quiz": "Crear Examen",
+  "new_quiz": "Nuevo Examen",
   "header_settings": "Configuración",
   "header_results": "Resultados",
   "form_name": "Nombre",
@@ -25,7 +25,7 @@
   "form_minutes": "Duración (minutos).",
   "form_time": "Tiempo",
   "form_time_required": "El tiempo es requerido",
-  "form_question": "Pregunta",
+  "form_question": "Nueva Pregunta",
   "form_question_required": "La pregunta es requerida",
   "form_answer": "Nueva Respuesta",
   "form_answer_required": "La respuesta es requerida",
@@ -113,7 +113,7 @@
   "help_quiz_title": "Escriba una pregunta que tenga múltiples opciones de respuesta, recuerda que solo una opcion puede ser correcta.",
   "help_quiz_options": "Escribe la respuesta correcta y da click en el radio para marcarla",
   "answer_text_default": "¿Pregunta",
-  "answer_option_text_default": "Respuesta",
+  "answer_option_text_default": "Nueva Respuesta",
   "answer_option_correct_text_default": "Respuesta Correcta",
   "attempt_error_generation": "Se produjo un error al generar el intento; por favor, inténtelo de nuevo."
 }

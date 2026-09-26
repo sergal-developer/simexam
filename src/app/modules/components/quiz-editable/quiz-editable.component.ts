@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, ViewEncapsulation, } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
+import { icons } from 'lucide';
 import { getQuizAnswerDTO, getQuizAnswerOptionDTO, getQuizDTO, normalizeQuizDTO, QuizAnswerDTO, QuizAnswerOptionDTO, QuizDTO, SettingsDTO } from 'src/app/shared/data/entities/dtos';
 import { Utils } from 'src/app/shared/data/utils/utils';
 import { CommonServices } from 'src/app/shared/services/common.services';
@@ -57,6 +58,17 @@ export class QuizEditableComponent implements OnInit {
   settings: SettingsDTO = null;
   isEdit = false;
   _helper = new Utils();
+
+  luIcon = {
+    language: icons.Globe,
+    user: icons.UserRound,
+    avatar: icons.SquareUserRound,
+    left: icons.ChevronLeft,
+    right: icons.ChevronRight,
+    register: icons.UserPlus,
+    back: icons.ArrowLeft,
+    save: icons.SaveAll
+  }
   //#endregion INTERNAL
 
   constructor(private commonServices: CommonServices,

@@ -373,10 +373,11 @@ export function getGrade(attempt: AttemptDTO) {
     return GradeState.barely_passed;
   } else if (correctAnswer <= passing_aceptable) {
     return GradeState.passed;
+  } else if (correctAnswer <= passing_perfect) {
+    return GradeState.passed;
   } else if (correctAnswer == passing_perfect) {
     return GradeState.perfect;
   }
-
   return GradeState.not_submitted;
 }
 

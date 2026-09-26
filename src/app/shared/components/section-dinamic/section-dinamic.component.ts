@@ -20,7 +20,7 @@ export class SectionDinamicComponent implements AfterViewInit, OnChanges, OnDest
     className: string = '';
 
     @Input()
-    design: 'acrilic' | 'glass' | 'gold' = 'acrilic';
+    design: 'none' | 'acrilic' | 'glass' | 'gold' = 'none';
 
     @Input()
     minHeight = 30;

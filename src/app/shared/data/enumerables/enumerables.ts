@@ -10,6 +10,7 @@ export enum ScreenEnum {
 
     settings = 'settings',
     quiz = 'quiz',
+    quizselection = 'quizselection',
     quizcreate = 'quizcreate',
     quizedit = 'quizedit',
     attemptevalue = 'attemptevalue',

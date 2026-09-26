@@ -1,19 +1,95 @@
+<div class="_animation_state" *ngIf="form">
+    <div class="root-container quiz-form">
+        <section-dinamic design="glass">
+            <div class="arrage centers">
+                <div class="item" (click)="gotoDashboard()">
+                    <lu-icon [icon]="luIcon.back"></lu-icon>
+                </div>
+                <div class="item" *ngIf="form">
+                    <mat-input [title]="'form_title' | translate" [mesageError]="'form_title_required' | translate"
+                        [formControl]="form.get('title')">
+                    </mat-input>
+                </div>
+            </div>
+        </section-dinamic>
 
-<div class="root-header aling-left">
-    <div class="item clickable" (click)="gotoDashboard()">
-        <h2> <span class="material-icons">arrow_back</span></h2>
-    </div>
-    <div class="item editable-title" *ngIf="form">
-        <mat-input [title]="'form_title' | translate" [mesageError]="'form_title_required' | translate"
-            [formControl]="form.get('title')">
-        </mat-input>
-    </div>
-    <div class="item editable-title" *ngIf="form && showIAForm">
-        <h2>{{ form.get('title').value }}</h2>
+        <section-dinamic design="glass" *ngIf="formQuestion">
+            <div class="arrage columns paddings _question_section">
+                <div class="item _help_section">
+                    <span class="material-icons _accent color">
+                        help
+                    </span>
+                    <div>{{ 'help_quiz_title' | translate }}</div>
+                </div>
+
+                <div class="item _question_section_quizname">
+                    <mat-input [title]="'form_question' | translate"
+                        [mesageError]="'form_question_required' | translate" [formControl]="formQuestion.get('title')"
+                        [multiline]="true">
+                    </mat-input>
+                </div>
+
+                <div class="item">
+                    <div class="arrage columns" *ngIf="formQuestion.get('options')">
+                        <ng-container *ngIf="formQuestion.get('options').controls">
+                            <ng-container *ngFor="let option of formQuestion.get('options').controls">
+                                <div class="_answer_section arrage stacked spaceBetween"
+                                    [ngClass]="{'correct': option.get('_selected')?.value }">
+                                    <div class="_answer_selection" (click)="selectAnswerCorrect(option)">
+                                        <span *ngIf="!option.get('_selected').value" class="material-icons">
+                                            radio_button_unchecked
+                                        </span>
+                                        <span *ngIf="option.get('_selected').value" class="material-icons">
+                                            verified</span>
+                                    </div>
+                                    <div class="_answer_text">
+                                        <mat-input class="flat-form" [title]="'form_answer' | translate"
+                                            [mesageError]="'form_answer_required' | translate"
+                                            [formControl]="option.get('content')" [formName]="'content'"
+                                            [multiline]="true" (onChange)="onOptionChange($event, option)">
+                                        </mat-input>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </section-dinamic>
+
+
+        <section-dinamic class="_navbarFixedBottom" design="glass" className="rounded">
+            <div class="_navbarBottom">
+
+                <button class="_nav_item _nav_action _prev" (click)="prevQuestion()" [disabled]="!currentAnswerIndex">
+                    <lu-icon [icon]="luIcon.left"></lu-icon><span>{{ 'action_prev' | translate }}</span>
+                </button>
+
+                <div class="_nav_item_collection">
+                    <button class="_nav_item" *ngIf="quiz && settings">
+                        <div class="step-counter" *ngIf="quiz.answers.length != 1">
+                            {{ currentAnswerIndex + 1 }} : {{ quiz.answers.length }}
+                        </div>
+                        <div class="step-counter" *ngIf="quiz.answers.length == 1">
+                            {{ quiz.answers.length }}
+                        </div>
+                    </button>
+                </div>
+
+                <button class="_nav_item _nav_action _next" (click)="nextQuestion()" [disabled]="!validActions">
+                    <span>{{ 'action_next' | translate }}</span><lu-icon [icon]="luIcon.right"></lu-icon>
+                </button>
+
+                <button class="_nav_item _nav_action _next _register" (click)="finishCreation()" [disabled]="!validActions"
+                    *ngIf="quiz && quiz.answers.length > 1"><lu-icon [icon]="luIcon.save"></lu-icon>
+                </button>
+
+            </div>
+        </section-dinamic>
     </div>
 </div>
 
-<div class="timer-status" *ngIf="quiz && settings">
+<div class="timer-status" *ngIf="false">
     <ng-container *ngIf="!showIAForm">
         <div class="step-counter">
             <span>{{ 'form_total_question' | translate }}:</span> {{ currentAnswerIndex + 1 }} {{ 'form_of_range' |
@@ -57,7 +133,7 @@
     </div> -->
 </div>
 
-<div class="root-container">
+<div class="root-container" *ngIf="false">
     <ng-container>
         <div class="simple-section" *ngIf="formQuestion">
             <div class="_question">
@@ -71,18 +147,19 @@
                     </div>
 
                     <mat-input [title]="'form_question' | translate"
-                        [mesageError]="'form_question_required' | translate"
-                        [formControl]="formQuestion.get('title')" [multiline]="true">
+                        [mesageError]="'form_question_required' | translate" [formControl]="formQuestion.get('title')"
+                        [multiline]="true">
                     </mat-input>
                 </div>
 
                 <div class="exam-section _help">
-                        <span class="material-icons _accent color">
-                            help
-                        </span>
-                        <div>{{ 'help_quiz_options' | translate }}</div>
-                    </div>
-                <div class="_answer_collection gray-backdrop drop-padding drop-bottom" *ngIf="formQuestion.get('options')">
+                    <span class="material-icons _accent color">
+                        help
+                    </span>
+                    <div>{{ 'help_quiz_options' | translate }}</div>
+                </div>
+                <div class="_answer_collection gray-backdrop drop-padding drop-bottom"
+                    *ngIf="formQuestion.get('options')">
                     <ng-container *ngIf="formQuestion.get('options').controls">
                         <ng-container *ngFor="let option of formQuestion.get('options').controls">
                             <div class="_answer flat" [ngClass]="{'correct': option.get('_selected')?.value }">
@@ -122,7 +199,8 @@
                         </div>
                     </button> -->
 
-                    <button class="primary" (click)="finishCreation()" [disabled]="!validActions" *ngIf="quiz && quiz.answers.length > 1">
+                    <button class="primary" (click)="finishCreation()" [disabled]="!validActions"
+                        *ngIf="quiz && quiz.answers.length > 1">
                         <div class="inner">
                             {{ 'action_finish' | translate }}
                         </div>
@@ -137,8 +215,9 @@
                         </div>
                     </button>
 
-                    
+
                 </div>
+
             </div>
         </div>
     </ng-container>

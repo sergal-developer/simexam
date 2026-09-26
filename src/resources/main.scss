@@ -8,6 +8,7 @@
     --primary: #174FA1;
     --primaryBackground: #174FA1;
     --primaryBackgroundHover: #346ec5;
+    --primaryBackgroundHoverO: #c1d2ec30;
     --primaryColor: #FFFCFF;
 
     --secondary: #B30ECF;
@@ -76,8 +77,16 @@
     --stadisticBackground: rgba(0, 0, 0, 0.5);
 
     --zoomLevel: 100%;
-}
 
+    --space-joined: 4px;
+    --space-direct: 8px;
+    --space-relation: 12px;
+    --space-def: 16px;
+    --space-group: 24px;
+    --space-separation: 32px;
+    --space-section: 48px;
+    --space-block: 64px;
+}
 
 @import './theme/core/reset';
 @import './theme/core/refs';

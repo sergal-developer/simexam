@@ -39,10 +39,11 @@ $loaderWidth: 40px;
 
 .main-loader {
     position: fixed;
-    bottom: 40px;
+    bottom: 15%;
     right: 0px;
     left: 0px;
     margin: 0 auto;
+    z-index: 200;
     width: $loaderWidth;
 }
 
