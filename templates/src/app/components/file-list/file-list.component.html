@@ -1,0 +1,93 @@
+<div class="page">
+  <header class="page__header">
+    <h1>Listado de archivos</h1>
+    <p>Ordena y filtra los archivos de la carpeta seleccionada.</p>
+  </header>
+
+  <div class="toolbar">
+    <label class="search">
+      <span class="material-icons">search</span>
+      <input
+        type="search"
+        [value]="filter"
+        [placeholder]="searchPlaceholder"
+        (input)="onSearch($event)"
+      />
+    </label>
+
+    <button class="btn" type="button" (click)="toggleSortDirection()">
+      <span class="material-icons">swap_vert</span>
+      Ordenar
+    </button>
+
+    <button class="btn btn--primary" type="button" (click)="refresh.emit()">
+      <span class="material-icons">refresh</span>
+      Recargar
+    </button>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th
+            *ngFor="let col of columns"
+            [ngClass]="col.class"
+            [attr.aria-sort]="ariaSort(col.key)"
+            (click)="sortBy(col.key)"
+          >
+            {{ col.label }}
+            <span class="material-icons">arrow_upward</span>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr
+          *ngFor="let row of rows; trackBy: trackByName"
+          [class.is-selected]="row.isSelected"
+          [class.is-empty]="row.file.isEmpty"
+          (click)="selectRow(row)"
+        >
+          <td>
+            <div class="cell-name" [class.cell-name--dir]="row.file.isDirectory">
+              <span class="material-icons">{{ row.icon }}</span>
+              <span [title]="row.file.path || row.file.name">{{ row.file.name }}</span>
+            </div>
+          </td>
+          <td class="col-type">
+            <span class="badge" [class.badge--dir]="row.file.isDirectory">{{ row.ext }}</span>
+            <span
+              class="badge badge--empty"
+              *ngIf="row.file.isEmpty"
+              title="El archivo está vacío (0 bytes): no contiene un quiz."
+              >vacío</span
+            >
+          </td>
+          <td class="col-size cell-size">{{ row.sizeLabel }}</td>
+          <td class="col-date cell-date">
+            {{ row.file.isDirectory ? '—' : row.file.modified }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="empty" *ngIf="rows.length === 0">
+      <span class="material-icons">folder_off</span>
+      <ng-container *ngIf="files.length > 0; else noFiles">
+        Ningún archivo coincide con el filtro.
+      </ng-container>
+      <ng-template #noFiles>
+        No hay archivos. Ejecuta <code>npm run manifest</code> para regenerar el
+        manifiesto de <code>src/assets</code>.
+      </ng-template>
+    </div>
+
+    <div class="table-footer">
+      <span>{{ folderPath }}</span>
+      <span>
+        <strong>{{ fileCount }}</strong> archivos &middot; <strong>{{ totalSizeLabel }}</strong>
+      </span>
+    </div>
+  </div>
+</div>

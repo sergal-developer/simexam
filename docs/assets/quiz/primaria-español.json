@@ -1,0 +1,458 @@
+{
+  "title": "Cuestionario de Español para Primaria",
+  "time": 0,
+  "tags": ["español", "primaria", "gramática", "ortografía"],
+  "answers": [
+    {
+      "title": "¿Cuál de las siguientes palabras es un sustantivo?",
+      "explanation": "Un sustantivo es una palabra que nombra personas, animales, lugares, objetos o ideas.",
+      "hint": "Busca la palabra que nombra algo.",
+      "options": [
+        { "content": "perro", "isCorrect": true },
+        { "content": "correr", "isCorrect": false },
+        { "content": "rápido", "isCorrect": false },
+        { "content": "ayer", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra es un verbo?",
+      "explanation": "Los verbos expresan acciones, estados o procesos.",
+      "hint": "Busca una palabra que indique una acción.",
+      "options": [
+        { "content": "casa", "isCorrect": false },
+        { "content": "saltar", "isCorrect": true },
+        { "content": "azul", "isCorrect": false },
+        { "content": "mesa", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra es un adjetivo?",
+      "explanation": "Los adjetivos describen características o cualidades de los sustantivos.",
+      "hint": "Busca una palabra que describa cómo es algo.",
+      "options": [
+        { "content": "bonito", "isCorrect": true },
+        { "content": "correr", "isCorrect": false },
+        { "content": "escuela", "isCorrect": false },
+        { "content": "ayer", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es el plural de 'lápiz'?",
+      "explanation": "La palabra 'lápiz' cambia la z por c al formar el plural y se agrega 'es'.",
+      "hint": "Recuerda la regla de las palabras terminadas en z.",
+      "options": [
+        { "content": "lápizes", "isCorrect": false },
+        { "content": "lápices", "isCorrect": true },
+        { "content": "lápizs", "isCorrect": false },
+        { "content": "lápizeses", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál oración está escrita correctamente?",
+      "explanation": "Las oraciones deben comenzar con mayúscula y terminar con un signo de puntuación adecuado.",
+      "hint": "Observa el inicio de la oración.",
+      "options": [
+        { "content": "mi perro juega en el parque.", "isCorrect": false },
+        { "content": "Mi perro juega en el parque.", "isCorrect": true },
+        { "content": "mi Perro juega en el parque.", "isCorrect": false },
+        { "content": "Mi perro juega en el parque", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra lleva tilde?",
+      "explanation": "La palabra 'árbol' es grave y lleva tilde porque termina en una consonante distinta de n o s.",
+      "hint": "Pronuncia las palabras y observa dónde recae la fuerza de voz.",
+      "options": [
+        { "content": "mesa", "isCorrect": false },
+        { "content": "árbol", "isCorrect": true },
+        { "content": "casa", "isCorrect": false },
+        { "content": "perro", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es una palabra aguda?",
+      "explanation": "Las palabras agudas tienen la sílaba tónica en la última sílaba.",
+      "hint": "Identifica dónde se escucha con mayor fuerza la voz.",
+      "options": [
+        { "content": "canción", "isCorrect": true },
+        { "content": "árbol", "isCorrect": false },
+        { "content": "lápiz", "isCorrect": false },
+        { "content": "música", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es una palabra grave o llana?",
+      "explanation": "Las palabras graves o llanas tienen la sílaba tónica en la penúltima sílaba.",
+      "hint": "Busca la palabra cuya fuerza de voz está en la penúltima sílaba.",
+      "options": [
+        { "content": "camión", "isCorrect": false },
+        { "content": "mesa", "isCorrect": true },
+        { "content": "café", "isCorrect": false },
+        { "content": "ratón", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra es esdrújula?",
+      "explanation": "Las palabras esdrújulas tienen la sílaba tónica en la antepenúltima sílaba y siempre llevan tilde.",
+      "hint": "Busca una palabra con la fuerza de voz en la antepenúltima sílaba.",
+      "options": [
+        { "content": "teléfono", "isCorrect": true },
+        { "content": "pared", "isCorrect": false },
+        { "content": "camión", "isCorrect": false },
+        { "content": "papel", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es el signo correcto para hacer una pregunta?",
+      "explanation": "En español, las preguntas se escriben entre signos de interrogación: ¿ ?",
+      "hint": "Piensa en el signo que usamos al preguntar algo.",
+      "options": [
+        { "content": "¿ ?", "isCorrect": true },
+        { "content": "¡ !", "isCorrect": false },
+        { "content": "( )", "isCorrect": false },
+        { "content": "[ ]", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Qué signos se utilizan para expresar sorpresa o emoción?",
+      "explanation": "Los signos de exclamación se utilizan para expresar sorpresa, emoción, alegría, enojo u otras emociones.",
+      "hint": "Piensa en una oración como: ¡Qué bonito!",
+      "options": [
+        { "content": "¿ ?", "isCorrect": false },
+        { "content": "¡ !", "isCorrect": true },
+        { "content": "( )", "isCorrect": false },
+        { "content": "« »", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Para qué sirve principalmente la coma?",
+      "explanation": "La coma sirve para separar elementos dentro de una oración y señalar pausas breves.",
+      "hint": "Separa elementos de una lista.",
+      "options": [
+        { "content": "Separar elementos de una lista", "isCorrect": true },
+        { "content": "Terminar siempre un texto", "isCorrect": false },
+        { "content": "Indicar una pregunta", "isCorrect": false },
+        { "content": "Sustituir todas las mayúsculas", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Qué signo se utiliza normalmente al final de una oración afirmativa?",
+      "explanation": "El punto se utiliza para señalar el final de una oración o idea.",
+      "hint": "Es un pequeño signo que indica que la oración terminó.",
+      "options": [
+        { "content": "Punto", "isCorrect": true },
+        { "content": "Coma", "isCorrect": false },
+        { "content": "Dos puntos", "isCorrect": false },
+        { "content": "Interrogación", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál oración utiliza correctamente los dos puntos?",
+      "explanation": "Los dos puntos pueden utilizarse para introducir una enumeración.",
+      "hint": "Busca una oración que presente una lista después de los dos puntos.",
+      "options": [
+        { "content": "Compré: pan, leche y fruta.", "isCorrect": true },
+        { "content": "Compré pan: leche y fruta.", "isCorrect": false },
+        { "content": "Compré pan, leche: y fruta.", "isCorrect": false },
+        { "content": "Compré pan leche y fruta:", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra está escrita correctamente?",
+      "explanation": "La forma correcta es 'haber', con h y b.",
+      "hint": "Recuerda que el verbo se escribe con h inicial.",
+      "options": [
+        { "content": "aver", "isCorrect": false },
+        { "content": "haber", "isCorrect": true },
+        { "content": "haver", "isCorrect": false },
+        { "content": "aber", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra está escrita correctamente con b?",
+      "explanation": "La palabra 'biblioteca' se escribe con b.",
+      "hint": "Es el lugar donde encontramos muchos libros.",
+      "options": [
+        { "content": "biblioteca", "isCorrect": true },
+        { "content": "viblioteca", "isCorrect": false },
+        { "content": "bivlioteca", "isCorrect": false },
+        { "content": "vivlioteca", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra está escrita correctamente con v?",
+      "explanation": "La forma correcta es 'ventana', escrita con v.",
+      "hint": "Es algo que permite entrar luz y aire a una habitación.",
+      "options": [
+        { "content": "bentana", "isCorrect": false },
+        { "content": "ventana", "isCorrect": true },
+        { "content": "venttana", "isCorrect": false },
+        { "content": "bentanna", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra se escribe con h?",
+      "explanation": "La palabra 'huevo' lleva h al inicio.",
+      "hint": "Es un alimento que puede venir de las aves.",
+      "options": [
+        { "content": "uevo", "isCorrect": false },
+        { "content": "huevo", "isCorrect": true },
+        { "content": "wevo", "isCorrect": false },
+        { "content": "huévo", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra está escrita correctamente?",
+      "explanation": "La palabra 'guitarra' se escribe con gu antes de la vocal i para conservar el sonido de la g.",
+      "hint": "Es un instrumento musical de cuerdas.",
+      "options": [
+        { "content": "guitarra", "isCorrect": true },
+        { "content": "gitarra", "isCorrect": false },
+        { "content": "juitarra", "isCorrect": false },
+        { "content": "guitara", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra está escrita correctamente con c?",
+      "explanation": "La forma correcta es 'cereza', con c y z.",
+      "hint": "Es una fruta pequeña y generalmente roja.",
+      "options": [
+        { "content": "seresa", "isCorrect": false },
+        { "content": "cereza", "isCorrect": true },
+        { "content": "ceresa", "isCorrect": false },
+        { "content": "sereza", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es el sinónimo de 'feliz'?",
+      "explanation": "Los sinónimos son palabras que tienen significados iguales o muy parecidos. 'Contento' es sinónimo de 'feliz'.",
+      "hint": "Busca una palabra que tenga un significado parecido.",
+      "options": [
+        { "content": "contento", "isCorrect": true },
+        { "content": "triste", "isCorrect": false },
+        { "content": "enojado", "isCorrect": false },
+        { "content": "cansado", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es el antónimo de 'grande'?",
+      "explanation": "Los antónimos son palabras con significados opuestos. El antónimo de 'grande' es 'pequeño'.",
+      "hint": "Busca la palabra que expresa lo contrario.",
+      "options": [
+        { "content": "enorme", "isCorrect": false },
+        { "content": "pequeño", "isCorrect": true },
+        { "content": "alto", "isCorrect": false },
+        { "content": "ancho", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Qué palabra es un pronombre personal?",
+      "explanation": "Los pronombres personales sustituyen al nombre de una persona o grupo.",
+      "hint": "Busca una palabra que pueda sustituir a un nombre.",
+      "options": [
+        { "content": "yo", "isCorrect": true },
+        { "content": "casa", "isCorrect": false },
+        { "content": "bonito", "isCorrect": false },
+        { "content": "correr", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál oración está en primera persona?",
+      "explanation": "La primera persona se utiliza cuando quien habla se refiere a sí mismo.",
+      "hint": "Busca una oración donde el hablante diga algo sobre sí mismo.",
+      "options": [
+        { "content": "Yo juego fútbol.", "isCorrect": true },
+        { "content": "Ella juega fútbol.", "isCorrect": false },
+        { "content": "Ellos juegan fútbol.", "isCorrect": false },
+        { "content": "Pedro juega fútbol.", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál oración está en tercera persona?",
+      "explanation": "La tercera persona se utiliza para hablar de alguien que no es quien habla ni quien escucha.",
+      "hint": "Busca una oración que hable de otra persona.",
+      "options": [
+        { "content": "Yo leo un libro.", "isCorrect": false },
+        { "content": "Tú lees un libro.", "isCorrect": false },
+        { "content": "Ella lee un libro.", "isCorrect": true },
+        { "content": "Nosotros leemos un libro.", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es el sujeto de la oración 'El niño juega en el parque'?",
+      "explanation": "El sujeto es quien realiza la acción expresada por el verbo.",
+      "hint": "Pregunta: ¿quién juega?",
+      "options": [
+        { "content": "El niño", "isCorrect": true },
+        { "content": "juega", "isCorrect": false },
+        { "content": "en el parque", "isCorrect": false },
+        { "content": "el parque", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es el verbo en la oración 'María canta una canción'?",
+      "explanation": "El verbo indica la acción que realiza el sujeto.",
+      "hint": "Pregunta qué acción realiza María.",
+      "options": [
+        { "content": "María", "isCorrect": false },
+        { "content": "canta", "isCorrect": true },
+        { "content": "una", "isCorrect": false },
+        { "content": "canción", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es el predicado en la oración 'El gato duerme en el sofá'?",
+      "explanation": "El predicado contiene lo que se dice del sujeto y normalmente incluye el verbo.",
+      "hint": "Primero identifica al sujeto y después lo que se dice de él.",
+      "options": [
+        { "content": "El gato", "isCorrect": false },
+        { "content": "duerme en el sofá", "isCorrect": true },
+        { "content": "gato", "isCorrect": false },
+        { "content": "el sofá", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál oración tiene concordancia correcta entre sujeto y verbo?",
+      "explanation": "El sujeto y el verbo deben concordar en número y persona.",
+      "hint": "Observa si el sujeto es singular o plural.",
+      "options": [
+        { "content": "Los niños juega.", "isCorrect": false },
+        { "content": "El niño juegan.", "isCorrect": false },
+        { "content": "Los niños juegan.", "isCorrect": true },
+        { "content": "El niño juegan.", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál de estas palabras es un artículo definido?",
+      "explanation": "Los artículos definidos son el, la, los y las.",
+      "hint": "Busca una palabra que acompañe a un sustantivo de forma definida.",
+      "options": [
+        { "content": "el", "isCorrect": true },
+        { "content": "un", "isCorrect": false },
+        { "content": "algunos", "isCorrect": false },
+        { "content": "mi", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra es un artículo indefinido?",
+      "explanation": "Los artículos indefinidos son un, una, unos y unas.",
+      "hint": "Busca un artículo que indique algo de manera no específica.",
+      "options": [
+        { "content": "la", "isCorrect": false },
+        { "content": "el", "isCorrect": false },
+        { "content": "una", "isCorrect": true },
+        { "content": "las", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra indica una acción que ocurrió en el pasado?",
+      "explanation": "Los verbos en pasado expresan acciones que ya sucedieron.",
+      "hint": "Busca la acción que ya ocurrió.",
+      "options": [
+        { "content": "jugará", "isCorrect": false },
+        { "content": "juega", "isCorrect": false },
+        { "content": "jugó", "isCorrect": true },
+        { "content": "jugar", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra indica una acción que ocurrirá en el futuro?",
+      "explanation": "El futuro expresa acciones que sucederán después del momento presente.",
+      "hint": "Busca una acción que todavía no ocurre.",
+      "options": [
+        { "content": "cantó", "isCorrect": false },
+        { "content": "canta", "isCorrect": false },
+        { "content": "cantará", "isCorrect": true },
+        { "content": "cantaba", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuántas sílabas tiene la palabra 'mariposa'?",
+      "explanation": "La palabra 'mariposa' se divide en cuatro sílabas: ma-ri-po-sa.",
+      "hint": "Sepárala al pronunciarla lentamente.",
+      "options": [
+        { "content": "2", "isCorrect": false },
+        { "content": "3", "isCorrect": false },
+        { "content": "4", "isCorrect": true },
+        { "content": "5", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es la sílaba tónica de 'camino'?",
+      "explanation": "La sílaba tónica es la sílaba que se pronuncia con mayor fuerza. En 'camino' es 'mi'.",
+      "hint": "Pronuncia: ca-MI-no.",
+      "options": [
+        { "content": "ca", "isCorrect": false },
+        { "content": "mi", "isCorrect": true },
+        { "content": "no", "isCorrect": false },
+        { "content": "ca-mi", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra contiene un diptongo?",
+      "explanation": "Un diptongo se forma cuando dos vocales se pronuncian dentro de la misma sílaba. En 'tierra', 'ie' forma un diptongo.",
+      "hint": "Busca dos vocales que estén juntas dentro de una misma sílaba.",
+      "options": [
+        { "content": "tierra", "isCorrect": true },
+        { "content": "poeta", "isCorrect": false },
+        { "content": "teatro", "isCorrect": false },
+        { "content": "maíz", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál palabra contiene un hiato?",
+      "explanation": "Un hiato ocurre cuando dos vocales juntas pertenecen a sílabas diferentes. En 'poeta', 'o-e' forman un hiato.",
+      "hint": "Busca dos vocales juntas que se separen en diferentes sílabas.",
+      "options": [
+        { "content": "tierra", "isCorrect": false },
+        { "content": "poeta", "isCorrect": true },
+        { "content": "puerta", "isCorrect": false },
+        { "content": "cielo", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Qué tipo de texto cuenta una historia con personajes y acontecimientos?",
+      "explanation": "El texto narrativo cuenta hechos reales o imaginarios mediante personajes, acontecimientos y, generalmente, un lugar y tiempo.",
+      "hint": "Piensa en cuentos y leyendas.",
+      "options": [
+        { "content": "Narrativo", "isCorrect": true },
+        { "content": "Instructivo", "isCorrect": false },
+        { "content": "Descriptivo", "isCorrect": false },
+        { "content": "Expositivo", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Qué tipo de texto explica los pasos para realizar una actividad?",
+      "explanation": "Los textos instructivos presentan indicaciones o pasos que permiten realizar una actividad.",
+      "hint": "Piensa en una receta de cocina.",
+      "options": [
+        { "content": "Narrativo", "isCorrect": false },
+        { "content": "Instructivo", "isCorrect": true },
+        { "content": "Poético", "isCorrect": false },
+        { "content": "Descriptivo", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Qué tipo de texto describe cómo es una persona, animal, objeto o lugar?",
+      "explanation": "El texto descriptivo presenta características, cualidades y detalles de aquello que se describe.",
+      "hint": "Busca el tipo de texto que explica cómo es algo.",
+      "options": [
+        { "content": "Descriptivo", "isCorrect": true },
+        { "content": "Narrativo", "isCorrect": false },
+        { "content": "Instructivo", "isCorrect": false },
+        { "content": "Dialogado", "isCorrect": false }
+      ]
+    },
+    {
+      "title": "¿Cuál es una característica de una fábula?",
+      "explanation": "Las fábulas suelen presentar una enseñanza o moraleja y frecuentemente utilizan animales con características humanas.",
+      "hint": "Piensa en historias cortas que dejan una enseñanza.",
+      "options": [
+        { "content": "Siempre contiene datos científicos", "isCorrect": false },
+        { "content": "Suele incluir una moraleja", "isCorrect": true },
+        { "content": "Solo contiene instrucciones", "isCorrect": false },
+        { "content": "Nunca tiene personajes", "isCorrect": false }
+      ]
+    }
+  ]
+}

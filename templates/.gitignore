@@ -6,6 +6,9 @@
 /out-tsc
 /bazel-out
 
+# Generado por scripts/generate-manifest.mjs en cada build
+/src/assets/asset-manifest.json
+
 # Node
 /node_modules
 npm-debug.log

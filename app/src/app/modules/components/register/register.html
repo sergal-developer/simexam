@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="simple-section" *ngIf="sections.avatar">
+            <div class="simple-section" *ngIf="sections.avatars">
                 <div class="_content flex centred">
                     <h2>{{ 'form_image' | translate }}</h2>
 
@@ -93,13 +93,13 @@
                         <div class="_nav_item_title">{{ 'action_step_user' | translate }}</div>
                     </div>
 
-                    <div class="_nav_item" [ngClass]="{'current': sections.avatar }" (click)="configAvatar()">
+                    <div class="_nav_item" [ngClass]="{'current': sections.avatars }" (click)="configAvatar()">
                         <lu-icon [icon]="luIcon.avatar"></lu-icon>
                         <div class="_nav_item_title">{{ 'action_step_avatar' | translate }}</div>
                     </div>
                 </div>
 
-                <div class="_nav_item _nav_action _next" (click)="next()" *ngIf="!validateData()" [attr.disabled]="sections.avatar">
+                <div class="_nav_item _nav_action _next" (click)="next()" *ngIf="!validateData()" [attr.disabled]="sections.avatars">
                     <span>{{ 'action_next' | translate }}</span><lu-icon [icon]="luIcon.right"></lu-icon>
                 </div>
 

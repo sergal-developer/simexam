@@ -1,0 +1,1363 @@
+{
+    "title": "Matemáticas — Álgebra para Secundaria",
+    "time": 90,
+    "tags": [
+        "español",
+        "matemáticas",
+        "álgebra",
+        "secundaria",
+        "evaluación"
+    ],
+    "answers": [
+        {
+            "title": "¿Qué es una expresión algebraica?",
+            "explanation": "Es una combinación de números, letras y signos de operaciones matemáticas que representa un valor o una relación entre cantidades.",
+            "hint": "Combina elementos matemáticos sin signo de igual.",
+            "tags": [
+                "definiciones",
+                "expresiones algebraicas"
+            ],
+            "options": [
+                {
+                    "content": "Una combinación de números, letras y signos de operaciones",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Una igualdad con letras",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Solo letras sin números",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Solo números sin letras",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "En la expresión 3x + 5, ¿qué representa la x?",
+            "explanation": "La letra representa una variable, es decir, un valor que puede cambiar o desconocerse.",
+            "hint": "Es un valor que puede variar.",
+            "tags": [
+                "elementos algebraicos",
+                "variables"
+            ],
+            "options": [
+                {
+                    "content": "Variable",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Coeficiente",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Constante",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Exponente",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "En 3x + 5, ¿cuál es el coeficiente numérico?",
+            "explanation": "El coeficiente es el número que multiplica a la variable; aquí es 3.",
+            "hint": "Es el número junto a la letra.",
+            "tags": [
+                "elementos algebraicos",
+                "coeficientes"
+            ],
+            "options": [
+                {
+                    "content": "3",
+                    "isCorrect": true
+                },
+                {
+                    "content": "x",
+                    "isCorrect": false
+                },
+                {
+                    "content": "5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "3x",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Cuál es la parte constante de 3x + 5?",
+            "explanation": "La constante es el valor fijo que no cambia aunque varíe la variable; aquí es 5.",
+            "hint": "No tiene letra.",
+            "tags": [
+                "elementos algebraicos",
+                "constantes"
+            ],
+            "options": [
+                {
+                    "content": "5",
+                    "isCorrect": true
+                },
+                {
+                    "content": "3",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x",
+                    "isCorrect": false
+                },
+                {
+                    "content": "3x",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Cuál de las siguientes es una ecuación?",
+            "explanation": "Una ecuación es una igualdad entre dos expresiones algebraicas; solo la opción con signo de igual cumple esto.",
+            "hint": "Debe llevar signo igual (=).",
+            "tags": [
+                "ecuaciones",
+                "definiciones"
+            ],
+            "options": [
+                {
+                    "content": "2x + 1 = 7",
+                    "isCorrect": true
+                },
+                {
+                    "content": "3x − 2",
+                    "isCorrect": false
+                },
+                {
+                    "content": "5a + 2b",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x² + 3",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "El grado de un monomio se determina por:",
+            "explanation": "Se obtiene sumando los exponentes de sus variables.",
+            "hint": "Suma de exponentes de las letras.",
+            "tags": [
+                "monomios",
+                "grado algebraico"
+            ],
+            "options": [
+                {
+                    "content": "La suma de los exponentes de sus variables",
+                    "isCorrect": true
+                },
+                {
+                    "content": "El valor del coeficiente",
+                    "isCorrect": false
+                },
+                {
+                    "content": "El número de letras",
+                    "isCorrect": false
+                },
+                {
+                    "content": "El exponente del coeficiente",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Cuál es el grado de 4x³y²?",
+            "explanation": "Suma de exponentes: 3 + 2 = 5.",
+            "hint": "Suma los exponentes de cada letra.",
+            "tags": [
+                "monomios",
+                "grado algebraico"
+            ],
+            "options": [
+                {
+                    "content": "5",
+                    "isCorrect": true
+                },
+                {
+                    "content": "3",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2",
+                    "isCorrect": false
+                },
+                {
+                    "content": "4",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Dos términos semejantes tienen:",
+            "explanation": "Tienen las mismas variables elevadas a los mismos exponentes; pueden diferir en el coeficiente.",
+            "hint": "Las letras iguales con los mismos exponentes.",
+            "tags": [
+                "términos semejantes",
+                "operaciones"
+            ],
+            "options": [
+                {
+                    "content": "Las mismas variables con iguales exponentes",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Los mismos coeficientes",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Solo el mismo exponente",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Solo la misma letra",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Simplifica: 5x + 3x",
+            "explanation": "Se suman los coeficientes y se mantiene la misma variable: 5x + 3x = 8x.",
+            "hint": "Suma los números y deja la letra igual.",
+            "tags": [
+                "reducción de términos",
+                "suma"
+            ],
+            "options": [
+                {
+                    "content": "8x",
+                    "isCorrect": true
+                },
+                {
+                    "content": "15x",
+                    "isCorrect": false
+                },
+                {
+                    "content": "8",
+                    "isCorrect": false
+                },
+                {
+                    "content": "8x²",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Simplifica: 9a − 4a",
+            "explanation": "Se restan los coeficientes: 9a − 4a = 5a.",
+            "hint": "Resta los números y conserva la letra.",
+            "tags": [
+                "reducción de términos",
+                "resta"
+            ],
+            "options": [
+                {
+                    "content": "5a",
+                    "isCorrect": true
+                },
+                {
+                    "content": "13a",
+                    "isCorrect": false
+                },
+                {
+                    "content": "5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "5a²",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Simplifica: 2x + 5y − x + 3y",
+            "explanation": "Se agrupan semejantes: (2x − x) + (5y + 3y) = x + 8y.",
+            "hint": "Junta las x por un lado y las y por otro.",
+            "tags": [
+                "reducción de términos",
+                "expresiones mixtas"
+            ],
+            "options": [
+                {
+                    "content": "x + 8y",
+                    "isCorrect": true
+                },
+                {
+                    "content": "3x + 8y",
+                    "isCorrect": false
+                },
+                {
+                    "content": "xy + 8",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x + 5y",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "El producto de a × a es igual a:",
+            "explanation": "Al multiplicar iguales bases, se suman los exponentes: a¹ × a¹ = a².",
+            "hint": "El exponente indica cuántas veces se repite la letra.",
+            "tags": [
+                "ley de exponentes",
+                "multiplicación"
+            ],
+            "options": [
+                {
+                    "content": "a²",
+                    "isCorrect": true
+                },
+                {
+                    "content": "2a",
+                    "isCorrect": false
+                },
+                {
+                    "content": "a",
+                    "isCorrect": false
+                },
+                {
+                    "content": "a×2",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Calcula: x³ · x⁴",
+            "explanation": "Misma base, sumar exponentes: x³⁺⁴ = x⁷.",
+            "hint": "Suma los exponentes cuando la base es igual.",
+            "tags": [
+                "ley de exponentes",
+                "multiplicación"
+            ],
+            "options": [
+                {
+                    "content": "x⁷",
+                    "isCorrect": true
+                },
+                {
+                    "content": "x¹²",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x",
+                    "isCorrect": false
+                },
+                {
+                    "content": "7x",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Calcula: (y²)³",
+            "explanation": "Potencia de potencia: se multiplican los exponentes: y²ˣ³ = y⁶.",
+            "hint": "Multiplica los exponentes.",
+            "tags": [
+                "ley de exponentes",
+                "potenciación"
+            ],
+            "options": [
+                {
+                    "content": "y⁶",
+                    "isCorrect": true
+                },
+                {
+                    "content": "y⁵",
+                    "isCorrect": false
+                },
+                {
+                    "content": "y⁸",
+                    "isCorrect": false
+                },
+                {
+                    "content": "6y",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Calcula: m⁶ ÷ m²",
+            "explanation": "División con igual base: se restan exponentes: m⁶⁻² = m⁴.",
+            "hint": "Resta el exponente de abajo al de arriba.",
+            "tags": [
+                "ley de exponentes",
+                "división"
+            ],
+            "options": [
+                {
+                    "content": "m⁴",
+                    "isCorrect": true
+                },
+                {
+                    "content": "m³",
+                    "isCorrect": false
+                },
+                {
+                    "content": "m⁸",
+                    "isCorrect": false
+                },
+                {
+                    "content": "3m",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "El valor de x⁰ (con x ≠ 0) es:",
+            "explanation": "Cualquier número distinto de cero elevado a la potencia cero es igual a 1.",
+            "hint": "Es siempre el mismo número, sin importar la base.",
+            "tags": [
+                "ley de exponentes",
+                "exponente cero"
+            ],
+            "options": [
+                {
+                    "content": "1",
+                    "isCorrect": true
+                },
+                {
+                    "content": "0",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x",
+                    "isCorrect": false
+                },
+                {
+                    "content": "infinito",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Multiplica: 3(2x + 4)",
+            "explanation": "Se aplica propiedad distributiva: 3·2x + 3·4 = 6x + 12.",
+            "hint": "Multiplica el número por cada término dentro del paréntesis.",
+            "tags": [
+                "producto",
+                "distributiva"
+            ],
+            "options": [
+                {
+                    "content": "6x + 12",
+                    "isCorrect": true
+                },
+                {
+                    "content": "5x + 7",
+                    "isCorrect": false
+                },
+                {
+                    "content": "6x + 4",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2x + 12",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Multiplica: −2(5a − 3)",
+            "explanation": "−2·5a = −10a; −2·(−3) = +6 → −10a + 6.",
+            "hint": "El signo negativo cambia los signos de todos los términos.",
+            "tags": [
+                "producto",
+                "distributiva con signo negativo"
+            ],
+            "options": [
+                {
+                    "content": "−10a + 6",
+                    "isCorrect": true
+                },
+                {
+                    "content": "−10a − 6",
+                    "isCorrect": false
+                },
+                {
+                    "content": "−10a + 3",
+                    "isCorrect": false
+                },
+                {
+                    "content": "10a − 6",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Producto: x(x + 7)",
+            "explanation": "x·x + x·7 = x² + 7x.",
+            "hint": "Multiplica la x por cada término.",
+            "tags": [
+                "producto",
+                "monomio por binomio"
+            ],
+            "options": [
+                {
+                    "content": "x² + 7x",
+                    "isCorrect": true
+                },
+                {
+                    "content": "2x + 7",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x² + 7",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2x + 7x",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "El resultado de (x + 2)(x + 3) es:",
+            "explanation": "x·x + x·3 + 2·x + 2·3 = x² + 3x + 2x + 6 = x² + 5x + 6.",
+            "hint": "Multiplica cada término del primer paréntesis por cada uno del segundo.",
+            "tags": [
+                "producto",
+                "binomio por binomio"
+            ],
+            "options": [
+                {
+                    "content": "x² + 5x + 6",
+                    "isCorrect": true
+                },
+                {
+                    "content": "x² + 6",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x² + 6x + 5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2x + 5",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "(a + b)² es igual a:",
+            "explanation": "Binomio al cuadrado: cuadrado del primero, más doble producto, más cuadrado del segundo: a² + 2ab + b².",
+            "hint": "No olvides el doble producto del primero por el segundo.",
+            "tags": [
+                "productos notables",
+                "binomio al cuadrado"
+            ],
+            "options": [
+                {
+                    "content": "a² + 2ab + b²",
+                    "isCorrect": true
+                },
+                {
+                    "content": "a² + b²",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2a + 2b",
+                    "isCorrect": false
+                },
+                {
+                    "content": "a² − 2ab + b²",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "(m − n)² es igual a:",
+            "explanation": "Cuadrado del primero, menos doble producto, más cuadrado del segundo: m² − 2mn + n².",
+            "hint": "El término central lleva signo menos.",
+            "tags": [
+                "productos notables",
+                "binomio al cuadrado"
+            ],
+            "options": [
+                {
+                    "content": "m² − 2mn + n²",
+                    "isCorrect": true
+                },
+                {
+                    "content": "m² − n²",
+                    "isCorrect": false
+                },
+                {
+                    "content": "m² + 2mn + n²",
+                    "isCorrect": false
+                },
+                {
+                    "content": "m² + n²",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "(x + 5)(x − 5) es igual a:",
+            "explanation": "Suma por diferencia: diferencia de cuadrados → x² − 25.",
+            "hint": "Cuadrado del primero menos cuadrado del segundo.",
+            "tags": [
+                "productos notables",
+                "diferencia de cuadrados"
+            ],
+            "options": [
+                {
+                    "content": "x² − 25",
+                    "isCorrect": true
+                },
+                {
+                    "content": "x² + 25",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x² − 10x + 25",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x² + 10x + 25",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Factorizar significa:",
+            "explanation": "Expresar un polinomio como producto de sus factores.",
+            "hint": "Pasar de suma/resta a multiplicación.",
+            "tags": [
+                "factorización",
+                "definiciones"
+            ],
+            "options": [
+                {
+                    "content": "Escribir como producto de factores",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Sumar términos",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Elevar al cuadrado",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Sustituir valores",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Factorizar 6x + 9 da:",
+            "explanation": "Factor común 3: 3(2x + 3).",
+            "hint": "Busca el número que divide a ambos términos.",
+            "tags": [
+                "factorización",
+                "factor común"
+            ],
+            "options": [
+                {
+                    "content": "3(2x + 3)",
+                    "isCorrect": true
+                },
+                {
+                    "content": "6(x + 9)",
+                    "isCorrect": false
+                },
+                {
+                    "content": "3(2x + 9)",
+                    "isCorrect": false
+                },
+                {
+                    "content": "9(6x + 1)",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Factorizar x² + 4x da:",
+            "explanation": "Factor común x: x(x + 4).",
+            "hint": "La letra se repite en ambos términos.",
+            "tags": [
+                "factorización",
+                "factor común con variable"
+            ],
+            "options": [
+                {
+                    "content": "x(x + 4)",
+                    "isCorrect": true
+                },
+                {
+                    "content": "x(x + 4x)",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x²(4)",
+                    "isCorrect": false
+                },
+                {
+                    "content": "4x(x + 1)",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una ecuación de primer grado tiene la variable elevada a:",
+            "explanation": "El exponente de la variable es 1, que no se escribe explícitamente.",
+            "hint": "No lleva exponentes como 2, 3, etc.",
+            "tags": [
+                "ecuaciones de primer grado",
+                "definiciones"
+            ],
+            "options": [
+                {
+                    "content": "1",
+                    "isCorrect": true
+                },
+                {
+                    "content": "0",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2",
+                    "isCorrect": false
+                },
+                {
+                    "content": "3",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Resuelve: x + 5 = 12",
+            "explanation": "Despejar x: x = 12 − 5 = 7.",
+            "hint": "Pasa el 5 restando al otro lado.",
+            "tags": [
+                "ecuaciones",
+                "resolución"
+            ],
+            "options": [
+                {
+                    "content": "7",
+                    "isCorrect": true
+                },
+                {
+                    "content": "17",
+                    "isCorrect": false
+                },
+                {
+                    "content": "5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "6",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Resuelve: x − 4 = 9",
+            "explanation": "x = 9 + 4 = 13.",
+            "hint": "Pasa el −4 sumando.",
+            "tags": [
+                "ecuaciones",
+                "resolución"
+            ],
+            "options": [
+                {
+                    "content": "13",
+                    "isCorrect": true
+                },
+                {
+                    "content": "5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "12",
+                    "isCorrect": false
+                },
+                {
+                    "content": "36",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Resuelve: 3x = 15",
+            "explanation": "x = 15 ÷ 3 = 5.",
+            "hint": "El 3 que multiplica pasa dividiendo.",
+            "tags": [
+                "ecuaciones",
+                "resolución"
+            ],
+            "options": [
+                {
+                    "content": "5",
+                    "isCorrect": true
+                },
+                {
+                    "content": "12",
+                    "isCorrect": false
+                },
+                {
+                    "content": "18",
+                    "isCorrect": false
+                },
+                {
+                    "content": "45",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Resuelve: x/2 = 6",
+            "explanation": "x = 6 × 2 = 12.",
+            "hint": "El 2 que divide pasa multiplicando.",
+            "tags": [
+                "ecuaciones",
+                "resolución con fracción"
+            ],
+            "options": [
+                {
+                    "content": "12",
+                    "isCorrect": true
+                },
+                {
+                    "content": "3",
+                    "isCorrect": false
+                },
+                {
+                    "content": "8",
+                    "isCorrect": false
+                },
+                {
+                    "content": "24",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Resuelve: 2x + 3 = 11",
+            "explanation": "2x = 11 − 3 → 2x = 8 → x = 4.",
+            "hint": "Primero pasa el número solo, luego el que acompaña a la x.",
+            "tags": [
+                "ecuaciones",
+                "dos pasos"
+            ],
+            "options": [
+                {
+                    "content": "4",
+                    "isCorrect": true
+                },
+                {
+                    "content": "7",
+                    "isCorrect": false
+                },
+                {
+                    "content": "8",
+                    "isCorrect": false
+                },
+                {
+                    "content": "5",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Resuelve: 5x − 2 = 3x + 8",
+            "explanation": "5x − 3x = 8 + 2 → 2x = 10 → x = 5.",
+            "hint": "Agrupa las x en un lado y los números en el otro.",
+            "tags": [
+                "ecuaciones",
+                "con variables en ambos lados"
+            ],
+            "options": [
+                {
+                    "content": "5",
+                    "isCorrect": true
+                },
+                {
+                    "content": "3",
+                    "isCorrect": false
+                },
+                {
+                    "content": "10",
+                    "isCorrect": false
+                },
+                {
+                    "content": "6",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Resuelve: 4(x − 2) = 12",
+            "explanation": "4x − 8 = 12 → 4x = 20 → x = 5; o bien x − 2 = 3 → x = 5.",
+            "hint": "Quita el paréntesis o divide todo por 4 primero.",
+            "tags": [
+                "ecuaciones",
+                "con paréntesis"
+            ],
+            "options": [
+                {
+                    "content": "5",
+                    "isCorrect": true
+                },
+                {
+                    "content": "10",
+                    "isCorrect": false
+                },
+                {
+                    "content": "4",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "La suma de dos números consecutivos es 15. Si el primero es x, el segundo es:",
+            "explanation": "El número que sigue a x es x + 1.",
+            "hint": "Al número le sumas 1 para obtener el siguiente.",
+            "tags": [
+                "problemas algebraicos",
+                "planteamiento"
+            ],
+            "options": [
+                {
+                    "content": "x + 1",
+                    "isCorrect": true
+                },
+                {
+                    "content": "x + 2",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2x",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x − 1",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "El doble de un número menos 5 es igual a 15. La ecuación es:",
+            "explanation": "Doble de x: 2x; menos 5: 2x − 5; es igual a 15: 2x − 5 = 15.",
+            "hint": "Traduce palabra por palabra a símbolos.",
+            "tags": [
+                "problemas algebraicos",
+                "planteamiento"
+            ],
+            "options": [
+                {
+                    "content": "2x − 5 = 15",
+                    "isCorrect": true
+                },
+                {
+                    "content": "2(x − 5) = 15",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x/2 − 5 = 15",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2x + 5 = 15",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Si x = 3, el valor de 2x + 4 es:",
+            "explanation": "Sustituir: 2(3) + 4 = 6 + 4 = 10.",
+            "hint": "Cambia la x por el número 3 y calcula.",
+            "tags": [
+                "evaluación de expresiones",
+                "sustitución"
+            ],
+            "options": [
+                {
+                    "content": "10",
+                    "isCorrect": true
+                },
+                {
+                    "content": "7",
+                    "isCorrect": false
+                },
+                {
+                    "content": "9",
+                    "isCorrect": false
+                },
+                {
+                    "content": "14",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Si a = 2 y b = 5, entonces 3a − b vale:",
+            "explanation": "3(2) − 5 = 6 − 5 = 1.",
+            "hint": "Cada letra se reemplaza por su valor.",
+            "tags": [
+                "evaluación de expresiones",
+                "sustitución"
+            ],
+            "options": [
+                {
+                    "content": "1",
+                    "isCorrect": true
+                },
+                {
+                    "content": "−1",
+                    "isCorrect": false
+                },
+                {
+                    "content": "11",
+                    "isCorrect": false
+                },
+                {
+                    "content": "4",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Cuál es el valor de x en 2x = 0?",
+            "explanation": "x = 0 ÷ 2 = 0.",
+            "hint": "Solo el cero multiplicado por 2 da cero.",
+            "tags": [
+                "ecuaciones",
+                "caso particular"
+            ],
+            "options": [
+                {
+                    "content": "0",
+                    "isCorrect": true
+                },
+                {
+                    "content": "2",
+                    "isCorrect": false
+                },
+                {
+                    "content": "1",
+                    "isCorrect": false
+                },
+                {
+                    "content": "−2",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Cuál de las siguientes es una ecuación de segundo grado?",
+            "explanation": "Tiene la variable elevada al cuadrado y no mayor: x² − 4 = 0.",
+            "hint": "Busca la x².",
+            "tags": [
+                "ecuaciones de segundo grado",
+                "definiciones"
+            ],
+            "options": [
+                {
+                    "content": "x² − 4 = 0",
+                    "isCorrect": true
+                },
+                {
+                    "content": "2x + 6 = 0",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x³ = 8",
+                    "isCorrect": false
+                },
+                {
+                    "content": "x + y = 5",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Resuelve x² = 49",
+            "explanation": "Las raíces son 7 y −7 porque 7² = 49 y (−7)² = 49.",
+            "hint": "Hay dos soluciones: positiva y negativa.",
+            "tags": [
+                "ecuaciones de segundo grado",
+                "resolución"
+            ],
+            "options": [
+                {
+                    "content": "7 y −7",
+                    "isCorrect": true
+                },
+                {
+                    "content": "7",
+                    "isCorrect": false
+                },
+                {
+                    "content": "−7",
+                    "isCorrect": false
+                },
+                {
+                    "content": "24.5",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Factorizar x² + 5x + 6 da:",
+            "explanation": "Buscar dos números que multiplicados den 6 y sumados 5 → 2 y 3 → (x + 2)(x + 3).",
+            "hint": "Números que multiplicados den el último y sumados el central.",
+            "tags": [
+                "factorización",
+                "trinomio"
+            ],
+            "options": [
+                {
+                    "content": "(x + 2)(x + 3)",
+                    "isCorrect": true
+                },
+                {
+                    "content": "(x + 6)(x + 1)",
+                    "isCorrect": false
+                },
+                {
+                    "content": "(x + 5)(x + 1)",
+                    "isCorrect": false
+                },
+                {
+                    "content": "(x + 2)(x − 3)",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "En la fórmula de la ecuación cuadrática, el discriminante es:",
+            "explanation": "Es la parte bajo la raíz cuadrada: b² − 4ac.",
+            "hint": "Determina el tipo de raíces.",
+            "tags": [
+                "ecuaciones de segundo grado",
+                "fórmula general"
+            ],
+            "options": [
+                {
+                    "content": "b² − 4ac",
+                    "isCorrect": true
+                },
+                {
+                    "content": "−b/(2a)",
+                    "isCorrect": false
+                },
+                {
+                    "content": "b² + 4ac",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2a − b",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Si el discriminante es mayor que cero, las raíces son:",
+            "explanation": "Dos valores reales distintos.",
+            "hint": "La raíz cuadrada de un número positivo tiene dos resultados.",
+            "tags": [
+                "ecuaciones de segundo grado",
+                "discriminante"
+            ],
+            "options": [
+                {
+                    "content": "Dos reales y distintas",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Una real igual",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Imaginarias",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Nulas",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "El grado del polinomio 2x³ − 5x² + 7x − 1 es:",
+            "explanation": "Es el mayor exponente de la variable → 3.",
+            "hint": "Mira el exponente más alto.",
+            "tags": [
+                "polinomios",
+                "grado"
+            ],
+            "options": [
+                {
+                    "content": "3",
+                    "isCorrect": true
+                },
+                {
+                    "content": "2",
+                    "isCorrect": false
+                },
+                {
+                    "content": "4",
+                    "isCorrect": false
+                },
+                {
+                    "content": "1",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "La expresión 3x² − 2x + 1 es un:",
+            "explanation": "Tiene tres términos → trinomio.",
+            "hint": "Cuenta los términos separados por + o −.",
+            "tags": [
+                "polinomios",
+                "clasificación"
+            ],
+            "options": [
+                {
+                    "content": "Trinomio",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Binomio",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Monomio",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Cuatrinomio",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Suma: (3x² + 2x) + (5x² − x)",
+            "explanation": "3x² + 5x² = 8x²; 2x − x = x → 8x² + x.",
+            "hint": "Solo se suman coeficientes de términos semejantes.",
+            "tags": [
+                "operaciones con polinomios",
+                "suma"
+            ],
+            "options": [
+                {
+                    "content": "8x² + x",
+                    "isCorrect": true
+                },
+                {
+                    "content": "8x² + 3x",
+                    "isCorrect": false
+                },
+                {
+                    "content": "15x⁴ + 2x",
+                    "isCorrect": false
+                },
+                {
+                    "content": "8x⁴ + x",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Resta: (7a + 4) − (3a − 2)",
+            "explanation": "7a + 4 − 3a + 2 = 4a + 6.",
+            "hint": "Cambia el signo de cada término del segundo paréntesis.",
+            "tags": [
+                "operaciones con polinomios",
+                "resta"
+            ],
+            "options": [
+                {
+                    "content": "4a + 6",
+                    "isCorrect": true
+                },
+                {
+                    "content": "4a + 2",
+                    "isCorrect": false
+                },
+                {
+                    "content": "10a + 6",
+                    "isCorrect": false
+                },
+                {
+                    "content": "4a − 2",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Cuál de las siguientes relaciones NO es una ecuación?",
+            "explanation": "y + 5 es solo una expresión, no tiene signo de igual.",
+            "hint": "Una ecuación siempre lleva =.",
+            "tags": [
+                "expresiones y ecuaciones",
+                "diferencias"
+            ],
+            "options": [
+                {
+                    "content": "y + 5",
+                    "isCorrect": true
+                },
+                {
+                    "content": "2x = 10",
+                    "isCorrect": false
+                },
+                {
+                    "content": "a + 3 = 7",
+                    "isCorrect": false
+                },
+                {
+                    "content": "3m − 1 = 8",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Al trasladar un término de un lado a otro de la igualdad:",
+            "explanation": "Cambia de signo: lo que suma pasa restando y viceversa; lo que multiplica pasa dividiendo y viceversa.",
+            "hint": "La operación se invierte.",
+            "tags": [
+                "ecuaciones",
+                "reglas de traslado"
+            ],
+            "options": [
+                {
+                    "content": "Cambia de operación",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Sigue igual",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Solo cambia de lugar",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Desaparece",
+                    "isCorrect": false
+                }
+            ]
+        }
+    ]
+}

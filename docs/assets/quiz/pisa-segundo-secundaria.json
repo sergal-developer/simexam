@@ -1,0 +1,1468 @@
+{
+    "title": "Examen PISA para segundo de secundaria",
+    "time": 60,
+    "tags": [
+        "español",
+        "prueba"
+    ],
+    "answers": [
+        {
+            "title": "Una botella contiene 1.5 litros de agua. Si se beben 0.4 litros, ¿cuánta agua queda?",
+            "explanation": "Se resta 0.4 a 1.5: 1.5 - 0.4 = 1.1 litros.",
+            "hint": "Resta la cantidad que se bebe de la cantidad inicial.",
+            "tags": [
+                "español",
+                "matemáticas"
+            ],
+            "options": [
+                {
+                    "content": "1.1 litros",
+                    "isCorrect": true
+                },
+                {
+                    "content": "1.9 litros",
+                    "isCorrect": false
+                },
+                {
+                    "content": "0.9 litros",
+                    "isCorrect": false
+                },
+                {
+                    "content": "1.4 litros",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una biblioteca tiene 240 libros y presta 25% de ellos durante una semana. ¿Cuántos libros presta?",
+            "explanation": "El 25% de 240 es 240 × 0.25 = 60 libros.",
+            "hint": "Convierte 25% a una fracción o decimal.",
+            "tags": [
+                "español",
+                "porcentajes"
+            ],
+            "options": [
+                {
+                    "content": "40 libros",
+                    "isCorrect": false
+                },
+                {
+                    "content": "50 libros",
+                    "isCorrect": false
+                },
+                {
+                    "content": "60 libros",
+                    "isCorrect": true
+                },
+                {
+                    "content": "80 libros",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una estudiante recorre 3 kilómetros en 20 minutos. Manteniendo la misma velocidad, ¿cuántos kilómetros recorrerá en 60 minutos?",
+            "explanation": "60 minutos son tres veces 20 minutos, por lo que recorrerá tres veces 3 km: 9 km.",
+            "hint": "Compara 60 minutos con 20 minutos.",
+            "tags": [
+                "español",
+                "proporcionalidad"
+            ],
+            "options": [
+                {
+                    "content": "6 km",
+                    "isCorrect": false
+                },
+                {
+                    "content": "9 km",
+                    "isCorrect": true
+                },
+                {
+                    "content": "12 km",
+                    "isCorrect": false
+                },
+                {
+                    "content": "15 km",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un jardín rectangular mide 8 metros de largo y 5 metros de ancho. ¿Cuál es su área?",
+            "explanation": "El área de un rectángulo se obtiene multiplicando largo por ancho: 8 × 5 = 40 m².",
+            "hint": "Usa la fórmula área = largo × ancho.",
+            "tags": [
+                "español",
+                "geometría"
+            ],
+            "options": [
+                {
+                    "content": "13 m²",
+                    "isCorrect": false
+                },
+                {
+                    "content": "26 m²",
+                    "isCorrect": false
+                },
+                {
+                    "content": "40 m²",
+                    "isCorrect": true
+                },
+                {
+                    "content": "80 m²",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una familia paga $800 por un servicio y recibe un descuento del 10%. ¿Cuánto debe pagar después del descuento?",
+            "explanation": "El 10% de $800 es $80. Al restarlo, quedan $720.",
+            "hint": "Calcula primero el 10% y después réstalo al precio original.",
+            "tags": [
+                "español",
+                "porcentajes"
+            ],
+            "options": [
+                {
+                    "content": "$700",
+                    "isCorrect": false
+                },
+                {
+                    "content": "$720",
+                    "isCorrect": true
+                },
+                {
+                    "content": "$780",
+                    "isCorrect": false
+                },
+                {
+                    "content": "$790",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "En una encuesta, 18 de 30 estudiantes prefieren leer novelas. ¿Qué fracción simplificada representa esta cantidad?",
+            "explanation": "18/30 se simplifica dividiendo numerador y denominador entre 6, obteniendo 3/5.",
+            "hint": "Busca el máximo divisor común de 18 y 30.",
+            "tags": [
+                "español",
+                "fracciones"
+            ],
+            "options": [
+                {
+                    "content": "2/5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "3/5",
+                    "isCorrect": true
+                },
+                {
+                    "content": "4/5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "5/6",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una temperatura pasa de 6 °C a -2 °C. ¿Cuántos grados disminuyó?",
+            "explanation": "La diferencia entre 6 y -2 es 8 grados, por lo que la temperatura disminuyó 8 °C.",
+            "hint": "Calcula 6 - (-2).",
+            "tags": [
+                "español",
+                "números enteros"
+            ],
+            "options": [
+                {
+                    "content": "4 °C",
+                    "isCorrect": false
+                },
+                {
+                    "content": "6 °C",
+                    "isCorrect": false
+                },
+                {
+                    "content": "8 °C",
+                    "isCorrect": true
+                },
+                {
+                    "content": "10 °C",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un automóvil consume 6 litros de gasolina por cada 100 km. ¿Cuántos litros necesitará para recorrer 300 km?",
+            "explanation": "300 km representan tres veces 100 km, así que se necesitan 6 × 3 = 18 litros.",
+            "hint": "300 es tres veces 100.",
+            "tags": [
+                "español",
+                "proporcionalidad"
+            ],
+            "options": [
+                {
+                    "content": "12 litros",
+                    "isCorrect": false
+                },
+                {
+                    "content": "15 litros",
+                    "isCorrect": false
+                },
+                {
+                    "content": "18 litros",
+                    "isCorrect": true
+                },
+                {
+                    "content": "24 litros",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Cuál es el promedio de las calificaciones 7, 8, 9 y 10?",
+            "explanation": "Se suman las calificaciones: 7 + 8 + 9 + 10 = 34. Después se divide entre 4: 34/4 = 8.5.",
+            "hint": "Suma todos los valores y divide entre la cantidad de datos.",
+            "tags": [
+                "español",
+                "estadística"
+            ],
+            "options": [
+                {
+                    "content": "8",
+                    "isCorrect": false
+                },
+                {
+                    "content": "8.5",
+                    "isCorrect": true
+                },
+                {
+                    "content": "9",
+                    "isCorrect": false
+                },
+                {
+                    "content": "9.5",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "En una bolsa hay 3 canicas rojas y 2 azules. Si se extrae una canica al azar, ¿cuál es la probabilidad de que sea azul?",
+            "explanation": "Hay 2 canicas azules de un total de 5, por lo que la probabilidad es 2/5.",
+            "hint": "Divide los casos favorables entre el total de casos.",
+            "tags": [
+                "español",
+                "probabilidad"
+            ],
+            "options": [
+                {
+                    "content": "1/5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2/5",
+                    "isCorrect": true
+                },
+                {
+                    "content": "1/2",
+                    "isCorrect": false
+                },
+                {
+                    "content": "3/5",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Lee: 'El uso excesivo de agua puede reducir las reservas disponibles para las comunidades'. ¿Cuál es la idea principal?",
+            "explanation": "La oración relaciona el consumo excesivo con la disminución de las reservas de agua.",
+            "hint": "Identifica la relación principal entre causa y consecuencia.",
+            "tags": [
+                "español",
+                "comprensión lectora"
+            ],
+            "options": [
+                {
+                    "content": "El agua no tiene utilidad para las comunidades.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "El consumo excesivo puede disminuir las reservas de agua.",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Todas las comunidades tienen demasiada agua.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Las reservas de agua aumentan con el consumo.",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Lee: 'María salió temprano porque debía llegar a tiempo a una cita'. ¿Por qué salió temprano María?",
+            "explanation": "El texto indica directamente que salió temprano para llegar a tiempo a una cita.",
+            "hint": "Busca la causa introducida por la palabra 'porque'.",
+            "tags": [
+                "español",
+                "comprensión lectora"
+            ],
+            "options": [
+                {
+                    "content": "Porque quería dormir.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Porque tenía una cita y quería llegar a tiempo.",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Porque perdió el autobús.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Porque estaba lloviendo.",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un artículo afirma: 'Las bicicletas no producen emisiones directas durante su uso'. ¿Qué conclusión está respaldada por esta afirmación?",
+            "explanation": "La afirmación permite concluir que las bicicletas no generan emisiones directas mientras se utilizan.",
+            "hint": "Distingue entre emisiones directas durante el uso y otros posibles impactos.",
+            "tags": [
+                "español",
+                "lectura"
+            ],
+            "options": [
+                {
+                    "content": "Las bicicletas no tienen ningún impacto ambiental posible.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Las bicicletas no producen emisiones directas mientras se usan.",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Todos deben usar bicicletas.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Las bicicletas son siempre más rápidas que los automóviles.",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una noticia informa que una ciudad plantó 2,000 árboles en un año y 3,000 al siguiente. ¿Qué porcentaje aumentó la cantidad de árboles plantados?",
+            "explanation": "El aumento fue de 1,000 árboles. 1,000 representa el 50% de 2,000.",
+            "hint": "Divide el aumento entre la cantidad inicial.",
+            "tags": [
+                "español",
+                "porcentajes"
+            ],
+            "options": [
+                {
+                    "content": "25%",
+                    "isCorrect": false
+                },
+                {
+                    "content": "40%",
+                    "isCorrect": false
+                },
+                {
+                    "content": "50%",
+                    "isCorrect": true
+                },
+                {
+                    "content": "60%",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un experimento compara dos plantas iguales: una recibe luz solar y otra permanece en oscuridad. ¿Qué variable se está modificando principalmente?",
+            "explanation": "La condición que cambia entre las dos plantas es la cantidad de luz recibida.",
+            "hint": "Identifica el factor que el investigador cambia deliberadamente.",
+            "tags": [
+                "español",
+                "ciencias"
+            ],
+            "options": [
+                {
+                    "content": "El tipo de planta",
+                    "isCorrect": false
+                },
+                {
+                    "content": "La cantidad de luz",
+                    "isCorrect": true
+                },
+                {
+                    "content": "El tamaño de la maceta",
+                    "isCorrect": false
+                },
+                {
+                    "content": "La especie de planta",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Cuál es la función principal de las raíces de una planta?",
+            "explanation": "Las raíces ayudan a absorber agua y minerales del suelo y también contribuyen al anclaje de la planta.",
+            "hint": "Piensa en la parte de la planta que está en contacto con el suelo.",
+            "tags": [
+                "español",
+                "biología"
+            ],
+            "options": [
+                {
+                    "content": "Absorber agua y minerales y sujetar la planta.",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Producir semillas exclusivamente.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Capturar sonidos.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Producir luz.",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Qué gas necesitan principalmente las plantas para realizar la fotosíntesis?",
+            "explanation": "Las plantas utilizan dióxido de carbono, agua y energía luminosa para producir materia orgánica mediante la fotosíntesis.",
+            "hint": "Es un gas presente en el aire que las plantas incorporan durante la fotosíntesis.",
+            "tags": [
+                "español",
+                "biología"
+            ],
+            "options": [
+                {
+                    "content": "Oxígeno",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Dióxido de carbono",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Helio",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Hidrógeno",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Cuando un cubo de hielo se derrite, ¿qué cambio de estado ocurre?",
+            "explanation": "El hielo pasa de estado sólido a líquido; este cambio se llama fusión.",
+            "hint": "Observa qué estado tiene el hielo antes y después.",
+            "tags": [
+                "español",
+                "ciencias"
+            ],
+            "options": [
+                {
+                    "content": "Evaporación",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Condensación",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Fusión",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Solidificación",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Qué órgano bombea la sangre por todo el cuerpo humano?",
+            "explanation": "El corazón es un órgano muscular que impulsa la sangre mediante sus contracciones.",
+            "hint": "Es un órgano muscular ubicado en el pecho.",
+            "tags": [
+                "español",
+                "biología"
+            ],
+            "options": [
+                {
+                    "content": "Pulmón",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Corazón",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Estómago",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Riñón",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un objeto tiene una masa de 200 g y ocupa 50 cm³. ¿Cuál es su densidad?",
+            "explanation": "La densidad se calcula dividiendo masa entre volumen: 200/50 = 4 g/cm³.",
+            "hint": "Usa densidad = masa ÷ volumen.",
+            "tags": [
+                "español",
+                "física"
+            ],
+            "options": [
+                {
+                    "content": "2 g/cm³",
+                    "isCorrect": false
+                },
+                {
+                    "content": "4 g/cm³",
+                    "isCorrect": true
+                },
+                {
+                    "content": "10 g/cm³",
+                    "isCorrect": false
+                },
+                {
+                    "content": "25 g/cm³",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Qué fuente de energía utiliza directamente la radiación del Sol?",
+            "explanation": "La energía solar aprovecha la radiación proveniente del Sol para generar electricidad o calor.",
+            "hint": "Su nombre está relacionado directamente con el Sol.",
+            "tags": [
+                "español",
+                "energía"
+            ],
+            "options": [
+                {
+                    "content": "Energía solar",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Energía geotérmica",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Energía nuclear",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Energía química de combustibles",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "En una cadena alimentaria, ¿qué organismo suele producir su propio alimento mediante fotosíntesis?",
+            "explanation": "Los productores, como las plantas, elaboran materia orgánica utilizando energía luminosa.",
+            "hint": "Busca el organismo que constituye el inicio de muchas cadenas alimentarias.",
+            "tags": [
+                "español",
+                "ecología"
+            ],
+            "options": [
+                {
+                    "content": "Un león",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Una planta",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Un hongo",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Un águila",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una población de conejos aumenta cuando hay suficiente alimento y pocos depredadores. ¿Qué factor favorece directamente ese aumento?",
+            "explanation": "La disponibilidad de alimento proporciona recursos necesarios para la supervivencia y reproducción.",
+            "hint": "Identifica el recurso mencionado que los animales necesitan para vivir.",
+            "tags": [
+                "español",
+                "ecología"
+            ],
+            "options": [
+                {
+                    "content": "La escasez de alimento",
+                    "isCorrect": false
+                },
+                {
+                    "content": "La disponibilidad de alimento",
+                    "isCorrect": true
+                },
+                {
+                    "content": "El aumento de depredadores",
+                    "isCorrect": false
+                },
+                {
+                    "content": "La ausencia de agua",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un alumno quiere saber si un fertilizante afecta el crecimiento de una planta. ¿Qué medición sería más útil?",
+            "explanation": "Medir el crecimiento, por ejemplo en centímetros durante un periodo determinado, permite comparar directamente el efecto del fertilizante.",
+            "hint": "Mide la característica que se desea estudiar.",
+            "tags": [
+                "español",
+                "método científico"
+            ],
+            "options": [
+                {
+                    "content": "El color de la maceta",
+                    "isCorrect": false
+                },
+                {
+                    "content": "La altura de la planta",
+                    "isCorrect": true
+                },
+                {
+                    "content": "El nombre del alumno",
+                    "isCorrect": false
+                },
+                {
+                    "content": "El día de la semana",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un autobús sale a las 7:35 y llega a las 8:20. ¿Cuánto dura el viaje?",
+            "explanation": "De 7:35 a 8:00 transcurren 25 minutos y de 8:00 a 8:20 otros 20. En total son 45 minutos.",
+            "hint": "Divide el intervalo en dos partes usando las 8:00 como referencia.",
+            "tags": [
+                "español",
+                "tiempo"
+            ],
+            "options": [
+                {
+                    "content": "35 minutos",
+                    "isCorrect": false
+                },
+                {
+                    "content": "40 minutos",
+                    "isCorrect": false
+                },
+                {
+                    "content": "45 minutos",
+                    "isCorrect": true
+                },
+                {
+                    "content": "55 minutos",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una tienda registra estas ventas de cuadernos: lunes 20, martes 30, miércoles 25 y jueves 35. ¿Qué día tuvo más ventas?",
+            "explanation": "El valor mayor de la lista es 35, correspondiente al jueves.",
+            "hint": "Busca el número más grande.",
+            "tags": [
+                "español",
+                "interpretación de datos"
+            ],
+            "options": [
+                {
+                    "content": "Lunes",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Martes",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Miércoles",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Jueves",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "title": "En una gráfica, las temperaturas de cuatro días son 18 °C, 22 °C, 20 °C y 25 °C. ¿Cuál fue la temperatura máxima?",
+            "explanation": "La mayor de las cuatro temperaturas es 25 °C.",
+            "hint": "Compara los cuatro valores.",
+            "tags": [
+                "español",
+                "gráficas"
+            ],
+            "options": [
+                {
+                    "content": "18 °C",
+                    "isCorrect": false
+                },
+                {
+                    "content": "20 °C",
+                    "isCorrect": false
+                },
+                {
+                    "content": "22 °C",
+                    "isCorrect": false
+                },
+                {
+                    "content": "25 °C",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "title": "Un tanque tiene capacidad para 500 litros y actualmente contiene 350 litros. ¿Qué porcentaje de su capacidad está lleno?",
+            "explanation": "350/500 = 0.70, que equivale al 70%.",
+            "hint": "Divide la cantidad actual entre la capacidad total y multiplica por 100.",
+            "tags": [
+                "español",
+                "porcentajes"
+            ],
+            "options": [
+                {
+                    "content": "60%",
+                    "isCorrect": false
+                },
+                {
+                    "content": "65%",
+                    "isCorrect": false
+                },
+                {
+                    "content": "70%",
+                    "isCorrect": true
+                },
+                {
+                    "content": "75%",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un mapa usa una escala en la que 1 cm representa 5 km. Si dos ciudades están separadas por 7 cm en el mapa, ¿qué distancia real las separa?",
+            "explanation": "Cada centímetro representa 5 km, así que 7 × 5 = 35 km.",
+            "hint": "Multiplica la distancia del mapa por la cantidad de kilómetros representados por cada centímetro.",
+            "tags": [
+                "español",
+                "escala"
+            ],
+            "options": [
+                {
+                    "content": "12 km",
+                    "isCorrect": false
+                },
+                {
+                    "content": "25 km",
+                    "isCorrect": false
+                },
+                {
+                    "content": "35 km",
+                    "isCorrect": true
+                },
+                {
+                    "content": "40 km",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un rectángulo tiene un perímetro de 30 cm y uno de sus lados mide 10 cm. ¿Cuánto mide el otro lado?",
+            "explanation": "El perímetro es 2(largo + ancho). Entonces 30 = 2(10 + x), por lo que x = 5 cm.",
+            "hint": "Divide primero el perímetro entre 2.",
+            "tags": [
+                "español",
+                "geometría"
+            ],
+            "options": [
+                {
+                    "content": "3 cm",
+                    "isCorrect": false
+                },
+                {
+                    "content": "5 cm",
+                    "isCorrect": true
+                },
+                {
+                    "content": "10 cm",
+                    "isCorrect": false
+                },
+                {
+                    "content": "15 cm",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una secuencia comienza así: 4, 8, 12, 16. ¿Cuál es el siguiente número?",
+            "explanation": "Cada término aumenta en 4, por lo que después de 16 viene 20.",
+            "hint": "Observa cuánto aumenta cada término.",
+            "tags": [
+                "español",
+                "patrones"
+            ],
+            "options": [
+                {
+                    "content": "18",
+                    "isCorrect": false
+                },
+                {
+                    "content": "20",
+                    "isCorrect": true
+                },
+                {
+                    "content": "22",
+                    "isCorrect": false
+                },
+                {
+                    "content": "24",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Si x + 7 = 15, ¿cuál es el valor de x?",
+            "explanation": "Se resta 7 a ambos lados de la ecuación: x = 15 - 7 = 8.",
+            "hint": "Despeja x restando 7.",
+            "tags": [
+                "español",
+                "álgebra"
+            ],
+            "options": [
+                {
+                    "content": "6",
+                    "isCorrect": false
+                },
+                {
+                    "content": "7",
+                    "isCorrect": false
+                },
+                {
+                    "content": "8",
+                    "isCorrect": true
+                },
+                {
+                    "content": "9",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una receta para 4 personas utiliza 300 g de arroz. ¿Cuánto arroz se necesita para 8 personas manteniendo la misma proporción?",
+            "explanation": "8 personas son el doble de 4, por lo que se necesitan 600 g de arroz.",
+            "hint": "La cantidad de personas se duplica.",
+            "tags": [
+                "español",
+                "proporcionalidad"
+            ],
+            "options": [
+                {
+                    "content": "450 g",
+                    "isCorrect": false
+                },
+                {
+                    "content": "500 g",
+                    "isCorrect": false
+                },
+                {
+                    "content": "600 g",
+                    "isCorrect": true
+                },
+                {
+                    "content": "800 g",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un grupo de estudiantes obtuvo los resultados 5, 7, 7, 8 y 10. ¿Cuál es la moda?",
+            "explanation": "La moda es el valor que aparece con mayor frecuencia. El número 7 aparece dos veces.",
+            "hint": "Busca el número que se repite más veces.",
+            "tags": [
+                "español",
+                "estadística"
+            ],
+            "options": [
+                {
+                    "content": "5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "7",
+                    "isCorrect": true
+                },
+                {
+                    "content": "8",
+                    "isCorrect": false
+                },
+                {
+                    "content": "10",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Los datos de una encuesta son 4, 6, 8, 10 y 12. ¿Cuál es la mediana?",
+            "explanation": "Los datos ya están ordenados y el valor central es 8.",
+            "hint": "Busca el valor que queda exactamente en el centro.",
+            "tags": [
+                "español",
+                "estadística"
+            ],
+            "options": [
+                {
+                    "content": "6",
+                    "isCorrect": false
+                },
+                {
+                    "content": "8",
+                    "isCorrect": true
+                },
+                {
+                    "content": "10",
+                    "isCorrect": false
+                },
+                {
+                    "content": "12",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "En una caja hay 4 bolas verdes y 6 amarillas. ¿Cuál es la probabilidad de sacar una bola verde?",
+            "explanation": "Hay 4 casos favorables de un total de 10, por lo que la probabilidad es 4/10 = 2/5.",
+            "hint": "Cuenta las bolas verdes y divídelas entre el total.",
+            "tags": [
+                "español",
+                "probabilidad"
+            ],
+            "options": [
+                {
+                    "content": "1/5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "2/5",
+                    "isCorrect": true
+                },
+                {
+                    "content": "1/2",
+                    "isCorrect": false
+                },
+                {
+                    "content": "3/5",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una estudiante lee 15 páginas el lunes, 20 el martes y 25 el miércoles. ¿Cuántas páginas leyó en total?",
+            "explanation": "15 + 20 + 25 = 60 páginas.",
+            "hint": "Suma las páginas de los tres días.",
+            "tags": [
+                "español",
+                "aritmética"
+            ],
+            "options": [
+                {
+                    "content": "50",
+                    "isCorrect": false
+                },
+                {
+                    "content": "55",
+                    "isCorrect": false
+                },
+                {
+                    "content": "60",
+                    "isCorrect": true
+                },
+                {
+                    "content": "65",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un producto cuesta $250 antes de impuestos y se aplica un impuesto del 16%. ¿Cuánto se paga de impuesto?",
+            "explanation": "El 16% de $250 es 250 × 0.16 = $40.",
+            "hint": "Multiplica 250 por 0.16.",
+            "tags": [
+                "español",
+                "porcentajes"
+            ],
+            "options": [
+                {
+                    "content": "$25",
+                    "isCorrect": false
+                },
+                {
+                    "content": "$35",
+                    "isCorrect": false
+                },
+                {
+                    "content": "$40",
+                    "isCorrect": true
+                },
+                {
+                    "content": "$50",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "¿Cuál de las siguientes acciones contribuye directamente a reducir la cantidad de residuos enviados a un relleno sanitario?",
+            "explanation": "Separar y reciclar materiales permite recuperar recursos y reducir los residuos que terminan en rellenos sanitarios.",
+            "hint": "Piensa en una acción que permita volver a utilizar materiales.",
+            "tags": [
+                "español",
+                "medio ambiente"
+            ],
+            "options": [
+                {
+                    "content": "Separar y reciclar materiales",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Mezclar todos los residuos",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Usar productos desechables innecesariamente",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Tirar residuos en espacios públicos",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una comunidad quiere saber si reducir el alumbrado durante una hora cada noche disminuye el consumo de electricidad. ¿Qué dato debe comparar?",
+            "explanation": "Debe comparar el consumo de electricidad antes y después de aplicar la medida, manteniendo en cuenta periodos comparables.",
+            "hint": "Compara la variable que se quiere modificar.",
+            "tags": [
+                "español",
+                "investigación"
+            ],
+            "options": [
+                {
+                    "content": "El color de las lámparas",
+                    "isCorrect": false
+                },
+                {
+                    "content": "El consumo de electricidad",
+                    "isCorrect": true
+                },
+                {
+                    "content": "El número de calles de la ciudad",
+                    "isCorrect": false
+                },
+                {
+                    "content": "La marca de los focos",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una noticia presenta una gráfica sobre la cantidad de lluvia de cinco meses. ¿Qué debe hacer un lector para identificar el mes con mayor precipitación?",
+            "explanation": "Debe comparar los valores de precipitación representados y localizar el más alto.",
+            "hint": "Busca el valor máximo de la gráfica.",
+            "tags": [
+                "español",
+                "interpretación de gráficas"
+            ],
+            "options": [
+                {
+                    "content": "Elegir el mes con la barra más alta.",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Elegir siempre el primer mes.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Sumar solamente dos meses.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Elegir el mes con menos lluvia.",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un texto dice: 'Aunque el parque está lejos, la familia decidió caminar hasta allí para evitar usar el automóvil'. ¿Qué relación presenta el texto?",
+            "explanation": "La familia decide caminar con el propósito de evitar el uso del automóvil.",
+            "hint": "Identifica la finalidad expresada por 'para'.",
+            "tags": [
+                "español",
+                "comprensión lectora"
+            ],
+            "options": [
+                {
+                    "content": "Caminar para evitar usar el automóvil.",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Usar el automóvil para llegar más tarde.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Ir al parque porque está cerrado.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Caminar porque no existe ningún parque.",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una escuela quiere determinar si una campaña para ahorrar agua fue efectiva. ¿Qué comparación proporcionaría evidencia útil?",
+            "explanation": "Comparar el consumo de agua antes y después de la campaña permite observar si hubo un cambio asociado con ella.",
+            "hint": "Compara los datos de consumo en dos momentos.",
+            "tags": [
+                "español",
+                "análisis de datos"
+            ],
+            "options": [
+                {
+                    "content": "El color de las paredes antes y después.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "El consumo de agua antes y después de la campaña.",
+                    "isCorrect": true
+                },
+                {
+                    "content": "El número de profesores de la escuela.",
+                    "isCorrect": false
+                },
+                {
+                    "content": "La cantidad de salones del edificio.",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una persona camina 2 km hacia el norte y después 2 km hacia el sur hasta regresar al punto inicial. ¿Cuál es su desplazamiento final?",
+            "explanation": "El desplazamiento depende de la posición inicial y final. Como termina donde comenzó, su desplazamiento es cero.",
+            "hint": "Compara la posición final con la posición inicial.",
+            "tags": [
+                "español",
+                "física"
+            ],
+            "options": [
+                {
+                    "content": "0 km",
+                    "isCorrect": true
+                },
+                {
+                    "content": "2 km",
+                    "isCorrect": false
+                },
+                {
+                    "content": "4 km",
+                    "isCorrect": false
+                },
+                {
+                    "content": "6 km",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Dos objetos tienen la misma masa, pero uno ocupa un volumen menor. ¿Cuál tiene mayor densidad?",
+            "explanation": "Con la misma masa, el objeto que ocupa menor volumen tiene una mayor relación masa/volumen y, por tanto, mayor densidad.",
+            "hint": "Recuerda que densidad = masa ÷ volumen.",
+            "tags": [
+                "español",
+                "física"
+            ],
+            "options": [
+                {
+                    "content": "El que ocupa menor volumen",
+                    "isCorrect": true
+                },
+                {
+                    "content": "El que ocupa mayor volumen",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Ambos siempre tienen densidad cero",
+                    "isCorrect": false
+                },
+                {
+                    "content": "No se puede comparar",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un estudiante observa que una planta colocada cerca de una ventana crece hacia la fuente de luz. ¿Qué estímulo está respondiendo la planta?",
+            "explanation": "La planta responde a la luz, orientando su crecimiento hacia ella; este fenómeno se relaciona con el fototropismo.",
+            "hint": "Identifica qué factor ambiental proviene de la ventana.",
+            "tags": [
+                "español",
+                "biología"
+            ],
+            "options": [
+                {
+                    "content": "La luz",
+                    "isCorrect": true
+                },
+                {
+                    "content": "El sonido",
+                    "isCorrect": false
+                },
+                {
+                    "content": "La gravedad de la Luna",
+                    "isCorrect": false
+                },
+                {
+                    "content": "El ruido",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una persona quiere comprobar si la temperatura afecta la rapidez con que se disuelve el azúcar. ¿Qué debería mantener constante para realizar una comparación justa?",
+            "explanation": "Para aislar el efecto de la temperatura, factores como la cantidad de azúcar y de agua deben mantenerse constantes.",
+            "hint": "Mantén iguales los factores que no deseas estudiar.",
+            "tags": [
+                "español",
+                "método científico"
+            ],
+            "options": [
+                {
+                    "content": "La cantidad de azúcar y agua",
+                    "isCorrect": true
+                },
+                {
+                    "content": "La temperatura en todos los recipientes",
+                    "isCorrect": false
+                },
+                {
+                    "content": "Todos los resultados",
+                    "isCorrect": false
+                },
+                {
+                    "content": "La variable que se quiere investigar",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un grupo obtiene 72 puntos de un máximo de 90. ¿Qué porcentaje de la puntuación máxima obtuvo?",
+            "explanation": "72 ÷ 90 = 0.8, que equivale al 80%.",
+            "hint": "Divide los puntos obtenidos entre el máximo posible y multiplica por 100.",
+            "tags": [
+                "español",
+                "porcentajes"
+            ],
+            "options": [
+                {
+                    "content": "70%",
+                    "isCorrect": false
+                },
+                {
+                    "content": "75%",
+                    "isCorrect": false
+                },
+                {
+                    "content": "80%",
+                    "isCorrect": true
+                },
+                {
+                    "content": "90%",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una caja contiene 24 lápices distribuidos por igual en 6 compartimentos. ¿Cuántos lápices hay en cada compartimento?",
+            "explanation": "Se divide el total entre los compartimentos: 24 ÷ 6 = 4.",
+            "hint": "Divide 24 entre 6.",
+            "tags": [
+                "español",
+                "división"
+            ],
+            "options": [
+                {
+                    "content": "3",
+                    "isCorrect": false
+                },
+                {
+                    "content": "4",
+                    "isCorrect": true
+                },
+                {
+                    "content": "5",
+                    "isCorrect": false
+                },
+                {
+                    "content": "6",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Una escuela tiene 480 estudiantes. Si 3/8 participan en una actividad deportiva, ¿cuántos estudiantes participan?",
+            "explanation": "480 × 3/8 = 60 × 3 = 180 estudiantes.",
+            "hint": "Divide 480 entre 8 y después multiplica el resultado por 3.",
+            "tags": [
+                "español",
+                "fracciones"
+            ],
+            "options": [
+                {
+                    "content": "120",
+                    "isCorrect": false
+                },
+                {
+                    "content": "160",
+                    "isCorrect": false
+                },
+                {
+                    "content": "180",
+                    "isCorrect": true
+                },
+                {
+                    "content": "240",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un rectángulo mide 12 cm de largo y 7 cm de ancho. ¿Cuál es su perímetro?",
+            "explanation": "El perímetro es 2 × (12 + 7) = 38 cm.",
+            "hint": "Suma largo y ancho y multiplica por 2.",
+            "tags": [
+                "español",
+                "geometría"
+            ],
+            "options": [
+                {
+                    "content": "19 cm",
+                    "isCorrect": false
+                },
+                {
+                    "content": "28 cm",
+                    "isCorrect": false
+                },
+                {
+                    "content": "38 cm",
+                    "isCorrect": true
+                },
+                {
+                    "content": "84 cm",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un estudiante compra 3 cuadernos de $28 cada uno. ¿Cuánto paga en total?",
+            "explanation": "3 × 28 = 84, por lo que paga $84.",
+            "hint": "Multiplica el precio de un cuaderno por la cantidad comprada.",
+            "tags": [
+                "español",
+                "aritmética"
+            ],
+            "options": [
+                {
+                    "content": "$74",
+                    "isCorrect": false
+                },
+                {
+                    "content": "$84",
+                    "isCorrect": true
+                },
+                {
+                    "content": "$94",
+                    "isCorrect": false
+                },
+                {
+                    "content": "$104",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "En una encuesta, 45 de 60 estudiantes respondieron que prefieren realizar actividades al aire libre. ¿Qué porcentaje representa?",
+            "explanation": "45/60 = 0.75, que equivale al 75%.",
+            "hint": "Convierte la fracción 45/60 a porcentaje.",
+            "tags": [
+                "español",
+                "estadística"
+            ],
+            "options": [
+                {
+                    "content": "65%",
+                    "isCorrect": false
+                },
+                {
+                    "content": "70%",
+                    "isCorrect": false
+                },
+                {
+                    "content": "75%",
+                    "isCorrect": true
+                },
+                {
+                    "content": "80%",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "title": "Un texto explica que una región ha recibido menos lluvia durante varios años. ¿Qué dato sería más útil para comprobar esta afirmación?",
+            "explanation": "Los registros históricos de precipitación permiten comparar las cantidades de lluvia de distintos años.",
+            "hint": "Busca datos medibles que puedan compararse a lo largo del tiempo.",
+            "tags": [
+                "español",
+                "análisis de información"
+            ],
+            "options": [
+                {
+                    "content": "Registros de precipitación de varios años",
+                    "isCorrect": true
+                },
+                {
+                    "content": "Opiniones de una sola persona",
+                    "isCorrect": false
+                },
+                {
+                    "content": "El color de las nubes de un día",
+                    "isCorrect": false
+                },
+                {
+                    "content": "El número de árboles de una escuela",
+                    "isCorrect": false
+                }
+            ]
+        }
+    ]
+}

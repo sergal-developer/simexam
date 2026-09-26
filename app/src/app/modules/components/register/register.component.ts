@@ -44,7 +44,7 @@ export class RegisterComponent implements OnInit {
   sections = {
     language: false,
     user: false,
-    avatar: false,
+    avatars: false,
   }
 
   _icon = {
@@ -170,7 +170,7 @@ export class RegisterComponent implements OnInit {
     this.sections = {
       language: false,
       user: false,
-      avatar: false,
+      avatars: false,
     }
   }
 
@@ -183,7 +183,7 @@ export class RegisterComponent implements OnInit {
   }
 
   async configAvatar() {
-    this._changeSection('avatar');
+    this._changeSection('avatars');
   }
 
   getCurrentNav(): { total: number, index: number } {

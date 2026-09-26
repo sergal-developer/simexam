@@ -1,0 +1,835 @@
+{
+  "title": "Examen PISA para cuarto de primaria",
+  "time": 45,
+  "tags": [
+    "spanish",
+    "test",
+    "pisa",
+    "primaria",
+    "cuarto"
+  ],
+  "answers": [
+    {
+      "title": "Ana tiene 24 lápices y quiere repartirlos por igual entre 6 niños. ¿Cuántos lápices recibirá cada niño?",
+      "explanation": "Se divide 24 entre 6. El resultado es 4, por lo que cada niño recibe 4 lápices.",
+      "hint": "Piensa en repartir los lápices en 6 grupos iguales.",
+      "tags": [
+        "spanish",
+        "mathematics"
+      ],
+      "options": [
+        {
+          "content": "3",
+          "isCorrect": false
+        },
+        {
+          "content": "4",
+          "isCorrect": true
+        },
+        {
+          "content": "5",
+          "isCorrect": false
+        },
+        {
+          "content": "6",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Un árbol mide 3 metros y otro mide 5 metros. ¿Cuántos metros más mide el segundo árbol?",
+      "explanation": "La diferencia se obtiene restando 3 a 5. El resultado es 2 metros.",
+      "hint": "Calcula la diferencia entre las dos alturas.",
+      "tags": [
+        "spanish",
+        "mathematics"
+      ],
+      "options": [
+        {
+          "content": "1 metro",
+          "isCorrect": false
+        },
+        {
+          "content": "2 metros",
+          "isCorrect": true
+        },
+        {
+          "content": "3 metros",
+          "isCorrect": false
+        },
+        {
+          "content": "8 metros",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "En una biblioteca hay 120 libros. Si 35 son de cuentos, ¿cuántos libros no son de cuentos?",
+      "explanation": "Se resta la cantidad de cuentos al total: 120 - 35 = 85.",
+      "hint": "Resta los libros de cuentos del total.",
+      "tags": [
+        "spanish",
+        "mathematics"
+      ],
+      "options": [
+        {
+          "content": "75",
+          "isCorrect": false
+        },
+        {
+          "content": "80",
+          "isCorrect": false
+        },
+        {
+          "content": "85",
+          "isCorrect": true
+        },
+        {
+          "content": "95",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Luis recorrió 2 kilómetros por la mañana y 3 kilómetros por la tarde. ¿Qué distancia recorrió en total?",
+      "explanation": "Se suman las dos distancias: 2 + 3 = 5 kilómetros.",
+      "hint": "Junta las dos distancias recorridas.",
+      "tags": [
+        "spanish",
+        "mathematics"
+      ],
+      "options": [
+        {
+          "content": "4 kilómetros",
+          "isCorrect": false
+        },
+        {
+          "content": "5 kilómetros",
+          "isCorrect": true
+        },
+        {
+          "content": "6 kilómetros",
+          "isCorrect": false
+        },
+        {
+          "content": "7 kilómetros",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Una pizza está dividida en 8 partes iguales. María come 3 partes. ¿Qué fracción de la pizza comió?",
+      "explanation": "María comió 3 de las 8 partes iguales, por lo que la fracción es 3/8.",
+      "hint": "El número de partes comidas va arriba y el total de partes va abajo.",
+      "tags": [
+        "spanish",
+        "fractions"
+      ],
+      "options": [
+        {
+          "content": "3/8",
+          "isCorrect": true
+        },
+        {
+          "content": "5/8",
+          "isCorrect": false
+        },
+        {
+          "content": "3/5",
+          "isCorrect": false
+        },
+        {
+          "content": "8/3",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "¿Cuál número continúa la serie: 5, 10, 15, 20, ___?",
+      "explanation": "Cada número aumenta en 5. Después de 20 sigue 25.",
+      "hint": "Observa cuánto aumenta cada número.",
+      "tags": [
+        "spanish",
+        "patterns"
+      ],
+      "options": [
+        {
+          "content": "21",
+          "isCorrect": false
+        },
+        {
+          "content": "23",
+          "isCorrect": false
+        },
+        {
+          "content": "25",
+          "isCorrect": true
+        },
+        {
+          "content": "30",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Un rectángulo tiene 6 centímetros de largo y 4 centímetros de ancho. ¿Cuál es su perímetro?",
+      "explanation": "El perímetro es 6 + 4 + 6 + 4 = 20 centímetros.",
+      "hint": "Suma todos los lados del rectángulo.",
+      "tags": [
+        "spanish",
+        "geometry"
+      ],
+      "options": [
+        {
+          "content": "10 cm",
+          "isCorrect": false
+        },
+        {
+          "content": "18 cm",
+          "isCorrect": false
+        },
+        {
+          "content": "20 cm",
+          "isCorrect": true
+        },
+        {
+          "content": "24 cm",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "En una caja hay 4 filas con 7 naranjas en cada fila. ¿Cuántas naranjas hay en total?",
+      "explanation": "Hay 4 grupos de 7 naranjas. 4 × 7 = 28.",
+      "hint": "Puedes resolverlo multiplicando el número de filas por las naranjas de cada fila.",
+      "tags": [
+        "spanish",
+        "multiplication"
+      ],
+      "options": [
+        {
+          "content": "21",
+          "isCorrect": false
+        },
+        {
+          "content": "24",
+          "isCorrect": false
+        },
+        {
+          "content": "28",
+          "isCorrect": true
+        },
+        {
+          "content": "32",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Una clase comienza a las 8:00 y termina a las 10:30. ¿Cuánto dura la clase?",
+      "explanation": "Desde las 8:00 hasta las 10:00 pasan 2 horas y hasta las 10:30 pasan 30 minutos más. En total son 2 horas y 30 minutos.",
+      "hint": "Calcula primero las horas completas y después los minutos.",
+      "tags": [
+        "spanish",
+        "time"
+      ],
+      "options": [
+        {
+          "content": "1 hora y 30 minutos",
+          "isCorrect": false
+        },
+        {
+          "content": "2 horas",
+          "isCorrect": false
+        },
+        {
+          "content": "2 horas y 30 minutos",
+          "isCorrect": true
+        },
+        {
+          "content": "3 horas",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Lee: 'El agua de lluvia puede almacenarse para regar plantas'. ¿Cuál es una ventaja de hacerlo?",
+      "explanation": "Almacenar agua de lluvia permite aprovechar un recurso natural para regar las plantas y reducir el uso de agua potable.",
+      "hint": "Piensa en cómo se puede aprovechar el agua que cae durante la lluvia.",
+      "tags": [
+        "spanish",
+        "reading",
+        "environment"
+      ],
+      "options": [
+        {
+          "content": "Aumentar el desperdicio de agua",
+          "isCorrect": false
+        },
+        {
+          "content": "Aprovechar el agua de lluvia",
+          "isCorrect": true
+        },
+        {
+          "content": "Evitar que las plantas reciban agua",
+          "isCorrect": false
+        },
+        {
+          "content": "Hacer que no vuelva a llover",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Lee: 'Carlos llevó su paraguas porque el cielo estaba oscuro y había nubes'. ¿Por qué llevó el paraguas?",
+      "explanation": "Carlos llevó el paraguas porque las nubes oscuras podían indicar que iba a llover.",
+      "hint": "Relaciona las nubes oscuras con el posible estado del tiempo.",
+      "tags": [
+        "spanish",
+        "reading",
+        "inference"
+      ],
+      "options": [
+        {
+          "content": "Porque quería jugar al sol",
+          "isCorrect": false
+        },
+        {
+          "content": "Porque esperaba que pudiera llover",
+          "isCorrect": true
+        },
+        {
+          "content": "Porque hacía mucho calor",
+          "isCorrect": false
+        },
+        {
+          "content": "Porque iba a nadar",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "¿Cuál es la idea principal de este texto? 'Las abejas visitan las flores para obtener néctar. Al hacerlo, transportan polen de una flor a otra y ayudan a las plantas a reproducirse.'",
+      "explanation": "El texto explica que las abejas, al buscar alimento, transportan polen y ayudan a la reproducción de las plantas.",
+      "hint": "Busca la información que resume todo el texto.",
+      "tags": [
+        "spanish",
+        "reading",
+        "main-idea"
+      ],
+      "options": [
+        {
+          "content": "Las abejas solo vuelan durante la noche",
+          "isCorrect": false
+        },
+        {
+          "content": "Las abejas ayudan a las plantas al transportar polen",
+          "isCorrect": true
+        },
+        {
+          "content": "Las flores comen néctar",
+          "isCorrect": false
+        },
+        {
+          "content": "Las plantas construyen colmenas",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "¿Cuál de estas acciones ayuda a reducir la cantidad de basura?",
+      "explanation": "Reutilizar objetos permite aprovecharlos nuevamente y evita generar residuos innecesarios.",
+      "hint": "Piensa en una acción que permita usar un objeto más de una vez.",
+      "tags": [
+        "spanish",
+        "environment"
+      ],
+      "options": [
+        {
+          "content": "Tirar todos los objetos después de usarlos",
+          "isCorrect": false
+        },
+        {
+          "content": "Reutilizar algunos objetos",
+          "isCorrect": true
+        },
+        {
+          "content": "Usar más bolsas desechables",
+          "isCorrect": false
+        },
+        {
+          "content": "Dejar basura en la calle",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Una planta se coloca cerca de una ventana y recibe luz solar. ¿Qué elemento obtiene principalmente de la luz para realizar la fotosíntesis?",
+      "explanation": "Las plantas utilizan la energía de la luz solar para realizar la fotosíntesis.",
+      "hint": "La luz proporciona energía a la planta.",
+      "tags": [
+        "spanish",
+        "science",
+        "plants"
+      ],
+      "options": [
+        {
+          "content": "Energía",
+          "isCorrect": true
+        },
+        {
+          "content": "Arena",
+          "isCorrect": false
+        },
+        {
+          "content": "Plástico",
+          "isCorrect": false
+        },
+        {
+          "content": "Piedras",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "¿Qué sucede con un cubo de hielo cuando se deja en un lugar cálido durante un tiempo?",
+      "explanation": "El hielo absorbe calor del ambiente y cambia de estado sólido a líquido, convirtiéndose en agua.",
+      "hint": "Piensa qué ocurre con el hielo cuando recibe calor.",
+      "tags": [
+        "spanish",
+        "science",
+        "matter"
+      ],
+      "options": [
+        {
+          "content": "Se convierte en agua",
+          "isCorrect": true
+        },
+        {
+          "content": "Se convierte en piedra",
+          "isCorrect": false
+        },
+        {
+          "content": "Desaparece sin cambiar",
+          "isCorrect": false
+        },
+        {
+          "content": "Se convierte en metal",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "¿Cuál de los siguientes animales es un mamífero?",
+      "explanation": "El perro es un mamífero porque pertenece a un grupo de animales que tienen pelo y alimentan a sus crías con leche.",
+      "hint": "Busca el animal que tiene características propias de los mamíferos.",
+      "tags": [
+        "spanish",
+        "science",
+        "animals"
+      ],
+      "options": [
+        {
+          "content": "Perro",
+          "isCorrect": true
+        },
+        {
+          "content": "Mariposa",
+          "isCorrect": false
+        },
+        {
+          "content": "Rana",
+          "isCorrect": false
+        },
+        {
+          "content": "Sardina",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Una estudiante quiere saber si una planta crece mejor con luz o sin luz. ¿Qué debería hacer para realizar una comparación justa?",
+      "explanation": "Debe mantener iguales las demás condiciones, como agua, tipo de planta y tierra, y cambiar solamente la cantidad de luz.",
+      "hint": "Para comparar dos situaciones, cambia una condición y mantén las demás iguales.",
+      "tags": [
+        "spanish",
+        "science",
+        "experiments"
+      ],
+      "options": [
+        {
+          "content": "Usar plantas diferentes y cambiar muchas condiciones",
+          "isCorrect": false
+        },
+        {
+          "content": "Mantener las mismas condiciones excepto la luz",
+          "isCorrect": true
+        },
+        {
+          "content": "No observar las plantas",
+          "isCorrect": false
+        },
+        {
+          "content": "Cambiar la cantidad de agua cada día",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "En una encuesta, 12 estudiantes prefieren fútbol, 8 prefieren baloncesto y 5 prefieren natación. ¿Qué deporte fue el más elegido?",
+      "explanation": "Fútbol obtuvo 12 elecciones, más que baloncesto con 8 y natación con 5.",
+      "hint": "Compara las tres cantidades.",
+      "tags": [
+        "spanish",
+        "data",
+        "mathematics"
+      ],
+      "options": [
+        {
+          "content": "Fútbol",
+          "isCorrect": true
+        },
+        {
+          "content": "Baloncesto",
+          "isCorrect": false
+        },
+        {
+          "content": "Natación",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Una tienda registra estas ventas de cuadernos: lunes 10, martes 15, miércoles 12. ¿Qué día vendió más cuadernos?",
+      "explanation": "El martes se vendieron 15 cuadernos, la cantidad más alta de los tres días.",
+      "hint": "Busca el número mayor de la información proporcionada.",
+      "tags": [
+        "spanish",
+        "data",
+        "reading"
+      ],
+      "options": [
+        {
+          "content": "Lunes",
+          "isCorrect": false
+        },
+        {
+          "content": "Martes",
+          "isCorrect": true
+        },
+        {
+          "content": "Miércoles",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Si 5 cuadernos cuestan 50 pesos y todos tienen el mismo precio, ¿cuánto cuesta un cuaderno?",
+      "explanation": "Se divide el costo total entre la cantidad de cuadernos: 50 ÷ 5 = 10 pesos.",
+      "hint": "Divide el precio total entre el número de cuadernos.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "division"
+      ],
+      "options": [
+        {
+          "content": "5 pesos",
+          "isCorrect": false
+        },
+        {
+          "content": "10 pesos",
+          "isCorrect": true
+        },
+        {
+          "content": "15 pesos",
+          "isCorrect": false
+        },
+        {
+          "content": "25 pesos",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Una receta necesita 2 tazas de harina para hacer 12 galletas. Si se prepara la misma receta para 24 galletas, ¿cuánta harina se necesita?",
+      "explanation": "24 galletas son el doble de 12, por lo que se necesita el doble de harina: 2 × 2 = 4 tazas.",
+      "hint": "La cantidad de galletas se duplica, así que también debe duplicarse la harina.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "proportions"
+      ],
+      "options": [
+        {
+          "content": "2 tazas",
+          "isCorrect": false
+        },
+        {
+          "content": "3 tazas",
+          "isCorrect": false
+        },
+        {
+          "content": "4 tazas",
+          "isCorrect": true
+        },
+        {
+          "content": "6 tazas",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Un salón tiene 4 mesas. En cada mesa hay 6 estudiantes. ¿Cuántos estudiantes hay en total?",
+      "explanation": "Hay 4 grupos de 6 estudiantes. 4 × 6 = 24 estudiantes.",
+      "hint": "Multiplica el número de mesas por los estudiantes de cada mesa.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "multiplication"
+      ],
+      "options": [
+        {
+          "content": "18",
+          "isCorrect": false
+        },
+        {
+          "content": "20",
+          "isCorrect": false
+        },
+        {
+          "content": "24",
+          "isCorrect": true
+        },
+        {
+          "content": "28",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Pedro tiene 100 pesos. Compra un libro que cuesta 65 pesos. ¿Cuánto dinero le queda?",
+      "explanation": "Se resta el precio del libro al dinero que tenía: 100 - 65 = 35 pesos.",
+      "hint": "Calcula cuánto sobra después de pagar el libro.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "money"
+      ],
+      "options": [
+        {
+          "content": "25 pesos",
+          "isCorrect": false
+        },
+        {
+          "content": "30 pesos",
+          "isCorrect": false
+        },
+        {
+          "content": "35 pesos",
+          "isCorrect": true
+        },
+        {
+          "content": "45 pesos",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Lee: 'Sofía sembró una semilla. Durante varios días la regó y la colocó donde recibiera luz. Después de una semana apareció un pequeño tallo.' ¿Qué ocurrió primero?",
+      "explanation": "El primer acontecimiento mencionado es que Sofía sembró una semilla.",
+      "hint": "Busca la primera acción que aparece en el texto.",
+      "tags": [
+        "spanish",
+        "reading",
+        "sequence"
+      ],
+      "options": [
+        {
+          "content": "Apareció un tallo",
+          "isCorrect": false
+        },
+        {
+          "content": "Sofía sembró una semilla",
+          "isCorrect": true
+        },
+        {
+          "content": "Pasó una semana",
+          "isCorrect": false
+        },
+        {
+          "content": "La planta produjo flores",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "¿Cuál oración describe una opinión y no un hecho comprobable?",
+      "explanation": "Decir que un parque es el más bonito expresa una valoración personal, por lo que es una opinión.",
+      "hint": "Busca la oración que expresa una valoración personal.",
+      "tags": [
+        "spanish",
+        "reading",
+        "opinions"
+      ],
+      "options": [
+        {
+          "content": "El parque abre a las ocho de la mañana",
+          "isCorrect": false
+        },
+        {
+          "content": "El parque tiene tres juegos",
+          "isCorrect": false
+        },
+        {
+          "content": "El parque es el lugar más bonito de la ciudad",
+          "isCorrect": true
+        },
+        {
+          "content": "El parque tiene árboles",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Un recipiente contiene 1 litro de agua. Se agregan otros 500 mililitros. ¿Cuánta agua hay en total?",
+      "explanation": "Un litro equivale a 1000 mililitros. Al sumar 500 mililitros se obtienen 1500 mililitros, equivalentes a 1.5 litros.",
+      "hint": "Convierte primero el litro a mililitros.",
+      "tags": [
+        "spanish",
+        "measurement",
+        "mathematics"
+      ],
+      "options": [
+        {
+          "content": "1.2 litros",
+          "isCorrect": false
+        },
+        {
+          "content": "1.5 litros",
+          "isCorrect": true
+        },
+        {
+          "content": "2 litros",
+          "isCorrect": false
+        },
+        {
+          "content": "2.5 litros",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Una familia quiere ahorrar electricidad. ¿Cuál acción puede ayudar directamente a lograrlo?",
+      "explanation": "Apagar las luces cuando no se necesitan evita consumir electricidad innecesariamente.",
+      "hint": "Piensa en evitar el consumo de electricidad cuando no hace falta.",
+      "tags": [
+        "spanish",
+        "environment",
+        "energy"
+      ],
+      "options": [
+        {
+          "content": "Dejar todas las luces encendidas",
+          "isCorrect": false
+        },
+        {
+          "content": "Apagar las luces que no se utilizan",
+          "isCorrect": true
+        },
+        {
+          "content": "Abrir el refrigerador constantemente",
+          "isCorrect": false
+        },
+        {
+          "content": "Encender más aparatos",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "En un jardín hay 18 flores rojas y 12 flores amarillas. ¿Cuántas flores hay en total?",
+      "explanation": "Se suman las flores rojas y amarillas: 18 + 12 = 30.",
+      "hint": "Suma las dos cantidades de flores.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "addition"
+      ],
+      "options": [
+        {
+          "content": "20",
+          "isCorrect": false
+        },
+        {
+          "content": "28",
+          "isCorrect": false
+        },
+        {
+          "content": "30",
+          "isCorrect": true
+        },
+        {
+          "content": "32",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Una estudiante observa que una sombra cambia de tamaño durante el día. ¿Cuál es una posible causa de este cambio?",
+      "explanation": "La posición del Sol cambia durante el día, modificando la dirección y el tamaño aparente de las sombras.",
+      "hint": "Piensa en el movimiento aparente del Sol durante el día.",
+      "tags": [
+        "spanish",
+        "science",
+        "observation"
+      ],
+      "options": [
+        {
+          "content": "La posición del Sol cambia",
+          "isCorrect": true
+        },
+        {
+          "content": "Las sombras producen luz",
+          "isCorrect": false
+        },
+        {
+          "content": "El suelo deja de existir",
+          "isCorrect": false
+        },
+        {
+          "content": "Los objetos cambian de color automáticamente",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Un autobús tiene 40 asientos. En una parada bajan 13 pasajeros y suben 8. Si antes había 35 pasajeros, ¿cuántos pasajeros hay ahora?",
+      "explanation": "Primero bajan 13: 35 - 13 = 22. Después suben 8: 22 + 8 = 30 pasajeros.",
+      "hint": "Haz primero la resta de los pasajeros que bajan y después suma los que suben.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "problem-solving"
+      ],
+      "options": [
+        {
+          "content": "27",
+          "isCorrect": false
+        },
+        {
+          "content": "30",
+          "isCorrect": true
+        },
+        {
+          "content": "32",
+          "isCorrect": false
+        },
+        {
+          "content": "35",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

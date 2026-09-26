@@ -1,0 +1,177 @@
+/* =============================================================
+   Vista de detalle del quiz seleccionado
+   Mismas variables y tipografía que file-list.component.scss
+   ============================================================= */
+
+:host {
+  --bg: #302f2d;
+  --bg-panel: #232530;
+  --text: #e8e9ed;
+  --text-dim: #9aa0ad;
+  --accent: #4f8cff;
+  --accent-soft: rgba(79, 140, 255, 0.14);
+  --border: #3a3b42;
+  --badge-bg: #2b2e38;
+  --warn: #ff8f6b;
+  --font-title: 'Sora', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+
+  display: block;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.detail {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.detail__header h2 {
+  font-family: var(--font-title);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.detail__path {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  color: var(--text-dim);
+  font-size: 12px;
+  word-break: break-all;
+
+  .material-icons {
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  code {
+    font-family: 'Sora', ui-monospace, monospace;
+    color: var(--accent);
+  }
+}
+
+.detail__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 13px;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+
+  .material-icons {
+    font-size: 17px;
+  }
+
+  &:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+}
+
+.detail__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 12px 14px;
+  list-style: none;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-dim);
+  font-size: 13px;
+
+  strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+}
+
+.detail__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 3px 9px;
+    font-size: 11px;
+    color: var(--text-dim);
+    background: var(--badge-bg);
+    border-radius: 10px;
+  }
+}
+
+.detail__preview {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+
+  summary {
+    padding: 10px 14px;
+    font-family: var(--font-title);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-dim);
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+
+  pre {
+    margin: 0;
+    padding: 14px;
+    max-height: 380px;
+    overflow: auto;
+    border-top: 1px solid var(--border);
+    font-family: 'Sora', ui-monospace, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text-dim);
+  }
+}
+
+.detail__alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--warn);
+  background: rgba(255, 143, 107, 0.1);
+  border: 1px solid rgba(255, 143, 107, 0.35);
+  border-radius: 8px;
+
+  .material-icons {
+    font-size: 19px;
+    flex-shrink: 0;
+  }
+}

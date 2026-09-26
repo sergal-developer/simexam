@@ -95,6 +95,10 @@ export class DashboardComponent implements OnInit {
       }
     }
 
+    const examcomplete = await this.commonServices.getQuizCompleteById(1);
+    console.log('examcomplete: ', examcomplete);
+    console.log('examcomplete JSON: ', JSON.stringify(examcomplete, null, 2));
+
     this.uiServices.showLoader(false);
   }
 

@@ -82,7 +82,8 @@
             "headers": {
               "Cross-Origin-Opener-Policy": "same-origin",
               "Cross-Origin-Embedder-Policy": "require-corp"
-            }
+            },
+            "port": 4300
           }
         },
         "extract-i18n": {
