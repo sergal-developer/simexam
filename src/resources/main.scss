@@ -1,5 +1,6 @@
 :root {
     --appBackground: #000000;
+    --appBackgroundTransparent: #00000050;
     --appColor: #d0d0d0;
     --appFontSize: 16px;
     --textFontSize: 16px;
@@ -7,6 +8,7 @@
     --primary: #174FA1;
     --primaryBackground: #174FA1;
     --primaryBackgroundHover: #346ec5;
+    --primaryBackgroundHoverO: #c1d2ec30;
     --primaryColor: #FFFCFF;
 
     --secondary: #B30ECF;
@@ -26,6 +28,7 @@
     --formErrorColor: #f08d9c;
     --formBackground: rgba(33, 33, 33, 0.7);
     --formBackgroundSolid: #494949;
+    --formBackgroundTransparent: #494949ab;
 
     --notificationColor: #d0d0d0;
     --notificationColorContrast: #000000;
@@ -48,6 +51,8 @@
 
     --pillBackground: #3d3d3d;
     --pillColor: #585858;
+    --pillBackgroundHover: #3d3d3d;
+    --pillColorHover: #1b1b1b;
     --rootHeroBackground: #2b2b2b;
     --timerBarBackground: #0c770c;
     --timerBarContainerBackground: rgb(200, 200, 200);
@@ -72,8 +77,16 @@
     --stadisticBackground: rgba(0, 0, 0, 0.5);
 
     --zoomLevel: 100%;
-}
 
+    --space-joined: 4px;
+    --space-direct: 8px;
+    --space-relation: 12px;
+    --space-def: 16px;
+    --space-group: 24px;
+    --space-separation: 32px;
+    --space-section: 48px;
+    --space-block: 64px;
+}
 
 @import './theme/core/reset';
 @import './theme/core/refs';

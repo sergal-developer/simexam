@@ -10,11 +10,10 @@ h5,
 h6 {
     line-height: inherit;
     font-weight: normal;
-    margin: 0 0 10px 0;
+    margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
-
 }
 
 form,
@@ -38,11 +37,12 @@ input {
     border: transparent;
     color: inherit;
     min-height: 50px;
-    height: 60px;
+    height: 50px;
 }
 
 button,
-.button {
+.button,
+.btn {
     background: var(--primaryBackground);
     color: var(--primaryColor);
     border: 1px solid transparent;
@@ -99,6 +99,26 @@ button,
         }
     }
 
+    &.primaryText {
+        color: var(--secondaryBackground);
+
+        &:hover,
+        &.hover {
+            color: var(--secondaryBackgroundHover);
+        }
+    }
+
+    &.unselected {
+        background: var(--pillBackground);
+        color: var(--pillColorHover);
+
+        &:hover,
+        &.hover {
+            background: var(--pillBackgroundHover);
+            color: var(--pillColorHover);
+        }
+    }
+
     &.link {
         color: var(--appColor);
         background: transparent;
@@ -118,4 +138,8 @@ button,
         }
     }
 
+}
+
+.clickable {
+    cursor: pointer;
 }

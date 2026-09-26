@@ -1,6 +1,9 @@
 @import '../../../../resources/theme/core/mixins';
 @import '../../../../resources/theme/core/typography';
 
+$boxMinHeight: 50px;
+$boxMinHeightFlat: 20px;
+$boxMaxHeight: 300px;
 
 .mat-form-field {
     display: flex;
@@ -18,7 +21,7 @@
         border-radius: 10px;
         color: var(--appColor);
         margin: 15px 0;
-        min-height: 60px;
+        min-height: $boxMinHeight;
         font-size: rem(18px);
 
         .mat-label-text {
@@ -48,33 +51,40 @@
         .textarea-warp,
         input,
         textarea {
-            margin-top: 10px;
+            margin: 0;
             padding: 10px;
             font-size: 100%;
-            min-height: 50px;
-            height: 50px;
+            min-height: $boxMinHeight;
+            height: $boxMinHeight;
         }
 
         .textarea-warp {
             width: 100%;
             padding: 0;
-            display: grid;
             height: auto;
             line-height: 1;
+            display: grid;
+            position: relative;
 
-            &:after {
+            &:after,
+            textarea {
                 content: attr(data-replicated-value) " ";
                 white-space: pre-wrap;
                 visibility: hidden;
                 grid-area: 1 / 1 / 2 / 2;
-                padding: 10px;
+                padding: 0 10px;
                 line-height: 1;
+                min-height: $boxMinHeight;
+                max-height: $boxMaxHeight;
+                overflow: auto;
+                height: auto;
+                box-sizing: border-box;
+                resize: none;
+                width: 100%;
             }
 
             textarea {
-                resize: none;
-                overflow: hidden;
-                grid-area: 1 / 1 / 2 / 2;
+                visibility: visible;
             }
         }
 
@@ -85,15 +95,15 @@
 
         &.empty {
             .mat-label-text {
-                transform: translate(12px, 20px);
+                transform: translate(12px, calc(#{$boxMinHeight} / 4));
                 font-size: 100%;
                 color: inherit;
-                opacity: 1;
+                opacity: 0.7;
             }
 
             textarea,
             input {
-                height: 50px;
+                height: $boxMinHeight;
 
                 &::placeholder {
                     opacity: 0;
@@ -108,23 +118,43 @@
 }
 
 .flat-form {
-
     .mat-label {
+        min-height: $boxMinHeightFlat;
         background: transparent;
         margin: 0;
-    }
+        align-items: stretch;
 
-    textarea,
-    input {
-        margin: 0 !important;
+        .mat-label-text {
+            opacity: 0;
+        }
+
+        &.empty {
+            .mat-label-text {
+                transform: translate(12px, calc(#{$boxMinHeightFlat} / 4));
+                opacity: 0.5;
+            }
+
+            textarea,
+            input {
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+        }
     }
 
     .textarea-warp {
-        margin: 0 !important;
-    }
-
-    textarea {
-        min-height: 60px !important;
         margin: 0;
+        min-height: $boxMinHeightFlat;
+        height: auto;
+        
+        textarea,
+        input,
+        &:after {
+            min-height: $boxMinHeightFlat;
+            height: auto;
+            margin: 0;
+            padding: 10px 0px;
+        }
     }
 }

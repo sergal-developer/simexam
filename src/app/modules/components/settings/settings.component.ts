@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { ProfileEntity, SettingsEntity, ThemeProps } from 'src/app/shared/data/entities/entities';
+import { SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
 
@@ -12,11 +11,11 @@ import { UiServices } from 'src/app/shared/services/ui.services';
   encapsulation: ViewEncapsulation.None,
 })
 export class SettingsComponent implements OnInit {
-  profile: ProfileEntity;
-  settings: SettingsEntity;
+  profile: UserDTO;
+  settings: SettingsDTO;
   pendingChanges: {
-    profile?: ProfileEntity,
-    settings?: SettingsEntity;
+    profile?: UserDTO,
+    settings?: SettingsDTO;
   }
   profileUI = {
     avatarEdit: false,
@@ -40,8 +39,8 @@ export class SettingsComponent implements OnInit {
   themeProps: Array<{ name: string, value: string }> = null;
   customizeColorsMode = false;
 
-  constructor(private _commonServices: CommonServices,
-    private _uiServices: UiServices,
+  constructor(private commonServices: CommonServices,
+    private uiServices: UiServices,
     private translate: TranslateService,
     private fb: FormBuilder
   ) { }
@@ -52,20 +51,21 @@ export class SettingsComponent implements OnInit {
 
   //#region DATA
   async getSettings() {
-    const settings = await this._commonServices.getAllSettings();
-    this.settings = settings[0];
-    this.profile = await this._commonServices.getActiveProfile();
+    this.settings = await this.commonServices.getSettingCompleteById();
+    this.profile = await this.commonServices.getCurrentUser();
 
     this.form = this.fb.group({
-        name: [this.profile.userName, Validators.required],
+      name: [this.profile.userName, Validators.required],
     });
     this.form.get('name').disable();
 
     try {
-      this.themeProps = this.getKeysThemeProps(this.settings.themeProps[this.settings.theme]);
+      const currentTheme = this.settings._themes.find(x => x.id == this.settings.theme);
+      if (currentTheme) {
+        this.themeProps = this.getKeysThemeProps(currentTheme.content as ThemePropertiesDTO);
+      }
     } catch (error) {
-      console.log('error: ', error);
-
+      console.info('error: ', error);
     }
   }
 
@@ -77,41 +77,53 @@ export class SettingsComponent implements OnInit {
   async updatePermission() {
     if (this.updating) { return; }
     this.updating = true;
-    await this._commonServices.updateSetting(this.settings.id, this.settings);
-    const settings = await this._commonServices.getAllSettings();
-    this.settings = settings[0];
 
-    // this._uiServices._notification('Permisos actualizados');
+    await this.commonServices.saveSettings({
+      language: this.settings.language,
+      permissions: this.settings.permissions,
+      theme: this.settings.theme,
+      settingId: this.settings.settingId
+    });
+    this.settings = await this.commonServices.getCurrentSettings();
+    this.uiServices.notification('Permisos actualizados');
     this.updating = false;
 
   }
 
   async changeLanguage(language) {
     const languages = [];
-    this.settings.availableLanguages.map((lan) => {
+    this.settings._languages.map((lan) => {
       languages.push(lan.value);
     })
     this.translate.addLangs(languages);
     this.settings.language = language;
 
     this.translate.setDefaultLang(this.settings.language);
-    await this._commonServices.updateSetting(this.settings.id, this.settings);
+    await this.commonServices.saveSettings({
+      language: this.settings.language,
+      permissions: this.settings.permissions,
+      theme: this.settings.theme,
+      settingId: this.settings.settingId
+    });
   }
 
-  changeTheme(theme) {
+  async changeTheme(theme) {
     this.settings.theme = theme;
-    // if(!this.settings.themeProps) {
-      this.settings.themeProps = {
-        light: this._commonServices.defaultThemeLight,
-        dark: this._commonServices.defaultThemeDark
+    if (this.settings._themes.length) {
+      const theme = this.settings._themes.find(x => x.id == this.settings.theme);
+      if (theme) {
+        this.uiServices.applyTheme(theme);
+        await this.commonServices.saveSettings({
+          language: this.settings.language,
+          permissions: this.settings.permissions,
+          theme: this.settings.theme,
+          settingId: this.settings.settingId
+        });
+        try {
+          this.themeProps = this.getKeysThemeProps(theme.content as ThemePropertiesDTO);
+        } catch (error) { }
       }
-    // }
-    this._uiServices.applyTheme(this.settings.themeProps[this.settings.theme.toLowerCase()])
-    
-    try {
-      this.themeProps = this.getKeysThemeProps(this.settings.themeProps[this.settings.theme.toLowerCase()]);
-    } catch (error) {}
-
+    }
     this.updatePermission();
   }
   //#endregion DATA
@@ -121,16 +133,15 @@ export class SettingsComponent implements OnInit {
     this.defaultAvatars.map(image => {
       image.selected = image.url == item.url ? true : false;
     });
-    this.profile.avatar.url = item.url;
-
+    this.profile.avatarUrl = item.url;
     // SAVE DATA 
   }
 
   editAvatar() {
     this.profileUI.avatarEdit = !this.profileUI.avatarEdit;
-    if(this.profileUI.avatarEdit) {
+    if (this.profileUI.avatarEdit) {
       this.defaultAvatars.map((avatar) => {
-        avatar.selected = avatar.url == this.profile.avatar.url;
+        avatar.selected = avatar.url == this.profile.avatarUrl;
       });
     } else {
       this.saveDataProfile();
@@ -139,7 +150,7 @@ export class SettingsComponent implements OnInit {
 
   editUsername() {
     this.profileUI.usernameEdit = !this.profileUI.usernameEdit;
-    if(this.profileUI.usernameEdit) {
+    if (this.profileUI.usernameEdit) {
       this.form.get('name').enable();
     } else {
       this.form.get('name').disable();
@@ -149,7 +160,6 @@ export class SettingsComponent implements OnInit {
   editUsernameConfirm() {
     this.profile.userName = this.form.get('name').value;
     this.editUsername();
-
     this.saveDataProfile();
   }
 
@@ -162,25 +172,43 @@ export class SettingsComponent implements OnInit {
     this.customizeColorsMode = !this.customizeColorsMode;
   }
 
-  updateColors(prop: any ) {
+  async updateColors(prop: any) {
     const changes = this.buildKeysThemeProps(this.themeProps);
-    const base = this.settings.themeProps[this.settings.theme];
-    this.settings.themeProps[this.settings.theme] = { ...base, ...changes };
+    const theme = this.settings._themes.find(x => x.id == this.settings.theme);
+    const themeContent: ThemePropertiesDTO = theme.content as ThemePropertiesDTO;
+    if (theme) {
+      if (theme.id != 'custom') {
 
-    setTimeout(() => {
-      this._uiServices.applyTheme(this.settings.themeProps[this.settings.theme]);
-    }, 300);
+        const themeRow: ThemeDTO = {
+          id: 'custom',
+          content: { ...themeContent, ...changes }
+        }
+      } else {
+        theme.content = { ...themeContent, ...changes }
+      }
+      setTimeout(() => {
+        this.uiServices.applyTheme(theme);
+      }, 300);
+    }
   }
 
   async saveDataProfile() {
-    const result = await this._commonServices.updateProfile(this.profile.id, this.profile);
+    const user: UserDTO = {
+      age: this.profile.age,
+      avatarBody: this.profile.avatarBody,
+      avatarUrl: this.profile.avatarUrl,
+      current: this.profile.current,
+      userName: this.profile.userName,
+      uuid: this.profile.uuid,
+      userId: this.profile.userId,
+    };
+    const result = await this.commonServices.saveUser(user);
     return result;
   }
 
   // #region IMPORT/EXPORTS
   export() {
-    const exams = this._commonServices.getAllQuizs();
-    console.log('exams: ', exams);
+    const exams = this.commonServices.getAllQuizs();
     this.copyClipboard(JSON.stringify(exams));
     this.downloadJSON(JSON.stringify(exams), 'collection-exam.json');
   }
@@ -192,10 +220,10 @@ export class SettingsComponent implements OnInit {
     try {
       const json = JSON.parse(data);
       // crear funcion que agrege el json de un solo paso
-      this._commonServices.saveQuiz(json);
-      this._uiServices.notification('Plantilla importada exitosamente', { type: 'success', closeTimer: 5000 });
+      // this.commonServices.saveQuiz(json);
+      this.uiServices.notification('Plantilla importada exitosamente', { type: 'success', closeTimer: 5000 });
     } catch (error) {
-      this._uiServices.notification('Error al importar plantilla', { type: 'warning', closeTimer: 5000 });
+      this.uiServices.notification('Error al importar plantilla', { type: 'warning', closeTimer: 5000 });
     }
   }
 
@@ -212,9 +240,9 @@ export class SettingsComponent implements OnInit {
       downloadElement.click();
       document.body.removeChild(downloadElement);
       URL.revokeObjectURL(url);
-      this._uiServices.notification('Exportación exitosa', { type: 'info', closeTimer: 3000 });
+      this.uiServices.notification('Exportación exitosa', { type: 'info', closeTimer: 3000 });
     } catch (error: any) {
-      this._uiServices.notification(error, { type: 'warning', closeTimer: 5000 });
+      this.uiServices.notification(error, { type: 'warning', closeTimer: 5000 });
     }
   }
 
@@ -229,7 +257,7 @@ export class SettingsComponent implements OnInit {
 
       lector.onerror = (evento: any) => {
         console.warn("Error al leer el archivo:", evento.target.error);
-        this._uiServices.notification('Error al leer el archivo', { type: 'warning', closeTimer: 5000 });
+        this.uiServices.notification('Error al leer el archivo', { type: 'warning', closeTimer: 5000 });
         resolve('');
       };
 
@@ -247,12 +275,12 @@ export class SettingsComponent implements OnInit {
     return success;
   }
 
-  getKeysThemeProps(ThemeProps: ThemeProps) {
-    if(!ThemeProps) return null;
+  getKeysThemeProps(ThemeProps: ThemePropertiesDTO) {
+    if (!ThemeProps) return null;
     const result = [];
     Object.keys(ThemeProps).map((key) => {
-      if(!ThemeProps[key].includes('px')) {
-        result.push({ name: key, value: ThemeProps[key], _style: `background: ${ ThemeProps[key] };` });
+      if (!ThemeProps[key].includes('px')) {
+        result.push({ name: key, value: ThemeProps[key], _style: `background: ${ThemeProps[key]};` });
       }
     });
     return result;
@@ -265,8 +293,11 @@ export class SettingsComponent implements OnInit {
     });
     return result;
   }
+
+  
   //#endregion
 
+  
   //#endregion EVENTS
 
 }

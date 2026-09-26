@@ -1,137 +1,327 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { v4 as uuidv4 } from 'uuid';
-import { AttemptEntity, LogEntity, ProfileEntity, QuizEntity, SettingsEntity, ThemeProps } from '../data/entities/entities';
-import { Utils } from '../data/utils/utils';
-import { DBLocal } from './storage/db-storage';
-import { FileStorage } from './storage/file-storage';
+import { AttemptAnswerDTO, AttemptDTO, AttemptState, GradeState, LogDTO, QuizAnswerDTO, QuizAnswerOptionDTO, QuizDTO, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO, getAttemptDTO, getAttemptDTOValid, getGrade, getPermissionsDTO, getQuizDTOValid, getSettingsDTO, normalizeAttemptDTO, normalizeQuizDTO } from '../data/entities/dtos';
+import { DatabaseService } from './database/sql.database.service';
 
 @Injectable()
 export class CommonServices {
-  private utils = new Utils();
-  private localDbName = 'simexamapp';
-  private dbSettings = 'settings';
-  private dbProfiles = 'profiles';
-  private dbQuizs = 'quiz';
-  private dbAttempts = 'attempts';
-  private dbLogs = 'logs';
 
-  private fileStorage = new FileStorage();
-  private fileSettings = 'settings.json';
-  private fileProfiles = 'profile.json';
-  private fileQuizs = 'templateQuiz.json';
-  private fileAttempts = 'attempts.json';
-  private fileLogs = 'logs.json'; 
-  private fileObject = { data: [] };
-
-  constructor(private _router: Router) {
-    this.dbSettings = this.fileSettings;
-    this.dbProfiles = this.fileProfiles;
-    this.dbQuizs = this.fileQuizs;
-    this.dbAttempts = this.fileAttempts;
-    this.dbLogs = this.fileLogs; 
-  }
+  availableLangs = [{ name: 'English', value: 'en' }, { name: 'Español', value: 'es' }];
+  currentLang = '';
+  constructor(private _router: Router, private _services: DatabaseService) { }
 
   //#region PUBLIC METHODS
 
-  async checkFiles() {
-    const settings = await this.fileStorage.checkFile(this.fileSettings);
-    if (!settings) {
-      this.fileStorage.saveFile(this.fileSettings, this.fileObject);
-    }
-    const profile = await this.fileStorage.checkFile(this.fileProfiles);
-    if (!profile) {
-      this.fileStorage.saveFile(this.fileProfiles, this.fileObject);
-    }
-    const quiz = await this.fileStorage.checkFile(this.fileQuizs);
-    if (!quiz) {
-      this.fileStorage.saveFile(this.fileQuizs, this.fileObject);
-    }
-    const attempts = await this.fileStorage.checkFile(this.fileAttempts);
-    if (!attempts) {
-      this.fileStorage.saveFile(this.fileAttempts, this.fileObject);
-    }
-
-  }
-
-  async clearDB() {
-    await this.fileStorage.deleteFile(this.fileSettings);
-    await this.fileStorage.deleteFile(this.fileProfiles);
-    await this.fileStorage.deleteFile(this.fileQuizs);
-    await this.fileStorage.deleteFile(this.fileAttempts);
-  }
-
   //#region SETTINGS
-  getAllSettings(): Array<SettingsEntity> { return this.actionGetAll(this.dbSettings); }
-  searchSetting(id: string, idfield = 'id'): SettingsEntity { return this.actionSearch(this.dbSettings, id, idfield); }
-  filterSettings(id: string, idfield = 'id'): Array<SettingsEntity> { return this.actionFilter(this.dbSettings, id, idfield); }
-  saveSetting(data: SettingsEntity) { return this.actionPost(this.dbSettings, data); }
-  updateSetting(id: string, data: SettingsEntity, idfield = 'id') { return this.actionPut(this.dbSettings, id, data, idfield); }
-  deleteSetting(id: string, idfield = 'id') { return this.actionDelete(this.dbSettings, id, idfield); }
-  async getActiveSettings(): Promise<SettingsEntity> {
-    const data: any = await this.getAllSettings();
-    return data ? data[0] : null;
+  async getAllSettings(): Promise<SettingsDTO[]> {
+    return await this._services.getAllSettings();
+  }
+
+  async getCurrentSettings(): Promise<SettingsDTO> {
+    const data = await this.getAllSettings();
+    if (data && data.length) {
+      return await this.getSettingCompleteById(data[0].settingId);
+    }
+    return null;
+  }
+
+  async getSettingCompleteById(settingId: number = 0): Promise<SettingsDTO> {
+    return await this._services.getSettingCompleteById(this.verifyNumber(settingId));
+  }
+
+  async saveSettings(data: SettingsDTO): Promise<SettingsDTO> {
+    return await this._services.postSetting(data);
+  }
+
+  async deleteSettingById(id: number): Promise<any> {
+    return await this._services.deleteSetting(this.verifyNumber(id));
   }
   //#endregion SETTINGS
 
-  //#region PROFILES
-  getAllProfiles(): Array<ProfileEntity> { return this.actionGetAll(this.dbProfiles); }
-  searchProfile(id: string, idfield = 'id'): ProfileEntity { return this.actionSearch(this.dbProfiles, id, idfield); }
-  filterProfiles(id: string, idfield = 'id'): Array<ProfileEntity> { return this.actionFilter(this.dbProfiles, id, idfield); }
-  saveProfile(data: ProfileEntity) { return this.actionPost(this.dbProfiles, data); }
-  updateProfile(id: string, data: ProfileEntity, idfield = 'id') { return this.actionPut(this.dbProfiles, id, data, idfield); }
-  deleteProfile(id: string, idfield = 'id') { return this.actionDelete(this.dbProfiles, id, idfield); }
-  async getActiveProfile(): Promise<ProfileEntity> {
-    const data: any = await this.getAllProfiles();
-    return data ? data[0] : null;
+  //#region THEMES
+  async getThemes(): Promise<ThemeDTO[]> {
+    return await this._services.getAllThemes();
   }
-  //#endregion PROFILES
 
-  //#region EXAMS
-  getAllQuizs(): Array<QuizEntity> { return this.actionGetAll(this.dbQuizs); }
-  searchQuiz(id: string, idfield = 'id'): QuizEntity { return this.actionSearch(this.dbQuizs, id, idfield); }
-  filterQuizs(id: string, idfield = 'id'): Array<QuizEntity> { return this.actionFilter(this.dbQuizs, id, idfield); }
-  saveQuiz(data: any) { return this.actionPost(this.dbQuizs, data); }
-  updateQuiz(id: string, data: any, idfield = 'id') { return this.actionPut(this.dbQuizs, id, data, idfield); }
-  deleteQuiz(id: string, idfield = 'id') { return this.actionDelete(this.dbQuizs, id, idfield); }
-  //#endregion EXAMS
+  async saveTheme(data: ThemeDTO): Promise<ThemeDTO> {
+    return await this._services.postTheme(data);
+  }
+  //#endregion THEMES
 
-  //#region EXAMS_ATTEMPTS
-  getAllAttempts(): Array<AttemptEntity> { return this.actionGetAll(this.dbAttempts); }
-  searchAttempt(id: string, idfield = 'id'): AttemptEntity { return this.actionSearch(this.dbAttempts, id, idfield); }
-  filterAttempts(id: string, idfield = 'id'): Array<AttemptEntity> { return this.actionFilter(this.dbAttempts, id, idfield); }
-  saveAttempt(data: any) { return this.actionPost(this.dbAttempts, data); }
-  updateAttempt(id: string, data: any, idfield = 'id') { return this.actionPut(this.dbAttempts, id, data, idfield); }
-  deleteAttempt(id: string, idfield = 'id') { return this.actionDelete(this.dbAttempts, id, idfield); }
-  //#endregion EXAMS_ATTEMPTS
+  //#region USERS
+  async getAllUsers() {
+    return await this._services.getAllUsers();
+  }
 
-    //#region LOGS
-  getAllLogs(): Array<LogEntity> { return this.actionGetAll(this.dbLogs); }
-  searchLog(id: string, idfield = 'id'): LogEntity { return this.actionSearch(this.dbLogs, id, idfield); }
-  filterLogs(id: string, idfield = 'id'): Array<LogEntity> { return this.actionFilter(this.dbLogs, id, idfield); }
-  saveLog(data: string, type = 'log') { 
-    const log: LogEntity = { 
-      date: new Date().getTime(),
-      id: uuidv4(),
-      content: data,
-      type: type
-    }
-    return this.actionPost(this.dbLogs, log); }
-  updateLog(id: string, data: any, idfield = 'id') { return this.actionPut(this.dbLogs, id, data, idfield); }
-  deleteLog(id: string, idfield = 'id') { return this.actionDelete(this.dbLogs, id, idfield); }
+  async getUserById(userId: number) {
+    return await this._services.getUserById(this.verifyNumber(this.verifyNumber(userId)));
+  }
+
+  async getCurrentUser(): Promise<UserDTO> {
+    return await this._services.getCurrentUser();
+  }
+
+  async saveUser(user: UserDTO) {
+    return await this._services.saveUser(user);
+  }
+
+  async deleteUser(userId: number) {
+    let response = await this._services.deleteUser(this.verifyNumber(this.verifyNumber(userId)));
+    return response && response.length ? response[0] : null;
+  }
+  //#endregion USERS
+
+  //#region QUIZ
+  async getAllQuizs(): Promise<QuizDTO[]> {
+    let response: QuizDTO[] = await this._services.getAllQuizzes();
+    return response;
+  }
+
+  async getQuizCompleteById(quizId: number): Promise<QuizDTO> {
+    let quiz = await this._services.getQuizCompleteById(this.verifyNumber(quizId));
+    return quiz ? normalizeQuizDTO(quiz) : null;
+  }
+
+  async saveAllQuiz(quiz: QuizDTO): Promise<QuizDTO> {
+    // quiz = quiz || this.mockquiz();
+    let data = getQuizDTOValid(quiz);
+
+    // Guardar el quiz primero
+    const responseQuiz: QuizDTO = await this._services.saveQuiz(data.quiz);
+    quiz.quizId = responseQuiz.quizId;
+
+    // Preparar nuevamente los datos con el quizId
+    data = getQuizDTOValid(quiz);
+
+    await Promise.all(
+      quiz.answers.map(async (answer: QuizAnswerDTO) => {
+        const responseAnswer = await this._services.saveAnswer(answer);
+        answer.answerId = responseAnswer.answerId;
+
+        // Guardar todas las opciones y esperar a que terminen
+        await Promise.all(answer.options.map(async (option: QuizAnswerOptionDTO) => {
+          option.answerId = answer.answerId;
+          const responseOption = await this._services.saveQuizAnswerOption(option);
+          option.optionId = responseOption.optionId;
+        }))
+      })
+    );
+
+    return normalizeQuizDTO(quiz);
+  }
+
+  async duplicateQuiz(quizId: number): Promise<QuizDTO> {
+    const _quiz = await this._services.getQuizCompleteById(this.verifyNumber(quizId));
+
+    // clean _quiz to save as new record
+    _quiz.quizId = null;
+    _quiz.title = `${_quiz.title}`;
+    _quiz.updatedDate = new Date().getTime();
+    _quiz.answers.forEach(answer => {
+      answer.answerId = null;
+      answer.updatedDate = new Date().getTime();
+      answer.options.forEach(option => {
+        option.optionId = null;
+        option.updatedDate = new Date().getTime();
+      })
+    });
+
+    return await this.saveAllQuiz(_quiz);
+  }
+
+  async deleteQuiz(quizId: number): Promise<QuizDTO> {
+    let response = await this._services.deleteQuiz(this.verifyNumber(quizId));
+    return response && response.length ? response[0] : null;
+  }
+
+  prepareQueryAnswersOptions(quiz: QuizDTO): { quiz: QuizDTO, answers: QuizAnswerDTO[], answerOptions: QuizAnswerOptionDTO[] } {
+    const _quiz: QuizDTO = {
+      quizId: quiz.quizId == -1 ? null : quiz.quizId,
+      uuid: quiz.uuid || uuidv4(),
+      title: quiz.title,
+      time: quiz.time || 0,
+      creationDate: quiz.creationDate,
+      updatedDate: quiz.updatedDate,
+      startDate: quiz.startDate || 0,
+    };
+
+    const answers = [];
+    const answerOptions = [];
+
+    quiz.answers.map(answer => {
+      answer.answerId = answer.answerId == -1 ? null : answer.answerId;
+      answer.quizId = quiz.quizId;
+      if (answer.title != '') {
+        answers.push(answer);
+      }
+
+      answer.options.map(option => {
+        option.answerId = answer.answerId;
+        option.optionId = option.optionId == -1 ? null : option.optionId;
+        option.isCorrect = option._selected == true;
+
+        if (answer.title != '' && option.content != '') {
+          answerOptions.push(option);
+        }
+      });
+    })
+
+    return { quiz: _quiz, answers: answers, answerOptions: answerOptions };
+  }
+  //#endregion QUIZ
+
+  //#region QUIZ_ANSWERS
+  async getAllAnswers(): Promise<QuizAnswerDTO[]> {
+    let response: QuizAnswerDTO[] = await this._services.getAllAnswers();
+    return response;
+  }
+
+  async getAnswersByQuiz(quizId: number): Promise<QuizAnswerDTO[]> {
+    return await this._services.getAnswersByQuiz(this.verifyNumber(quizId));
+  }
+
+  async saveAnswer(data: QuizAnswerDTO): Promise<QuizAnswerDTO> {
+    return await this._services.saveAnswer(data);
+  }
+
+  async deleteAnswer(id: number): Promise<QuizAnswerDTO> {
+    let response = await this._services.deleteAnswer(this.verifyNumber(id));
+    return response && response.length ? response[0] : null;
+  }
+  //#endregion QUIZ_ANSWERS
+
+  //#region QUIZ_ANSWER_OPTIONS
+  async getQuizAnswersOptionsByAnswerId(answerId: number): Promise<QuizAnswerOptionDTO[]> {
+    return await this._services.getQuizAnswersOptionsByAnswerId(this.verifyNumber(answerId));
+  }
+
+  async saveQuizAnswerOption(data: QuizAnswerOptionDTO): Promise<QuizAnswerOptionDTO> {
+    return await this._services.saveQuizAnswerOption(data);
+  }
+
+  async deleteQuizAnswerOption(id: number): Promise<QuizAnswerOptionDTO> {
+    let response = await this._services.deleteQuizAnswerOption(this.verifyNumber(id));
+    return response && response.length ? response[0] : null;
+  }
+  //#endregion QUIZ_ANSWER_OPTIONS
+
+  //#region ATTEMPTS
+  async getAllAttempts(): Promise<AttemptDTO[]> {
+    return await this._services.getAllAttempts();
+  }
+
+  async getAttemptByQuizId(quizId: number): Promise<AttemptDTO[]> {
+    const attempts = await this._services.getAttemptByQuizId(this.verifyNumber(quizId));
+    attempts.map(att => {
+      return normalizeAttemptDTO(att);
+    });
+    return attempts;
+  }
+
+  async getAttemptCompleteByAttemptId(attemptId: number): Promise<AttemptDTO> {
+    const attempt = await this._services.getAttemptCompleteByAttemptId(this.verifyNumber(attemptId));
+    return normalizeAttemptDTO(attempt);
+  }
+
+  async createAttempt(quizId: number): Promise<AttemptDTO> {
+    const quiz = await this.getQuizCompleteById(this.verifyNumber(quizId));
+    const _attempt = getAttemptDTO(this.verifyNumber(quizId), 1, quiz.title, quiz.answers);
+    const attempt = await this.saveAllAttempt(_attempt);
+    return normalizeAttemptDTO(attempt);
+  }
+
+  async saveAllAttempt(attempt: AttemptDTO): Promise<AttemptDTO> {
+    let data = getAttemptDTOValid(attempt);
+    attempt = data.attempt;
+
+    // Guardar el attempt primero
+    const responseQuiz: AttemptDTO = await this._services.saveAttempt(attempt);
+    attempt.attemptId = responseQuiz.attemptId;
+
+    // Preparar nuevamente los datos con el attemptId
+    data = getAttemptDTOValid(attempt);
+    attempt = data.attempt;
+
+    await Promise.all(
+      attempt.answers.map(async (answer: AttemptAnswerDTO) => {
+        const responseAnswer = await this._services.saveAttemptAnswers(answer);
+        answer.answerAttemptId = responseAnswer.answerAttemptId;
+      })
+    );
+
+    attempt.answers = data.answers;
+    data = getAttemptDTOValid(attempt);
+    attempt = data.attempt;
+    return normalizeAttemptDTO(attempt)
+  }
+
+  async evalueAttemptById(attemptId: number): Promise<AttemptDTO> {
+    let attempt = await this.getAttemptCompleteByAttemptId(this.verifyNumber(attemptId));
+
+    attempt.answers.map(ans => {
+      const optCorrect = ans.options.find(opt => opt.isCorrect);
+      ans.isCorrect = optCorrect ? ans.selectedOptionId == optCorrect.optionId : false;
+      return ans;
+    });
+
+    const total = attempt.answers.length;
+    const correctAnswers = attempt.answers.filter(ans => ans.isCorrect);
+
+    attempt.score = (correctAnswers.length * 100) / total;
+    attempt.state = AttemptState.completed;
+    attempt.grade = getGrade(attempt);
+    console.log('attempt: ', attempt);
+
+    attempt = await this.saveAllAttempt(attempt);
+    return normalizeAttemptDTO(attempt);
+  }
+
+  async deleteQuizAttempt(attemptId: number): Promise<AttemptDTO> {
+    return await this._services.deleteQuizAttempt(this.verifyNumber(attemptId));
+  }
+  //#endregion ATTEMPTS
+
+  //#region ANSWERS_ATTEMPTS
+  async getAttemptAnswersByAttemptId(attemptId: number): Promise<AttemptAnswerDTO[]> {
+    return await this._services.getAttemptAnswersByAttemptId(this.verifyNumber(attemptId));
+  }
+
+  async saveAttemptAnswers(data: AttemptAnswerDTO): Promise<AttemptAnswerDTO> {
+    return await this._services.saveAttemptAnswers(data);
+  }
+  //#endregion ANSWERS_ATTEMPTS
+
+  //#region LOGS
+  async getAllLogs(): Promise<LogDTO[]> {
+    return await this._services.getAllLogs();
+  }
+
+  async getLogById(id: number): Promise<LogDTO> {
+    const response = await this._services.getLogById(this.verifyNumber(id));
+    return response && response.length ? response[0] : null;
+  }
+
+  async postLog(data: LogDTO): Promise<LogDTO> {
+    return await this._services.postLog(data);
+  }
+
+  async deleteLog(id: number): Promise<LogDTO[]> {
+    return await this._services.deleteLog(this.verifyNumber(id));
+  }
   //#endregion LOGS
 
   //#region NAVIGATION
-  navigate(section: string, action?: string, id?: string, props?: any ) {
+  navigate(section: string, action?: string, id?: string, props?: any) {
     let params = [];
     props = props || {};
     props.action = action;
     props.id = id || null;
 
-    if(props) {
+    if (props) {
       const keys = Object.keys(props);
       keys.map((key) => {
-        if(props[key]) {
+        if (props[key]) {
           params.push(`${key}=${props[key]}`);
         }
       })
@@ -141,8 +331,8 @@ export class CommonServices {
       this._router.navigateByUrl(`/${section}`);
     } else {
       let paramsUrl = '';
-      params.map((param, index) => { 
-        paramsUrl = index == 0 ?  `?${param}` : `${paramsUrl}&${param}`;
+      params.map((param, index) => {
+        paramsUrl = index == 0 ? `?${param}` : `${paramsUrl}&${param}`;
       });
       this._router.navigateByUrl(`/${section}${paramsUrl}`);
     }
@@ -151,182 +341,24 @@ export class CommonServices {
 
   //#endregion PUBLIC METHODS
 
-  //#region GENERIC
-  private promiseMock(data: any): Promise<any> {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(data);
-      }, 200);
-    });
-  }
+  //#region DEFAULT_DATA
 
-
-  private actionGetAllOld(tableName: string): any {
-    const db = new DBLocal(this.localDbName);
-    const response = db.get(tableName);
-    return this.promiseMock(response);
-  }
-
-  private actionSearchOld(tableName: string, id: any, idfield = 'id'): any {
-    const db = new DBLocal(this.localDbName);
-    const response = db.search(tableName, id, idfield);
-    return this.promiseMock(response);
-  }
-
-  private actionFilterOld(tableName: string, id: any, idfield = 'id'): any {
-    const db = new DBLocal(this.localDbName);
-    const response = db.filter(tableName, id, idfield);
-    return this.promiseMock(response);
-  }
-
-  private actionPostOld(tableName: string, data: any): any {
-    data.id = data.id ?? uuidv4();
-    const db = new DBLocal(this.localDbName);
-    const response = db.save(tableName, data);
-    return this.promiseMock(response);
-  }
-
-  private actionPutOld(tableName: string, id: any, data: any, idfield = 'id'): any {
-    const db = new DBLocal(this.localDbName);
-    const response = db.update(tableName, id, data, idfield);
-    return this.promiseMock(response);
-  }
-
-  private actionDeleteOld(tableName: string, id: any, idfield = 'id'): any {
-    const db = new DBLocal(this.localDbName);
-    const response = db.delete(tableName, id, idfield);
-    return this.promiseMock(response);
-  }
-
-
-  private actionGetAll(fileName: string): any {
-    return new Promise(async (resolve) => {
-      try {
-        const data = await this.fileStorage.readFile(fileName);
-        if (data) {
-          resolve(data.data.length ? data.data : null);
-        } else {
-          resolve(null);
-        }
-      } catch (error) {
-        console.warn(error)
-        resolve(null);
+  verifyNumber(id: any): number {
+    let num: number = null;
+    if (id != null) {
+      if (typeof id === 'string') {
+        num = parseInt(id);
+        console.warn(`El id {${id}} es de tipo cadena.`)
+      } else {
+        num = id;
       }
-    });
-  }
-
-  private actionSearch(fileName: string, id: any, idfield = 'id'): any {
-    return new Promise(async (resolve) => {
-      try {
-        const data = await this.actionGetAll(fileName);
-        if (data) {
-          const search = this.fileStorage.search(data, id, idfield);
-          resolve(search);
-        } else {
-          resolve(null);
-        }
-      } catch (error) {
-        console.warn(error)
-        resolve(null);
-      }
-    });
-  }
-
-  private actionFilter(fileName: string, id: any, idfield = 'id'): any {
-    return new Promise(async (resolve) => {
-      try {
-        const data = await this.actionGetAll(fileName);
-        if (data) {
-          const search = this.fileStorage.filter(data, id, idfield);
-          resolve(search);
-        } else {
-          resolve(null);
-        }
-      } catch (error) {
-        console.warn(error)
-        resolve(null);
-      }
-    });
-  }
-
-  private actionPost(fileName: string, data: any): any {
-    data.id = data.id ?? uuidv4();
-    return new Promise(async (resolve) => {
-      try {
-        const db = await this.actionGetAll(fileName);
-        const fileObject = JSON.parse(JSON.stringify(this.fileObject));
-        if (db) { fileObject.data = db; }
-        fileObject.data.push(data);
-        await this.fileStorage.saveFile(fileName, fileObject);
-        resolve(data);
-
-      } catch (error) {
-        console.warn(error)
-        resolve(null);
-      }
-    });
-  }
-
-  private actionPut(fileName: string, id: any, data: any, idfield = 'id'): any {
-    return new Promise(async (resolve) => {
-      try {
-        const db = await this.actionGetAll(fileName);
-        const fileObject = JSON.parse(JSON.stringify(this.fileObject));
-        if (db) { fileObject.data = db; }
-        fileObject.data = this.fileStorage.update(fileObject.data, id, data, idfield);
-        await this.fileStorage.saveFile(fileName, fileObject);
-        resolve(data);
-
-      } catch (error) {
-        console.warn(error)
-        resolve(null);
-      }
-    });
-  }
-
-  private actionDelete(fileName: string, id: any, idfield = 'id'): any {
-    return new Promise(async (resolve) => {
-      try {
-        const db = await this.actionGetAll(fileName);
-        const fileObject = JSON.parse(JSON.stringify(this.fileObject));
-        if (db) { fileObject.data = db; }
-        fileObject.data = this.fileStorage.delete(db, id, idfield);
-        await this.fileStorage.saveFile(fileName, fileObject);
-        resolve(true);
-      } catch (error) {
-        console.warn(error)
-        resolve(null);
-      }
-    });
-  }
-  //#endregion GENERIC
-
-  async initializData() {
-    const setting: SettingsEntity = {
-      language: 'es',
-      permissions: {
-        create: true,
-        delete: false,
-        duplicate: false,
-        edit: true,
-        ai: true
-      },
-      availableLanguages: [
-        { name: 'Español', value: 'es' },
-        { name: 'English', value: 'en' }
-      ],
-      theme: 'dark',
-      themeProps: {
-        light: this.defaultThemeLight,
-        dark: this.defaultThemeDark
-      },
-      premium: false
     }
-    return await this.saveSetting(setting);
+    return num;
   }
 
-  defaultThemeLight: ThemeProps = {
+  defaultThemeLight: ThemePropertiesDTO = {
     appBackground: '#bebebe',
+    appBackgroundTransparent: '#bebebe50',
     appColor: '#2d2d2d',
     appFontSize: '16px',
     textFontSize: '16px',
@@ -348,6 +380,7 @@ export class CommonServices {
     formErrorColor: '#a70019',
     formBackground: 'rgba(222, 222, 222, 0.7)',
     formBackgroundSolid: '#494949',
+    formBackgroundTransparent: '#49494973',
     notificationColor: '#d0d0d0',
     notificationColorContrast: '#000000',
     notificationSuccess: '#8e9f0f',
@@ -387,8 +420,9 @@ export class CommonServices {
     stadisticBackground: 'rgba(193, 191, 191, 0.5)'
   };
 
-  defaultThemeDark: ThemeProps = {
+  defaultThemeDark: ThemePropertiesDTO = {
     appBackground: '#000000',
+    appBackgroundTransparent: '#00000050',
     appColor: '#d0d0d0',
     appFontSize: '16px',
     textFontSize: '16px',
@@ -410,6 +444,7 @@ export class CommonServices {
     formErrorColor: '#f08d9c',
     formBackground: 'rgba(33, 33, 33, 0.7)',
     formBackgroundSolid: '#494949',
+    formBackgroundTransparent: '#49494973',
     notificationColor: '#d0d0d0',
     notificationColorContrast: '#000000',
     notificationSuccess: '#8e9f0f',
@@ -449,6 +484,67 @@ export class CommonServices {
     stadisticBackground: 'rgba(0, 0, 0, 0.5)'
   };
 
+  async getStructure() {
+    return await this._services.getStructure();
+  }
+
+  async saveDefaultData(): Promise<SettingsDTO> {
+    let settings = await this._services.getSettingCompleteById(0);
+
+    if (!settings) {
+      await this._services.postLanguage({ name: 'Español', value: 'es' });
+      await this._services.postLanguage({ name: 'English', value: 'en' });
+      await this._services.postTheme({ id: 'light', content: this.defaultThemeLight });
+      await this._services.postTheme({ id: 'dark', content: this.defaultThemeDark });
+
+      const permissions = {
+        create: true,
+        delete: false,
+        duplicate: true,
+        edit: true,
+        ai: false
+      };
+
+      await this._services.postSetting({ settingId: 0, language: 'en', theme: 'dark', permissions: permissions });
+      settings = await this._services.getSettingCompleteById(0);
+    }
+    return settings;
+  }
+
+  async setupDefaultData(existDatabaseStructure = false) {
+    if (existDatabaseStructure) {
+      const setting = await this.getCurrentSettings();
+      if (setting) {
+        const languages = [];
+        setting._languages.map((lan) => {
+          languages.push(lan.value);
+        });
+        return setting;
+      }
+    }
+
+    return this.setDefaultSettings();
+  }
+
+  private setDefaultSettings(): SettingsDTO {
+    const languages = []
+    this.availableLangs.map((lan) => {
+      languages.push(lan);
+    });
+
+    const setting = getSettingsDTO(this.availableLangs[0].value, 'dark', getPermissionsDTO(true, true, true, false, false));
+
+    setting._languages = languages;
+    setting._themes = [
+      { id: 'light', content: this.defaultThemeLight },
+      { id: 'dark', content: this.defaultThemeDark },
+    ];
+    setting._colors = [];
+
+    return setting;
+  }
+  //#endregion DEFAULT_DATA
+
   //#region IA GEMINI
   async geminiGenerate(data: { topic: string, questions: number, options: number, language: string }) {
     const apiKey = atob('QUl6YVN5QktXS3RGX2ttMm81TWZDSzRFeGJ6OHVPOEpKWTBuZ2pZ');
@@ -457,7 +553,7 @@ export class CommonServices {
     { questions: [{ "question": "pregunta a realizar", 
      "options": [{ "id": "indice del array", "text": ""posible respuesta" }], 
      "correctAnswer": "numero del id de la opcion correcta"
-    }]}, si en la primer respuesta no se generan todas las preguntas envia un json valido donde este la mayor cantidad solicitada, ademas que los valores deben de estar en el idioma ${ data.language }`;
+    }]}, si en la primer respuesta no se generan todas las preguntas envia un json valido donde este la mayor cantidad solicitada, ademas que los valores deben de estar en el idioma ${data.language}`;
 
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
     const postData = {
@@ -485,7 +581,7 @@ export class CommonServices {
       const data = await response.json();
       // Procesar la respuesta
       if (data && data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts) {
-        this.saveLog(data.candidates[0].content.parts[0].text);
+        // this.saveLog(data.candidates[0].content.parts[0].text);
         const generatedText = this.normalizeResponse(data.candidates[0].content.parts[0].text);
 
         try {

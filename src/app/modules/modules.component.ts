@@ -2,9 +2,10 @@ import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/co
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
+import { SettingsDTO, ThemeDTO } from '../shared/data/entities/dtos';
 import { CommonServices } from '../shared/services/common.services';
+import { DatabaseService } from '../shared/services/database/sql.database.service';
 import { UiServices } from '../shared/services/ui.services';
-import { SettingsEntity, ThemeProps } from '../shared/data/entities/entities';
 
 @Component({
   selector: 'modules',
@@ -12,7 +13,7 @@ import { SettingsEntity, ThemeProps } from '../shared/data/entities/entities';
   encapsulation: ViewEncapsulation.None,
 })
 export class ModuleComponent implements OnInit, AfterViewInit {
-  availableLangs = ['es', 'en'];
+  
   browserLangs: string[] = [];
   currentLang = '';
 
@@ -23,17 +24,19 @@ export class ModuleComponent implements OnInit, AfterViewInit {
   submodule: string;
   uistate = '';
   uisubstate = '';
+  screenwidth = 0;
+  screenheight = 0;
 
   constructor(
     private _router: Router,
     private _activatedRoute: ActivatedRoute,
-    public _uiServices: UiServices,
-    private _commonServices: CommonServices,
-    private translate: TranslateService) {
+    public uiServices: UiServices,
+    private commonServices: CommonServices,
+    private translate: TranslateService,
+    private services: DatabaseService) {
 
     this._router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-
         this.module = this._activatedRoute.snapshot.paramMap.get('module');
         if (this.module) {
           this.screen = this._screen[this.module];
@@ -50,52 +53,45 @@ export class ModuleComponent implements OnInit, AfterViewInit {
   }
 
   async ngOnInit() {
-    // this._commonServices.clearDB();
     this.getPropsScreen();
-    await this._commonServices.checkFiles();
-    this.setupLanguage();
+    const existStructure = await this.loadDatabaseStructure();
+    this.setupDefaultData(existStructure);
   }
 
   async ngAfterViewInit() {
   }
 
-  async setupLanguage() {
-    const settings = await this._commonServices.getAllSettings();
-    if (settings) {
-      const setting: SettingsEntity = settings[0];
-      const languages = [];
-      setting.availableLanguages.map((lan) => {
-        languages.push(lan.value);
-      })
-      this.translate.addLangs(languages);
-      this.translate.setDefaultLang(setting.language);
-
-      this.applyCurrentTheme(setting);
-    } else {
-      this.translate.addLangs(this.availableLangs);
-      this.currentLang = 'es';
-      this.translate.setDefaultLang(this.currentLang);
+  async loadDatabaseStructure() {
+    const structure = await this.services.initialDatabase();
+    if (!structure) {
+      this.uiServices.notification("Error al establecer conexion SQL.", { type: 'error', closeTimer: 0 })
     }
+    return structure ? true : false;
+  }
+
+  async setupDefaultData(existDatabaseStructure = false) {
+    let settings: SettingsDTO;
+    settings = await this.commonServices.setupDefaultData(existDatabaseStructure);
+
+    const availableLangs = settings._languages.map(lang => {
+      return lang.value;
+    });
+
+    this.translate.addLangs(availableLangs);
+    this.translate.setDefaultLang(settings.language);
   }
 
   onChangeUI(event) {
     this.uisubstate = event.value;
   }
 
-  applyCurrentTheme(settings: SettingsEntity | any) {
-    settings.themeProps.dark.zoomLevel = '100%';
-    settings.themeProps.light.zoomLevel = '100%';
-    const theme = settings.themeProps[settings.theme.toLowerCase()];
-    this._uiServices.applyTheme(theme);
+  applyCurrentTheme(setting: SettingsDTO) {
+    setting._themes.map((x: ThemeDTO) => x.content['zoomLevel'] = '100%');
+    const theme = setting._themes.find(x => x.id == setting.theme);
+    if (theme) {
+      this.uiServices.applyTheme(theme);
+    }
   }
-
-  async getLogs() {
-    const logs = await this._commonServices.getAllLogs();
-    console.log('logs: ', logs);
-  }
-
-  screenwidth = 0;
-  screenheight = 0;
 
   getPropsScreen() {
     this.screenwidth = window.innerWidth
@@ -105,5 +101,9 @@ export class ModuleComponent implements OnInit, AfterViewInit {
     this.screenheight = window.innerHeight
       || document.documentElement.clientHeight
       || document.body.clientHeight;
+  }
+
+  showSQL() {
+      this.commonServices.navigate('dbclient');
   }
 }

@@ -28,6 +28,7 @@ export class Utils {
         }
         return shuffledArray;
     }
+    
 
 
     formatText(text?: string) {

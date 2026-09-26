@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     namespace "com.simexam.coach.app"
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "com.simexam.coach.app"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -22,11 +22,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'build-data.properties'
+    }
 }
 
 repositories {
     flatDir{
         dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+    subprojects {
+        project.configurations.all {
+            resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+                if (details.requested.group == 'net.zetetic' && details.requested.name == 'android-database-sqlcipher') {
+                    // Reemplaza la versión antigua problemática por el binario nativo AAR adaptado a 16KB
+                    details.useTarget 'net.zetetic:sqlcipher-android:4.6.1@aar'
+                }
+            }
+        }
     }
 }
 

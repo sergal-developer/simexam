@@ -1,5 +1,5 @@
-import { Component, EventEmitter, forwardRef, Input, OnInit, Output, Self, ViewEncapsulation } from '@angular/core';
-import { AbstractControl, ControlValueAccessor, FormControl, FormControlName, NG_VALUE_ACCESSOR, NgControl } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output, Self, ViewEncapsulation } from '@angular/core';
+import { ControlValueAccessor, NgControl } from '@angular/forms';
 
 @Component({
     selector: 'mat-input',
@@ -42,6 +42,19 @@ export class MatInputComponent implements OnInit, ControlValueAccessor {
     //#region EVENTS
     valueChange(event) {
         this.onChange.emit({ control: this.formName || this.title, value: this.ngControl.value });
+    }
+
+    valueChangeTextarea(event) {
+        this.valueChange(event);
+
+        // const textarea = event.target as HTMLTextAreaElement;
+        // textarea.style.height = 'auto';
+        // textarea.style.height = `${textarea.scrollHeight}px`;
+    }
+
+    onClickInput(event) {
+        const input = event.currentTarget as HTMLInputElement;
+        input.select();
     }
     //#endregion
 }

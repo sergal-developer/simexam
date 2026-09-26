@@ -28,7 +28,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/data"
+              "src/data",
+              {
+                "glob": "sql-wasm.wasm",
+                "input": "node_modules/sql.js/dist",
+                "output": "./assets"
+              }
             ],
             "styles": [
               "src/styles.scss"
@@ -72,7 +77,13 @@
               "browserTarget": "coachex:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "headers": {
+              "Cross-Origin-Opener-Policy": "same-origin",
+              "Cross-Origin-Embedder-Policy": "require-corp"
+            }
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

@@ -2,7 +2,7 @@
     <ng-container *ngIf="mode == 'dashboard'">
         <div class="item">
             <div class="avatar" *ngIf="profile">
-                <img [attr.src]="profile.avatar.url">
+                <img [attr.src]="profile.avatarUrl">
             </div>
         </div>
         <div class="item" *ngIf="profile">
@@ -20,6 +20,7 @@
         </div>
         
     </ng-container>
+    
     <ng-container *ngIf="mode == 'settings'">
         <div class="root-header aling-left">
             <div class="item clickable" (click)="gotoDashboard()">
@@ -30,6 +31,7 @@
             </div>
         </div>
     </ng-container>
+
     <ng-container *ngIf="mode == 'quiz'">
         <div class="root-header aling-left" (click)="gotoDashboard()">
             <div class="item clickable" >
@@ -41,24 +43,13 @@
         </div>
     </ng-container>
 
-    <ng-container *ngIf="mode == 'quizeditable'">
+    <ng-container *ngIf="mode == 'text'">
         <div class="root-header aling-left">
             <div class="item clickable" (click)="gotoDashboard()">
                 <h1> <span class="material-icons">arrow_back</span></h1>
             </div>
             <div class="item">
                 <h2 *ngIf="title">{{ title }}</h2>
-            </div>
-        </div>
-    </ng-container>
-
-    <ng-container *ngIf="mode == 'result'">
-        <div class="root-header aling-left">
-            <div class="item clickable" (click)="gotoDashboard()">
-                <h1> <span class="material-icons">arrow_back</span></h1>
-            </div>
-            <div class="item">
-                <h2>{{ 'header_results' | translate }}</h2>
             </div>
         </div>
     </ng-container>

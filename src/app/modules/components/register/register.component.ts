@@ -1,10 +1,14 @@
-import { Component, OnInit, ViewEncapsulation, } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, QueryList, ViewChildren, ViewEncapsulation, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { ProfileEntity } from 'src/app/shared/data/entities/entities';
+import { SettingsDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
+import { UxUtils } from 'src/app/shared/data/utils/uxUtils';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
 import { v4 as uuidv4 } from 'uuid';
+import { IconNode, icons } from "lucide";
+import { MorphIconComponent } from 'src/app/shared/components/morph-icon/morph-icon.component';
+
 
 @Component({
   selector: 'register',
@@ -12,6 +16,9 @@ import { v4 as uuidv4 } from 'uuid';
   encapsulation: ViewEncapsulation.None,
 })
 export class RegisterComponent implements OnInit {
+  //#region INTERNAL
+  @Output() onChange = new EventEmitter();
+  @ViewChildren(MorphIconComponent) morphIcons!: QueryList<MorphIconComponent>;
 
   form: FormGroup;
   defaultAvatars = [
@@ -28,79 +35,108 @@ export class RegisterComponent implements OnInit {
     service_fail_save: '',
   };
 
+  languages = []
+  settings: SettingsDTO;
+
   uistate = 'init';
+  uxUtils = new UxUtils();
+
+  sections = {
+    language: false,
+    user: false,
+    avatar: false,
+  }
+
+  _icon = {
+    start: icons.GraduationCap, // icons.GraduationCap,
+    end: icons.BookOpenText,
+    label: 'Logo',
+    strokeWidth: 1,
+    size: 120
+  }
+
+  luIcon = {
+    language: icons.Globe,
+    user: icons.UserRound,
+    avatar: icons.SquareUserRound,
+    left: icons.ChevronLeft,
+    right: icons.ChevronRight,
+    register: icons.UserPlus
+  }
+  //#endregion INTERNAL
 
   constructor(private fb: FormBuilder,
-    private _commonServices: CommonServices,
-    private _uiServices: UiServices,
+    private commonServices: CommonServices,
+    private uiServices: UiServices,
     private translate: TranslateService
   ) { }
 
-  ngOnInit() {
+
+  //#region LIFECYCLE
+  async ngOnInit() {
+    this.uiServices.showLoader(true);
     this.form = this.fb.group({
       name: ['', Validators.required],
       image: ['', Validators.required],
       legal: [false, Validators.required],
     });
 
-    setTimeout(() => {
-      this.checkSettings();
-      this.uistate = '';
+    await this.uxUtils.wait(800);
+    this.checkInitialSettings();
+    this.uistate = '';
 
-      this.translate.get(['service_sucess_save', 'service_fail_save']).subscribe((res) => {
-        this.translateLabels = res;
-      });
-    }, 800);
+    this.translate.get(['service_sucess_save', 'service_fail_save']).subscribe((res) => {
+      this.translateLabels = res;
+    });
 
+    this.uiServices.showLoader(false);
+    this.configLanguage();
   }
-
-  //#region INTERNAL
-  //#endregion INTERNAL
+  //#endregion LIFECYCLE
 
   //#region DATA
-  async checkSettings() {
-    let settings: any = await this._commonServices.getAllSettings();
-    if (!settings) {
-      await this._commonServices.initializData();
-      settings = await this._commonServices.getAllSettings();
+  async checkInitialSettings() {
+    this.settings = await this.commonServices.saveDefaultData();
+    if (this.settings) {
+      this.languages = this.settings._languages;
     }
-
-    let profile: any = await this._commonServices.getActiveProfile();
+    const profile = await this.commonServices.getCurrentUser()
     if (profile) {
-      this._commonServices.navigate('dashboard');
+      this.commonServices.navigate('dashboard');
     }
   }
 
   async register() {
     const { name, image } = this.form.value;
     const id = uuidv4();
-    const data: ProfileEntity = {
-      id: id,
+    const data: UserDTO = {
+      userId: null,
+      uuid: id,
       userName: name,
       age: 0,
-      avatar: {
-        url: image
-      },
+      avatarUrl: image,
+      avatarBody: '',
       current: true,
     };
 
-    await this._commonServices.saveProfile(data);
-    let profile = await this._commonServices.getActiveProfile();
-    if (profile) {
-      this._uiServices.notification(this.translateLabels.service_sucess_save, { type: 'success', closeTimer: 1500 });
+    await this.commonServices.saveUser(data);
+
+    let user = await this.commonServices.getCurrentUser();
+    if (user) {
+      this.uiServices.notification(this.translateLabels.service_sucess_save, { type: 'success', closeTimer: 1500 });
       this.uistate = 'exit';
       setTimeout(() => {
-        this._commonServices.navigate('dashboard');
+        this.commonServices.navigate('dashboard');
       }, 1500);
     } else {
       this.uistate = '';
-      this._uiServices.notification(this.translateLabels.service_fail_save, { type: 'error', closeTimer: 1500 });
+      this.uiServices.notification(this.translateLabels.service_fail_save, { type: 'error', closeTimer: 1500 });
     }
   }
 
   validateData() {
     const invalid = this.form.valid;
-    const terms =  this.form.get('legal').value;
+    const terms = this.form.get('legal').value;
     return invalid && (invalid == terms);
   }
   //#endregion DATA
@@ -112,9 +148,85 @@ export class RegisterComponent implements OnInit {
     });
     this.form.get('image').setValue(item.url);
   }
+
+  async changeLanguage(language) {
+    const languages = [];
+    this.settings._languages.map((lan) => {
+      languages.push(lan.value);
+    })
+    this.translate.addLangs(languages);
+    this.settings.language = language;
+
+    this.translate.setDefaultLang(this.settings.language);
+    await this.commonServices.saveSettings({
+      language: this.settings.language,
+      permissions: this.settings.permissions,
+      theme: this.settings.theme,
+      settingId: this.settings.settingId
+    });
+  }
+
+  resetSections() {
+    this.sections = {
+      language: false,
+      user: false,
+      avatar: false,
+    }
+  }
+
+  async configUser() {
+    this._changeSection('user');
+  }
+
+  async configLanguage() {
+    this._changeSection('language');
+  }
+
+  async configAvatar() {
+    this._changeSection('avatar');
+  }
+
+  getCurrentNav(): { total: number, index: number } {
+    const keys = Object.keys(this.sections);
+    let _index = -1;
+    keys.map((key, index) => {
+      if (this.sections[key] == true) {
+        _index = index;
+        return;
+      }
+      console.log('this.sections[key]: ', this.sections[key]);
+    });
+    return { total: keys.length, index: _index };
+  }
+
+  prev() {
+    const nav = this.getCurrentNav();
+    if (nav.index > 0) {
+      const newIndex = nav.index - 1;
+      const keys = Object.keys(this.sections);
+      console.log('index: ', keys[newIndex]);
+      this._changeSection(keys[newIndex]);
+    }
+  }
+  next() {
+    const nav = this.getCurrentNav();
+    if (nav.index < nav.total - 1) {
+      const newIndex = nav.index + 1;
+      const keys = Object.keys(this.sections);
+      console.log('index: ', keys[newIndex]);
+      this._changeSection(keys[newIndex]);
+    }
+  }
+
+  private async _changeSection(key: string) {
+    this.changeMainBackground(key);
+    this.resetSections();
+    await this.uxUtils.wait(300);
+    this.sections[key] = true;
+  }
+
+  changeMainBackground(value: string) {
+    this.onChange.emit({ action: 'ui_update', value: value });
+  }
   //#endregion EVENTS
-
-  //#region CONVERTERS
-  //#endregion CONVERTERS
-
 }

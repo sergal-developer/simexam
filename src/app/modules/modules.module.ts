@@ -5,12 +5,16 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { ComponentsModule } from '../shared/components/components.module';
+import { LogComponent } from '../shared/components/log/log.component';
 import { ModulePackage } from '../shared/data/interfaces/interfaces';
 import { EventBusService } from '../shared/data/utils/event.services';
 import { UiServices } from '../shared/services/ui.services';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DbClientComponent } from './components/dbclient/dbclient.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { QuizEditableComponent } from './components/quiz-editable/quiz-editable.component';
+import { QuizSelectorComponent } from './components/quiz-selector/quiz-selector.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
@@ -36,21 +40,29 @@ import { ModuleComponent } from './modules.component';
     ModuleComponent,
     DashboardComponent,
     HeaderComponent,
+    NavbarComponent,
     QuizComponent,
     QuizEditableComponent,
+    QuizSelectorComponent,
     RegisterComponent,
     SettingsComponent,
     SplashComponent,
+    LogComponent,
+    DbClientComponent,
   ],
   exports: [
     ModuleComponent,
     DashboardComponent,
     HeaderComponent,
+    NavbarComponent,
     QuizComponent,
     QuizEditableComponent,
+    QuizSelectorComponent,
     RegisterComponent,
     SettingsComponent,
     SplashComponent,
+    LogComponent,
+    DbClientComponent,
   ],
   providers: [EventBusService, CommonServices, UiServices],
 })

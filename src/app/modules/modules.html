@@ -1,8 +1,13 @@
+<!-- <button class="log-button" (click)="showSQL()">data</button> -->
+ <div class="main-loader" *ngIf="uiServices._loader.show" >
+    <div class="loader"></div>
+ </div>
+
 <div class="wrapper {{ uistate }} {{ uisubstate }}">
     <div class="screen-collection {{ '__' + screen }}">
 
         <div class="screen full" [ngClass]="{'open': screen === _screen.register }">
-            <register class="_screen screen_register" *ngIf="screen === _screen.register"></register>
+            <register class="_screen screen_register" *ngIf="screen === _screen.register" (onChange)="onChangeUI($event)"></register>
         </div>
 
         <div class="screen" [ngClass]="{'open': screen === _screen.dashboard }">
@@ -29,23 +34,35 @@
             <quiz [id]="submodule" [review]="true" class="_screen screen_quiz" *ngIf="screen === _screen.attemptreview" (onChange)="onChangeUI($event)"></quiz>
         </div>
 
+        <div class="screen" [ngClass]="{'open': screen === _screen.quizselection }">
+            <quiz-selector class="_screen screen_quiz" *ngIf="screen === _screen.quizselection"></quiz-selector>
+        </div>
+
+        <div class="screen" [ngClass]="{'open': screen === _screen.dbclient }">
+            <div>{{ screen }}</div>
+            <dbclient class="_screen screen_quiz" *ngIf="screen === _screen.dbclient"></dbclient>
+        </div>
+
     </div>
 
-    <div class="bg-item _bg_1"><img src="../../assets/item-1.svg" alt=""></div>
-    <div class="bg-item _bg_2"><img src="../../assets/item-2.svg" alt=""></div>
-    <div class="bg-item _bg_3"><img src="../../assets/item-3.svg" alt=""></div>
-    <div class="bg-item _bg_4"><img src="../../assets/item-4.svg" alt=""></div>
-    <div class="bg-item _bg_5"><img src="../../assets/item-5.svg" alt=""></div>
-    <div class="bg-item _bg_6"><img src="../../assets/item-6.svg" alt=""></div>
-    <div class="bg-item _bg_7"><img src="../../assets/item-7.svg" alt=""></div>
+    <div class="background-collection">
+        <div class="bg-item _bg_1"><img src="../../assets/item-1.svg" alt=""></div>
+        <div class="bg-item _bg_2"><img src="../../assets/item-2.svg" alt=""></div>
+        <div class="bg-item _bg_3"><img src="../../assets/item-3.svg" alt=""></div>
+        <div class="bg-item _bg_4"><img src="../../assets/item-4.svg" alt=""></div>
+        <div class="bg-item _bg_5"><img src="../../assets/item-5.svg" alt=""></div>
+        <div class="bg-item _bg_6"><img src="../../assets/item-6.svg" alt=""></div>
+        <div class="bg-item _bg_7"><img src="../../assets/item-7.svg" alt=""></div>
+    </div>
+
 </div>
 
-<div class="notification {{ _uiServices._notification.type }}"
-    [ngClass]="{'show': _uiServices._notification.show }">
-    <div class="item" *ngIf="_uiServices._notification.icon"><span class="material-icons">{{
-            _uiServices._notification.icon }}</span></div>
-    <div class="item" [innerHTML]="_uiServices._notification.text"></div>
+<div class="notification {{ uiServices._notification.type }}"
+    [ngClass]="{'show': uiServices._notification.show }">
+    <div class="item" *ngIf="uiServices._notification.icon"><span class="material-icons">{{
+            uiServices._notification.icon }}</span></div>
+    <div class="item" [innerHTML]="uiServices._notification.text"></div>
     <div class="item actions">
-        <button (click)="_uiServices.closeNotification()"> <span class="material-icons">close</span> </button>
+        <button (click)="uiServices.closeNotification()"> <span class="material-icons">close</span> </button>
     </div>
 </div>

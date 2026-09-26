@@ -3,11 +3,11 @@
         <div class="mat-label-text">{{ title }}</div>
 
         <input *ngIf="!multiline" placeholder="{{ title }}" [attr.maxlength]="maxlength"
-            [formControl]="ngControl.control" type="{{type}}" (input)="valueChange($event)">
+            [formControl]="ngControl.control" type="{{type}}" (input)="valueChange($event)" (click)="onClickInput($event)">
 
         <div class="textarea-warp" *ngIf="multiline" [attr.data-replicated-value]="ngControl.control.value">
             <textarea placeholder="{{ title }}" [attr.maxlength]="maxlength" [formControl]="ngControl.control"
-                (input)="valueChange($event)">
+                (input)="valueChangeTextarea($event)" (click)="onClickInput($event)">
             </textarea>
         </div>
 

@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "baseUrl": "./",
     "outDir": "./build",
     "forceConsistentCasingInFileNames": true,
@@ -28,6 +29,10 @@
     "skipLibCheck": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "paths": {
+      "crypto": ["node_modules/crypto-browserify"]
+    },
+    "allowSyntheticDefaultImports": true,
   },
   "noImplicitReturns": true,
   "noImplicitAny": false,

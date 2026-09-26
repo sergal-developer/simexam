@@ -1,0 +1,95 @@
+Table log_table {
+  id integer [increment, primary key]
+  date integer
+  content text
+  type text
+}
+
+Table language_table {
+  value text [primary key]
+  name text
+}
+
+Table user_table {
+  userId integer [primary key]
+  uuid text
+  userName text [not null]
+  age integer
+  avatarUrl text
+  avatarBody text
+  current boolean
+}
+
+Table settings_table {
+  settingId integer [primary key]
+  language text [not null]
+  permissions text
+  theme text
+}
+
+Table theme_table {
+  themeId text [primary key]
+  content text [not null]
+}
+
+Table quiz_table {
+  quizId integer [primary key]
+  uuid text
+  title text
+  time integer
+  creationDate integer
+  updatedDate integer
+  startDate integer
+}
+
+Table answer_table {
+  answerId integer [primary key]
+  quizId integer [not null]
+  title text
+  updatedDate integer
+}
+
+Table answer_option_table {
+  optionId integer [increment, primary key]
+  answerId integer [not null]
+  content text
+  optionIndex integer
+  updatedDate integer
+  isCorrect boolean
+}
+
+Table quiz_attempt_table {
+  attemptId integer [primary key]
+  quizId integer [not null]
+  userId integer [not null]
+  startedDate integer
+  finishedDate integer
+  score real
+}
+
+Table answer_attempt_table {
+  answerAttemptId integer [increment, primary key]
+  attemptId integer [not null]
+  answerId integer [not null]
+  selectedOptionId integer
+  isCorrect boolean
+}
+
+// --- RELACIONES ---
+// 1. Un Quiz tiene muchas Respuestas (quiz_table 1 --- * answer_table)
+Ref: quiz_table.quizId < answer_table.quizId
+
+// 2. Una Respuesta tiene muchas Opciones de respuesta (answer_table 1 --- * answer_option_table)
+Ref: answer_table.answerId < answer_option_table.answerId
+
+// Un Quiz puede tener muchos intentos (de diferentes usuarios o del mismo)
+Ref: quiz_table.quizId < quiz_attempt_table.quizId
+
+// Un intento general contiene muchas preguntas respondidas
+Ref: quiz_attempt_table.attemptId < answer_attempt_table.attemptId
+
+// Cada respuesta del intento apunta a la pregunta original de la plantilla
+Ref: answer_table.answerId < answer_attempt_table.answerId
+
+// Cada respuesta del intento apunta a la opción elegida de la plantilla
+Ref: answer_option_table.optionId < answer_attempt_table.selectedOptionId

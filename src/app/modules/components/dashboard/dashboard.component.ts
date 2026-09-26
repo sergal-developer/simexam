@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } from '@angular/core';
-import { AnswerEntity, AttemptEntity, OptionEntity, QuizEntity } from 'src/app/shared/data/entities/entities';
-import { AttemptState } from 'src/app/shared/data/enumerables/enumerables';
+import { TranslateService } from '@ngx-translate/core';
+import { BookCheck, icons } from 'lucide';
+import { AttemptDTO, AttemptState, PermissionsDTO, QuizAnswerDTO, QuizDTO, SettingsDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
 import { TransformData } from 'src/app/shared/data/utils/transformData';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
-import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'dashboard',
@@ -13,138 +13,190 @@ import { v4 as uuidv4 } from 'uuid';
 })
 export class DashboardComponent implements OnInit {
   @Output() onChange = new EventEmitter();
-  @Input() selected: string = null;
+  @Input() selected: number = null;
 
-  listQuiz: QuizEntity[] = [];
-  currentQuiz: QuizEntity = null;
-  currentSection = 'show';
-  listAttempts: AttemptEntity[] = [];
+  listQuiz: QuizDTO[] = [];
+  showListQuiz = true;
+  currentQuiz: QuizDTO = null;
+  currentSection = '_one';
+  listAttempts: AttemptDTO[] = [];
   uistate = 'init';
 
   transform = new TransformData();
-  settings = null;
+  user: UserDTO = null;
+  settings: SettingsDTO = null;
+  permissions = {
+    create: false,
+    duplicate: false,
+    edit: false,
+    delete: false,
+    ai: false
+  }
 
-  constructor(private _commonServices: CommonServices,
-    private _uiServices: UiServices) { }
+  translateLabels = {
+    attempt_error_generation: '',
+  };
+
+  luIcon = {
+    language: icons.Globe,
+    empty: icons.SquareDashedKanban,
+    avatar: icons.SquareUserRound,
+    return: icons.ChevronLeft,
+    add: icons.CirclePlus,
+    settings: icons.Settings,
+    attempts: icons.ChevronRight,
+
+    exam: icons.NotebookText,
+    examOpen: icons.BookOpenText,
+  }
+
+  constructor(private commonServices: CommonServices,
+    private uiServices: UiServices,
+    private translate: TranslateService) { }
 
   async ngOnInit() {
-    await this.getSettings();
+    this.uiServices.showLoader(true);
+    this.setupLanguage(async () => {
+      setTimeout(() => {
+        this.uistate = '';
+        this.init();
+      }, 800);
+    });
 
-    setTimeout(() => {
-      this.uistate = '';
-      this.init();
-    }, 800);
+  }
 
+  async setupLanguage(next) {
+    this.settings = await this.commonServices.getCurrentSettings();
+    this.user = await this.commonServices.getCurrentUser();
+    this.permissions = this.settings.permissions as PermissionsDTO;
+
+    this.translate.setDefaultLang(this.settings.language);
+    const keys = Object.keys(this.translateLabels);
+    this.translate.get(keys).subscribe((res) => {
+      this.translateLabels = res;
+      next();
+    });
   }
 
   //#region DATA
   async init() {
-    const list = await this._commonServices.getAllQuizs();
-    if(list) {
+    this.uiServices.showLoader(true);
+    const list = await this.commonServices.getAllQuizs();
+    if (list) {
       this.listQuiz = this.normalizeQuiz(list);
+      console.log('this.listQuiz: ', this.listQuiz);
+      this.currentSection = this.listQuiz.length ? '_two' : '_one';
     }
 
     if (this.selected) {
-      const quiz = this.listQuiz.find((quiz) => quiz.id == this.selected);
-      this.showDetails(quiz);
+      const quiz = this.listQuiz.find((quiz) => quiz.quizId == this.selected);
+      if (this.listQuiz.length && quiz) {
+        this.showDetails(quiz);
+      }
     }
+
+    this.uiServices.showLoader(false);
   }
 
-  async getSettings() {
-    this.settings = await this._commonServices.getActiveSettings();
-  }
-
-  async getAttempts(quiz: QuizEntity) {
-    const attempt = await this._commonServices.filterAttempts(quiz.id);
-    this.listAttempts = attempt && attempt.length ? this.normalizeAttempt(attempt) : [];
+  async getAttempts(quiz: QuizDTO) {
+    const attempts = await this.commonServices.getAttemptByQuizId(quiz.quizId);
+    this.listAttempts = attempts && attempts.length ? this.normalizeAttempt(attempts) : [];
+    console.log('this.listAttempts: ', this.listAttempts);
+    // this.showListQuiz = this.listQuiz.length ? true : false;
   }
 
   async createattempt() {
-    const data: AttemptEntity = {
-      id: this.currentQuiz.id,
-      attemptId: uuidv4(),
-      score: 0,
-      state: AttemptState.new,
-      timeEnlapsed: 0,
-      title: this.currentQuiz.title,
-      questions: this.currentQuiz.questions,
-      time: this.currentQuiz.time ? this.currentQuiz.time : 0,
-      creationDate: new Date().getTime(),
-      updatedDate: new Date().getTime(),
-      startDate: null
-    }
-
-    // DISCART INVALID ANSWERS
-    data.questions = this.validateQuestions(data.questions);
-    data.validTotalAnswers = data.questions.length;
-
-    // clean selected elements
-    data.questions.map((question: AnswerEntity) => {
-      question.options.map((opt: OptionEntity) => {
-        opt.selected = false;
-      })
-    });
-
-    // SHUFFLE ANSWERS
-    data.questions = this.transform.shuffleArray(data.questions);
-
-    // SAVE DATA
-    await this._commonServices.saveAttempt(data);
-    const attempt = await this._commonServices.searchAttempt(data.attemptId, 'attemptId');
-
+    const attempt = await this.commonServices.createAttempt(this.currentQuiz.quizId);
     if (attempt) {
+      this.uiServices.notification(`Examen Duplicado correctamente`, { type: 'info', closeTimer: 3000 });
       this.goToCompleteAttempt(attempt);
     } else {
-      // GLOBAL.service_error_attempt
-      this._uiServices._notification('Ocurrio un error al generar la evaluacion, intente nuvamente', { type: 'error' })
+      this.uiServices.notification(this.translateLabels.attempt_error_generation, { type: 'error' })
     }
+
+    const data: AttemptDTO = {
+      attemptId: null,
+      quizId: this.currentQuiz.quizId,
+      userId: this.user.userId,
+      title: this.currentQuiz.title,
+      updatedDate: new Date().getTime(),
+      startDate: null,
+      score: 0,
+      state: AttemptState.new,
+      time: 0,
+      answersLinked: this.currentQuiz.answers ? JSON.stringify(this.currentQuiz.answers) : '',
+    }
+
+    // SHUFFLE ANSWERS
+    // data.questions = this.transform.shuffleArray(data.questions);
+
+    // SAVE DATA
+    // const attempt = await this.commonServices.saveAllQuizAttempt(data);
+
+    // if (attempt) {
+    //   this.goToCompleteAttempt(attempt);
+    // } else {
+    //   // GLOBAL.service_error_attempt
+    //   this.uiServices.notification('Ocurrio un error al generar la evaluacion, intente nuvamente', { type: 'error' })
+    // }
   }
 
-  async deleteQuiz(quiz: QuizEntity) {
-    this.listAttempts.map(async(attemp) => {
-      await this._commonServices.deleteAttempt(attemp.id);
-    });
-    await this._commonServices.deleteQuiz(quiz.id);
-    this.init();
-    this.returnMain();
-  }
+  async resetAttemps(quiz: QuizDTO) {
+    await Promise.all(
+      this.listAttempts.map(async (attemp) => {
+        await this.commonServices.deleteQuizAttempt(attemp.attemptId);
+      })
+    );
 
-  async resetAttemps(quiz: QuizEntity) {
-    this.listAttempts.map(async(attemp) => {
-      await this._commonServices.deleteAttempt(attemp.id);
-    });
     this.returnMain();
   }
   //#endregion DATA
 
   //#region EVENTS
   createQuiz() {
-    this._commonServices.navigate('quizcreate');
+    this.commonServices.navigate('quizcreate');
   }
 
-  editQuiz(quiz: QuizEntity) {
-    this._commonServices.navigate('quizedit', quiz.id);
+  selectQuiz() {
+    console.log('selectQuiz: ');
+    this.commonServices.navigate('quizselection');
   }
 
-  duplicateQuiz(quiz: QuizEntity) {
-    console.log('quiz: ', quiz);
-    // this._commonServices.navigate('quizedit', quiz.id);
-  }
-  
-
-  goToCompleteAttempt(attempt: AttemptEntity) {
-    this._commonServices.navigate('attemptevalue',  attempt.attemptId);
+  editQuiz(quiz: QuizDTO) {
+    this.commonServices.navigate('quizedit', quiz.quizId.toString());
   }
 
-  goToReviewAttempt(attempt: AttemptEntity) {
-    this._commonServices.navigate('attemptreview', attempt.attemptId);
+  async duplicateQuiz(quiz: QuizDTO) {
+    const quizData = await this.commonServices.duplicateQuiz(quiz.quizId);
+    if (quizData) {
+      this.uiServices.notification(`Examen Duplicado correctamente`, { type: 'info', closeTimer: 3000 });
+      this.commonServices.navigate('quizedit', `${quizData.quizId}`);
+    }
   }
 
-  async showDetails(quiz: QuizEntity) {
+  async deleteQuiz(quiz: QuizDTO) {
+    const _quiz = await this.commonServices.deleteQuiz(quiz.quizId);
+    if (_quiz) {
+      this.uiServices.notification(`Examen Eliminado correctamente`, { type: 'success', closeTimer: 3000 });
+      this.init();
+      this.returnMain();
+    }
+  }
+
+
+  goToCompleteAttempt(attempt: AttemptDTO) {
+    this.commonServices.navigate('attemptevalue', attempt.attemptId.toString());
+  }
+
+  goToReviewAttempt(attempt: AttemptDTO) {
+    this.commonServices.navigate('attemptreview', attempt.attemptId.toString());
+  }
+
+  async showDetails(quiz: QuizDTO) {
     this.listQuiz.map((item) => {
-      item._current = quiz.id == item.id;
+      item._current = quiz.quizId == item.quizId;
     });
-    this.currentSection = 'show_2';
+    this.currentSection = '_three';
     this.currentQuiz = quiz;
     this.getAttempts(this.currentQuiz);
 
@@ -155,49 +207,62 @@ export class DashboardComponent implements OnInit {
     });
 
     this.valueChange('secondary');
-    this._commonServices.navigate('dashboard', this.currentQuiz.id);
+    this.commonServices.navigate('dashboard', this.currentQuiz.quizId.toString());
+    setTimeout(() => {
+      // this.showListQuiz = false;
+    }, 1000);
   }
 
   returnMain() {
-    this.currentSection = 'show';
-    this.listQuiz.map((item) => {
-      item._current = false;
-    });
-    this.currentQuiz = null;
-    this.valueChange('primary');
+    this.currentSection = '_two';
+    setTimeout(() => {
+      this.listQuiz.map((item) => {
+        item._current = false;
+      });
+      this.currentQuiz = null;
+      this.valueChange('primary');
 
-    this._commonServices.navigate('dashboard');
+      this.commonServices.navigate('dashboard');
+      this.showListQuiz = true;
+    }, 500);
   }
 
-  valueChange(value: string ) {
+  valueChange(value: string) {
     this.onChange.emit({ action: 'ui_update', value: value });
+  }
+
+  onAction(evt: { event: string, value: any }) {
+    if (evt.event == 'create' && evt.value == "quiz") {
+      // this.selectQuiz();
+      this.createQuiz();
+    }
+
   }
   //#endregion EVENTS
 
   //#region CONVERTERS
-  normalizeQuiz(list: QuizEntity[]) {
+  normalizeAttempt(list: AttemptDTO[]) {
     list.map((item) => {
-      item._attemptsValue = item._attemptsValue ?? '-';
-      item._bestTimeValue = item._bestTimeValue ?? '-';
-
-      item._creationDate = this.transform.toDate(new Date(item.creationDate), 'MMM/d/yy h:mm a');
-      item._updatedDate = this.transform.toDate(new Date(item.updatedDate), 'MMM/d/yy h:mm a');
+      item._startDate = this.transform.toDate(new Date(item.startDate), 'MMM/d/yy h:mm');
+      item._updatedDate = this.transform.toDate(new Date(item.updatedDate), 'MMM/d/yy h:mm');
+      item._score = `${item.score}%`;
     })
     return list;
   }
 
-  normalizeAttempt(list: AttemptEntity[]) {
+  normalizeQuiz(list: QuizDTO[]) {
     list.map((item) => {
       item._creationDate = this.transform.toDate(new Date(item.creationDate), 'MMM/d/yy h:mm');
+      item._startDate = this.transform.toDate(new Date(item.startDate), 'MMM/d/yy h:mm');
       item._updatedDate = this.transform.toDate(new Date(item.updatedDate), 'MMM/d/yy h:mm');
     })
     return list;
   }
 
-  validateQuestions(list: AnswerEntity[]) {
+  validateQuestions(list: QuizAnswerDTO[]) {
     const validAnswers = [];
-    list.map((answer: AnswerEntity) => {
-      if (answer.question != '' && answer.correctAnswer != null) {
+    list.map((answer) => {
+      if (answer.title != '' && answer._selectedAnswer != null) {
         validAnswers.push(answer);
       }
     });

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Utils } from '../data/utils/utils';
+import { ThemeDTO } from '../data/entities/dtos';
 
 @Injectable()
 export class UiServices {
@@ -13,6 +14,10 @@ export class UiServices {
     show: false,
     icon: ''
   };
+
+  public _loader = {
+    show: false,
+  }
 
   constructor() { }
 
@@ -56,12 +61,12 @@ export class UiServices {
     this._notification.show = false;
   }
 
-  applyTheme(theme: any) {
+  applyTheme(theme: ThemeDTO) {
     let root = document.documentElement;
     if(root) {
-      const keys = Object.keys(theme);
+      const keys = Object.keys(theme.content);
       keys.map((key) => {
-        root.style.setProperty(`--${key}`, theme[key]);
+        root.style.setProperty(`--${key}`, theme.content[key]);
       });
     }
   }
@@ -79,6 +84,10 @@ export class UiServices {
         return root.style.getPropertyValue(`--${key}`);
     }
     return null;
+  }
+
+  public showLoader(show: boolean) {
+    this._loader.show = show;
   }
   //#endregion
 }

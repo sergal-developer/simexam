@@ -1,0 +1,23 @@
+<div class="mat-form-field">
+    <div class="autocomplete">
+
+        <input #inputElement type="text" class="autocomplete-input" [value]="searchText" [placeholder]="placeholder"
+            [disabled]="disabled" autocomplete="off" (input)="onInput($event)" (focus)="onFocus()"
+            (keydown)="onKeyDown($event)" />
+
+        <div class="autocomplete-dropdown" *ngIf="isOpen">
+
+            <div class="autocomplete-option" *ngFor="let option of filteredOptions; let i = index"
+                [class.highlighted]="i === highlightedIndex" (mousedown)="selectOption(option)"
+                (mouseenter)="highlightedIndex = i">
+                {{ getDisplayValue(option) }}
+            </div>
+
+            <div class="autocomplete-empty" *ngIf="filteredOptions.length === 0">
+                No se encontraron resultados
+            </div>
+
+        </div>
+
+    </div>
+</div>

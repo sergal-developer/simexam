@@ -1,66 +1,113 @@
 <div class="_animation_state {{ uistate }}">
-    <div class="root-hero ">
-        <div class="image">
-            <img src="../../assets/people.svg" alt="">
-        </div>
-    </div>
-
     <div class="root-container register-form">
-        <div class="simple-section">
-            <div class="_content">
-                <h2>{{ 'register_title' | translate }}</h2>
-                <h1>{{ 'register_title_question' | translate }}</h1>
+        <section-dinamic design="glass">
+            <div class="simple-section" *ngIf="sections.language">
+                <div class="_content flex centred">
+                    <h2>{{ 'register_title' | translate }}</h2>
+                    <p>{{ 'register_language'| translate }}</p>
 
-                <form [formGroup]="form">
-                    <div class="mat-form-field">
-                        <mat-input [title]="'form_name' | translate" [mesageError]="'form_name_required' | translate"
-                            [formControl]="form.get('name')">
-                        </mat-input>
+                    <div class="flex horizontal" *ngIf="languages.length">
+                        <ng-container *ngFor="let lan of languages">
+                            <button class="btn" [ngClass]="{
+                                    'primary': lan.value == settings.language, 
+                                    'unselected': lan.value != settings.language }"
+                                (click)="changeLanguage(lan.value)">{{ lan.value | translate }}</button>
+                        </ng-container>
                     </div>
+                </div>
+            </div>
 
+            <div class="simple-section" *ngIf="sections.user">
+                <div class="_content flex centred">
+                    <h2>{{ 'register_title_question' | translate }}</h2>
 
-                    <div class="mat-form-field">
-                        <div>
-                            <div class="mat-label-text">{{ 'form_image' | translate }}</div>
+                    <form [formGroup]="form">
+                        <div class="mat-form-field">
+                            <mat-input [title]="'form_name' | translate"
+                                [mesageError]="'form_name_required' | translate" [formControl]="form.get('name')">
+                            </mat-input>
                         </div>
-                        <div class="_collection">
-                            <div class="avatar-image" *ngFor="let item of defaultAvatars"
-                                [ngClass]="{'selected': item.selected }" (click)="selectAvatar(item)">
-                                <img [attr.src]="item.url" [attr.alt]="item.url">
+
+                        <div class="mat-form-field">
+                            <div class="mat-label-text">
+                                <label for="legal" class="mat-checkbox">
+                                    <input type="checkbox" id="legal" [formControl]="form.get('legal')">
+                                    <div>
+                                        {{ 'help_accept_terms' | translate }}
+                                        <a href="https://sergal.site/#/legal/simexam/terms" target="_blank">{{
+                                            'terms_conditions' | translate }}</a>, {{ 'help_accept_terms_join' |
+                                        translate
+                                        }}
+                                        <a href="https://sergal.site/#/legal/simexam/privacy" target="_blank">{{
+                                            'privacy_policy' | translate }} </a>
+                                    </div>
+                                </label>
                             </div>
                         </div>
+                    </form>
+                </div>
+            </div>
 
-                        <div class="mat-error"
-                            *ngIf="form.get('image').invalid && (form.get('image').dirty || form.get('image').touched)"
-                            [ngClass]="{'error': form.get('image').errors }">
-                            <div *ngIf="form.get('image').errors">
-                                {{ mesageError }}
-                            </div>
-                        </div>
-                    </div>
+            <div class="simple-section" *ngIf="sections.avatar">
+                <div class="_content flex centred">
+                    <h2>{{ 'form_image' | translate }}</h2>
 
-                    <div class="mat-form-field">
-                        <div class="mat-label-text">
-                            <label for="legal" class="mat-checkbox">
-                                <input type="checkbox" id="legal" [formControl]="form.get('legal')"> <div>
-                                    {{ 'help_accept_terms' | translate }} 
-                                    <a href="https://sergal.site/#/legal/simexam/terms" target="_blank">{{ 'terms_conditions' | translate }}</a>, {{ 'help_accept_terms_join' | translate }} 
-                                    <a href="https://sergal.site/#/legal/simexam/privacy" target="_blank">{{ 'privacy_policy' | translate }} </a>
+                    <form [formGroup]="form">
+                        <div class="mat-form-field">
+                            <div class="_collection">
+                                <div class="avatar-image" *ngFor="let item of defaultAvatars"
+                                    [ngClass]="{'selected': item.selected }" (click)="selectAvatar(item)">
+                                    <img [attr.src]="item.url" [attr.alt]="item.url">
                                 </div>
-                            </label>
+                            </div>
+
+                            <div class="mat-error"
+                                *ngIf="form.get('image').invalid && (form.get('image').dirty || form.get('image').touched)"
+                                [ngClass]="{'error': form.get('image').errors }">
+                                <div *ngIf="form.get('image').errors">
+                                    {{ mesageError }}
+                                </div>
+                            </div>
                         </div>
+
+                    </form>
+                </div>
+            </div>
+        </section-dinamic>
+
+        <section-dinamic design="glass" className="rounded">
+            <div class="_navbarBottom">
+
+                <div class="_nav_item _nav_action _prev" (click)="prev()" [attr.disabled]="sections.language">
+                    <lu-icon [icon]="luIcon.left"></lu-icon><span>{{ 'action_prev' | translate }}</span>
+                </div>
+
+                <div class="_nav_item_collection">
+                    <div class="_nav_item" [ngClass]="{'current': sections.language }" (click)="configLanguage()">
+                        <lu-icon [icon]="luIcon.language"></lu-icon>
+                        <div class="_nav_item_title">{{ 'action_step_language' | translate }}</div>
                     </div>
 
-                    <div class="mat-form-field">
-                        <div class="_collection">
-                            <button (click)="register()" type="submit" [disabled]="!validateData()">
-                                {{ 'singup' | translate }}
-                            </button>
-                        </div>
+                    <div class="_nav_item" [ngClass]="{'current': sections.user }" (click)="configUser()">
+                        <lu-icon [icon]="luIcon.user"></lu-icon>
+                        <div class="_nav_item_title">{{ 'action_step_user' | translate }}</div>
                     </div>
-                </form>
+
+                    <div class="_nav_item" [ngClass]="{'current': sections.avatar }" (click)="configAvatar()">
+                        <lu-icon [icon]="luIcon.avatar"></lu-icon>
+                        <div class="_nav_item_title">{{ 'action_step_avatar' | translate }}</div>
+                    </div>
+                </div>
+
+                <div class="_nav_item _nav_action _next" (click)="next()" *ngIf="!validateData()" [attr.disabled]="sections.avatar">
+                    <span>{{ 'action_next' | translate }}</span><lu-icon [icon]="luIcon.right"></lu-icon>
+                </div>
+
+                <div class="_nav_item _nav_action _next _register" (click)="register()" *ngIf="validateData()">
+                    <span>{{ 'singup' | translate }}</span><lu-icon [icon]="luIcon.register"></lu-icon>
+                </div>
 
             </div>
-        </div>
+        </section-dinamic>
     </div>
 </div>

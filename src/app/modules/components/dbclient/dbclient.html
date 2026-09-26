@@ -1,0 +1,92 @@
+<!-- <header [mode]="'quizeditable'"></header> -->
+<div class="root-header aling-left">
+    <div class="item clickable" (click)="gotoDashboard()">
+        <h2> <span class="material-icons">arrow_back</span></h2>
+    </div>
+    <div class="item editable-title">
+        <h2 (click)="changeView('sql')" [ngClass]="{'current': view == 'sql'}">SQL Client</h2>
+        <h2 (click)="changeView('functions')" [ngClass]="{'current': view == 'functions'}">Data Functions</h2>
+    </div>
+</div>
+
+<div class="root-container">
+    <ng-container *ngIf="view == 'sql'">
+        <div class="simple-section" *ngIf="formClient">
+            <div class="">
+
+                <div class="_question_title">
+                    <mat-autocomplete
+                        [options]="listQuerys"
+                        displayProperty="queryName"
+                        placeholder="Seleciona Query"
+                        [formControl]="formClient.get('nameQuery')"
+                        (selected)="onSelectAutocompleteSQL($event)">
+                    </mat-autocomplete>
+                </div>
+
+                <div class="_question_text">
+                    <mat-input [title]="'form_query_content' | translate"
+                        [mesageError]="'form_question_required' | translate"
+                        [formControl]="formClient.get('query')" [multiline]="true">
+                    </mat-input>
+                </div>
+
+                <div class="_error_message" *ngIf="errorMessages" [innerHTML]="errorMessages">
+                </div>
+
+                <div class="_precode" >
+                    <pre [innerHTML]="response"></pre>
+                </div>
+
+                <div class="_question_actions fixed">
+                    <button class="primary" (click)="executeQuery()">
+                        <div class="inner">
+                            Execute
+                        </div>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="view == 'functions'">
+        <div class="simple-section" *ngIf="formFunctions">
+            <div class="">
+                <div class="_question_title">
+                    <mat-autocomplete
+                        [options]="listFunctions"
+                        displayProperty="queryName"
+                        placeholder="Seleciona Funcion"
+                        [formControl]="formFunctions.get('nameQuery')"
+                        (selected)="onSelectAutocompleteFn($event)">
+                    </mat-autocomplete>
+                </div>
+
+                <div class="_question_text">
+                    <mat-input [title]="'form_query_content' | translate"
+                        [mesageError]="'form_question_required' | translate"
+                        [formControl]="formFunctions.get('query')" [multiline]="true" (change)="validateData($event)">
+                    </mat-input>
+                </div>
+
+                <div class="_error_message" *ngIf="errorMessages" [innerHTML]="errorMessages">
+                </div>
+
+                <div class="_precode" >
+                    <pre [innerHTML]="response"></pre>
+                </div>
+
+                <div class="_question_actions fixed">
+                    <button class="primary" (click)="executeQuery()">
+                        <div class="inner">
+                            Execute
+                        </div>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </ng-container>
+</div>

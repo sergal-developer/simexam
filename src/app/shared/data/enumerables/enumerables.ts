@@ -10,11 +10,13 @@ export enum ScreenEnum {
 
     settings = 'settings',
     quiz = 'quiz',
+    quizselection = 'quizselection',
     quizcreate = 'quizcreate',
     quizedit = 'quizedit',
     attemptevalue = 'attemptevalue',
     attemptreview = 'attemptreview',
     quizresults = 'quizresults',
+    dbclient = 'dbclient',
 
     
     exam = 'exam',
@@ -24,18 +26,6 @@ export enum ScreenEnum {
     profile = 'profile',
     home = 'home',
     game = 'game',
-}
-
-export enum AttemptState {
-    new = 'new',
-    progress = 'progress',
-    completed = 'completed'
-}
-
-export enum GradeState {
-    passed = 'passed',
-    failed = 'failed',
-    barely_passed = 'barely_passed',
 }
 
 export enum GamesEnum {

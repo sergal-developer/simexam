@@ -29,7 +29,7 @@
                         [ngClass]="{'open_props': profileUI.avatarEdit, 'closed': profileUI.usernameEdit }">
                         <ng-container *ngIf="!profileUI.usernameEdit">
                             <div class="image" (click)="editAvatar()" *ngIf="!profileUI.avatarEdit">
-                                <img [attr.src]="profile.avatar.url" alt="">
+                                <img [attr.src]="profile.avatarUrl" alt="">
                             </div>
                             <button class="primary" (click)="editAvatar()" *ngIf="profileUI.avatarEdit">
                                 <div class="inner"><span class="material-icons">done</span></div>
@@ -82,12 +82,14 @@
                                     <ng-container *ngIf="theme == 'dark'"><span
                                             class="material-icons">brightness_2</span>{{ 'permission_theme_dark' |
                                         translate }}</ng-container>
+                                    <ng-container *ngIf="theme == 'custom'">{{ 'permission_theme_custom' |
+                                        translate }}</ng-container>
                                 </div>
                             </button>
                         </ng-container>
                     </div>
                 </div>
-                <div class="_item_option _profile_dinamic_section">
+                <div class="_item_option _profile_dinamic_section" *ngIf="false">
                     <div class="item _generic_actions helper">
                         <div class="icon">
                             <span class="material-icons">palette</span>
@@ -127,7 +129,7 @@
                                 language
                             </span>
                         </div>
-                        <ng-container *ngFor="let lan of settings.availableLanguages">
+                        <ng-container *ngFor="let lan of settings._languages">
                             <button class="link"
                                 [ngClass]="{'primary': lan.value == settings.language, 'link': lan.value != settings.language }"
                                 (click)="changeLanguage(lan.value)">{{ lan.value | translate }}</button>
@@ -182,7 +184,7 @@
                     <div class="description full">
                         <div class="description-title">{{ 'permission_delete' | translate }}</div>
                     </div>
-                    <div class="action" (click)="tooglePermission('delete')"
+                    <div class="action clickable" (click)="tooglePermission('delete')"
                         [ngClass]="{'active': settings.permissions.delete }">
                         <span class="material-icons" *ngIf="settings.permissions.delete">toggle_on</span>
                         <span class="material-icons" *ngIf="!settings.permissions.delete">toggle_off</span>
@@ -225,7 +227,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="_content small" *ngIf="false">
             <h4 class="title-upper">{{ 'permission_data' | translate }}</h4>

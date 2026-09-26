@@ -1,6 +1,6 @@
-import { Component, Input, OnInit, ViewEncapsulation, } from '@angular/core';
-import { Router } from '@angular/router';
-import { ProfileEntity } from 'src/app/shared/data/entities/entities';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } from '@angular/core';
+import { UserDTO } from 'src/app/shared/data/entities/dtos';
+import { ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
 import { CommonServices } from 'src/app/shared/services/common.services';
 
 @Component({
@@ -9,33 +9,46 @@ import { CommonServices } from 'src/app/shared/services/common.services';
   encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent implements OnInit {
-  @Input() mode: 'dashboard' | 'settings' | 'quiz' | 'result' | 'quizeditable' = 'dashboard';
+  @Input() mode: 'dashboard' | 'settings' | 'quiz' | 'text' | 'quizeditable' = 'dashboard';
   @Input() title: string = '';
-  @Input() dashbaordparent: string = null;
+  @Input() redirect: { 
+    module: ScreenEnum, 
+    action: string,
+    id?: string,
+    props?: object
+  } = null;
 
-  profile: ProfileEntity = null;
+  profile: UserDTO = {
+    userId: null,
+    current: false,
+    userName: '',
+    uuid: '',
+    age: null,
+    avatarUrl: null,
+    avatarBody: null,
+  };
 
-  constructor(private _commonService: CommonServices) { }
+  constructor(private commonServices: CommonServices) { }
 
   ngOnInit() {
     this.getCurrentProfile();
   }
 
   async getCurrentProfile() {
-    this.profile = await this._commonService.getActiveProfile();
+    this.profile = await this.commonServices.getCurrentUser();
   }
 
   gotoSettings() {
-    this._commonService.navigate('settings');
+    this.commonServices.navigate('settings');
   }
 
   gotoDashboard() {
-    if(this.dashbaordparent) {
-      	this._commonService.navigate('dashboard', this.dashbaordparent );
+    if(this.redirect) {
+      this.commonServices.navigate(this.redirect.module, this.redirect.action, this.redirect.id, this.redirect.props );
+      return;
     }
-
-    if(!this.dashbaordparent) { 
-      this._commonService.navigate('dashboard');
-    }
+      
+    this.commonServices.navigate('dashboard');
+    return;
   }
 }

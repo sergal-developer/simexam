@@ -1,0 +1,21 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  [attr.width]="size"
+  [attr.height]="size"
+  [attr.viewBox]="viewBox"
+  fill="none"
+  [attr.stroke]="color"
+  [attr.stroke-width]="strokeWidthValue"
+  [attr.stroke-linecap]="strokeLinecap"
+  [attr.stroke-linejoin]="strokeLinejoin"
+  [class]="className">
+  <ng-container *ngFor="let node of nodes">
+    <svg:path *ngIf="node[0] === 'path'" [attr.d]="node[1].d"></svg:path>
+    <svg:line *ngIf="node[0] === 'line'" [attr.x1]="node[1].x1" [attr.y1]="node[1].y1" [attr.x2]="node[1].x2" [attr.y2]="node[1].y2"></svg:line>
+    <svg:circle *ngIf="node[0] === 'circle'" [attr.cx]="node[1].cx" [attr.cy]="node[1].cy" [attr.r]="node[1].r"></svg:circle>
+    <svg:ellipse *ngIf="node[0] === 'ellipse'" [attr.cx]="node[1].cx" [attr.cy]="node[1].cy" [attr.rx]="node[1].rx" [attr.ry]="node[1].ry"></svg:ellipse>
+    <svg:rect *ngIf="node[0] === 'rect'" [attr.x]="node[1].x" [attr.y]="node[1].y" [attr.width]="node[1].width" [attr.height]="node[1].height" [attr.rx]="node[1].rx" [attr.ry]="node[1].ry"></svg:rect>
+    <svg:polyline *ngIf="node[0] === 'polyline'" [attr.points]="node[1].points"></svg:polyline>
+    <svg:polygon *ngIf="node[0] === 'polygon'" [attr.points]="node[1].points"></svg:polygon>
+  </ng-container>
+</svg>
