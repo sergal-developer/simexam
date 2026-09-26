@@ -71,6 +71,7 @@ export class QuizSelectorComponent implements OnInit {
   }
 
   titleQuizSelection: string = 'Nuevo';
+  listFilesAvailable: Array<any> = [];
   //#endregion INTERNAL
 
   constructor(private commonServices: CommonServices,
@@ -83,6 +84,7 @@ export class QuizSelectorComponent implements OnInit {
   async ngOnInit() {
     this.uiServices.showLoader(true);
     this.setupLanguage(() => {
+      this.getManifestFiles();
       this.setupComponent();
     });
   }
@@ -122,15 +124,28 @@ export class QuizSelectorComponent implements OnInit {
     this.uiServices.showLoader(false);
   }
 
+  async getManifestFiles() {
+    const data = await this.commonServices.getManifetFiles();
+
+    this.listFilesAvailable = data && data.files ? data.files : [];
+    console.log('data: ', data);
+  }
+
   getNewQuestionForm() {
-      const question = getQuizAnswerDTO(`${this.translateLabels.answer_text_default} #${this.currentAnswerIndex + 1}?`);
-      const questions = [
-        getQuizAnswerOptionDTO(`${this.translateLabels.answer_option_text_default} 1`, 1),
-        getQuizAnswerOptionDTO(`${this.translateLabels.answer_option_text_default} 2`, 2),
-        getQuizAnswerOptionDTO('', 3),
-      ];
-  
-      question.options.push(...questions);
-      return question;
-    }
+    const question = getQuizAnswerDTO(`${this.translateLabels.answer_text_default} #${this.currentAnswerIndex + 1}?`);
+    const questions = [
+      getQuizAnswerOptionDTO(`${this.translateLabels.answer_option_text_default} 1`, 1),
+      getQuizAnswerOptionDTO(`${this.translateLabels.answer_option_text_default} 2`, 2),
+      getQuizAnswerOptionDTO('', 3),
+    ];
+
+    question.options.push(...questions);
+    return question;
+  }
+
+  //#region EVENTS
+  createBlankQuiz() {
+    this.commonServices.navigate('quizcreate');
+  }
+  //#endregion EVENTS
 }

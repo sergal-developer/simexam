@@ -1,0 +1,1532 @@
+{
+    "title": "Matemáticas: Geometría para Secundaria",
+    "time": 0,
+    "tags": [
+        "español",
+        "prueba"
+    ],
+    "questionsCount": 50,
+    "questions": [
+        {
+            "question": "¿Cuántos lados tiene un triángulo?",
+            "explanation": "Un triángulo es un polígono que tiene tres lados.",
+            "hint": "El prefijo 'tri-' se relaciona con el número tres.",
+            "tags": [
+                "español",
+                "polígonos"
+            ],
+            "answers": [
+                {
+                    "answer": "2"
+                },
+                {
+                    "answer": "3",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "4"
+                },
+                {
+                    "answer": "5"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántos grados mide un ángulo recto?",
+            "explanation": "Un ángulo recto mide exactamente 90 grados.",
+            "hint": "Es el ángulo que forman dos rectas perpendiculares.",
+            "tags": [
+                "español",
+                "ángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "45°"
+                },
+                {
+                    "answer": "90°",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "120°"
+                },
+                {
+                    "answer": "180°"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuánto mide un ángulo llano?",
+            "explanation": "Un ángulo llano forma una línea recta y mide 180 grados.",
+            "hint": "Piensa en media vuelta.",
+            "tags": [
+                "español",
+                "ángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "90°"
+                },
+                {
+                    "answer": "120°"
+                },
+                {
+                    "answer": "180°",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "360°"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la suma de los ángulos interiores de un triángulo?",
+            "explanation": "La suma de los tres ángulos interiores de cualquier triángulo es 180°.",
+            "hint": "Es una propiedad fundamental de todos los triángulos.",
+            "tags": [
+                "español",
+                "triángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "90°"
+                },
+                {
+                    "answer": "180°",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "270°"
+                },
+                {
+                    "answer": "360°"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el perímetro de un cuadrado cuyo lado mide 6 cm?",
+            "explanation": "Un cuadrado tiene cuatro lados iguales, por lo que su perímetro es 4 × 6 = 24 cm.",
+            "hint": "Multiplica la medida del lado por cuatro.",
+            "tags": [
+                "español",
+                "perímetro"
+            ],
+            "answers": [
+                {
+                    "answer": "12 cm"
+                },
+                {
+                    "answer": "18 cm"
+                },
+                {
+                    "answer": "24 cm",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "36 cm"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el área de un cuadrado cuyo lado mide 8 cm?",
+            "explanation": "El área de un cuadrado se calcula elevando al cuadrado la medida del lado: 8 × 8 = 64 cm².",
+            "hint": "Usa la fórmula lado × lado.",
+            "tags": [
+                "español",
+                "área"
+            ],
+            "answers": [
+                {
+                    "answer": "16 cm²"
+                },
+                {
+                    "answer": "32 cm²"
+                },
+                {
+                    "answer": "64 cm²",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "128 cm²"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el perímetro de un rectángulo de 10 cm de largo y 4 cm de ancho?",
+            "explanation": "El perímetro es 2 × (10 + 4) = 28 cm.",
+            "hint": "Suma largo y ancho y multiplica el resultado por dos.",
+            "tags": [
+                "español",
+                "perímetro"
+            ],
+            "answers": [
+                {
+                    "answer": "14 cm"
+                },
+                {
+                    "answer": "20 cm"
+                },
+                {
+                    "answer": "28 cm",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "40 cm"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el área de un rectángulo de 12 cm de largo y 5 cm de ancho?",
+            "explanation": "El área de un rectángulo se obtiene multiplicando largo por ancho: 12 × 5 = 60 cm².",
+            "hint": "Usa la fórmula largo × ancho.",
+            "tags": [
+                "español",
+                "área"
+            ],
+            "answers": [
+                {
+                    "answer": "17 cm²"
+                },
+                {
+                    "answer": "34 cm²"
+                },
+                {
+                    "answer": "60 cm²",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "120 cm²"
+                }
+            ]
+        },
+        {
+            "question": "¿Cómo se llama el segmento que une dos vértices no consecutivos de un polígono?",
+            "explanation": "Una diagonal es el segmento que une dos vértices no consecutivos de un polígono.",
+            "hint": "No une vértices que estén uno junto al otro.",
+            "tags": [
+                "español",
+                "polígonos"
+            ],
+            "answers": [
+                {
+                    "answer": "Radio"
+                },
+                {
+                    "answer": "Diagonal",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Altura"
+                },
+                {
+                    "answer": "Apotema"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántos lados tiene un pentágono?",
+            "explanation": "Un pentágono es un polígono formado por cinco lados.",
+            "hint": "El prefijo 'penta-' significa cinco.",
+            "tags": [
+                "español",
+                "polígonos"
+            ],
+            "answers": [
+                {
+                    "answer": "4"
+                },
+                {
+                    "answer": "5",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "6"
+                },
+                {
+                    "answer": "7"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántos lados tiene un hexágono?",
+            "explanation": "Un hexágono tiene seis lados y seis vértices.",
+            "hint": "El prefijo 'hexa-' indica seis.",
+            "tags": [
+                "español",
+                "polígonos"
+            ],
+            "answers": [
+                {
+                    "answer": "5"
+                },
+                {
+                    "answer": "6",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "7"
+                },
+                {
+                    "answer": "8"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántos lados tiene un octágono?",
+            "explanation": "Un octágono es un polígono de ocho lados.",
+            "hint": "El prefijo 'octa-' se relaciona con ocho.",
+            "tags": [
+                "español",
+                "polígonos"
+            ],
+            "answers": [
+                {
+                    "answer": "6"
+                },
+                {
+                    "answer": "7"
+                },
+                {
+                    "answer": "8",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "10"
+                }
+            ]
+        },
+        {
+            "question": "¿Cómo se llama un triángulo que tiene sus tres lados iguales?",
+            "explanation": "Un triángulo equilátero tiene tres lados de igual longitud y también tres ángulos iguales.",
+            "hint": "Su nombre contiene la idea de lados equivalentes.",
+            "tags": [
+                "español",
+                "triángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "Isósceles"
+                },
+                {
+                    "answer": "Escaleno"
+                },
+                {
+                    "answer": "Equilátero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Rectángulo"
+                }
+            ]
+        },
+        {
+            "question": "¿Cómo se llama un triángulo que tiene dos lados iguales?",
+            "explanation": "Un triángulo isósceles tiene dos lados de la misma longitud.",
+            "hint": "Tiene exactamente un par de lados de igual longitud.",
+            "tags": [
+                "español",
+                "triángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "Equilátero"
+                },
+                {
+                    "answer": "Isósceles",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Escaleno"
+                },
+                {
+                    "answer": "Obtusángulo"
+                }
+            ]
+        },
+        {
+            "question": "¿Cómo se llama un triángulo que tiene todos sus lados diferentes?",
+            "explanation": "Un triángulo escaleno tiene tres lados de diferentes longitudes.",
+            "hint": "Ninguno de sus lados tiene la misma medida que otro.",
+            "tags": [
+                "español",
+                "triángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "Equilátero"
+                },
+                {
+                    "answer": "Isósceles"
+                },
+                {
+                    "answer": "Escaleno",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Rectángulo"
+                }
+            ]
+        },
+        {
+            "question": "¿Cómo se llama un triángulo que tiene un ángulo de 90°?",
+            "explanation": "Un triángulo rectángulo contiene un ángulo recto de 90°.",
+            "hint": "Su nombre está relacionado con el ángulo recto.",
+            "tags": [
+                "español",
+                "triángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "Acutángulo"
+                },
+                {
+                    "answer": "Obtusángulo"
+                },
+                {
+                    "answer": "Rectángulo",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Equilátero"
+                }
+            ]
+        },
+        {
+            "question": "En un triángulo, dos ángulos miden 50° y 60°. ¿Cuánto mide el tercero?",
+            "explanation": "Los ángulos de un triángulo suman 180°. Entonces 180° - 50° - 60° = 70°.",
+            "hint": "Resta de 180° la suma de los dos ángulos conocidos.",
+            "tags": [
+                "español",
+                "triángulos",
+                "ángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "60°"
+                },
+                {
+                    "answer": "70°",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "80°"
+                },
+                {
+                    "answer": "90°"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuánto mide cada ángulo interior de un triángulo equilátero?",
+            "explanation": "Los tres ángulos son iguales y su suma es 180°, así que cada uno mide 60°.",
+            "hint": "Divide 180° entre tres.",
+            "tags": [
+                "español",
+                "triángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "30°"
+                },
+                {
+                    "answer": "45°"
+                },
+                {
+                    "answer": "60°",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "90°"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué nombre recibe un ángulo que mide menos de 90°?",
+            "explanation": "Un ángulo agudo mide más de 0° y menos de 90°.",
+            "hint": "Es menor que un ángulo recto.",
+            "tags": [
+                "español",
+                "ángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "Agudo",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Recto"
+                },
+                {
+                    "answer": "Obtuso"
+                },
+                {
+                    "answer": "Llano"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué nombre recibe un ángulo mayor que 90° y menor que 180°?",
+            "explanation": "Un ángulo obtuso mide más de 90° y menos de 180°.",
+            "hint": "Es mayor que un ángulo recto pero menor que uno llano.",
+            "tags": [
+                "español",
+                "ángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "Agudo"
+                },
+                {
+                    "answer": "Recto"
+                },
+                {
+                    "answer": "Obtuso",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Completo"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuánto mide un ángulo completo?",
+            "explanation": "Un ángulo completo representa una vuelta completa y mide 360°.",
+            "hint": "Una vuelta completa alrededor de un punto equivale a esta medida.",
+            "tags": [
+                "español",
+                "ángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "90°"
+                },
+                {
+                    "answer": "180°"
+                },
+                {
+                    "answer": "270°"
+                },
+                {
+                    "answer": "360°",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Qué relación tienen dos ángulos cuya suma es 90°?",
+            "explanation": "Dos ángulos cuya suma es 90° se denominan complementarios.",
+            "hint": "Relaciona el nombre con el ángulo recto.",
+            "tags": [
+                "español",
+                "ángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "Suplementarios"
+                },
+                {
+                    "answer": "Complementarios",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Opuestos"
+                },
+                {
+                    "answer": "Adyacentes"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué relación tienen dos ángulos cuya suma es 180°?",
+            "explanation": "Dos ángulos cuya suma es 180° se llaman suplementarios.",
+            "hint": "Su suma equivale a un ángulo llano.",
+            "tags": [
+                "español",
+                "ángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "Complementarios"
+                },
+                {
+                    "answer": "Suplementarios",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Alternos"
+                },
+                {
+                    "answer": "Correspondientes"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuánto mide cada ángulo interior de un cuadrado?",
+            "explanation": "Los cuatro ángulos de un cuadrado son rectos, por lo que cada uno mide 90°.",
+            "hint": "Todos los ángulos de un cuadrado son iguales y rectos.",
+            "tags": [
+                "español",
+                "cuadriláteros"
+            ],
+            "answers": [
+                {
+                    "answer": "45°"
+                },
+                {
+                    "answer": "60°"
+                },
+                {
+                    "answer": "90°",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "120°"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la suma de los ángulos interiores de un cuadrilátero?",
+            "explanation": "Un cuadrilátero puede dividirse en dos triángulos, por lo que la suma de sus ángulos interiores es 180° + 180° = 360°.",
+            "hint": "Piensa en dos triángulos dentro del cuadrilátero.",
+            "tags": [
+                "español",
+                "cuadriláteros"
+            ],
+            "answers": [
+                {
+                    "answer": "180°"
+                },
+                {
+                    "answer": "270°"
+                },
+                {
+                    "answer": "360°",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "540°"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál de estas figuras tiene exactamente cuatro lados iguales y cuatro ángulos rectos?",
+            "explanation": "Un cuadrado tiene cuatro lados de igual longitud y cuatro ángulos rectos.",
+            "hint": "Es un tipo especial de rectángulo y rombo.",
+            "tags": [
+                "español",
+                "cuadriláteros"
+            ],
+            "answers": [
+                {
+                    "answer": "Trapecio"
+                },
+                {
+                    "answer": "Rombo"
+                },
+                {
+                    "answer": "Cuadrado",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Triángulo"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué cuadrilátero tiene dos pares de lados paralelos?",
+            "explanation": "Un paralelogramo es un cuadrilátero que tiene dos pares de lados opuestos paralelos.",
+            "hint": "Su nombre está relacionado con líneas paralelas.",
+            "tags": [
+                "español",
+                "cuadriláteros"
+            ],
+            "answers": [
+                {
+                    "answer": "Paralelogramo",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Trapecio"
+                },
+                {
+                    "answer": "Cometa"
+                },
+                {
+                    "answer": "Triángulo"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué cuadrilátero tiene todos sus lados iguales, pero no necesariamente ángulos rectos?",
+            "explanation": "Un rombo tiene cuatro lados de igual longitud; sus ángulos no tienen que ser rectos.",
+            "hint": "Se parece a un cuadrado inclinado.",
+            "tags": [
+                "español",
+                "cuadriláteros"
+            ],
+            "answers": [
+                {
+                    "answer": "Rectángulo"
+                },
+                {
+                    "answer": "Rombo",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Trapecio"
+                },
+                {
+                    "answer": "Pentágono"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué cuadrilátero tiene al menos un par de lados paralelos?",
+            "explanation": "En la definición escolar usual, un trapecio es un cuadrilátero que tiene al menos un par de lados paralelos.",
+            "hint": "Tiene una pareja de lados que nunca se encuentran.",
+            "tags": [
+                "español",
+                "cuadriláteros"
+            ],
+            "answers": [
+                {
+                    "answer": "Trapecio",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Rombo"
+                },
+                {
+                    "answer": "Cometa"
+                },
+                {
+                    "answer": "Triángulo"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la fórmula del área de un triángulo?",
+            "explanation": "El área de un triángulo se calcula multiplicando base por altura y dividiendo entre 2.",
+            "hint": "Es la mitad del área de un rectángulo con la misma base y altura.",
+            "tags": [
+                "español",
+                "área",
+                "triángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "base × altura"
+                },
+                {
+                    "answer": "(base × altura) ÷ 2",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "2 × base × altura"
+                },
+                {
+                    "answer": "base + altura"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el área de un triángulo con base de 10 cm y altura de 6 cm?",
+            "explanation": "Aplicando la fórmula, (10 × 6) ÷ 2 = 30 cm².",
+            "hint": "Multiplica base por altura y divide entre dos.",
+            "tags": [
+                "español",
+                "área",
+                "triángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "20 cm²"
+                },
+                {
+                    "answer": "30 cm²",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "40 cm²"
+                },
+                {
+                    "answer": "60 cm²"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la fórmula del área de un círculo?",
+            "explanation": "El área de un círculo se obtiene mediante A = πr², donde r representa el radio.",
+            "hint": "El radio aparece elevado al cuadrado.",
+            "tags": [
+                "español",
+                "círculos",
+                "área"
+            ],
+            "answers": [
+                {
+                    "answer": "2πr"
+                },
+                {
+                    "answer": "πr²",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "πd"
+                },
+                {
+                    "answer": "r² ÷ π"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la fórmula de la longitud de una circunferencia?",
+            "explanation": "La longitud de una circunferencia se calcula mediante C = 2πr o equivalentemente C = πd.",
+            "hint": "Usa el radio y el número π.",
+            "tags": [
+                "español",
+                "círculos"
+            ],
+            "answers": [
+                {
+                    "answer": "πr²"
+                },
+                {
+                    "answer": "2πr",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "r²"
+                },
+                {
+                    "answer": "π + r"
+                }
+            ]
+        },
+        {
+            "question": "Si el radio de un círculo es 5 cm, ¿cuál es su diámetro?",
+            "explanation": "El diámetro es el doble del radio: 2 × 5 = 10 cm.",
+            "hint": "El diámetro atraviesa el centro y equivale a dos radios.",
+            "tags": [
+                "español",
+                "círculos"
+            ],
+            "answers": [
+                {
+                    "answer": "2.5 cm"
+                },
+                {
+                    "answer": "5 cm"
+                },
+                {
+                    "answer": "10 cm",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "25 cm"
+                }
+            ]
+        },
+        {
+            "question": "Si el diámetro de una circunferencia es 18 cm, ¿cuánto mide su radio?",
+            "explanation": "El radio es la mitad del diámetro, por lo que 18 ÷ 2 = 9 cm.",
+            "hint": "Divide el diámetro entre dos.",
+            "tags": [
+                "español",
+                "círculos"
+            ],
+            "answers": [
+                {
+                    "answer": "6 cm"
+                },
+                {
+                    "answer": "8 cm"
+                },
+                {
+                    "answer": "9 cm",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "12 cm"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué valor aproximado se utiliza comúnmente para π en cálculos escolares?",
+            "explanation": "El número π suele aproximarse a 3.14 en cálculos escolares.",
+            "hint": "Es un número irracional cercano a tres enteros y catorce centésimas.",
+            "tags": [
+                "español",
+                "círculos"
+            ],
+            "answers": [
+                {
+                    "answer": "2.14"
+                },
+                {
+                    "answer": "3.14",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "4.13"
+                },
+                {
+                    "answer": "3.41"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué elemento de un círculo une el centro con cualquier punto de la circunferencia?",
+            "explanation": "El radio es el segmento que une el centro del círculo con un punto de la circunferencia.",
+            "hint": "Su longitud es la mitad del diámetro.",
+            "tags": [
+                "español",
+                "círculos"
+            ],
+            "answers": [
+                {
+                    "answer": "Diámetro"
+                },
+                {
+                    "answer": "Radio",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Cuerda"
+                },
+                {
+                    "answer": "Arco"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué segmento pasa por el centro de un círculo y une dos puntos de la circunferencia?",
+            "explanation": "El diámetro es una cuerda que pasa por el centro del círculo y tiene una longitud igual a dos radios.",
+            "hint": "Es la cuerda de mayor longitud.",
+            "tags": [
+                "español",
+                "círculos"
+            ],
+            "answers": [
+                {
+                    "answer": "Radio"
+                },
+                {
+                    "answer": "Diámetro",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Arco"
+                },
+                {
+                    "answer": "Tangente"
+                }
+            ]
+        },
+        {
+            "question": "¿Cómo se llaman dos rectas que se cruzan formando un ángulo de 90°?",
+            "explanation": "Dos rectas perpendiculares se intersectan formando cuatro ángulos rectos de 90°.",
+            "hint": "Su intersección forma ángulos rectos.",
+            "tags": [
+                "español",
+                "rectas"
+            ],
+            "answers": [
+                {
+                    "answer": "Paralelas"
+                },
+                {
+                    "answer": "Perpendiculares",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Coincidentes"
+                },
+                {
+                    "answer": "Oblicuas"
+                }
+            ]
+        },
+        {
+            "question": "¿Cómo se llaman dos rectas que están en el mismo plano y nunca se intersectan?",
+            "explanation": "Las rectas paralelas permanecen siempre a la misma distancia y no se cruzan.",
+            "hint": "Piensa en los rieles de una vía de tren.",
+            "tags": [
+                "español",
+                "rectas"
+            ],
+            "answers": [
+                {
+                    "answer": "Perpendiculares"
+                },
+                {
+                    "answer": "Paralelas",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Secantes"
+                },
+                {
+                    "answer": "Oblicuas"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es la altura de un triángulo?",
+            "explanation": "La altura es el segmento perpendicular trazado desde un vértice hasta la recta que contiene al lado opuesto.",
+            "hint": "Debe formar un ángulo de 90° con la base o su prolongación.",
+            "tags": [
+                "español",
+                "triángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "El lado más largo"
+                },
+                {
+                    "answer": "La distancia entre dos vértices"
+                },
+                {
+                    "answer": "El segmento perpendicular a la base",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "La suma de los lados"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué teorema relaciona los lados de un triángulo rectángulo?",
+            "explanation": "El teorema de Pitágoras establece que, en un triángulo rectángulo, a² + b² = c², donde c es la hipotenusa.",
+            "hint": "Relaciona los cuadrados de los catetos con el cuadrado de la hipotenusa.",
+            "tags": [
+                "español",
+                "Pitágoras"
+            ],
+            "answers": [
+                {
+                    "answer": "Teorema de Tales"
+                },
+                {
+                    "answer": "Teorema de Pitágoras",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Teorema del ángulo exterior"
+                },
+                {
+                    "answer": "Teorema de Euclides"
+                }
+            ]
+        },
+        {
+            "question": "En un triángulo rectángulo con catetos de 3 cm y 4 cm, ¿cuánto mide la hipotenusa?",
+            "explanation": "Por Pitágoras, c² = 3² + 4² = 9 + 16 = 25, así que c = 5 cm.",
+            "hint": "Aplica a² + b² = c².",
+            "tags": [
+                "español",
+                "Pitágoras"
+            ],
+            "answers": [
+                {
+                    "answer": "4 cm"
+                },
+                {
+                    "answer": "5 cm",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "6 cm"
+                },
+                {
+                    "answer": "7 cm"
+                }
+            ]
+        },
+        {
+            "question": "En un triángulo rectángulo, la hipotenusa mide 13 cm y un cateto mide 5 cm. ¿Cuánto mide el otro cateto?",
+            "explanation": "Por Pitágoras, el cateto buscado cumple x² = 13² - 5² = 169 - 25 = 144, por lo que x = 12 cm.",
+            "hint": "Resta el cuadrado del cateto conocido al cuadrado de la hipotenusa.",
+            "tags": [
+                "español",
+                "Pitágoras"
+            ],
+            "answers": [
+                {
+                    "answer": "8 cm"
+                },
+                {
+                    "answer": "10 cm"
+                },
+                {
+                    "answer": "12 cm",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "14 cm"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el volumen de un cubo cuya arista mide 4 cm?",
+            "explanation": "El volumen de un cubo se calcula como lado³. Entonces 4³ = 64 cm³.",
+            "hint": "Multiplica la arista tres veces: 4 × 4 × 4.",
+            "tags": [
+                "español",
+                "volumen"
+            ],
+            "answers": [
+                {
+                    "answer": "16 cm³"
+                },
+                {
+                    "answer": "32 cm³"
+                },
+                {
+                    "answer": "64 cm³",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "96 cm³"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el volumen de un prisma rectangular de 5 cm de largo, 3 cm de ancho y 2 cm de alto?",
+            "explanation": "El volumen se obtiene multiplicando las tres dimensiones: 5 × 3 × 2 = 30 cm³.",
+            "hint": "Usa largo × ancho × altura.",
+            "tags": [
+                "español",
+                "volumen"
+            ],
+            "answers": [
+                {
+                    "answer": "10 cm³"
+                },
+                {
+                    "answer": "20 cm³"
+                },
+                {
+                    "answer": "30 cm³",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "60 cm³"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el volumen de un cilindro con radio 3 cm y altura 4 cm, usando π = 3.14?",
+            "explanation": "El volumen es πr²h = 3.14 × 3² × 4 = 3.14 × 9 × 4 = 113.04 cm³.",
+            "hint": "Usa la fórmula V = πr²h.",
+            "tags": [
+                "español",
+                "volumen",
+                "cilindros"
+            ],
+            "answers": [
+                {
+                    "answer": "75.36 cm³"
+                },
+                {
+                    "answer": "100.48 cm³"
+                },
+                {
+                    "answer": "113.04 cm³",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "125.60 cm³"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántas caras tiene un cubo?",
+            "explanation": "Un cubo tiene seis caras cuadradas iguales.",
+            "hint": "Cuenta las superficies planas que forman el sólido.",
+            "tags": [
+                "español",
+                "cuerpos geométricos"
+            ],
+            "answers": [
+                {
+                    "answer": "4"
+                },
+                {
+                    "answer": "6",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "8"
+                },
+                {
+                    "answer": "12"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántos vértices tiene un cubo?",
+            "explanation": "Un cubo tiene ocho vértices, que son los puntos donde se encuentran tres aristas.",
+            "hint": "Son las esquinas del cubo.",
+            "tags": [
+                "español",
+                "cuerpos geométricos"
+            ],
+            "answers": [
+                {
+                    "answer": "6"
+                },
+                {
+                    "answer": "8",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "10"
+                },
+                {
+                    "answer": "12"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántas aristas tiene un cubo?",
+            "explanation": "Un cubo tiene 12 aristas: cuatro en la parte superior, cuatro en la inferior y cuatro verticales.",
+            "hint": "Cuenta los segmentos que forman los bordes del cubo.",
+            "tags": [
+                "español",
+                "cuerpos geométricos"
+            ],
+            "answers": [
+                {
+                    "answer": "8"
+                },
+                {
+                    "answer": "10"
+                },
+                {
+                    "answer": "12",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "14"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué sólido geométrico tiene dos bases circulares paralelas y una superficie lateral curva?",
+            "explanation": "Un cilindro tiene dos bases circulares paralelas y una superficie lateral curva.",
+            "hint": "Una lata de refresco tiene aproximadamente esta forma.",
+            "tags": [
+                "español",
+                "cuerpos geométricos"
+            ],
+            "answers": [
+                {
+                    "answer": "Cono"
+                },
+                {
+                    "answer": "Esfera"
+                },
+                {
+                    "answer": "Cilindro",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Prisma triangular"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué sólido geométrico tiene una base circular y un solo vértice?",
+            "explanation": "Un cono tiene una base circular y una superficie lateral que termina en un único vértice.",
+            "hint": "Su forma se parece a un cono de helado.",
+            "tags": [
+                "español",
+                "cuerpos geométricos"
+            ],
+            "answers": [
+                {
+                    "answer": "Cilindro"
+                },
+                {
+                    "answer": "Cono",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Esfera"
+                },
+                {
+                    "answer": "Cubo"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué sólido geométrico no tiene vértices ni aristas?",
+            "explanation": "Una esfera tiene una superficie curva continua y no posee vértices ni aristas.",
+            "hint": "Todos los puntos de su superficie están a la misma distancia de su centro.",
+            "tags": [
+                "español",
+                "cuerpos geométricos"
+            ],
+            "answers": [
+                {
+                    "answer": "Cubo"
+                },
+                {
+                    "answer": "Cono"
+                },
+                {
+                    "answer": "Esfera",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Prisma"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el área total de un cubo cuya arista mide 3 cm?",
+            "explanation": "Un cubo tiene seis caras cuadradas. Cada cara tiene un área de 3² = 9 cm², así que el área total es 6 × 9 = 54 cm².",
+            "hint": "Calcula el área de una cara y multiplícala por seis.",
+            "tags": [
+                "español",
+                "área",
+                "cubo"
+            ],
+            "answers": [
+                {
+                    "answer": "27 cm²"
+                },
+                {
+                    "answer": "36 cm²"
+                },
+                {
+                    "answer": "54 cm²",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "81 cm²"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la suma de los ángulos interiores de un pentágono?",
+            "explanation": "La suma de los ángulos interiores de un polígono de n lados es (n - 2) × 180°. Para un pentágono: (5 - 2) × 180° = 540°.",
+            "hint": "Usa la fórmula (n - 2) × 180°.",
+            "tags": [
+                "español",
+                "polígonos",
+                "ángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "360°"
+                },
+                {
+                    "answer": "450°"
+                },
+                {
+                    "answer": "540°",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "720°"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la suma de los ángulos interiores de un hexágono?",
+            "explanation": "Para un hexágono, (6 - 2) × 180° = 4 × 180° = 720°.",
+            "hint": "Sustituye 6 en la fórmula de la suma de ángulos interiores.",
+            "tags": [
+                "español",
+                "polígonos",
+                "ángulos"
+            ],
+            "answers": [
+                {
+                    "answer": "540°"
+                },
+                {
+                    "answer": "720°",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "900°"
+                },
+                {
+                    "answer": "1080°"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuánto mide cada ángulo interior de un pentágono regular?",
+            "explanation": "La suma de sus ángulos interiores es 540°. Como el pentágono regular tiene cinco ángulos iguales, 540° ÷ 5 = 108°.",
+            "hint": "Divide la suma de los ángulos interiores entre cinco.",
+            "tags": [
+                "español",
+                "polígonos regulares"
+            ],
+            "answers": [
+                {
+                    "answer": "90°"
+                },
+                {
+                    "answer": "100°"
+                },
+                {
+                    "answer": "108°",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "120°"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el perímetro de un hexágono regular cuyo lado mide 7 cm?",
+            "explanation": "Un hexágono regular tiene seis lados iguales. Por tanto, su perímetro es 6 × 7 = 42 cm.",
+            "hint": "Multiplica la medida de un lado por el número de lados.",
+            "tags": [
+                "español",
+                "perímetro",
+                "polígonos"
+            ],
+            "answers": [
+                {
+                    "answer": "35 cm"
+                },
+                {
+                    "answer": "42 cm",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "49 cm"
+                },
+                {
+                    "answer": "56 cm"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué transformación geométrica desplaza una figura sin girarla ni cambiar su tamaño?",
+            "explanation": "Una traslación mueve todos los puntos de una figura la misma distancia y en la misma dirección, conservando su forma y tamaño.",
+            "hint": "Imagina deslizar una figura de un lugar a otro.",
+            "tags": [
+                "español",
+                "transformaciones"
+            ],
+            "answers": [
+                {
+                    "answer": "Rotación"
+                },
+                {
+                    "answer": "Reflexión"
+                },
+                {
+                    "answer": "Traslación",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Escala"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué transformación gira una figura alrededor de un punto?",
+            "explanation": "Una rotación hace girar una figura alrededor de un punto fijo llamado centro de rotación.",
+            "hint": "La figura cambia de orientación alrededor de un punto.",
+            "tags": [
+                "español",
+                "transformaciones"
+            ],
+            "answers": [
+                {
+                    "answer": "Traslación"
+                },
+                {
+                    "answer": "Rotación",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Reflexión"
+                },
+                {
+                    "answer": "Proyección"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué transformación produce una imagen como si la figura se reflejara en un espejo?",
+            "explanation": "Una reflexión genera una imagen simétrica de la figura respecto de una recta llamada eje de reflexión.",
+            "hint": "Piensa en la imagen de un objeto frente a un espejo.",
+            "tags": [
+                "español",
+                "transformaciones"
+            ],
+            "answers": [
+                {
+                    "answer": "Rotación"
+                },
+                {
+                    "answer": "Traslación"
+                },
+                {
+                    "answer": "Reflexión",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Ampliación"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué significa que dos figuras sean congruentes?",
+            "explanation": "Dos figuras congruentes tienen la misma forma y el mismo tamaño, aunque puedan estar en distinta posición u orientación.",
+            "hint": "Puedes imaginar una figura superpuesta exactamente sobre la otra.",
+            "tags": [
+                "español",
+                "congruencia"
+            ],
+            "answers": [
+                {
+                    "answer": "Tienen la misma forma y tamaño",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Tienen diferente tamaño"
+                },
+                {
+                    "answer": "Solo tienen el mismo perímetro"
+                },
+                {
+                    "answer": "Solo tienen la misma área"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué significa que dos figuras sean semejantes?",
+            "explanation": "Dos figuras semejantes tienen la misma forma y sus lados correspondientes son proporcionales, aunque sus tamaños pueden ser diferentes.",
+            "hint": "Una figura puede ser una ampliación o reducción de la otra.",
+            "tags": [
+                "español",
+                "semejanza"
+            ],
+            "answers": [
+                {
+                    "answer": "Siempre tienen el mismo tamaño"
+                },
+                {
+                    "answer": "Tienen la misma forma y lados proporcionales",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Siempre tienen áreas iguales"
+                },
+                {
+                    "answer": "No tienen ángulos correspondientes iguales"
+                }
+            ]
+        }
+    ]
+}

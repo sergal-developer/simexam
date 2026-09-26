@@ -1,0 +1,1201 @@
+{
+    "title": "Lenguaje y Comunicación — Primaria",
+    "time": 60,
+    "tags": [
+        "español",
+        "lenguaje y comunicación",
+        "primaria",
+        "evaluación"
+    ],
+    "questionsCount": 50,
+    "questions": [
+        {
+            "question": "¿Qué es el lenguaje?",
+            "explanation": "Es la capacidad que tenemos para expresar ideas, sentimientos y deseos mediante signos y sonidos.",
+            "hint": "Nos sirve para entendernos con los demás.",
+            "tags": [
+                "definiciones",
+                "lenguaje"
+            ],
+            "answers": [
+                {
+                    "answer": "Capacidad de expresarnos y comunicarnos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Solo hablar en voz alta"
+                },
+                {
+                    "answer": "Escribir muy rápido"
+                },
+                {
+                    "answer": "Leer en silencio"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuáles son las dos formas principales del lenguaje?",
+            "explanation": "El lenguaje oral se escucha y se habla; el escrito se lee y se escribe.",
+            "hint": "Uno se escucha y el otro se lee.",
+            "tags": [
+                "formas del lenguaje"
+            ],
+            "answers": [
+                {
+                    "answer": "Oral y escrito",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Gritos y susurros"
+                },
+                {
+                    "answer": "Cántico y poema"
+                },
+                {
+                    "answer": "Dibujo y pintura"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es la comunicación?",
+            "explanation": "Es el intercambio de mensajes, ideas o sentimientos entre dos o más personas.",
+            "hint": "Compartir información con otros.",
+            "tags": [
+                "comunicación",
+                "definiciones"
+            ],
+            "answers": [
+                {
+                    "answer": "Compartir mensajes entre personas",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Hablar solo consigo mismo"
+                },
+                {
+                    "answer": "Escribir sin que nadie lo lea"
+                },
+                {
+                    "answer": "Dibujar para uno mismo"
+                }
+            ]
+        },
+        {
+            "question": "¿Quién envía el mensaje en la comunicación?",
+            "explanation": "El emisor es quien produce y envía el mensaje.",
+            "hint": "La persona que habla o escribe.",
+            "tags": [
+                "elementos de la comunicación"
+            ],
+            "answers": [
+                {
+                    "answer": "El emisor",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El receptor"
+                },
+                {
+                    "answer": "El mensaje"
+                },
+                {
+                    "answer": "El canal"
+                }
+            ]
+        },
+        {
+            "question": "¿Quién recibe el mensaje?",
+            "explanation": "El receptor es quien escucha o lee el mensaje enviado.",
+            "hint": "La persona que escucha.",
+            "tags": [
+                "elementos de la comunicación"
+            ],
+            "answers": [
+                {
+                    "answer": "El receptor",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El emisor"
+                },
+                {
+                    "answer": "El código"
+                },
+                {
+                    "answer": "El sonido"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es lo que se dice o transmite?",
+            "explanation": "El mensaje es la información, idea o sentimiento que se comparte.",
+            "hint": "Lo que se dice o escribe.",
+            "tags": [
+                "elementos de la comunicación"
+            ],
+            "answers": [
+                {
+                    "answer": "El mensaje",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El canal"
+                },
+                {
+                    "answer": "El emisor"
+                },
+                {
+                    "answer": "La señal"
+                }
+            ]
+        },
+        {
+            "question": "¿Por dónde viaja el mensaje, por ejemplo el aire o el papel?",
+            "explanation": "El canal es el medio por el que llega el mensaje: aire, papel, teléfono, etc.",
+            "hint": "Es el medio de transporte del mensaje.",
+            "tags": [
+                "elementos de la comunicación"
+            ],
+            "answers": [
+                {
+                    "answer": "El canal",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El código"
+                },
+                {
+                    "answer": "La respuesta"
+                },
+                {
+                    "answer": "La señal"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es una letra?",
+            "explanation": "Cada uno de los signos que usamos para escribir las palabras.",
+            "hint": "Las juntamos para formar palabras.",
+            "tags": [
+                "elementos de la escritura",
+                "letras"
+            ],
+            "answers": [
+                {
+                    "answer": "Signo que representa un sonido",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Un dibujo bonito"
+                },
+                {
+                    "answer": "Una frase completa"
+                },
+                {
+                    "answer": "Un pensamiento"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es una sílaba?",
+            "explanation": "Es la división más pequeña que se puede pronunciar de una palabra en un solo golpe de voz.",
+            "hint": "Se separan al decir la palabra despacio.",
+            "tags": [
+                "sílabas"
+            ],
+            "answers": [
+                {
+                    "answer": "Grupo de sonidos que se pronuncian juntos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Una sola letra"
+                },
+                {
+                    "answer": "Todas las vocales juntas"
+                },
+                {
+                    "answer": "La última letra de la palabra"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es una vocal?",
+            "explanation": "Son sonidos que se pronuncian sin cerrar la boca; en español son a, e, i, o, u.",
+            "hint": "Son cinco: a, e, i, o, u.",
+            "tags": [
+                "vocales"
+            ],
+            "answers": [
+                {
+                    "answer": "Sonidos que se pronuncian sin obstáculo",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Las letras que suenan fuerte"
+                },
+                {
+                    "answer": "Las letras del final"
+                },
+                {
+                    "answer": "Todas las letras del abecedario"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántas vocales hay en español?",
+            "explanation": "Las vocales son cinco: a, e, i, o, u.",
+            "hint": "Menos de diez.",
+            "tags": [
+                "vocales"
+            ],
+            "answers": [
+                {
+                    "answer": "5",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "4"
+                },
+                {
+                    "answer": "6"
+                },
+                {
+                    "answer": "27"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es una consonante?",
+            "explanation": "Letra que necesita unirse a una vocal para formar sílaba y suena con ella.",
+            "hint": "No puede formar sílaba sola en español.",
+            "tags": [
+                "consonantes"
+            ],
+            "answers": [
+                {
+                    "answer": "Letra que acompaña a la vocal",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "La letra más fuerte"
+                },
+                {
+                    "answer": "La última letra de la palabra"
+                },
+                {
+                    "answer": "Solo la letra z"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántas sílabas tiene la palabra \"casa\"?",
+            "explanation": "Se dice ca-sa → dos sílabas.",
+            "hint": "Dices la palabra en dos partes.",
+            "tags": [
+                "sílabas",
+                "conteo"
+            ],
+            "answers": [
+                {
+                    "answer": "2",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "1"
+                },
+                {
+                    "answer": "3"
+                },
+                {
+                    "answer": "4"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántas sílabas tiene \"escuela\"?",
+            "explanation": "es-cue-la → tres sílabas.",
+            "hint": "Tres partes al decirla despacio.",
+            "tags": [
+                "sílabas",
+                "conteo"
+            ],
+            "answers": [
+                {
+                    "answer": "3",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "2"
+                },
+                {
+                    "answer": "4"
+                },
+                {
+                    "answer": "5"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es una palabra monosílaba?",
+            "explanation": "Palabra que se pronuncia en una sola sílaba.",
+            "hint": "No se puede dividir en partes al decirla.",
+            "tags": [
+                "clasificación de palabras",
+                "por sílabas"
+            ],
+            "answers": [
+                {
+                    "answer": "De una sola sílaba",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "De dos sílabas"
+                },
+                {
+                    "answer": "De tres sílabas"
+                },
+                {
+                    "answer": "Con tilde siempre"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es monosílaba?",
+            "explanation": "\"Sol\" se dice en un solo golpe de voz; las demás tienen más sílabas.",
+            "hint": "Dila despacio y cuenta.",
+            "tags": [
+                "clasificación de palabras",
+                "por sílabas"
+            ],
+            "answers": [
+                {
+                    "answer": "sol",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "casa"
+                },
+                {
+                    "answer": "amigo"
+                },
+                {
+                    "answer": "ventana"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué indica la tilde?",
+            "explanation": "La tilde (´) señala qué sílaba lleva la fuerza al pronunciar la palabra.",
+            "hint": "Ayuda a saber dónde acentuar.",
+            "tags": [
+                "ortografía",
+                "tilde"
+            ],
+            "answers": [
+                {
+                    "answer": "La sílaba tónica",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Que la palabra es larga"
+                },
+                {
+                    "answer": "Que va al final"
+                },
+                {
+                    "answer": "Que es una vocal débil"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es la sílaba tónica?",
+            "explanation": "Es la sílaba que se pronuncia con mayor fuerza de voz.",
+            "hint": "La que suena más fuerte.",
+            "tags": [
+                "acentuación"
+            ],
+            "answers": [
+                {
+                    "answer": "La que lleva mayor fuerza de voz",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "La primera sílaba siempre"
+                },
+                {
+                    "answer": "La última sílaba siempre"
+                },
+                {
+                    "answer": "La más larga"
+                }
+            ]
+        },
+        {
+            "question": "Las palabras que terminan en vocal, n o s llevan la fuerza en:",
+            "explanation": "Son palabras llanas que no llevan tilde por regla general.",
+            "hint": "Casi siempre es la penúltima sílaba.",
+            "tags": [
+                "reglas de acentuación"
+            ],
+            "answers": [
+                {
+                    "answer": "La penúltima sílaba",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "La última sílaba"
+                },
+                {
+                    "answer": "La antepenúltima sílaba"
+                },
+                {
+                    "answer": "La primera sílaba"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál de estas palabras lleva tilde?",
+            "explanation": "\"Café\" es aguda y termina en vocal, por eso lleva tilde.",
+            "hint": "Busca la que tiene la sílaba fuerte al final.",
+            "tags": [
+                "ortografía",
+                "tilde"
+            ],
+            "answers": [
+                {
+                    "answer": "café",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "casa"
+                },
+                {
+                    "answer": "luna"
+                },
+                {
+                    "answer": "mesa"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es un sustantivo?",
+            "explanation": "Palabra que nombra personas, animales, cosas, lugares o sentimientos.",
+            "hint": "Sirve para nombrar todo lo que existe.",
+            "tags": [
+                "categorías gramaticales",
+                "sustantivos"
+            ],
+            "answers": [
+                {
+                    "answer": "Palabra que nombra",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Palabra que indica acción"
+                },
+                {
+                    "answer": "Palabra que describe"
+                },
+                {
+                    "answer": "Palabra que une frases"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es un sustantivo?",
+            "explanation": "\"Escuela\" nombra un lugar; las demás no son nombres.",
+            "hint": "Responde a la pregunta: ¿qué es?",
+            "tags": [
+                "categorías gramaticales",
+                "sustantivos"
+            ],
+            "answers": [
+                {
+                    "answer": "escuela",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "correr"
+                },
+                {
+                    "answer": "bonito"
+                },
+                {
+                    "answer": "rápido"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es un sustantivo propio?",
+            "explanation": "Nombre específico de persona, lugar o cosa única; siempre empieza con mayúscula.",
+            "hint": "Se escribe con mayúscula al inicio.",
+            "tags": [
+                "sustantivos",
+                "propios y comunes"
+            ],
+            "answers": [
+                {
+                    "answer": "Nombre específico, con mayúscula",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Nombre general de algo"
+                },
+                {
+                    "answer": "Nombre de objeto"
+                },
+                {
+                    "answer": "Nombre que no se escribe completo"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es un sustantivo propio?",
+            "explanation": "\"México\" es el nombre de un país específico; los demás son nombres generales.",
+            "hint": "Empieza con mayúscula.",
+            "tags": [
+                "sustantivos",
+                "propios y comunes"
+            ],
+            "answers": [
+                {
+                    "answer": "México",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "país"
+                },
+                {
+                    "answer": "ciudad"
+                },
+                {
+                    "answer": "escuela"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es un adjetivo?",
+            "explanation": "Palabra que dice cómo es el sustantivo: color, tamaño, forma, etc.",
+            "hint": "Describe al sustantivo.",
+            "tags": [
+                "categorías gramaticales",
+                "adjetivos"
+            ],
+            "answers": [
+                {
+                    "answer": "Palabra que describe al sustantivo",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Palabra que nombra"
+                },
+                {
+                    "answer": "Palabra que indica acción"
+                },
+                {
+                    "answer": "Palabra que señala cantidad"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es un adjetivo?",
+            "explanation": "\"Grande\" dice cómo es algo; las demás no describen cualidades.",
+            "hint": "Responde a: ¿cómo es?",
+            "tags": [
+                "categorías gramaticales",
+                "adjetivos"
+            ],
+            "answers": [
+                {
+                    "answer": "grande",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "niño"
+                },
+                {
+                    "answer": "comer"
+                },
+                {
+                    "answer": "ella"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es un verbo?",
+            "explanation": "Palabra que indica acción, estado o cambio de alguien o algo.",
+            "hint": "Dice qué hace la persona o cosa.",
+            "tags": [
+                "categorías gramaticales",
+                "verbos"
+            ],
+            "answers": [
+                {
+                    "answer": "Palabra que expresa acción",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Palabra que nombra"
+                },
+                {
+                    "answer": "Palabra que describe"
+                },
+                {
+                    "answer": "Palabra que une oraciones"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es un verbo?",
+            "explanation": "\"Cantar\" indica una acción; las demás no.",
+            "hint": "Puedes hacerlo tú mismo.",
+            "tags": [
+                "categorías gramaticales",
+                "verbos"
+            ],
+            "answers": [
+                {
+                    "answer": "cantar",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "casa"
+                },
+                {
+                    "answer": "alegre"
+                },
+                {
+                    "answer": "bonito"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es el sujeto de una oración?",
+            "explanation": "Es la persona, animal o cosa de la que se dice algo en la oración.",
+            "hint": "Quien hace la acción o de quien se habla.",
+            "tags": [
+                "oración",
+                "sujeto y predicado"
+            ],
+            "answers": [
+                {
+                    "answer": "De quién se habla",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Lo que se hace"
+                },
+                {
+                    "answer": "El verbo solamente"
+                },
+                {
+                    "answer": "El final de la frase"
+                }
+            ]
+        },
+        {
+            "question": "En: \"La niña lee un libro\", ¿quién es el sujeto?",
+            "explanation": "De \"la niña\" se dice que lee.",
+            "hint": "Quien hace la acción de leer.",
+            "tags": [
+                "oración",
+                "sujeto y predicado"
+            ],
+            "answers": [
+                {
+                    "answer": "La niña",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "lee"
+                },
+                {
+                    "answer": "un libro"
+                },
+                {
+                    "answer": "libro"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es el predicado?",
+            "explanation": "Es lo que se dice del sujeto; siempre lleva el verbo.",
+            "hint": "Contiene la acción.",
+            "tags": [
+                "oración",
+                "sujeto y predicado"
+            ],
+            "answers": [
+                {
+                    "answer": "Lo que hace o es el sujeto",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El nombre principal"
+                },
+                {
+                    "answer": "Solo el sustantivo"
+                },
+                {
+                    "answer": "La primera palabra"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es un párrafo?",
+            "explanation": "Conjunto de oraciones que tratan un mismo tema y empiezan en renglón nuevo.",
+            "hint": "Se separa con un espacio al inicio.",
+            "tags": [
+                "escritura",
+                "párrafo"
+            ],
+            "answers": [
+                {
+                    "answer": "Grupo de oraciones sobre un tema",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Una sola frase"
+                },
+                {
+                    "answer": "Una lista de palabras"
+                },
+                {
+                    "answer": "La portada de un libro"
+                }
+            ]
+        },
+        {
+            "question": "¿Para qué sirve la mayúscula inicial?",
+            "explanation": "Se usa al empezar una oración y para escribir nombres propios.",
+            "hint": "Al inicio de la frase y en nombres.",
+            "tags": [
+                "ortografía",
+                "mayúsculas"
+            ],
+            "answers": [
+                {
+                    "answer": "Iniciar oración y nombres propios",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Solo para palabras importantes"
+                },
+                {
+                    "answer": "Para todas las palabras"
+                },
+                {
+                    "answer": "Solo al final"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué marca el punto?",
+            "explanation": "Indica que una oración o idea ha terminado y se hace una pausa larga.",
+            "hint": "Se pone al final.",
+            "tags": [
+                "puntuación",
+                "punto"
+            ],
+            "answers": [
+                {
+                    "answer": "El final de una oración",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Una lista de cosas"
+                },
+                {
+                    "answer": "Una pregunta"
+                },
+                {
+                    "answer": "Una sorpresa"
+                }
+            ]
+        },
+        {
+            "question": "¿Para qué sirven los signos de interrogación?",
+            "explanation": "Se escriben al inicio y al final de una pregunta.",
+            "hint": "¿ ?",
+            "tags": [
+                "puntuación",
+                "interrogación"
+            ],
+            "answers": [
+                {
+                    "answer": "Para escribir preguntas",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Para expresar alegría"
+                },
+                {
+                    "answer": "Para separar ideas"
+                },
+                {
+                    "answer": "Para indicar que se termina"
+                }
+            ]
+        },
+        {
+            "question": "¿Para qué sirven los signos de exclamación?",
+            "explanation": "Sirven para expresar emoción, sorpresa o énfasis.",
+            "hint": "¡ !",
+            "tags": [
+                "puntuación",
+                "exclamación"
+            ],
+            "answers": [
+                {
+                    "answer": "Para expresar emoción",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Para hacer preguntas"
+                },
+                {
+                    "answer": "Para terminar una frase"
+                },
+                {
+                    "answer": "Para enumerar"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es un cuento?",
+            "explanation": "Narración breve con personajes, un suceso y un final.",
+            "hint": "Historia corta que se puede leer en poco tiempo.",
+            "tags": [
+                "tipos de texto",
+                "cuento"
+            ],
+            "answers": [
+                {
+                    "answer": "Narración breve con personajes",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Lista de datos"
+                },
+                {
+                    "answer": "Descripción de un lugar"
+                },
+                {
+                    "answer": "Explicación de una regla"
+                }
+            ]
+        },
+        {
+            "question": "Los personajes de un cuento son:",
+            "explanation": "Seres que actúan en la historia: personas, animales o cosas.",
+            "hint": "Quienes participan en la historia.",
+            "tags": [
+                "estructura del cuento",
+                "personajes"
+            ],
+            "answers": [
+                {
+                    "answer": "Quienes actúan en la historia",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Solo los animales"
+                },
+                {
+                    "answer": "Solo el que cuenta la historia"
+                },
+                {
+                    "answer": "El lugar donde ocurre"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué ocurre en el inicio de un cuento?",
+            "explanation": "Se presentan los personajes, el lugar y el momento.",
+            "hint": "Se conoce a los protagonistas.",
+            "tags": [
+                "estructura del cuento",
+                "inicio"
+            ],
+            "answers": [
+                {
+                    "answer": "Se presentan personajes y lugar",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Ocurre lo más emocionante"
+                },
+                {
+                    "answer": "Se termina la historia"
+                },
+                {
+                    "answer": "Se resuelve el problema"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué ocurre en el desarrollo de un cuento?",
+            "explanation": "Suceden los hechos principales y el problema de la historia.",
+            "hint": "La parte donde avanza la historia.",
+            "tags": [
+                "estructura del cuento",
+                "desarrollo"
+            ],
+            "answers": [
+                {
+                    "answer": "Avanzan los sucesos y el problema",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Se presenta a los personajes"
+                },
+                {
+                    "answer": "Se cierra la historia"
+                },
+                {
+                    "answer": "Se dice el título"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué ocurre en el final de un cuento?",
+            "explanation": "Se resuelve el problema y termina la historia.",
+            "hint": "El cierre de la narración.",
+            "tags": [
+                "estructura del cuento",
+                "final"
+            ],
+            "answers": [
+                {
+                    "answer": "Se resuelve y termina la historia",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Comienza la historia"
+                },
+                {
+                    "answer": "Ocurre el problema principal"
+                },
+                {
+                    "answer": "Se describe el lugar"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es una fábula?",
+            "explanation": "Relato breve, a veces con animales, que deja una enseñanza llamada moraleja.",
+            "hint": "Termina con una lección.",
+            "tags": [
+                "tipos de texto",
+                "fábula"
+            ],
+            "answers": [
+                {
+                    "answer": "Relato con enseñanza",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Noticia verdadera"
+                },
+                {
+                    "answer": "Instrucción para algo"
+                },
+                {
+                    "answer": "Lista de datos"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es la moraleja?",
+            "explanation": "Es la enseñanza o lección que se aprende al leer una fábula.",
+            "hint": "Lo que se aprende de la historia.",
+            "tags": [
+                "fábula",
+                "moraleja"
+            ],
+            "answers": [
+                {
+                    "answer": "La enseñanza de la historia",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El título del cuento"
+                },
+                {
+                    "answer": "El personaje principal"
+                },
+                {
+                    "answer": "El lugar donde ocurre"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es un poema?",
+            "explanation": "Escrito que expresa sentimientos y usa ritmo y rima.",
+            "hint": "A veces suena con musicalidad.",
+            "tags": [
+                "tipos de texto",
+                "poema"
+            ],
+            "answers": [
+                {
+                    "answer": "Escrito con ritmo y sentimientos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Lista de reglas"
+                },
+                {
+                    "answer": "Informe de ciencia"
+                },
+                {
+                    "answer": "Carta para un amigo"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es la rima?",
+            "explanation": "Coincidencia de sonidos al final de las palabras.",
+            "hint": "Suenan parecido al terminar.",
+            "tags": [
+                "poesía",
+                "rima"
+            ],
+            "answers": [
+                {
+                    "answer": "Coincidencia de sonidos finales",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Palabras largas"
+                },
+                {
+                    "answer": "Frases cortas"
+                },
+                {
+                    "answer": "El título del poema"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es un texto informativo?",
+            "explanation": "Da datos, hechos y explicaciones reales para informar.",
+            "hint": "Dice cosas verdaderas y útiles.",
+            "tags": [
+                "tipos de texto",
+                "informativo"
+            ],
+            "answers": [
+                {
+                    "answer": "Da información real y datos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Crea historias inventadas"
+                },
+                {
+                    "answer": "Expresa sentimientos"
+                },
+                {
+                    "answer": "Da órdenes"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es un título?",
+            "explanation": "Nombre del texto que indica de qué trata y va al inicio.",
+            "hint": "Se escribe arriba y llama la atención.",
+            "tags": [
+                "estructura del texto",
+                "título"
+            ],
+            "answers": [
+                {
+                    "answer": "Nombre del texto",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "La última frase"
+                },
+                {
+                    "answer": "El autor del libro"
+                },
+                {
+                    "answer": "La ilustración"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es una ilustración?",
+            "explanation": "Dibujo o imagen que acompaña al texto y ayuda a entenderlo.",
+            "hint": "Se mira, no se lee.",
+            "tags": [
+                "lectura",
+                "ilustración"
+            ],
+            "answers": [
+                {
+                    "answer": "Imagen que acompaña al texto",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Título del texto"
+                },
+                {
+                    "answer": "Resumen del texto"
+                },
+                {
+                    "answer": "Pregunta del texto"
+                }
+            ]
+        },
+        {
+            "question": "Leer nos sirve para:",
+            "explanation": "Conocer cosas nuevas, aprender, imaginar y divertirnos.",
+            "hint": "Nos ayuda a aprender y crecer.",
+            "tags": [
+                "lectura",
+                "importancia"
+            ],
+            "answers": [
+                {
+                    "answer": "Aprender y conocer cosas nuevas",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Solo para escribir mejor"
+                },
+                {
+                    "answer": "Pasar el tiempo sin utilidad"
+                },
+                {
+                    "answer": "Solo para la escuela"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué debemos hacer al leer para comprender?",
+            "explanation": "Prestar atención, pensar y relacionar lo que leemos con lo que ya sabemos.",
+            "hint": "Pensar mientras lees.",
+            "tags": [
+                "comprensión lectora"
+            ],
+            "answers": [
+                {
+                    "answer": "Pensar y entender lo leído",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Decirlo muy rápido"
+                },
+                {
+                    "answer": "Leer sin detenerse"
+                },
+                {
+                    "answer": "Mirar solo las imágenes"
+                }
+            ]
+        }
+    ]
+}

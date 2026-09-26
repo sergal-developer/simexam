@@ -1,0 +1,1361 @@
+{
+    "title": "Ciencias Naturales para Primaria",
+    "time": 0,
+    "tags": [
+        "español",
+        "prueba"
+    ],
+    "questionsCount": 50,
+    "questions": [
+        {
+            "question": "¿Cuál es la principal fuente de luz y calor para la Tierra?",
+            "explanation": "El Sol proporciona la mayor parte de la luz y el calor que recibe la Tierra.",
+            "hint": "Es una estrella que vemos durante el día.",
+            "tags": [
+                "español",
+                "sistema solar"
+            ],
+            "answers": [
+                {
+                    "answer": "La Luna"
+                },
+                {
+                    "answer": "El Sol",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Marte"
+                },
+                {
+                    "answer": "Las nubes"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el planeta donde vivimos?",
+            "explanation": "La Tierra es el planeta en el que vivimos y forma parte del sistema solar.",
+            "hint": "Es el tercer planeta desde el Sol.",
+            "tags": [
+                "español",
+                "Tierra"
+            ],
+            "answers": [
+                {
+                    "answer": "Venus"
+                },
+                {
+                    "answer": "Marte"
+                },
+                {
+                    "answer": "Tierra",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Júpiter"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el satélite natural de la Tierra?",
+            "explanation": "La Luna es el satélite natural de la Tierra y gira alrededor de nuestro planeta.",
+            "hint": "Podemos observarla principalmente durante la noche.",
+            "tags": [
+                "español",
+                "espacio"
+            ],
+            "answers": [
+                {
+                    "answer": "El Sol"
+                },
+                {
+                    "answer": "La Luna",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Marte"
+                },
+                {
+                    "answer": "Venus"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué movimiento de la Tierra produce el día y la noche?",
+            "explanation": "La rotación es el movimiento de la Tierra sobre su propio eje y provoca la sucesión del día y la noche.",
+            "hint": "La Tierra gira sobre una línea imaginaria que atraviesa sus polos.",
+            "tags": [
+                "español",
+                "Tierra",
+                "movimientos"
+            ],
+            "answers": [
+                {
+                    "answer": "Rotación",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Traslación"
+                },
+                {
+                    "answer": "Evaporación"
+                },
+                {
+                    "answer": "Inclinación"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué movimiento de la Tierra alrededor del Sol está relacionado con la duración del año?",
+            "explanation": "La traslación es el movimiento que realiza la Tierra alrededor del Sol y dura aproximadamente 365 días.",
+            "hint": "Es el movimiento que tarda cerca de un año en completarse.",
+            "tags": [
+                "español",
+                "Tierra",
+                "movimientos"
+            ],
+            "answers": [
+                {
+                    "answer": "Rotación"
+                },
+                {
+                    "answer": "Traslación",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Vibración"
+                },
+                {
+                    "answer": "Reflexión"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el estado del agua cuando se encuentra en forma de hielo?",
+            "explanation": "El hielo es agua en estado sólido porque tiene una forma definida.",
+            "hint": "Es el estado del agua cuando está congelada.",
+            "tags": [
+                "español",
+                "materia"
+            ],
+            "answers": [
+                {
+                    "answer": "Líquido"
+                },
+                {
+                    "answer": "Sólido",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Gaseoso"
+                },
+                {
+                    "answer": "Plasma"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el estado del agua que encontramos en el vapor?",
+            "explanation": "El vapor de agua corresponde al estado gaseoso del agua.",
+            "hint": "Es el estado en el que el agua se encuentra dispersa en el aire.",
+            "tags": [
+                "español",
+                "materia"
+            ],
+            "answers": [
+                {
+                    "answer": "Sólido"
+                },
+                {
+                    "answer": "Líquido"
+                },
+                {
+                    "answer": "Gaseoso",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Congelado"
+                }
+            ]
+        },
+        {
+            "question": "¿Cómo se llama el cambio de agua líquida a vapor?",
+            "explanation": "La evaporación ocurre cuando el agua líquida recibe energía y pasa al estado gaseoso.",
+            "hint": "Ocurre cuando el agua se convierte en vapor.",
+            "tags": [
+                "español",
+                "ciclo del agua"
+            ],
+            "answers": [
+                {
+                    "answer": "Condensación"
+                },
+                {
+                    "answer": "Evaporación",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Congelación"
+                },
+                {
+                    "answer": "Fusión"
+                }
+            ]
+        },
+        {
+            "question": "¿Cómo se llama el cambio de vapor de agua a agua líquida?",
+            "explanation": "La condensación ocurre cuando el vapor de agua se enfría y vuelve al estado líquido.",
+            "hint": "Es el proceso que forma pequeñas gotas de agua a partir del vapor.",
+            "tags": [
+                "español",
+                "ciclo del agua"
+            ],
+            "answers": [
+                {
+                    "answer": "Evaporación"
+                },
+                {
+                    "answer": "Condensación",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Fusión"
+                },
+                {
+                    "answer": "Solidificación"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué proceso ocurre cuando el agua líquida se convierte en hielo?",
+            "explanation": "La solidificación o congelación es el cambio de estado líquido a sólido.",
+            "hint": "Sucede cuando el agua se enfría lo suficiente.",
+            "tags": [
+                "español",
+                "cambios de estado"
+            ],
+            "answers": [
+                {
+                    "answer": "Evaporación"
+                },
+                {
+                    "answer": "Condensación"
+                },
+                {
+                    "answer": "Solidificación",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Fusión"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué órgano permite principalmente la respiración en los seres humanos?",
+            "explanation": "Los pulmones son los órganos principales del sistema respiratorio y permiten intercambiar oxígeno y dióxido de carbono.",
+            "hint": "Tenemos dos y se encuentran dentro del tórax.",
+            "tags": [
+                "español",
+                "cuerpo humano"
+            ],
+            "answers": [
+                {
+                    "answer": "El estómago"
+                },
+                {
+                    "answer": "Los pulmones",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El corazón"
+                },
+                {
+                    "answer": "Los riñones"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué órgano bombea la sangre por todo el cuerpo?",
+            "explanation": "El corazón es un órgano muscular que impulsa la sangre a través de los vasos sanguíneos.",
+            "hint": "Late continuamente y se encuentra en el pecho.",
+            "tags": [
+                "español",
+                "cuerpo humano"
+            ],
+            "answers": [
+                {
+                    "answer": "El corazón",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El cerebro"
+                },
+                {
+                    "answer": "El pulmón"
+                },
+                {
+                    "answer": "El estómago"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué órgano coordina muchas de las funciones del cuerpo y permite pensar?",
+            "explanation": "El cerebro forma parte del sistema nervioso y participa en el pensamiento, los sentidos, el movimiento y muchas otras funciones.",
+            "hint": "Se encuentra protegido por el cráneo.",
+            "tags": [
+                "español",
+                "cuerpo humano"
+            ],
+            "answers": [
+                {
+                    "answer": "El corazón"
+                },
+                {
+                    "answer": "El cerebro",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El hígado"
+                },
+                {
+                    "answer": "El intestino"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué sistema del cuerpo se encarga principalmente de digerir los alimentos?",
+            "explanation": "El sistema digestivo transforma los alimentos en sustancias que el organismo puede absorber y utilizar.",
+            "hint": "Incluye órganos como el estómago y los intestinos.",
+            "tags": [
+                "español",
+                "cuerpo humano"
+            ],
+            "answers": [
+                {
+                    "answer": "Sistema respiratorio"
+                },
+                {
+                    "answer": "Sistema digestivo",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Sistema nervioso"
+                },
+                {
+                    "answer": "Sistema óseo"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la función principal de los dientes al comer?",
+            "explanation": "Los dientes ayudan a cortar y triturar los alimentos para facilitar su digestión.",
+            "hint": "Ayudan a deshacer los alimentos antes de tragarlos.",
+            "tags": [
+                "español",
+                "alimentación",
+                "cuerpo humano"
+            ],
+            "answers": [
+                {
+                    "answer": "Bombear sangre"
+                },
+                {
+                    "answer": "Triturar alimentos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Producir oxígeno"
+                },
+                {
+                    "answer": "Mover los huesos"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué necesitan principalmente las plantas para realizar la fotosíntesis?",
+            "explanation": "Las plantas utilizan luz solar, agua y dióxido de carbono para realizar la fotosíntesis y producir su alimento.",
+            "hint": "Uno de los elementos necesarios es la luz del Sol.",
+            "tags": [
+                "español",
+                "plantas"
+            ],
+            "answers": [
+                {
+                    "answer": "Luz solar, agua y dióxido de carbono",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Solo tierra"
+                },
+                {
+                    "answer": "Solo oxígeno"
+                },
+                {
+                    "answer": "Arena y sal"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué parte de la planta absorbe principalmente agua y sales minerales del suelo?",
+            "explanation": "Las raíces absorben agua y sales minerales del suelo y también ayudan a sujetar la planta.",
+            "hint": "Se encuentran generalmente debajo de la tierra.",
+            "tags": [
+                "español",
+                "plantas"
+            ],
+            "answers": [
+                {
+                    "answer": "Las flores"
+                },
+                {
+                    "answer": "Las hojas"
+                },
+                {
+                    "answer": "Las raíces",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Los frutos"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué parte de la planta capta principalmente la luz para realizar la fotosíntesis?",
+            "explanation": "Las hojas contienen clorofila y captan la luz necesaria para la fotosíntesis.",
+            "hint": "Suelen ser verdes y se encuentran en las ramas.",
+            "tags": [
+                "español",
+                "plantas"
+            ],
+            "answers": [
+                {
+                    "answer": "Las raíces"
+                },
+                {
+                    "answer": "Las hojas",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Las semillas"
+                },
+                {
+                    "answer": "Las raíces aéreas"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué gas producen las plantas durante la fotosíntesis?",
+            "explanation": "Durante la fotosíntesis, las plantas liberan oxígeno como uno de los productos del proceso.",
+            "hint": "Es un gas necesario para la respiración de muchos seres vivos.",
+            "tags": [
+                "español",
+                "plantas",
+                "fotosíntesis"
+            ],
+            "answers": [
+                {
+                    "answer": "Oxígeno",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Dióxido de carbono"
+                },
+                {
+                    "answer": "Helio"
+                },
+                {
+                    "answer": "Nitrógeno puro"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál de los siguientes es un animal vertebrado?",
+            "explanation": "Los perros son vertebrados porque tienen una columna vertebral y un esqueleto interno.",
+            "hint": "Los vertebrados poseen columna vertebral.",
+            "tags": [
+                "español",
+                "animales"
+            ],
+            "answers": [
+                {
+                    "answer": "Mariposa"
+                },
+                {
+                    "answer": "Lombriz"
+                },
+                {
+                    "answer": "Perro",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Araña"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál de estos animales es un mamífero?",
+            "explanation": "El delfín es un mamífero: respira aire, tiene pulmones y las hembras alimentan a sus crías con leche.",
+            "hint": "Aunque vive en el agua, pertenece al grupo de los mamíferos.",
+            "tags": [
+                "español",
+                "animales"
+            ],
+            "answers": [
+                {
+                    "answer": "Delfín",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Tiburón"
+                },
+                {
+                    "answer": "Pulpo"
+                },
+                {
+                    "answer": "Trucha"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál de estos animales es un ave?",
+            "explanation": "El águila es un ave porque tiene plumas, pico y alas.",
+            "hint": "Tiene plumas y puede volar.",
+            "tags": [
+                "español",
+                "animales"
+            ],
+            "answers": [
+                {
+                    "answer": "Águila",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Rana"
+                },
+                {
+                    "answer": "Lagarto"
+                },
+                {
+                    "answer": "Mariposa"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál de estos animales pertenece al grupo de los anfibios?",
+            "explanation": "La rana es un anfibio. Los anfibios suelen pasar parte de su vida en el agua y parte en tierra.",
+            "hint": "Es un animal que puede vivir en ambientes acuáticos y terrestres.",
+            "tags": [
+                "español",
+                "animales"
+            ],
+            "answers": [
+                {
+                    "answer": "Rana",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Gato"
+                },
+                {
+                    "answer": "Águila"
+                },
+                {
+                    "answer": "Tortuga marina"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué grupo de animales tiene el cuerpo cubierto de escamas y respira principalmente mediante branquias?",
+            "explanation": "Los peces generalmente tienen escamas y utilizan branquias para obtener oxígeno del agua.",
+            "hint": "Viven principalmente en ambientes acuáticos.",
+            "tags": [
+                "español",
+                "animales"
+            ],
+            "answers": [
+                {
+                    "answer": "Mamíferos"
+                },
+                {
+                    "answer": "Aves"
+                },
+                {
+                    "answer": "Peces",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Anfibios"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué necesitan los seres humanos para mantenerse saludables?",
+            "explanation": "Una alimentación equilibrada, actividad física, descanso adecuado e higiene contribuyen al cuidado de la salud.",
+            "hint": "No existe un solo elemento; son varios hábitos saludables.",
+            "tags": [
+                "español",
+                "salud"
+            ],
+            "answers": [
+                {
+                    "answer": "Solo dormir"
+                },
+                {
+                    "answer": "Solo hacer ejercicio"
+                },
+                {
+                    "answer": "Alimentación equilibrada, ejercicio, descanso e higiene",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Comer únicamente dulces"
+                }
+            ]
+        },
+        {
+            "question": "¿Por qué es importante beber agua?",
+            "explanation": "El agua es indispensable para muchas funciones del organismo, como regular la temperatura y transportar sustancias.",
+            "hint": "El cuerpo humano contiene una gran cantidad de agua.",
+            "tags": [
+                "español",
+                "salud"
+            ],
+            "answers": [
+                {
+                    "answer": "Porque reemplaza todos los alimentos"
+                },
+                {
+                    "answer": "Porque ayuda al funcionamiento del organismo",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Porque elimina la necesidad de dormir"
+                },
+                {
+                    "answer": "Porque aumenta automáticamente la estatura"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué hábito ayuda a prevenir enfermedades y mantener las manos limpias?",
+            "explanation": "Lavarse las manos con agua y jabón ayuda a eliminar microorganismos y reducir la transmisión de enfermedades.",
+            "hint": "Es importante hacerlo antes de comer y después de ir al baño.",
+            "tags": [
+                "español",
+                "higiene",
+                "salud"
+            ],
+            "answers": [
+                {
+                    "answer": "Lavarse las manos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Dormir menos"
+                },
+                {
+                    "answer": "Comer más azúcar"
+                },
+                {
+                    "answer": "Evitar beber agua"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué sentido permite percibir los sonidos?",
+            "explanation": "El sentido del oído permite detectar sonidos y está relacionado principalmente con los oídos.",
+            "hint": "Usamos este sentido para escuchar música y conversaciones.",
+            "tags": [
+                "español",
+                "sentidos"
+            ],
+            "answers": [
+                {
+                    "answer": "Vista"
+                },
+                {
+                    "answer": "Oído",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Olfato"
+                },
+                {
+                    "answer": "Gusto"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué órgano utilizamos principalmente para percibir los olores?",
+            "explanation": "La nariz contiene estructuras especializadas que permiten detectar diferentes olores.",
+            "hint": "Está ubicada en el centro de la cara.",
+            "tags": [
+                "español",
+                "sentidos"
+            ],
+            "answers": [
+                {
+                    "answer": "La nariz",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El oído"
+                },
+                {
+                    "answer": "La lengua"
+                },
+                {
+                    "answer": "La piel"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué órgano permite principalmente percibir los sabores?",
+            "explanation": "La lengua contiene estructuras que participan en la percepción de los sabores.",
+            "hint": "Está dentro de la boca y ayuda también a hablar y mover los alimentos.",
+            "tags": [
+                "español",
+                "sentidos"
+            ],
+            "answers": [
+                {
+                    "answer": "La piel"
+                },
+                {
+                    "answer": "La lengua",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "La nariz"
+                },
+                {
+                    "answer": "El oído"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué órgano permite principalmente percibir la luz y las imágenes?",
+            "explanation": "Los ojos captan la luz y permiten la visión.",
+            "hint": "Tenemos dos y se encuentran en la cara.",
+            "tags": [
+                "español",
+                "sentidos"
+            ],
+            "answers": [
+                {
+                    "answer": "Los ojos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Los oídos"
+                },
+                {
+                    "answer": "La nariz"
+                },
+                {
+                    "answer": "La lengua"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué sentido permite percibir si algo está frío, caliente, suave o áspero?",
+            "explanation": "El sentido del tacto permite percibir características como temperatura, textura, presión y contacto.",
+            "hint": "La piel es el principal órgano relacionado con este sentido.",
+            "tags": [
+                "español",
+                "sentidos"
+            ],
+            "answers": [
+                {
+                    "answer": "Vista"
+                },
+                {
+                    "answer": "Oído"
+                },
+                {
+                    "answer": "Tacto",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Olfato"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fuerza hace que los objetos caigan hacia el suelo?",
+            "explanation": "La gravedad es la fuerza que atrae los objetos hacia la Tierra.",
+            "hint": "Es la razón por la que un objeto que soltamos cae.",
+            "tags": [
+                "español",
+                "fuerzas"
+            ],
+            "answers": [
+                {
+                    "answer": "Gravedad",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Luz"
+                },
+                {
+                    "answer": "Calor"
+                },
+                {
+                    "answer": "Electricidad"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué tipo de energía está relacionada con el movimiento de un objeto?",
+            "explanation": "La energía cinética es la energía asociada al movimiento de los cuerpos.",
+            "hint": "Un objeto que se está moviendo posee este tipo de energía.",
+            "tags": [
+                "español",
+                "energía"
+            ],
+            "answers": [
+                {
+                    "answer": "Energía cinética",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Energía química"
+                },
+                {
+                    "answer": "Energía nuclear"
+                },
+                {
+                    "answer": "Energía luminosa"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es una fuente de energía renovable?",
+            "explanation": "La energía solar es renovable porque proviene del Sol y puede aprovecharse de manera continua.",
+            "hint": "Proviene de la luz y radiación del Sol.",
+            "tags": [
+                "español",
+                "energía",
+                "medio ambiente"
+            ],
+            "answers": [
+                {
+                    "answer": "Carbón"
+                },
+                {
+                    "answer": "Petróleo"
+                },
+                {
+                    "answer": "Energía solar",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Gas natural"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué material permite generalmente que la electricidad circule con facilidad?",
+            "explanation": "Los metales, como el cobre, son buenos conductores de la electricidad.",
+            "hint": "Los cables eléctricos suelen utilizar un metal en su interior.",
+            "tags": [
+                "español",
+                "electricidad"
+            ],
+            "answers": [
+                {
+                    "answer": "Cobre",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Madera seca"
+                },
+                {
+                    "answer": "Plástico"
+                },
+                {
+                    "answer": "Vidrio"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué material suele funcionar como aislante eléctrico?",
+            "explanation": "El plástico dificulta el paso de la corriente eléctrica y por eso se utiliza como aislante en muchos cables.",
+            "hint": "Suele cubrir los cables eléctricos para proteger a las personas.",
+            "tags": [
+                "español",
+                "electricidad"
+            ],
+            "answers": [
+                {
+                    "answer": "Cobre"
+                },
+                {
+                    "answer": "Hierro"
+                },
+                {
+                    "answer": "Plástico",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Aluminio"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué ocurre con una sombra cuando un objeto bloquea la luz?",
+            "explanation": "La sombra se forma en la zona donde la luz no puede llegar debido a que un objeto la bloquea.",
+            "hint": "Se produce cuando algo se interpone entre una fuente de luz y una superficie.",
+            "tags": [
+                "español",
+                "luz"
+            ],
+            "answers": [
+                {
+                    "answer": "Se produce una sombra",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El objeto desaparece"
+                },
+                {
+                    "answer": "La luz se vuelve agua"
+                },
+                {
+                    "answer": "Aparece sonido"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué propiedad permite que algunos objetos sean atraídos por un imán?",
+            "explanation": "Los materiales ferromagnéticos, como el hierro, pueden ser atraídos por los imanes.",
+            "hint": "Los objetos de hierro pueden ser atraídos por un imán.",
+            "tags": [
+                "español",
+                "magnetismo"
+            ],
+            "answers": [
+                {
+                    "answer": "Magnetismo",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Transparencia"
+                },
+                {
+                    "answer": "Elasticidad"
+                },
+                {
+                    "answer": "Evaporación"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué recurso natural es indispensable para la vida y se encuentra en ríos, lagos y océanos?",
+            "explanation": "El agua es un recurso natural esencial para los seres vivos y se encuentra en diferentes cuerpos de agua.",
+            "hint": "Los seres humanos, animales y plantas necesitan este recurso.",
+            "tags": [
+                "español",
+                "recursos naturales"
+            ],
+            "answers": [
+                {
+                    "answer": "Agua",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Plástico"
+                },
+                {
+                    "answer": "Vidrio"
+                },
+                {
+                    "answer": "Combustible"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué acción ayuda a ahorrar agua en casa?",
+            "explanation": "Cerrar la llave mientras se cepillan los dientes evita desperdiciar agua innecesariamente.",
+            "hint": "Evita dejar el agua corriendo cuando no la estás utilizando.",
+            "tags": [
+                "español",
+                "medio ambiente"
+            ],
+            "answers": [
+                {
+                    "answer": "Dejar abierta la llave"
+                },
+                {
+                    "answer": "Cerrar la llave al cepillarse",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Llenar la bañera diariamente"
+                },
+                {
+                    "answer": "Jugar con agua potable"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué práctica ayuda a reducir la cantidad de residuos que generamos?",
+            "explanation": "Reutilizar objetos permite aprovecharlos nuevamente y reducir la cantidad de residuos que se desechan.",
+            "hint": "Consiste en volver a utilizar algo en lugar de tirarlo inmediatamente.",
+            "tags": [
+                "español",
+                "medio ambiente"
+            ],
+            "answers": [
+                {
+                    "answer": "Reutilizar",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Desperdiciar"
+                },
+                {
+                    "answer": "Quemar todos los residuos"
+                },
+                {
+                    "answer": "Tirar basura en ríos"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué proceso natural permite que las plantas produzcan su propio alimento?",
+            "explanation": "La fotosíntesis permite a las plantas producir sustancias orgánicas utilizando luz, agua y dióxido de carbono.",
+            "hint": "Ocurre principalmente en las partes verdes de las plantas.",
+            "tags": [
+                "español",
+                "plantas"
+            ],
+            "answers": [
+                {
+                    "answer": "Digestión"
+                },
+                {
+                    "answer": "Fotosíntesis",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Respiración animal"
+                },
+                {
+                    "answer": "Germinación"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué necesitan las semillas para germinar adecuadamente?",
+            "explanation": "Para germinar, las semillas necesitan principalmente agua, oxígeno y una temperatura adecuada.",
+            "hint": "El agua es uno de los elementos esenciales para iniciar la germinación.",
+            "tags": [
+                "español",
+                "plantas"
+            ],
+            "answers": [
+                {
+                    "answer": "Agua, oxígeno y temperatura adecuada",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Solo luz intensa"
+                },
+                {
+                    "answer": "Solo tierra seca"
+                },
+                {
+                    "answer": "Solo frío extremo"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué relación alimentaria representa correctamente una cadena alimentaria?",
+            "explanation": "Una cadena alimentaria muestra cómo la energía y los nutrientes pasan de unos organismos a otros al alimentarse.",
+            "hint": "Comienza frecuentemente con un productor como una planta.",
+            "tags": [
+                "español",
+                "ecosistemas"
+            ],
+            "answers": [
+                {
+                    "answer": "Planta → conejo → zorro",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Zorro → planta → Sol"
+                },
+                {
+                    "answer": "Agua → roca → planta"
+                },
+                {
+                    "answer": "Conejo → Sol → zorro"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué es un ecosistema?",
+            "explanation": "Un ecosistema está formado por los seres vivos y los elementos no vivos de un lugar, además de las relaciones entre ellos.",
+            "hint": "Incluye organismos, agua, aire, suelo y sus interacciones.",
+            "tags": [
+                "español",
+                "ecosistemas"
+            ],
+            "answers": [
+                {
+                    "answer": "Solo los animales de un lugar"
+                },
+                {
+                    "answer": "Solo las plantas de un lugar"
+                },
+                {
+                    "answer": "Seres vivos, elementos no vivos y sus relaciones",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Solo el suelo"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál de estos elementos no es un ser vivo?",
+            "explanation": "Una roca no realiza funciones propias de los seres vivos, por lo que es un elemento no vivo.",
+            "hint": "No nace, crece, se reproduce ni necesita alimento.",
+            "tags": [
+                "español",
+                "seres vivos"
+            ],
+            "answers": [
+                {
+                    "answer": "Árbol"
+                },
+                {
+                    "answer": "Perro"
+                },
+                {
+                    "answer": "Roca",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Mariposa"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es una característica común de los seres vivos?",
+            "explanation": "Los seres vivos realizan funciones vitales como nutrirse, relacionarse y reproducirse.",
+            "hint": "Piensa en procesos que realizan los organismos para mantenerse y continuar su especie.",
+            "tags": [
+                "español",
+                "seres vivos"
+            ],
+            "answers": [
+                {
+                    "answer": "Todos son de metal"
+                },
+                {
+                    "answer": "Realizan funciones vitales",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "No necesitan energía"
+                },
+                {
+                    "answer": "Nunca cambian"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué capa de la Tierra está formada principalmente por el aire que rodea al planeta?",
+            "explanation": "La atmósfera es la capa de gases que rodea la Tierra.",
+            "hint": "Es la capa donde ocurren fenómenos como el viento y las nubes.",
+            "tags": [
+                "español",
+                "Tierra"
+            ],
+            "answers": [
+                {
+                    "answer": "Atmósfera",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Núcleo"
+                },
+                {
+                    "answer": "Manto"
+                },
+                {
+                    "answer": "Corteza oceánica"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué gas necesitamos principalmente para respirar?",
+            "explanation": "Los seres humanos necesitan oxígeno para realizar la respiración celular y obtener energía de los nutrientes.",
+            "hint": "Es uno de los gases presentes en el aire.",
+            "tags": [
+                "español",
+                "respiración"
+            ],
+            "answers": [
+                {
+                    "answer": "Oxígeno",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Helio"
+                },
+                {
+                    "answer": "Dióxido de carbono"
+                },
+                {
+                    "answer": "Hidrógeno"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fenómeno ocurre cuando el agua de las nubes cae a la superficie terrestre?",
+            "explanation": "La precipitación ocurre cuando el agua cae desde las nubes en forma de lluvia, nieve o granizo.",
+            "hint": "La lluvia es un ejemplo de este fenómeno.",
+            "tags": [
+                "español",
+                "ciclo del agua"
+            ],
+            "answers": [
+                {
+                    "answer": "Evaporación"
+                },
+                {
+                    "answer": "Precipitación",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Condensación"
+                },
+                {
+                    "answer": "Fusión"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué instrumento se utiliza para medir la temperatura?",
+            "explanation": "El termómetro es el instrumento utilizado para medir la temperatura.",
+            "hint": "Se utiliza para saber qué tan caliente o frío está algo.",
+            "tags": [
+                "español",
+                "medición"
+            ],
+            "answers": [
+                {
+                    "answer": "Regla"
+                },
+                {
+                    "answer": "Termómetro",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Balanza"
+                },
+                {
+                    "answer": "Brújula"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué instrumento se utiliza para medir la masa de un objeto?",
+            "explanation": "Una balanza permite comparar y medir la masa de objetos.",
+            "hint": "Se utiliza frecuentemente en laboratorios y comercios.",
+            "tags": [
+                "español",
+                "medición"
+            ],
+            "answers": [
+                {
+                    "answer": "Termómetro"
+                },
+                {
+                    "answer": "Balanza",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Regla"
+                },
+                {
+                    "answer": "Cronómetro"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué instrumento se utiliza para medir el tiempo de un evento?",
+            "explanation": "El cronómetro permite medir intervalos de tiempo con precisión.",
+            "hint": "Se utiliza, por ejemplo, para medir cuánto tarda un corredor.",
+            "tags": [
+                "español",
+                "medición"
+            ],
+            "answers": [
+                {
+                    "answer": "Cronómetro",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Termómetro"
+                },
+                {
+                    "answer": "Balanza"
+                },
+                {
+                    "answer": "Microscopio"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué aparato permite observar objetos muy pequeños que no se pueden distinguir fácilmente a simple vista?",
+            "explanation": "El microscopio permite ampliar la imagen de objetos y estructuras demasiado pequeñas para observarlas directamente.",
+            "hint": "Se utiliza frecuentemente para estudiar células.",
+            "tags": [
+                "español",
+                "ciencia"
+            ],
+            "answers": [
+                {
+                    "answer": "Telescopio"
+                },
+                {
+                    "answer": "Microscopio",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Termómetro"
+                },
+                {
+                    "answer": "Brújula"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué aparato se utiliza para observar objetos muy lejanos en el espacio?",
+            "explanation": "El telescopio permite observar y estudiar objetos celestes que se encuentran a grandes distancias.",
+            "hint": "Se utiliza para observar estrellas y otros cuerpos celestes.",
+            "tags": [
+                "español",
+                "astronomía"
+            ],
+            "answers": [
+                {
+                    "answer": "Microscopio"
+                },
+                {
+                    "answer": "Telescopio",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Balanza"
+                },
+                {
+                    "answer": "Termómetro"
+                }
+            ]
+        }
+    ]
+}

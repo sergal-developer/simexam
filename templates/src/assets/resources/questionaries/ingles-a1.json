@@ -1,0 +1,620 @@
+{
+  "title": "Cuestionario de Inglés Nivel A1",
+  "time": 45,
+  "tags": ["inglés", "A1", "básico", "cuestionario"],
+  "questionsCount": 50,
+  "questions": [
+    {
+      "question": "¿Cómo se traduce 'hola' al inglés?",
+      "explanation": "La traducción directa y más común de 'hola' es 'Hello'.",
+      "hint": "Es la primera palabra que se aprende en inglés.",
+      "tags": ["saludos", "vocabulario", "básico"],
+      "answers": [
+        { "answer": "Hello", "isCorrect": true },
+        { "answer": "Goodbye" },
+        { "answer": "Thanks" },
+        { "answer": "Yes" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'Good morning'?",
+      "explanation": "'Good morning' se usa específicamente para saludar en la mañana.",
+      "hint": "Se usa antes del mediodía.",
+      "tags": ["saludos", "horarios", "vocabulario"],
+      "answers": [
+        { "answer": "Buenas tardes" },
+        { "answer": "Buenos días", "isCorrect": true },
+        { "answer": "Buenas noches" },
+        { "answer": "Hasta mañana" }
+      ]
+    },
+    {
+      "question": "Selecciona la traducción de 'adiós'.",
+      "explanation": "'Goodbye' es la forma estándar de despedirse en inglés.",
+      "hint": "Se dice al terminar una conversación.",
+      "tags": ["despedidas", "vocabulario", "básico"],
+      "answers": [
+        { "answer": "Hi" },
+        { "answer": "Goodbye", "isCorrect": true },
+        { "answer": "Here" },
+        { "answer": "Welcome" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'gracias' en inglés?",
+      "explanation": "'Thank you' y 'Thanks' significan 'gracias'; la primera es más formal.",
+      "hint": "Se usa para agradecer.",
+      "tags": ["cortesía", "vocabulario", "básico"],
+      "answers": [
+        { "answer": "Please" },
+        { "answer": "Sorry" },
+        { "answer": "Thank you", "isCorrect": true },
+        { "answer": "Hello" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'name'?",
+      "explanation": "'Name' se refiere al nombre propio de una persona.",
+      "hint": "Es lo que te dicen cuando te presentan.",
+      "tags": ["presentaciones", "vocabulario", "identidad"],
+      "answers": [
+        { "answer": "Edad" },
+        { "answer": "Nombre", "isCorrect": true },
+        { "answer": "País" },
+        { "answer": "Ocupación" }
+      ]
+    },
+    {
+      "question": "Completa: I ______ Ana.",
+      "explanation": "Para 'yo' se usa la forma del verbo to be 'am'.",
+      "hint": "Va después de 'I'.",
+      "tags": ["gramática", "verbo to be", "presente"],
+      "answers": [
+        { "answer": "is" },
+        { "answer": "am", "isCorrect": true },
+        { "answer": "are" },
+        { "answer": "be" }
+      ]
+    },
+    {
+      "question": "Selecciona la forma correcta: You ______ my friend.",
+      "explanation": "Con el pronombre 'you' siempre se usa 'are'.",
+      "hint": "Corresponde a tú/ustedes.",
+      "tags": ["gramática", "verbo to be", "presente"],
+      "answers": [
+        { "answer": "is" },
+        { "answer": "am" },
+        { "answer": "are", "isCorrect": true },
+        { "answer": "be" }
+      ]
+    },
+    {
+      "question": "¿Cómo se escribe correctamente 'él es'?",
+      "explanation": "'He' es él; con él se usa 'is'.",
+      "hint": "Empieza con H.",
+      "tags": ["gramática", "pronombres", "verbo to be"],
+      "answers": [
+        { "answer": "She is" },
+        { "answer": "He is", "isCorrect": true },
+        { "answer": "It is" },
+        { "answer": "We are" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'she'?",
+      "explanation": "'She' es el pronombre personal femenino equivalente a ella.",
+      "hint": "Es para personas del género femenino.",
+      "tags": ["pronombres", "gramática", "básico"],
+      "answers": [
+        { "answer": "Él" },
+        { "answer": "Ella", "isCorrect": true },
+        { "answer": "Nosotros" },
+        { "answer": "Ellos" }
+      ]
+    },
+    {
+      "question": "¿Cómo se traduce 'libro'?",
+      "explanation": "'Book' es el sustantivo para libro.",
+      "hint": "Algo que lees.",
+      "tags": ["vocabulario", "objetos", "escuela"],
+      "answers": [
+        { "answer": "Pen" },
+        { "answer": "Book", "isCorrect": true },
+        { "answer": "Table" },
+        { "answer": "Door" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'pen'?",
+      "explanation": "'Pen' es el objeto con el que se escribe con tinta: bolígrafo.",
+      "hint": "Sirve para escribir.",
+      "tags": ["vocabulario", "objetos", "escuela"],
+      "answers": [
+        { "answer": "Lápiz" },
+        { "answer": "Bolígrafo", "isCorrect": true },
+        { "answer": "Cuaderno" },
+        { "answer": "Goma" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'uno' en inglés?",
+      "explanation": "Los números básicos: 1 = one.",
+      "hint": "Es el primer número.",
+      "tags": ["números", "vocabulario", "básico"],
+      "answers": [
+        { "answer": "One", "isCorrect": true },
+        { "answer": "Two" },
+        { "answer": "Three" },
+        { "answer": "Four" }
+      ]
+    },
+    {
+      "question": "Selecciona la traducción de 'cinco'.",
+      "explanation": "5 se dice 'five'.",
+      "hint": "Termina con sonido de 'v'.",
+      "tags": ["números", "vocabulario", "básico"],
+      "answers": [
+        { "answer": "Four" },
+        { "answer": "Five", "isCorrect": true },
+        { "answer": "Six" },
+        { "answer": "Seven" }
+      ]
+    },
+    {
+      "question": "¿Qué número es 'ten'?",
+      "explanation": "'Ten' corresponde al número 10.",
+      "hint": "Es el último de la primera decena.",
+      "tags": ["números", "vocabulario", "básico"],
+      "answers": [
+        { "answer": "8" },
+        { "answer": "9" },
+        { "answer": "10", "isCorrect": true },
+        { "answer": "11" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'rojo' en inglés?",
+      "explanation": "El color rojo se dice 'red'.",
+      "hint": "Es el color del fuego.",
+      "tags": ["colores", "vocabulario", "básico"],
+      "answers": [
+        { "answer": "Blue" },
+        { "answer": "Red", "isCorrect": true },
+        { "answer": "Green" },
+        { "answer": "Yellow" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'blue'?",
+      "explanation": "'Blue' corresponde al color azul.",
+      "hint": "Es el color del cielo.",
+      "tags": ["colores", "vocabulario", "básico"],
+      "answers": [
+        { "answer": "Rojo" },
+        { "answer": "Azul", "isCorrect": true },
+        { "answer": "Verde" },
+        { "answer": "Amarillo" }
+      ]
+    },
+    {
+      "question": "Traduce: 'yo soy de México'.",
+      "explanation": "La estructura correcta es: I am from + país.",
+      "hint": "Usa 'am' y 'from'.",
+      "tags": ["oraciones", "nacionalidad", "gramática"],
+      "answers": [
+        { "answer": "I from Mexico" },
+        { "answer": "I am from Mexico", "isCorrect": true },
+        { "answer": "I is Mexico" },
+        { "answer": "I live Mexico" }
+      ]
+    },
+    {
+      "question": "¿Cómo se pregunta '¿Cómo estás?' de forma informal?",
+      "explanation": "'How are you?' es la forma estándar y común de preguntar cómo está alguien.",
+      "hint": "Empieza por How.",
+      "tags": ["preguntas", "saludos", "conversación"],
+      "answers": [
+        { "answer": "How old are you?" },
+        { "answer": "How are you?", "isCorrect": true },
+        { "answer": "Where are you?" },
+        { "answer": "What is your name?" }
+      ]
+    },
+    {
+      "question": "¿Qué responde a 'How are you?' de forma correcta?",
+      "explanation": "'I am fine, thanks' es la respuesta clásica: estoy bien, gracias.",
+      "hint": "Indica que estás bien.",
+      "tags": ["respuestas", "conversación", "cortesía"],
+      "answers": [
+        { "answer": "My name is John" },
+        { "answer": "I am fine, thanks", "isCorrect": true },
+        { "answer": "I am 20" },
+        { "answer": "Goodbye" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'sí' en inglés?",
+      "explanation": "La respuesta afirmativa corta es 'yes'.",
+      "hint": "Es opuesta a no.",
+      "tags": ["respuestas", "básico", "vocabulario"],
+      "answers": [
+        { "answer": "No" },
+        { "answer": "Yes", "isCorrect": true },
+        { "answer": "Ok" },
+        { "answer": "Maybe" }
+      ]
+    },
+    {
+      "question": "Selecciona la traducción de 'no'.",
+      "explanation": "La negación corta es 'no'.",
+      "hint": "Es lo contrario de sí.",
+      "tags": ["respuestas", "básico", "vocabulario"],
+      "answers": [
+        { "answer": "Not" },
+        { "answer": "No", "isCorrect": true },
+        { "answer": "Never" },
+        { "answer": "None" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'amigo' en masculino?",
+      "explanation": "'Friend' sirve para ambos géneros, pero 'boyfriend' es novio; el término general es 'friend'.",
+      "hint": "Palabra general para compañero.",
+      "tags": ["personas", "relaciones", "vocabulario"],
+      "answers": [
+        { "answer": "Brother" },
+        { "answer": "Friend", "isCorrect": true },
+        { "answer": "Father" },
+        { "answer": "Cousin" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'mother'?",
+      "explanation": "'Mother' es la forma estándar para referirse a la madre.",
+      "hint": "Es tu mamá.",
+      "tags": ["familia", "vocabulario", "personas"],
+      "answers": [
+        { "answer": "Hermana" },
+        { "answer": "Madre", "isCorrect": true },
+        { "answer": "Tía" },
+        { "answer": "Abuela" }
+      ]
+    },
+    {
+      "question": "¿Cómo se traduce 'padre'?",
+      "explanation": "'Father' es el padre; también se usa 'dad' de forma cariñosa.",
+      "hint": "Es tu papá.",
+      "tags": ["familia", "vocabulario", "personas"],
+      "answers": [
+        { "answer": "Brother" },
+        { "answer": "Father", "isCorrect": true },
+        { "answer": "Uncle" },
+        { "answer": "Son" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'sister'?",
+      "explanation": "'Sister' se refiere a la hermana.",
+      "hint": "Es una familiar mujer del mismo padre/madre.",
+      "tags": ["familia", "vocabulario", "personas"],
+      "answers": [
+        { "answer": "Hermano" },
+        { "answer": "Hermana", "isCorrect": true },
+        { "answer": "Madre" },
+        { "answer": "Prima" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'escuela' en inglés?",
+      "explanation": "El lugar donde estudias es 'school'.",
+      "hint": "Allí aprendes.",
+      "tags": ["lugares", "educación", "vocabulario"],
+      "answers": [
+        { "answer": "Hospital" },
+        { "answer": "School", "isCorrect": true },
+        { "answer": "Park" },
+        { "answer": "Library" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'house'?",
+      "explanation": "'House' es la casa, el edificio donde vives.",
+      "hint": "Es tu hogar.",
+      "tags": ["lugares", "hogar", "vocabulario"],
+      "answers": [
+        { "answer": "Oficina" },
+        { "answer": "Casa", "isCorrect": true },
+        { "answer": "Tienda" },
+        { "answer": "Ciudad" }
+      ]
+    },
+    {
+      "question": "¿Cómo se traduce 'mesa'?",
+      "explanation": "El mueble donde pones cosas es 'table'.",
+      "hint": "Tiene patas y superficie plana.",
+      "tags": ["hogar", "muebles", "vocabulario"],
+      "answers": [
+        { "answer": "Chair" },
+        { "answer": "Table", "isCorrect": true },
+        { "answer": "Door" },
+        { "answer": "Window" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'chair'?",
+      "explanation": "'Chair' es el asiento con respaldo: silla.",
+      "hint": "Te sientas en ella.",
+      "tags": ["hogar", "muebles", "vocabulario"],
+      "answers": [
+        { "answer": "Mesa" },
+        { "answer": "Silla", "isCorrect": true },
+        { "answer": "Sofá" },
+        { "answer": "Cama" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'perro' en inglés?",
+      "explanation": "El animal doméstico más común es 'dog'.",
+      "hint": "Ladra.",
+      "tags": ["animales", "vocabulario", "naturaleza"],
+      "answers": [
+        { "answer": "Cat" },
+        { "answer": "Dog", "isCorrect": true },
+        { "answer": "Bird" },
+        { "answer": "Fish" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'cat'?",
+      "explanation": "'Cat' es el gato, animal que maúlla.",
+      "hint": "Le gustan los ratones.",
+      "tags": ["animales", "vocabulario", "naturaleza"],
+      "answers": [
+        { "answer": "Perro" },
+        { "answer": "Gato", "isCorrect": true },
+        { "answer": "Pájaro" },
+        { "answer": "Pez" }
+      ]
+    },
+    {
+      "question": "¿Cómo se traduce 'grande'?",
+      "explanation": "Algo de gran tamaño es 'big'.",
+      "hint": "Es lo opuesto a pequeño.",
+      "tags": ["adjetivos", "descripción", "vocabulario"],
+      "answers": [
+        { "answer": "Small" },
+        { "answer": "Big", "isCorrect": true },
+        { "answer": "New" },
+        { "answer": "Old" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'small'?",
+      "explanation": "'Small' describe algo de tamaño reducido: pequeño.",
+      "hint": "Es lo contrario de grande.",
+      "tags": ["adjetivos", "descripción", "vocabulario"],
+      "answers": [
+        { "answer": "Grande" },
+        { "answer": "Pequeño", "isCorrect": true },
+        { "answer": "Largo" },
+        { "answer": "Corto" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'nuevo' en inglés?",
+      "explanation": "Algo recién hecho o adquirido es 'new'.",
+      "hint": "No es viejo.",
+      "tags": ["adjetivos", "descripción", "vocabulario"],
+      "answers": [
+        { "answer": "Old" },
+        { "answer": "New", "isCorrect": true },
+        { "answer": "Good" },
+        { "answer": "Bad" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'old'?",
+      "explanation": "'Old' se refiere a algo con mucho tiempo de uso o antigüedad: viejo/antiguo.",
+      "hint": "No es nuevo.",
+      "tags": ["adjetivos", "descripción", "vocabulario"],
+      "answers": [
+        { "answer": "Nuevo" },
+        { "answer": "Viejo", "isCorrect": true },
+        { "answer": "Bonito" },
+        { "answer": "Feo" }
+      ]
+    },
+    {
+      "question": "¿Cómo se traduce 'bueno' como cualidad?",
+      "explanation": "'Good' expresa calidad positiva: bueno.",
+      "hint": "Es lo opuesto a malo.",
+      "tags": ["adjetivos", "descripción", "vocabulario"],
+      "answers": [
+        { "answer": "Bad" },
+        { "answer": "Good", "isCorrect": true },
+        { "answer": "Big" },
+        { "answer": "Fast" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'bad'?",
+      "explanation": "'Bad' indica algo negativo: malo.",
+      "hint": "Es lo contrario de bueno.",
+      "tags": ["adjetivos", "descripción", "vocabulario"],
+      "answers": [
+        { "answer": "Bueno" },
+        { "answer": "Malo", "isCorrect": true },
+        { "answer": "Alto" },
+        { "answer": "Bajo" }
+      ]
+    },
+    {
+      "question": "Completa la negación: She ______ my sister.",
+      "explanation": "Para negar con is se usa 'is not' o la contracción 'isn't'.",
+      "hint": "Une verbo + no.",
+      "tags": ["gramática", "negación", "verbo to be"],
+      "answers": [
+        { "answer": "is not", "isCorrect": true },
+        { "answer": "not is" },
+        { "answer": "am not" },
+        { "answer": "are not" }
+      ]
+    },
+    {
+      "question": "¿Cómo se forma la pregunta: '¿Eres de España?'?",
+      "explanation": "Con el verbo to be, el verbo va antes del sujeto: Are you from Spain?",
+      "hint": "Empieza con Are.",
+      "tags": ["gramática", "preguntas", "verbo to be"],
+      "answers": [
+        { "answer": "You are from Spain?" },
+        { "answer": "Are you from Spain?", "isCorrect": true },
+        { "answer": "Do you from Spain?" },
+        { "answer": "From Spain you are?" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'day'?",
+      "explanation": "'Day' es el día, el periodo de 24 horas o de luz solar.",
+      "hint": "Lo opuesto a noche.",
+      "tags": ["tiempo", "calendario", "vocabulario"],
+      "answers": [
+        { "answer": "Noche" },
+        { "answer": "Día", "isCorrect": true },
+        { "answer": "Semana" },
+        { "answer": "Mes" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'mañana' referido al día siguiente?",
+      "explanation": "El día de después de hoy es 'tomorrow'.",
+      "hint": "No es hoy ni ayer.",
+      "tags": ["tiempo", "calendario", "vocabulario"],
+      "answers": [
+        { "answer": "Yesterday" },
+        { "answer": "Tomorrow", "isCorrect": true },
+        { "answer": "Today" },
+        { "answer": "Week" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'today'?",
+      "explanation": "'Today' es el día presente: hoy.",
+      "hint": "El día en que estás ahora.",
+      "tags": ["tiempo", "calendario", "vocabulario"],
+      "answers": [
+        { "answer": "Ayer" },
+        { "answer": "Hoy", "isCorrect": true },
+        { "answer": "Mañana" },
+        { "answer": "Ahora" }
+      ]
+    },
+    {
+      "question": "¿Cómo se traduce 'lunes'?",
+      "explanation": "El primer día de la semana es 'Monday'.",
+      "hint": "Empieza por M.",
+      "tags": ["tiempo", "días semana", "vocabulario"],
+      "answers": [
+        { "answer": "Sunday" },
+        { "answer": "Monday", "isCorrect": true },
+        { "answer": "Friday" },
+        { "answer": "Wednesday" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'Sunday'?",
+      "explanation": "'Sunday' corresponde al domingo, último o primer día según el país.",
+      "hint": "Es el día anterior al lunes.",
+      "tags": ["tiempo", "días semana", "vocabulario"],
+      "answers": [
+        { "answer": "Sábado" },
+        { "answer": "Domingo", "isCorrect": true },
+        { "answer": "Martes" },
+        { "answer": "Jueves" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'desayuno' en inglés?",
+      "explanation": "La primera comida del día es 'breakfast'.",
+      "hint": "Se come en la mañana.",
+      "tags": ["comida", "comidas", "vocabulario"],
+      "answers": [
+        { "answer": "Lunch" },
+        { "answer": "Breakfast", "isCorrect": true },
+        { "answer": "Dinner" },
+        { "answer": "Supper" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'water'?",
+      "explanation": "'Water' es el líquido esencial para la vida: agua.",
+      "hint": "Lo bebes cuando tienes sed.",
+      "tags": ["comida", "salud", "vocabulario"],
+      "answers": [
+        { "answer": "Leche" },
+        { "answer": "Agua", "isCorrect": true },
+        { "answer": "Jugo" },
+        { "answer": "Café" }
+      ]
+    },
+    {
+      "question": "¿Cómo se traduce 'sí, lo soy' como respuesta corta?",
+      "explanation": "Respuesta corta afirmativa con I am: Yes, I am.",
+      "hint": "Empieza por Yes.",
+      "tags": ["gramática", "respuestas", "verbo to be"],
+      "answers": [
+        { "answer": "Yes, I am", "isCorrect": true },
+        { "answer": "Yes, I is" },
+        { "answer": "No, I am not" },
+        { "answer": "Yes, are" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'por favor' en inglés?",
+      "explanation": "'Please' se usa para pedir algo con educación: por favor.",
+      "hint": "Se añade al final de una petición.",
+      "tags": ["cortesía", "frases", "básico"],
+      "answers": [
+        { "answer": "Sorry" },
+        { "answer": "Please", "isCorrect": true },
+        { "answer": "Hello" },
+        { "answer": "Thanks" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'sorry'?",
+      "explanation": "'Sorry' sirve para disculparse: lo siento/perdón.",
+      "hint": "Se usa cuando cometes un error o molestas.",
+      "tags": ["cortesía", "disculpas", "vocabulario"],
+      "answers": [
+        { "answer": "Gracias" },
+        { "answer": "Lo siento", "isCorrect": true },
+        { "answer": "Por favor" },
+        { "answer": "De nada" }
+      ]
+    },
+    {
+      "question": "¿Cómo se traduce 'bienvenido'?",
+      "explanation": "Para recibir a alguien se dice 'welcome'.",
+      "hint": "Se dice cuando alguien llega.",
+      "tags": ["cortesía", "saludos", "vocabulario"],
+      "answers": [
+        { "answer": "Goodbye" },
+        { "answer": "Welcome", "isCorrect": true },
+        { "answer": "Thanks" },
+        { "answer": "Sorry" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la respuesta a 'Thank you' que significa 'de nada'?",
+      "explanation": "'You are welcome' es la respuesta estándar: de nada.",
+      "hint": "Contiene la palabra welcome.",
+      "tags": ["cortesía", "respuestas", "conversación"],
+      "answers": [
+        { "answer": "No thank you" },
+        { "answer": "You are welcome", "isCorrect": true },
+        { "answer": "Yes please" },
+        { "answer": "Goodbye" }
+      ]
+    }
+  ]
+}

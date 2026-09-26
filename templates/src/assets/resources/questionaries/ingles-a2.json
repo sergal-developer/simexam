@@ -1,0 +1,620 @@
+{
+  "title": "Cuestionario de Inglés Nivel A2",
+  "time": 50,
+  "tags": ["inglés", "A2", "intermedio-básico", "cuestionario"],
+  "questionsCount": 50,
+  "questions": [
+    {
+      "question": "¿Cuál es la forma correcta del verbo en: 'I ______ to the supermarket yesterday'?",
+      "explanation": "El pasado simple de 'go' es irregular: 'went'.",
+      "hint": "Es un verbo irregular, no lleva -ed.",
+      "tags": ["gramática", "pasado simple", "verbos irregulares"],
+      "answers": [
+        { "answer": "go" },
+        { "answer": "went", "isCorrect": true },
+        { "answer": "gone" },
+        { "answer": "goes" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'I am watching TV'?",
+      "explanation": "Presente continuo describe una acción que ocurre justo ahora: estoy viendo la televisión.",
+      "hint": "Indica acción en desarrollo.",
+      "tags": ["gramática", "presente continuo", "tiempos verbales"],
+      "answers": [
+        { "answer": "Yo miro la televisión" },
+        { "answer": "Estoy viendo la televisión", "isCorrect": true },
+        { "answer": "Vi la televisión" },
+        { "answer": "Voy a ver la televisión" }
+      ]
+    },
+    {
+      "question": "Completa: She ______ to music every day.",
+      "explanation": "Presente simple, tercera persona del singular: se agrega -s → 'listens'.",
+      "hint": "Sujeto es ella, verbo en tercera persona.",
+      "tags": ["gramática", "presente simple", "tercera persona"],
+      "answers": [
+        { "answer": "listen" },
+        { "answer": "listens", "isCorrect": true },
+        { "answer": "listening" },
+        { "answer": "listened" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'yo viví aquí hace cinco años'?",
+      "explanation": "Pasado simple para acción terminada con tiempo específico: 'lived'.",
+      "hint": "Verbo regular, terminación -ed.",
+      "tags": ["gramática", "pasado simple", "verbos regulares"],
+      "answers": [
+        { "answer": "I live here five years ago" },
+        { "answer": "I lived here five years ago", "isCorrect": true },
+        { "answer": "I am living here five years ago" },
+        { "answer": "I will live here five years ago" }
+      ]
+    },
+    {
+      "question": "Selecciona la forma correcta: ______ you like coffee?",
+      "explanation": "Presente simple con verbo 'like' y sujeto 'you': auxiliar 'Do'.",
+      "hint": "No usa 'are' con gustos.",
+      "tags": ["gramática", "preguntas", "presente simple"],
+      "answers": [
+        { "answer": "Are" },
+        { "answer": "Do", "isCorrect": true },
+        { "answer": "Does" },
+        { "answer": "Did" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la negación correcta de 'She likes apples'?",
+      "explanation": "Tercera persona singular presente simple: auxiliar 'does + not' → 'doesn't' + verbo base.",
+      "hint": "El verbo principal queda sin -s.",
+      "tags": ["gramática", "negación", "presente simple"],
+      "answers": [
+        { "answer": "She not likes apples" },
+        { "answer": "She doesn't like apples", "isCorrect": true },
+        { "answer": "She doesn't likes apples" },
+        { "answer": "She isn't like apples" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'I have got a car'?",
+      "explanation": "'Have got' expresa posesión en presente: yo tengo un coche.",
+      "hint": "Equivale a 'have'.",
+      "tags": ["gramática", "posesión", "have got"],
+      "answers": [
+        { "answer": "Tengo un coche", "isCorrect": true },
+        { "answer": "Compré un coche" },
+        { "answer": "Tengo un coche nuevo" },
+        { "answer": "Veo un coche" }
+      ]
+    },
+    {
+      "question": "Completa: They have ______ in this city since 2010.",
+      "explanation": "Presente perfecto: 'have + participio'. Participio de 'live' es 'lived'.",
+      "hint": "Se usa 'since' con punto de inicio en el tiempo.",
+      "tags": ["gramática", "presente perfecto", "tiempos verbales"],
+      "answers": [
+        { "answer": "live" },
+        { "answer": "lived", "isCorrect": true },
+        { "answer": "living" },
+        { "answer": "lives" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'él ya ha terminado su tarea'?",
+      "explanation": "Presente perfecto con 'already' entre auxiliar y verbo principal: 'has already finished'.",
+      "hint": "Sujeto él → 'has'.",
+      "tags": ["gramática", "presente perfecto", "adverbios"],
+      "answers": [
+        { "answer": "He already finished his homework" },
+        { "answer": "He has already finished his homework", "isCorrect": true },
+        { "answer": "He has finished already his homework" },
+        { "answer": "He finishes his homework" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'We are going to travel'?",
+      "explanation": "'Be going to' expresa futuro planificado: vamos a viajar.",
+      "hint": "Indica acción futura ya decidida.",
+      "tags": ["gramática", "futuro", "going to"],
+      "answers": [
+        { "answer": "Viajamos" },
+        { "answer": "Vamos a viajar", "isCorrect": true },
+        { "answer": "Hemos viajado" },
+        { "answer": "Viajaríamos" }
+      ]
+    },
+    {
+      "question": "Completa: I think it ______ rain tomorrow.",
+      "explanation": "'Will' hace predicciones sin plan: 'will rain'.",
+      "hint": "No es 'going to' aquí.",
+      "tags": ["gramática", "futuro", "will"],
+      "answers": [
+        { "answer": "is going" },
+        { "answer": "will", "isCorrect": true },
+        { "answer": "shall" },
+        { "answer": "is" }
+      ]
+    },
+    {
+      "question": "¿Cuál es el comparativo de 'tall'?",
+      "explanation": "Adjetivo corto de una sílaba: +er → 'taller'.",
+      "hint": "No usa 'more'.",
+      "tags": ["gramática", "comparativos", "adjetivos"],
+      "answers": [
+        { "answer": "more tall" },
+        { "answer": "taller", "isCorrect": true },
+        { "answer": "tallest" },
+        { "answer": "tall" }
+      ]
+    },
+    {
+      "question": "¿Cómo se forma el comparativo de 'beautiful'?",
+      "explanation": "Adjetivo largo (más de dos sílabas): 'more' + adjetivo → 'more beautiful'.",
+      "hint": "No lleva terminación -er.",
+      "tags": ["gramática", "comparativos", "adjetivos"],
+      "answers": [
+        { "answer": "beautifuler" },
+        { "answer": "more beautiful", "isCorrect": true },
+        { "answer": "most beautiful" },
+        { "answer": "beautiful" }
+      ]
+    },
+    {
+      "question": "¿Cuál es el superlativo de 'big'?",
+      "explanation": "Adjetivo corto con vocal + consonante: duplica la consonante +est → 'biggest'.",
+      "hint": "Significa el más grande.",
+      "tags": ["gramática", "superlativos", "adjetivos"],
+      "answers": [
+        { "answer": "biger" },
+        { "answer": "biggest", "isCorrect": true },
+        { "answer": "most big" },
+        { "answer": "big" }
+      ]
+    },
+    {
+      "question": "Selecciona la forma correcta: This book is ______ than that one.",
+      "explanation": "Irregular: bueno → mejor = 'better'.",
+      "hint": "No es 'gooder'.",
+      "tags": ["gramática", "comparativos", "irregulares"],
+      "answers": [
+        { "answer": "good" },
+        { "answer": "better", "isCorrect": true },
+        { "answer": "best" },
+        { "answer": "gooder" }
+      ]
+    },
+    {
+      "question": "¿Qué pronombre completa: 'She wrote the letter ______'?",
+      "explanation": "Pronombre reflexivo: ella misma → 'herself'.",
+      "hint": "Termina con -self.",
+      "tags": ["gramática", "pronombres", "reflexivos"],
+      "answers": [
+        { "answer": "her" },
+        { "answer": "herself", "isCorrect": true },
+        { "answer": "she" },
+        { "answer": "hers" }
+      ]
+    },
+    {
+      "question": "¿Cuál es el posesivo de 'they'?",
+      "explanation": "Posesivo de ellos/ellas: 'their'.",
+      "hint": "Va antes del sustantivo.",
+      "tags": ["gramática", "posesivos", "pronombres"],
+      "answers": [
+        { "answer": "they" },
+        { "answer": "their", "isCorrect": true },
+        { "answer": "them" },
+        { "answer": "theirs" }
+      ]
+    },
+    {
+      "question": "Completa: This is ______ house.",
+      "explanation": "Posesivo de 'yo' antes del sustantivo: 'my'.",
+      "hint": "Equivale a 'mi'.",
+      "tags": ["gramática", "posesivos", "pronombres"],
+      "answers": [
+        { "answer": "mine" },
+        { "answer": "my", "isCorrect": true },
+        { "answer": "me" },
+        { "answer": "I" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'There is a bank near here'?",
+      "explanation": "'There is' indica existencia con sustantivo singular: hay un banco cerca.",
+      "hint": "Se refiere a existencia.",
+      "tags": ["gramática", "there is/are", "lugares"],
+      "answers": [
+        { "answer": "Ese es un banco cercano" },
+        { "answer": "Hay un banco cerca de aquí", "isCorrect": true },
+        { "answer": "Tengo un banco cerca" },
+        { "answer": "El banco está cerca" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la forma plural correcta?",
+      "explanation": "Sustantivo terminado en -y precedida por consonante: y → i + es → 'cities'.",
+      "hint": "No se dice 'citys'.",
+      "tags": ["gramática", "plurales", "sustantivos"],
+      "answers": [
+        { "answer": "citys" },
+        { "answer": "cities", "isCorrect": true },
+        { "answer": "cityes" },
+        { "answer": "city" }
+      ]
+    },
+    {
+      "question": "Selecciona la oración correcta sobre el plural:",
+      "explanation": "Sustantivo irregular: 'child' → 'children' sin regla fija.",
+      "hint": "No lleva -s al final.",
+      "tags": ["gramática", "plurales", "irregulares"],
+      "answers": [
+        { "answer": "three child" },
+        { "answer": "three children", "isCorrect": true },
+        { "answer": "three childs" },
+        { "answer": "three childrens" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'yo no puedo nadar'?",
+      "explanation": "Capacidad negativa: 'cannot' o 'can't' + verbo base → 'I can't swim'.",
+      "hint": "No usa 'to' después.",
+      "tags": ["gramática", "verbos modales", "capacidad"],
+      "answers": [
+        { "answer": "I can't to swim" },
+        { "answer": "I can't swim", "isCorrect": true },
+        { "answer": "I don't can swim" },
+        { "answer": "I not can swim" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'You must stop'?",
+      "explanation": "'Must' indica obligación: debes detenerte.",
+      "hint": "Es una obligación fuerte.",
+      "tags": ["gramática", "verbos modales", "obligación"],
+      "answers": [
+        { "answer": "Puedes detenerte" },
+        { "answer": "Debes detenerte", "isCorrect": true },
+        { "answer": "Podrías detenerte" },
+        { "answer": "Deberías detenerte" }
+      ]
+    },
+    {
+      "question": "Completa: ______ I open the window? (permiso)",
+      "explanation": "Pedir permiso de forma educada: 'Can' o 'May'; aquí 'Can' es el estándar en A2.",
+      "hint": "Se usa para pedir autorización.",
+      "tags": ["gramática", "verbos modales", "permiso"],
+      "answers": [
+        { "answer": "Do" },
+        { "answer": "Can", "isCorrect": true },
+        { "answer": "Am" },
+        { "answer": "Should" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la forma correcta de 'should' en consejo?",
+      "explanation": "'Should' + verbo base: 'You should study' = deberías estudiar.",
+      "hint": "No lleva 'to'.",
+      "tags": ["gramática", "verbos modales", "consejos"],
+      "answers": [
+        { "answer": "You should to study" },
+        { "answer": "You should study", "isCorrect": true },
+        { "answer": "You should studying" },
+        { "answer": "You should studied" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'está lloviendo'?",
+      "explanation": "Presente continuo para acción en progreso: 'It is raining'.",
+      "hint": "Empieza por It.",
+      "tags": ["gramática", "presente continuo", "clima"],
+      "answers": [
+        { "answer": "It rain" },
+        { "answer": "It is raining", "isCorrect": true },
+        { "answer": "It rains" },
+        { "answer": "It rained" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'I have lived here for two years'?",
+      "explanation": "'For' + duración: vivo aquí desde hace dos años y sigo aquí.",
+      "hint": "Indica periodo de tiempo.",
+      "tags": ["gramática", "presente perfecto", "tiempo"],
+      "answers": [
+        { "answer": "Viví aquí dos años" },
+        { "answer": "Vivo aquí desde hace dos años", "isCorrect": true },
+        { "answer": "Viviré aquí dos años" },
+        { "answer": "Estoy viviendo aquí dos años" }
+      ]
+    },
+    {
+      "question": "Diferencia entre 'since' y 'for': ¿Cuál es correcta?",
+      "explanation": "'Since' + momento exacto: desde las 9 → 'since 9 o'clock'.",
+      "hint": "No se usa con duración.",
+      "tags": ["gramática", "presente perfecto", "adverbios"],
+      "answers": [
+        { "answer": "since two weeks" },
+        { "answer": "since 9 o'clock", "isCorrect": true },
+        { "answer": "since three days" },
+        { "answer": "since long time" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'él no ha llegado todavía'?",
+      "explanation": "En oraciones negativas: 'not ... yet' → 'He hasn't arrived yet'.",
+      "hint": "'Yet' va al final.",
+      "tags": ["gramática", "presente perfecto", "adverbios"],
+      "answers": [
+        { "answer": "He hasn't arrived already" },
+        { "answer": "He hasn't arrived yet", "isCorrect": true },
+        { "answer": "He hasn't arrived still" },
+        { "answer": "He didn't arrive yet" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'I will call you later'?",
+      "explanation": "Futuro con 'will' para decisión espontánea/promesa: te llamaré luego.",
+      "hint": "Acción que ocurrirá después.",
+      "tags": ["gramática", "futuro", "will"],
+      "answers": [
+        { "answer": "Te llamaba luego" },
+        { "answer": "Te llamaré más tarde", "isCorrect": true },
+        { "answer": "Te llamo luego" },
+        { "answer": "Te voy a llamar luego" }
+      ]
+    },
+    {
+      "question": "Completa: We met ______ the station.",
+      "explanation": "Lugar específico/punto de encuentro: preposición 'at'.",
+      "hint": "No es 'in' ni 'on'.",
+      "tags": ["gramática", "preposiciones", "lugares"],
+      "answers": [
+        { "answer": "in" },
+        { "answer": "at", "isCorrect": true },
+        { "answer": "on" },
+        { "answer": "by" }
+      ]
+    },
+    {
+      "question": "¿Cuál preposición va con días de la semana?",
+      "explanation": "Días: 'on Monday' = el lunes.",
+      "hint": "No es 'in'.",
+      "tags": ["gramática", "preposiciones", "tiempo"],
+      "answers": [
+        { "answer": "in Monday" },
+        { "answer": "on Monday", "isCorrect": true },
+        { "answer": "at Monday" },
+        { "answer": "by Monday" }
+      ]
+    },
+    {
+      "question": "Selecciona la oración con preposición correcta:",
+      "explanation": "Meses/estaciones: 'in July' = en julio.",
+      "hint": "Para periodos largos.",
+      "tags": ["gramática", "preposiciones", "tiempo"],
+      "answers": [
+        { "answer": "at July" },
+        { "answer": "in July", "isCorrect": true },
+        { "answer": "on July" },
+        { "answer": "by July" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'She used to work here'?",
+      "explanation": "'Used to' describe hábito pasado que ya no ocurre: solía trabajar aquí.",
+      "hint": "Ya no lo hace ahora.",
+      "tags": ["gramática", "pasado", "hábitos"],
+      "answers": [
+        { "answer": "Ella trabajó aquí" },
+        { "answer": "Ella solía trabajar aquí", "isCorrect": true },
+        { "answer": "Ella está acostumbrada a trabajar aquí" },
+        { "answer": "Ella va a trabajar aquí" }
+      ]
+    },
+    {
+      "question": "Completa: If it rains, we ______ at home.",
+      "explanation": "Condicional tipo 1: si + presente simple → futuro will: 'we will stay'.",
+      "hint": "Es posible que llueva.",
+      "tags": ["gramática", "condicionales", "tipo 1"],
+      "answers": [
+        { "answer": "stay" },
+        { "answer": "will stay", "isCorrect": true },
+        { "answer": "stayed" },
+        { "answer": "would stay" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice '¿Qué estás buscando?'?",
+      "explanation": "Pregunta con presente continuo y pronombre objeto: 'What are you looking for?'.",
+      "hint": "La preposición 'for' va al final.",
+      "tags": ["gramática", "preguntas", "presente continuo"],
+      "answers": [
+        { "answer": "What are you looking?" },
+        { "answer": "What are you looking for?", "isCorrect": true },
+        { "answer": "What you are looking for?" },
+        { "answer": "What do you look?" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la pregunta sobre frecuencia?",
+      "explanation": "Preguntar cada cuánto: 'How often' → cada cuánto tiempo.",
+      "hint": "Respuesta lleva: siempre, a veces, nunca...",
+      "tags": ["gramática", "preguntas", "adverbios"],
+      "answers": [
+        { "answer": "How long do you go to the cinema?" },
+        { "answer": "How often do you go to the cinema?", "isCorrect": true },
+        { "answer": "How many do you go to the cinema?" },
+        { "answer": "How much do you go to the cinema?" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'I hardly ever eat meat'?",
+      "explanation": "Adverbio de frecuencia: 'hardly ever' = casi nunca.",
+      "hint": "Muy rara vez.",
+      "tags": ["gramática", "adverbios", "frecuencia"],
+      "answers": [
+        { "answer": "Casi nunca como carne", "isCorrect": true },
+        { "answer": "A veces como carne" },
+        { "answer": "Casi siempre como carne" },
+        { "answer": "Nunca como carne" }
+      ]
+    },
+    {
+      "question": "Completa: How ______ money do you have?",
+      "explanation": "Dinero incontable → 'How much'.",
+      "hint": "No es 'many'.",
+      "tags": ["gramática", "cantidad", "preguntas"],
+      "answers": [
+        { "answer": "many" },
+        { "answer": "much", "isCorrect": true },
+        { "answer": "lot" },
+        { "answer": "often" }
+      ]
+    },
+    {
+      "question": "¿Cuál es correcto contable?",
+      "explanation": "Sustantivos contables: 'How many books'.",
+      "hint": "Se puede contar uno por uno.",
+      "tags": ["gramática", "cantidad", "contables-incontables"],
+      "answers": [
+        { "answer": "How many books are there?", "isCorrect": true },
+        { "answer": "How many money do you have?" },
+        { "answer": "How much cars are there?" },
+        { "answer": "How many water is there?" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'a few'?",
+      "explanation": "'A few' + contable plural: unos pocos, algunos (cantidad pequeña pero positiva).",
+      "hint": "No es negativo.",
+      "tags": ["gramática", "cantidad", "determinantes"],
+      "answers": [
+        { "answer": "nada" },
+        { "answer": "algunos / unos pocos", "isCorrect": true },
+        { "answer": "muchos" },
+        { "answer": "pocos (casi ninguno)" }
+      ]
+    },
+    {
+      "question": "Completa: There is ______ water in the glass.",
+      "explanation": "Incontable, cantidad pequeña: 'a little'.",
+      "hint": "Va con sustantivos incontables.",
+      "tags": ["gramática", "cantidad", "determinantes"],
+      "answers": [
+        { "answer": "a few" },
+        { "answer": "a little", "isCorrect": true },
+        { "answer": "few" },
+        { "answer": "many" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice '¿A qué hora empieza la clase?'?",
+      "explanation": "Pregunta con sujeto: 'What time does the class begin?'.",
+      "hint": "Auxiliar 'does' para tercera persona.",
+      "tags": ["gramática", "preguntas", "horarios"],
+      "answers": [
+        { "answer": "What time the class begins?" },
+        { "answer": "What time does the class begin?", "isCorrect": true },
+        { "answer": "What time begin the class?" },
+        { "answer": "What time does begin the class?" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'I am interested in art'?",
+      "explanation": "Interés: 'interested in' → estoy interesado en el arte.",
+      "hint": "Terminado en -ed describe sentimiento.",
+      "tags": ["gramática", "adjetivos", "sentimientos"],
+      "answers": [
+        { "answer": "Soy interesante en el arte" },
+        { "answer": "Estoy interesado en el arte", "isCorrect": true },
+        { "answer": "Me interesa el arte" },
+        { "answer": "El arte es interesante" }
+      ]
+    },
+    {
+      "question": "Completa: The film was very ______.",
+      "explanation": "Causa sentimiento: 'exciting' = emocionante (-ing para cosa/situación).",
+      "hint": "Describe la película, no a la persona.",
+      "tags": ["gramática", "adjetivos", "-ed -ing"],
+      "answers": [
+        { "answer": "excited" },
+        { "answer": "exciting", "isCorrect": true },
+        { "answer": "excite" },
+        { "answer": "excitement" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la forma correcta del pasado de 'buy'?",
+      "explanation": "Irregular: buy → bought → bought.",
+      "hint": "No lleva -ed.",
+      "tags": ["gramática", "pasado", "verbos irregulares"],
+      "answers": [
+        { "answer": "buyed" },
+        { "answer": "bought", "isCorrect": true },
+        { "answer": "boughted" },
+        { "answer": "buying" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice '¿Puedes decirme la hora?'?",
+      "explanation": "Estilo indirecto en pregunta: 'Can you tell me the time?'.",
+      "hint": "Orden: sujeto + verbo.",
+      "tags": ["gramática", "preguntas", "estilo indirecto"],
+      "answers": [
+        { "answer": "Can you tell me what time is it?" },
+        { "answer": "Can you tell me the time?", "isCorrect": true },
+        { "answer": "Can you say me the time?" },
+        { "answer": "Can you speak me the time?" }
+      ]
+    },
+    {
+      "question": "¿Qué significa 'I have been to London'?",
+      "explanation": "'Have been to' = he estado (ya regresé).",
+      "hint": "No sigues allí ahora.",
+      "tags": ["gramática", "presente perfecto", "viajes"],
+      "answers": [
+        { "answer": "Estoy en Londres" },
+        { "answer": "He estado en Londres", "isCorrect": true },
+        { "answer": "Voy a Londres" },
+        { "answer": "Fui a Londres y sigo allí" }
+      ]
+    },
+    {
+      "question": "Completa: She has gone ______ France.",
+      "explanation": "'Has gone to' = fue y aún no ha regresado.",
+      "hint": "Preposición: a.",
+      "tags": ["gramática", "presente perfecto", "viajes"],
+      "answers": [
+        { "answer": "in" },
+        { "answer": "to", "isCorrect": true },
+        { "answer": "at" },
+        { "answer": "by" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la oración correcta con 'too'?",
+      "explanation": "'too' + adjetivo = demasiado: 'too big'.",
+      "hint": "Exceso.",
+      "tags": ["gramática", "adverbios", "grado"],
+      "answers": [
+        { "answer": "The box is big too" },
+        { "answer": "The box is too big", "isCorrect": true },
+        { "answer": "The box is too much big" },
+        { "answer": "The box is very too big" }
+      ]
+    },
+    {
+      "question": "¿Cómo se dice 'él corre más rápido que yo'?",
+      "explanation": "Adverbio comparativo: 'faster than' → más rápido que.",
+      "hint": "Corto: +er.",
+      "tags": ["gramática", "comparativos", "adverbios"],
+      "answers": [
+        { "answer": "He runs more fast than me" },
+        { "answer": "He runs faster than me", "isCorrect": true },
+        { "answer": "He runs fast than I" },
+        { "answer": "He runs fastest than me" }
+      ]
+    }
+  ]
+}

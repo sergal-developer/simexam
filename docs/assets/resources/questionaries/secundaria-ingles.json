@@ -1,0 +1,1103 @@
+{
+    "title": "Inglés para Secundaria",
+    "time": 0,
+    "tags": [
+        "español",
+        "prueba"
+    ],
+    "questionsCount": 50,
+    "questions": [
+        {
+            "question": "¿Cuál es la traducción correcta de "casa" al inglés?",
+            "explanation": "La palabra inglesa "house" significa "casa".",
+            "hint": "Piensa en el lugar donde vives.",
+            "tags": [
+                "español",
+                "vocabulario"
+            ],
+            "answers": [
+                {
+                    "answer": "House",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "School"
+                },
+                {
+                    "answer": "Street"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el pronombre personal para "ella"?",
+            "explanation": ""She" es el pronombre personal que corresponde a "ella".",
+            "hint": "Se utiliza para hablar de una mujer o niña.",
+            "tags": [
+                "español",
+                "pronombres"
+            ],
+            "answers": [
+                {
+                    "answer": "He"
+                },
+                {
+                    "answer": "She",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "They"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la forma correcta del verbo "to be" con "I"?",
+            "explanation": "Con el pronombre "I" se utiliza "am": "I am".",
+            "hint": "La estructura es I + ___ .",
+            "tags": [
+                "español",
+                "verbos"
+            ],
+            "answers": [
+                {
+                    "answer": "Is"
+                },
+                {
+                    "answer": "Are"
+                },
+                {
+                    "answer": "Am",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Qué significa "Good morning"?",
+            "explanation": ""Good morning" es una expresión utilizada para saludar por la mañana y significa "Buenos días".",
+            "hint": "Es un saludo que se usa antes del mediodía.",
+            "tags": [
+                "español",
+                "saludos"
+            ],
+            "answers": [
+                {
+                    "answer": "Buenas noches"
+                },
+                {
+                    "answer": "Buenos días",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Buenas tardes"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el plural correcto de "book"?",
+            "explanation": "Para formar el plural regular de "book" se agrega "-s": "books".",
+            "hint": "Los sustantivos regulares suelen agregar -s.",
+            "tags": [
+                "español",
+                "plural"
+            ],
+            "answers": [
+                {
+                    "answer": "Bookes"
+                },
+                {
+                    "answer": "Books",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Bookies"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la traducción de "perro"?",
+            "explanation": ""Dog" significa "perro" en inglés.",
+            "hint": "Es una mascota muy común.",
+            "tags": [
+                "español",
+                "vocabulario"
+            ],
+            "answers": [
+                {
+                    "answer": "Cat"
+                },
+                {
+                    "answer": "Bird"
+                },
+                {
+                    "answer": "Dog",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál oración está correctamente escrita?",
+            "explanation": "La forma correcta del presente del verbo "to be" con "She" es "She is a student".",
+            "hint": "Recuerda que con "she" se usa "is".",
+            "tags": [
+                "español",
+                "gramática"
+            ],
+            "answers": [
+                {
+                    "answer": "She are a student."
+                },
+                {
+                    "answer": "She is a student.",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "She am a student."
+                }
+            ]
+        },
+        {
+            "question": "¿Qué significa "blue"?",
+            "explanation": ""Blue" es el color "azul".",
+            "hint": "Es el color del cielo en un día despejado.",
+            "tags": [
+                "español",
+                "colores"
+            ],
+            "answers": [
+                {
+                    "answer": "Verde"
+                },
+                {
+                    "answer": "Azul",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Rojo"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el número "15" en inglés?",
+            "explanation": "El número 15 se escribe "fifteen" en inglés.",
+            "hint": "Está entre fourteen y sixteen.",
+            "tags": [
+                "español",
+                "números"
+            ],
+            "answers": [
+                {
+                    "answer": "Fifteen",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Fifty"
+                },
+                {
+                    "answer": "Five"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la traducción correcta de "comer"?",
+            "explanation": "El verbo "eat" significa "comer".",
+            "hint": "Es una acción relacionada con los alimentos.",
+            "tags": [
+                "español",
+                "verbos"
+            ],
+            "answers": [
+                {
+                    "answer": "Drink"
+                },
+                {
+                    "answer": "Eat",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Sleep"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué palabra completa correctamente la oración: "I ___ a student"?",
+            "explanation": "Con "I" se utiliza "am", por lo que la oración correcta es "I am a student".",
+            "hint": "Usa la forma del verbo "to be" correspondiente a I.",
+            "tags": [
+                "español",
+                "verbos"
+            ],
+            "answers": [
+                {
+                    "answer": "am",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "is"
+                },
+                {
+                    "answer": "are"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el opuesto de "big"?",
+            "explanation": ""Small" significa "pequeño" y es el opuesto de "big" (grande).",
+            "hint": "Busca el adjetivo que significa pequeño.",
+            "tags": [
+                "español",
+                "adjetivos"
+            ],
+            "answers": [
+                {
+                    "answer": "Tall"
+                },
+                {
+                    "answer": "Small",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Long"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la forma negativa correcta de "I am happy"?",
+            "explanation": "Para negar "I am happy" se coloca "not" después de "am": "I am not happy".",
+            "hint": "El negativo de "am" se forma con "am not".",
+            "tags": [
+                "español",
+                "negación"
+            ],
+            "answers": [
+                {
+                    "answer": "I not am happy."
+                },
+                {
+                    "answer": "I am not happy.",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "I am no happy."
+                }
+            ]
+        },
+        {
+            "question": "¿Qué artículo indefinido se usa antes de "apple"?",
+            "explanation": "Se utiliza "an" antes de palabras que comienzan con sonido vocálico, como "apple".",
+            "hint": "Apple comienza con un sonido de vocal.",
+            "tags": [
+                "español",
+                "artículos"
+            ],
+            "answers": [
+                {
+                    "answer": "A"
+                },
+                {
+                    "answer": "An",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "The"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el pasado de "play"?",
+            "explanation": ""Play" es un verbo regular y su pasado se forma agregando "-ed": "played".",
+            "hint": "Es un verbo regular.",
+            "tags": [
+                "español",
+                "pasado"
+            ],
+            "answers": [
+                {
+                    "answer": "Plaied"
+                },
+                {
+                    "answer": "Played",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Playd"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué significa "teacher"?",
+            "explanation": ""Teacher" significa "maestro" o "profesor".",
+            "hint": "Es la persona que enseña en una escuela.",
+            "tags": [
+                "español",
+                "escuela"
+            ],
+            "answers": [
+                {
+                    "answer": "Estudiante"
+                },
+                {
+                    "answer": "Profesor",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Director"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál oración expresa una acción que ocurre en este momento?",
+            "explanation": "El presente continuo se usa para acciones que están ocurriendo ahora: "She is reading".",
+            "hint": "Busca la estructura is + verbo terminado en -ing.",
+            "tags": [
+                "español",
+                "presente continuo"
+            ],
+            "answers": [
+                {
+                    "answer": "She reads every day."
+                },
+                {
+                    "answer": "She is reading now.",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "She read yesterday."
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el plural irregular de "child"?",
+            "explanation": "El plural irregular de "child" es "children".",
+            "hint": "No se forma simplemente agregando -s.",
+            "tags": [
+                "español",
+                "plural"
+            ],
+            "answers": [
+                {
+                    "answer": "Childs"
+                },
+                {
+                    "answer": "Children",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Childes"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué preposición completa la oración: "The book is ___ the table"?",
+            "explanation": ""On" significa "sobre" o "encima de" y se usa para indicar que el libro está sobre la mesa.",
+            "hint": "El libro está encima de la mesa.",
+            "tags": [
+                "español",
+                "preposiciones"
+            ],
+            "answers": [
+                {
+                    "answer": "On",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Under"
+                },
+                {
+                    "answer": "Between"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la tercera persona singular correcta del verbo "go" en presente simple?",
+            "explanation": "En tercera persona singular, "go" cambia a "goes".",
+            "hint": "Con he, she o it, algunos verbos agregan -es.",
+            "tags": [
+                "español",
+                "presente simple"
+            ],
+            "answers": [
+                {
+                    "answer": "Goes",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Go"
+                },
+                {
+                    "answer": "Goed"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué palabra interrogativa significa "dónde"?",
+            "explanation": ""Where" se utiliza para preguntar por lugares y significa "dónde".",
+            "hint": "Se usa para preguntar por un lugar.",
+            "tags": [
+                "español",
+                "preguntas"
+            ],
+            "answers": [
+                {
+                    "answer": "When"
+                },
+                {
+                    "answer": "Where",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Who"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la forma comparativa correcta de "tall"?",
+            "explanation": "El comparativo de "tall" se forma agregando "-er": "taller".",
+            "hint": "Los adjetivos cortos suelen usar -er en el comparativo.",
+            "tags": [
+                "español",
+                "comparativos"
+            ],
+            "answers": [
+                {
+                    "answer": "Tallest"
+                },
+                {
+                    "answer": "More tall"
+                },
+                {
+                    "answer": "Taller",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Qué significa "Monday"?",
+            "explanation": ""Monday" significa "lunes".",
+            "hint": "Es el día que normalmente inicia la semana escolar.",
+            "tags": [
+                "español",
+                "días"
+            ],
+            "answers": [
+                {
+                    "answer": "Martes"
+                },
+                {
+                    "answer": "Lunes",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Miércoles"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la forma correcta de preguntar la edad?",
+            "explanation": "En inglés se pregunta "How old are you?" para conocer la edad de una persona.",
+            "hint": "La pregunta comienza con "How old".",
+            "tags": [
+                "español",
+                "preguntas"
+            ],
+            "answers": [
+                {
+                    "answer": "How old are you?",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "How years you have?"
+                },
+                {
+                    "answer": "What old are you?"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué auxiliar se utiliza normalmente para preguntas en presente simple con "you"?",
+            "explanation": "Con "you" se utiliza el auxiliar "do" en preguntas del presente simple.",
+            "hint": "La estructura comienza con Do cuando el sujeto es you.",
+            "tags": [
+                "español",
+                "presente simple"
+            ],
+            "answers": [
+                {
+                    "answer": "Do",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Does"
+                },
+                {
+                    "answer": "Did"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el pasado de "go"?",
+            "explanation": ""Went" es la forma pasada irregular del verbo "go".",
+            "hint": "Es un verbo irregular.",
+            "tags": [
+                "español",
+                "pasado"
+            ],
+            "answers": [
+                {
+                    "answer": "Goed"
+                },
+                {
+                    "answer": "Gone"
+                },
+                {
+                    "answer": "Went",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Qué significa "library"?",
+            "explanation": ""Library" significa "biblioteca", el lugar donde se encuentran libros y otros materiales de consulta.",
+            "hint": "Es un lugar relacionado con los libros.",
+            "tags": [
+                "español",
+                "escuela"
+            ],
+            "answers": [
+                {
+                    "answer": "Biblioteca",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Laboratorio"
+                },
+                {
+                    "answer": "Cafetería"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál oración usa correctamente "there is"?",
+            "explanation": ""There is" se utiliza para indicar que hay una cosa en singular.",
+            "hint": "La palabra que sigue está en singular.",
+            "tags": [
+                "español",
+                "there is"
+            ],
+            "answers": [
+                {
+                    "answer": "There is a book on the desk.",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "There are a book on the desk."
+                },
+                {
+                    "answer": "There is two books on the desk."
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál oración usa correctamente "there are"?",
+            "explanation": ""There are" se utiliza para indicar que hay varias cosas.",
+            "hint": "El sustantivo está en plural.",
+            "tags": [
+                "español",
+                "there are"
+            ],
+            "answers": [
+                {
+                    "answer": "There are three pencils.",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "There is three pencils."
+                },
+                {
+                    "answer": "There are a pencil."
+                }
+            ]
+        },
+        {
+            "question": "¿Qué palabra significa "rápido"?",
+            "explanation": ""Fast" significa "rápido".",
+            "hint": "Puede describir a alguien o algo que se mueve con velocidad.",
+            "tags": [
+                "español",
+                "adjetivos"
+            ],
+            "answers": [
+                {
+                    "answer": "Slow"
+                },
+                {
+                    "answer": "Fast",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Weak"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el pronombre posesivo correspondiente a "mi"?",
+            "explanation": ""My" es el adjetivo posesivo que significa "mi".",
+            "hint": "Se coloca antes de un sustantivo para indicar posesión.",
+            "tags": [
+                "español",
+                "posesivos"
+            ],
+            "answers": [
+                {
+                    "answer": "My",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Your"
+                },
+                {
+                    "answer": "Their"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué palabra completa correctamente: "This is ___ orange"?",
+            "explanation": "Se utiliza "an" antes de "orange" porque comienza con sonido vocálico.",
+            "hint": "Orange comienza con sonido de vocal.",
+            "tags": [
+                "español",
+                "artículos"
+            ],
+            "answers": [
+                {
+                    "answer": "a"
+                },
+                {
+                    "answer": "an",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "are"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la forma negativa correcta de "He likes pizza"?",
+            "explanation": "En presente simple, con "he" se utiliza "doesn't" y el verbo principal vuelve a su forma base: "He doesn't like pizza".",
+            "hint": "Después de doesn't se usa el verbo sin -s.",
+            "tags": [
+                "español",
+                "negación"
+            ],
+            "answers": [
+                {
+                    "answer": "He don't likes pizza."
+                },
+                {
+                    "answer": "He doesn't like pizza.",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "He doesn't likes pizza."
+                }
+            ]
+        },
+        {
+            "question": "¿Qué palabra interrogativa significa "quién"?",
+            "explanation": ""Who" se utiliza para preguntar por una persona y significa "quién".",
+            "hint": "Se usa cuando preguntas por una persona.",
+            "tags": [
+                "español",
+                "preguntas"
+            ],
+            "answers": [
+                {
+                    "answer": "Who",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "What"
+                },
+                {
+                    "answer": "Where"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la forma superlativa correcta de "small"?",
+            "explanation": "El superlativo de "small" es "the smallest".",
+            "hint": "Los adjetivos cortos forman el superlativo con -est.",
+            "tags": [
+                "español",
+                "superlativos"
+            ],
+            "answers": [
+                {
+                    "answer": "The smaller"
+                },
+                {
+                    "answer": "The smallest",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "The most small"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué significa "yesterday"?",
+            "explanation": ""Yesterday" significa "ayer" y se refiere al día anterior al actual.",
+            "hint": "Es el día anterior a hoy.",
+            "tags": [
+                "español",
+                "tiempo"
+            ],
+            "answers": [
+                {
+                    "answer": "Mañana"
+                },
+                {
+                    "answer": "Ayer",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Hoy"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál oración está en presente continuo?",
+            "explanation": ""They are playing soccer" utiliza are + verbo terminado en -ing, estructura característica del presente continuo.",
+            "hint": "Busca el verbo auxiliar "are" seguido de un verbo en -ing.",
+            "tags": [
+                "español",
+                "presente continuo"
+            ],
+            "answers": [
+                {
+                    "answer": "They play soccer."
+                },
+                {
+                    "answer": "They played soccer."
+                },
+                {
+                    "answer": "They are playing soccer.",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Qué modal se utiliza para expresar habilidad en el presente?",
+            "explanation": ""Can" se utiliza para expresar habilidad o capacidad, por ejemplo, "I can swim".",
+            "hint": "La palabra significa "poder" en expresiones de habilidad.",
+            "tags": [
+                "español",
+                "modales"
+            ],
+            "answers": [
+                {
+                    "answer": "Can",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Must"
+                },
+                {
+                    "answer": "Should"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál oración expresa una obligación?",
+            "explanation": ""Must" se utiliza para expresar obligación o necesidad fuerte: "You must study".",
+            "hint": "Busca el verbo modal relacionado con una obligación.",
+            "tags": [
+                "español",
+                "modales"
+            ],
+            "answers": [
+                {
+                    "answer": "You can study."
+                },
+                {
+                    "answer": "You must study.",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "You may study."
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la traducción de "hermano"?",
+            "explanation": ""Brother" significa "hermano".",
+            "hint": "Es un miembro masculino de tu familia que puede ser mayor o menor que tú.",
+            "tags": [
+                "español",
+                "familia"
+            ],
+            "answers": [
+                {
+                    "answer": "Brother",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Sister"
+                },
+                {
+                    "answer": "Cousin"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál palabra completa correctamente: "I have ___ pencils"?",
+            "explanation": ""Some" se utiliza normalmente en oraciones afirmativas para indicar una cantidad indefinida de sustantivos contables en plural.",
+            "hint": "La oración es afirmativa y "pencils" está en plural.",
+            "tags": [
+                "español",
+                "cuantificadores"
+            ],
+            "answers": [
+                {
+                    "answer": "Some",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Any"
+                },
+                {
+                    "answer": "Much"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la forma correcta del pasado de "see"?",
+            "explanation": ""Saw" es la forma de pasado simple del verbo irregular "see".",
+            "hint": "Es un verbo irregular que cambia completamente en pasado.",
+            "tags": [
+                "español",
+                "pasado"
+            ],
+            "answers": [
+                {
+                    "answer": "Seed"
+                },
+                {
+                    "answer": "Saw",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Seen"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué palabra significa "feliz"?",
+            "explanation": ""Happy" significa "feliz".",
+            "hint": "Es lo contrario de "sad".",
+            "tags": [
+                "español",
+                "adjetivos"
+            ],
+            "answers": [
+                {
+                    "answer": "Angry"
+                },
+                {
+                    "answer": "Happy",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Tired"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la forma correcta de decir "Hay cinco estudiantes"?",
+            "explanation": "Como "students" está en plural, se utiliza "There are": "There are five students".",
+            "hint": "El sustantivo está en plural.",
+            "tags": [
+                "español",
+                "there are"
+            ],
+            "answers": [
+                {
+                    "answer": "There is five students."
+                },
+                {
+                    "answer": "There are five students.",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "There am five students."
+                }
+            ]
+        },
+        {
+            "question": "¿Qué palabra significa "antes"?",
+            "explanation": ""Before" significa "antes" y se utiliza para indicar que algo ocurre previamente a otra acción o momento.",
+            "hint": "Es lo contrario de "after".",
+            "tags": [
+                "español",
+                "tiempo"
+            ],
+            "answers": [
+                {
+                    "answer": "After"
+                },
+                {
+                    "answer": "Before",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "During"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la pregunta correcta para saber qué le gusta a una persona?",
+            "explanation": ""What do you like?" significa "¿Qué te gusta?" y utiliza correctamente el auxiliar "do" con "you".",
+            "hint": "Usa What + do + you + verbo.",
+            "tags": [
+                "español",
+                "preguntas"
+            ],
+            "answers": [
+                {
+                    "answer": "What you do like?"
+                },
+                {
+                    "answer": "What do you like?",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "What does you like?"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el pasado correcto de "have"?",
+            "explanation": "El pasado simple de "have" es "had".",
+            "hint": "Es un verbo irregular.",
+            "tags": [
+                "español",
+                "pasado"
+            ],
+            "answers": [
+                {
+                    "answer": "Haved"
+                },
+                {
+                    "answer": "Had",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Has"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué significa "expensive"?",
+            "explanation": ""Expensive" significa "caro" o "costoso".",
+            "hint": "Describe algo que cuesta mucho dinero.",
+            "tags": [
+                "español",
+                "adjetivos"
+            ],
+            "answers": [
+                {
+                    "answer": "Barato"
+                },
+                {
+                    "answer": "Caro",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Pequeño"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la forma correcta de decir "Ella puede nadar"?",
+            "explanation": "Para expresar habilidad con "she" se utiliza "can" seguido del verbo en su forma base: "She can swim".",
+            "hint": "Después de "can" se usa el verbo sin "to".",
+            "tags": [
+                "español",
+                "modales"
+            ],
+            "answers": [
+                {
+                    "answer": "She can swim.",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "She cans swim."
+                },
+                {
+                    "answer": "She can swims."
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál oración utiliza correctamente el presente simple?",
+            "explanation": "Con "he" en presente simple, el verbo "work" toma la terminación "-s": "He works every day".",
+            "hint": "Recuerda la tercera persona singular.",
+            "tags": [
+                "español",
+                "presente simple"
+            ],
+            "answers": [
+                {
+                    "answer": "He work every day."
+                },
+                {
+                    "answer": "He works every day.",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "He working every day."
+                }
+            ]
+        },
+        {
+            "question": "¿Qué palabra interrogativa significa "cuándo"?",
+            "explanation": ""When" se utiliza para preguntar por el momento o tiempo en que ocurre algo.",
+            "hint": "Pregunta por el momento en que ocurre una acción.",
+            "tags": [
+                "español",
+                "preguntas"
+            ],
+            "answers": [
+                {
+                    "answer": "Why"
+                },
+                {
+                    "answer": "When",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Which"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la traducción correcta de "amigo"?",
+            "explanation": ""Friend" significa "amigo" o "amiga".",
+            "hint": "Es una persona con quien tienes una relación de amistad.",
+            "tags": [
+                "español",
+                "vocabulario"
+            ],
+            "answers": [
+                {
+                    "answer": "Friend",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Father"
+                },
+                {
+                    "answer": "Neighbor"
+                }
+            ]
+        }
+    ]
+}

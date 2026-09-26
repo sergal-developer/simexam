@@ -1,0 +1,1228 @@
+{
+  "title": "Gramática para Primaria",
+  "time": 0,
+  "tags": [
+    "español",
+    "prueba"
+  ],"questionsCount": 50,
+  "questions": [
+    {
+      "question": "¿Cuál de estas palabras es un sustantivo?",
+      "explanation": "Casa es un sustantivo porque nombra un lugar u objeto.",
+      "hint": "Busca la palabra que nombra algo.",
+      "tags": [
+        "español",
+        "reglas"
+      ],
+      "answers": [
+        {
+          "answer": "Casa",
+          "isCorrect": true
+        },
+        {
+          "answer": "Correr"
+        },
+        {
+          "answer": "Rápidamente"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es un verbo?",
+      "explanation": "Saltar es un verbo porque expresa una acción.",
+      "hint": "Piensa en una palabra que indique una acción.",
+      "tags": [
+        "español",
+        "verbos"
+      ],
+      "answers": [
+        {
+          "answer": "Saltar",
+          "isCorrect": true
+        },
+        {
+          "answer": "Pelota"
+        },
+        {
+          "answer": "Azul"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál de estas palabras es un adjetivo?",
+      "explanation": "Grande es un adjetivo porque describe una característica de un sustantivo.",
+      "hint": "Busca la palabra que describe cómo es algo.",
+      "tags": [
+        "español",
+        "adjetivos"
+      ],
+      "answers": [
+        {
+          "answer": "Grande",
+          "isCorrect": true
+        },
+        {
+          "answer": "Correr"
+        },
+        {
+          "answer": "Escuela"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el plural de 'flor'?",
+      "explanation": "El plural de flor es flores porque se agrega la terminación -es.",
+      "hint": "Piensa en varias flores.",
+      "tags": [
+        "español",
+        "plural"
+      ],
+      "answers": [
+        {
+          "answer": "Flores",
+          "isCorrect": true
+        },
+        {
+          "answer": "Flors"
+        },
+        {
+          "answer": "Floras"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el singular de 'árboles'?",
+      "explanation": "El singular de árboles es árbol.",
+      "hint": "Piensa en un solo árbol.",
+      "tags": [
+        "español",
+        "singular"
+      ],
+      "answers": [
+        {
+          "answer": "Árbol",
+          "isCorrect": true
+        },
+        {
+          "answer": "Árbola"
+        },
+        {
+          "answer": "Árboles"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración está escrita correctamente?",
+      "explanation": "La oración comienza con mayúscula y termina con punto.",
+      "hint": "Revisa la primera letra y el signo final.",
+      "tags": [
+        "español",
+        "oraciones"
+      ],
+      "answers": [
+        {
+          "answer": "María juega en el parque.",
+          "isCorrect": true
+        },
+        {
+          "answer": "maría juega en el parque"
+        },
+        {
+          "answer": "María juega en el parque"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué palabra es un pronombre personal?",
+      "explanation": "Ella es un pronombre personal porque puede sustituir el nombre de una persona.",
+      "hint": "Busca una palabra que pueda sustituir a un nombre.",
+      "tags": [
+        "español",
+        "pronombres"
+      ],
+      "answers": [
+        {
+          "answer": "Ella",
+          "isCorrect": true
+        },
+        {
+          "answer": "Casa"
+        },
+        {
+          "answer": "Bonito"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el artículo definido femenino singular?",
+      "explanation": "La es el artículo definido que acompaña a sustantivos femeninos en singular.",
+      "hint": "Puede acompañar a la palabra 'mesa'.",
+      "tags": [
+        "español",
+        "artículos"
+      ],
+      "answers": [
+        {
+          "answer": "La",
+          "isCorrect": true
+        },
+        {
+          "answer": "Los"
+        },
+        {
+          "answer": "Un"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el artículo definido masculino plural?",
+      "explanation": "Los es el artículo definido para sustantivos masculinos en plural.",
+      "hint": "Puede acompañar a la palabra 'libros'.",
+      "tags": [
+        "español",
+        "artículos"
+      ],
+      "answers": [
+        {
+          "answer": "Los",
+          "isCorrect": true
+        },
+        {
+          "answer": "La"
+        },
+        {
+          "answer": "Una"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es un adverbio?",
+      "explanation": "Rápidamente es un adverbio porque modifica la manera en que se realiza una acción.",
+      "hint": "Busca una palabra que indique cómo se realiza una acción.",
+      "tags": [
+        "español",
+        "adverbios"
+      ],
+      "answers": [
+        {
+          "answer": "Rápidamente",
+          "isCorrect": true
+        },
+        {
+          "answer": "Zapato"
+        },
+        {
+          "answer": "Rojo"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración está en tiempo presente?",
+      "explanation": "Yo estudio expresa una acción que ocurre en el presente.",
+      "hint": "Busca la acción que sucede ahora.",
+      "tags": [
+        "español",
+        "tiempos verbales"
+      ],
+      "answers": [
+        {
+          "answer": "Yo estudio.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Yo estudié."
+        },
+        {
+          "answer": "Yo estudiaré."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración está en tiempo pasado?",
+      "explanation": "Ayer jugué expresa una acción que ya ocurrió.",
+      "hint": "Busca una acción que sucedió antes.",
+      "tags": [
+        "español",
+        "tiempos verbales"
+      ],
+      "answers": [
+        {
+          "answer": "Ayer jugué.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Hoy juego."
+        },
+        {
+          "answer": "Mañana jugaré."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración está en tiempo futuro?",
+      "explanation": "Mañana viajaré expresa una acción que ocurrirá después.",
+      "hint": "Busca una acción que todavía no ocurre.",
+      "tags": [
+        "español",
+        "tiempos verbales"
+      ],
+      "answers": [
+        {
+          "answer": "Mañana viajaré.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Ayer viajé."
+        },
+        {
+          "answer": "Hoy viajo."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el sujeto de la oración 'Pedro corre rápido'?",
+      "explanation": "Pedro es el sujeto porque realiza la acción de correr.",
+      "hint": "Pregunta quién realiza la acción.",
+      "tags": [
+        "español",
+        "sujeto"
+      ],
+      "answers": [
+        {
+          "answer": "Pedro",
+          "isCorrect": true
+        },
+        {
+          "answer": "Corre"
+        },
+        {
+          "answer": "Rápido"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el verbo de la oración 'Ana canta una canción'?",
+      "explanation": "Canta es el verbo porque indica la acción que realiza Ana.",
+      "hint": "Busca la palabra que expresa la acción.",
+      "tags": [
+        "español",
+        "verbos"
+      ],
+      "answers": [
+        {
+          "answer": "Canta",
+          "isCorrect": true
+        },
+        {
+          "answer": "Ana"
+        },
+        {
+          "answer": "Canción"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el predicado de 'Luis lee un libro'?",
+      "explanation": "Lee un libro es el predicado porque indica lo que hace Luis.",
+      "hint": "Es la parte de la oración que dice qué hace el sujeto.",
+      "tags": [
+        "español",
+        "predicado"
+      ],
+      "answers": [
+        {
+          "answer": "Lee un libro",
+          "isCorrect": true
+        },
+        {
+          "answer": "Luis"
+        },
+        {
+          "answer": "Libro"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra está escrita correctamente?",
+      "explanation": "La palabra avión lleva tilde porque es una palabra aguda terminada en vocal.",
+      "hint": "Observa dónde está la sílaba que suena con mayor fuerza.",
+      "tags": [
+        "español",
+        "acentuación"
+      ],
+      "answers": [
+        {
+          "answer": "Avión",
+          "isCorrect": true
+        },
+        {
+          "answer": "Avion"
+        },
+        {
+          "answer": "Ávion"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es una palabra aguda?",
+      "explanation": "Canción es aguda porque la sílaba tónica es la última: ción.",
+      "hint": "La sílaba que suena más fuerte está al final.",
+      "tags": [
+        "español",
+        "acentuación"
+      ],
+      "answers": [
+        {
+          "answer": "Canción",
+          "isCorrect": true
+        },
+        {
+          "answer": "Árbol"
+        },
+        {
+          "answer": "Lápiz"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es una palabra grave o llana?",
+      "explanation": "Mesa es una palabra grave porque la sílaba tónica es la penúltima.",
+      "hint": "La sílaba fuerte está en la penúltima posición.",
+      "tags": [
+        "español",
+        "acentuación"
+      ],
+      "answers": [
+        {
+          "answer": "Mesa",
+          "isCorrect": true
+        },
+        {
+          "answer": "Camión"
+        },
+        {
+          "answer": "Pájaro"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es una palabra esdrújula?",
+      "explanation": "Música es esdrújula porque la sílaba tónica es la antepenúltima.",
+      "hint": "La sílaba fuerte está tres posiciones desde el final.",
+      "tags": [
+        "español",
+        "acentuación"
+      ],
+      "answers": [
+        {
+          "answer": "Música",
+          "isCorrect": true
+        },
+        {
+          "answer": "Papel"
+        },
+        {
+          "answer": "Mesa"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué signo se utiliza al final de una oración afirmativa?",
+      "explanation": "El punto se coloca al final de una oración afirmativa.",
+      "hint": "Es un signo pequeño que indica que la oración terminó.",
+      "tags": [
+        "español",
+        "puntuación"
+      ],
+      "answers": [
+        {
+          "answer": "Punto (.)",
+          "isCorrect": true
+        },
+        {
+          "answer": "Coma (,)"
+        },
+        {
+          "answer": "Dos puntos (:)"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué signo se utiliza para hacer una pregunta?",
+      "explanation": "Las preguntas en español se escriben entre signos de interrogación: ¿ ?.",
+      "hint": "Se coloca uno al inicio y otro al final de la pregunta.",
+      "tags": [
+        "español",
+        "puntuación"
+      ],
+      "answers": [
+        {
+          "answer": "¿ ?",
+          "isCorrect": true
+        },
+        {
+          "answer": "¡ !"
+        },
+        {
+          "answer": "( )"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué signos se utilizan para expresar sorpresa o emoción?",
+      "explanation": "Los signos de exclamación ¡ ! se usan para expresar sorpresa, emoción, alegría, enojo u otras emociones.",
+      "hint": "Son los signos que aparecen en una expresión como ¡Qué alegría!",
+      "tags": [
+        "español",
+        "puntuación"
+      ],
+      "answers": [
+        {
+          "answer": "¡ !",
+          "isCorrect": true
+        },
+        {
+          "answer": "¿ ?"
+        },
+        {
+          "answer": "[ ]"
+        }
+      ]
+    },
+    {
+      "question": "¿Para qué sirve principalmente la coma?",
+      "explanation": "La coma puede separar elementos de una enumeración.",
+      "hint": "Piensa en una lista de varios elementos dentro de una oración.",
+      "tags": [
+        "español",
+        "puntuación"
+      ],
+      "answers": [
+        {
+          "answer": "Para separar elementos de una enumeración",
+          "isCorrect": true
+        },
+        {
+          "answer": "Para terminar siempre una oración"
+        },
+        {
+          "answer": "Para indicar una pregunta"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración utiliza correctamente la coma?",
+      "explanation": "En una enumeración, la coma separa los elementos: manzanas, peras y uvas.",
+      "hint": "Observa cómo se separan los elementos de la lista.",
+      "tags": [
+        "español",
+        "puntuación"
+      ],
+      "answers": [
+        {
+          "answer": "Compré manzanas, peras y uvas.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Compré manzanas peras y uvas."
+        },
+        {
+          "answer": "Compré, manzanas peras y uvas."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es un sustantivo propio?",
+      "explanation": "México es un sustantivo propio porque nombra de manera específica a un país y se escribe con mayúscula.",
+      "hint": "Busca el nombre particular de un lugar.",
+      "tags": [
+        "español",
+        "sustantivos"
+      ],
+      "answers": [
+        {
+          "answer": "México",
+          "isCorrect": true
+        },
+        {
+          "answer": "país"
+        },
+        {
+          "answer": "ciudad"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es un sustantivo común?",
+      "explanation": "Perro es un sustantivo común porque nombra a un animal de manera general.",
+      "hint": "Busca un nombre que no sea específico.",
+      "tags": [
+        "español",
+        "sustantivos"
+      ],
+      "answers": [
+        {
+          "answer": "Perro",
+          "isCorrect": true
+        },
+        {
+          "answer": "México"
+        },
+        {
+          "answer": "María"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el femenino de 'actor'?",
+      "explanation": "El femenino de actor es actriz.",
+      "hint": "Busca la forma femenina correcta de la palabra.",
+      "tags": [
+        "español",
+        "género"
+      ],
+      "answers": [
+        {
+          "answer": "Actriz",
+          "isCorrect": true
+        },
+        {
+          "answer": "Actora"
+        },
+        {
+          "answer": "Actores"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el masculino de 'reina'?",
+      "explanation": "El masculino de reina es rey.",
+      "hint": "Piensa en el gobernante masculino de un reino.",
+      "tags": [
+        "español",
+        "género"
+      ],
+      "answers": [
+        {
+          "answer": "Rey",
+          "isCorrect": true
+        },
+        {
+          "answer": "Reino"
+        },
+        {
+          "answer": "Reina"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál pronombre corresponde a 'María y yo'?",
+      "explanation": "Nosotros es el pronombre que puede sustituir a María y yo cuando el grupo incluye al hablante y a otra persona.",
+      "hint": "El grupo incluye a la persona que habla.",
+      "tags": [
+        "español",
+        "pronombres"
+      ],
+      "answers": [
+        {
+          "answer": "Nosotros",
+          "isCorrect": true
+        },
+        {
+          "answer": "Ellos"
+        },
+        {
+          "answer": "Tú"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál pronombre corresponde a 'Juan y Pedro'?",
+      "explanation": "Ellos es el pronombre que puede sustituir a Juan y Pedro.",
+      "hint": "Son dos personas de las que se habla.",
+      "tags": [
+        "español",
+        "pronombres"
+      ],
+      "answers": [
+        {
+          "answer": "Ellos",
+          "isCorrect": true
+        },
+        {
+          "answer": "Nosotros"
+        },
+        {
+          "answer": "Yo"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración tiene concordancia correcta entre sujeto y verbo?",
+      "explanation": "Los niños juegan presenta concordancia porque el sujeto está en plural y el verbo también.",
+      "hint": "El sujeto y el verbo deben coincidir en número.",
+      "tags": [
+        "español",
+        "concordancia"
+      ],
+      "answers": [
+        {
+          "answer": "Los niños juegan.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Los niños juega."
+        },
+        {
+          "answer": "El niños juegan."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración tiene concordancia correcta?",
+      "explanation": "La niña canta presenta concordancia de género y número entre el sujeto y sus palabras relacionadas.",
+      "hint": "Observa que el sujeto es femenino y singular.",
+      "tags": [
+        "español",
+        "concordancia"
+      ],
+      "answers": [
+        {
+          "answer": "La niña canta.",
+          "isCorrect": true
+        },
+        {
+          "answer": "El niña canta."
+        },
+        {
+          "answer": "Las niña canta."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es un verbo en infinitivo?",
+      "explanation": "Comer es un verbo en infinitivo porque termina en -er.",
+      "hint": "Los infinitivos suelen terminar en -ar, -er o -ir.",
+      "tags": [
+        "español",
+        "verbos"
+      ],
+      "answers": [
+        {
+          "answer": "Comer",
+          "isCorrect": true
+        },
+        {
+          "answer": "Comió"
+        },
+        {
+          "answer": "Come"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es un verbo en infinitivo terminado en -ir?",
+      "explanation": "Vivir es un verbo en infinitivo y termina en -ir.",
+      "hint": "Busca un verbo que termine en -ir.",
+      "tags": [
+        "español",
+        "verbos"
+      ],
+      "answers": [
+        {
+          "answer": "Vivir",
+          "isCorrect": true
+        },
+        {
+          "answer": "Vivió"
+        },
+        {
+          "answer": "Vive"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es un verbo en infinitivo terminado en -ar?",
+      "explanation": "Cantar es un verbo en infinitivo que termina en -ar.",
+      "hint": "Busca un verbo que termine en -ar.",
+      "tags": [
+        "español",
+        "verbos"
+      ],
+      "answers": [
+        {
+          "answer": "Cantar",
+          "isCorrect": true
+        },
+        {
+          "answer": "Cantó"
+        },
+        {
+          "answer": "Canta"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración es interrogativa?",
+      "explanation": "¿Dónde vives? es una oración interrogativa porque formula una pregunta.",
+      "hint": "Busca la oración que pregunta algo.",
+      "tags": [
+        "español",
+        "oraciones"
+      ],
+      "answers": [
+        {
+          "answer": "¿Dónde vives?",
+          "isCorrect": true
+        },
+        {
+          "answer": "Vivo en México."
+        },
+        {
+          "answer": "¡Qué bonito!"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración es exclamativa?",
+      "explanation": "¡Qué día tan hermoso! expresa emoción y utiliza signos de exclamación.",
+      "hint": "Busca una oración que exprese una emoción intensa.",
+      "tags": [
+        "español",
+        "oraciones"
+      ],
+      "answers": [
+        {
+          "answer": "¡Qué día tan hermoso!",
+          "isCorrect": true
+        },
+        {
+          "answer": "¿Qué día es?"
+        },
+        {
+          "answer": "Hoy es lunes."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración es enunciativa afirmativa?",
+      "explanation": "El sol brilla es una oración que comunica una información afirmativa.",
+      "hint": "Busca una oración que informe de algo sin preguntar ni exclamar.",
+      "tags": [
+        "español",
+        "oraciones"
+      ],
+      "answers": [
+        {
+          "answer": "El sol brilla.",
+          "isCorrect": true
+        },
+        {
+          "answer": "¿Brilla el sol?"
+        },
+        {
+          "answer": "¡Qué brillante!"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es sinónimo de 'feliz'?",
+      "explanation": "Alegre es un sinónimo de feliz porque tiene un significado parecido.",
+      "hint": "Busca una palabra que tenga un significado similar.",
+      "tags": [
+        "español",
+        "sinónimos"
+      ],
+      "answers": [
+        {
+          "answer": "Alegre",
+          "isCorrect": true
+        },
+        {
+          "answer": "Triste"
+        },
+        {
+          "answer": "Enojado"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es antónimo de 'grande'?",
+      "explanation": "Pequeño es antónimo de grande porque expresa una idea contraria.",
+      "hint": "Busca la palabra que significa lo contrario.",
+      "tags": [
+        "español",
+        "antónimos"
+      ],
+      "answers": [
+        {
+          "answer": "Pequeño",
+          "isCorrect": true
+        },
+        {
+          "answer": "Enorme"
+        },
+        {
+          "answer": "Gigante"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra está escrita correctamente con mayúscula?",
+      "explanation": "Pedro se escribe con mayúscula porque es un nombre propio.",
+      "hint": "Los nombres propios comienzan con mayúscula.",
+      "tags": [
+        "español",
+        "mayúsculas"
+      ],
+      "answers": [
+        {
+          "answer": "Pedro",
+          "isCorrect": true
+        },
+        {
+          "answer": "pedro"
+        },
+        {
+          "answer": "PEDRO"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra necesita tilde?",
+      "explanation": "Lápiz lleva tilde porque es una palabra grave que termina en una consonante distinta de n o s.",
+      "hint": "Observa la sílaba tónica y la letra final.",
+      "tags": [
+        "español",
+        "acentuación"
+      ],
+      "answers": [
+        {
+          "answer": "Lápiz",
+          "isCorrect": true
+        },
+        {
+          "answer": "Mesa"
+        },
+        {
+          "answer": "Casa"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuántas sílabas tiene la palabra 'mariposa'?",
+      "explanation": "Mariposa se divide en ma-ri-po-sa, por lo que tiene cuatro sílabas.",
+      "hint": "Separa la palabra al pronunciarla lentamente.",
+      "tags": [
+        "español",
+        "sílabas"
+      ],
+      "answers": [
+        {
+          "answer": "4",
+          "isCorrect": true
+        },
+        {
+          "answer": "3"
+        },
+        {
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra tiene una sola sílaba?",
+      "explanation": "Sol tiene una sola sílaba, por lo que es una palabra monosílaba.",
+      "hint": "Busca la palabra que se pronuncia en un solo golpe de voz.",
+      "tags": [
+        "español",
+        "sílabas"
+      ],
+      "answers": [
+        {
+          "answer": "Sol",
+          "isCorrect": true
+        },
+        {
+          "answer": "Casa"
+        },
+        {
+          "answer": "Pelota"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra tiene tres sílabas?",
+      "explanation": "Camino se divide en ca-mi-no, por lo que tiene tres sílabas.",
+      "hint": "Pronuncia la palabra separando sus golpes de voz.",
+      "tags": [
+        "español",
+        "sílabas"
+      ],
+      "answers": [
+        {
+          "answer": "Camino",
+          "isCorrect": true
+        },
+        {
+          "answer": "Pan"
+        },
+        {
+          "answer": "Mesa"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración usa correctamente el artículo 'una'?",
+      "explanation": "Una acompaña a un sustantivo femenino singular, como bicicleta.",
+      "hint": "Observa el género y número del sustantivo.",
+      "tags": [
+        "español",
+        "artículos"
+      ],
+      "answers": [
+        {
+          "answer": "Una bicicleta",
+          "isCorrect": true
+        },
+        {
+          "answer": "Una libros"
+        },
+        {
+          "answer": "Una perro"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración usa correctamente el artículo 'un'?",
+      "explanation": "Un acompaña a un sustantivo masculino singular, como perro.",
+      "hint": "Observa que el sustantivo es masculino y singular.",
+      "tags": [
+        "español",
+        "artículos"
+      ],
+      "answers": [
+        {
+          "answer": "Un perro",
+          "isCorrect": true
+        },
+        {
+          "answer": "Un casas"
+        },
+        {
+          "answer": "Un niñas"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué palabra completa correctamente la oración: 'El gato ___ sobre la mesa'?",
+      "explanation": "Está completa correctamente la oración porque indica dónde se encuentra el gato.",
+      "hint": "Busca una forma del verbo estar.",
+      "tags": [
+        "español",
+        "verbos"
+      ],
+      "answers": [
+        {
+          "answer": "está",
+          "isCorrect": true
+        },
+        {
+          "answer": "están"
+        },
+        {
+          "answer": "estás"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra completa correctamente la oración: 'Nosotros ___ al parque'?",
+      "explanation": "Vamos concuerda con el pronombre nosotros y expresa una acción en presente.",
+      "hint": "Busca la forma del verbo ir para nosotros.",
+      "tags": [
+        "español",
+        "verbos"
+      ],
+      "answers": [
+        {
+          "answer": "vamos",
+          "isCorrect": true
+        },
+        {
+          "answer": "va"
+        },
+        {
+          "answer": "vas"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra funciona como adjetivo en 'El coche rojo'?",
+      "explanation": "Rojo es un adjetivo porque describe una característica del coche.",
+      "hint": "Busca la palabra que dice cómo es el coche.",
+      "tags": [
+        "español",
+        "adjetivos"
+      ],
+      "answers": [
+        {
+          "answer": "Rojo",
+          "isCorrect": true
+        },
+        {
+          "answer": "Coche"
+        },
+        {
+          "answer": "El"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración contiene un pronombre personal en primera persona singular?",
+      "explanation": "Yo es un pronombre personal de primera persona singular.",
+      "hint": "Busca el pronombre que usa quien habla para referirse a sí mismo.",
+      "tags": [
+        "español",
+        "pronombres"
+      ],
+      "answers": [
+        {
+          "answer": "Yo tengo un libro.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Tú tienes un libro."
+        },
+        {
+          "answer": "Ella tiene un libro."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es un pronombre de segunda persona singular?",
+      "explanation": "Tú es un pronombre personal de segunda persona singular.",
+      "hint": "Se usa para dirigirse directamente a una persona.",
+      "tags": [
+        "español",
+        "pronombres"
+      ],
+      "answers": [
+        {
+          "answer": "Tú",
+          "isCorrect": true
+        },
+        {
+          "answer": "Yo"
+        },
+        {
+          "answer": "Ellos"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración está correctamente escrita?",
+      "explanation": "La oración tiene mayúscula inicial, palabras correctamente escritas y punto final.",
+      "hint": "Revisa mayúsculas, ortografía y puntuación.",
+      "tags": [
+        "español",
+        "ortografía"
+      ],
+      "answers": [
+        {
+          "answer": "Mi hermano juega fútbol.",
+          "isCorrect": true
+        },
+        {
+          "answer": "mi hermano juega futbol"
+        },
+        {
+          "answer": "Mi hermano juega fútbol"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué palabra completa correctamente la oración: 'Las flores son ___'?",
+      "explanation": "Bonitas concuerda en género y número con flores, que es femenino plural.",
+      "hint": "El adjetivo debe concordar con flores.",
+      "tags": [
+        "español",
+        "concordancia"
+      ],
+      "answers": [
+        {
+          "answer": "bonitas",
+          "isCorrect": true
+        },
+        {
+          "answer": "bonito"
+        },
+        {
+          "answer": "bonita"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué palabra completa correctamente la oración: 'El niño es ___'?",
+      "explanation": "Alto concuerda con niño en género masculino y número singular.",
+      "hint": "El adjetivo debe concordar con niño.",
+      "tags": [
+        "español",
+        "concordancia"
+      ],
+      "answers": [
+        {
+          "answer": "alto",
+          "isCorrect": true
+        },
+        {
+          "answer": "altas"
+        },
+        {
+          "answer": "alta"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el sujeto en 'Los pájaros vuelan'?",
+      "explanation": "Los pájaros es el sujeto porque son quienes realizan la acción de volar.",
+      "hint": "Pregunta quiénes realizan la acción.",
+      "tags": [
+        "español",
+        "sujeto"
+      ],
+      "answers": [
+        {
+          "answer": "Los pájaros",
+          "isCorrect": true
+        },
+        {
+          "answer": "Vuelan"
+        },
+        {
+          "answer": "Pájaros vuelan"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el predicado en 'La maestra explica la lección'?",
+      "explanation": "Explica la lección es el predicado porque indica lo que hace la maestra.",
+      "hint": "Busca la parte que expresa lo que hace el sujeto.",
+      "tags": [
+        "español",
+        "predicado"
+      ],
+      "answers": [
+        {
+          "answer": "Explica la lección",
+          "isCorrect": true
+        },
+        {
+          "answer": "La maestra"
+        },
+        {
+          "answer": "La lección"
+        }
+      ]
+    }
+  ]
+}

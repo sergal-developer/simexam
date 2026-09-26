@@ -22,7 +22,7 @@
                             <div>{{ 'empty_exam_subtitle' | translate }}</div>
 
                             <ng-container *ngIf="permissions.create">
-                                <button (click)="createQuiz()">
+                                <button (click)="selectQuiz()">
                                     <div class="inner">
                                         <span>{{ 'new_quiz' | translate }}</span> <span class="material-icons-outlined">
                                             add
@@ -194,7 +194,7 @@
             <div class="root-container">
                 <div class="hero-section">
                     <ng-container *ngIf="permissions.create">
-                        <button (click)="createQuiz()" *ngIf="listQuiz.length">
+                        <button (click)="selectQuiz()" *ngIf="listQuiz.length">
                             <div class="inner">
                                 {{ 'new_quiz' | translate }} <span class="material-icons-outlined">
                                     add
@@ -236,7 +236,7 @@
                     <div>{{ 'empty_exam_subtitle' | translate }}</div>
 
                     <ng-container *ngIf="permissions.create">
-                        <button (click)="createQuiz()">
+                        <button (click)="selectQuiz()">
                             <div class="inner">
                                 <span>{{ 'new_quiz' | translate }}</span> <span class="material-icons-outlined">
                                     add

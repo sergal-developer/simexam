@@ -1,0 +1,1307 @@
+{
+  "title": "Matemáticas para Primaria",
+  "time": 60,
+  "tags": [
+    "español",
+    "prueba"
+  ],
+  "questionsCount": 50,
+  "questions": [
+    {
+      "question": "¿Cuánto es 27 + 15?",
+      "explanation": "Al sumar 27 y 15 se obtiene 42.",
+      "hint": "Suma primero las unidades y después las decenas.",
+      "tags": [
+        "español",
+        "suma"
+      ],
+      "answers": [
+        {
+          "answer": "40"
+        },
+        {
+          "answer": "42",
+          "isCorrect": true
+        },
+        {
+          "answer": "44"
+        },
+        {
+          "answer": "45"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuánto es 63 - 28?",
+      "explanation": "Al restar 28 de 63 se obtiene 35.",
+      "hint": "Puedes separar 28 en 20 y 8.",
+      "tags": [
+        "español",
+        "resta"
+      ],
+      "answers": [
+        {
+          "answer": "25"
+        },
+        {
+          "answer": "35",
+          "isCorrect": true
+        },
+        {
+          "answer": "45"
+        },
+        {
+          "answer": "55"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuánto es 7 × 8?",
+      "explanation": "Multiplicar 7 por 8 equivale a sumar 7 ocho veces, dando 56.",
+      "hint": "Recuerda la tabla del 8.",
+      "tags": [
+        "español",
+        "multiplicación"
+      ],
+      "answers": [
+        {
+          "answer": "48"
+        },
+        {
+          "answer": "54"
+        },
+        {
+          "answer": "56",
+          "isCorrect": true
+        },
+        {
+          "answer": "64"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuánto es 72 ÷ 9?",
+      "explanation": "Como 9 × 8 = 72, entonces 72 ÷ 9 = 8.",
+      "hint": "Piensa qué número multiplicado por 9 da 72.",
+      "tags": [
+        "español",
+        "división"
+      ],
+      "answers": [
+        {
+          "answer": "6"
+        },
+        {
+          "answer": "7"
+        },
+        {
+          "answer": "8",
+          "isCorrect": true
+        },
+        {
+          "answer": "9"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el valor de la cifra 5 en el número 3,572?",
+      "explanation": "El 5 está ubicado en la posición de las centenas, por lo que representa 500.",
+      "hint": "Observa la posición que ocupa el 5 de derecha a izquierda.",
+      "tags": [
+        "español",
+        "valor-posicional"
+      ],
+      "answers": [
+        {
+          "answer": "5"
+        },
+        {
+          "answer": "50"
+        },
+        {
+          "answer": "500",
+          "isCorrect": true
+        },
+        {
+          "answer": "5,000"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál número es mayor?",
+      "explanation": "Entre 4,305, 4,350, 4,053 y 4,305, el mayor es 4,350.",
+      "hint": "Compara primero las centenas y después las decenas.",
+      "tags": [
+        "español",
+        "números"
+      ],
+      "answers": [
+        {
+          "answer": "4,305"
+        },
+        {
+          "answer": "4,350",
+          "isCorrect": true
+        },
+        {
+          "answer": "4,053"
+        },
+        {
+          "answer": "4,035"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué número sigue después de 999?",
+      "explanation": "Después de 999 viene el número 1,000.",
+      "hint": "Es el primer número de cuatro cifras.",
+      "tags": [
+        "español",
+        "números"
+      ],
+      "answers": [
+        {
+          "answer": "990"
+        },
+        {
+          "answer": "999"
+        },
+        {
+          "answer": "1,000",
+          "isCorrect": true
+        },
+        {
+          "answer": "1,001"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál de estas fracciones representa una mitad?",
+      "explanation": "La fracción 1/2 significa una de dos partes iguales.",
+      "hint": "Busca la fracción equivalente a 0.5.",
+      "tags": [
+        "español",
+        "fracciones"
+      ],
+      "answers": [
+        {
+          "answer": "1/3"
+        },
+        {
+          "answer": "1/2",
+          "isCorrect": true
+        },
+        {
+          "answer": "2/3"
+        },
+        {
+          "answer": "3/4"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es mayor: 3/4 o 1/2?",
+      "explanation": "3/4 equivale a 0.75, mientras que 1/2 equivale a 0.5; por eso 3/4 es mayor.",
+      "hint": "Convierte ambas fracciones a decimales o usa un dibujo.",
+      "tags": [
+        "español",
+        "fracciones"
+      ],
+      "answers": [
+        {
+          "answer": "1/2"
+        },
+        {
+          "answer": "3/4",
+          "isCorrect": true
+        },
+        {
+          "answer": "Son iguales"
+        },
+        {
+          "answer": "No se pueden comparar"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuánto es 1/4 de 20?",
+      "explanation": "20 dividido entre 4 es igual a 5, por lo que 1/4 de 20 es 5.",
+      "hint": "Divide 20 entre 4.",
+      "tags": [
+        "español",
+        "fracciones"
+      ],
+      "answers": [
+        {
+          "answer": "4"
+        },
+        {
+          "answer": "5",
+          "isCorrect": true
+        },
+        {
+          "answer": "6"
+        },
+        {
+          "answer": "8"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué fracción representa 3 partes de un total de 8 partes iguales?",
+      "explanation": "Si se toman 3 partes de un total de 8, la fracción es 3/8.",
+      "hint": "El numerador indica las partes tomadas y el denominador el total.",
+      "tags": [
+        "español",
+        "fracciones"
+      ],
+      "answers": [
+        {
+          "answer": "3/5"
+        },
+        {
+          "answer": "3/8",
+          "isCorrect": true
+        },
+        {
+          "answer": "5/8"
+        },
+        {
+          "answer": "8/3"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuánto es 0.5 + 0.25?",
+      "explanation": "0.50 + 0.25 = 0.75.",
+      "hint": "Alinea las cifras decimales.",
+      "tags": [
+        "español",
+        "decimales"
+      ],
+      "answers": [
+        {
+          "answer": "0.55"
+        },
+        {
+          "answer": "0.65"
+        },
+        {
+          "answer": "0.75",
+          "isCorrect": true
+        },
+        {
+          "answer": "0.85"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el número decimal equivalente a 3/10?",
+      "explanation": "Tres décimos se representan como 0.3.",
+      "hint": "El denominador 10 indica décimos.",
+      "tags": [
+        "español",
+        "decimales"
+      ],
+      "answers": [
+        {
+          "answer": "0.03"
+        },
+        {
+          "answer": "0.3",
+          "isCorrect": true
+        },
+        {
+          "answer": "3.0"
+        },
+        {
+          "answer": "0.13"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuánto es 2.5 + 1.75?",
+      "explanation": "2.50 + 1.75 = 4.25.",
+      "hint": "Escribe 2.5 como 2.50 antes de sumar.",
+      "tags": [
+        "español",
+        "decimales"
+      ],
+      "answers": [
+        {
+          "answer": "3.75"
+        },
+        {
+          "answer": "4.15"
+        },
+        {
+          "answer": "4.25",
+          "isCorrect": true
+        },
+        {
+          "answer": "4.75"
+        }
+      ]
+    },
+    {
+      "question": "Una caja tiene 24 lápices y se reparten por igual entre 6 niños. ¿Cuántos lápices recibe cada niño?",
+      "explanation": "24 dividido entre 6 es igual a 4.",
+      "hint": "Divide el total de lápices entre el número de niños.",
+      "tags": [
+        "español",
+        "división"
+      ],
+      "answers": [
+        {
+          "answer": "3"
+        },
+        {
+          "answer": "4",
+          "isCorrect": true
+        },
+        {
+          "answer": "5"
+        },
+        {
+          "answer": "6"
+        }
+      ]
+    },
+    {
+      "question": "Una maestra tiene 5 paquetes con 12 hojas cada uno. ¿Cuántas hojas tiene en total?",
+      "explanation": "5 × 12 = 60 hojas.",
+      "hint": "Multiplica la cantidad de paquetes por las hojas de cada paquete.",
+      "tags": [
+        "español",
+        "multiplicación"
+      ],
+      "answers": [
+        {
+          "answer": "50"
+        },
+        {
+          "answer": "55"
+        },
+        {
+          "answer": "60",
+          "isCorrect": true
+        },
+        {
+          "answer": "65"
+        }
+      ]
+    },
+    {
+      "question": "Luis tenía 85 pesos y gastó 37 pesos. ¿Cuánto dinero le quedó?",
+      "explanation": "85 - 37 = 48 pesos.",
+      "hint": "Resta el dinero gastado al dinero que tenía.",
+      "tags": [
+        "español",
+        "resta"
+      ],
+      "answers": [
+        {
+          "answer": "38 pesos"
+        },
+        {
+          "answer": "48 pesos",
+          "isCorrect": true
+        },
+        {
+          "answer": "52 pesos"
+        },
+        {
+          "answer": "58 pesos"
+        }
+      ]
+    },
+    {
+      "question": "Una bicicleta cuesta 1,200 pesos y se paga en 4 partes iguales. ¿Cuánto se paga en cada parte?",
+      "explanation": "1,200 ÷ 4 = 300 pesos.",
+      "hint": "Divide el precio total entre las cuatro partes.",
+      "tags": [
+        "español",
+        "división"
+      ],
+      "answers": [
+        {
+          "answer": "200 pesos"
+        },
+        {
+          "answer": "250 pesos"
+        },
+        {
+          "answer": "300 pesos",
+          "isCorrect": true
+        },
+        {
+          "answer": "400 pesos"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuántos centímetros hay en 2 metros?",
+      "explanation": "Un metro equivale a 100 centímetros, por lo que 2 metros equivalen a 200 centímetros.",
+      "hint": "Recuerda que 1 metro tiene 100 centímetros.",
+      "tags": [
+        "español",
+        "medición"
+      ],
+      "answers": [
+        {
+          "answer": "20 cm"
+        },
+        {
+          "answer": "100 cm"
+        },
+        {
+          "answer": "200 cm",
+          "isCorrect": true
+        },
+        {
+          "answer": "2,000 cm"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuántos minutos hay en 3 horas?",
+      "explanation": "Cada hora tiene 60 minutos. 3 × 60 = 180 minutos.",
+      "hint": "Multiplica 3 por 60.",
+      "tags": [
+        "español",
+        "tiempo"
+      ],
+      "answers": [
+        {
+          "answer": "120 minutos"
+        },
+        {
+          "answer": "150 minutos"
+        },
+        {
+          "answer": "180 minutos",
+          "isCorrect": true
+        },
+        {
+          "answer": "240 minutos"
+        }
+      ]
+    },
+    {
+      "question": "Una película comienza a las 16:30 y dura 1 hora y 45 minutos. ¿A qué hora termina?",
+      "explanation": "16:30 + 1 hora = 17:30; al sumar 45 minutos se llega a las 18:15.",
+      "hint": "Suma primero una hora y después 45 minutos.",
+      "tags": [
+        "español",
+        "tiempo"
+      ],
+      "answers": [
+        {
+          "answer": "17:45"
+        },
+        {
+          "answer": "18:00"
+        },
+        {
+          "answer": "18:15",
+          "isCorrect": true
+        },
+        {
+          "answer": "18:30"
+        }
+      ]
+    },
+    {
+      "question": "Un cuadrado tiene lados de 6 cm. ¿Cuál es su perímetro?",
+      "explanation": "Un cuadrado tiene cuatro lados iguales. 4 × 6 = 24 cm.",
+      "hint": "Multiplica la medida de un lado por cuatro.",
+      "tags": [
+        "español",
+        "geometría"
+      ],
+      "answers": [
+        {
+          "answer": "12 cm"
+        },
+        {
+          "answer": "18 cm"
+        },
+        {
+          "answer": "24 cm",
+          "isCorrect": true
+        },
+        {
+          "answer": "36 cm"
+        }
+      ]
+    },
+    {
+      "question": "Un rectángulo mide 9 cm de largo y 4 cm de ancho. ¿Cuál es su área?",
+      "explanation": "El área de un rectángulo se obtiene multiplicando largo por ancho: 9 × 4 = 36 cm².",
+      "hint": "Usa la fórmula largo × ancho.",
+      "tags": [
+        "español",
+        "área"
+      ],
+      "answers": [
+        {
+          "answer": "13 cm²"
+        },
+        {
+          "answer": "26 cm²"
+        },
+        {
+          "answer": "36 cm²",
+          "isCorrect": true
+        },
+        {
+          "answer": "40 cm²"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuántos lados tiene un hexágono?",
+      "explanation": "Un hexágono es un polígono que tiene seis lados.",
+      "hint": "El prefijo 'hexa' significa seis.",
+      "tags": [
+        "español",
+        "geometría"
+      ],
+      "answers": [
+        {
+          "answer": "5"
+        },
+        {
+          "answer": "6",
+          "isCorrect": true
+        },
+        {
+          "answer": "7"
+        },
+        {
+          "answer": "8"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué figura geométrica tiene cuatro lados iguales y cuatro ángulos rectos?",
+      "explanation": "Un cuadrado tiene cuatro lados de igual longitud y cuatro ángulos rectos.",
+      "hint": "Es una figura con cuatro lados iguales.",
+      "tags": [
+        "español",
+        "geometría"
+      ],
+      "answers": [
+        {
+          "answer": "Triángulo"
+        },
+        {
+          "answer": "Rectángulo"
+        },
+        {
+          "answer": "Cuadrado",
+          "isCorrect": true
+        },
+        {
+          "answer": "Pentágono"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuántos grados mide un ángulo recto?",
+      "explanation": "Por definición, un ángulo recto mide exactamente 90 grados.",
+      "hint": "Es el ángulo que forma una esquina cuadrada.",
+      "tags": [
+        "español",
+        "ángulos"
+      ],
+      "answers": [
+        {
+          "answer": "45°"
+        },
+        {
+          "answer": "90°",
+          "isCorrect": true
+        },
+        {
+          "answer": "120°"
+        },
+        {
+          "answer": "180°"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál de estos ángulos es obtuso?",
+      "explanation": "Un ángulo obtuso mide más de 90° y menos de 180°. Por eso 120° es obtuso.",
+      "hint": "Busca un ángulo mayor que 90° y menor que 180°.",
+      "tags": [
+        "español",
+        "ángulos"
+      ],
+      "answers": [
+        {
+          "answer": "45°"
+        },
+        {
+          "answer": "90°"
+        },
+        {
+          "answer": "120°",
+          "isCorrect": true
+        },
+        {
+          "answer": "180°"
+        }
+      ]
+    },
+    {
+      "question": "Una pizza se divide en 8 partes iguales y Ana come 3 partes. ¿Qué fracción de la pizza comió?",
+      "explanation": "Ana comió 3 partes de un total de 8, por lo que comió 3/8.",
+      "hint": "El número de partes comidas va arriba y el total de partes abajo.",
+      "tags": [
+        "español",
+        "fracciones"
+      ],
+      "answers": [
+        {
+          "answer": "3/5"
+        },
+        {
+          "answer": "3/8",
+          "isCorrect": true
+        },
+        {
+          "answer": "5/8"
+        },
+        {
+          "answer": "8/3"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el doble de 47?",
+      "explanation": "El doble de un número se obtiene multiplicándolo por 2: 47 × 2 = 94.",
+      "hint": "Multiplica 47 por 2.",
+      "tags": [
+        "español",
+        "multiplicación"
+      ],
+      "answers": [
+        {
+          "answer": "84"
+        },
+        {
+          "answer": "94",
+          "isCorrect": true
+        },
+        {
+          "answer": "96"
+        },
+        {
+          "answer": "104"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es la mitad de 86?",
+      "explanation": "La mitad de 86 se obtiene dividiendo entre 2: 86 ÷ 2 = 43.",
+      "hint": "Divide 86 entre 2.",
+      "tags": [
+        "español",
+        "división"
+      ],
+      "answers": [
+        {
+          "answer": "38"
+        },
+        {
+          "answer": "43",
+          "isCorrect": true
+        },
+        {
+          "answer": "46"
+        },
+        {
+          "answer": "48"
+        }
+      ]
+    },
+    {
+      "question": "Una tienda tiene 125 manzanas y recibe 75 más. ¿Cuántas manzanas tiene ahora?",
+      "explanation": "125 + 75 = 200 manzanas.",
+      "hint": "Suma las manzanas que ya tenía y las que recibió.",
+      "tags": [
+        "español",
+        "suma"
+      ],
+      "answers": [
+        {
+          "answer": "175"
+        },
+        {
+          "answer": "190"
+        },
+        {
+          "answer": "200",
+          "isCorrect": true
+        },
+        {
+          "answer": "210"
+        }
+      ]
+    },
+    {
+      "question": "En una escuela hay 245 alumnos. Si 98 son de primer grado, ¿cuántos alumnos pertenecen a los otros grados?",
+      "explanation": "245 - 98 = 147 alumnos.",
+      "hint": "Resta los alumnos de primer grado del total.",
+      "tags": [
+        "español",
+        "resta"
+      ],
+      "answers": [
+        {
+          "answer": "137"
+        },
+        {
+          "answer": "147",
+          "isCorrect": true
+        },
+        {
+          "answer": "157"
+        },
+        {
+          "answer": "167"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el resultado de 9 × 6 + 4?",
+      "explanation": "Primero se realiza la multiplicación: 9 × 6 = 54. Después se suma 4: 58.",
+      "hint": "Realiza primero la multiplicación.",
+      "tags": [
+        "español",
+        "operaciones"
+      ],
+      "answers": [
+        {
+          "answer": "54"
+        },
+        {
+          "answer": "58",
+          "isCorrect": true
+        },
+        {
+          "answer": "60"
+        },
+        {
+          "answer": "64"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el resultado de 40 - 6 × 3?",
+      "explanation": "Primero se multiplica 6 × 3 = 18 y después se resta: 40 - 18 = 22.",
+      "hint": "Recuerda que la multiplicación se realiza antes que la resta.",
+      "tags": [
+        "español",
+        "operaciones"
+      ],
+      "answers": [
+        {
+          "answer": "22",
+          "isCorrect": true
+        },
+        {
+          "answer": "34"
+        },
+        {
+          "answer": "102"
+        },
+        {
+          "answer": "120"
+        }
+      ]
+    },
+    {
+      "question": "Un número es divisible entre 5 cuando termina en 0 o 5. ¿Cuál de estos números es divisible entre 5?",
+      "explanation": "El número 735 termina en 5, por lo que es divisible entre 5.",
+      "hint": "Observa la última cifra de cada número.",
+      "tags": [
+        "español",
+        "divisibilidad"
+      ],
+      "answers": [
+        {
+          "answer": "732"
+        },
+        {
+          "answer": "734"
+        },
+        {
+          "answer": "735",
+          "isCorrect": true
+        },
+        {
+          "answer": "738"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el menor número primo?",
+      "explanation": "El 2 es el menor número primo y es el único número primo que es par.",
+      "hint": "Es el primer número natural que tiene exactamente dos divisores.",
+      "tags": [
+        "español",
+        "números-primos"
+      ],
+      "answers": [
+        {
+          "answer": "0"
+        },
+        {
+          "answer": "1"
+        },
+        {
+          "answer": "2",
+          "isCorrect": true
+        },
+        {
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el máximo común divisor de 12 y 18?",
+      "explanation": "Los divisores comunes de 12 y 18 incluyen 1, 2, 3 y 6. El mayor es 6.",
+      "hint": "Busca el mayor número que divide exactamente a ambos.",
+      "tags": [
+        "español",
+        "divisores"
+      ],
+      "answers": [
+        {
+          "answer": "3"
+        },
+        {
+          "answer": "4"
+        },
+        {
+          "answer": "6",
+          "isCorrect": true
+        },
+        {
+          "answer": "9"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el mínimo común múltiplo de 4 y 6?",
+      "explanation": "Los múltiplos comunes incluyen 12, 24, 36, etc. El menor es 12.",
+      "hint": "Busca el primer número positivo que aparece en las tablas del 4 y del 6.",
+      "tags": [
+        "español",
+        "múltiplos"
+      ],
+      "answers": [
+        {
+          "answer": "8"
+        },
+        {
+          "answer": "10"
+        },
+        {
+          "answer": "12",
+          "isCorrect": true
+        },
+        {
+          "answer": "24"
+        }
+      ]
+    },
+    {
+      "question": "En una clase, las calificaciones son 8, 9, 7, 10 y 6. ¿Cuál es el promedio?",
+      "explanation": "La suma es 40 y hay 5 calificaciones. 40 ÷ 5 = 8.",
+      "hint": "Suma todas las calificaciones y divide entre cinco.",
+      "tags": [
+        "español",
+        "estadística"
+      ],
+      "answers": [
+        {
+          "answer": "7"
+        },
+        {
+          "answer": "8",
+          "isCorrect": true
+        },
+        {
+          "answer": "8.5"
+        },
+        {
+          "answer": "9"
+        }
+      ]
+    },
+    {
+      "question": "Las cantidades de libros leídos por cuatro estudiantes son 2, 5, 3 y 4. ¿Cuál es la cantidad mayor?",
+      "explanation": "Al comparar 2, 5, 3 y 4, el valor mayor es 5.",
+      "hint": "Busca el número más grande de la lista.",
+      "tags": [
+        "español",
+        "datos"
+      ],
+      "answers": [
+        {
+          "answer": "2"
+        },
+        {
+          "answer": "3"
+        },
+        {
+          "answer": "4"
+        },
+        {
+          "answer": "5",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "question": "Una gráfica muestra ventas de 20 productos el lunes, 35 el martes y 25 el miércoles. ¿Qué día tuvo más ventas?",
+      "explanation": "El martes registra 35 ventas, que es la cantidad mayor.",
+      "hint": "Compara las tres cantidades.",
+      "tags": [
+        "español",
+        "gráficas"
+      ],
+      "answers": [
+        {
+          "answer": "Lunes"
+        },
+        {
+          "answer": "Martes",
+          "isCorrect": true
+        },
+        {
+          "answer": "Miércoles"
+        },
+        {
+          "answer": "Los tres días"
+        }
+      ]
+    },
+    {
+      "question": "Una bolsa contiene 7 canicas blancas y 3 negras. ¿Cuál es la probabilidad de sacar una canica negra?",
+      "explanation": "Hay 3 canicas negras de un total de 10, por lo que la probabilidad es 3/10.",
+      "hint": "Cuenta primero las canicas negras y después todas las canicas.",
+      "tags": [
+        "español",
+        "probabilidad"
+      ],
+      "answers": [
+        {
+          "answer": "1/10"
+        },
+        {
+          "answer": "3/10",
+          "isCorrect": true
+        },
+        {
+          "answer": "7/10"
+        },
+        {
+          "answer": "1/2"
+        }
+      ]
+    },
+    {
+      "question": "Una receta necesita 2 tazas de harina para preparar 12 galletas. ¿Cuántas tazas se necesitan para preparar 24 galletas manteniendo la misma proporción?",
+      "explanation": "24 galletas son el doble de 12, por lo que se necesitan el doble de harina: 4 tazas.",
+      "hint": "La cantidad de galletas se duplica.",
+      "tags": [
+        "español",
+        "proporcionalidad"
+      ],
+      "answers": [
+        {
+          "answer": "3 tazas"
+        },
+        {
+          "answer": "4 tazas",
+          "isCorrect": true
+        },
+        {
+          "answer": "5 tazas"
+        },
+        {
+          "answer": "6 tazas"
+        }
+      ]
+    },
+    {
+      "question": "Un ahorro de $500 aumenta en $75. ¿Cuánto dinero hay ahora?",
+      "explanation": "Se suma el aumento al ahorro inicial: 500 + 75 = 575 pesos.",
+      "hint": "Suma el incremento al ahorro inicial.",
+      "tags": [
+        "español",
+        "suma"
+      ],
+      "answers": [
+        {
+          "answer": "$525"
+        },
+        {
+          "answer": "$550"
+        },
+        {
+          "answer": "$575",
+          "isCorrect": true
+        },
+        {
+          "answer": "$600"
+        }
+      ]
+    },
+    {
+      "question": "Una familia compra 4 cajas de cereal a $35 cada una. ¿Cuánto paga en total?",
+      "explanation": "4 × 35 = 140 pesos.",
+      "hint": "Multiplica el precio de una caja por cuatro.",
+      "tags": [
+        "español",
+        "multiplicación"
+      ],
+      "answers": [
+        {
+          "answer": "$120"
+        },
+        {
+          "answer": "$130"
+        },
+        {
+          "answer": "$140",
+          "isCorrect": true
+        },
+        {
+          "answer": "$150"
+        }
+      ]
+    },
+    {
+      "question": "Una cuerda mide 5 metros. Si se cortan 175 centímetros, ¿cuántos centímetros de cuerda quedan?",
+      "explanation": "5 metros equivalen a 500 cm. Al restar 175 cm quedan 325 cm.",
+      "hint": "Convierte primero los metros a centímetros.",
+      "tags": [
+        "español",
+        "medición"
+      ],
+      "answers": [
+        {
+          "answer": "275 cm"
+        },
+        {
+          "answer": "300 cm"
+        },
+        {
+          "answer": "325 cm",
+          "isCorrect": true
+        },
+        {
+          "answer": "375 cm"
+        }
+      ]
+    },
+    {
+      "question": "Un recipiente contiene 2.5 litros de jugo. ¿Cuántos mililitros son?",
+      "explanation": "Un litro equivale a 1,000 mililitros. Por tanto, 2.5 litros equivalen a 2,500 mililitros.",
+      "hint": "Multiplica los litros por 1,000.",
+      "tags": [
+        "español",
+        "medición"
+      ],
+      "answers": [
+        {
+          "answer": "250 ml"
+        },
+        {
+          "answer": "1,500 ml"
+        },
+        {
+          "answer": "2,500 ml",
+          "isCorrect": true
+        },
+        {
+          "answer": "25,000 ml"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué número falta en la secuencia 3, 6, 9, 12, __, 18?",
+      "explanation": "La secuencia aumenta de 3 en 3, por lo que después de 12 viene 15.",
+      "hint": "Observa cuánto aumenta cada término.",
+      "tags": [
+        "español",
+        "secuencias"
+      ],
+      "answers": [
+        {
+          "answer": "13"
+        },
+        {
+          "answer": "14"
+        },
+        {
+          "answer": "15",
+          "isCorrect": true
+        },
+        {
+          "answer": "16"
+        }
+      ]
+    },
+    {
+      "question": "Un número multiplicado por 5 da 45. ¿Cuál es ese número?",
+      "explanation": "45 ÷ 5 = 9, por lo que el número es 9.",
+      "hint": "Haz la operación inversa de multiplicar por 5.",
+      "tags": [
+        "español",
+        "álgebra"
+      ],
+      "answers": [
+        {
+          "answer": "7"
+        },
+        {
+          "answer": "8"
+        },
+        {
+          "answer": "9",
+          "isCorrect": true
+        },
+        {
+          "answer": "10"
+        }
+      ]
+    },
+    {
+      "question": "Un pastel se divide en 10 partes iguales. Si se comen 4 partes, ¿qué fracción queda?",
+      "explanation": "De 10 partes se comen 4, por lo que quedan 6. La fracción restante es 6/10, equivalente a 3/5.",
+      "hint": "Resta las partes comidas al total.",
+      "tags": [
+        "español",
+        "fracciones"
+      ],
+      "answers": [
+        {
+          "answer": "2/5"
+        },
+        {
+          "answer": "3/5",
+          "isCorrect": true
+        },
+        {
+          "answer": "4/5"
+        },
+        {
+          "answer": "6/5"
+        }
+      ]
+    },
+    {
+      "question": "Una escuela tiene 8 filas con 9 sillas en cada fila. ¿Cuántas sillas hay en total?",
+      "explanation": "8 × 9 = 72 sillas.",
+      "hint": "Multiplica el número de filas por las sillas de cada fila.",
+      "tags": [
+        "español",
+        "multiplicación"
+      ],
+      "answers": [
+        {
+          "answer": "63"
+        },
+        {
+          "answer": "72",
+          "isCorrect": true
+        },
+        {
+          "answer": "81"
+        },
+        {
+          "answer": "89"
+        }
+      ]
+    },
+    {
+      "question": "Una persona recorre 4 km por la mañana y 3.5 km por la tarde. ¿Cuántos kilómetros recorrió en total?",
+      "explanation": "4 + 3.5 = 7.5 km.",
+      "hint": "Suma las dos distancias.",
+      "tags": [
+        "español",
+        "decimales"
+      ],
+      "answers": [
+        {
+          "answer": "6.5 km"
+        },
+        {
+          "answer": "7 km"
+        },
+        {
+          "answer": "7.5 km",
+          "isCorrect": true
+        },
+        {
+          "answer": "8 km"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el perímetro de un triángulo cuyos lados miden 5 cm, 7 cm y 8 cm?",
+      "explanation": "El perímetro se obtiene sumando los tres lados: 5 + 7 + 8 = 20 cm.",
+      "hint": "Suma las medidas de todos los lados.",
+      "tags": [
+        "español",
+        "perímetro"
+      ],
+      "answers": [
+        {
+          "answer": "18 cm"
+        },
+        {
+          "answer": "20 cm",
+          "isCorrect": true
+        },
+        {
+          "answer": "22 cm"
+        },
+        {
+          "answer": "24 cm"
+        }
+      ]
+    },
+    {
+      "question": "Una tienda ofrece una camiseta de $400 con un descuento de $80. ¿Cuál es el precio final?",
+      "explanation": "Se resta el descuento al precio original: 400 - 80 = 320 pesos.",
+      "hint": "Resta el descuento al precio original.",
+      "tags": [
+        "español",
+        "resta"
+      ],
+      "answers": [
+        {
+          "answer": "$280"
+        },
+        {
+          "answer": "$300"
+        },
+        {
+          "answer": "$320",
+          "isCorrect": true
+        },
+        {
+          "answer": "$380"
+        }
+      ]
+    }
+  ]
+}

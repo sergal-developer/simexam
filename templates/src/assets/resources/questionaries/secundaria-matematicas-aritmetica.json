@@ -1,0 +1,1552 @@
+{
+    "title": "Matemáticas: Aritmética para Secundaria",
+    "time": 0,
+    "tags": [
+        "español",
+        "prueba"
+    ],
+    "questionsCount": 50,
+    "questions": [
+        {
+            "question": "¿Cuál es el resultado de 48 + 37?",
+            "explanation": "Al sumar 48 y 37 se obtiene 85.",
+            "hint": "Suma primero las unidades y después las decenas.",
+            "tags": [
+                "español",
+                "suma"
+            ],
+            "answers": [
+                {
+                    "answer": "75"
+                },
+                {
+                    "answer": "85",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "95"
+                },
+                {
+                    "answer": "80"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 125 - 68?",
+            "explanation": "Al restar 68 de 125 se obtiene 57.",
+            "hint": "Puedes descomponer 68 en 60 y 8.",
+            "tags": [
+                "español",
+                "resta"
+            ],
+            "answers": [
+                {
+                    "answer": "57",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "63"
+                },
+                {
+                    "answer": "67"
+                },
+                {
+                    "answer": "47"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 14 × 6?",
+            "explanation": "Multiplicar 14 por 6 equivale a sumar 14 seis veces, dando como resultado 84.",
+            "hint": "Calcula 10 × 6 y 4 × 6 por separado.",
+            "tags": [
+                "español",
+                "multiplicación"
+            ],
+            "answers": [
+                {
+                    "answer": "74"
+                },
+                {
+                    "answer": "84",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "94"
+                },
+                {
+                    "answer": "64"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 144 ÷ 12?",
+            "explanation": "144 dividido entre 12 es 12 porque 12 × 12 = 144.",
+            "hint": "Busca el número que multiplicado por 12 da 144.",
+            "tags": [
+                "español",
+                "división"
+            ],
+            "answers": [
+                {
+                    "answer": "10"
+                },
+                {
+                    "answer": "11"
+                },
+                {
+                    "answer": "12",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "14"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el valor de 7 + 3 × 4?",
+            "explanation": "Primero se realiza la multiplicación: 3 × 4 = 12; después se suma 7, obteniendo 19.",
+            "hint": "Recuerda que la multiplicación tiene prioridad sobre la suma.",
+            "tags": [
+                "español",
+                "jerarquía de operaciones"
+            ],
+            "answers": [
+                {
+                    "answer": "40"
+                },
+                {
+                    "answer": "19",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "28"
+                },
+                {
+                    "answer": "17"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de (18 + 6) ÷ 4?",
+            "explanation": "Primero se resuelve el paréntesis: 18 + 6 = 24. Luego 24 ÷ 4 = 6.",
+            "hint": "Resuelve primero la operación que está dentro del paréntesis.",
+            "tags": [
+                "español",
+                "jerarquía de operaciones"
+            ],
+            "answers": [
+                {
+                    "answer": "4"
+                },
+                {
+                    "answer": "5"
+                },
+                {
+                    "answer": "6",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "8"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál de los siguientes números es primo?",
+            "explanation": "El número 29 solo tiene como divisores positivos al 1 y al propio 29, por lo que es primo.",
+            "hint": "Un número primo tiene exactamente dos divisores positivos.",
+            "tags": [
+                "español",
+                "números primos"
+            ],
+            "answers": [
+                {
+                    "answer": "21"
+                },
+                {
+                    "answer": "25"
+                },
+                {
+                    "answer": "29",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "33"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el mínimo común múltiplo de 6 y 8?",
+            "explanation": "Los múltiplos de 6 y 8 tienen como primer múltiplo común positivo a 24.",
+            "hint": "Escribe algunos múltiplos de cada número hasta encontrar el primero que coincida.",
+            "tags": [
+                "español",
+                "mcm"
+            ],
+            "answers": [
+                {
+                    "answer": "12"
+                },
+                {
+                    "answer": "18"
+                },
+                {
+                    "answer": "24",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "48"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el máximo común divisor de 18 y 24?",
+            "explanation": "Los divisores comunes de 18 y 24 incluyen 1, 2, 3 y 6; el mayor es 6.",
+            "hint": "Busca el mayor número que divida exactamente a ambos números.",
+            "tags": [
+                "español",
+                "mcd"
+            ],
+            "answers": [
+                {
+                    "answer": "3"
+                },
+                {
+                    "answer": "6",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "9"
+                },
+                {
+                    "answer": "12"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fracción es equivalente a 1/2?",
+            "explanation": "La fracción 4/8 es equivalente a 1/2 porque ambas representan la misma cantidad.",
+            "hint": "Multiplica numerador y denominador de 1/2 por el mismo número.",
+            "tags": [
+                "español",
+                "fracciones"
+            ],
+            "answers": [
+                {
+                    "answer": "2/3"
+                },
+                {
+                    "answer": "3/5"
+                },
+                {
+                    "answer": "4/8",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "5/8"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 2/5 + 1/5?",
+            "explanation": "Como las fracciones tienen el mismo denominador, se suman los numeradores: 2 + 1 = 3, por lo que el resultado es 3/5.",
+            "hint": "Con denominadores iguales, suma únicamente los numeradores.",
+            "tags": [
+                "español",
+                "fracciones"
+            ],
+            "answers": [
+                {
+                    "answer": "3/5",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "3/10"
+                },
+                {
+                    "answer": "2/10"
+                },
+                {
+                    "answer": "1/5"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 3/4 - 1/8?",
+            "explanation": "3/4 equivale a 6/8. Entonces 6/8 - 1/8 = 5/8.",
+            "hint": "Convierte ambas fracciones al mismo denominador.",
+            "tags": [
+                "español",
+                "fracciones"
+            ],
+            "answers": [
+                {
+                    "answer": "1/2"
+                },
+                {
+                    "answer": "5/8",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "3/8"
+                },
+                {
+                    "answer": "7/8"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 2/3 × 3/5?",
+            "explanation": "Se multiplican numeradores y denominadores: (2 × 3)/(3 × 5) = 6/15, que se simplifica a 2/5.",
+            "hint": "Multiplica las fracciones y después simplifica el resultado.",
+            "tags": [
+                "español",
+                "multiplicación de fracciones"
+            ],
+            "answers": [
+                {
+                    "answer": "2/5",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "3/5"
+                },
+                {
+                    "answer": "5/6"
+                },
+                {
+                    "answer": "6/8"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 3/4 ÷ 1/2?",
+            "explanation": "Dividir entre 1/2 equivale a multiplicar por 2. Por tanto, 3/4 × 2 = 3/2.",
+            "hint": "Para dividir fracciones, multiplica por el recíproco de la segunda fracción.",
+            "tags": [
+                "español",
+                "división de fracciones"
+            ],
+            "answers": [
+                {
+                    "answer": "3/8"
+                },
+                {
+                    "answer": "1/2"
+                },
+                {
+                    "answer": "3/2",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "2/3"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué número decimal representa 3/4?",
+            "explanation": "Al dividir 3 entre 4 se obtiene 0.75, por lo que 3/4 equivale a 0.75.",
+            "hint": "Divide el numerador entre el denominador.",
+            "tags": [
+                "español",
+                "decimales"
+            ],
+            "answers": [
+                {
+                    "answer": "0.25"
+                },
+                {
+                    "answer": "0.5"
+                },
+                {
+                    "answer": "0.75",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "1.25"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 2.5 + 1.75?",
+            "explanation": "Al alinear los decimales y sumar 2.50 + 1.75 se obtiene 4.25.",
+            "hint": "Alinea las posiciones decimales antes de sumar.",
+            "tags": [
+                "español",
+                "decimales"
+            ],
+            "answers": [
+                {
+                    "answer": "3.25"
+                },
+                {
+                    "answer": "4.25",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "4.15"
+                },
+                {
+                    "answer": "4.75"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 6.4 - 2.85?",
+            "explanation": "Al escribir 6.4 como 6.40 y restar 2.85 se obtiene 3.55.",
+            "hint": "Escribe 6.4 como 6.40 para alinear los decimales.",
+            "tags": [
+                "español",
+                "decimales"
+            ],
+            "answers": [
+                {
+                    "answer": "3.45"
+                },
+                {
+                    "answer": "3.55",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "4.55"
+                },
+                {
+                    "answer": "3.65"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 0.6 × 0.5?",
+            "explanation": "6 × 5 = 30 y hay dos cifras decimales en total, por lo que el resultado es 0.30, equivalente a 0.3.",
+            "hint": "Multiplica como números enteros y después coloca dos cifras decimales.",
+            "tags": [
+                "español",
+                "decimales"
+            ],
+            "answers": [
+                {
+                    "answer": "0.03"
+                },
+                {
+                    "answer": "0.3",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "3"
+                },
+                {
+                    "answer": "0.8"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el 20% de 150?",
+            "explanation": "El 20% equivale a 0.20. Al multiplicar 150 × 0.20 se obtiene 30.",
+            "hint": "Convierte el porcentaje a decimal antes de multiplicar.",
+            "tags": [
+                "español",
+                "porcentajes"
+            ],
+            "answers": [
+                {
+                    "answer": "20"
+                },
+                {
+                    "answer": "25"
+                },
+                {
+                    "answer": "30",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "35"
+                }
+            ]
+        },
+        {
+            "question": "Una camisa cuesta 500 pesos y tiene un descuento del 10%. ¿Cuánto se descuenta?",
+            "explanation": "El 10% de 500 es 50, por lo que el descuento es de 50 pesos.",
+            "hint": "Calcula 500 × 0.10.",
+            "tags": [
+                "español",
+                "porcentajes"
+            ],
+            "answers": [
+                {
+                    "answer": "40 pesos"
+                },
+                {
+                    "answer": "50 pesos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "60 pesos"
+                },
+                {
+                    "answer": "100 pesos"
+                }
+            ]
+        },
+        {
+            "question": "Si un artículo cuesta 800 pesos y aumenta 15%, ¿cuál será su nuevo precio?",
+            "explanation": "El 15% de 800 es 120. Al sumar 120 al precio original, se obtiene 920 pesos.",
+            "hint": "Calcula primero el aumento y después súmalo al precio original.",
+            "tags": [
+                "español",
+                "porcentajes"
+            ],
+            "answers": [
+                {
+                    "answer": "880 pesos"
+                },
+                {
+                    "answer": "900 pesos"
+                },
+                {
+                    "answer": "920 pesos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "950 pesos"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué porcentaje representa 25 de 100?",
+            "explanation": "25 de 100 equivale a 25/100, que expresado como porcentaje es 25%.",
+            "hint": "Una cantidad sobre 100 se puede expresar directamente como porcentaje.",
+            "tags": [
+                "español",
+                "porcentajes"
+            ],
+            "answers": [
+                {
+                    "answer": "15%"
+                },
+                {
+                    "answer": "20%"
+                },
+                {
+                    "answer": "25%",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "40%"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la razón simplificada de 12 a 18?",
+            "explanation": "La razón 12:18 se simplifica dividiendo ambos términos entre 6, obteniendo 2:3.",
+            "hint": "Busca el máximo común divisor de 12 y 18.",
+            "tags": [
+                "español",
+                "razones"
+            ],
+            "answers": [
+                {
+                    "answer": "2:3",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "3:2"
+                },
+                {
+                    "answer": "4:5"
+                },
+                {
+                    "answer": "6:9"
+                }
+            ]
+        },
+        {
+            "question": "Si 3 cuadernos cuestan 45 pesos, ¿cuánto cuesta cada cuaderno?",
+            "explanation": "Se divide el costo total entre la cantidad de cuadernos: 45 ÷ 3 = 15 pesos.",
+            "hint": "Divide el precio total entre el número de cuadernos.",
+            "tags": [
+                "español",
+                "proporcionalidad"
+            ],
+            "answers": [
+                {
+                    "answer": "10 pesos"
+                },
+                {
+                    "answer": "12 pesos"
+                },
+                {
+                    "answer": "15 pesos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "18 pesos"
+                }
+            ]
+        },
+        {
+            "question": "Si 5 litros de pintura cuestan 250 pesos, ¿cuánto cuestan 8 litros al mismo precio por litro?",
+            "explanation": "Cada litro cuesta 250 ÷ 5 = 50 pesos. Entonces 8 litros cuestan 8 × 50 = 400 pesos.",
+            "hint": "Encuentra primero el precio de un litro.",
+            "tags": [
+                "español",
+                "proporcionalidad"
+            ],
+            "answers": [
+                {
+                    "answer": "350 pesos"
+                },
+                {
+                    "answer": "400 pesos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "450 pesos"
+                },
+                {
+                    "answer": "500 pesos"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el valor absoluto de -17?",
+            "explanation": "El valor absoluto representa la distancia de un número al cero, por lo que el valor absoluto de -17 es 17.",
+            "hint": "El valor absoluto siempre es no negativo.",
+            "tags": [
+                "español",
+                "números enteros"
+            ],
+            "answers": [
+                {
+                    "answer": "-17"
+                },
+                {
+                    "answer": "0"
+                },
+                {
+                    "answer": "17",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "1"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de -8 + 13?",
+            "explanation": "Al sumar 13 a -8, se avanza 13 unidades desde -8 hasta llegar a 5.",
+            "hint": "Puedes pensar en la recta numérica y desplazarte 13 unidades hacia la derecha.",
+            "tags": [
+                "español",
+                "números enteros"
+            ],
+            "answers": [
+                {
+                    "answer": "-21"
+                },
+                {
+                    "answer": "-5"
+                },
+                {
+                    "answer": "5",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "21"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de -6 × -4?",
+            "explanation": "El producto de dos números negativos es positivo. Por eso, -6 × -4 = 24.",
+            "hint": "Recuerda la regla de los signos para la multiplicación.",
+            "tags": [
+                "español",
+                "números enteros"
+            ],
+            "answers": [
+                {
+                    "answer": "-24"
+                },
+                {
+                    "answer": "10"
+                },
+                {
+                    "answer": "24",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "-10"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 45 ÷ (-5)?",
+            "explanation": "Un número positivo dividido entre uno negativo da un resultado negativo. 45 ÷ 5 = 9, por lo que el resultado es -9.",
+            "hint": "Aplica primero la regla de los signos y después realiza la división.",
+            "tags": [
+                "español",
+                "números enteros"
+            ],
+            "answers": [
+                {
+                    "answer": "9"
+                },
+                {
+                    "answer": "-9",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "-8"
+                },
+                {
+                    "answer": "8"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el número mayor entre -3, -8, -1 y -5?",
+            "explanation": "En los números negativos, el que está más cerca de cero es el mayor. Por ello, -1 es el mayor.",
+            "hint": "Ubica los números en una recta numérica.",
+            "tags": [
+                "español",
+                "comparación"
+            ],
+            "answers": [
+                {
+                    "answer": "-3"
+                },
+                {
+                    "answer": "-8"
+                },
+                {
+                    "answer": "-1",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "-5"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la factorización prima de 60?",
+            "explanation": "60 se puede descomponer como 2 × 2 × 3 × 5, es decir, 2² × 3 × 5.",
+            "hint": "Divide sucesivamente entre números primos hasta llegar a 1.",
+            "tags": [
+                "español",
+                "factorización"
+            ],
+            "answers": [
+                {
+                    "answer": "2 × 3 × 10"
+                },
+                {
+                    "answer": "2² × 3 × 5",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "3² × 5"
+                },
+                {
+                    "answer": "2 × 5²"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántos divisores positivos tiene el número 12?",
+            "explanation": "Los divisores positivos de 12 son 1, 2, 3, 4, 6 y 12. En total son 6.",
+            "hint": "Enumera todos los números que dividen exactamente a 12.",
+            "tags": [
+                "español",
+                "divisores"
+            ],
+            "answers": [
+                {
+                    "answer": "4"
+                },
+                {
+                    "answer": "5"
+                },
+                {
+                    "answer": "6",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "8"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el residuo de 47 ÷ 5?",
+            "explanation": "5 × 9 = 45 y 47 - 45 = 2, por lo que el residuo es 2.",
+            "hint": "Busca el múltiplo de 5 más cercano a 47 sin pasarse.",
+            "tags": [
+                "español",
+                "división"
+            ],
+            "answers": [
+                {
+                    "answer": "1"
+                },
+                {
+                    "answer": "2",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "3"
+                },
+                {
+                    "answer": "4"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué número es divisible entre 3?",
+            "explanation": "Un número es divisible entre 3 si la suma de sus cifras es múltiplo de 3. En 123, 1 + 2 + 3 = 6, que es divisible entre 3.",
+            "hint": "Suma las cifras de cada opción.",
+            "tags": [
+                "español",
+                "divisibilidad"
+            ],
+            "answers": [
+                {
+                    "answer": "121"
+                },
+                {
+                    "answer": "122"
+                },
+                {
+                    "answer": "123",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "124"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál de los siguientes números es divisible entre 5?",
+            "explanation": "Un número es divisible entre 5 cuando termina en 0 o en 5. El número 235 termina en 5.",
+            "hint": "Observa la última cifra del número.",
+            "tags": [
+                "español",
+                "divisibilidad"
+            ],
+            "answers": [
+                {
+                    "answer": "232"
+                },
+                {
+                    "answer": "233"
+                },
+                {
+                    "answer": "235",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "238"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 2³?",
+            "explanation": "2³ significa multiplicar 2 por sí mismo tres veces: 2 × 2 × 2 = 8.",
+            "hint": "El exponente indica cuántas veces se multiplica la base por sí misma.",
+            "tags": [
+                "español",
+                "potencias"
+            ],
+            "answers": [
+                {
+                    "answer": "6"
+                },
+                {
+                    "answer": "8",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "9"
+                },
+                {
+                    "answer": "12"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el valor de 5² + 3²?",
+            "explanation": "5² = 25 y 3² = 9. Al sumar ambos resultados se obtiene 34.",
+            "hint": "Calcula cada potencia antes de realizar la suma.",
+            "tags": [
+                "español",
+                "potencias"
+            ],
+            "answers": [
+                {
+                    "answer": "28"
+                },
+                {
+                    "answer": "34",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "36"
+                },
+                {
+                    "answer": "64"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la raíz cuadrada de 81?",
+            "explanation": "La raíz cuadrada de 81 es 9 porque 9 × 9 = 81.",
+            "hint": "Busca el número que multiplicado por sí mismo da 81.",
+            "tags": [
+                "español",
+                "raíces"
+            ],
+            "answers": [
+                {
+                    "answer": "7"
+                },
+                {
+                    "answer": "8"
+                },
+                {
+                    "answer": "9",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "10"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la mitad de 86?",
+            "explanation": "La mitad de un número se obtiene dividiéndolo entre 2. 86 ÷ 2 = 43.",
+            "hint": "Divide 86 entre 2.",
+            "tags": [
+                "español",
+                "operaciones básicas"
+            ],
+            "answers": [
+                {
+                    "answer": "41"
+                },
+                {
+                    "answer": "42"
+                },
+                {
+                    "answer": "43",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "44"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el triple de 27?",
+            "explanation": "El triple de 27 se obtiene multiplicando 27 por 3: 27 × 3 = 81.",
+            "hint": "Multiplica el número por 3.",
+            "tags": [
+                "español",
+                "multiplicación"
+            ],
+            "answers": [
+                {
+                    "answer": "54"
+                },
+                {
+                    "answer": "72"
+                },
+                {
+                    "answer": "81",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "91"
+                }
+            ]
+        },
+        {
+            "question": "Si una persona tiene 120 pesos y gasta 35 pesos, ¿cuánto dinero le queda?",
+            "explanation": "Se resta el gasto al dinero disponible: 120 - 35 = 85 pesos.",
+            "hint": "Resta el dinero gastado del dinero inicial.",
+            "tags": [
+                "español",
+                "problemas aritméticos"
+            ],
+            "answers": [
+                {
+                    "answer": "75 pesos"
+                },
+                {
+                    "answer": "80 pesos"
+                },
+                {
+                    "answer": "85 pesos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "95 pesos"
+                }
+            ]
+        },
+        {
+            "question": "Un autobús recorre 65 kilómetros por hora. ¿Cuántos kilómetros recorrerá en 4 horas a la misma velocidad?",
+            "explanation": "Se multiplica la velocidad por el tiempo: 65 × 4 = 260 kilómetros.",
+            "hint": "Distancia = velocidad × tiempo.",
+            "tags": [
+                "español",
+                "problemas aritméticos"
+            ],
+            "answers": [
+                {
+                    "answer": "240 km"
+                },
+                {
+                    "answer": "250 km"
+                },
+                {
+                    "answer": "260 km",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "280 km"
+                }
+            ]
+        },
+        {
+            "question": "Una caja contiene 24 lápices. Si se reparten por igual entre 6 estudiantes, ¿cuántos lápices recibe cada uno?",
+            "explanation": "Se divide el total de lápices entre los estudiantes: 24 ÷ 6 = 4 lápices por estudiante.",
+            "hint": "Divide 24 entre 6.",
+            "tags": [
+                "español",
+                "división",
+                "problemas"
+            ],
+            "answers": [
+                {
+                    "answer": "3 lápices"
+                },
+                {
+                    "answer": "4 lápices",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "5 lápices"
+                },
+                {
+                    "answer": "6 lápices"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el promedio aritmético de 6, 8 y 10?",
+            "explanation": "Se suman los valores y se divide entre tres: (6 + 8 + 10) ÷ 3 = 24 ÷ 3 = 8.",
+            "hint": "Suma los datos y divide entre la cantidad de datos.",
+            "tags": [
+                "español",
+                "promedio"
+            ],
+            "answers": [
+                {
+                    "answer": "7"
+                },
+                {
+                    "answer": "8",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "9"
+                },
+                {
+                    "answer": "10"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la mediana del conjunto 3, 7, 9, 12 y 15?",
+            "explanation": "Los datos ya están ordenados y el valor que queda en el centro es 9, por lo que la mediana es 9.",
+            "hint": "Busca el dato que ocupa la posición central.",
+            "tags": [
+                "español",
+                "mediana"
+            ],
+            "answers": [
+                {
+                    "answer": "7"
+                },
+                {
+                    "answer": "9",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "12"
+                },
+                {
+                    "answer": "15"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es la moda del conjunto 4, 7, 4, 9, 6, 4 y 7?",
+            "explanation": "La moda es el valor que aparece con mayor frecuencia. El número 4 aparece tres veces, más que los demás.",
+            "hint": "Cuenta cuántas veces aparece cada número.",
+            "tags": [
+                "español",
+                "moda"
+            ],
+            "answers": [
+                {
+                    "answer": "4",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "6"
+                },
+                {
+                    "answer": "7"
+                },
+                {
+                    "answer": "9"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántos minutos hay en 3 horas?",
+            "explanation": "Cada hora tiene 60 minutos. Por tanto, 3 × 60 = 180 minutos.",
+            "hint": "Multiplica el número de horas por 60.",
+            "tags": [
+                "español",
+                "medidas"
+            ],
+            "answers": [
+                {
+                    "answer": "120 minutos"
+                },
+                {
+                    "answer": "150 minutos"
+                },
+                {
+                    "answer": "180 minutos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "240 minutos"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántos gramos hay en 2.5 kilogramos?",
+            "explanation": "Un kilogramo equivale a 1000 gramos. Por tanto, 2.5 kg equivalen a 2500 gramos.",
+            "hint": "Multiplica los kilogramos por 1000.",
+            "tags": [
+                "español",
+                "unidades de medida"
+            ],
+            "answers": [
+                {
+                    "answer": "250 gramos"
+                },
+                {
+                    "answer": "1500 gramos"
+                },
+                {
+                    "answer": "2500 gramos",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "5000 gramos"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuántos centímetros hay en 3 metros?",
+            "explanation": "Un metro equivale a 100 centímetros. Por ello, 3 metros equivalen a 300 centímetros.",
+            "hint": "Multiplica los metros por 100.",
+            "tags": [
+                "español",
+                "unidades de medida"
+            ],
+            "answers": [
+                {
+                    "answer": "30 cm"
+                },
+                {
+                    "answer": "300 cm",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "3000 cm"
+                },
+                {
+                    "answer": "3 cm"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el perímetro de un cuadrado cuyo lado mide 7 cm?",
+            "explanation": "Un cuadrado tiene cuatro lados iguales. Su perímetro es 4 × 7 = 28 cm.",
+            "hint": "Multiplica la medida de un lado por 4.",
+            "tags": [
+                "español",
+                "perímetro"
+            ],
+            "answers": [
+                {
+                    "answer": "14 cm"
+                },
+                {
+                    "answer": "21 cm"
+                },
+                {
+                    "answer": "28 cm",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "49 cm"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el área de un rectángulo de 8 cm de largo y 5 cm de ancho?",
+            "explanation": "El área de un rectángulo se obtiene multiplicando largo por ancho: 8 × 5 = 40 cm².",
+            "hint": "Usa la fórmula área = largo × ancho.",
+            "tags": [
+                "español",
+                "área"
+            ],
+            "answers": [
+                {
+                    "answer": "13 cm²"
+                },
+                {
+                    "answer": "26 cm²"
+                },
+                {
+                    "answer": "40 cm²",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "80 cm²"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fracción de una hora representan 15 minutos?",
+            "explanation": "Una hora tiene 60 minutos. La fracción correspondiente es 15/60, que se simplifica a 1/4.",
+            "hint": "Compara 15 minutos con los 60 minutos que tiene una hora.",
+            "tags": [
+                "español",
+                "fracciones",
+                "medidas"
+            ],
+            "answers": [
+                {
+                    "answer": "1/2"
+                },
+                {
+                    "answer": "1/3"
+                },
+                {
+                    "answer": "1/4",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "3/4"
+                }
+            ]
+        },
+        {
+            "question": "Si un número aumentado en 18 da como resultado 45, ¿cuál es el número?",
+            "explanation": "Para encontrar el número se resta 18 a 45: 45 - 18 = 27.",
+            "hint": "Realiza la operación inversa de sumar 18.",
+            "tags": [
+                "español",
+                "operaciones inversas"
+            ],
+            "answers": [
+                {
+                    "answer": "17"
+                },
+                {
+                    "answer": "27",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "37"
+                },
+                {
+                    "answer": "63"
+                }
+            ]
+        },
+        {
+            "question": "Si el doble de un número es 54, ¿cuál es el número?",
+            "explanation": "El doble de un número se obtiene multiplicándolo por 2. Por ello, el número es 54 ÷ 2 = 27.",
+            "hint": "Usa la operación inversa de multiplicar por 2.",
+            "tags": [
+                "español",
+                "operaciones inversas"
+            ],
+            "answers": [
+                {
+                    "answer": "24"
+                },
+                {
+                    "answer": "27",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "28"
+                },
+                {
+                    "answer": "32"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 2 + 3 × (5 - 2)?",
+            "explanation": "Primero se resuelve el paréntesis: 5 - 2 = 3. Luego 3 × 3 = 9 y finalmente 2 + 9 = 11.",
+            "hint": "Sigue el orden: paréntesis, multiplicación y suma.",
+            "tags": [
+                "español",
+                "jerarquía de operaciones"
+            ],
+            "answers": [
+                {
+                    "answer": "11",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "15"
+                },
+                {
+                    "answer": "17"
+                },
+                {
+                    "answer": "21"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 1000 - 275?",
+            "explanation": "Al restar 275 de 1000 se obtiene 725.",
+            "hint": "Puedes restar primero 200, luego 70 y finalmente 5.",
+            "tags": [
+                "español",
+                "resta"
+            ],
+            "answers": [
+                {
+                    "answer": "625"
+                },
+                {
+                    "answer": "725",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "735"
+                },
+                {
+                    "answer": "775"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 36 × 25?",
+            "explanation": "36 × 25 = 36 × 100 ÷ 4 = 3600 ÷ 4 = 900.",
+            "hint": "Multiplicar por 25 equivale a multiplicar por 100 y dividir entre 4.",
+            "tags": [
+                "español",
+                "multiplicación"
+            ],
+            "answers": [
+                {
+                    "answer": "800"
+                },
+                {
+                    "answer": "850"
+                },
+                {
+                    "answer": "900",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "950"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 3.6 ÷ 0.6?",
+            "explanation": "3.6 dividido entre 0.6 es 6, ya que 0.6 × 6 = 3.6.",
+            "hint": "Busca cuántas veces cabe 0.6 en 3.6.",
+            "tags": [
+                "español",
+                "decimales",
+                "división"
+            ],
+            "answers": [
+                {
+                    "answer": "4"
+                },
+                {
+                    "answer": "5"
+                },
+                {
+                    "answer": "6",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "7"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué porcentaje equivale a la fracción 1/5?",
+            "explanation": "La fracción 1/5 equivale a 0.2 y al multiplicarla por 100 se obtiene 20%.",
+            "hint": "Convierte primero la fracción a decimal o conviértela directamente a una fracción con denominador 100.",
+            "tags": [
+                "español",
+                "porcentajes",
+                "fracciones"
+            ],
+            "answers": [
+                {
+                    "answer": "10%"
+                },
+                {
+                    "answer": "15%"
+                },
+                {
+                    "answer": "20%",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "25%"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el número que falta en la proporción 4/6 = x/18?",
+            "explanation": "Al multiplicar en cruz se obtiene 4 × 18 = 6x. Entonces 72 = 6x y x = 12.",
+            "hint": "Usa el producto cruzado para resolver la proporción.",
+            "tags": [
+                "español",
+                "proporciones"
+            ],
+            "answers": [
+                {
+                    "answer": "8"
+                },
+                {
+                    "answer": "10"
+                },
+                {
+                    "answer": "12",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "14"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el menor número natural que es múltiplo de 4 y de 6?",
+            "explanation": "El mínimo común múltiplo de 4 y 6 es 12, por lo que 12 es el menor múltiplo positivo común.",
+            "hint": "Busca el primer número que aparezca en las listas de múltiplos de ambos números.",
+            "tags": [
+                "español",
+                "múltiplos"
+            ],
+            "answers": [
+                {
+                    "answer": "8"
+                },
+                {
+                    "answer": "10"
+                },
+                {
+                    "answer": "12",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "24"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 5/6 + 1/3?",
+            "explanation": "1/3 equivale a 2/6. Entonces 5/6 + 2/6 = 7/6.",
+            "hint": "Convierte las fracciones para que tengan el mismo denominador.",
+            "tags": [
+                "español",
+                "fracciones"
+            ],
+            "answers": [
+                {
+                    "answer": "1"
+                },
+                {
+                    "answer": "7/6",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "6/9"
+                },
+                {
+                    "answer": "5/9"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál es el resultado de 7/8 - 1/4?",
+            "explanation": "1/4 equivale a 2/8. Entonces 7/8 - 2/8 = 5/8.",
+            "hint": "Convierte 1/4 a octavos antes de restar.",
+            "tags": [
+                "español",
+                "fracciones"
+            ],
+            "answers": [
+                {
+                    "answer": "3/8"
+                },
+                {
+                    "answer": "5/8",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "6/8"
+                },
+                {
+                    "answer": "7/12"
+                }
+            ]
+        },
+        {
+            "question": "Una familia consume 3/4 de una pizza y queda una parte sin comer. ¿Qué fracción de la pizza queda?",
+            "explanation": "Una pizza completa representa 1. Al restar 3/4, queda 1/4.",
+            "hint": "Resta la parte consumida de la unidad completa.",
+            "tags": [
+                "español",
+                "fracciones",
+                "problemas"
+            ],
+            "answers": [
+                {
+                    "answer": "1/4",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "1/3"
+                },
+                {
+                    "answer": "2/4"
+                },
+                {
+                    "answer": "3/4"
+                }
+            ]
+        }
+    ]
+}

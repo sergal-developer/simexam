@@ -1,0 +1,1080 @@
+{
+    "title": "Biología básica: Verdadero o Falso",
+    "time": 10,
+    "tags": [
+        "español",
+        "biología",
+        "biología básica",
+        "verdadero o falso"
+    ],
+    "questionsCount": 50,
+    "questions": [
+        {
+            "question": "¿La célula es considerada la unidad estructural y funcional básica de los seres vivos?",
+            "explanation": "Verdadero. La célula es la unidad mínima capaz de realizar las funciones esenciales de la vida.",
+            "hint": "Piensa en la unidad fundamental de los organismos.",
+            "tags": [
+                "español",
+                "biología",
+                "célula"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Las células procariotas poseen un núcleo delimitado por una membrana?",
+            "explanation": "Falso. Las células procariotas no tienen un núcleo membranoso; su ADN se encuentra en una región llamada nucleoide.",
+            "hint": "Compara bacterias con células animales.",
+            "tags": [
+                "español",
+                "biología",
+                "células procariotas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿El ADN contiene la información genética de los organismos?",
+            "explanation": "Verdadero. El ADN almacena la información genética que participa en el desarrollo, funcionamiento y reproducción de los seres vivos.",
+            "hint": "Es la molécula asociada con la herencia genética.",
+            "tags": [
+                "español",
+                "biología",
+                "ADN",
+                "genética"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Las mitocondrias son los orgánulos principales responsables de producir gran parte del ATP en las células eucariotas?",
+            "explanation": "Verdadero. Las mitocondrias realizan procesos de respiración celular que generan una cantidad importante de ATP.",
+            "hint": "Relaciona este orgánulo con la producción de energía.",
+            "tags": [
+                "español",
+                "biología",
+                "mitocondria",
+                "energía"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La fotosíntesis permite a las plantas producir materia orgánica utilizando energía luminosa?",
+            "explanation": "Verdadero. Durante la fotosíntesis, las plantas utilizan energía de la luz para sintetizar compuestos orgánicos a partir de sustancias inorgánicas.",
+            "hint": "Piensa en cómo las plantas aprovechan la luz solar.",
+            "tags": [
+                "español",
+                "biología",
+                "fotosíntesis",
+                "plantas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La clorofila es el pigmento que da el color verde característico a muchas plantas y participa en la captación de luz?",
+            "explanation": "Verdadero. La clorofila absorbe determinadas longitudes de onda de la luz y contribuye al color verde de las plantas.",
+            "hint": "Es un pigmento relacionado directamente con la fotosíntesis.",
+            "tags": [
+                "español",
+                "biología",
+                "clorofila",
+                "plantas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Los seres humanos tienen normalmente 46 cromosomas en cada célula somática?",
+            "explanation": "Verdadero. Las células somáticas humanas normalmente contienen 46 cromosomas organizados en 23 pares.",
+            "hint": "Recuerda el número de cromosomas de una célula humana no reproductiva.",
+            "tags": [
+                "español",
+                "biología",
+                "cromosomas",
+                "genética"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Los glóbulos rojos humanos maduros contienen un núcleo celular?",
+            "explanation": "Falso. Los glóbulos rojos humanos maduros pierden su núcleo durante su desarrollo.",
+            "hint": "Considera qué estructura pierden estas células al madurar.",
+            "tags": [
+                "español",
+                "biología",
+                "sangre",
+                "células"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿La sangre transporta oxígeno, nutrientes, hormonas y productos de desecho por el organismo?",
+            "explanation": "Verdadero. La sangre cumple funciones de transporte, defensa y regulación en el cuerpo.",
+            "hint": "Piensa en las diferentes sustancias que circulan por el sistema circulatorio.",
+            "tags": [
+                "español",
+                "biología",
+                "sangre",
+                "sistema circulatorio"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿El corazón humano normalmente posee cuatro cavidades: dos aurículas y dos ventrículos?",
+            "explanation": "Verdadero. El corazón humano está formado por dos aurículas y dos ventrículos.",
+            "hint": "Recuerda la estructura básica del corazón humano.",
+            "tags": [
+                "español",
+                "biología",
+                "corazón",
+                "anatomía"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Los pulmones son los órganos principales encargados del intercambio de oxígeno y dióxido de carbono?",
+            "explanation": "Verdadero. En los pulmones, especialmente en los alvéolos, ocurre el intercambio de gases entre el aire y la sangre.",
+            "hint": "Relaciona estos órganos con la respiración.",
+            "tags": [
+                "español",
+                "biología",
+                "pulmones",
+                "respiración"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La digestión de los alimentos comienza exclusivamente en el estómago?",
+            "explanation": "Falso. La digestión comienza en la boca, donde la masticación y las enzimas de la saliva inician el procesamiento de los alimentos.",
+            "hint": "Piensa en el primer lugar donde entra y se procesa el alimento.",
+            "tags": [
+                "español",
+                "biología",
+                "digestión"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Las enzimas son proteínas que pueden acelerar reacciones químicas en los organismos?",
+            "explanation": "Verdadero. Muchas enzimas son proteínas que actúan como catalizadores biológicos y aceleran reacciones químicas específicas.",
+            "hint": "Son catalizadores biológicos.",
+            "tags": [
+                "español",
+                "biología",
+                "enzimas",
+                "proteínas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Las proteínas están formadas por cadenas de aminoácidos?",
+            "explanation": "Verdadero. Las proteínas son macromoléculas cuyos componentes básicos son los aminoácidos.",
+            "hint": "Recuerda cuáles son los componentes básicos de las proteínas.",
+            "tags": [
+                "español",
+                "biología",
+                "proteínas",
+                "aminoácidos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Los carbohidratos pueden funcionar como una fuente importante de energía para los seres vivos?",
+            "explanation": "Verdadero. Los carbohidratos, como la glucosa, pueden ser utilizados por las células para obtener energía.",
+            "hint": "Piensa en uno de los principales nutrientes energéticos.",
+            "tags": [
+                "español",
+                "biología",
+                "carbohidratos",
+                "nutrición"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿El agua constituye una parte importante de muchos organismos vivos?",
+            "explanation": "Verdadero. El agua es un componente fundamental de las células y participa en numerosas reacciones y procesos biológicos.",
+            "hint": "Es la molécula más abundante en muchos organismos.",
+            "tags": [
+                "español",
+                "biología",
+                "agua",
+                "células"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La homeostasis es la capacidad de un organismo para mantener condiciones internas relativamente estables?",
+            "explanation": "Verdadero. La homeostasis permite regular variables internas, como la temperatura y la concentración de ciertas sustancias.",
+            "hint": "Se relaciona con mantener el equilibrio interno.",
+            "tags": [
+                "español",
+                "biología",
+                "homeostasis"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La mitosis produce normalmente dos células hijas con información genética muy similar a la de la célula original?",
+            "explanation": "Verdadero. En la mitosis, una célula se divide para producir dos células hijas que generalmente conservan el mismo número de cromosomas.",
+            "hint": "Es un tipo de división celular relacionado con crecimiento y reparación.",
+            "tags": [
+                "español",
+                "biología",
+                "mitosis",
+                "división celular"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La meiosis produce células sexuales con la mitad del número de cromosomas de las células somáticas de la misma especie?",
+            "explanation": "Verdadero. La meiosis reduce a la mitad el número de cromosomas para formar gametos haploides.",
+            "hint": "Está relacionada con la formación de gametos.",
+            "tags": [
+                "español",
+                "biología",
+                "meiosis",
+                "gametos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Los espermatozoides y los óvulos son ejemplos de gametos?",
+            "explanation": "Verdadero. Los espermatozoides y los óvulos son células sexuales o gametos que participan en la reproducción sexual.",
+            "hint": "Son las células sexuales humanas.",
+            "tags": [
+                "español",
+                "biología",
+                "gametos",
+                "reproducción"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La fecundación humana ocurre cuando un espermatozoide se une con un óvulo?",
+            "explanation": "Verdadero. La fecundación consiste en la unión de los gametos masculino y femenino para formar un cigoto.",
+            "hint": "Piensa en la unión de dos células sexuales.",
+            "tags": [
+                "español",
+                "biología",
+                "fecundación",
+                "reproducción"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Un gen es una región del ADN que contiene información relacionada con una función o característica biológica?",
+            "explanation": "Verdadero. Un gen es una unidad de información genética localizada en el ADN y puede contribuir a determinar características o funciones biológicas.",
+            "hint": "Relaciona el concepto con la información hereditaria.",
+            "tags": [
+                "español",
+                "biología",
+                "genes",
+                "ADN"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Todas las mutaciones del ADN causan necesariamente enfermedades?",
+            "explanation": "Falso. Las mutaciones pueden ser perjudiciales, beneficiosas o neutrales, dependiendo de su naturaleza y contexto.",
+            "hint": "No todos los cambios genéticos tienen el mismo efecto.",
+            "tags": [
+                "español",
+                "biología",
+                "mutaciones",
+                "genética"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿La selección natural puede favorecer características que aumentan la supervivencia o reproducción de organismos en un ambiente determinado?",
+            "explanation": "Verdadero. La selección natural puede aumentar la frecuencia de características heredables que favorecen el éxito reproductivo en determinadas condiciones.",
+            "hint": "Relaciona adaptación, herencia y reproducción.",
+            "tags": [
+                "español",
+                "biología",
+                "evolución",
+                "selección natural"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La evolución biológica ocurre porque los organismos individuales cambian genéticamente de manera intencional para adaptarse?",
+            "explanation": "Falso. La evolución describe cambios en las poblaciones a través de generaciones; no implica que los individuos cambien genéticamente de forma intencional para adaptarse.",
+            "hint": "Distingue cambios en individuos de cambios en poblaciones.",
+            "tags": [
+                "español",
+                "biología",
+                "evolución",
+                "adaptación"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Los fósiles pueden proporcionar evidencia sobre organismos que vivieron en el pasado?",
+            "explanation": "Verdadero. Los fósiles conservan restos o huellas de organismos antiguos y constituyen una fuente importante de evidencia para estudiar la historia de la vida.",
+            "hint": "Son restos o señales preservadas del pasado.",
+            "tags": [
+                "español",
+                "biología",
+                "fósiles",
+                "evolución"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Los organismos pertenecientes a una misma especie son siempre genéticamente idénticos?",
+            "explanation": "Falso. Los individuos de una misma especie pueden presentar variación genética, aunque compartan características que permiten clasificarlos dentro de esa especie.",
+            "hint": "Considera la diversidad genética entre individuos.",
+            "tags": [
+                "español",
+                "biología",
+                "especies",
+                "genética"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Los ecosistemas están formados únicamente por organismos vivos?",
+            "explanation": "Falso. Un ecosistema incluye tanto componentes bióticos como factores abióticos, como agua, luz, temperatura y suelo.",
+            "hint": "Piensa también en los factores no vivos del ambiente.",
+            "tags": [
+                "español",
+                "biología",
+                "ecosistemas",
+                "ecología"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Los productores, como las plantas, pueden fabricar materia orgánica a partir de sustancias inorgánicas?",
+            "explanation": "Verdadero. Los productores realizan procesos como la fotosíntesis para sintetizar materia orgánica a partir de sustancias inorgánicas.",
+            "hint": "Son organismos que forman la base de muchas cadenas alimentarias.",
+            "tags": [
+                "español",
+                "biología",
+                "productores",
+                "ecología"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Los hongos son organismos fotosintéticos que producen su propio alimento a partir de la luz?",
+            "explanation": "Falso. Los hongos no realizan fotosíntesis y obtienen nutrientes mediante la absorción de materia orgánica.",
+            "hint": "Los hongos tienen una forma de nutrición diferente a la de las plantas.",
+            "tags": [
+                "español",
+                "biología",
+                "hongos",
+                "nutrición"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Las bacterias son organismos unicelulares que pertenecen al grupo de los procariotas?",
+            "explanation": "Verdadero. Las bacterias son organismos generalmente unicelulares cuyas células carecen de núcleo delimitado por membrana.",
+            "hint": "Son microorganismos procariotas.",
+            "tags": [
+                "español",
+                "biología",
+                "bacterias",
+                "procariotas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Todos los microorganismos son perjudiciales para los seres humanos?",
+            "explanation": "Falso. Muchos microorganismos son beneficiosos o neutrales; algunos participan en la digestión, los ciclos biogeoquímicos y la producción de alimentos.",
+            "hint": "No todos los microorganismos provocan enfermedades.",
+            "tags": [
+                "español",
+                "biología",
+                "microorganismos",
+                "bacterias"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Los virus necesitan una célula huésped para replicarse?",
+            "explanation": "Verdadero. Los virus dependen de la maquinaria de una célula huésped para producir nuevas partículas virales.",
+            "hint": "Relaciona los virus con su dependencia de las células.",
+            "tags": [
+                "español",
+                "biología",
+                "virus",
+                "microbiología"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Las vacunas pueden ayudar al sistema inmunitario a desarrollar una respuesta específica frente a determinados agentes infecciosos?",
+            "explanation": "Verdadero. Las vacunas entrenan al sistema inmunitario para reconocer componentes específicos de determinados patógenos y responder frente a ellos.",
+            "hint": "Relaciona las vacunas con la memoria inmunológica.",
+            "tags": [
+                "español",
+                "biología",
+                "vacunas",
+                "sistema inmunitario"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Los glóbulos blancos participan en la defensa del organismo frente a agentes extraños y patógenos?",
+            "explanation": "Verdadero. Los leucocitos forman parte del sistema inmunitario y participan en diferentes mecanismos de defensa.",
+            "hint": "Son células sanguíneas relacionadas con la defensa.",
+            "tags": [
+                "español",
+                "biología",
+                "glóbulos blancos",
+                "inmunidad"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Las neuronas son células especializadas en transmitir y procesar señales en el sistema nervioso?",
+            "explanation": "Verdadero. Las neuronas están especializadas en recibir, integrar y transmitir señales mediante impulsos eléctricos y señales químicas.",
+            "hint": "Son las células principales del sistema nervioso.",
+            "tags": [
+                "español",
+                "biología",
+                "neuronas",
+                "sistema nervioso"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿El cerebro humano forma parte del sistema nervioso central?",
+            "explanation": "Verdadero. El sistema nervioso central está formado principalmente por el encéfalo y la médula espinal.",
+            "hint": "Piensa en las estructuras que forman el sistema nervioso central.",
+            "tags": [
+                "español",
+                "biología",
+                "cerebro",
+                "sistema nervioso"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Las hormonas son sustancias químicas que pueden actuar como señales dentro del organismo?",
+            "explanation": "Verdadero. Las hormonas actúan como mensajeros químicos y regulan diversas funciones fisiológicas.",
+            "hint": "Son mensajeros químicos producidos por tejidos especializados, como las glándulas endocrinas.",
+            "tags": [
+                "español",
+                "biología",
+                "hormonas",
+                "sistema endocrino"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La insulina es una hormona que participa en la regulación de la glucosa en la sangre?",
+            "explanation": "Verdadero. La insulina ayuda a regular la concentración de glucosa en la sangre, favoreciendo su captación y almacenamiento en determinados tejidos.",
+            "hint": "Está relacionada con el control de la glucosa.",
+            "tags": [
+                "español",
+                "biología",
+                "insulina",
+                "hormonas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Los riñones participan en la filtración de la sangre y en la formación de la orina?",
+            "explanation": "Verdadero. Los riñones filtran la sangre y contribuyen a eliminar desechos mediante la producción de orina.",
+            "hint": "Son órganos importantes del sistema urinario.",
+            "tags": [
+                "español",
+                "biología",
+                "riñones",
+                "sistema urinario"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿El hígado participa en procesos metabólicos y en la eliminación o transformación de diversas sustancias?",
+            "explanation": "Verdadero. El hígado cumple numerosas funciones metabólicas, de almacenamiento y procesamiento de sustancias.",
+            "hint": "Es uno de los órganos más importantes para el metabolismo.",
+            "tags": [
+                "español",
+                "biología",
+                "hígado",
+                "metabolismo"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Los huesos son tejidos completamente inertes que no contienen células vivas?",
+            "explanation": "Falso. El tejido óseo contiene células vivas, vasos sanguíneos y una matriz extracelular mineralizada.",
+            "hint": "El tejido óseo es un tejido vivo.",
+            "tags": [
+                "español",
+                "biología",
+                "huesos",
+                "tejidos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "¿Los músculos esqueléticos permiten realizar movimientos voluntarios del cuerpo?",
+            "explanation": "Verdadero. Los músculos esqueléticos están unidos a los huesos y participan principalmente en movimientos que pueden controlarse de manera voluntaria.",
+            "hint": "Piensa en los músculos utilizados para mover brazos y piernas.",
+            "tags": [
+                "español",
+                "biología",
+                "músculos",
+                "movimiento"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿El tejido epitelial puede cubrir superficies externas y revestir cavidades y órganos internos?",
+            "explanation": "Verdadero. El tejido epitelial forma revestimientos y participa en funciones como protección, absorción y secreción.",
+            "hint": "Piensa en los tejidos que forman recubrimientos y revestimientos.",
+            "tags": [
+                "español",
+                "biología",
+                "tejido epitelial",
+                "tejidos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La membrana plasmática está formada principalmente por una bicapa de fosfolípidos con proteínas asociadas?",
+            "explanation": "Verdadero. La membrana plasmática presenta una bicapa lipídica en la que se encuentran diversas proteínas.",
+            "hint": "Recuerda el modelo de mosaico fluido.",
+            "tags": [
+                "español",
+                "biología",
+                "membrana celular",
+                "fosfolípidos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La difusión es el movimiento neto de partículas desde una región de mayor concentración hacia una de menor concentración?",
+            "explanation": "Verdadero. La difusión ocurre debido al movimiento aleatorio de las partículas y produce un desplazamiento neto a favor del gradiente de concentración.",
+            "hint": "Se produce siguiendo un gradiente de concentración.",
+            "tags": [
+                "español",
+                "biología",
+                "difusión",
+                "transporte celular"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿La ósmosis es el movimiento de agua a través de una membrana semipermeable debido a diferencias en la concentración de solutos?",
+            "explanation": "Verdadero. La ósmosis describe el movimiento neto de agua a través de una membrana semipermeable en respuesta a diferencias de concentración de solutos.",
+            "hint": "Es un tipo de transporte relacionado específicamente con el agua.",
+            "tags": [
+                "español",
+                "biología",
+                "ósmosis",
+                "transporte celular"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Las plantas absorben dióxido de carbono de la atmósfera para utilizarlo durante la fotosíntesis?",
+            "explanation": "Verdadero. El dióxido de carbono es uno de los reactivos utilizados por las plantas durante la fotosíntesis para formar compuestos orgánicos.",
+            "hint": "Es uno de los gases que entran a las hojas durante la fotosíntesis.",
+            "tags": [
+                "español",
+                "biología",
+                "plantas",
+                "fotosíntesis"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Las raíces de las plantas cumplen funciones relacionadas con la absorción de agua y minerales del suelo?",
+            "explanation": "Verdadero. Las raíces absorben agua y sales minerales y también ayudan a fijar la planta al suelo.",
+            "hint": "Piensa en la parte de la planta que está en contacto con el suelo.",
+            "tags": [
+                "español",
+                "biología",
+                "raíces",
+                "plantas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿El xilema transporta principalmente agua y minerales desde las raíces hacia otras partes de la planta?",
+            "explanation": "Verdadero. El xilema conduce principalmente agua y sales minerales desde las raíces hacia las partes aéreas de la planta.",
+            "hint": "Relaciona este tejido vascular con el transporte de agua.",
+            "tags": [
+                "español",
+                "biología",
+                "xilema",
+                "plantas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿El floema participa en el transporte de azúcares y otros productos orgánicos producidos por las plantas?",
+            "explanation": "Verdadero. El floema distribuye principalmente productos de la fotosíntesis, como azúcares, hacia diferentes partes de la planta.",
+            "hint": "Es el tejido vascular asociado con el transporte de productos orgánicos.",
+            "tags": [
+                "español",
+                "biología",
+                "floema",
+                "plantas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        }
+    ]
+}

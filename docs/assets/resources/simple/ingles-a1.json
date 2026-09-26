@@ -1,0 +1,729 @@
+{
+  "title": "Inglés Nivel A1 - Básico",
+  "time": 120,
+  "tags": ["inglés", "A1", "básico"],
+  "cardsCount": 100,
+  "cards": [
+    {
+      "question": "¿Cómo se dice 'hola' en inglés?",
+      "answer": "Hello",
+      "hint": "Es la forma más común de saludar.",
+      "explanation": "Hello es el saludo universal y se usa en cualquier situación formal o informal.",
+      "tags": ["inglés", "saludos", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'adiós' en inglés?",
+      "answer": "Goodbye",
+      "hint": "Se usa al despedirse.",
+      "explanation": "Goodbye es la despedida estándar; también se usa Bye en contextos informales.",
+      "tags": ["inglés", "despedidas", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'buenos días' en inglés?",
+      "answer": "Good morning",
+      "hint": "Se usa antes del mediodía.",
+      "explanation": "Good morning se emplea desde que amanece hasta aproximadamente las 12:00 del mediodía.",
+      "tags": ["inglés", "saludos", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'buenas tardes' en inglés?",
+      "answer": "Good afternoon",
+      "hint": "Se usa después del mediodía y antes de la noche.",
+      "explanation": "Good afternoon va desde las 12:00 hasta aproximadamente las 18:00 o 19:00.",
+      "tags": ["inglés", "saludos", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'buenas noches' al llegar en inglés?",
+      "answer": "Good evening",
+      "hint": "Se usa al saludar cuando ya oscureció.",
+      "explanation": "Good evening es el saludo nocturno; Good night se usa solo para despedirse.",
+      "tags": ["inglés", "saludos", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'buenas noches' al irse a dormir en inglés?",
+      "answer": "Good night",
+      "hint": "Es una despedida al final del día.",
+      "explanation": "Good night no se usa para saludar, únicamente para despedirse antes de dormir.",
+      "tags": ["inglés", "despedidas", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'mi nombre es' en inglés?",
+      "answer": "My name is",
+      "hint": "Se usa para presentarse.",
+      "explanation": "Estructura: My name is + nombre. También se puede decir I am + nombre.",
+      "tags": ["inglés", "presentaciones", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'yo soy' en inglés?",
+      "answer": "I am",
+      "hint": "Sujeto + verbo 'ser/estar'.",
+      "explanation": "I am es la forma del presente; se contrae en I'm.",
+      "tags": ["inglés", "verbo-to-be", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'tú eres/estás' en inglés?",
+      "answer": "You are",
+      "hint": "Se usa para la segunda persona.",
+      "explanation": "You funciona tanto para singular como plural; se contrae You're.",
+      "tags": ["inglés", "verbo-to-be", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'él es/está' en inglés?",
+      "answer": "He is",
+      "hint": "Pronombre masculino singular.",
+      "explanation": "He se refiere a hombres; se contrae He's.",
+      "tags": ["inglés", "verbo-to-be", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'ella es/está' en inglés?",
+      "answer": "She is",
+      "hint": "Pronombre femenino singular.",
+      "explanation": "She se refiere a mujeres; se contrae She's.",
+      "tags": ["inglés", "verbo-to-be", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'eso/ello es/está' en inglés?",
+      "answer": "It is",
+      "hint": "Pronombre para cosas, animales o situaciones.",
+      "explanation": "It no tiene género; se contrae It's.",
+      "tags": ["inglés", "verbo-to-be", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'nosotros/as somos/estamos' en inglés?",
+      "answer": "We are",
+      "hint": "Primera persona del plural.",
+      "explanation": "We incluye al hablante; se contrae We're.",
+      "tags": ["inglés", "verbo-to-be", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'ellos/as son/están' en inglés?",
+      "answer": "They are",
+      "hint": "Tercera persona del plural.",
+      "explanation": "They se refiere a grupos de personas o cosas; se contrae They're.",
+      "tags": ["inglés", "verbo-to-be", "gramática"]
+    },
+    {
+      "question": "¿Cómo se hace la negación del verbo 'to be' en presente?",
+      "answer": "Sujeto + am/is/are + not",
+      "hint": "Añade 'not' después del verbo.",
+      "explanation": "Ejemplo: I am not, You are not, He is not. Se contraen: isn't, aren't.",
+      "tags": ["inglés", "verbo-to-be", "negación"]
+    },
+    {
+      "question": "¿Cómo se forma la pregunta con el verbo 'to be' en presente?",
+      "answer": "Am/Is/Are + sujeto + resto?",
+      "hint": "El verbo va antes del sujeto.",
+      "explanation": "Se invierte el orden: You are → Are you? Ejemplo: Are you happy?",
+      "tags": ["inglés", "verbo-to-be", "preguntas"]
+    },
+    {
+      "question": "¿Cómo se dice 'sí' en inglés?",
+      "answer": "Yes",
+      "hint": "Respuesta afirmativa corta.",
+      "explanation": "Yes equivale a 'sí'; se puede acompañar del sujeto y verbo: Yes, I am.",
+      "tags": ["inglés", "básico", "respuestas"]
+    },
+    {
+      "question": "¿Cómo se dice 'no' en inglés?",
+      "answer": "No",
+      "hint": "Respuesta negativa corta.",
+      "explanation": "No equivale a 'no'; se puede acompañar del sujeto y verbo: No, I am not.",
+      "tags": ["inglés", "básico", "respuestas"]
+    },
+    {
+      "question": "¿Cómo se dice 'no, yo no' en respuesta corta con 'to be'?",
+      "answer": "No, I'm not",
+      "hint": "No + pronombre + verbo negado.",
+      "explanation": "Las respuestas cortas usan el pronombre y la forma contraída: No + sujeto + verbo negativo.",
+      "tags": ["inglés", "respuestas", "verbo-to-be"]
+    },
+    {
+      "question": "¿Qué significa 'How are you'?",
+      "answer": "¿Cómo estás?",
+      "hint": "Pregunta sobre el estado de alguien.",
+      "explanation": "Es la forma estándar de preguntar cómo se encuentra la persona con la que hablas.",
+      "tags": ["inglés", "saludos", "preguntas"]
+    },
+    {
+      "question": "¿Qué significa 'I am fine, thank you'?",
+      "answer": "Estoy bien, gracias.",
+      "hint": "Respuesta positiva sobre el estado.",
+      "explanation": "Es la respuesta clásica a 'How are you'; también se usa 'Very well'.",
+      "tags": ["inglés", "respuestas", "saludos"]
+    },
+    {
+      "question": "¿Qué significa 'And you'?",
+      "answer": "¿Y tú?",
+      "hint": "Devuelve la pregunta a la otra persona.",
+      "explanation": "Se usa después de responder para interesarse por el otro: I'm fine, and you?",
+      "tags": ["inglés", "básico", "preguntas"]
+    },
+    {
+      "question": "¿Cómo se dice 'gracias' en inglés?",
+      "answer": "Thank you",
+      "hint": "Expresa agradecimiento.",
+      "explanation": "Thank you es estándar; Thanks es más informal.",
+      "tags": ["inglés", "cortesía", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'de nada' en inglés?",
+      "answer": "You are welcome",
+      "hint": "Respuesta al agradecimiento.",
+      "explanation": "You're welcome es la respuesta formal y estándar; también se usa No problem.",
+      "tags": ["inglés", "cortesía", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'por favor' en inglés?",
+      "answer": "Please",
+      "hint": "Se añade al principio o al final de una petición.",
+      "explanation": "Please hace la frase más educada: Sit down, please / Please come in.",
+      "tags": ["inglés", "cortesía", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'perdón/disculpe' en inglés?",
+      "answer": "Excuse me",
+      "hint": "Se usa para llamar la atención o pedir permiso.",
+      "explanation": "Excuse me se usa antes de hablar o pasar; Sorry se usa al cometer un error.",
+      "tags": ["inglés", "cortesía", "vocabulario"]
+    },
+    {
+      "question": "¿Qué significa 'Sorry'?",
+      "answer": "Lo siento",
+      "hint": "Se usa tras cometer un error o dar una mala noticia.",
+      "explanation": "Sorry expresa disculpa o pesar; no se usa para pedir atención al inicio.",
+      "tags": ["inglés", "cortesía", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'entiendo' en inglés?",
+      "answer": "I understand",
+      "hint": "Verbo 'entender' en presente.",
+      "explanation": "I understand se usa para afirmar comprensión; la negación es I don't understand.",
+      "tags": ["inglés", "verbos", "comprensión"]
+    },
+    {
+      "question": "¿Cómo se dice 'no entiendo' en inglés?",
+      "answer": "I don't understand",
+      "hint": "Negación del verbo entender.",
+      "explanation": "Para verbos que no son 'to be', se usa don't para negar en presente: sujeto + don't + verbo.",
+      "tags": ["inglés", "verbos", "negación"]
+    },
+    {
+      "question": "¿Cómo se dice 'repita por favor' en inglés?",
+      "answer": "Repeat please",
+      "hint": "Orden o petición directa.",
+      "explanation": "El imperativo usa el verbo en forma base: Repeat, Speak, Look.",
+      "tags": ["inglés", "imperativo", "peticiones"]
+    },
+    {
+      "question": "¿Qué significa 'What is your name'?",
+      "answer": "¿Cómo te llamas?",
+      "hint": "Pregunta el nombre.",
+      "explanation": "Estructura: What is + posesivo + sustantivo? Your indica posesión de segunda persona.",
+      "tags": ["inglés", "preguntas", "presentaciones"]
+    },
+    {
+      "question": "¿Qué significa 'Where are you from'?",
+      "answer": "¿De dónde eres?",
+      "hint": "Pregunta origen.",
+      "explanation": "Where = dónde; from = de. Respuesta: I am from + país/ciudad.",
+      "tags": ["inglés", "preguntas", "origen"]
+    },
+    {
+      "question": "¿Cómo se dice 'yo soy de México' en inglés?",
+      "answer": "I am from Mexico",
+      "hint": "I am from + lugar.",
+      "explanation": "Para indicar origen siempre se usa 'to be + from', no el verbo venir.",
+      "tags": ["inglés", "origen", "gramática"]
+    },
+    {
+      "question": "¿Qué significa 'I am years old'?",
+      "answer": "Tengo ... años.",
+      "hint": "Expresa la edad.",
+      "explanation": "En inglés no se usa verbo 'tener' para edad, sino 'ser/estar': I am 20 years old.",
+      "tags": ["inglés", "edad", "gramática"]
+    },
+    {
+      "question": "¿Cómo se pregunta la edad en inglés?",
+      "answer": "How old are you?",
+      "hint": "How old = cuántos años.",
+      "explanation": "Estructura: How old + verbo to be + sujeto? How old is she?",
+      "tags": ["inglés", "edad", "preguntas"]
+    },
+    {
+      "question": "¿Cuál es el pronombre de 'yo' en inglés?",
+      "answer": "I",
+      "hint": "Siempre se escribe con mayúscula.",
+      "explanation": "I equivale a 'yo'; va seguido del verbo: I speak.",
+      "tags": ["inglés", "pronombres", "básico"]
+    },
+    {
+      "question": "¿Cuál es el pronombre de 'tú/usted' en inglés?",
+      "answer": "You",
+      "hint": "Sirve para singular y plural.",
+      "explanation": "En inglés no hay distinción entre tú y usted; todo es You.",
+      "tags": ["inglés", "pronombres", "básico"]
+    },
+    {
+      "question": "¿Cuál es el posesivo de 'yo' en inglés?",
+      "answer": "My",
+      "hint": "Va antes del sustantivo.",
+      "explanation": "My casa → My house. No cambia por género ni número.",
+      "tags": ["inglés", "posesivos", "gramática"]
+    },
+    {
+      "question": "¿Cuál es el posesivo de 'tú' en inglés?",
+      "answer": "Your",
+      "hint": "Antes del nombre: tu libro.",
+      "explanation": "Your equivale a tu/tus; no varía: your book, your books.",
+      "tags": ["inglés", "posesivos", "gramática"]
+    },
+    {
+      "question": "¿Cuál es el posesivo de 'él' en inglés?",
+      "answer": "His",
+      "hint": "Su (de él).",
+      "explanation": "His se usa para masculino singular: his car.",
+      "tags": ["inglés", "posesivos", "gramática"]
+    },
+    {
+      "question": "¿Cuál es el posesivo de 'ella' en inglés?",
+      "answer": "Her",
+      "hint": "Su (de ella).",
+      "explanation": "Her equivale a su/de ella: her house.",
+      "tags": ["inglés", "posesivos", "gramática"]
+    },
+    {
+      "question": "¿Cuál es el posesivo de 'nosotros' en inglés?",
+      "answer": "Our",
+      "hint": "Nuestro/a.",
+      "explanation": "Our house = nuestra casa; no varía en género.",
+      "tags": ["inglés", "posesivos", "gramática"]
+    },
+    {
+      "question": "¿Cuál es el posesivo de 'ellos' en inglés?",
+      "answer": "Their",
+      "hint": "Su (de ellos).",
+      "explanation": "Their books = sus libros (de ellos).",
+      "tags": ["inglés", "posesivos", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'un' en inglés para sustantivos en singular?",
+      "answer": "A / An",
+      "hint": "A antes de consonante, An antes de vocal.",
+      "explanation": "A house, An apple. Solo se usan en singular.",
+      "tags": ["inglés", "artículos", "gramática"]
+    },
+    {
+      "question": "¿Cuándo se usa 'an' en lugar de 'a'?",
+      "answer": "Antes de palabra que empieza por sonido de vocal.",
+      "hint": "An apple, An umbrella.",
+      "explanation": "Se fija en el sonido, no en la letra escrita: An hour (h muda).",
+      "tags": ["inglés", "artículos", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'el/la/los/las' en inglés?",
+      "answer": "The",
+      "hint": "Solo hay una forma para todo.",
+      "explanation": "The sirve para singular y plural, masculino y femenino: The book, The books.",
+      "tags": ["inglés", "artículos", "gramática"]
+    },
+    {
+      "question": "¿Cómo se forma el plural regular en inglés?",
+      "answer": "Añadiendo -s al final de la palabra.",
+      "hint": "Book → Books; Pen → Pens.",
+      "explanation": "La mayoría de sustantivos solo añaden s; no cambia la vocal anterior.",
+      "tags": ["inglés", "plural", "gramática"]
+    },
+    {
+      "question": "¿Cómo se hace el plural de palabras terminadas en -s, -ss, -x, -ch, -sh?",
+      "answer": "Se añade -es.",
+      "hint": "Bus → Buses; Box → Boxes.",
+      "explanation": "Estas terminaciones llevan -es para mejorar la pronunciación.",
+      "tags": ["inglés", "plural", "gramática"]
+    },
+    {
+      "question": "¿Cuál es el plural de 'child'?",
+      "answer": "Children",
+      "hint": "Es irregular, no lleva -s.",
+      "explanation": "Child → Children; es uno de los plurales irregulares más comunes en A1.",
+      "tags": ["inglés", "plural", "irregular"]
+    },
+    {
+      "question": "¿Cuál es el plural de 'man'?",
+      "answer": "Men",
+      "hint": "Cambia la vocal interna.",
+      "explanation": "Man (hombre) cambia a Men en plural; Woman cambia a Women.",
+      "tags": ["inglés", "plural", "irregular"]
+    },
+    {
+      "question": "¿Cuál es el plural de 'person'?",
+      "answer": "People",
+      "hint": "No se usa 'persons' en lenguaje cotidiano.",
+      "explanation": "People ya tiene significado plural: many people, no many peoples.",
+      "tags": ["inglés", "plural", "irregular"]
+    },
+    {
+      "question": "¿Qué verbo se usa para posesión en presente en inglés?",
+      "answer": "Have / Have got",
+      "hint": "Tener.",
+      "explanation": "I have a car / I have got a car. Has para he/she/it.",
+      "tags": ["inglés", "verbo-tener", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'yo tengo' en inglés?",
+      "answer": "I have",
+      "hint": "Forma base del verbo.",
+      "explanation": "I have, You have, We have, They have. Solo he/she/it usa Has.",
+      "tags": ["inglés", "verbo-tener", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'él tiene' en inglés?",
+      "answer": "He has",
+      "hint": "Tercera persona cambia a has.",
+      "explanation": "He has, She has, It have → It has.",
+      "tags": ["inglés", "verbo-tener", "gramática"]
+    },
+    {
+      "question": "¿Cómo se niega el verbo 'have' en presente simple?",
+      "answer": "Do not have / Don't have",
+      "hint": "Se usa auxiliar do + not.",
+      "explanation": "I don't have, You don't have. He/She doesn't have.",
+      "tags": ["inglés", "verbo-tener", "negación"]
+    },
+    {
+      "question": "¿Cómo se pregunta con 'have' en presente simple?",
+      "answer": "Do + sujeto + have...?",
+      "hint": "Se añade Do al principio.",
+      "explanation": "Do you have a pen? Does she have a car?",
+      "tags": ["inglés", "verbo-tener", "preguntas"]
+    },
+    {
+      "question": "¿Qué estructura se usa para acciones habituales en presente?",
+      "answer": "Sujeto + verbo en forma base (solo se añade -s en he/she/it).",
+      "hint": "Presente simple.",
+      "explanation": "I work, You work, He works. La tercera persona singular lleva -s.",
+      "tags": ["inglés", "presente-simple", "gramática"]
+    },
+    {
+      "question": "¿Qué se añade al verbo en tercera persona singular del presente simple?",
+      "answer": "-s o -es.",
+      "hint": "Work → Works; Watch → Watches.",
+      "explanation": "La mayoría llevan -s; terminaciones en ch, sh, s, x, o llevan -es.",
+      "tags": ["inglés", "presente-simple", "gramática"]
+    },
+    {
+      "question": "¿Cómo se niega un verbo cualquiera en presente simple?",
+      "answer": "Sujeto + don't / doesn't + verbo en forma base.",
+      "hint": "No cambia el verbo principal.",
+      "explanation": "I don't eat, She doesn't eat. El verbo se queda en su forma original.",
+      "tags": ["inglés", "presente-simple", "negación"]
+    },
+    {
+      "question": "¿Cómo se pregunta con verbos en presente simple?",
+      "answer": "Do / Does + sujeto + verbo en forma base...?",
+      "hint": "El auxiliar va al principio.",
+      "explanation": "Do you speak English? Does she live here?",
+      "tags": ["inglés", "presente-simple", "preguntas"]
+    },
+    {
+      "question": "¿Qué auxiliar se usa para he/she/it en preguntas y negaciones de presente simple?",
+      "answer": "Does / Doesn't",
+      "hint": "Solo para tercera persona singular.",
+      "explanation": "Does sustituye a Do; el verbo principal no lleva -s: Does he work?",
+      "tags": ["inglés", "presente-simple", "auxiliares"]
+    },
+    {
+      "question": "¿Qué significa 'I like'?",
+      "answer": "Me gusta",
+      "hint": "Verbo gustar.",
+      "explanation": "I like pizza = me gusta la pizza. No se invierte como en español.",
+      "tags": ["inglés", "verbos", "preferencias"]
+    },
+    {
+      "question": "¿Cómo se dice 'me gusta mucho' en inglés?",
+      "answer": "I like ... very much",
+      "hint": "Very much va al final.",
+      "explanation": "I like coffee very much. También: I love ... = me encanta.",
+      "tags": ["inglés", "preferencias", "adverbios"]
+    },
+    {
+      "question": "¿Cómo se dice 'no me gusta' en inglés?",
+      "answer": "I don't like",
+      "hint": "Negación del verbo like.",
+      "explanation": "Like necesita auxiliar do para negarse: I don't like fish.",
+      "tags": ["inglés", "preferencias", "negación"]
+    },
+    {
+      "question": "¿Qué significa 'Can you'?",
+      "answer": "¿Puedes...?",
+      "hint": "Verbo modal can.",
+      "explanation": "Can indica capacidad o permiso; va seguido del verbo en forma base.",
+      "tags": ["inglés", "verbo-modal", "capacidad"]
+    },
+    {
+      "question": "¿Cómo se niega el verbo 'can'?",
+      "answer": "Cannot / Can't",
+      "hint": "No necesita auxiliar.",
+      "explanation": "I can swim → I can't swim. No lleva do ni does.",
+      "tags": ["inglés", "verbo-modal", "negación"]
+    },
+    {
+      "question": "¿Cómo se pregunta con 'can'?",
+      "answer": "Can + sujeto + verbo...?",
+      "hint": "Va al principio de la pregunta.",
+      "explanation": "Can you speak English? No necesita do.",
+      "tags": ["inglés", "verbo-modal", "preguntas"]
+    },
+    {
+      "question": "¿Qué significa 'I can speak English'?",
+      "answer": "Puedo hablar inglés / Sé hablar inglés.",
+      "hint": "Can + verbo base.",
+      "explanation": "Can expresa habilidad: I can ride a bike = sé montar en bicicleta.",
+      "tags": ["inglés", "verbo-modal", "capacidad"]
+    },
+    {
+      "question": "¿Qué estructura sirve para acciones que ocurren ahora mismo?",
+      "answer": "Presente continuo: sujeto + am/is/are + verbo-ing.",
+      "hint": "Terminación -ing.",
+      "explanation": "I am reading = estoy leyendo. Describe acción en progreso.",
+      "tags": ["inglés", "presente-continuo", "gramática"]
+    },
+    {
+      "question": "¿Cómo se forma el gerundio (-ing) de un verbo?",
+      "answer": "Añadiendo -ing al infinitivo.",
+      "hint": "Read → Reading; Play → Playing.",
+      "explanation": "La mayoría de verbos solo añaden -ing; si terminan en -e muda, se quita: write → writing.",
+      "tags": ["inglés", "presente-continuo", "gerundio"]
+    },
+    {
+      "question": "¿Cómo se niega el presente continuo?",
+      "answer": "Sujeto + am/is/are + not + verbo-ing.",
+      "hint": "Not va entre el verbo to be y el gerundio.",
+      "explanation": "She is reading → She is not reading / She isn't reading.",
+      "tags": ["inglés", "presente-continuo", "negación"]
+    },
+    {
+      "question": "¿Cómo se pregunta en presente continuo?",
+      "answer": "Am/Is/Are + sujeto + verbo-ing...?",
+      "hint": "Se invierte el verbo to be.",
+      "explanation": "You are eating → Are you eating?",
+      "tags": ["inglés", "presente-continuo", "preguntas"]
+    },
+    {
+      "question": "¿Qué significa 'What are you doing'?",
+      "answer": "¿Qué estás haciendo?",
+      "hint": "Pregunta por acción en curso.",
+      "explanation": "What = qué; doing = haciendo. Respuesta: I am reading.",
+      "tags": ["inglés", "presente-continuo", "preguntas"]
+    },
+    {
+      "question": "¿Qué palabra se usa para indicar posesión con personas en inglés?",
+      "answer": "'s (apóstrofo + s).",
+      "hint": "Juan's book = el libro de Juan.",
+      "explanation": "Se añade 's al poseedor: Ana's house = la casa de Ana.",
+      "tags": ["inglés", "posesión", "gramática"]
+    },
+    {
+      "question": "¿Qué significa 'This is'?",
+      "answer": "Este/esta es / Aquí está.",
+      "hint": "Señala algo cercano.",
+      "explanation": "This is my friend = esta es mi amiga. Singular cercano al hablante.",
+      "tags": ["inglés", "demostrativos", "gramática"]
+    },
+    {
+      "question": "¿Qué significa 'That is'?",
+      "answer": "Ese/esa es / Aquel es.",
+      "hint": "Algo lejano en singular.",
+      "explanation": "That is a car = ese es un coche. Lejos de ambos, hablante y oyente.",
+      "tags": ["inglés", "demostrativos", "gramática"]
+    },
+    {
+      "question": "¿Qué significa 'These are'?",
+      "answer": "Estos/estas son.",
+      "hint": "Plural cercano.",
+      "explanation": "These = estos; plural de This. These books = estos libros.",
+      "tags": ["inglés", "demostrativos", "gramática"]
+    },
+    {
+      "question": "¿Qué significa 'Those are'?",
+      "answer": "Esos/esas son / Aquellos son.",
+      "hint": "Plural lejano.",
+      "explanation": "Those = esos/aquellos; plural de That.",
+      "tags": ["inglés", "demostrativos", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'aquí' en inglés?",
+      "answer": "Here",
+      "hint": "Lugar cercano.",
+      "explanation": "Come here = ven aquí. Opuesto de There.",
+      "tags": ["inglés", "adverbios", "lugar"]
+    },
+    {
+      "question": "¿Cómo se dice 'allí' en inglés?",
+      "answer": "There",
+      "hint": "Lugar lejano.",
+      "explanation": "Over there = por allí. Se usa en la presentación: There is.",
+      "tags": ["inglés", "adverbios", "lugar"]
+    },
+    {
+      "question": "¿Qué estructura sirve para decir que existe algo?",
+      "answer": "There is / There are",
+      "hint": "Hay / Existe.",
+      "explanation": "There is para singular: There is a table. There are para plural: There are chairs.",
+      "tags": ["inglés", "existencia", "gramática"]
+    },
+    {
+      "question": "¿Cómo se niega 'There is'?",
+      "answer": "There is not / There isn't",
+      "hint": "No hay.",
+      "explanation": "Singular: There isn't a bank. Plural: There aren't shops.",
+      "tags": ["inglés", "existencia", "negación"]
+    },
+    {
+      "question": "¿Cómo se pregunta con 'There is'?",
+      "answer": "Is there...?",
+      "hint": "¿Hay...?",
+      "explanation": "Se invierte: There is → Is there? Is there a toilet here?",
+      "tags": ["inglés", "existencia", "preguntas"]
+    },
+    {
+      "question": "¿Qué significa 'I am going to'?",
+      "answer": "Voy a (hacer algo).",
+      "hint": "Futuro cercano.",
+      "explanation": "Estructura: sujeto + to be + going to + verbo base. I am going to study.",
+      "tags": ["inglés", "futuro", "gramática"]
+    },
+    {
+      "question": "¿Cómo se dice 'mañana' en inglés?",
+      "answer": "Tomorrow",
+      "hint": "Adverbio de tiempo futuro.",
+      "explanation": "Va al principio o al final: Tomorrow I work / I work tomorrow.",
+      "tags": ["inglés", "tiempo", "adverbios"]
+    },
+    {
+      "question": "¿Cómo se dice 'hoy' en inglés?",
+      "answer": "Today",
+      "hint": "Día presente.",
+      "explanation": "I work today = hoy trabajo.",
+      "tags": ["inglés", "tiempo", "adverbios"]
+    },
+    {
+      "question": "¿Cómo se dice 'ayer' en inglés?",
+      "answer": "Yesterday",
+      "hint": "Día pasado.",
+      "explanation": "Se usa con pasado simple: I walked yesterday.",
+      "tags": ["inglés", "tiempo", "adverbios"]
+    },
+    {
+      "question": "¿Qué significa 'Always'?",
+      "answer": "Siempre.",
+      "hint": "Frecuencia total.",
+      "explanation": "Va entre el sujeto y el verbo: I always get up early.",
+      "tags": ["inglés", "frecuencia", "adverbios"]
+    },
+    {
+      "question": "¿Qué significa 'Sometimes'?",
+      "answer": "A veces.",
+      "hint": "Frecuencia media.",
+      "explanation": "Puede ir al principio o en medio: Sometimes I walk / I sometimes walk.",
+      "tags": ["inglés", "frecuencia", "adverbios"]
+    },
+    {
+      "question": "¿Qué significa 'Never'?",
+      "answer": "Nunca.",
+      "hint": "Frecuencia cero.",
+      "explanation": "No se usa con not: I never eat meat (no *I don't never).",
+      "tags": ["inglés", "frecuencia", "adverbios"]
+    },
+    {
+      "question": "¿Cómo se dice 'a la derecha' en inglés?",
+      "answer": "On the right",
+      "hint": "Dirección.",
+      "explanation": "The bank is on the right = el banco está a la derecha.",
+      "tags": ["inglés", "dirección", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'a la izquierda' en inglés?",
+      "answer": "On the left",
+      "hint": "Dirección opuesta a la derecha.",
+      "explanation": "Turn on the left = gire a la izquierda.",
+      "tags": ["inglés", "dirección", "vocabulario"]
+    },
+    {
+      "question": "¿Qué significa 'Excuse me, where is...'?",
+      "answer": "Disculpe, ¿dónde está...?",
+      "hint": "Pregunta por un lugar.",
+      "explanation": "Estructura para pedir ubicación: Excuse me, where is the station?",
+      "tags": ["inglés", "direcciones", "preguntas"]
+    },
+    {
+      "question": "¿Cómo se dice 'abierto' en inglés?",
+      "answer": "Open",
+      "hint": "Contrario de cerrado.",
+      "explanation": "The shop is open = la tienda está abierta.",
+      "tags": ["inglés", "estados", "vocabulario"]
+    },
+    {
+      "question": "¿Cómo se dice 'cerrado' en inglés?",
+      "answer": "Closed",
+      "hint": "No abierto.",
+      "explanation": "Closed es adjetivo; no confundir con el verbo close.",
+      "tags": ["inglés", "estados", "vocabulario"]
+    },
+    {
+      "question": "¿Qué significa 'How much is it'?",
+      "answer": "¿Cuánto cuesta?",
+      "hint": "Pregunta el precio de algo singular.",
+      "explanation": "How much = cuánto dinero. Plural: How much are they?",
+      "tags": ["inglés", "compras", "preguntas"]
+    },
+    {
+      "question": "¿Qué significa 'I would like'?",
+      "answer": "Me gustaría / Quisiera.",
+      "hint": "Petición educada.",
+      "explanation": "Más educado que I want. I would like a coffee = quisiera un café.",
+      "tags": ["inglés", "compras", "cortesía"]
+    },
+    {
+      "question": "¿Cómo se dice 'aquí tiene' en inglés al entregar algo?",
+      "answer": "Here you are",
+      "hint": "Respuesta al dar algo.",
+      "explanation": "Here you are = aquí tienes/tiene; también Here it is.",
+      "tags": ["inglés", "cortesía", "compras"]
+    },
+    {
+      "question": "¿Qué significa 'I am sorry'?",
+      "answer": "Lo siento.",
+      "hint": "Disculpa o pesar.",
+      "explanation": "I am sorry = lamento que pase; no confundir con Excuse me.",
+      "tags": ["inglés", "cortesía", "disculpas"]
+    },
+    {
+      "question": "¿Cuál es el orden normal de una oración en inglés?",
+      "answer": "Sujeto + Verbo + Complementos.",
+      "hint": "Igual que en español en afirmativa.",
+      "explanation": "No se cambia el orden en afirmativa: I like coffee. En preguntas sí cambia: Do you like coffee?",
+      "tags": ["inglés", "gramática", "orden"]
+    },
+    {
+      "question": "¿Qué palabra se usa para objetos en singular?",
+      "answer": "It",
+      "hint": "No tiene género.",
+      "explanation": "La mesa es bonita → It is beautiful. No se usa she para cosas en inglés moderno.",
+      "tags": ["inglés", "pronombres", "objetos"]
+    },
+    {
+      "question": "¿Qué significa 'Very good'?",
+      "answer": "Muy bien / Muy bueno.",
+      "hint": "Valoración positiva.",
+      "explanation": "Good = bueno; Very = muy. Se usa para aprobar o calificar.",
+      "tags": ["inglés", "valoración", "básico"]
+    },
+    {
+      "question": "¿Qué es lo más importante para formar una oración completa en inglés?",
+      "answer": "Sujeto + Verbo.",
+      "hint": "No puede faltar ninguno de los dos.",
+      "explanation": "A diferencia del español, en inglés casi siempre se escribe el sujeto: I am happy, no *Am happy.",
+      "tags": ["inglés", "gramática", "estructura"]
+    }
+  ]
+}

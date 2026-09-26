@@ -1,0 +1,1130 @@
+{
+  "title": "Gramática para Secundaria",
+  "time": 0,
+  "tags": [
+    "español",
+    "prueba"
+  ],
+  "questionsCount": 50,
+  "questions": [
+    {
+      "question": "¿Cuál de las siguientes palabras es un sustantivo abstracto?",
+      "explanation": "La palabra libertad nombra una idea o concepto que no puede percibirse directamente con los sentidos.",
+      "hint": "Busca una palabra que nombre una idea o sentimiento.",
+      "tags": [
+        "español",
+        "sustantivos"
+      ],
+      "answers": [
+        {
+          "answer": "Libertad",
+          "isCorrect": true
+        },
+        {
+          "answer": "Mesa"
+        },
+        {
+          "answer": "Árbol"
+        },
+        {
+          "answer": "Zapato"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál de estas palabras es un sustantivo colectivo?",
+      "explanation": "Rebaño es un sustantivo colectivo porque, aunque está en singular, designa un conjunto de animales.",
+      "hint": "Piensa en una palabra singular que represente un grupo.",
+      "tags": [
+        "español",
+        "sustantivos"
+      ],
+      "answers": [
+        {
+          "answer": "Rebaño",
+          "isCorrect": true
+        },
+        {
+          "answer": "Oveja"
+        },
+        {
+          "answer": "Pastor"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el núcleo del sujeto en la oración 'Los estudiantes de segundo grado participaron'?",
+      "explanation": "Estudiantes es el núcleo del sujeto porque es el sustantivo principal del grupo nominal.",
+      "hint": "Busca el sustantivo principal del sujeto.",
+      "tags": [
+        "español",
+        "sintaxis"
+      ],
+      "answers": [
+        {
+          "answer": "Estudiantes",
+          "isCorrect": true
+        },
+        {
+          "answer": "Segundo"
+        },
+        {
+          "answer": "Participaron"
+        },
+        {
+          "answer": "Los"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el núcleo del predicado en 'Mi hermana pequeña estudia matemáticas'?",
+      "explanation": "Estudia es el núcleo del predicado porque es el verbo principal de la oración.",
+      "hint": "Busca el verbo conjugado.",
+      "tags": [
+        "español",
+        "sintaxis"
+      ],
+      "answers": [
+        {
+          "answer": "Estudia",
+          "isCorrect": true
+        },
+        {
+          "answer": "Hermana"
+        },
+        {
+          "answer": "Pequeña"
+        },
+        {
+          "answer": "Matemáticas"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración contiene un complemento directo?",
+      "explanation": "En 'Laura compró un cuaderno', la expresión 'un cuaderno' recibe directamente la acción de comprar.",
+      "hint": "Pregunta qué compró Laura.",
+      "tags": [
+        "español",
+        "complementos"
+      ],
+      "answers": [
+        {
+          "answer": "Laura compró un cuaderno.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Laura llegó temprano."
+        },
+        {
+          "answer": "Laura está cansada."
+        }
+      ]
+    },
+    {
+      "question": "En la oración 'Carlos entregó el trabajo a la profesora', ¿cuál es el complemento indirecto?",
+      "explanation": "'A la profesora' indica a quién se entrega el trabajo, por lo que funciona como complemento indirecto.",
+      "hint": "Pregunta a quién entregó Carlos el trabajo.",
+      "tags": [
+        "español",
+        "complementos"
+      ],
+      "answers": [
+        {
+          "answer": "A la profesora",
+          "isCorrect": true
+        },
+        {
+          "answer": "El trabajo"
+        },
+        {
+          "answer": "Carlos"
+        },
+        {
+          "answer": "Entregó"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué función cumple 'con mucho cuidado' en 'El conductor manejó con mucho cuidado'?",
+      "explanation": "La expresión indica la manera en que se realizó la acción, por lo que funciona como complemento circunstancial de modo.",
+      "hint": "Pregunta cómo manejó el conductor.",
+      "tags": [
+        "español",
+        "complementos"
+      ],
+      "answers": [
+        {
+          "answer": "Complemento circunstancial de modo",
+          "isCorrect": true
+        },
+        {
+          "answer": "Complemento directo"
+        },
+        {
+          "answer": "Sujeto"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración tiene un sujeto tácito?",
+      "explanation": "En 'Llegamos temprano', el sujeto no aparece escrito, pero se sobreentiende que es 'nosotros'.",
+      "hint": "Busca una oración cuyo sujeto pueda identificarse por el verbo.",
+      "tags": [
+        "español",
+        "sujeto"
+      ],
+      "answers": [
+        {
+          "answer": "Llegamos temprano.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Los alumnos llegaron temprano."
+        },
+        {
+          "answer": "Mi hermano llegó temprano."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración tiene sujeto expreso?",
+      "explanation": "En 'María estudia', el sujeto María aparece explícitamente en la oración.",
+      "hint": "Busca el nombre que realiza la acción y está escrito.",
+      "tags": [
+        "español",
+        "sujeto"
+      ],
+      "answers": [
+        {
+          "answer": "María estudia.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Estudiamos mucho."
+        },
+        {
+          "answer": "Llegaron tarde."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración contiene un verbo copulativo?",
+      "explanation": "Ser es un verbo copulativo cuando enlaza al sujeto con una característica o atributo.",
+      "hint": "Busca una oración con ser, estar o parecer.",
+      "tags": [
+        "español",
+        "verbos"
+      ],
+      "answers": [
+        {
+          "answer": "El cielo es azul.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Pedro corre rápido."
+        },
+        {
+          "answer": "Ana escribió una carta."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál de los siguientes verbos es irregular?",
+      "explanation": "Tener presenta cambios en su conjugación, por ejemplo, tengo y tienes, por lo que es irregular.",
+      "hint": "Busca el verbo cuya raíz o terminación cambia al conjugarse.",
+      "tags": [
+        "español",
+        "verbos"
+      ],
+      "answers": [
+        {
+          "answer": "Tener",
+          "isCorrect": true
+        },
+        {
+          "answer": "Cantar"
+        },
+        {
+          "answer": "Bailar"
+        },
+        {
+          "answer": "Estudiar"
+        }
+      ]
+    },
+    {
+      "question": "¿En qué tiempo verbal está 'habíamos terminado'?",
+      "explanation": "'Habíamos terminado' corresponde al pretérito pluscuamperfecto del indicativo.",
+      "hint": "Indica una acción pasada anterior a otra acción también pasada.",
+      "tags": [
+        "español",
+        "tiempos verbales"
+      ],
+      "answers": [
+        {
+          "answer": "Pretérito pluscuamperfecto",
+          "isCorrect": true
+        },
+        {
+          "answer": "Presente"
+        },
+        {
+          "answer": "Futuro simple"
+        },
+        {
+          "answer": "Pretérito perfecto simple"
+        }
+      ]
+    },
+    {
+      "question": "¿En qué tiempo verbal está 'habré terminado'?",
+      "explanation": "'Habré terminado' está en futuro perfecto porque expresa una acción que estará concluida en un momento futuro.",
+      "hint": "Observa el auxiliar 'habré' acompañado de un participio.",
+      "tags": [
+        "español",
+        "tiempos verbales"
+      ],
+      "answers": [
+        {
+          "answer": "Futuro perfecto",
+          "isCorrect": true
+        },
+        {
+          "answer": "Pretérito imperfecto"
+        },
+        {
+          "answer": "Presente perfecto"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es la primera persona del singular del verbo 'andar' en pretérito perfecto simple?",
+      "explanation": "La forma correcta es 'anduve', correspondiente a la primera persona singular del pretérito perfecto simple.",
+      "hint": "Piensa en la forma irregular de andar en pasado.",
+      "tags": [
+        "español",
+        "verbos"
+      ],
+      "answers": [
+        {
+          "answer": "Anduve",
+          "isCorrect": true
+        },
+        {
+          "answer": "Andaba"
+        },
+        {
+          "answer": "Andaré"
+        },
+        {
+          "answer": "Ando"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el gerundio del verbo 'leer'?",
+      "explanation": "El gerundio de leer es 'leyendo'.",
+      "hint": "Es una forma no personal que expresa una acción en desarrollo.",
+      "tags": [
+        "español",
+        "formas-verbales"
+      ],
+      "answers": [
+        {
+          "answer": "Leyendo",
+          "isCorrect": true
+        },
+        {
+          "answer": "Leído"
+        },
+        {
+          "answer": "Leer"
+        },
+        {
+          "answer": "Leyó"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el participio del verbo 'escribir'?",
+      "explanation": "El participio de escribir es 'escrito'.",
+      "hint": "Es una forma irregular que se usa, entre otras funciones, en tiempos compuestos.",
+      "tags": [
+        "español",
+        "formas-verbales"
+      ],
+      "answers": [
+        {
+          "answer": "Escrito",
+          "isCorrect": true
+        },
+        {
+          "answer": "Escribiendo"
+        },
+        {
+          "answer": "Escribió"
+        },
+        {
+          "answer": "Escribir"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración utiliza correctamente el modo subjuntivo?",
+      "explanation": "'Espero que vengas' expresa un deseo o expectativa, contexto apropiado para el modo subjuntivo.",
+      "hint": "El subjuntivo suele aparecer en deseos, dudas o posibilidades.",
+      "tags": [
+        "español",
+        "modos-verbales"
+      ],
+      "answers": [
+        {
+          "answer": "Espero que vengas mañana.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Vas mañana a la escuela."
+        },
+        {
+          "answer": "Fuiste ayer a la escuela."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración está en modo imperativo?",
+      "explanation": "'Cierra la puerta' expresa una orden o instrucción, característica del modo imperativo.",
+      "hint": "Busca una oración que dé una orden.",
+      "tags": [
+        "español",
+        "modos-verbales"
+      ],
+      "answers": [
+        {
+          "answer": "Cierra la puerta.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Cerraste la puerta."
+        },
+        {
+          "answer": "Cerrarás la puerta."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es un adverbio de lugar?",
+      "explanation": "'Aquí' indica el lugar donde se encuentra o sucede algo.",
+      "hint": "Busca una palabra que responda a la pregunta '¿dónde?''.",
+      "tags": [
+        "español",
+        "adverbios"
+      ],
+      "answers": [
+        {
+          "answer": "Aquí",
+          "isCorrect": true
+        },
+        {
+          "answer": "Ayer"
+        },
+        {
+          "answer": "Mucho"
+        },
+        {
+          "answer": "Rápidamente"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es un adverbio de tiempo?",
+      "explanation": "'Ayer' indica cuándo ocurrió una acción.",
+      "hint": "Busca una palabra que responda a '¿cuándo'.",
+      "tags": [
+        "español",
+        "adverbios"
+      ],
+      "answers": [
+        {
+          "answer": "Ayer",
+          "isCorrect": true
+        },
+        {
+          "answer": "Aquí"
+        },
+        {
+          "answer": "Bien"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es un adverbio de cantidad?",
+      "explanation": "'Mucho' puede indicar cantidad o grado.",
+      "hint": "Busca la palabra que indique cuánto.",
+      "tags": [
+        "español",
+        "adverbios"
+      ],
+      "answers": [
+        {
+          "answer": "Mucho",
+          "isCorrect": true
+        },
+        {
+          "answer": "Mañana"
+        },
+        {
+          "answer": "Cerca"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál de estas palabras es una preposición?",
+      "explanation": "'Entre' es una preposición que establece una relación entre elementos de la oración.",
+      "hint": "Las preposiciones relacionan palabras dentro de una oración.",
+      "tags": [
+        "español",
+        "preposiciones"
+      ],
+      "answers": [
+        {
+          "answer": "Entre",
+          "isCorrect": true
+        },
+        {
+          "answer": "Aunque"
+        },
+        {
+          "answer": "Porque"
+        },
+        {
+          "answer": "Muy"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración utiliza correctamente la preposición 'hacia'?",
+      "explanation": "'Hacia' puede indicar dirección, como en 'Caminamos hacia la escuela'.",
+      "hint": "Busca una oración que indique dirección.",
+      "tags": [
+        "español",
+        "preposiciones"
+      ],
+      "answers": [
+        {
+          "answer": "Caminamos hacia la escuela.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Caminamos hacia ayer."
+        },
+        {
+          "answer": "Caminamos hacia rápidamente."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra funciona como conjunción copulativa?",
+      "explanation": "'Y' es una conjunción copulativa porque une elementos y establece una relación de adición.",
+      "hint": "Busca la palabra que une elementos sumándolos.",
+      "tags": [
+        "español",
+        "conjunciones"
+      ],
+      "answers": [
+        {
+          "answer": "Y",
+          "isCorrect": true
+        },
+        {
+          "answer": "Pero"
+        },
+        {
+          "answer": "Aunque"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración contiene una conjunción adversativa?",
+      "explanation": "'Pero' introduce una oposición o contraste entre las dos ideas.",
+      "hint": "Busca una palabra que exprese contraste.",
+      "tags": [
+        "español",
+        "conjunciones"
+      ],
+      "answers": [
+        {
+          "answer": "Quise salir, pero estaba lloviendo.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Estudio y trabajo."
+        },
+        {
+          "answer": "No fui porque estaba enfermo."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración contiene una conjunción causal?",
+      "explanation": "'Porque' introduce la causa de que no se haya asistido.",
+      "hint": "Busca la palabra que introduce el motivo de una acción.",
+      "tags": [
+        "español",
+        "conjunciones"
+      ],
+      "answers": [
+        {
+          "answer": "No salí porque estaba enfermo.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Quería salir, pero llovió."
+        },
+        {
+          "answer": "Estudié y aprobé."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración contiene una subordinada sustantiva?",
+      "explanation": "En 'Quiero que vengas', la proposición 'que vengas' funciona como complemento del verbo querer.",
+      "hint": "Busca una proposición introducida por 'que' que complete el significado del verbo.",
+      "tags": [
+        "español",
+        "oraciones-compuestas"
+      ],
+      "answers": [
+        {
+          "answer": "Quiero que vengas.",
+          "isCorrect": true
+        },
+        {
+          "answer": "El niño que llegó es mi hermano."
+        },
+        {
+          "answer": "Cuando llegues, avísame."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración contiene una proposición subordinada adjetiva?",
+      "explanation": "'Que vive enfrente' modifica al sustantivo 'señor', por lo que funciona como una subordinada adjetiva.",
+      "hint": "Busca una proposición que describa o modifique a un sustantivo.",
+      "tags": [
+        "español",
+        "oraciones-compuestas"
+      ],
+      "answers": [
+        {
+          "answer": "El señor que vive enfrente es médico.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Quiero que vengas."
+        },
+        {
+          "answer": "Iré cuando termine."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración contiene una subordinada adverbial temporal?",
+      "explanation": "'Cuando termine' indica el momento en que ocurrirá la acción principal.",
+      "hint": "Busca una proposición que indique cuándo sucede algo.",
+      "tags": [
+        "español",
+        "oraciones-compuestas"
+      ],
+      "answers": [
+        {
+          "answer": "Te llamaré cuando termine.",
+          "isCorrect": true
+        },
+        {
+          "answer": "La película que vimos fue interesante."
+        },
+        {
+          "answer": "Quiero que estudies."
+        }
+      ]
+    },
+    {
+      "question": "¿Qué tipo de oración compuesta es 'Estudié y aprobé el examen'?",
+      "explanation": "Las dos proposiciones están unidas por 'y' y tienen el mismo nivel sintáctico, por lo que forman una oración coordinada copulativa.",
+      "hint": "Observa que las proposiciones están unidas mediante 'y'.",
+      "tags": [
+        "español",
+        "sintaxis"
+      ],
+      "answers": [
+        {
+          "answer": "Coordinada copulativa",
+          "isCorrect": true
+        },
+        {
+          "answer": "Subordinada sustantiva"
+        },
+        {
+          "answer": "Subordinada temporal"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el antónimo de 'efímero'?",
+      "explanation": "Permanente es antónimo de efímero porque expresa algo que permanece durante mucho tiempo o no desaparece rápidamente.",
+      "hint": "Busca una palabra relacionada con duración prolongada.",
+      "tags": [
+        "español",
+        "vocabulario"
+      ],
+      "answers": [
+        {
+          "answer": "Permanente",
+          "isCorrect": true
+        },
+        {
+          "answer": "Breve"
+        },
+        {
+          "answer": "Momentáneo"
+        },
+        {
+          "answer": "Fugaz"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es un sinónimo adecuado de 'preciso' en el sentido de exacto?",
+      "explanation": "Exacto comparte con preciso el significado de correcto, determinado o sin error.",
+      "hint": "Busca una palabra que signifique 'sin error'.",
+      "tags": [
+        "español",
+        "sinónimos"
+      ],
+      "answers": [
+        {
+          "answer": "Exacto",
+          "isCorrect": true
+        },
+        {
+          "answer": "Confuso"
+        },
+        {
+          "answer": "Impreciso"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra contiene un prefijo?",
+      "explanation": "'Deshacer' contiene el prefijo des-, que modifica el significado del verbo hacer.",
+      "hint": "Busca una palabra formada con un elemento colocado antes de la raíz.",
+      "tags": [
+        "español",
+        "morfología"
+      ],
+      "answers": [
+        {
+          "answer": "Deshacer",
+          "isCorrect": true
+        },
+        {
+          "answer": "Pan"
+        },
+        {
+          "answer": "Mesa"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra contiene un sufijo?",
+      "explanation": "'Panadero' contiene el sufijo -ero, que forma un sustantivo relacionado con la actividad o profesión.",
+      "hint": "Busca un elemento añadido al final de la palabra base.",
+      "tags": [
+        "español",
+        "morfología"
+      ],
+      "answers": [
+        {
+          "answer": "Panadero",
+          "isCorrect": true
+        },
+        {
+          "answer": "Rehacer"
+        },
+        {
+          "answer": "Injusto"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra está correctamente acentuada?",
+      "explanation": "'Difícil' lleva tilde porque es una palabra grave terminada en consonante distinta de n o s.",
+      "hint": "Identifica la sílaba tónica y observa la letra final.",
+      "tags": [
+        "español",
+        "acentuación"
+      ],
+      "answers": [
+        {
+          "answer": "Difícil",
+          "isCorrect": true
+        },
+        {
+          "answer": "Dificil"
+        },
+        {
+          "answer": "Difícíl"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es esdrújula?",
+      "explanation": "'Teléfono' es esdrújula porque la sílaba tónica es la antepenúltima: lé.",
+      "hint": "La sílaba que suena con mayor fuerza está en la antepenúltima posición.",
+      "tags": [
+        "español",
+        "acentuación"
+      ],
+      "answers": [
+        {
+          "answer": "Teléfono",
+          "isCorrect": true
+        },
+        {
+          "answer": "Pared"
+        },
+        {
+          "answer": "Camión"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra es sobresdrújula?",
+      "explanation": "'Dígamelo' es sobresdrújula porque la sílaba tónica aparece antes de la antepenúltima.",
+      "hint": "Busca una palabra cuya sílaba tónica esté antes de la antepenúltima.",
+      "tags": [
+        "español",
+        "acentuación"
+      ],
+      "answers": [
+        {
+          "answer": "Dígamelo",
+          "isCorrect": true
+        },
+        {
+          "answer": "Árbol"
+        },
+        {
+          "answer": "Canción"
+        },
+        {
+          "answer": "Música"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración utiliza correctamente los dos puntos?",
+      "explanation": "Los dos puntos pueden introducir una enumeración después de una expresión que la anuncia.",
+      "hint": "Busca una oración en la que se presente una lista.",
+      "tags": [
+        "español",
+        "puntuación"
+      ],
+      "answers": [
+        {
+          "answer": "Necesito tres cosas: agua, pan y fruta.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Necesito tres cosas, agua: pan y fruta."
+        },
+        {
+          "answer": "Necesito: tres cosas agua, pan y fruta."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración utiliza correctamente el punto y coma?",
+      "explanation": "El punto y coma puede separar oraciones relacionadas entre sí cuando ya existen comas dentro de sus elementos.",
+      "hint": "Busca una separación mayor que una coma, pero menor que un punto.",
+      "tags": [
+        "español",
+        "puntuación"
+      ],
+      "answers": [
+        {
+          "answer": "Visitamos Madrid, España; París, Francia; y Roma, Italia.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Visitamos Madrid; España, París; Francia Roma, Italia."
+        },
+        {
+          "answer": "Visitamos; Madrid, España, París, Francia."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál opción presenta correctamente una cita breve?",
+      "explanation": "Las comillas pueden utilizarse para delimitar una cita textual breve.",
+      "hint": "Busca la opción en la que las palabras citadas estén entre comillas.",
+      "tags": [
+        "español",
+        "puntuación"
+      ],
+      "answers": [
+        {
+          "answer": "El profesor dijo: 'Estudien para el examen'.",
+          "isCorrect": true
+        },
+        {
+          "answer": "El profesor dijo: Estudien 'para el examen."
+        },
+        {
+          "answer": "El profesor dijo 'Estudien para el examen."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración presenta correctamente un vocativo?",
+      "explanation": "El vocativo 'María' se separa mediante comas porque se utiliza para llamar o dirigirse directamente a alguien.",
+      "hint": "Observa el nombre de la persona a quien se dirige el hablante.",
+      "tags": [
+        "español",
+        "puntuación"
+      ],
+      "answers": [
+        {
+          "answer": "María, ven aquí, por favor.",
+          "isCorrect": true
+        },
+        {
+          "answer": "María ven aquí por favor."
+        },
+        {
+          "answer": "María ven, aquí por favor."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración presenta correctamente la tilde diacrítica?",
+      "explanation": "En 'Tú tienes tu libro', 'tú' lleva tilde porque es pronombre personal, mientras 'tu' sin tilde es posesivo.",
+      "hint": "Distingue entre el pronombre personal y el posesivo.",
+      "tags": [
+        "español",
+        "tilde-diacritica"
+      ],
+      "answers": [
+        {
+          "answer": "Tú tienes tu libro.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Tu tienes tú libro."
+        },
+        {
+          "answer": "Tú tienes tú libro."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración utiliza correctamente 'porque'?",
+      "explanation": "'Porque' se utiliza para introducir una causa o razón.",
+      "hint": "Busca la palabra que responde a la pregunta '¿por qué?'.",
+      "tags": [
+        "español",
+        "ortografía"
+      ],
+      "answers": [
+        {
+          "answer": "No fui porque estaba enfermo.",
+          "isCorrect": true
+        },
+        {
+          "answer": "No fui por que estaba enfermo."
+        },
+        {
+          "answer": "No fui porqué estaba enfermo."
+        },
+        {
+          "answer": "No fui por qué estaba enfermo."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración utiliza correctamente 'por qué'?",
+      "explanation": "'Por qué' se utiliza en preguntas directas o indirectas para preguntar por una causa.",
+      "hint": "Busca una oración interrogativa.",
+      "tags": [
+        "español",
+        "ortografía"
+      ],
+      "answers": [
+        {
+          "answer": "¿Por qué llegaste tarde?",
+          "isCorrect": true
+        },
+        {
+          "answer": "¿Porque llegaste tarde?"
+        },
+        {
+          "answer": "¿Porqué llegaste tarde?"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración utiliza correctamente 'sino'?",
+      "explanation": "'Sino' se utiliza para contraponer una afirmación a otra después de una negación.",
+      "hint": "Observa la estructura 'no..., sino...'.",
+      "tags": [
+        "español",
+        "ortografía"
+      ],
+      "answers": [
+        {
+          "answer": "No quiero té, sino café.",
+          "isCorrect": true
+        },
+        {
+          "answer": "No quiero té, si no café."
+        },
+        {
+          "answer": "No quiero té, sino que café."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración utiliza correctamente 'si no'?",
+      "explanation": "'Si no' se escribe separado cuando se trata de la conjunción condicional 'si' seguida del adverbio de negación 'no'.",
+      "hint": "Busca una condición negativa.",
+      "tags": [
+        "español",
+        "ortografía"
+      ],
+      "answers": [
+        {
+          "answer": "Si no estudias, tendrás dificultades.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Sino estudias, tendrás dificultades."
+        },
+        {
+          "answer": "Síno estudias, tendrás dificultades."
+        }
+      ]
+    },
+    {
+      "question": "¿Qué recurso literario aparece en 'Tus ojos son dos estrellas'?",
+      "explanation": "Es una metáfora porque identifica los ojos con estrellas sin utilizar un nexo comparativo como 'como'.",
+      "hint": "Busca una identificación entre dos elementos sin usar 'como'.",
+      "tags": [
+        "español",
+        "recursos-literarios"
+      ],
+      "answers": [
+        {
+          "answer": "Metáfora",
+          "isCorrect": true
+        },
+        {
+          "answer": "Comparación"
+        },
+        {
+          "answer": "Onomatopeya"
+        },
+        {
+          "answer": "Hipérbole"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué recurso literario aparece en 'Corre como el viento'?",
+      "explanation": "Es una comparación porque relaciona la manera de correr con el viento mediante la palabra 'como'.",
+      "hint": "Busca una comparación introducida por 'como'.",
+      "tags": [
+        "español",
+        "recursos-literarios"
+      ],
+      "answers": [
+        {
+          "answer": "Comparación",
+          "isCorrect": true
+        },
+        {
+          "answer": "Metáfora"
+        },
+        {
+          "answer": "Personificación"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué recurso literario aparece en 'El viento susurraba entre los árboles'?",
+      "explanation": "Es una personificación porque se atribuye al viento una acción propia de los seres humanos: susurrar.",
+      "hint": "Busca una característica o acción humana atribuida a algo no humano.",
+      "tags": [
+        "español",
+        "recursos-literarios"
+      ],
+      "answers": [
+        {
+          "answer": "Personificación",
+          "isCorrect": true
+        },
+        {
+          "answer": "Metáfora"
+        },
+        {
+          "answer": "Comparación"
+        },
+        {
+          "answer": "Hipérbole"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué recurso literario aparece en 'Te lo he dicho un millón de veces'?",
+      "explanation": "Es una hipérbole porque exagera deliberadamente la cantidad de veces para enfatizar la idea.",
+      "hint": "Busca una exageración intencional.",
+      "tags": [
+        "español",
+        "recursos-literarios"
+      ],
+      "answers": [
+        {
+          "answer": "Hipérbole",
+          "isCorrect": true
+        },
+        {
+          "answer": "Metáfora"
+        },
+        {
+          "answer": "Personificación"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración está redactada correctamente?",
+      "explanation": "La oración presenta concordancia, puntuación y acentuación adecuadas.",
+      "hint": "Revisa todas las palabras y los signos de puntuación.",
+      "tags": [
+        "español",
+        "redacción"
+      ],
+      "answers": [
+        {
+          "answer": "Aunque estaba cansado, terminé la tarea.",
+          "isCorrect": true
+        },
+        {
+          "answer": "Aunque estaba cansado terminé, la tarea."
+        },
+        {
+          "answer": "Aunque estaba cansado terminé la tarea"
+        }
+      ]
+    }
+  ]
+}

@@ -14,7 +14,8 @@ import { fileURLToPath } from 'node:url'
 const OUTPUT_NAME = 'asset-manifest.json'
 
 const projectRoot = resolve(fileURLToPath(new URL('..', import.meta.url)))
-const assetsDir = join(projectRoot, 'src', 'assets')
+const assetsDir = join(projectRoot, 'src', 'assets');
+const resourcesDir = join(projectRoot, 'src', 'assets', 'resources');
 const manifestFile = join(assetsDir, OUTPUT_NAME)
 
 const pad = (n) => String(n).padStart(2, '0')
@@ -60,7 +61,7 @@ async function walk(dir) {
       name: entry.name,
       /** Ruta relativa a `src/assets`, p. ej. `quiz/ingles-a1.json`. */
       path: posixPath,
-      type: type[0],
+      type: type[1],
       /** Ruta servida por el dev server, con cada segmento escapado. */
       url: toUrl(posixPath),
       size: info.size,
@@ -73,7 +74,7 @@ async function walk(dir) {
   return files
 }
 
-const files = (await walk(assetsDir)).sort((a, b) => a.path.localeCompare(b.path, 'es'))
+const files = (await walk(resourcesDir)).sort((a, b) => a.path.localeCompare(b.path, 'es'))
 
 const manifest = {
   generatedAt: new Date().toISOString(),

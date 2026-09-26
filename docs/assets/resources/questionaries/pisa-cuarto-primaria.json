@@ -1,0 +1,748 @@
+{
+  "title": "Examen PISA para cuarto de primaria",
+  "time": 45,
+  "tags": [
+    "spanish",
+    "test",
+    "pisa",
+    "primaria",
+    "cuarto"
+  ],
+  "questionsCount": 50,
+  "questions": [
+    {
+      "question": "Ana tiene 24 lápices y quiere repartirlos por igual entre 6 niños. ¿Cuántos lápices recibirá cada niño?",
+      "explanation": "Se divide 24 entre 6. El resultado es 4, por lo que cada niño recibe 4 lápices.",
+      "hint": "Piensa en repartir los lápices en 6 grupos iguales.",
+      "tags": [
+        "spanish",
+        "mathematics"
+      ],
+      "answers": [
+        {
+          "answer": "3"
+        },
+        {
+          "answer": "4",
+          "isCorrect": true
+        },
+        {
+          "answer": "5"
+        },
+        {
+          "answer": "6"
+        }
+      ]
+    },
+    {
+      "question": "Un árbol mide 3 metros y otro mide 5 metros. ¿Cuántos metros más mide el segundo árbol?",
+      "explanation": "La diferencia se obtiene restando 3 a 5. El resultado es 2 metros.",
+      "hint": "Calcula la diferencia entre las dos alturas.",
+      "tags": [
+        "spanish",
+        "mathematics"
+      ],
+      "answers": [
+        {
+          "answer": "1 metro"
+        },
+        {
+          "answer": "2 metros",
+          "isCorrect": true
+        },
+        {
+          "answer": "3 metros"
+        },
+        {
+          "answer": "8 metros"
+        }
+      ]
+    },
+    {
+      "question": "En una biblioteca hay 120 libros. Si 35 son de cuentos, ¿cuántos libros no son de cuentos?",
+      "explanation": "Se resta la cantidad de cuentos al total: 120 - 35 = 85.",
+      "hint": "Resta los libros de cuentos del total.",
+      "tags": [
+        "spanish",
+        "mathematics"
+      ],
+      "answers": [
+        {
+          "answer": "75"
+        },
+        {
+          "answer": "80"
+        },
+        {
+          "answer": "85",
+          "isCorrect": true
+        },
+        {
+          "answer": "95"
+        }
+      ]
+    },
+    {
+      "question": "Luis recorrió 2 kilómetros por la mañana y 3 kilómetros por la tarde. ¿Qué distancia recorrió en total?",
+      "explanation": "Se suman las dos distancias: 2 + 3 = 5 kilómetros.",
+      "hint": "Junta las dos distancias recorridas.",
+      "tags": [
+        "spanish",
+        "mathematics"
+      ],
+      "answers": [
+        {
+          "answer": "4 kilómetros"
+        },
+        {
+          "answer": "5 kilómetros",
+          "isCorrect": true
+        },
+        {
+          "answer": "6 kilómetros"
+        },
+        {
+          "answer": "7 kilómetros"
+        }
+      ]
+    },
+    {
+      "question": "Una pizza está dividida en 8 partes iguales. María come 3 partes. ¿Qué fracción de la pizza comió?",
+      "explanation": "María comió 3 de las 8 partes iguales, por lo que la fracción es 3/8.",
+      "hint": "El número de partes comidas va arriba y el total de partes va abajo.",
+      "tags": [
+        "spanish",
+        "fractions"
+      ],
+      "answers": [
+        {
+          "answer": "3/8",
+          "isCorrect": true
+        },
+        {
+          "answer": "5/8"
+        },
+        {
+          "answer": "3/5"
+        },
+        {
+          "answer": "8/3"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál número continúa la serie: 5, 10, 15, 20, ___?",
+      "explanation": "Cada número aumenta en 5. Después de 20 sigue 25.",
+      "hint": "Observa cuánto aumenta cada número.",
+      "tags": [
+        "spanish",
+        "patterns"
+      ],
+      "answers": [
+        {
+          "answer": "21"
+        },
+        {
+          "answer": "23"
+        },
+        {
+          "answer": "25",
+          "isCorrect": true
+        },
+        {
+          "answer": "30"
+        }
+      ]
+    },
+    {
+      "question": "Un rectángulo tiene 6 centímetros de largo y 4 centímetros de ancho. ¿Cuál es su perímetro?",
+      "explanation": "El perímetro es 6 + 4 + 6 + 4 = 20 centímetros.",
+      "hint": "Suma todos los lados del rectángulo.",
+      "tags": [
+        "spanish",
+        "geometry"
+      ],
+      "answers": [
+        {
+          "answer": "10 cm"
+        },
+        {
+          "answer": "18 cm"
+        },
+        {
+          "answer": "20 cm",
+          "isCorrect": true
+        },
+        {
+          "answer": "24 cm"
+        }
+      ]
+    },
+    {
+      "question": "En una caja hay 4 filas con 7 naranjas en cada fila. ¿Cuántas naranjas hay en total?",
+      "explanation": "Hay 4 grupos de 7 naranjas. 4 × 7 = 28.",
+      "hint": "Puedes resolverlo multiplicando el número de filas por las naranjas de cada fila.",
+      "tags": [
+        "spanish",
+        "multiplication"
+      ],
+      "answers": [
+        {
+          "answer": "21"
+        },
+        {
+          "answer": "24"
+        },
+        {
+          "answer": "28",
+          "isCorrect": true
+        },
+        {
+          "answer": "32"
+        }
+      ]
+    },
+    {
+      "question": "Una clase comienza a las 8:00 y termina a las 10:30. ¿Cuánto dura la clase?",
+      "explanation": "Desde las 8:00 hasta las 10:00 pasan 2 horas y hasta las 10:30 pasan 30 minutos más. En total son 2 horas y 30 minutos.",
+      "hint": "Calcula primero las horas completas y después los minutos.",
+      "tags": [
+        "spanish",
+        "time"
+      ],
+      "answers": [
+        {
+          "answer": "1 hora y 30 minutos"
+        },
+        {
+          "answer": "2 horas"
+        },
+        {
+          "answer": "2 horas y 30 minutos",
+          "isCorrect": true
+        },
+        {
+          "answer": "3 horas"
+        }
+      ]
+    },
+    {
+      "question": "Lee: 'El agua de lluvia puede almacenarse para regar plantas'. ¿Cuál es una ventaja de hacerlo?",
+      "explanation": "Almacenar agua de lluvia permite aprovechar un recurso natural para regar las plantas y reducir el uso de agua potable.",
+      "hint": "Piensa en cómo se puede aprovechar el agua que cae durante la lluvia.",
+      "tags": [
+        "spanish",
+        "reading",
+        "environment"
+      ],
+      "answers": [
+        {
+          "answer": "Aumentar el desperdicio de agua"
+        },
+        {
+          "answer": "Aprovechar el agua de lluvia",
+          "isCorrect": true
+        },
+        {
+          "answer": "Evitar que las plantas reciban agua"
+        },
+        {
+          "answer": "Hacer que no vuelva a llover"
+        }
+      ]
+    },
+    {
+      "question": "Lee: 'Carlos llevó su paraguas porque el cielo estaba oscuro y había nubes'. ¿Por qué llevó el paraguas?",
+      "explanation": "Carlos llevó el paraguas porque las nubes oscuras podían indicar que iba a llover.",
+      "hint": "Relaciona las nubes oscuras con el posible estado del tiempo.",
+      "tags": [
+        "spanish",
+        "reading",
+        "inference"
+      ],
+      "answers": [
+        {
+          "answer": "Porque quería jugar al sol"
+        },
+        {
+          "answer": "Porque esperaba que pudiera llover",
+          "isCorrect": true
+        },
+        {
+          "answer": "Porque hacía mucho calor"
+        },
+        {
+          "answer": "Porque iba a nadar"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es la idea principal de este texto? 'Las abejas visitan las flores para obtener néctar. Al hacerlo, transportan polen de una flor a otra y ayudan a las plantas a reproducirse.'",
+      "explanation": "El texto explica que las abejas, al buscar alimento, transportan polen y ayudan a la reproducción de las plantas.",
+      "hint": "Busca la información que resume todo el texto.",
+      "tags": [
+        "spanish",
+        "reading",
+        "main-idea"
+      ],
+      "answers": [
+        {
+          "answer": "Las abejas solo vuelan durante la noche"
+        },
+        {
+          "answer": "Las abejas ayudan a las plantas al transportar polen",
+          "isCorrect": true
+        },
+        {
+          "answer": "Las flores comen néctar"
+        },
+        {
+          "answer": "Las plantas construyen colmenas"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál de estas acciones ayuda a reducir la cantidad de basura?",
+      "explanation": "Reutilizar objetos permite aprovecharlos nuevamente y evita generar residuos innecesarios.",
+      "hint": "Piensa en una acción que permita usar un objeto más de una vez.",
+      "tags": [
+        "spanish",
+        "environment"
+      ],
+      "answers": [
+        {
+          "answer": "Tirar todos los objetos después de usarlos"
+        },
+        {
+          "answer": "Reutilizar algunos objetos",
+          "isCorrect": true
+        },
+        {
+          "answer": "Usar más bolsas desechables"
+        },
+        {
+          "answer": "Dejar basura en la calle"
+        }
+      ]
+    },
+    {
+      "question": "Una planta se coloca cerca de una ventana y recibe luz solar. ¿Qué elemento obtiene principalmente de la luz para realizar la fotosíntesis?",
+      "explanation": "Las plantas utilizan la energía de la luz solar para realizar la fotosíntesis.",
+      "hint": "La luz proporciona energía a la planta.",
+      "tags": [
+        "spanish",
+        "science",
+        "plants"
+      ],
+      "answers": [
+        {
+          "answer": "Energía",
+          "isCorrect": true
+        },
+        {
+          "answer": "Arena"
+        },
+        {
+          "answer": "Plástico"
+        },
+        {
+          "answer": "Piedras"
+        }
+      ]
+    },
+    {
+      "question": "¿Qué sucede con un cubo de hielo cuando se deja en un lugar cálido durante un tiempo?",
+      "explanation": "El hielo absorbe calor del ambiente y cambia de estado sólido a líquido, convirtiéndose en agua.",
+      "hint": "Piensa qué ocurre con el hielo cuando recibe calor.",
+      "tags": [
+        "spanish",
+        "science",
+        "matter"
+      ],
+      "answers": [
+        {
+          "answer": "Se convierte en agua",
+          "isCorrect": true
+        },
+        {
+          "answer": "Se convierte en piedra"
+        },
+        {
+          "answer": "Desaparece sin cambiar"
+        },
+        {
+          "answer": "Se convierte en metal"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál de los siguientes animales es un mamífero?",
+      "explanation": "El perro es un mamífero porque pertenece a un grupo de animales que tienen pelo y alimentan a sus crías con leche.",
+      "hint": "Busca el animal que tiene características propias de los mamíferos.",
+      "tags": [
+        "spanish",
+        "science",
+        "animals"
+      ],
+      "answers": [
+        {
+          "answer": "Perro",
+          "isCorrect": true
+        },
+        {
+          "answer": "Mariposa"
+        },
+        {
+          "answer": "Rana"
+        },
+        {
+          "answer": "Sardina"
+        }
+      ]
+    },
+    {
+      "question": "Una estudiante quiere saber si una planta crece mejor con luz o sin luz. ¿Qué debería hacer para realizar una comparación justa?",
+      "explanation": "Debe mantener iguales las demás condiciones, como agua, tipo de planta y tierra, y cambiar solamente la cantidad de luz.",
+      "hint": "Para comparar dos situaciones, cambia una condición y mantén las demás iguales.",
+      "tags": [
+        "spanish",
+        "science",
+        "experiments"
+      ],
+      "answers": [
+        {
+          "answer": "Usar plantas diferentes y cambiar muchas condiciones"
+        },
+        {
+          "answer": "Mantener las mismas condiciones excepto la luz",
+          "isCorrect": true
+        },
+        {
+          "answer": "No observar las plantas"
+        },
+        {
+          "answer": "Cambiar la cantidad de agua cada día"
+        }
+      ]
+    },
+    {
+      "question": "En una encuesta, 12 estudiantes prefieren fútbol, 8 prefieren baloncesto y 5 prefieren natación. ¿Qué deporte fue el más elegido?",
+      "explanation": "Fútbol obtuvo 12 elecciones, más que baloncesto con 8 y natación con 5.",
+      "hint": "Compara las tres cantidades.",
+      "tags": [
+        "spanish",
+        "data",
+        "mathematics"
+      ],
+      "answers": [
+        {
+          "answer": "Fútbol",
+          "isCorrect": true
+        },
+        {
+          "answer": "Baloncesto"
+        },
+        {
+          "answer": "Natación"
+        }
+      ]
+    },
+    {
+      "question": "Una tienda registra estas ventas de cuadernos: lunes 10, martes 15, miércoles 12. ¿Qué día vendió más cuadernos?",
+      "explanation": "El martes se vendieron 15 cuadernos, la cantidad más alta de los tres días.",
+      "hint": "Busca el número mayor de la información proporcionada.",
+      "tags": [
+        "spanish",
+        "data",
+        "reading"
+      ],
+      "answers": [
+        {
+          "answer": "Lunes"
+        },
+        {
+          "answer": "Martes",
+          "isCorrect": true
+        },
+        {
+          "answer": "Miércoles"
+        }
+      ]
+    },
+    {
+      "question": "Si 5 cuadernos cuestan 50 pesos y todos tienen el mismo precio, ¿cuánto cuesta un cuaderno?",
+      "explanation": "Se divide el costo total entre la cantidad de cuadernos: 50 ÷ 5 = 10 pesos.",
+      "hint": "Divide el precio total entre el número de cuadernos.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "division"
+      ],
+      "answers": [
+        {
+          "answer": "5 pesos"
+        },
+        {
+          "answer": "10 pesos",
+          "isCorrect": true
+        },
+        {
+          "answer": "15 pesos"
+        },
+        {
+          "answer": "25 pesos"
+        }
+      ]
+    },
+    {
+      "question": "Una receta necesita 2 tazas de harina para hacer 12 galletas. Si se prepara la misma receta para 24 galletas, ¿cuánta harina se necesita?",
+      "explanation": "24 galletas son el doble de 12, por lo que se necesita el doble de harina: 2 × 2 = 4 tazas.",
+      "hint": "La cantidad de galletas se duplica, así que también debe duplicarse la harina.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "proportions"
+      ],
+      "answers": [
+        {
+          "answer": "2 tazas"
+        },
+        {
+          "answer": "3 tazas"
+        },
+        {
+          "answer": "4 tazas",
+          "isCorrect": true
+        },
+        {
+          "answer": "6 tazas"
+        }
+      ]
+    },
+    {
+      "question": "Un salón tiene 4 mesas. En cada mesa hay 6 estudiantes. ¿Cuántos estudiantes hay en total?",
+      "explanation": "Hay 4 grupos de 6 estudiantes. 4 × 6 = 24 estudiantes.",
+      "hint": "Multiplica el número de mesas por los estudiantes de cada mesa.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "multiplication"
+      ],
+      "answers": [
+        {
+          "answer": "18"
+        },
+        {
+          "answer": "20"
+        },
+        {
+          "answer": "24",
+          "isCorrect": true
+        },
+        {
+          "answer": "28"
+        }
+      ]
+    },
+    {
+      "question": "Pedro tiene 100 pesos. Compra un libro que cuesta 65 pesos. ¿Cuánto dinero le queda?",
+      "explanation": "Se resta el precio del libro al dinero que tenía: 100 - 65 = 35 pesos.",
+      "hint": "Calcula cuánto sobra después de pagar el libro.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "money"
+      ],
+      "answers": [
+        {
+          "answer": "25 pesos"
+        },
+        {
+          "answer": "30 pesos"
+        },
+        {
+          "answer": "35 pesos",
+          "isCorrect": true
+        },
+        {
+          "answer": "45 pesos"
+        }
+      ]
+    },
+    {
+      "question": "Lee: 'Sofía sembró una semilla. Durante varios días la regó y la colocó donde recibiera luz. Después de una semana apareció un pequeño tallo.' ¿Qué ocurrió primero?",
+      "explanation": "El primer acontecimiento mencionado es que Sofía sembró una semilla.",
+      "hint": "Busca la primera acción que aparece en el texto.",
+      "tags": [
+        "spanish",
+        "reading",
+        "sequence"
+      ],
+      "answers": [
+        {
+          "answer": "Apareció un tallo"
+        },
+        {
+          "answer": "Sofía sembró una semilla",
+          "isCorrect": true
+        },
+        {
+          "answer": "Pasó una semana"
+        },
+        {
+          "answer": "La planta produjo flores"
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál oración describe una opinión y no un hecho comprobable?",
+      "explanation": "Decir que un parque es el más bonito expresa una valoración personal, por lo que es una opinión.",
+      "hint": "Busca la oración que expresa una valoración personal.",
+      "tags": [
+        "spanish",
+        "reading",
+        "opinions"
+      ],
+      "answers": [
+        {
+          "answer": "El parque abre a las ocho de la mañana"
+        },
+        {
+          "answer": "El parque tiene tres juegos"
+        },
+        {
+          "answer": "El parque es el lugar más bonito de la ciudad",
+          "isCorrect": true
+        },
+        {
+          "answer": "El parque tiene árboles"
+        }
+      ]
+    },
+    {
+      "question": "Un recipiente contiene 1 litro de agua. Se agregan otros 500 mililitros. ¿Cuánta agua hay en total?",
+      "explanation": "Un litro equivale a 1000 mililitros. Al sumar 500 mililitros se obtienen 1500 mililitros, equivalentes a 1.5 litros.",
+      "hint": "Convierte primero el litro a mililitros.",
+      "tags": [
+        "spanish",
+        "measurement",
+        "mathematics"
+      ],
+      "answers": [
+        {
+          "answer": "1.2 litros"
+        },
+        {
+          "answer": "1.5 litros",
+          "isCorrect": true
+        },
+        {
+          "answer": "2 litros"
+        },
+        {
+          "answer": "2.5 litros"
+        }
+      ]
+    },
+    {
+      "question": "Una familia quiere ahorrar electricidad. ¿Cuál acción puede ayudar directamente a lograrlo?",
+      "explanation": "Apagar las luces cuando no se necesitan evita consumir electricidad innecesariamente.",
+      "hint": "Piensa en evitar el consumo de electricidad cuando no hace falta.",
+      "tags": [
+        "spanish",
+        "environment",
+        "energy"
+      ],
+      "answers": [
+        {
+          "answer": "Dejar todas las luces encendidas"
+        },
+        {
+          "answer": "Apagar las luces que no se utilizan",
+          "isCorrect": true
+        },
+        {
+          "answer": "Abrir el refrigerador constantemente"
+        },
+        {
+          "answer": "Encender más aparatos"
+        }
+      ]
+    },
+    {
+      "question": "En un jardín hay 18 flores rojas y 12 flores amarillas. ¿Cuántas flores hay en total?",
+      "explanation": "Se suman las flores rojas y amarillas: 18 + 12 = 30.",
+      "hint": "Suma las dos cantidades de flores.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "addition"
+      ],
+      "answers": [
+        {
+          "answer": "20"
+        },
+        {
+          "answer": "28"
+        },
+        {
+          "answer": "30",
+          "isCorrect": true
+        },
+        {
+          "answer": "32"
+        }
+      ]
+    },
+    {
+      "question": "Una estudiante observa que una sombra cambia de tamaño durante el día. ¿Cuál es una posible causa de este cambio?",
+      "explanation": "La posición del Sol cambia durante el día, modificando la dirección y el tamaño aparente de las sombras.",
+      "hint": "Piensa en el movimiento aparente del Sol durante el día.",
+      "tags": [
+        "spanish",
+        "science",
+        "observation"
+      ],
+      "answers": [
+        {
+          "answer": "La posición del Sol cambia",
+          "isCorrect": true
+        },
+        {
+          "answer": "Las sombras producen luz"
+        },
+        {
+          "answer": "El suelo deja de existir"
+        },
+        {
+          "answer": "Los objetos cambian de color automáticamente"
+        }
+      ]
+    },
+    {
+      "question": "Un autobús tiene 40 asientos. En una parada bajan 13 pasajeros y suben 8. Si antes había 35 pasajeros, ¿cuántos pasajeros hay ahora?",
+      "explanation": "Primero bajan 13: 35 - 13 = 22. Después suben 8: 22 + 8 = 30 pasajeros.",
+      "hint": "Haz primero la resta de los pasajeros que bajan y después suma los que suben.",
+      "tags": [
+        "spanish",
+        "mathematics",
+        "problem-solving"
+      ],
+      "answers": [
+        {
+          "answer": "27"
+        },
+        {
+          "answer": "30",
+          "isCorrect": true
+        },
+        {
+          "answer": "32"
+        },
+        {
+          "answer": "35"
+        }
+      ]
+    }
+  ]
+}

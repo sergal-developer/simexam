@@ -1,0 +1,1872 @@
+{
+    "title": "Cultura General — Años 80 y 90",
+    "time": 120,
+    "tags": [
+        "cultura general",
+        "años 80",
+        "años 90",
+        "música",
+        "cine",
+        "televisión",
+        "historia",
+        "deportes"
+    ],
+    "questionsCount": 100,
+    "questions": [
+        {
+            "question": "¿Qué banda interpretó la canción 'Sweet Child O' Mine' en 1987?",
+            "explanation": "Guns N' Roses lanzó este tema en su álbum debut 'Appetite for Destruction'; las otras bandas son referentes de la época pero no la crearon.",
+            "hint": "Su cantante principal es Axl Rose.",
+            "tags": [
+                "música",
+                "rock",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Guns N' Roses",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Bon Jovi",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Metallica",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Def Leppard",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "U2",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Queen",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Quién protagonizó la película 'El regreso del Jedi' de 1983?",
+            "explanation": "Mark Hamill interpretó a Luke Skywalker; los demás actores son protagonistas de otras producciones de la época.",
+            "hint": "Interpreta al hijo de Darth Vader.",
+            "tags": [
+                "cine",
+                "ciencia ficción",
+                "star wars",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Mark Hamill",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Harrison Ford",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Carrie Fisher",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Billy Dee Williams",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Tom Cruise",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Leonardo DiCaprio",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué serie animada se emitió originalmente entre 1989 y 1999?",
+            "explanation": "Los Simpson debutó como serie propia en 1989 y se mantuvo durante toda la década de los 90; las demás tienen fechas distintas.",
+            "hint": "Viven en la ciudad de Springfield.",
+            "tags": [
+                "televisión",
+                "animación",
+                "años 80",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Los Simpson",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Las Tortugas Ninja",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Caballeros del Zodiaco",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Doraemon",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Pokémon",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Dragon Ball Super",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué cantante lanzó el álbum 'Thriller' en 1982?",
+            "explanation": "Michael Jackson publicó el disco más vendido de la historia ese año; los otros artistas también son grandes figuras de la época.",
+            "hint": "Se le conoce como el 'Rey del Pop'.",
+            "tags": [
+                "música",
+                "pop",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Michael Jackson",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Prince",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Madonna",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Whitney Houston",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Elvis Presley",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Freddie Mercury",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué evento deportivo se celebró en Barcelona en 1992?",
+            "explanation": "Los Juegos Olímpicos de Verano de 1992 tuvieron sede en Barcelona; los demás eventos son de otra naturaleza o sede.",
+            "hint": "Fueron los primeros con participación masiva de profesionales.",
+            "tags": [
+                "deportes",
+                "olimpismo",
+                "años 90",
+                "españa"
+            ],
+            "answers": [
+                {
+                    "answer": "Juegos Olímpicos",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Copa del Mundo de Fútbol",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Campeonato Europeo de Fútbol",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Mundial de Baloncesto",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Fórmula 1 Gran Premio",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Copa Davis",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Quién fue el primer presidente democráticamente elegido de Rusia tras la URSS en 1991?",
+            "explanation": "Boris Yeltsin asumió el poder tras la disolución de la Unión Soviética; Gorbachov fue el último líder soviético pero no de la Rusia independiente.",
+            "hint": "Su figura fue muy visible durante la caída del muro de Berlín.",
+            "tags": [
+                "historia",
+                "política",
+                "años 90",
+                "rusia"
+            ],
+            "answers": [
+                {
+                    "answer": "Boris Yeltsin",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Mijaíl Gorbachov",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Vladimir Putin",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Nikita Jrushchov",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Leónidas Brezhnev",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Dmitri Medvédev",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué consola de videojuegos fue lanzada por Nintendo a mediados de los 80?",
+            "explanation": "La NES (Nintendo Entertainment System) revivió la industria de los videojuegos tras la crisis de 1983; las demás son de otras marcas o fechas.",
+            "hint": "Su control tiene un diseño rectangular con botones rojos.",
+            "tags": [
+                "tecnología",
+                "videojuegos",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "NES",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Master System",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Atari 2600",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Game Boy",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "PlayStation",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Xbox",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué grupo femenino triunfó con 'Wannabe' en 1996?",
+            "explanation": "Las Spice Girls se convirtieron en un fenómeno mundial con este tema; las otras agrupaciones son destacadas pero no con esta canción.",
+            "hint": "Cada integrante tenía un apodo distintivo.",
+            "tags": [
+                "música",
+                "pop",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Spice Girls",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "TLC",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Destiny's Child",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "The Supremes",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "All Saints",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Girls Aloud",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué película de 1985 presenta a un adolescente que viaja al pasado en un DeLorean?",
+            "explanation": "'Volver al Futuro' se convirtió en un clásico de la ciencia ficción con ese vehículo como máquina del tiempo; las demás son películas de viajes en el tiempo pero distintas.",
+            "hint": "El protagonista se llama Marty McFly.",
+            "tags": [
+                "cine",
+                "ciencia ficción",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Volver al Futuro",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Regreso al Futuro",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Viaje al Futuro",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "El Futuro Vuelve",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "La Máquina del Tiempo",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Terminator",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué virus informático afectó a miles de computadoras en todo el mundo en 1988?",
+            "explanation": "El gusano de Robert Morris fue el primer incidente de gran escala de este tipo en internet; los demás son virus posteriores o distintos.",
+            "hint": "Se le conoce como el primer gusano de internet.",
+            "tags": [
+                "tecnología",
+                "informática",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Gusano Morris",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Virus Jerusalem",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Virus Brain",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Virus Michelangelo",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "I Love You",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Melissa",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué cantante falleció trágicamente en 1991 siendo líder de la banda Queen?",
+            "explanation": "Freddie Mercury murió por complicaciones relacionadas con el VIH; los demás artistas fallecieron en otras fechas.",
+            "hint": "Nació en Zanzíbar y se llamaba Farrokh Bulsara.",
+            "tags": [
+                "música",
+                "rock",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Freddie Mercury",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Michael Hutchence",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Kurt Cobain",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "John Lennon",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Elvis Presley",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Frank Sinatra",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿En qué año cayó el Muro de Berlín?",
+            "explanation": "El 9 de noviembre de 1989 se abrieron las fronteras y comenzó la demolición del muro; las otras fechas son cercanas pero no exactas.",
+            "hint": "Marcó el fin de la Guerra Fría simbólicamente.",
+            "tags": [
+                "historia",
+                "política",
+                "alemania",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "1989",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "1990",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "1988",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "1991",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "1987",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "1992",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué programa infantil presentaba a un dinosaurio morado que cantaba canciones educativas?",
+            "explanation": "Barney fue un éxito en la década de los 90; los demás personajes son de otros programas infantiles.",
+            "hint": "Su nombre es corto y fácil de recordar.",
+            "tags": [
+                "televisión",
+                "infantil",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Barney",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Plaza Sésamo",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Los Teletubbies",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Pingu",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Bob Esponja",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Dora la Exploradora",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué dispositivo portátil para reproducir música fue popularizado por Sony en los años 80?",
+            "explanation": "El Walkman permitió escuchar cintas magnéticas en cualquier lugar; los demás dispositivos son de otra época o tecnología.",
+            "hint": "Se combinan dos palabras: caminar + hombre.",
+            "tags": [
+                "tecnología",
+                "música",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Walkman",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Discman",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Radio casete",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Reproductor de MP3",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "iPod",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Tocadiscos portátil",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué equipo ganó la Copa Mundial de Fútbol de 1994 celebrada en Estados Unidos?",
+            "explanation": "Brasil venció a Italia en tanda de penales en la final; los demás equipos son destacados pero no campeones ese año.",
+            "hint": "Es el país con más títulos mundiales en la historia.",
+            "tags": [
+                "deportes",
+                "fútbol",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Brasil",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Italia",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Alemania",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Argentina",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Francia",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Inglaterra",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Quién protagonizó la serie 'El Príncipe del Rap' en los años 90?",
+            "explanation": "Will Smith interpretó a un joven de Filadelfia que se muda a California; los demás actores son protagonistas de otras series.",
+            "hint": "Antes de actor era conocido como cantante con un compañero DJ.",
+            "tags": [
+                "televisión",
+                "comedia",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Will Smith",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Alfonso Ribeiro",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "James Avery",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Tatyana Ali",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Martin Lawrence",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Eddie Murphy",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué canción se convirtió en himno de la selección alemana en el Mundial de 1990?",
+            "explanation": "'We Are the Champions' fue interpretada por Queen y adoptada como himno; las demás son canciones famosas de la época pero no de ese evento.",
+            "hint": "La letra dice: 'He pagado mis deudas'.",
+            "tags": [
+                "música",
+                "deportes",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "We Are the Champions",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "The Cup of Life",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Waka Waka",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "La Copa de la Vida",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Eye of the Tiger",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "You'll Never Walk Alone",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué superhéroe tuvo su primera película de acción real en 1989 dirigida por Tim Burton?",
+            "explanation": "Batman llegó al cine con Michael Keaton en el papel principal; los demás superhéroes tuvieron adaptaciones en otras fechas.",
+            "hint": "Protege la ciudad de Gotham.",
+            "tags": [
+                "cine",
+                "superhéroes",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Batman",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Superman",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Spider-Man",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Wonder Woman",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Los Vengadores",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "X-Men",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fenómeno de moda consistía en usar pantalones muy holgados y de colores vivos en los años 90?",
+            "explanation": "El estilo 'baggy' se popularizó por la cultura hip-hop; las demás modas son de otras épocas.",
+            "hint": "Su nombre se relaciona con la palabra 'bolsa'.",
+            "tags": [
+                "cultura",
+                "moda",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Estilo baggy",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Estilo grunge",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Estilo preppy",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Estilo punk",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Estilo victoriano",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Estilo minimalista",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Quién fue la primera mujer en viajar al espacio como parte de una misión estadounidense en 1983?",
+            "explanation": "Sally Ride hizo historia ese año; las demás mujeres son pioneras pero en otras fechas o países.",
+            "hint": "Su apellido significa 'viaje' en inglés.",
+            "tags": [
+                "ciencia",
+                "historia",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Sally Ride",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Valentina Tereshkova",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Mae Jemison",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Judith Resnik",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Marie Curie",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Amelia Earhart",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué dibujo animado tenía como protagonista a un grupo de jóvenes que se transformaban para proteger el universo en los años 90?",
+            "explanation": "Las Sailor Moon marcaron a toda una generación; las demás series son de temáticas distintas.",
+            "hint": "Tienen nombres de planetas.",
+            "tags": [
+                "televisión",
+                "animación",
+                "años 90",
+                "japón"
+            ],
+            "answers": [
+                {
+                    "answer": "Sailor Moon",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Las Guerreras Mágicas",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Power Rangers",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Caballeros del Zodiaco",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Dragon Ball",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Naruto",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué marca de zapatillas lanzó las famosas 'Air Jordan' en los años 80?",
+            "explanation": "Nike creó esta línea en colaboración con Michael Jordan; las otras marcas también fabrican calzado deportivo pero no este modelo.",
+            "hint": "Es la marca del 'swoosh'.",
+            "tags": [
+                "deportes",
+                "moda",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Nike",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Adidas",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Reebok",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Puma",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Converse",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "New Balance",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué noticia conmocionó al mundo en 1997 cuando murió en un accidente automovilístico en París?",
+            "explanation": "La princesa Diana de Gales falleció el 31 de agosto de 1997; las demás figuras públicas murieron en otras circunstancias o fechas.",
+            "hint": "Se le conocía como la 'princesa del pueblo'.",
+            "tags": [
+                "historia",
+                "actualidad",
+                "años 90",
+                "realeza"
+            ],
+            "answers": [
+                {
+                    "answer": "La princesa Diana",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "La reina Isabel",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Lady Di",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Grace Kelly",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Madre Teresa de Calcuta",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "María Callas",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué videojuego introdujo por primera vez a Mario como protagonista en 1985?",
+            "explanation": "Super Mario Bros. lanzó al personaje a la fama mundial; los otros juegos son de la misma franquicia pero posteriores o distintos.",
+            "hint": "Su hermano se llama Luigi.",
+            "tags": [
+                "tecnología",
+                "videojuegos",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Super Mario Bros.",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Mario Bros.",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Super Mario World",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Donkey Kong",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Super Mario 64",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Mario Kart",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué banda de rock lanzó el tema 'Smells Like Teen Spirit' en 1991?",
+            "explanation": "Nirvana se convirtió en la cara del movimiento grunge con esta canción; las demás bandas son contemporáneas pero no la crearon.",
+            "hint": "Su vocalista principal fue Kurt Cobain.",
+            "tags": [
+                "música",
+                "rock",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Nirvana",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Pearl Jam",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Alice in Chains",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Soundgarden",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Metallica",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Guns N' Roses",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué tratado estableció la unión económica y política europea en 1992?",
+            "explanation": "El Tratado de Maastricht dio origen a la Unión Europea; los demás acuerdos son anteriores o distintos.",
+            "hint": "Se firmó en los Países Bajos.",
+            "tags": [
+                "historia",
+                "política",
+                "europa",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Tratado de Maastricht",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Tratado de Roma",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Tratado de Ámsterdam",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Tratado de Lisboa",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Acuerdo de Schengen",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Tratado de París",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué juguete coleccionable consistía en pequeños personajes que se escondían dentro de frutas o verduras de plástico en los años 90?",
+            "explanation": "Los 'Sorpresa Frutales' o 'Squapies' fueron un éxito; los demás juguetes son de otras temáticas.",
+            "hint": "Se guardaban dentro de una cápsula con forma de fruta.",
+            "tags": [
+                "cultura",
+                "juguetes",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Sorpresa Frutales",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Pocket Surprise",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Frutitas Mágicas",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Escondidos en la Fruta",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Pokémon",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Tazos",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué cantante popularizó el estilo 'Vogue' en los años 90?",
+            "explanation": "Madonna incluyó este tema en su álbum 'I'm Breathless' de 1990; los demás artistas son destacados pero no con este tema.",
+            "hint": "La canción lleva el nombre de una revista de moda.",
+            "tags": [
+                "música",
+                "danza",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Madonna",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Janet Jackson",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Whitney Houston",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Cher",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Celine Dion",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Mariah Carey",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué película de 1994 narra la historia de un hombre con discapacidad intelectual que vive acontecimientos históricos de Estados Unidos?",
+            "explanation": "'Forrest Gump' ganó varios premios Oscar ese año; las demás películas son de temáticas distintas.",
+            "hint": "El protagonista dice: 'La vida es como una caja de bombones'.",
+            "tags": [
+                "cine",
+                "drama",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Forrest Gump",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "La Vida es Bella",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "El Club de la Pelea",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Salvando al Soldado Ryan",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Titanic",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "El Padrino",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fenómeno climático extremo se hizo famoso por sus devastadores efectos en 1998?",
+            "explanation": "El fenómeno de El Niño causó desastres naturales en todo el mundo ese año; los demás son eventos distintos.",
+            "hint": "Su nombre se debe al Niño Jesús por aparecer cerca de la Navidad.",
+            "tags": [
+                "ciencia",
+                "naturaleza",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "El Niño",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "La Niña",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Huracán Mitch",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Cambio climático",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Efecto invernadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Calentamiento global",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué programa de televisión mexicano conducido por Verónica Castro dio a conocer a los integrantes del grupo Menudo en los años 80?",
+            "explanation": "'Chiquilladas' y 'Juguemos a Cantar' fueron espacios clave; el más emblemático fue 'Chiquilladas'.",
+            "hint": "El nombre sugiere algo hecho por niños.",
+            "tags": [
+                "televisión",
+                "música",
+                "méxico",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Chiquilladas",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Juguemos a Cantar",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Misión S.O.S.",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Alcanzar una Estrella",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Vamos a Jugar",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "La Caravana de la Alegría",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué famoso cantante murió en un accidente de helicóptero en 1999 siendo líder de la banda de rock brasileña Legião Urbana?",
+            "explanation": "Renato Russo falleció por complicaciones distintas; el caso de 1999 corresponde a otros artistas como los de Mamonas Assassinas.",
+            "hint": "La banda se llamaba Mamonas Assassinas.",
+            "tags": [
+                "música",
+                "rock",
+                "brasil",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Integrantes de Mamonas Assassinas",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Renato Russo",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Cazuza",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Raul Seixas",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Elis Regina",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Tim Maia",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué red social o servicio de internet se lanzó por primera vez en 1995?",
+            "explanation": "Amazon, eBay y Yahoo! nacieron en 1995; Google llegó en 1998.",
+            "hint": "Originalmente era una librería en línea.",
+            "tags": [
+                "tecnología",
+                "internet",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Amazon",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "eBay",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Yahoo!",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Netscape",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Google",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Facebook",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué película de terror de 1996 revitalizó el género burlándose de sus propios clichés?",
+            "explanation": "'Scream' (Grito) rompió esquemas al mezclar miedo y humor; las demás son clásicas pero no con ese enfoque.",
+            "hint": "El asesino usa una máscara blanca con cara de susto.",
+            "tags": [
+                "cine",
+                "terror",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Scream",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Grito",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "La Matanza de Texas",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Viernes 13",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Halloween",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "El Exorcista",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué grupo de música mexicano se hizo famoso con temas como 'Querida' y 'Ahora Te Puedes Marchar' en los años 80?",
+            "explanation": "Juan Gabriel y Luis Miguel dominaron las listas; el segundo con este tema específico.",
+            "hint": "Se le conoce como 'El Sol de México'.",
+            "tags": [
+                "música",
+                "pop",
+                "méxico",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Luis Miguel",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Juan Gabriel",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "José José",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Vicente Fernández",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Pedro Fernández",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Alejandro Fernández",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué famoso fenómeno de televisión consistía en un grupo de jóvenes que luchaban contra el mal con trajes de colores en los años 90?",
+            "explanation": "Los Power Rangers mezclaban acción, monstruos y robots gigantes; las demás series son de temáticas distintas.",
+            "hint": "Cada uno tiene un color distinto y un animal asociado.",
+            "tags": [
+                "televisión",
+                "acción",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Power Rangers",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Guardianes de la Galaxia",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Comando G",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Los Defensores",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Thundercats",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "He-Man",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué evento deportivo fue cancelado en 1980 por motivos políticos relacionados con la Guerra Fría?",
+            "explanation": "Estados Unidos y otros países boicotearon los Juegos de Moscú; las demás ediciones se llevaron a cabo normalmente.",
+            "hint": "Se celebraban en la Unión Soviética.",
+            "tags": [
+                "deportes",
+                "política",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Juegos Olímpicos de Moscú",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Mundial de Fútbol de 1982",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Juegos Olímpicos de Los Ángeles",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Copa América",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Mundial de Atletismo",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Gira de tenis mundial",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué canción se convirtió en un éxito mundial interpretada por el dúo sueco Roxette en 1989?",
+            "explanation": "'The Look' y 'Listen to Your Heart' fueron sus grandes éxitos; las demás canciones son de otros artistas.",
+            "hint": "La banda se formó en Estocolmo.",
+            "tags": [
+                "música",
+                "pop",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "The Look",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Listen to Your Heart",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "It Must Have Been Love",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Fading Like a Flower",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Dancing Queen",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "I Will Always Love You",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué película de 1997 se convirtió en la más taquillera de la historia hasta ese momento?",
+            "explanation": "'Titanic' recaudó más de 2.000 millones de dólares; las demás fueron exitosas pero no tanto.",
+            "hint": "Trata sobre un barco que se hunde.",
+            "tags": [
+                "cine",
+                "drama",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Titanic",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "El Rey León",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Jurassic Park",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Independence Day",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "E.T.",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Star Wars",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué innovación tecnológica permitió almacenar música digital en discos de pequeño tamaño a partir de finales de los 80?",
+            "explanation": "El disco compacto (CD) desplazó a los casetes y discos de vinilo; los demás formatos son anteriores o posteriores.",
+            "hint": "Sus siglas en inglés son CD.",
+            "tags": [
+                "tecnología",
+                "música",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Disco compacto",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "CD",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Minidisco",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Disco óptico",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Casete",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Vinilo",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué grupo de música infantil mexicano fue muy popular en los años 80 con integrantes que luego formaron OV7?",
+            "explanation": "La banda 'La Onda Vaselina' fue el origen de OV7; los demás grupos son distintos.",
+            "hint": "Su nombre hace referencia a una película musical.",
+            "tags": [
+                "música",
+                "infantil",
+                "méxico",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "La Onda Vaselina",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "OV7",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Parchís",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Menudo",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Flans",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Timbiriche",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué famosa serie de televisión de los años 90 mostraba la vida de seis amigos en Nueva York?",
+            "explanation": "'Friends' se emitió desde 1994; las demás series son de temáticas distintas.",
+            "hint": "El título significa 'amigos' en inglés.",
+            "tags": [
+                "televisión",
+                "comedia",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Friends",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Seinfeld",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Will & Grace",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "El Príncipe del Rap",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Los Simpson",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Ally McBeal",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué cantante lanzó el tema 'La Bamba' en versión moderna en 1987?",
+            "explanation": "Los Lobos popularizaron esta versión; la original es tradicional y la de Ritchie Valens de los años 50.",
+            "hint": "La canción original es de Veracruz, México.",
+            "tags": [
+                "música",
+                "pop",
+                "latino",
+                "años 80"
+            ],
+            "answers": [
+                {
+                    "answer": "Los Lobos",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Ritchie Valens",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Juanes",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Luis Miguel",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Enrique Iglesias",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Shakira",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué videojuego de 1996 introdujo gráficos en 3D y revolucionó la industria con su protagonista en una isla llena de tesoros?",
+            "explanation": "Super Mario 64 fue el pionero en 3D; los demás juegos también son importantes pero con otros enfoques.",
+            "hint": "Su nombre incluye el número del sistema: 64.",
+            "tags": [
+                "tecnología",
+                "videojuegos",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Super Mario 64",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Crash Bandicoot",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Tomb Raider",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Banjo-Kazooie",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Mario Kart 64",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "The Legend of Zelda",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué movimiento político en Sudáfrica llevó a Nelson Mandela a la presidencia en 1994?",
+            "explanation": "El fin del apartheid permitió las primeras elecciones multirraciales; los demás son eventos relacionados pero distintos.",
+            "hint": "Significa 'separación' en idioma afrikáans.",
+            "tags": [
+                "historia",
+                "política",
+                "áfrica",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Fin del apartheid",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Elecciones democráticas",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Congreso Nacional Africano",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Liberación de Mandela",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Independencia de Sudáfrica",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Revolución sudafricana",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "¿Qué famosa serie animada japonesa se transmitió por primera vez en 1995 y trata sobre guerreros que luchan con cartas mágicas?",
+            "explanation": "'Sakura, cazadora de cartas' cautivó a jóvenes; las demás series son de otras temáticas.",
+            "hint": "La protagonista es una niña de cabello castaño que lleva un vestido rosa.",
+            "tags": [
+                "televisión",
+                "animación",
+                "japón",
+                "años 90"
+            ],
+            "answers": [
+                {
+                    "answer": "Sakura Cazadora de Cartas",
+                    "isCorrect": true,
+                    "popular": 100
+                },
+                {
+                    "answer": "Las Guerreras Mágicas",
+                    "isCorrect": true,
+                    "popular": 75
+                },
+                {
+                    "answer": "Sailor Moon",
+                    "isCorrect": true,
+                    "popular": 50
+                },
+                {
+                    "answer": "Cardcaptor Sakura",
+                    "isCorrect": true,
+                    "popular": 25
+                },
+                {
+                    "answer": "Naruto",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Pokémon",
+                    "isCorrect": false
+                }
+            ]
+        }
+    ]
+}

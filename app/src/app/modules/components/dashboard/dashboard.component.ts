@@ -96,8 +96,6 @@ export class DashboardComponent implements OnInit {
     }
 
     this.uiServices.showLoader(false);
-
-    this.getManifestFiles();
   }
 
   async getAttempts(quiz: QuizDTO) {
@@ -151,12 +149,6 @@ export class DashboardComponent implements OnInit {
     );
 
     this.returnMain();
-  }
-
-  async getManifestFiles() {
-    const data = await this.commonServices.getManifetFiles();
-    console.log('data: ', data);
-
   }
   //#endregion DATA
 
@@ -240,11 +232,11 @@ export class DashboardComponent implements OnInit {
   }
 
   onAction(evt: { event: string, value: any }) {
+    console.log('evt: ', evt);
     if (evt.event == 'create' && evt.value == "quiz") {
-      // this.selectQuiz();
-      this.createQuiz();
+      this.selectQuiz();
+      // this.createQuiz();
     }
-
   }
   //#endregion EVENTS
 

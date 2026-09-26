@@ -1,0 +1,764 @@
+{
+  "title": "Español: Gramática Básica",
+  "time": 120,
+  "tags": ["español", "gramática", "básico"],
+  "cardsCount": 100,
+  "cards": [
+    {
+      "question": "¿Qué es el sujeto en una oración?",
+      "answer": "Es la persona, animal, cosa o idea que realiza la acción o de la que se dice algo.",
+      "hint": "Busca quién o qué hace lo que dice la oración.",
+      "explanation": "El sujeto es el núcleo fundamental que concuerda con el verbo y responde a las preguntas ¿quién? o ¿qué?",
+      "tags": ["español", "oración", "sujeto"]
+    },
+    {
+      "question": "¿Qué es el predicado?",
+      "answer": "Es la parte de la oración que contiene el verbo y expresa lo que hace o dice el sujeto.",
+      "hint": "Contiene la acción y los complementos.",
+      "explanation": "El predicado comienza generalmente con el verbo y responde a qué hace el sujeto.",
+      "tags": ["español", "oración", "predicado"]
+    },
+    {
+      "question": "¿Cuál es la función principal del verbo?",
+      "answer": "Expresa acción, estado o proceso y marca tiempo, número y persona.",
+      "hint": "Indica lo que ocurre, lo que se hace o cómo está algo.",
+      "explanation": "El verbo es el núcleo del predicado y concuerda con el sujeto en persona y número.",
+      "tags": ["español", "verbo", "función"]
+    },
+    {
+      "question": "¿Qué son los pronombres personales?",
+      "answer": "Palabras que sustituyen al nombre o sujeto para evitar repetición.",
+      "hint": "Ejemplos: yo, tú, él, ella, nosotros.",
+      "explanation": "Reemplazan a las personas o cosas y varían según persona, número y género.",
+      "tags": ["español", "pronombre", "personales"]
+    },
+    {
+      "question": "¿Qué indican los artículos?",
+      "answer": "Determinan el nombre e indican género, número y si es conocido o no.",
+      "hint": "Ejemplos: el, la, los, las, un, una.",
+      "explanation": "Van siempre antes del nombre y señalan si este es definido o indefinido.",
+      "tags": ["español", "artículo", "determinante"]
+    },
+    {
+      "question": "¿Cuáles son los artículos definidos en singular?",
+      "answer": "el, la.",
+      "hint": "Se usan cuando el nombre es conocido.",
+      "explanation": "El para masculino singular y la para femenino singular.",
+      "tags": ["español", "artículo", "definido"]
+    },
+    {
+      "question": "¿Cuáles son los artículos indefinidos en plural?",
+      "answer": "unos, unas.",
+      "hint": "Se refieren a cantidades no precisas.",
+      "explanation": "Unos para masculino y unas para femenino, ambos en plural.",
+      "tags": ["español", "artículo", "indefinido"]
+    },
+    {
+      "question": "¿Qué es el adjetivo?",
+      "answer": "Palabra que acompaña al nombre y lo califica o lo describe.",
+      "hint": "Dice cómo es algo: bonito, alto, rápido.",
+      "explanation": "Concuerda con el nombre en género y número.",
+      "tags": ["español", "adjetivo", "descripción"]
+    },
+    {
+      "question": "¿El adjetivo concuerda con el nombre en qué aspectos?",
+      "answer": "En género y número.",
+      "hint": "Fíjate si es masculino o femenino, singular o plural.",
+      "explanation": "Si el nombre es femenino y plural, el adjetivo también lo es.",
+      "tags": ["español", "adjetivo", "concordancia"]
+    },
+    {
+      "question": "¿Qué es el sustantivo o nombre?",
+      "answer": "Palabra que designa personas, animales, cosas, lugares, sentimientos o ideas.",
+      "hint": "Responde a ¿qué es? o ¿quién es?.",
+      "explanation": "Es la palabra que nombra todo lo que existe; puede propio o común.",
+      "tags": ["español", "sustantivo", "nombre"]
+    },
+    {
+      "question": "¿Qué distingue un sustantivo propio de uno común?",
+      "answer": "El nombre propio se escribe con mayúscula inicial y se refiere a seres o lugares específicos.",
+      "hint": "Marca nombres únicos: María, Madrid, México.",
+      "explanation": "Los propios identifican de forma única; los comunes designan en general.",
+      "tags": ["español", "sustantivo", "propio"]
+    },
+    {
+      "question": "¿Qué género tiene la mayoría de los sustantivos terminados en -a?",
+      "answer": "Femenino.",
+      "hint": "La casa, una mesa.",
+      "explanation": "La terminación -a suele indicar femenino, aunque hay excepciones como 'el mapa'.",
+      "tags": ["español", "sustantivo", "género"]
+    },
+    {
+      "question": "¿Qué género tiene la mayoría de los sustantivos terminados en -o?",
+      "answer": "Masculino.",
+      "hint": "El libro, un chico.",
+      "explanation": "La terminación -o indica generalmente masculino; hay excepciones como 'la mano'.",
+      "tags": ["español", "sustantivo", "género"]
+    },
+    {
+      "question": "¿Cómo se forma el plural de un sustantivo terminado en vocal sin tilde?",
+      "answer": "Se le agrega -s.",
+      "hint": "Casa → casas; gato → gatos.",
+      "explanation": "Si la palabra termina en vocal átona, solo se añade s.",
+      "tags": ["español", "sustantivo", "plural"]
+    },
+    {
+      "question": "¿Cómo se forma el plural de un sustantivo terminado en consonante?",
+      "answer": "Se le agrega -es.",
+      "hint": "Árbol → árboles; reloj → relojes.",
+      "explanation": "Las palabras acabadas en consonante llevan la terminación -es.",
+      "tags": ["español", "sustantivo", "plural"]
+    },
+    {
+      "question": "¿Qué es la preposición?",
+      "answer": "Palabra que relaciona términos y indica lugar, tiempo, modo, causa, etc.",
+      "hint": "Ejemplos: a, ante, bajo, con, de, desde.",
+      "explanation": "Conecta palabras y muestra la relación entre ellas; no varía ni se combina con artículos.",
+      "tags": ["español", "preposición", "enlace"]
+    },
+    {
+      "question": "¿Qué es la conjunción?",
+      "answer": "Palabra que une oraciones o palabras del mismo grupo.",
+      "hint": "Ejemplos: y, o, pero, porque.",
+      "explanation": "Sirve para unir elementos; puede ser copulativa, adversativa, disyuntiva, etc.",
+      "tags": ["español", "conjunción", "enlace"]
+    },
+    {
+      "question": "¿Qué expresa la conjunción 'y'?",
+      "answer": "Unión o suma de elementos.",
+      "hint": "Juan __ María van al parque.",
+      "explanation": "Es copulativa; añade información sin oponerla.",
+      "tags": ["español", "conjunción", "copulativa"]
+    },
+    {
+      "question": "¿Qué expresa la conjunción 'pero'?",
+      "answer": "Oposición o contrariedad entre dos ideas.",
+      "hint": "Es inteligente __ un poco perezoso.",
+      "explanation": "Es adversativa; presenta una idea que contrasta con la anterior.",
+      "tags": ["español", "conjunción", "adversativa"]
+    },
+    {
+      "question": "¿Qué es el adverbio?",
+      "answer": "Palabra que modifica al verbo, al adjetivo o a otro adverbio.",
+      "hint": "Dice cómo, cuándo, dónde o cuánto: bien, hoy, aquí, mucho.",
+      "explanation": "Aporta información sobre circunstancias de la acción y no cambia de género ni número.",
+      "tags": ["español", "adverbio", "modificador"]
+    },
+    {
+      "question": "¿Qué sufijo forma adverbios de modo a partir de adjetivos?",
+      "answer": "-mente.",
+      "hint": "Rápido → rápidamente.",
+      "explanation": "Se añade al femenino del adjetivo: clara → claramente.",
+      "tags": ["español", "adverbio", "sufijo"]
+    },
+    {
+      "question": "¿Qué indican los adverbios de tiempo?",
+      "answer": "El momento en que ocurre la acción.",
+      "hint": "Palabras como: ayer, ahora, pronto, luego.",
+      "explanation": "Responden a la pregunta ¿cuándo?.",
+      "tags": ["español", "adverbio", "tiempo"]
+    },
+    {
+      "question": "¿Qué indican los adverbios de lugar?",
+      "answer": "El sitio donde sucede lo expresado.",
+      "hint": "Palabras como: aquí, ahí, allá, cerca.",
+      "explanation": "Responden a la pregunta ¿dónde?.",
+      "tags": ["español", "adverbio", "lugar"]
+    },
+    {
+      "question": "¿Qué tres personas gramaticales existen?",
+      "answer": "Primera (quien habla), segunda (quien escucha) y tercera (de quien se habla).",
+      "hint": "Yo, tú, él.",
+      "explanation": "La primera persona incluye al hablante; la segunda al oyente; la tercera a otros.",
+      "tags": ["español", "verbo", "persona"]
+    },
+    {
+      "question": "¿Qué número gramatical tiene 'nosotros'?",
+      "answer": "Primera persona del plural.",
+      "hint": "Somos más de uno.",
+      "explanation": "Plural indica que el sujeto consta de varias personas.",
+      "tags": ["español", "pronombre", "número"]
+    },
+    {
+      "question": "¿Qué es el infinitivo de un verbo?",
+      "answer": "La forma sin conjugar que termina en -ar, -er o -ir.",
+      "hint": "Ejemplos: cantar, comer, vivir.",
+      "explanation": "Es la forma base que aparece en diccionarios y funciona también como sustantivo.",
+      "tags": ["español", "verbo", "infinitivo"]
+    },
+    {
+      "question": "¿Cuáles son las terminaciones de los tres grupos verbales?",
+      "answer": "-ar, -er, -ir.",
+      "hint": "Recordar: am__ , com__ , viv__ .",
+      "explanation": "El primer grupo en -ar, segundo en -er y tercero en -ir.",
+      "tags": ["español", "verbo", "conjugación"]
+    },
+    {
+      "question": "¿Qué indica el tiempo presente?",
+      "answer": "Acción que ocurre ahora, habitual o verdad general.",
+      "hint": "Yo como pan todos los días.",
+      "explanation": "Se refiere a lo que sucede en el momento de hablar o de forma permanente.",
+      "tags": ["español", "verbo", "presente"]
+    },
+    {
+      "question": "¿Qué indica el tiempo pasado o pretérito?",
+      "answer": "Acción que ya ha ocurrido y terminó.",
+      "hint": "Ayer caminé por el parque.",
+      "explanation": "Expresa hechos concluidos respecto al momento de hablar.",
+      "tags": ["español", "verbo", "pretérito"]
+    },
+    {
+      "question": "¿Qué indica el tiempo futuro?",
+      "answer": "Acción que ocurrirá después del momento actual.",
+      "hint": "Mañana iré a la escuela.",
+      "explanation": "Se refiere a lo que todavía no sucede pero se espera que suceda.",
+      "tags": ["español", "verbo", "futuro"]
+    },
+    {
+      "question": "¿Cómo se forma el futuro simple en verbos regulares?",
+      "answer": "Se añaden terminaciones al infinitivo: -é, -ás, -á, -emos, -éis, -án.",
+      "hint": "Cantar → cantaré, cantarás...",
+      "explanation": "El infinitivo se mantiene igual y se agrega la terminación correspondiente.",
+      "tags": ["español", "verbo", "futuro"]
+    },
+    {
+      "question": "¿Qué es la oración afirmativa?",
+      "answer": "Expresa una idea como verdadera sin palabras de negación.",
+      "hint": "Ella lee un libro.",
+      "explanation": "Afirma lo que el sujeto hace o es; no contiene 'no', 'nunca', 'nadie'.",
+      "tags": ["español", "oración", "afirmativa"]
+    },
+    {
+      "question": "¿Cómo se forma la oración negativa más comúnmente?",
+      "answer": "Colocando el adverbio 'no' antes del verbo.",
+      "hint": "No + verbo.",
+      "explanation": "El negador principal va antes del verbo: 'Yo no como carne'.",
+      "tags": ["español", "oración", "negativa"]
+    },
+    {
+      "question": "¿Dónde se coloca el adverbio 'no' en la oración negativa simple?",
+      "answer": "Antes del verbo.",
+      "hint": "No quiero salir.",
+      "explanation": "Nunca va después del verbo en oraciones sin pronombres átonos.",
+      "tags": ["español", "adverbio", "negación"]
+    },
+    {
+      "question": "¿Qué signo cierra siempre una oración afirmativa o negativa?",
+      "answer": "El punto.",
+      "hint": "Se coloca al final de la frase completa.",
+      "explanation": "Indica pausa larga y fin de la oración.",
+      "tags": ["español", "puntuación", "punto"]
+    },
+    {
+      "question": "¿Qué signos se usan para escribir una pregunta directa?",
+      "answer": "Signos de interrogación: ¿ ?.",
+      "hint": "Van al principio y al final.",
+      "explanation": "En español se abren y se cierran; ambos son obligatorios.",
+      "tags": ["español", "puntuación", "interrogación"]
+    },
+    {
+      "question": "¿Qué signos se usan para una exclamación?",
+      "answer": "Signos de exclamación: ¡ !.",
+      "hint": "Indican sorpresa, alegría, enfado...",
+      "explanation": "Se colocan al inicio y al final de la frase exclamativa.",
+      "tags": ["español", "puntuación", "exclamación"]
+    },
+    {
+      "question": "¿Qué función cumple la coma?",
+      "answer": "Indica una pausa breve dentro de la oración.",
+      "hint": "Separa elementos de una lista o partes de la frase.",
+      "explanation": "Se usa en enumeraciones, tras incisos o para separar oraciones relacionadas.",
+      "tags": ["español", "puntuación", "coma"]
+    },
+    {
+      "question": "¿Cómo se escribe la primera palabra de un texto o tras un punto?",
+      "answer": "Con mayúscula inicial.",
+      "hint": "Siempre empieza así la frase nueva.",
+      "explanation": "La mayúscula señala el inicio de un enunciado o nombre propio.",
+      "tags": ["español", "ortografía", "mayúscula"]
+    },
+    {
+      "question": "¿Qué es la tilde o acento gráfico?",
+      "answer": "Signo ´ sobre una vocal que marca la sílaba tónica o distingue palabras.",
+      "hint": "Ejemplo: lápiz, cama, mamá.",
+      "explanation": "Indica dónde recae la fuerza de voz y puede cambiar el significado.",
+      "tags": ["español", "ortografía", "tilde"]
+    },
+    {
+      "question": "¿Qué es la sílaba tónica?",
+      "answer": "La sílaba que se pronuncia con mayor fuerza de voz en una palabra.",
+      "hint": "En 'casa' la tónica es ca-.",
+      "explanation": "Todas las palabras tienen una sola sílaba tónica; las demás son átonas.",
+      "tags": ["español", "ortografía", "sílaba"]
+    },
+    {
+      "question": "¿Cómo se clasifican las palabras según su sílaba tónica?",
+      "answer": "Agudas, llanas, esdrújulas y sobreesdrújulas.",
+      "hint": "Depende de dónde lleven la fuerza.",
+      "explanation": "Agudas: al final; llanas: penúltima; esdrújulas: antepenúltima; sobreesdrújulas: anterior a esa.",
+      "tags": ["español", "ortografía", "clasificación"]
+    },
+    {
+      "question": "¿Cuándo llevan tilde las palabras agudas?",
+      "answer": "Cuando terminan en vocal, -n o -s.",
+      "hint": "Café, canción, compás.",
+      "explanation": "Si la fuerza va al final y acaban en vocal, n o s → llevan tilde.",
+      "tags": ["español", "ortografía", "agudas"]
+    },
+    {
+      "question": "¿Cuándo llevan tilde las palabras llanas?",
+      "answer": "Cuando NO terminan en vocal, -n o -s.",
+      "hint": "Árbol, lápiz, difícil.",
+      "explanation": "Si la fuerza va en penúltima y acaban en consonante distinta de n o s → tilde.",
+      "tags": ["español", "ortografía", "llanas"]
+    },
+    {
+      "question": "¿Siempre llevan tilde las esdrújulas?",
+      "answer": "Sí, siempre.",
+      "hint": "Música, pájaro, médico.",
+      "explanation": "Todas las palabras con fuerza en la antepenúltima sílaba llevan tilde.",
+      "tags": ["español", "ortografía", "esdrújulas"]
+    },
+    {
+      "question": "¿Qué es un diptongo?",
+      "answer": "Unión de dos vocales en una misma sílaba.",
+      "hint": "Cae, Europa, ciudad.",
+      "explanation": "Se forma con vocal abierta + cerrada, cerrada + abierta o dos cerradas distintas.",
+      "tags": ["español", "ortografía", "diptongo"]
+    },
+    {
+      "question": "¿Qué es un hiato?",
+      "answer": "Dos vocales juntas que pertenecen a sílabas distintas.",
+      "hint": "Pa-ís, le-ír, ma-rí-a.",
+      "explanation": "Ocurre cuando una vocal cerrada tónica se separa de una abierta; lleva tilde la cerrada.",
+      "tags": ["español", "ortografía", "hiato"]
+    },
+    {
+      "question": "¿Qué diferencia hay entre 'él' y 'el'?",
+      "answer": "'Él' con tilde es pronombre; 'el' sin tilde es artículo.",
+      "hint": "___ come manzanas / El libro de ___.",
+      "explanation": "La tilde diacrítica distingue significados de palabras iguales escritas distinto.",
+      "tags": ["español", "ortografía", "tilde-diacrítica"]
+    },
+    {
+      "question": "¿Qué diferencia hay entre 'más' y 'mas'?",
+      "answer": "'Más' con tilde indica cantidad; 'mas' sin tilde equivale a 'pero'.",
+      "hint": "Quiero ___ agua / Quería venir, ___ no pudo.",
+      "explanation": "La tilde diferencia el adverbio de cantidad de la conjunción adversativa.",
+      "tags": ["español", "ortografía", "tilde-diacrítica"]
+    },
+    {
+      "question": "¿Qué diferencia hay entre 'sé' y 'se'?",
+      "answer": "'Sé' con tilde viene de saber o ser; 'se' sin tilde es pronombre.",
+      "hint": "Yo ___ la verdad / ___ cayó la taza.",
+      "explanation": "Se usa tilde cuando es forma verbal; sin tilde es el pronombre reflexivo o impersonal.",
+      "tags": ["español", "ortografía", "tilde-diacrítica"]
+    },
+    {
+      "question": "¿Qué diferencia hay entre 'tu' y 'tú'?",
+      "answer": "'Tú' con tilde es pronombre sujeto; 'tu' sin tilde es posesivo.",
+      "hint": "___ eres amable / Tu casa es bonita.",
+      "explanation": "La tilde distingue la persona del posesivo.",
+      "tags": ["español", "ortografía", "tilde-diacrítica"]
+    },
+    {
+      "question": "¿Qué diferencia hay entre 'dónde' y 'donde'?",
+      "answer": "'Dónde' con tilde va en preguntas; 'donde' sin tilde indica lugar en afirmación.",
+      "hint": "¿___ vives? / El sitio donde nací.",
+      "explanation": "Las palabras interrogativas llevan tilde; las relativas no.",
+      "tags": ["español", "ortografía", "interrogativa"]
+    },
+    {
+      "question": "¿Qué es un sujeto compuesto?",
+      "answer": "Aquel formado por dos o más núcleos unidos por conjunción.",
+      "hint": "María y Juan estudian.",
+      "explanation": "Hay varios nombres o pronombres que realizan la acción juntos.",
+      "tags": ["español", "oración", "sujeto-compuesto"]
+    },
+    {
+      "question": "¿Cómo concuerda el verbo con sujeto compuesto unido por 'y'?",
+      "answer": "Siempre en plural.",
+      "hint": "Ana y Luis cantan.",
+      "explanation": "Dos o más sujetos sumados exigen verbo en plural.",
+      "tags": ["español", "oración", "concordancia"]
+    },
+    {
+      "question": "¿Qué es el sujeto tácito u omitido?",
+      "answer": "Aquel que no se escribe pero se deduce del verbo.",
+      "hint": "Vamos al cine → sujeto: nosotros.",
+      "explanation": "La terminación verbal permite saber quién es el sujeto sin escribirlo.",
+      "tags": ["español", "oración", "sujeto-tácito"]
+    },
+    {
+      "question": "¿Qué es el complemento directo?",
+      "answer": "Lo que recibe directamente la acción del verbo.",
+      "hint": "Compro flores → flores es el complemento directo.",
+      "explanation": "Responde a ¿qué? o ¿a quién? + verbo; se puede sustituir por lo, la, los, las.",
+      "tags": ["español", "oración", "complemento-directo"]
+    },
+    {
+      "question": "¿Qué es el complemento indirecto?",
+      "answer": "Quien recibe el beneficio o daño de la acción.",
+      "hint": "Escribo a Ana → Ana es el complemento indirecto.",
+      "explanation": "Responde a ¿a quién? o ¿para quién?; se sustituye por le o les.",
+      "tags": ["español", "oración", "complemento-indirecto"]
+    },
+    {
+      "question": "¿Con qué preposición suele introducirse el complemento indirecto?",
+      "answer": "Con la preposición 'a'.",
+      "hint": "Doy el regalo ___ mi amiga.",
+      "explanation": "Siempre va precedido de 'a' antes del nombre: 'doy a María'.",
+      "tags": ["español", "preposición", "complemento"]
+    },
+    {
+      "question": "¿Qué pronombres sustituyen al complemento directo?",
+      "answer": "lo, la, los, las.",
+      "hint": "Compro el libro → lo compro.",
+      "explanation": "Concuerdan en género y número con el sustantivo al que reemplazan.",
+      "tags": ["español", "pronombre", "directo"]
+    },
+    {
+      "question": "¿Qué pronombres sustituyen al complemento indirecto?",
+      "answer": "le, les.",
+      "hint": "Doy a Juan → le doy.",
+      "explanation": "No varían por género, solo por número: le (singular), les (plural).",
+      "tags": ["español", "pronombre", "indirecto"]
+    },
+    {
+      "question": "¿Dónde se colocan los pronombres átonos respecto al verbo en oración afirmativa?",
+      "answer": "Antes del verbo conjugado.",
+      "hint": "Lo quiero.",
+      "explanation": "En frases afirmativas con verbo conjugado van siempre delante.",
+      "tags": ["español", "pronombre", "posición"]
+    },
+    {
+      "question": "¿Dónde se colocan los pronombres átonos con infinitivo?",
+      "answer": "Detrás del infinitivo formando una sola palabra.",
+      "hint": "Quiero comerlo.",
+      "explanation": "Se unen al final: 'ver + la → verla'.",
+      "tags": ["español", "pronombre", "infinitivo"]
+    },
+    {
+      "question": "¿Qué es el verbo 'ser'?",
+      "answer": "Expresa esencia, identidad, pertenencia o cualidad permanente.",
+      "hint": "Yo soy estudiante.",
+      "explanation": "Se usa para decir quién o qué es algo de forma estable.",
+      "tags": ["español", "verbo", "ser"]
+    },
+    {
+      "question": "¿Qué es el verbo 'estar'?",
+      "answer": "Expresa ubicación, estado temporal o situación actual.",
+      "hint": "Nosotros estamos en casa.",
+      "explanation": "Indica dónde está o cómo se encuentra algo en un momento dado.",
+      "tags": ["español", "verbo", "estar"]
+    },
+    {
+      "question": "¿Ser o estar para indicar nacionalidad?",
+      "answer": "Ser.",
+      "hint": "Ella ___ mexicana.",
+      "explanation": "La nacionalidad es una característica inherente, por eso se usa ser.",
+      "tags": ["español", "verbo", "ser-estar"]
+    },
+    {
+      "question": "¿Ser o estar para indicar lugar donde se está?",
+      "answer": "Estar.",
+      "hint": "Nosotros ___ en la escuela.",
+      "explanation": "La ubicación física requiere estar.",
+      "tags": ["español", "verbo", "ser-estar"]
+    },
+    {
+      "question": "¿Qué verbo se usa para la hora y fecha?",
+      "answer": "Ser.",
+      "hint": "___ las tres de la tarde.",
+      "explanation": "La hora y la fecha se consideran hechos generales, no estados.",
+      "tags": ["español", "verbo", "ser"]
+    },
+    {
+      "question": "¿Qué es el imperativo?",
+      "answer": "Modo verbal que expresa orden, ruego o instrucción.",
+      "hint": "¡Ven aquí! / Cierra la puerta.",
+      "explanation": "Se usa para dar indicaciones directas a alguien; tiene formas afirmativa y negativa.",
+      "tags": ["español", "verbo", "imperativo"]
+    },
+    {
+      "question": "¿Cómo se forma el imperativo afirmativo de 'tú' para verbos del primer grupo?",
+      "answer": "Se quita la -s final del presente de tú.",
+      "hint": "Cantas → canta; comes → come.",
+      "explanation": "La forma es igual a la tercera persona del presente de indicativo.",
+      "tags": ["español", "verbo", "imperativo"]
+    },
+    {
+      "question": "¿Cómo se forma el imperativo negativo de 'tú'?",
+      "answer": "No + presente de subjunto de tú.",
+      "hint": "No cantes, no comas.",
+      "explanation": "La negación requiere la forma del presente de subjuntivo.",
+      "tags": ["español", "verbo", "imperativo"]
+    },
+    {
+      "question": "¿Qué es el presente de indicativo?",
+      "answer": "Modo que expresa hechos reales, actuales o habituales.",
+      "hint": "Trabajo todos los días.",
+      "explanation": "Es el modo más común; se usa para afirmar lo que es cierto.",
+      "tags": ["español", "verbo", "indicativo"]
+    },
+    {
+      "question": "¿Qué es el presente de subjuntivo?",
+      "answer": "Modo que expresa deseo, duda, orden o posibilidad.",
+      "hint": "Espero que vengas.",
+      "explanation": "Se usa en oraciones subordinadas cuando no se da por seguro el hecho.",
+      "tags": ["español", "verbo", "subjuntivo"]
+    },
+    {
+      "question": "¿Con qué expresiones suele ir el subjuntivo?",
+      "answer": "Quiero que..., espero que..., dudo que..., es posible que....",
+      "hint": "Busca deseo, duda o probabilidad.",
+      "explanation": "Cuando hay incertidumbre, deseo o petición se usa subjuntivo.",
+      "tags": ["español", "verbo", "subjuntivo"]
+    },
+    {
+      "question": "¿Qué es la oración simple?",
+      "answer": "La que tiene un solo verbo y un solo núcleo de predicado.",
+      "hint": "El sol brilla.",
+      "explanation": "Expresa una idea completa sin unir oraciones distintas.",
+      "tags": ["español", "oración", "simple"]
+    },
+    {
+      "question": "¿Qué es la oración compuesta?",
+      "answer": "La formada por dos o más oraciones unidas por enlaces.",
+      "hint": "Estudio y luego salgo.",
+      "explanation": "Tiene más de un verbo y combina varias ideas relacionadas.",
+      "tags": ["español", "oración", "compuesta"]
+    },
+    {
+      "question": "¿Qué es la oración coordinada?",
+      "answer": "Oraciones unidas que tienen igual importancia gramatical.",
+      "hint": "Fui al cine y luego cené.",
+      "explanation": "Ninguna depende de la otra; se unen con y, o, pero.",
+      "tags": ["español", "oración", "coordinada"]
+    },
+    {
+      "question": "¿Qué es la oración subordinada?",
+      "answer": "Oración que depende de otra principal y no tiene sentido sola.",
+      "hint": "Sé que vienes.",
+      "explanation": "Acompaña a la oración principal y amplía su significado.",
+      "tags": ["español", "oración", "subordinada"]
+    },
+    {
+      "question": "¿Qué preposición rige el verbo 'ir' para indicar destino?",
+      "answer": "a.",
+      "hint": "Voy ___ la escuela.",
+      "explanation": "Ir siempre va seguido de 'a' para señalar hacia dónde se dirige.",
+      "tags": ["español", "preposición", "uso"]
+    },
+    {
+      "question": "¿Qué preposición rige el verbo 'venir' para indicar procedencia?",
+      "answer": "de.",
+      "hint": "Vengo ___ la oficina.",
+      "explanation": "Se usa 'de' para indicar el lugar de donde se parte.",
+      "tags": ["español", "preposición", "uso"]
+    },
+    {
+      "question": "¿Qué preposición indica materia o posesión?",
+      "answer": "de.",
+      "hint": "Un vaso ___ cristal / El libro ___ Ana.",
+      "explanation": "'De' expresa origen, contenido, materia o relación de pertenencia.",
+      "tags": ["español", "preposición", "uso"]
+    },
+    {
+      "question": "¿Cómo se hace la negación con 'algo' y 'alguien'?",
+      "answer": "Se cambia por 'nada' y 'nadie' y se mantiene el verbo en afirmativo.",
+      "hint": "No vi a nadie / No sé nada.",
+      "explanation": "En oraciones negativas no se usan 'algo/alguien', sino sus equivalentes negativos.",
+      "tags": ["español", "oración", "negación"]
+    },
+    {
+      "question": "¿Qué palabra se usa para negar también?",
+      "answer": "Tampoco.",
+      "hint": "Yo no fui, y él ___.",
+      "explanation": "Es la forma negativa de 'también'; va al principio o después del verbo.",
+      "tags": ["español", "adverbio", "negación"]
+    },
+    {
+      "question": "¿Qué es el posesivo?",
+      "answer": "Palabra que indica a quién pertenece algo.",
+      "hint": "Mi casa, tus libros, nuestro coche.",
+      "explanation": "Concuerda con la cosa poseída, no con el poseedor.",
+      "tags": ["español", "posesivo", "determinante"]
+    },
+    {
+      "question": "¿Cuáles son los posesivos de primera persona plural?",
+      "answer": "nuestro, nuestra, nuestros, nuestras.",
+      "hint": "___ amigo (de nosotros).",
+      "explanation": "Acompañan al nombre y varían en género y número con él.",
+      "tags": ["español", "posesivo", "primera"]
+    },
+    {
+      "question": "¿Qué es el demostrativo?",
+      "answer": "Palabra que indica cercanía respecto al hablante o al oyente.",
+      "hint": "Este, ese, aquel.",
+      "explanation": "Distinguir tres distancias: cerca de mí, cerca de ti, lejos de ambos.",
+      "tags": ["español", "demostrativo", "determinante"]
+    },
+    {
+      "question": "¿Qué indica 'este'?",
+      "answer": "Algo cercano a quien habla.",
+      "hint": "___ lápiz que tengo en la mano.",
+      "explanation": "Primer grado de cercanía: lo que está junto al hablante.",
+      "tags": ["español", "demostrativo", "cerca"]
+    },
+    {
+      "question": "¿Qué indica 'aquel'?",
+      "answer": "Algo lejano de ambos, hablante y oyente.",
+      "hint": "___ edificio allá lejos.",
+      "explanation": "Tercer grado de distancia: lo que se ve a lo lejos.",
+      "tags": ["español", "demostrativo", "lejos"]
+    },
+    {
+      "question": "¿Qué es el relativo?",
+      "answer": "Palabra que une una oración a un nombre o pronombre anterior.",
+      "hint": "Que, quien, cual, cuyo.",
+      "explanation": "Hace referencia a algo mencionado antes sin repetirlo.",
+      "tags": ["español", "relativo", "enlace"]
+    },
+    {
+      "question": "¿Cuál es el relativo más usado?",
+      "answer": "Que.",
+      "hint": "El libro ___ compré.",
+      "explanation": "Se usa para personas y cosas, sin distinción de género o número.",
+      "tags": ["español", "relativo", "que"]
+    },
+    {
+      "question": "¿Qué pregunta con 'cuánto'?",
+      "answer": "Cantidad.",
+      "hint": "¿___ cuesta?",
+      "explanation": "Se refiere a cantidad; concuerda con el sustantivo: cuánto, cuánta, cuántos, cuántas.",
+      "tags": ["español", "interrogativa", "cantidad"]
+    },
+    {
+      "question": "¿Qué pregunta con 'cuál'?",
+      "answer": "Selección entre varios.",
+      "hint": "¿___ prefieres?",
+      "explanation": "Se usa cuando hay que elegir una opción de un grupo.",
+      "tags": ["español", "interrogativa", "elección"]
+    },
+    {
+      "question": "¿Cómo se contraen 'a + el'?",
+      "answer": "al.",
+      "hint": "Voy ___ parque.",
+      "explanation": "La unión de preposición a + artículo el da la forma contraída al.",
+      "tags": ["español", "ortografía", "contracción"]
+    },
+    {
+      "question": "¿Cómo se contraen 'de + el'?",
+      "answer": "del.",
+      "hint": "Es el libro ___ profesor.",
+      "explanation": "La unión de de + el da del; no lleva tilde.",
+      "tags": ["español", "ortografía", "contracción"]
+    },
+    {
+      "question": "¿Cuándo no se usa contracción 'al'?",
+      "answer": "Cuando 'el' forma parte de un nombre propio.",
+      "hint": "Voy a El Cairo.",
+      "explanation": "En nombres propios la preposición y el artículo se escriben separados.",
+      "tags": ["español", "ortografía", "contracción"]
+    },
+    {
+      "question": "¿Qué es el pronombre reflexivo?",
+      "answer": "Indica que la acción recae sobre el mismo sujeto.",
+      "hint": "Me lavo, te peinas, se viste.",
+      "explanation": "El sujeto hace y recibe la acción; los pronombres son me, te, se, nos, os, se.",
+      "tags": ["español", "pronombre", "reflexivo"]
+    },
+    {
+      "question": "¿Qué verbo lleva pronombre reflexivo 'se' para acciones cotidianas como levantarse?",
+      "answer": "Levantarse.",
+      "hint": "Yo ___ a las siete.",
+      "explanation": "Muchos verbos de la vida diaria pueden ser reflexivos: acostarse, vestirse, ducharse.",
+      "tags": ["español", "verbo", "reflexivo"]
+    },
+    {
+      "question": "¿Cuál es la estructura de la oración interrogativa directa simple?",
+      "answer": "¿Palabra interrogativa + verbo + sujeto + resto?",
+      "hint": "¿Dónde vives tú?",
+      "explanation": "En preguntas el verbo suele ir antes del sujeto.",
+      "tags": ["español", "oración", "interrogativa"]
+    },
+    {
+      "question": "¿Cuál es la estructura de la oración afirmativa más común?",
+      "answer": "Sujeto + verbo + complementos.",
+      "hint": "Yo como fruta.",
+      "explanation": "El orden habitual es sujeto, verbo y luego el resto de elementos.",
+      "tags": ["español", "oración", "orden"]
+    },
+    {
+      "question": "¿Qué final de línea marca el fin de un enunciado completo?",
+      "answer": "Punto y seguido o punto y aparte.",
+      "hint": "Separa ideas distintas.",
+      "explanation": "El punto indica que la oración ha terminado y se puede empezar otra nueva.",
+      "tags": ["español", "puntuación", "punto"]
+    },
+    {
+      "question": "¿Qué signo se usa para separar elementos de una enumeración?",
+      "answer": "Coma.",
+      "hint": "Compró pan, leche y huevos.",
+      "explanation": "Se coloca entre cada elemento menos antes de la conjunción final (y, o).",
+      "tags": ["español", "puntuación", "coma"]
+    },
+    {
+      "question": "¿Cómo se escribe 'hoy' y 'ahí' respecto a la tilde?",
+      "answer": "Llevan tilde porque son agudas terminadas en vocal.",
+      "hint": "Hoy, ahí, tú, él.",
+      "explanation": "Las palabras de una sola sílaba no suelen llevar tilde salvo para distinguir significados; estas cumplen regla de acentuación.",
+      "tags": ["español", "ortografía", "tilde"]
+    },
+    {
+      "question": "¿Qué es la concordancia de género?",
+      "answer": "El artículo y el adjetivo coinciden en masculino o femenino con el nombre.",
+      "hint": "La casa bonita / El coche rápido.",
+      "explanation": "Todos los acompañantes del nombre deben coincidir con él en género.",
+      "tags": ["español", "concordancia", "género"]
+    },
+    {
+      "question": "¿Qué es la concordancia de número?",
+      "answer": "El verbo y los determinantes coinciden en singular o plural con el sujeto.",
+      "hint": "Las niñas cantan.",
+      "explanation": "Si el sujeto es plural, el verbo y los artículos también lo son.",
+      "tags": ["español", "concordancia", "número"]
+    },
+    {
+      "question": "¿Cuál es la regla general de acentuación de 'caminar'?",
+      "answer": "Es llana terminada en vocal → no lleva tilde.",
+      "hint": "Ca-mi-nar → fuerza en la penúltima, acaba en r.",
+      "explanation": "Llana terminada en n, s o vocal no lleva tilde; termina en r → tampoco.",
+      "tags": ["español", "ortografía", "regla"]
+    },
+    {
+      "question": "¿Cuál es la sílaba tónica de 'examen'?",
+      "answer": "E-xa-men → la sílaba tónica es 'xa'.",
+      "hint": "Fuerza en la penúltima.",
+      "explanation": "Llana terminada en n → no lleva tilde.",
+      "tags": ["español", "ortografía", "sílaba"]
+    },
+    {
+      "question": "¿Qué palabra completa: '___ amigos vienen hoy'?",
+      "answer": "Mis / Los / Unos.",
+      "hint": "Determinante + sustantivo plural.",
+      "explanation": "Se necesita un determinante que concuerde en masculino plural.",
+      "tags": ["español", "gramática", "completar"]
+    },
+    {
+      "question": "¿Qué palabra completa: 'Ella no ___ ir mañana'?",
+      "answer": "puede / quiere / va a.",
+      "hint": "Verbo conjugado o estructura de futuro.",
+      "explanation": "El verbo concuerda con tercera persona singular y encaja en sentido con la negación.",
+      "tags": ["español", "gramática", "completar"]
+    },
+    {
+      "question": "¿Qué es lo esencial para que exista una oración completa?",
+      "answer": "Sujeto (expreso o tácito) y verbo.",
+      "hint": "No puede faltar el verbo.",
+      "explanation": "Con el verbo se expresa la acción; sin él no hay oración gramatical completa.",
+      "tags": ["español", "oración", "esencia"]
+    }
+  ]
+}

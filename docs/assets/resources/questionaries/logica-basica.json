@@ -1,0 +1,596 @@
+{
+  "title": "Cuestionario de Lógica Básica",
+  "time": 40,
+  "tags": ["lógica", "razonamiento", "pensamiento crítico", "básico"],
+  "questionsCount": 50,
+  "questions": [
+    {
+      "question": "Si todos los A son B, y todos los B son C, entonces:",
+      "explanation": "Por transitividad, si A está contenido en B y B en C, todo A está en C.",
+      "hint": "Piensa en conjuntos: si A está dentro de B y B dentro de C, ¿dónde está A?",
+      "tags": ["lógica", "silogismos", "conjuntos"],
+      "answers": [
+        { "answer": "Todos los C son A" },
+        { "answer": "Todos los A son C", "isCorrect": true },
+        { "answer": "Algunos C no son A" },
+        { "answer": "Ningún A es C" }
+      ]
+    },
+    {
+      "question": "Identifica la afirmación equivalente a: 'Si llueve, entonces el suelo se moja'.",
+      "explanation": "La implicación P → Q equivale lógicamente a su contrapositiva: si no se cumple Q, no se cumple P.",
+      "hint": "Busca la forma 'si no ocurre la consecuencia, no ocurre la causa'.",
+      "tags": ["lógica", "implicación", "proposiciones"],
+      "answers": [
+        { "answer": "Si el suelo se moja, entonces llueve" },
+        { "answer": "Si el suelo no se moja, entonces no llueve", "isCorrect": true },
+        { "answer": "Si no llueve, el suelo no se moja" },
+        { "answer": "Llueve y el suelo se moja" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la negación de 'Todos los estudiantes aprobaron'?",
+      "explanation": "La negación de 'todos son' es 'al menos uno no es', no 'ninguno es'.",
+      "hint": "Basta con que uno no haya aprobado para que la afirmación sea falsa.",
+      "tags": ["lógica", "negación", "cuantificadores"],
+      "answers": [
+        { "answer": "Ningún estudiante aprobó" },
+        { "answer": "Al menos un estudiante no aprobó", "isCorrect": true },
+        { "answer": "Todos reprobaron" },
+        { "answer": "Algunos aprobaron" }
+      ]
+    },
+    {
+      "question": "Si P es verdadera y Q es falsa, ¿cuál expresión es verdadera?",
+      "explanation": "La disyunción (O) es verdadera si al menos una parte lo es: verdadero O falso = verdadero.",
+      "hint": "La expresión 'al menos uno de los dos' es suficiente.",
+      "tags": ["lógica", "operadores", "proposiciones"],
+      "answers": [
+        { "answer": "P Y Q" },
+        { "answer": "P O Q", "isCorrect": true },
+        { "answer": "P ↔ Q (equivalencia)" },
+        { "answer": "NO P" }
+      ]
+    },
+    {
+      "question": "Completa la serie: 2, 4, 6, 8, ___",
+      "explanation": "Se suma 2 a cada término: 8 + 2 = 10.",
+      "hint": "Son números pares en orden.",
+      "tags": ["razonamiento", "series numéricas", "patrones"],
+      "answers": [
+        { "answer": "9" },
+        { "answer": "10", "isCorrect": true },
+        { "answer": "11" },
+        { "answer": "12" }
+      ]
+    },
+    {
+      "question": "Completa la serie: 3, 6, 12, 24, ___",
+      "explanation": "Cada término se multiplica por 2: 24 × 2 = 48.",
+      "hint": "Duplica el número anterior.",
+      "tags": ["razonamiento", "series numéricas", "patrones"],
+      "answers": [
+        { "answer": "36" },
+        { "answer": "48", "isCorrect": true },
+        { "answer": "42" },
+        { "answer": "50" }
+      ]
+    },
+    {
+      "question": "Si A = B y B = C, entonces:",
+      "explanation": "Propiedad transitiva de la igualdad: si A igual a B y B igual a C, A igual a C.",
+      "hint": "Lo que es igual a una cosa es igual a la otra.",
+      "tags": ["lógica", "igualdad", "propiedades"],
+      "answers": [
+        { "answer": "A > C" },
+        { "answer": "A = C", "isCorrect": true },
+        { "answer": "A < C" },
+        { "answer": "A ≠ C" }
+      ]
+    },
+    {
+      "question": "¿Cuál no es una figura geométrica de tres lados?",
+      "explanation": "Un rectángulo tiene cuatro lados; los demás son triángulos.",
+      "hint": "Busca la que tiene cuatro esquinas.",
+      "tags": ["clasificación", "geometría", "razonamiento"],
+      "answers": [
+        { "answer": "Triángulo equilátero" },
+        { "answer": "Rectángulo", "isCorrect": true },
+        { "answer": "Triángulo isósceles" },
+        { "answer": "Triángulo rectángulo" }
+      ]
+    },
+    {
+      "question": "Si 'ningún A es B', entonces:",
+      "explanation": "Conjuntos disjuntos: si ningún A pertenece a B, ningún B pertenece a A.",
+      "hint": "Si no hay cruce en una dirección, tampoco en la otra.",
+      "tags": ["lógica", "silogismos", "conjuntos"],
+      "answers": [
+        { "answer": "todos los B son A" },
+        { "answer": "ningún B es A", "isCorrect": true },
+        { "answer": "algunos B son A" },
+        { "answer": "algunos A son B" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la siguiente en la secuencia: círculo, cuadrado, triángulo, círculo, ___?",
+      "explanation": "Patrón repetitivo de tres elementos: el cuarto es círculo, el quinto debe ser cuadrado.",
+      "hint": "El orden se repite cada tres.",
+      "tags": ["razonamiento", "patrones", "secuencias"],
+      "answers": [
+        { "answer": "Círculo" },
+        { "answer": "Cuadrado", "isCorrect": true },
+        { "answer": "Triángulo" },
+        { "answer": "Rombo" }
+      ]
+    },
+    {
+      "question": "Si hoy no llueve, entonces María va al parque. María fue al parque. ¿Se concluye que no llovió?",
+      "explanation": "Afirmar la consecuencia no valida la causa: pudo ir al parque por otras razones aunque lloviera.",
+      "hint": "Que el resultado ocurra no significa que la causa esperada sea la única.",
+      "tags": ["lógica", "implicación", "falacias"],
+      "answers": [
+        { "answer": "Sí, con seguridad" },
+        { "answer": "No necesariamente", "isCorrect": true },
+        { "answer": "No, definitivamente no" },
+        { "answer": "Sí, porque siempre ocurre así" }
+      ]
+    },
+    {
+      "question": "¿Cuál número no pertenece al grupo: 2, 4, 7, 8, 10?",
+      "explanation": "Todos son pares excepto el 7, que es impar.",
+      "hint": "Todos se pueden dividir entre 2 sin residuo, menos uno.",
+      "tags": ["clasificación", "números", "patrones"],
+      "answers": [
+        { "answer": "4" },
+        { "answer": "7", "isCorrect": true },
+        { "answer": "8" },
+        { "answer": "10" }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra no pertenece al grupo: manzana, plátano, zanahoria, uva?",
+      "explanation": "Zanahoria es un vegetal/raíz; las demás son frutas.",
+      "hint": "No es una fruta dulce.",
+      "tags": ["clasificación", "conceptos", "razonamiento"],
+      "answers": [
+        { "answer": "manzana" },
+        { "answer": "zanahoria", "isCorrect": true },
+        { "answer": "plátano" },
+        { "answer": "uva" }
+      ]
+    },
+    {
+      "question": "Si X > Y e Y > Z, entonces:",
+      "explanation": "Propiedad transitiva: si X es mayor que Y e Y mayor que Z, X es mayor que Z.",
+      "hint": "El orden se mantiene en cadena.",
+      "tags": ["lógica", "desigualdades", "propiedades"],
+      "answers": [
+        { "answer": "X < Z" },
+        { "answer": "X > Z", "isCorrect": true },
+        { "answer": "X = Z" },
+        { "answer": "Z > X" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la negación de 'Algunos pájaros vuelan'?",
+      "explanation": "La negación de 'algunos sí' es 'ninguno sí' = 'todos no'.",
+      "hint": "Para que sea falso que algunos vuelen, ninguno puede volar.",
+      "tags": ["lógica", "negación", "cuantificadores"],
+      "answers": [
+        { "answer": "Algunos pájaros no vuelan" },
+        { "answer": "Ningún pájaro vuela", "isCorrect": true },
+        { "answer": "Todos los pájaros vuelan" },
+        { "answer": "Los pájaros no vuelan alto" }
+      ]
+    },
+    {
+      "question": "Completa: 1, 1, 2, 3, 5, ___",
+      "explanation": "Sucesión de Fibonacci: cada número es la suma de los dos anteriores → 3 + 5 = 8.",
+      "hint": "Suma los dos números anteriores.",
+      "tags": ["razonamiento", "series numéricas", "patrones"],
+      "answers": [
+        { "answer": "7" },
+        { "answer": "8", "isCorrect": true },
+        { "answer": "9" },
+        { "answer": "10" }
+      ]
+    },
+    {
+      "question": "Si la afirmación 'si estudio, apruebo' es verdadera, ¿cuál también lo es?",
+      "explanation": "Su contrapositiva: si no aprobé, no estudié.",
+      "hint": "Si no ocurrió el resultado, no pudo ocurrir la causa suficiente.",
+      "tags": ["lógica", "implicación", "proposiciones"],
+      "answers": [
+        { "answer": "Si no estudio, no apruebo" },
+        { "answer": "Si no aprobé, entonces no estudié", "isCorrect": true },
+        { "answer": "Si apruebo, entonces estudié" },
+        { "answer": "Estudié y no aprobé" }
+      ]
+    },
+    {
+      "question": "¿Cuál es diferente a las demás?",
+      "explanation": "Las demás son estaciones del año; martes es un día de la semana.",
+      "hint": "No es una estación.",
+      "tags": ["clasificación", "conceptos", "razonamiento"],
+      "answers": [
+        { "answer": "Primavera" },
+        { "answer": "Martes", "isCorrect": true },
+        { "answer": "Otoño" },
+        { "answer": "Invierno" }
+      ]
+    },
+    {
+      "question": "Si todos los gatos tienen cola, y Pelusa es un gato, entonces:",
+      "explanation": "Silogismo clásico: lo que se afirma de toda la categoría se afirma de cada miembro.",
+      "hint": "Aplica la regla general al caso particular.",
+      "tags": ["lógica", "silogismos", "deducción"],
+      "answers": [
+        { "answer": "Pelusa puede no tener cola" },
+        { "answer": "Pelusa tiene cola", "isCorrect": true },
+        { "answer": "Pelusa no tiene cola" },
+        { "answer": "Pelusa es un perro" }
+      ]
+    },
+    {
+      "question": "¿Cuál número sigue: 100, 90, 80, ___?",
+      "explanation": "Se restan 10 unidades en cada paso: 80 - 10 = 70.",
+      "hint": "Cada vez baja la misma cantidad.",
+      "tags": ["razonamiento", "series numéricas", "patrones"],
+      "answers": [
+        { "answer": "75" },
+        { "answer": "70", "isCorrect": true },
+        { "answer": "60" },
+        { "answer": "78" }
+      ]
+    },
+    {
+      "question": "Si 'A o B' es verdadera y A es falsa, entonces B es:",
+      "explanation": "En la disyunción, si una parte es falsa la otra debe ser verdadera para que la total sea verdadera.",
+      "hint": "Al menos una tiene que ser cierta.",
+      "tags": ["lógica", "operadores", "proposiciones"],
+      "answers": [
+        { "answer": "Falsa" },
+        { "answer": "Verdadera", "isCorrect": true },
+        { "answer": "No se puede saber" },
+        { "answer": "A veces verdadera" }
+      ]
+    },
+    {
+      "question": "¿Qué viene después: A, C, E, ___?",
+      "explanation": "Salta una letra: A (salta B) → C (salta D) → E (salta F) → G.",
+      "hint": "Avanzas de dos en dos en el abecedario.",
+      "tags": ["razonamiento", "series alfabéticas", "patrones"],
+      "answers": [
+        { "answer": "F" },
+        { "answer": "G", "isCorrect": true },
+        { "answer": "H" },
+        { "answer": "I" }
+      ]
+    },
+    {
+      "question": "Tres amigos miden: Juan > Pedro y Pedro > Luis. ¿Quién es el más alto?",
+      "explanation": "Por orden: Juan > Pedro > Luis → Juan es el mayor.",
+      "hint": "Ordena de mayor a menor.",
+      "tags": ["lógica", "ordenamiento", "comparación"],
+      "answers": [
+        { "answer": "Pedro" },
+        { "answer": "Juan", "isCorrect": true },
+        { "answer": "Luis" },
+        { "answer": "Todos iguales" }
+      ]
+    },
+    {
+      "question": "¿Cuál afirmación es consistente con: 'Ningún estudiante llegó tarde'?",
+      "explanation": "Si ninguno llegó tarde, todos llegaron a tiempo.",
+      "hint": "Significa que todos cumplieron la hora.",
+      "tags": ["lógica", "consistencia", "cuantificadores"],
+      "answers": [
+        { "answer": "Algunos llegaron tarde" },
+        { "answer": "Todos llegaron a tiempo", "isCorrect": true },
+        { "answer": "Nadie llegó" },
+        { "answer": "Solo uno llegó tarde" }
+      ]
+    },
+    {
+      "question": "Si hace frío, me abrigo. No me abrigué. Entonces:",
+      "explanation": "Contrapositiva: si no hice la consecuencia, no se dio la causa → no hace frío.",
+      "hint": "Si la acción no ocurrió, la razón que la provoca tampoco.",
+      "tags": ["lógica", "implicación", "deducción"],
+      "answers": [
+        { "answer": "Hace frío igual" },
+        { "answer": "No hace frío", "isCorrect": true },
+        { "answer": "Hace calor seguro" },
+        { "answer": "No sé si hace frío" }
+      ]
+    },
+    {
+      "question": "¿Cuál es el número que sigue: 2, 5, 8, 11, ___?",
+      "explanation": "Se suman 3 en cada paso: 11 + 3 = 14.",
+      "hint": "La diferencia entre números es siempre la misma.",
+      "tags": ["razonamiento", "series numéricas", "patrones"],
+      "answers": [
+        { "answer": "13" },
+        { "answer": "14", "isCorrect": true },
+        { "answer": "15" },
+        { "answer": "16" }
+      ]
+    },
+    {
+      "question": "¿Cuál conjunto no coincide con los demás?",
+      "explanation": "Las demás son continentes; París es una ciudad.",
+      "hint": "Es una ciudad, no un territorio grande.",
+      "tags": ["clasificación", "geografía", "conceptos"],
+      "answers": [
+        { "answer": "Asia" },
+        { "answer": "París", "isCorrect": true },
+        { "answer": "Europa" },
+        { "answer": "América" }
+      ]
+    },
+    {
+      "question": "Si P Y Q es verdadera, entonces:",
+      "explanation": "La conjunción requiere que AMBAS sean verdaderas para ser verdadera.",
+      "hint": "Las dos condiciones deben cumplirse.",
+      "tags": ["lógica", "operadores", "proposiciones"],
+      "answers": [
+        { "answer": "Solo P es verdadera" },
+        { "answer": "Ambas P y Q son verdaderas", "isCorrect": true },
+        { "answer": "Solo Q es verdadera" },
+        { "answer": "Al menos una es verdadera" }
+      ]
+    },
+    {
+      "question": "Un lápiz cuesta más que un borrador. Una goma cuesta menos que un borrador. ¿Cuál es el más caro?",
+      "explanation": "Orden: lápiz > borrador > goma → el lápiz es el más caro.",
+      "hint": "Ordena de mayor a menor precio.",
+      "tags": ["lógica", "ordenamiento", "comparación"],
+      "answers": [
+        { "answer": "Borrador" },
+        { "answer": "Lápiz", "isCorrect": true },
+        { "answer": "Goma" },
+        { "answer": "Todos iguales" }
+      ]
+    },
+    {
+      "question": "¿Cuál afirmación contradice: 'Algunos días son lluviosos'?",
+      "explanation": "Lo contrario de 'algunos sí' es 'ninguno sí' = 'ningún día es lluvioso'.",
+      "hint": "Para contradecir, dilo en forma total negativa.",
+      "tags": ["lógica", "contradicción", "cuantificadores"],
+      "answers": [
+        { "answer": "Algunos días no son lluviosos" },
+        { "answer": "Ningún día es lluvioso", "isCorrect": true },
+        { "answer": "Todos los días son lluviosos" },
+        { "answer": "A veces llueve" }
+      ]
+    },
+    {
+      "question": "Completa: 1, 4, 9, 16, ___",
+      "explanation": "Son cuadrados perfectos: 1², 2², 3², 4² → siguiente es 5² = 25.",
+      "hint": "Cada número multiplicado por sí mismo.",
+      "tags": ["razonamiento", "series numéricas", "patrones"],
+      "answers": [
+        { "answer": "20" },
+        { "answer": "25", "isCorrect": true },
+        { "answer": "23" },
+        { "answer": "24" }
+      ]
+    },
+    {
+      "question": "Si la premisa es 'todos los médicos estudian', ¿cuál concluye correctamente?",
+      "explanation": "Si todos estudian, cualquier miembro del grupo estudia.",
+      "hint": "Aplica lo general a un caso concreto.",
+      "tags": ["lógica", "silogismos", "deducción"],
+      "answers": [
+        { "answer": "María estudia, luego es médica" },
+        { "answer": "Juan es médico, luego estudia", "isCorrect": true },
+        { "answer": "Solo los médicos estudian" },
+        { "answer": "Quien estudia será médico" }
+      ]
+    },
+    {
+      "question": "¿Cuál no es un número primo?",
+      "explanation": "El 9 se divide entre 1, 3 y 9; los demás solo entre 1 y ellos mismos.",
+      "hint": "Tiene un divisor distinto a 1 y a sí mismo.",
+      "tags": ["matemáticas", "números", "clasificación"],
+      "answers": [
+        { "answer": "3" },
+        { "answer": "9", "isCorrect": true },
+        { "answer": "5" },
+        { "answer": "7" }
+      ]
+    },
+    {
+      "question": "Si 'si llego temprano, ayudo en casa' es falso, entonces:",
+      "explanation": "La implicación P→Q es FALSA solo cuando P es verdadera y Q falsa: llegué temprano y NO ayudé.",
+      "hint": "La causa se dio pero el resultado no.",
+      "tags": ["lógica", "implicación", "verdad"],
+      "answers": [
+        { "answer": "No llegué temprano y ayudé" },
+        { "answer": "Llegué temprano y no ayudé", "isCorrect": true },
+        { "answer": "No llegué temprano y no ayudé" },
+        { "answer": "Llegué tarde y ayudé" }
+      ]
+    },
+    {
+      "question": "¿Cuál palabra no pertenece: oro, plata, cobre, vidrio?",
+      "explanation": "Vidrio no es un metal; los demás sí lo son.",
+      "hint": "Es frágil y transparente, no metálico.",
+      "tags": ["clasificación", "ciencia", "materiales"],
+      "answers": [
+        { "answer": "oro" },
+        { "answer": "vidrio", "isCorrect": true },
+        { "answer": "plata" },
+        { "answer": "cobre" }
+      ]
+    },
+    {
+      "question": "Si X es menor que Y y Y es menor o igual que Z, entonces:",
+      "explanation": "Transitividad: X < Y ≤ Z → X < Z.",
+      "hint": "La cadena de desigualdad se mantiene.",
+      "tags": ["lógica", "desigualdades", "propiedades"],
+      "answers": [
+        { "answer": "X > Z" },
+        { "answer": "X < Z", "isCorrect": true },
+        { "answer": "X = Z" },
+        { "answer": "Z ≤ X" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la negación de 'Está soleado y caluroso'?",
+      "explanation": "Ley de De Morgan: la negación de (A y B) es (no A o no B).",
+      "hint": "Basta con que falte una de las dos para que sea falso.",
+      "tags": ["lógica", "negación", "De Morgan"],
+      "answers": [
+        { "answer": "No está soleado y no está caluroso" },
+        { "answer": "No está soleado o no está caluroso", "isCorrect": true },
+        { "answer": "Está nublado y frío" },
+        { "answer": "Si está soleado, no está caluroso" }
+      ]
+    },
+    {
+      "question": "Sigue la secuencia: cuadrado, rectángulo, cuadrado, rectángulo, ___",
+      "explanation": "Patrón alterno: el quinto elemento repite el primero → cuadrado.",
+      "hint": "Se repite de dos en dos.",
+      "tags": ["razonamiento", "patrones", "secuencias"],
+      "answers": [
+        { "answer": "Triángulo" },
+        { "answer": "Cuadrado", "isCorrect": true },
+        { "answer": "Rectángulo" },
+        { "answer": "Círculo" }
+      ]
+    },
+    {
+      "question": "Todos los alumnos de esta clase aprobaron. Luisa es de otra clase. Entonces:",
+      "explanation": "La afirmación solo dice algo sobre ESTA clase; no se puede concluir nada sobre Luisa.",
+      "hint": "La regla no se extiende fuera del grupo indicado.",
+      "tags": ["lógica", "silogismos", "límites"],
+      "answers": [
+        { "answer": "Luisa aprobó seguro" },
+        { "answer": "No se puede saber si aprobó", "isCorrect": true },
+        { "answer": "Luisa reprobó" },
+        { "answer": "Luisa no estudia" }
+      ]
+    },
+    {
+      "question": "¿Cuál número sigue: 20, 10, 5, ___?",
+      "explanation": "Cada término se divide entre 2: 5 ÷ 2 = 2.5.",
+      "hint": "A la mitad en cada paso.",
+      "tags": ["razonamiento", "series numéricas", "patrones"],
+      "answers": [
+        { "answer": "0" },
+        { "answer": "2.5", "isCorrect": true },
+        { "answer": "1" },
+        { "answer": "3" }
+      ]
+    },
+    {
+      "question": "Si 'algunos deportistas son sanos', ¿cuál es verdadera?",
+      "explanation": "Si algunos A son B, entonces algunos B son A.",
+      "hint": "La relación parcial es recíproca.",
+      "tags": ["lógica", "silogismos", "conversión"],
+      "answers": [
+        { "answer": "Todos los sanos son deportistas" },
+        { "answer": "Algunos sanos son deportistas", "isCorrect": true },
+        { "answer": "Ningún sano es deportista" },
+        { "answer": "Todos los deportistas son sanos" }
+      ]
+    },
+    {
+      "question": "¿Cuál no es un planeta?",
+      "explanation": "El Sol es una estrella; los demás son planetas del sistema solar.",
+      "hint": "Brilla por sí mismo, no es un planeta.",
+      "tags": ["ciencia", "clasificación", "astronomía"],
+      "answers": [
+        { "answer": "Marte" },
+        { "answer": "Sol", "isCorrect": true },
+        { "answer": "Júpiter" },
+        { "answer": "Venus" }
+      ]
+    },
+    {
+      "question": "Si P ↔ Q (equivalencia) es verdadera y P es falsa, entonces Q es:",
+      "explanation": "Equivalencia significa que ambos tienen el mismo valor: si P es falsa, Q también lo es.",
+      "hint": "Son iguales en valor de verdad.",
+      "tags": ["lógica", "equivalencia", "proposiciones"],
+      "answers": [
+        { "answer": "Verdadera" },
+        { "answer": "Falsa", "isCorrect": true },
+        { "answer": "Indeterminada" },
+        { "answer": "A veces verdadera" }
+      ]
+    },
+    {
+      "question": "Completa: 1, 2, 4, 8, 16, ___",
+      "explanation": "Cada término se duplica: 16 × 2 = 32.",
+      "hint": "Potencia de 2.",
+      "tags": ["razonamiento", "series numéricas", "patrones"],
+      "answers": [
+        { "answer": "24" },
+        { "answer": "32", "isCorrect": true },
+        { "answer": "30" },
+        { "answer": "64" }
+      ]
+    },
+    {
+      "question": "Si nadie contestó la pregunta mal, entonces:",
+      "explanation": "Si ninguno falló, todos acertaron.",
+      "hint": "Lo opuesto a fallar es acertar.",
+      "tags": ["lógica", "cuantificadores", "negación"],
+      "answers": [
+        { "answer": "Algunos acertaron" },
+        { "answer": "Todos acertaron", "isCorrect": true },
+        { "answer": "Nadie acertó" },
+        { "answer": "Todos dejaron en blanco" }
+      ]
+    },
+    {
+      "question": "¿Cuál es la conclusión válida: si llueve, me quedo en casa; no me quedé en casa?",
+      "explanation": "Contrapositiva: si no hice la consecuencia, no se dio la causa → no llovió.",
+      "hint": "La razón que te mantiene en casa no ocurrió.",
+      "tags": ["lógica", "implicación", "deducción"],
+      "answers": [
+        { "answer": "Llovió" },
+        { "answer": "No llovió", "isCorrect": true },
+        { "answer": "Llueve pero salgo" },
+        { "answer": "No se puede saber" }
+      ]
+    },
+    {
+      "question": "¿Cuál número no sigue el patrón +5: 5, 10, 15, 21, 25?",
+      "explanation": "El patrón suma 5: 15 + 5 = 20, no 21.",
+      "hint": "Es el que rompe la cuenta.",
+      "tags": ["razonamiento", "series numéricas", "patrones"],
+      "answers": [
+        { "answer": "10" },
+        { "answer": "21", "isCorrect": true },
+        { "answer": "25" },
+        { "answer": "15" }
+      ]
+    },
+    {
+      "question": "Si algunos animales son mamíferos y todos los mamíferos respiran, entonces:",
+      "explanation": "Lo que es cierto para todo el grupo se traslada a la parte compartida: esos animales también respiran.",
+      "hint": "El subconjunto hereda la propiedad del conjunto mayor.",
+      "tags": ["lógica", "silogismos", "conjuntos"],
+      "answers": [
+        { "answer": "Todos los animales respiran" },
+        { "answer": "Esos animales respiran", "isCorrect": true },
+        { "answer": "Solo los mamíferos respiran" },
+        { "answer": "Algunos mamíferos no respiran" }
+      ]
+    },
+    {
+      "question": "¿Cuál afirmación es cierta lógicamente?",
+      "explanation": "Una tautología siempre es verdadera: o llueve o no llueve, no hay otra opción.",
+      "hint": "No puede ser falsa, cubre todas las posibilidades.",
+      "tags": ["lógica", "tautologías", "proposiciones"],
+      "answers": [
+        { "answer": "Llueve y no llueve" },
+        { "answer": "Llueve o no llueve", "isCorrect": true },
+        { "answer": "Si llueve, no llueve" },
+        { "answer": "Nunca llueve" }
+      ]
+    }
+  ]
+}

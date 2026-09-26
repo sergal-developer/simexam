@@ -1,0 +1,743 @@
+{
+  "title": "Lógica Básica",
+  "time": 150,
+  "tags": ["lógica", "básica", "razonamiento"],
+  "cardsCount": 100,
+  "cards": [
+    {
+      "question": "¿Qué es una proposición en lógica?",
+      "answer": "Una afirmación o enunciado que puede ser verdadero o falso, pero no ambas cosas a la vez.",
+      "hint": "Debe tener sentido afirmativo y un valor de certeza.",
+      "explanation": "Una proposición no es ni orden ni duda; expresa un contenido susceptible de ser verdadero o falso.",
+      "tags": ["lógica", "proposición", "conceptos"]
+    },
+    {
+      "question": "¿Cuál de las siguientes es una proposición: '¿Qué hora es?', 'La Tierra es plana', 'Abre la puerta'?",
+      "answer": "La Tierra es plana.",
+      "hint": "Busca el enunciado que puede ser verdadero o falso.",
+      "explanation": "Las preguntas y las órdenes no son proposiciones; solo la afirmación lo es.",
+      "tags": ["lógica", "proposición", "ejemplos"]
+    },
+    {
+      "question": "¿Cuáles son los dos únicos valores de verdad en la lógica clásica?",
+      "answer": "Verdadero y Falso.",
+      "hint": "Solo hay dos opciones, sin términos medios.",
+      "explanation": "La lógica clásica se basa en el principio del tercio excluso: una afirmación es verdadera o falsa, no hay otra alternativa.",
+      "tags": ["lógica", "valores-de-verdad", "principios"]
+    },
+    {
+      "question": "¿Qué es una variable proposicional?",
+      "answer": "Un símbolo (como p, q, r) que representa una proposición cualquiera.",
+      "hint": "Funciona como lugar o contenedor para un enunciado.",
+      "explanation": "Se usan letras para escribir fórmulas lógicas sin depender del contenido concreto de cada frase.",
+      "tags": ["lógica", "variable", "símbolos"]
+    },
+    {
+      "question": "¿Qué es la negación de una proposición?",
+      "answer": "Una operación que invierte su valor de verdad: si p es verdadera, no-p es falsa y viceversa.",
+      "hint": "Se suele expresar con la palabra 'no'.",
+      "explanation": "La negación cambia el sentido de la afirmación original; su valor de verdad es siempre opuesto.",
+      "tags": ["lógica", "negación", "operadores"]
+    },
+    {
+      "question": "Si la proposición p es verdadera, ¿qué valor tiene su negación ¬p?",
+      "answer": "Falso.",
+      "hint": "La negación da el valor opuesto.",
+      "explanation": "Por definición, la negación invierte el valor: si p = V, entonces ¬p = F.",
+      "tags": ["lógica", "negación", "valores-de-verdad"]
+    },
+    {
+      "question": "¿Cómo se lee 'no p' en símbolos habituales?",
+      "answer": "¬p o ~p.",
+      "hint": "Se coloca un símbolo delante de la variable.",
+      "explanation": "El símbolo ¬ es el más usado para indicar negación; otros sistemas usan ~ o una barra superior.",
+      "tags": ["lógica", "negación", "símbolos"]
+    },
+    {
+      "question": "¿Qué es la conjunción de dos proposiciones p y q?",
+      "answer": "Es verdadera solo cuando tanto p como q son verdaderas; en cualquier otro caso es falsa.",
+      "hint": "Se corresponde con la palabra 'y'.",
+      "explanation": "La conjunción exige que se cumplan las dos condiciones a la vez; basta que una falle para que sea falsa.",
+      "tags": ["lógica", "conjunción", "operadores"]
+    },
+    {
+      "question": "¿Cuándo es falsa la conjunción p ∧ q?",
+      "answer": "Cuando al menos una de las dos proposiciones es falsa.",
+      "hint": "No necesita que ambas fallen.",
+      "explanation": "Basta que p sea falsa, o que q lo sea, o ambas, para que la conjunción sea falsa.",
+      "tags": ["lógica", "conjunción", "valores-de-verdad"]
+    },
+    {
+      "question": "Si p es verdadera y q es falsa, ¿qué valor tiene p ∧ q?",
+      "answer": "Falso.",
+      "hint": "Ambas deben cumplirse para que sea verdadera.",
+      "explanation": "Como q falla, la conjunción no se cumple: V ∧ F = F.",
+      "tags": ["lógica", "conjunción", "ejercicios"]
+    },
+    {
+      "question": "¿Qué símbolo representa la conjunción?",
+      "answer": "∧.",
+      "hint": "Se parece a la letra 'A' minúscula sin barra.",
+      "explanation": "∧ une las dos proposiciones; se lee 'y'.",
+      "tags": ["lógica", "conjunción", "símbolos"]
+    },
+    {
+      "question": "¿Qué es la disyunción de dos proposiciones p y q?",
+      "answer": "Es falsa solo cuando p y q son ambas falsas; en cualquier otro caso es verdadera.",
+      "hint": "Se corresponde con la palabra 'o' en sentido inclusivo.",
+      "explanation": "Basta que se cumpla una de las dos, o ambas, para que la disyunción sea verdadera.",
+      "tags": ["lógica", "disyunción", "operadores"]
+    },
+    {
+      "question": "¿Cuándo es verdadera p ∨ q?",
+      "answer": "Cuando al menos una de las dos proposiciones es verdadera.",
+      "hint": "No necesita que ambas sean verdaderas.",
+      "explanation": "La disyunción inclusiva admite que se cumplan las dos; solo falla cuando ninguna se cumple.",
+      "tags": ["lógica", "disyunción", "valores-de-verdad"]
+    },
+    {
+      "question": "Si p es falsa y q es verdadera, ¿qué valor tiene p ∨ q?",
+      "answer": "Verdadero.",
+      "hint": "Basta con que una se cumpla.",
+      "explanation": "Como q es verdadera, la disyunción se cumple: F ∨ V = V.",
+      "tags": ["lógica", "disyunción", "ejercicios"]
+    },
+    {
+      "question": "¿Qué símbolo representa la disyunción?",
+      "answer": "∨.",
+      "hint": "Se parece a la letra 'V'.",
+      "explanation": "∨ une las proposiciones; se lee 'o' (inclusiva).",
+      "tags": ["lógica", "disyunción", "símbolos"]
+    },
+    {
+      "question": "¿Qué diferencia hay entre 'o' inclusiva y 'o' exclusiva?",
+      "answer": "La inclusiva admite que ambas sean verdaderas; la exclusiva solo lo permite cuando exactamente una lo es.",
+      "hint": "La exclusiva excluye el caso en que ambas se cumplan.",
+      "explanation": "La disyunción habitual en lógica es la inclusiva; la exclusiva se expresa aparte.",
+      "tags": ["lógica", "disyunción", "tipos"]
+    },
+    {
+      "question": "¿Qué es una implicación o condicional p → q?",
+      "answer": "Afirma que si p se cumple, entonces q también debe cumplirse.",
+      "hint": "Se lee 'si p, entonces q'.",
+      "explanation": "La implicación solo es falsa cuando la condición se cumple pero la consecuencia no.",
+      "tags": ["lógica", "implicación", "operadores"]
+    },
+    {
+      "question": "¿Cuándo es FALSA la implicación p → q?",
+      "answer": "Únicamente cuando p es verdadera y q es falsa.",
+      "hint": "La causa se cumple pero el efecto no.",
+      "explanation": "Si la premisa es cierta y la conclusión no, la promesa o regla se rompe; en los demás casos se mantiene.",
+      "tags": ["lógica", "implicación", "valores-de-verdad"]
+    },
+    {
+      "question": "En 'si llueve, entonces el suelo se moja', ¿qué es el antecedente?",
+      "answer": "Llueve.",
+      "hint": "Es la condición que va después de 'si'.",
+      "explanation": "El antecedente es la parte inicial de la implicación; el consecuente es lo que sigue.",
+      "tags": ["lógica", "implicación", "partes"]
+    },
+    {
+      "question": "En 'si estudias, aprobarás', ¿qué es el consecuente?",
+      "answer": "Aprobarás.",
+      "hint": "Es la consecuencia que va después de 'entonces'.",
+      "explanation": "El consecuente depende de que el antecedente se cumpla para que la regla se mantenga.",
+      "tags": ["lógica", "implicación", "partes"]
+    },
+    {
+      "question": "Si p es falsa, ¿qué valor tiene p → q sea cual sea q?",
+      "answer": "Siempre Verdadero.",
+      "hint": "Si la condición no se cumple, la regla no se rompe.",
+      "explanation": "La implicación no promete nada cuando la condición falla; por eso se considera verdadera por defecto.",
+      "tags": ["lógica", "implicación", "valores-de-verdad"]
+    },
+    {
+      "question": "¿Qué es la bicondicional p ↔ q?",
+      "answer": "Significa que p y q tienen el mismo valor de verdad: ambas verdaderas o ambas falsas.",
+      "hint": "Se lee 'p si y solo si q'.",
+      "explanation": "La bicondicional exige coincidencia; si difieren, es falsa.",
+      "tags": ["lógica", "bicondicional", "operadores"]
+    },
+    {
+      "question": "¿Cuándo es FALSA p ↔ q?",
+      "answer": "Cuando p y q tienen valores de verdad distintos.",
+      "hint": "Una verdadera y la otra falsa.",
+      "explanation": "La bicondicional funciona como un signo de igualdad de valores; si no coinciden, es falsa.",
+      "tags": ["lógica", "bicondicional", "valores-de-verdad"]
+    },
+    {
+      "question": "Si p es verdadera y q es verdadera, ¿qué valor tiene p ↔ q?",
+      "answer": "Verdadero.",
+      "hint": "Ambas coinciden.",
+      "explanation": "Coinciden en valor, por lo que la bicondicional se cumple.",
+      "tags": ["lógica", "bicondicional", "ejercicios"]
+    },
+    {
+      "question": "¿Qué es una tabla de verdad?",
+      "answer": "Una lista que muestra todos los posibles combinaciones de valores de verdad de las proposiciones y el resultado final.",
+      "hint": "Es como una hoja de cálculo lógica.",
+      "explanation": "Permite calcular sistemáticamente el resultado de cualquier fórmula lógica según sus partes.",
+      "tags": ["lógica", "tabla-de-verdad", "herramientas"]
+    },
+    {
+      "question": "¿Cuántas filas tiene una tabla de verdad con 2 variables?",
+      "answer": "4 filas.",
+      "hint": "Calcula 2 elevado al número de variables.",
+      "explanation": "Con n variables hay 2ⁿ combinaciones posibles; n=2 → 4 combinaciones.",
+      "tags": ["lógica", "tabla-de-verdad", "tamaño"]
+    },
+    {
+      "question": "¿Cuántas filas tiene una tabla con 3 variables?",
+      "answer": "8 filas.",
+      "hint": "2 × 2 × 2.",
+      "explanation": "2³ = 8 combinaciones posibles de verdadero y falso para tres variables.",
+      "tags": ["lógica", "tabla-de-verdad", "tamaño"]
+    },
+    {
+      "question": "¿Qué es una tautología?",
+      "answer": "Una fórmula que es siempre verdadera, cualquiera que sea el valor de sus partes.",
+      "hint": "No puede ser falsa.",
+      "explanation": "En su tabla de verdad aparece solo 'Verdadero' en la columna final.",
+      "tags": ["lógica", "tautología", "clasificación"]
+    },
+    {
+      "question": "¿Es p ∨ ¬p una tautología?",
+      "answer": "Sí.",
+      "hint": "Ocurre algo o no ocurre, no hay otra opción.",
+      "explanation": "Si p es V, V∨F=V; si p es F, F∨V=V. Siempre da verdadero.",
+      "tags": ["lógica", "tautología", "ejemplos"]
+    },
+    {
+      "question": "¿Qué es una contradicción?",
+      "answer": "Una fórmula que es siempre falsa, cualquiera que sea el valor de sus partes.",
+      "hint": "No puede ser verdadera.",
+      "explanation": "En su tabla de verdad aparece solo 'Falso' en la columna final.",
+      "tags": ["lógica", "contradicción", "clasificación"]
+    },
+    {
+      "question": "¿Es p ∧ ¬p una contradicción?",
+      "answer": "Sí.",
+      "hint": "Algo no puede ser y no ser al mismo tiempo.",
+      "explanation": "Si p es V, V∧F=F; si p es F, F∧V=F. Siempre da falso.",
+      "tags": ["lógica", "contradicción", "ejemplos"]
+    },
+    {
+      "question": "¿Qué es una fórmula contingente?",
+      "answer": "Aquella que puede ser verdadera o falsa según los valores de sus proposiciones.",
+      "hint": "No es tautología ni contradicción.",
+      "explanation": "Su tabla de verdad muestra ambos valores; su verdad depende del caso concreto.",
+      "tags": ["lógica", "contingencia", "clasificación"]
+    },
+    {
+      "question": "¿Cómo se llama la relación entre p → q y ¬q → ¬p?",
+      "answer": "Contrarecíproca o contrarrecíproca.",
+      "hint": "Ambas son lógicamente equivalentes.",
+      "explanation": "La contrarecíproca invierte y niega; tiene siempre el mismo valor que la original.",
+      "tags": ["lógica", "implicación", "equivalencias"]
+    },
+    {
+      "question": "Escribe la contrarecíproca de 'si llueve, entonces me quedo en casa'.",
+      "answer": "Si no me quedo en casa, entonces no llueve.",
+      "hint": "Niega cada parte y cambia el orden.",
+      "explanation": "Original: p→q; contrarecíproca: ¬q→¬p. Ambas valen lo mismo.",
+      "tags": ["lógica", "implicación", "ejercicios"]
+    },
+    {
+      "question": "¿Cuál es el recíproco de p → q?",
+      "answer": "q → p.",
+      "hint": "Simplemente invierte el orden.",
+      "explanation": "El recíproco no es equivalente a la original; que llueva implique mojarse no significa que mojarse implique que llueva.",
+      "tags": ["lógica", "implicación", "variantes"]
+    },
+    {
+      "question": "¿Son equivalentes p → q y q → p?",
+      "answer": "No.",
+      "hint": "El orden importa en las implicaciones.",
+      "explanation": "La original dice que p lleva a q; el recíproco dice que q lleva a p; son afirmaciones distintas.",
+      "tags": ["lógica", "implicación", "equivalencias"]
+    },
+    {
+      "question": "¿Qué significa que dos fórmulas son lógicamente equivalentes?",
+      "answer": "Que tienen exactamente la misma tabla de verdad.",
+      "hint": "Dan el mismo resultado en todos los casos.",
+      "explanation": "Si coinciden en todas las filas, se pueden sustituir la una por la otra.",
+      "tags": ["lógica", "equivalencia", "conceptos"]
+    },
+    {
+      "question": "¿A qué equivale ¬(p ∧ q)?",
+      "answer": "¬p ∨ ¬q.",
+      "hint": "Leyes de De Morgan.",
+      "explanation": "La negación de una conjunción es la disyunción de las negaciones; no se cumple todo si falta al menos uno.",
+      "tags": ["lógica", "de-morgan", "leyes"]
+    },
+    {
+      "question": "¿A qué equivale ¬(p ∨ q)?",
+      "answer": "¬p ∧ ¬q.",
+      "hint": "Otra ley de De Morgan.",
+      "explanation": "La negación de una disyunción es la conjunción de las negaciones; no se cumple nada si todo falta.",
+      "tags": ["lógica", "de-morgan", "leyes"]
+    },
+    {
+      "question": "Simplifica: ¬¬p.",
+      "answer": "p.",
+      "hint": "Negar dos veces anula la negación.",
+      "explanation": "La doble negación devuelve el valor original: si no es falso, es verdadero.",
+      "tags": ["lógica", "negación", "equivalencias"]
+    },
+    {
+      "question": "¿A qué equivale p → q en términos de disyunción?",
+      "answer": "¬p ∨ q.",
+      "hint": "Si no se cumple la condición, se cumple la consecuencia o no importa.",
+      "explanation": "La implicación se puede reescribir como 'o no p, o sí q'. Es una forma muy útil de transformar fórmulas.",
+      "tags": ["lógica", "implicación", "equivalencias"]
+    },
+    {
+      "question": "¿A qué equivale p ∧ (q ∨ r)?",
+      "answer": "(p ∧ q) ∨ (p ∧ r).",
+      "hint": "Propiedad distributiva, como en la multiplicación.",
+      "explanation": "La conjunción se distribuye sobre la disyunción: se puede sacar o meter factor común.",
+      "tags": ["lógica", "distributiva", "leyes"]
+    },
+    {
+      "question": "¿A qué equivale p ∨ (q ∧ r)?",
+      "answer": "(p ∨ q) ∧ (p ∨ r).",
+      "hint": "Distributiva de la disyunción sobre la conjunción.",
+      "explanation": "También la disyunción se distribuye; ambas propiedades existen en lógica.",
+      "tags": ["lógica", "distributiva", "leyes"]
+    },
+    {
+      "question": "¿Qué establece el principio de identidad?",
+      "answer": "Todo es igual a sí mismo; p ↔ p siempre es verdadera.",
+      "hint": "Lo que es, es.",
+      "explanation": "Es uno de los principios fundamentales del razonamiento; una afirmación coincide consigo misma.",
+      "tags": ["lógica", "principios", "identidad"]
+    },
+    {
+      "question": "¿Qué establece el principio de no contradicción?",
+      "answer": "Nada puede ser y no ser al mismo tiempo; p ∧ ¬p es siempre falsa.",
+      "hint": "Dos afirmaciones opuestas no pueden ser ambas verdaderas.",
+      "explanation": "Impide aceptar simultáneamente una proposición y su negación.",
+      "tags": ["lógica", "principios", "no-contradicción"]
+    },
+    {
+      "question": "¿Qué establece el principio del tercio excluso?",
+      "answer": "Una proposición es verdadera o es falsa; no hay término medio.",
+      "hint": "p ∨ ¬p es siempre verdadera.",
+      "explanation": "En lógica clásica no existe un tercer valor; la disyunción de una afirmación y su negación cubre todas las posibilidades.",
+      "tags": ["lógica", "principios", "tercio-excluso"]
+    },
+    {
+      "question": "¿Qué es un argumento en lógica?",
+      "answer": "Un conjunto de proposiciones donde una es la conclusión y las demás son premisas que la apoyan.",
+      "hint": "Conjunto de razones que llevan a una afirmación final.",
+      "explanation": "Las premisas se suponen ciertas; el argumento estudia si la conclusión se sigue necesariamente de ellas.",
+      "tags": ["lógica", "argumento", "conceptos"]
+    },
+    {
+      "question": "¿Cuándo es válido un argumento deductivo?",
+      "answer": "Cuando si las premisas son verdaderas, la conclusión necesariamente debe ser verdadera.",
+      "hint": "La estructura funciona, aunque el contenido sea falso.",
+      "explanation": "La validez depende de la forma, no de la verdad de los hechos; la estructura preserva la verdad.",
+      "tags": ["lógica", "validez", "argumento"]
+    },
+    {
+      "question": "¿La validez de un argumento depende de si las premisas son verdaderas?",
+      "answer": "No.",
+      "hint": "Depende de la estructura, no del contenido.",
+      "explanation": "Un argumento puede ser válido aunque sus premisas sean falsas; lo que no puede ocurrir es que sean verdaderas las premisas y falsa la conclusión.",
+      "tags": ["lógica", "validez", "conceptos"]
+    },
+    {
+      "question": "¿Qué es un argumento sólido?",
+      "answer": "Un argumento que es válido y además sus premisas son realmente verdaderas.",
+      "hint": "Validez + verdad real.",
+      "explanation": "La solidez exige dos cosas: estructura correcta y premisas ciertas en la realidad.",
+      "tags": ["lógica", "solidez", "argumento"]
+    },
+    {
+      "question": "¿Qué es el modus ponens?",
+      "answer": "Si p → q y se afirma p, entonces se concluye q.",
+      "hint": "Si la regla dice que p lleva a q, y p se cumple, q debe cumplirse.",
+      "explanation": "Es la forma más básica y segura de deducir; una de las reglas fundamentales de la lógica.",
+      "tags": ["lógica", "modus-ponens", "reglas-de-inferencia"]
+    },
+    {
+      "question": "Aplica modus ponens: 'Si llueve, no salgo. Hoy llueve.' ¿Qué se concluye?",
+      "answer": "Hoy no salgo.",
+      "hint": "Se cumple la condición, así que se cumple la consecuencia.",
+      "explanation": "p→q, p ⊢ q; llueve → no salgo; llueve; luego no salgo.",
+      "tags": ["lógica", "modus-ponens", "ejercicios"]
+    },
+    {
+      "question": "¿Qué es el modus tollens?",
+      "answer": "Si p → q y se niega q, entonces se concluye ¬p.",
+      "hint": "La consecuencia no se cumple, así que la causa tampoco.",
+      "explanation": "Es razonar por contrarecíproca: si se rompe el efecto, la causa no puede estar presente.",
+      "tags": ["lógica", "modus-tollens", "reglas-de-inferencia"]
+    },
+    {
+      "question": "Aplica modus tollens: 'Si es perro, tiene patas. Este animal no tiene patas.' ¿Qué se concluye?",
+      "answer": "Este animal no es perro.",
+      "hint": "No se cumple la consecuencia, luego no se cumple la condición.",
+      "explanation": "p→q, ¬q ⊢ ¬p; tiene la estructura válida de modus tollens.",
+      "tags": ["lógica", "modus-tollens", "ejercicios"]
+    },
+    {
+      "question": "¿Qué falacia es: 'Si llueve me mojo. Me he mojado, luego llovió'?",
+      "answer": "Afirmación del consecuente.",
+      "hint": "Que la consecuencia ocurra no obliga a que la causa sea la dada.",
+      "explanation": "Otras causas podrían explicar el mojarse; la estructura p→q, q ∴ p no es válida.",
+      "tags": ["lógica", "falacias", "consecuente"]
+    },
+    {
+      "question": "¿Qué falacia es: 'Si es rico, tiene coche. No es rico, luego no tiene coche'?",
+      "answer": "Negación del antecedente.",
+      "hint": "Falta la causa mencionada, pero puede haber otras.",
+      "explanation": "La estructura p→q, ¬p ∴ ¬q no es válida; puede tener coche por otras razones.",
+      "tags": ["lógica", "falacias", "antecedente"]
+    },
+    {
+      "question": "¿Qué es la falacia de hombre de paja?",
+      "answer": "Atacar una versión deformada o simplificada del argumento ajeno.",
+      "hint": "No refutas lo que dijo, sino algo parecido pero más débil.",
+      "explanation": "Consiste en tergiversar para facilitar la crítica; no responde al verdadero razonamiento.",
+      "tags": ["lógica", "falacias", "relevancia"]
+    },
+    {
+      "question": "¿Qué es la falacia ad hominem?",
+      "answer": "Criticar a la persona que habla en lugar de responder a sus argumentos.",
+      "hint": "Ataca al mensajero, no al mensaje.",
+      "explanation": "La validez de un razonamiento no depende de quién lo diga.",
+      "tags": ["lógica", "falacias", "relevancia"]
+    },
+    {
+      "question": "¿Qué es la falacia de falso dilema?",
+      "answer": "Presentar solo dos opciones como si fueran las únicas, cuando hay más alternativas.",
+      "hint": "O todo o nada.",
+      "explanation": "Obliga a elegir entre dos extremos ignorando puntos intermedios o posibilidades distintas.",
+      "tags": ["lógica", "falacias", "dilema"]
+    },
+    {
+      "question": "¿Qué es la falacia de pendiente resbaladiza?",
+      "answer": "Afirmar que una decisión inicial provocará una cadena de consecuencias graves sin demostrarlo.",
+      "hint": "Si das un paso, caerás por la ladera.",
+      "explanation": "Supone que un pequeño cambio desencadena efectos en cascada inevitablemente, sin pruebas.",
+      "tags": ["lógica", "falacias", "causalidad"]
+    },
+    {
+      "question": "¿Qué es la falacia de generalización apresurada?",
+      "answer": "Afirmar una regla general basándose en muy pocos casos.",
+      "hint": "De uno o dos ejemplos pasas a 'siempre'.",
+      "explanation": "La muestra es insuficiente; no hay datos suficientes para la conclusión amplia.",
+      "tags": ["lógica", "falacias", "generalización"]
+    },
+    {
+      "question": "¿Qué es la falacia de petición de principio?",
+      "answer": "Dar por cierto lo que se pretende demostrar, usándolo como premisa de sí mismo.",
+      "hint": "La conclusión ya está disfrazada entre las premisas.",
+      "explanation": "El razonamiento asume lo que tendría que probar; no avanza realmente.",
+      "tags": ["lógica", "falacias", "cicularidad"]
+    },
+    {
+      "question": "¿Qué es la falacia de causa falsa?",
+      "answer": "Suponer que porque algo ocurre después de otro, es causado por él.",
+      "hint": "Después de esto, luego por esto.",
+      "explanation": "La secuencia temporal no implica necesariamente relación de causa-efecto.",
+      "tags": ["lógica", "falacias", "causalidad"]
+    },
+    {
+      "question": "¿Qué es un silogismo categórico?",
+      "answer": "Un argumento con dos premisas y una conclusión, donde se relacionan tres términos.",
+      "hint": "Clásico: Todos los hombres son mortales; Sócrates es hombre; luego...",
+      "explanation": "Cada premisa y la conclusión comparten dos de los tres conceptos; la estructura determina su validez.",
+      "tags": ["lógica", "silogismo", "clásica"]
+    },
+    {
+      "question": "En un silogismo, ¿qué es el término medio?",
+      "answer": "El que aparece en las dos premisas pero no en la conclusión.",
+      "hint": "Es el puente entre los otros dos conceptos.",
+      "explanation": "El término medio conecta los extremos; su correcta colocación es clave para la validez.",
+      "tags": ["lógica", "silogismo", "términos"]
+    },
+    {
+      "question": "Silogismo: 'Todos los mamíferos tienen sangre caliente. La ballena es mamífero. La ballena tiene sangre caliente.' ¿Es válido?",
+      "answer": "Sí.",
+      "hint": "Se cumple la regla: lo que se afirma de toda la categoría se afirma de cada miembro.",
+      "explanation": "Estructura clásica válida: Todos M son P; S es M; luego S es P.",
+      "tags": ["lógica", "silogismo", "ejercicios"]
+    },
+    {
+      "question": "¿Es válido?: 'Todos los pájaros vuelan. El avestruz no vuela. El avestruz no es pájaro.'",
+      "answer": "Es formalmente válido, pero la primera premisa es falsa.",
+      "hint": "Validez ≠ verdad.",
+      "explanation": "La estructura es correcta, pero como la premisa inicial no coincide con la realidad, la conclusión falla.",
+      "tags": ["lógica", "silogismo", "validez"]
+    },
+    {
+      "question": "¿Qué es la lógica proposicional?",
+      "answer": "La que trata con proposiciones completas y operadores que las combinan.",
+      "hint": "No analiza el interior de cada frase, la toma como unidad.",
+      "explanation": "Las variables p, q… representan frases enteras; no se ocupa de sujetos ni predicados internos.",
+      "tags": ["lógica", "proposicional", "ámbito"]
+    },
+    {
+      "question": "¿Qué es la lógica de predicados?",
+      "answer": "La que analiza el interior de las proposiciones: sujeto, predicado, cuantificadores.",
+      "hint": "Entra en la estructura de la frase, no la trata como bloque.",
+      "explanation": "Permite expresar 'todos', 'algunos', relaciones entre objetos; es más potente que la proposicional.",
+      "tags": ["lógica", "predicados", "ámbito"]
+    },
+    {
+      "question": "¿Qué significa el cuantificador universal ∀?",
+      "answer": "Para todo / Para cada elemento.",
+      "hint": "Se refiere a todos los casos sin excepción.",
+      "explanation": "∀x P(x) significa que la propiedad P se cumple para cualquier x.",
+      "tags": ["lógica", "cuantificadores", "universal"]
+    },
+    {
+      "question": "¿Qué significa el cuantificador existencial ∃?",
+      "answer": "Existe al menos un elemento.",
+      "hint": "Basta con un caso verdadero.",
+      "explanation": "∃x P(x) significa que hay al menos un x para el cual P es verdadera.",
+      "tags": ["lógica", "cuantificadores", "existencial"]
+    },
+    {
+      "question": "¿Cómo se niega 'todo'?",
+      "answer": "Se convierte en 'existe alguno que no'.",
+      "hint": "La negación de universal es existencial negada.",
+      "explanation": "¬∀x P(x) equivale a ∃x ¬P(x). No todo brilla → hay algo que no brilla.",
+      "tags": ["lógica", "cuantificadores", "negación"]
+    },
+    {
+      "question": "¿Cómo se niega 'existe'?",
+      "answer": "Se convierte en 'para todos no' o 'ninguno'.",
+      "hint": "La negación de existencial es universal negada.",
+      "explanation": "¬∃x P(x) equivale a ∀x ¬P(x). No hay nadie aquí → todos están fuera.",
+      "tags": ["lógica", "cuantificadores", "negación"]
+    },
+    {
+      "question": "¿Es cierto que si una conjunción es verdadera, cada una de sus partes también lo es?",
+      "answer": "Sí.",
+      "hint": "Regla de eliminación de la conjunción.",
+      "explanation": "Si p ∧ q es verdadera, se deduce p y también q; ambas se cumplen por separado.",
+      "tags": ["lógica", "conjunción", "inferencia"]
+    },
+    {
+      "question": "Si sé que 'p o q' es verdadera y además sé que p es falsa, ¿qué concluyo?",
+      "answer": "Que q es verdadera.",
+      "hint": "Regla de eliminación de disyunción.",
+      "explanation": "Si al menos una debe cumplirse y la primera no, la segunda tiene que ser la verdadera.",
+      "tags": ["lógica", "disyunción", "inferencia"]
+    },
+    {
+      "question": "¿Qué es una prueba por reducción al absurdo?",
+      "answer": "Suponer lo contrario de lo que se quiere demostrar y llegar a una contradicción; por tanto, la suposición es falsa.",
+      "hint": "Si suponer la negación lleva a imposibilidad, la afirmación original debe ser cierta.",
+      "explanation": "Supongo ¬p → deduzco contradicción → concluyo p.",
+      "tags": ["lógica", "prueba", "absurdo"]
+    },
+    {
+      "question": "¿Qué es la paradoja del mentiroso?",
+      "answer": "La frase 'esta afirmación es falsa' no puede ser verdadera ni falsa sin contradicción.",
+      "hint": "Se refiere a sí misma.",
+      "explanation": "Si es verdadera, dice que es falsa; si es falsa, dice que no es falsa. Muestra límites del lenguaje.",
+      "tags": ["lógica", "paradojas", "autorreferencia"]
+    },
+    {
+      "question": "¿Qué es una paradoja?",
+      "answer": "Un razonamiento que parece correcto pero lleva a una contradicción o resultado inesperado.",
+      "hint": "No siempre es un error; a veces revela límites de nuestras reglas.",
+      "explanation": "Surge cuando se aplican las reglas y se obtiene algo que choca con la intuición o con la consistencia.",
+      "tags": ["lógica", "paradojas", "conceptos"]
+    },
+    {
+      "question": "¿La lógica estudia cómo la gente piensa de hecho o cómo debería razonar?",
+      "answer": "Cómo debería razonar: es normativa, no descriptiva.",
+      "hint": "Es una ciencia de la validez, no de la psicología.",
+      "explanation": "La lógica establece reglas para razonar bien; la psicología estudia cómo se piensa realmente.",
+      "tags": ["lógica", "conceptos", "ámbito"]
+    },
+    {
+      "question": "¿Qué diferencia hay entre deducción e inducción?",
+      "answer": "La deducción saca conclusiones necesarias; la inducción generaliza a partir de casos, con probabilidad.",
+      "hint": "Deducción: de lo general a lo particular. Inducción: de lo particular a lo general.",
+      "explanation": "La deducción preserva la verdad con certeza; la inducción aporta probabilidad pero no garantía absoluta.",
+      "tags": ["lógica", "deducción", "inducción"]
+    },
+    {
+      "question": "¿El siguiente razonamiento es deductivo o inductivo?: 'Todos los metales conocidos se dilatan con calor, luego todos los metales se dilatan.'",
+      "answer": "Inductivo.",
+      "hint": "Va de casos observados a regla general.",
+      "explanation": "Se extiende a todos los metales aunque no se han examinado todos; la conclusión es probable, no segura.",
+      "tags": ["lógica", "inducción", "ejemplos"]
+    },
+    {
+      "question": "¿Es posible que un argumento inductivo sea válido en sentido lógico estricto?",
+      "answer": "No, porque la conclusión siempre va más allá que las premisas.",
+      "hint": "La inducción añade información nueva que no está contenida en las premisas.",
+      "explanation": "La validez deductiva exige que la conclusión esté implícita; la inducción no cumple eso, pero es esencial en la ciencia.",
+      "tags": ["lógica", "inducción", "límites"]
+    },
+    {
+      "question": "¿Qué es la analogía como forma de razonamiento?",
+      "answer": "Concluir que algo tiene una propiedad porque se parece a otra cosa que la tiene.",
+      "hint": "A es como B en esto, así que también en aquello.",
+      "explanation": "Es débil como prueba lógica, pero útil para explicar o sugerir hipótesis.",
+      "tags": ["lógica", "analogía", "razonamiento"]
+    },
+    {
+      "question": "¿A qué equivale lógicamente 'p si y solo si q'?",
+      "answer": "(p → q) ∧ (q → p).",
+      "hint": "Ambas implicaciones a la vez.",
+      "explanation": "La bicondicional exige que la condición sea necesaria y suficiente: si p entonces q y si q entonces p.",
+      "tags": ["lógica", "bicondicional", "equivalencias"]
+    },
+    {
+      "question": "¿Qué significa que una condición es suficiente?",
+      "answer": "Que si se cumple, garantiza el resultado, aunque puede haber otras formas de conseguirlo.",
+      "hint": "Basta con esto, pero no es lo único.",
+      "explanation": "Ser cuadrado es suficiente para tener cuatro lados, pero no es necesario: un rombo también los tiene.",
+      "tags": ["lógica", "condiciones", "suficiente"]
+    },
+    {
+      "question": "¿Qué significa que una condición es necesaria?",
+      "answer": "Que sin ella el resultado no puede darse, aunque sola no garantiza que se dé.",
+      "hint": "Esto es imprescindible, pero puede no bastar.",
+      "explanation": "Tener gasolina es necesario para que arranque el coche, pero no basta: también necesita batería, etc.",
+      "tags": ["lógica", "condiciones", "necesaria"]
+    },
+    {
+      "question": "En 'para aprobar es necesario estudiar', ¿estudiar es condición necesaria o suficiente?",
+      "answer": "Necesaria.",
+      "hint": "Sin estudiar no se aprueba, pero estudiando no se asegura aprobar.",
+      "explanation": "Lo que es necesario aparece en la parte 'solo si': apruebo → estudio.",
+      "tags": ["lógica", "condiciones", "ejercicios"]
+    },
+    {
+      "question": "En 'si pagas entras', ¿pagar es condición necesaria, suficiente, ambas o ninguna?",
+      "answer": "Suficiente.",
+      "hint": "Pagando entras, pero puede entrar por invitación también.",
+      "explanation": "Pagar garantiza la entrada, pero no es la única vía; por tanto es suficiente pero no necesaria.",
+      "tags": ["lógica", "condiciones", "ejercicios"]
+    },
+    {
+      "question": "¿Cómo se expresa 'p es condición necesaria de q' en lenguaje de flecha?",
+      "answer": "q → p.",
+      "hint": "Si se cumple lo necesario, se sigue lo que lo requiere.",
+      "explanation": "Que p sea necesario para q significa que si q es verdadera, p debe serlo también.",
+      "tags": ["lógica", "condiciones", "símbolos"]
+    },
+    {
+      "question": "¿Cómo se expresa 'p es condición suficiente de q' en flechas?",
+      "answer": "p → q.",
+      "hint": "Basta p para que se dé q.",
+      "explanation": "Que p baste significa que su verdad arrastra la de q.",
+      "tags": ["lógica", "condiciones", "símbolos"]
+    },
+    {
+      "question": "¿Qué es la lógica trivalente?",
+      "answer": "Una lógica no clásica que admite tres valores: verdadero, falso y un tercero (por ejemplo, indeterminado).",
+      "hint": "No se cumple el principio del tercio excluso.",
+      "explanation": "Se usa para razonar sobre cosas que no están definidas o cambian; amplía la clásica pero no la invalida en su ámbito.",
+      "tags": ["lógica", "no-clásica", "trivalente"]
+    },
+    {
+      "question": "¿En qué se diferencia la lógica difusa de la clásica?",
+      "answer": "La difusa admite grados de verdad entre 0 y 1; la clásica solo 0 o 1.",
+      "hint": "No todo es blanco o negro, hay matices.",
+      "explanation": "Permite modelar conceptos imprecisos como 'alto', 'caluroso', que no tienen límites nítidos.",
+      "tags": ["lógica", "difusa", "valores-de-verdad"]
+    },
+    {
+      "question": "¿Qué es la lógica modal?",
+      "answer": "La que añade operadores de posibilidad y necesidad.",
+      "hint": "Trata sobre lo que puede ser y lo que debe ser.",
+      "explanation": "Escribe □p (necesariamente p) y ◇p (posiblemente p); estudia razonamientos sobre lo contingente y lo obligatorio.",
+      "tags": ["lógica", "modal", "ámbito"]
+    },
+    {
+      "question": "¿Es posible que un argumento sea válido y tenga todas las premisas verdaderas y la conclusión falsa?",
+      "answer": "No, por definición de validez.",
+      "hint": "Si las premisas son ciertas, la conclusión debe serlo.",
+      "explanation": "La validez garantiza que eso no puede ocurrir; si ocurriera, el argumento sería inválido.",
+      "tags": ["lógica", "validez", "propiedades"]
+    },
+    {
+      "question": "¿Es posible que un argumento inválido tenga todas las premisas y la conclusión verdaderas?",
+      "answer": "Sí, puede ocurrir por casualidad.",
+      "hint": "La verdad de las partes no prueba que la estructura funcione.",
+      "explanation": "La coincidencia de valores no significa que la conclusión se siga lógicamente; puede ser suerte.",
+      "tags": ["lógica", "validez", "propiedades"]
+    },
+    {
+      "question": "¿Qué es la consistencia de un conjunto de proposiciones?",
+      "answer": "Que no se contradicen entre sí; es posible que todas sean verdaderas a la vez.",
+      "hint": "Cabe que sean ciertas juntas.",
+      "explanation": "Si de ellas se deduce una contradicción, el conjunto es inconsistente y no puede ser verdadero en ningún caso.",
+      "tags": ["lógica", "consistencia", "conceptos"]
+    },
+    {
+      "question": "¿Un conjunto que contiene una contradicción es consistente?",
+      "answer": "No, es inconsistente.",
+      "hint": "Algo que no puede ser verdadero rompe la coherencia.",
+      "explanation": "Basta una contradicción interna para que el conjunto sea imposible.",
+      "tags": ["lógica", "consistencia", "contradicción"]
+    },
+    {
+      "question": "¿Cuál es la mejor forma de comprobar si dos fórmulas son equivalentes?",
+      "answer": "Comparar sus tablas de verdad; si coinciden en todas las filas, son equivalentes.",
+      "hint": "Calcular ambos resultados y ver si son iguales.",
+      "explanation": "La tabla de verdad es el método mecánico infalible para comparar fórmulas en lógica proposicional.",
+      "tags": ["lógica", "equivalencia", "métodos"]
+    },
+    {
+      "question": "¿Qué demuestra una tabla de verdad donde la última columna es todo 'verdadero'?",
+      "answer": "Que la fórmula es una tautología.",
+      "hint": "No importa qué valores tomen las variables, siempre sale bien.",
+      "explanation": "La fórmula es cierta por su propia estructura, sin necesidad de mirar el mundo.",
+      "tags": ["lógica", "tautología", "reconocimiento"]
+    },
+    {
+      "question": "¿Qué demuestra que la negación de una fórmula es una tautología?",
+      "answer": "Que la fórmula original es una contradicción.",
+      "hint": "Si la negación siempre es cierta, la original nunca lo es.",
+      "explanation": "¬F es tautología ↔ F es contradicción.",
+      "tags": ["lógica", "contradicción", "reconocimiento"]
+    },
+    {
+      "question": "¿Qué es la simetría en una relación lógica?",
+      "answer": "Si se cumple de A a B, también se cumple de B a A.",
+      "hint": "Ambos lados valen igual.",
+      "explanation": "'Ser hermano de' es simétrica; 'ser mayor que' no lo es.",
+      "tags": ["lógica", "relaciones", "propiedades"]
+    },
+    {
+      "question": "¿Qué es la transitividad en una relación lógica?",
+      "answer": "Si se cumple de A a B y de B a C, se cumple de A a C.",
+      "hint": "Se extiende por el medio.",
+      "explanation": "Igualdad y 'mayor que' son transitivas; 'ser amigo de' puede no serlo.",
+      "tags": ["lógica", "relaciones", "propiedades"]
+    },
+    {
+      "question": "¿Qué es la reflexividad en una relación lógica?",
+      "answer": "Cada elemento se relaciona consigo mismo.",
+      "hint": "Vale para sí mismo.",
+      "explanation": "Igualdad es reflexiva; 'ser padre de' no lo es.",
+      "tags": ["lógica", "relaciones", "propiedades"]
+    },
+    {
+      "question": "¿Cómo se llama una relación que es reflexiva, simétrica y transitiva?",
+      "answer": "Relación de equivalencia.",
+      "hint": "Agrupa elementos que se comportan como iguales.",
+      "explanation": "Genera clases donde todos los miembros son equivalentes entre sí.",
+      "tags": ["lógica", "relaciones", "equivalencia"]
+    },
+    {
+      "question": "¿Por qué es útil la lógica en la vida cotidiana?",
+      "answer": "Ayuda a distinguir razones buenas de malas, a detectar falacias y a pensar con claridad.",
+      "hint": "Es una herramienta de defensa intelectual.",
+      "explanation": "No garantiza la verdad, pero enseña a exigir coherencia y a no dejarse engañar por apariencias.",
+      "tags": ["lógica", "utilidad", "cotidiano"]
+    }
+  ]
+}

@@ -1,4 +1,12 @@
 <div class="_animation_state">
+    <div class="all-screen-section">
+        <section-dinamic design="glass">
+            <div class="arrage centers paddings-relation">
+                <h3>{{ 'list_exam' | translate }}</h3>
+            </div>
+        </section-dinamic>
+    </div>
+
     <header [mode]="'text'" [title]="titleQuizSelection"></header>
     <div class="root-container quiz-form">
         <section-dinamic design="">
@@ -28,6 +36,17 @@
                 <div class="item">
                     <lu-icon [icon]="luIcon.directions"></lu-icon>
                     <div>Maze</div>
+                </div>
+
+            </div>
+        </section-dinamic>
+
+        <section-dinamic design="">
+
+            <div class="arrage columns">
+                <h4>Available Quiz</h4>
+                <div class="item" *ngFor="let item of listFilesAvailable">
+                    <div>{{ item.name }}</div>
                 </div>
 
             </div>

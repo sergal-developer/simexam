@@ -1,0 +1,1688 @@
+{
+    "title": "Cultura general de los años 2010 a 2026",
+    "time": 25,
+    "tags": [
+        "español",
+        "cultura general",
+        "2010-2026"
+    ],
+    "questionsCount": 50,
+    "questions": [
+        {
+            "question": "¿Qué país ganó la Copa Mundial de la FIFA celebrada en Sudáfrica en 2010?",
+            "explanation": "España derrotó a Países Bajos por 1-0 en la final y consiguió su primer título mundial de fútbol.",
+            "hint": "Fue la primera Copa Mundial ganada por este país.",
+            "tags": [
+                "español",
+                "deportes",
+                "futbol"
+            ],
+            "answers": [
+                {
+                    "answer": "España",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Alemania"
+                },
+                {
+                    "answer": "Brasil"
+                },
+                {
+                    "answer": "Argentina"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué red social lanzó oficialmente su plataforma de fotografías en 2010 y posteriormente se convirtió en una de las aplicaciones más populares para compartir imágenes?",
+            "explanation": "Instagram fue lanzada en 2010 y se especializó inicialmente en compartir fotografías desde dispositivos móviles.",
+            "hint": "Su nombre comienza con la letra I.",
+            "tags": [
+                "español",
+                "tecnologia",
+                "redes sociales"
+            ],
+            "answers": [
+                {
+                    "answer": "Instagram",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "LinkedIn"
+                },
+                {
+                    "answer": "WhatsApp"
+                },
+                {
+                    "answer": "Telegram"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué cantante lanzó el álbum '21' en 2011, que incluyó canciones como 'Rolling in the Deep' y 'Someone Like You'?",
+            "explanation": "Adele lanzó '21' en 2011 y el álbum se convirtió en uno de los trabajos musicales más exitosos de la década.",
+            "hint": "La cantante es británica y su nombre artístico tiene cuatro letras.",
+            "tags": [
+                "español",
+                "musica",
+                "cultura"
+            ],
+            "answers": [
+                {
+                    "answer": "Adele",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Rihanna"
+                },
+                {
+                    "answer": "Beyoncé"
+                },
+                {
+                    "answer": "Katy Perry"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué empresa lanzó el servicio de streaming Disney+ en 2019?",
+            "explanation": "The Walt Disney Company lanzó Disney+ en noviembre de 2019 como su principal plataforma de streaming.",
+            "hint": "La compañía también es propietaria de Pixar, Marvel y Lucasfilm.",
+            "tags": [
+                "español",
+                "entretenimiento",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "The Walt Disney Company",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Warner Bros."
+                },
+                {
+                    "answer": "Sony Pictures"
+                },
+                {
+                    "answer": "Paramount Global"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál fue el nombre del movimiento social iniciado en 2011 que ocupó espacios públicos para protestar contra la desigualdad económica y social?",
+            "explanation": "Occupy Wall Street comenzó en 2011 en Nueva York y dio lugar al movimiento Occupy, conocido por su crítica a la desigualdad económica.",
+            "hint": "Su nombre hace referencia a un importante distrito financiero de Nueva York.",
+            "tags": [
+                "español",
+                "historia",
+                "sociedad"
+            ],
+            "answers": [
+                {
+                    "answer": "Occupy Wall Street",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Primavera Árabe"
+                },
+                {
+                    "answer": "Black Lives Matter"
+                },
+                {
+                    "answer": "Me Too"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué videojuego de construcción y exploración creado por Mojang se convirtió en uno de los títulos más vendidos de la historia durante la década de 2010?",
+            "explanation": "Minecraft, desarrollado originalmente por Markus Persson y posteriormente adquirido por Microsoft junto con Mojang, se convirtió en un fenómeno mundial.",
+            "hint": "El juego utiliza principalmente bloques para construir estructuras.",
+            "tags": [
+                "español",
+                "videojuegos",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "Minecraft",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Fortnite"
+                },
+                {
+                    "answer": "Overwatch"
+                },
+                {
+                    "answer": "Among Us"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país fue sede de los Juegos Olímpicos de verano de 2012?",
+            "explanation": "Los Juegos Olímpicos de 2012 se celebraron principalmente en Londres, Reino Unido.",
+            "hint": "La ciudad sede también fue anfitriona en 1908 y 1948.",
+            "tags": [
+                "español",
+                "deportes",
+                "olimpiadas"
+            ],
+            "answers": [
+                {
+                    "answer": "Reino Unido",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Brasil"
+                },
+                {
+                    "answer": "China"
+                },
+                {
+                    "answer": "Japón"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fenómeno astronómico fue ampliamente asociado con una supuesta predicción del fin del mundo para diciembre de 2012?",
+            "explanation": "La interpretación popular de ciertos calendarios mayas llevó a especulaciones sobre el fin del mundo el 21 de diciembre de 2012, aunque no existía una predicción maya de un apocalipsis.",
+            "hint": "Está relacionado con un antiguo sistema de calendarios de Mesoamérica.",
+            "tags": [
+                "español",
+                "historia",
+                "astronomia"
+            ],
+            "answers": [
+                {
+                    "answer": "El final de un ciclo del calendario maya",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "El impacto de un asteroide confirmado"
+                },
+                {
+                    "answer": "Una inversión de los polos terrestres"
+                },
+                {
+                    "answer": "Una tormenta solar anunciada por la NASA"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué película de 2013 dirigida por Alfonso Cuarón está ambientada principalmente en el espacio y tiene como protagonista a la astronauta Ryan Stone?",
+            "explanation": "Gravity, dirigida por Alfonso Cuarón y protagonizada por Sandra Bullock y George Clooney, se estrenó en 2013.",
+            "hint": "El título en español hace referencia a una fuerza física fundamental.",
+            "tags": [
+                "español",
+                "cine",
+                "cultura"
+            ],
+            "answers": [
+                {
+                    "answer": "Gravity",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Interstellar"
+                },
+                {
+                    "answer": "The Martian"
+                },
+                {
+                    "answer": "Arrival"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué aplicación de mensajería fue adquirida por Facebook en 2014 por aproximadamente 19 mil millones de dólares?",
+            "explanation": "Facebook, actualmente Meta, anunció en 2014 la adquisición de WhatsApp por una operación valorada aproximadamente en 19 mil millones de dólares.",
+            "hint": "Es una aplicación cuyo icono tradicionalmente utiliza un teléfono dentro de un globo de diálogo.",
+            "tags": [
+                "español",
+                "tecnologia",
+                "empresas"
+            ],
+            "answers": [
+                {
+                    "answer": "WhatsApp",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Snapchat"
+                },
+                {
+                    "answer": "Skype"
+                },
+                {
+                    "answer": "Telegram"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país ganó la Copa Mundial de la FIFA de 2014 celebrada en Brasil?",
+            "explanation": "Alemania ganó el torneo tras derrotar a Argentina por 1-0 en la final disputada en el estadio Maracaná.",
+            "hint": "El gol de la final fue marcado por Mario Götze.",
+            "tags": [
+                "español",
+                "deportes",
+                "futbol"
+            ],
+            "answers": [
+                {
+                    "answer": "Alemania",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Argentina"
+                },
+                {
+                    "answer": "Brasil"
+                },
+                {
+                    "answer": "Países Bajos"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué actriz interpretó a Katniss Everdeen en la saga cinematográfica 'Los juegos del hambre'?",
+            "explanation": "Jennifer Lawrence interpretó a Katniss Everdeen en las cuatro películas principales de la saga.",
+            "hint": "También protagonizó la película 'Silver Linings Playbook'.",
+            "tags": [
+                "español",
+                "cine",
+                "actores"
+            ],
+            "answers": [
+                {
+                    "answer": "Jennifer Lawrence",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Emma Stone"
+                },
+                {
+                    "answer": "Scarlett Johansson"
+                },
+                {
+                    "answer": "Natalie Portman"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué plataforma de streaming estrenó la serie 'House of Cards' como una de sus primeras grandes producciones originales?",
+            "explanation": "Netflix estrenó 'House of Cards' en 2013, contribuyendo al crecimiento de las producciones originales para plataformas de streaming.",
+            "hint": "Su nombre está asociado con el alquiler y transmisión de películas y series.",
+            "tags": [
+                "español",
+                "television",
+                "streaming"
+            ],
+            "answers": [
+                {
+                    "answer": "Netflix",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Hulu"
+                },
+                {
+                    "answer": "Spotify"
+                },
+                {
+                    "answer": "Twitch"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué movimiento social contra el acoso y la violencia sexual adquirió gran repercusión internacional a partir de 2017?",
+            "explanation": "El movimiento Me Too, escrito también #MeToo, adquirió una enorme repercusión internacional en 2017 al visibilizar experiencias de acoso y abuso sexual.",
+            "hint": "Su nombre está formado por dos palabras en inglés que significan 'yo también'.",
+            "tags": [
+                "español",
+                "sociedad",
+                "historia"
+            ],
+            "answers": [
+                {
+                    "answer": "#MeToo",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Occupy"
+                },
+                {
+                    "answer": "Extinction Rebellion"
+                },
+                {
+                    "answer": "Anonymous"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué selección ganó la Eurocopa de fútbol de 2016?",
+            "explanation": "Portugal ganó la Eurocopa 2016 al derrotar a Francia por 1-0 en la final, con un gol de Éder en tiempo extra.",
+            "hint": "Cristiano Ronaldo fue capitán de esta selección.",
+            "tags": [
+                "español",
+                "deportes",
+                "futbol"
+            ],
+            "answers": [
+                {
+                    "answer": "Portugal",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Francia"
+                },
+                {
+                    "answer": "Alemania"
+                },
+                {
+                    "answer": "España"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué consola híbrida entre portátil y sobremesa lanzó Nintendo en 2017?",
+            "explanation": "Nintendo Switch fue lanzada en 2017 y puede utilizarse como consola portátil o conectarse a un televisor mediante su base.",
+            "hint": "Su nombre en inglés significa 'interruptor' o 'cambio'.",
+            "tags": [
+                "español",
+                "videojuegos",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "Nintendo Switch",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Wii U"
+                },
+                {
+                    "answer": "PlayStation Vita"
+                },
+                {
+                    "answer": "Nintendo 3DS"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué película surcoreana ganó el Óscar a Mejor Película en 2020?",
+            "explanation": "Parasite, dirigida por Bong Joon-ho, se convirtió en la primera película en un idioma distinto del inglés en ganar el Óscar a Mejor Película.",
+            "hint": "Su título original es 'Gisaengchung'.",
+            "tags": [
+                "español",
+                "cine",
+                "premios"
+            ],
+            "answers": [
+                {
+                    "answer": "Parasite",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Roma"
+                },
+                {
+                    "answer": "1917"
+                },
+                {
+                    "answer": "Joker"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fenómeno musical global popularizó especialmente el grupo surcoreano BTS durante la segunda mitad de la década de 2010?",
+            "explanation": "BTS fue uno de los principales exponentes de la expansión internacional del K-pop durante la década de 2010.",
+            "hint": "El género procede de Corea del Sur.",
+            "tags": [
+                "español",
+                "musica",
+                "kpop"
+            ],
+            "answers": [
+                {
+                    "answer": "K-pop",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Britpop"
+                },
+                {
+                    "answer": "Reguetón"
+                },
+                {
+                    "answer": "Grunge"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país fue sede de los Juegos Olímpicos de verano de 2016?",
+            "explanation": "Los Juegos Olímpicos de 2016 se celebraron en Río de Janeiro, Brasil.",
+            "hint": "Fue la primera edición de los Juegos Olímpicos celebrada en Sudamérica.",
+            "tags": [
+                "español",
+                "deportes",
+                "olimpiadas"
+            ],
+            "answers": [
+                {
+                    "answer": "Brasil",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Argentina"
+                },
+                {
+                    "answer": "México"
+                },
+                {
+                    "answer": "Chile"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fenómeno viral de 2016 utilizó la realidad aumentada para permitir a los jugadores capturar criaturas virtuales en ubicaciones del mundo real?",
+            "explanation": "Pokémon GO, desarrollado por Niantic en colaboración con The Pokémon Company y Nintendo, utilizó geolocalización y realidad aumentada.",
+            "hint": "El juego pertenece a una franquicia japonesa de criaturas coleccionables.",
+            "tags": [
+                "español",
+                "videojuegos",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "Pokémon GO",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Candy Crush Saga"
+                },
+                {
+                    "answer": "Clash Royale"
+                },
+                {
+                    "answer": "Fortnite"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué movimiento climático juvenil comenzó a ganar notoriedad internacional en 2018 a partir de las protestas escolares de Greta Thunberg?",
+            "explanation": "Fridays for Future es un movimiento internacional de huelgas y protestas climáticas iniciado por acciones escolares de Greta Thunberg.",
+            "hint": "Su nombre en inglés significa 'Viernes por el Futuro'.",
+            "tags": [
+                "español",
+                "sociedad",
+                "medio ambiente"
+            ],
+            "answers": [
+                {
+                    "answer": "Fridays for Future",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Occupy"
+                },
+                {
+                    "answer": "Me Too"
+                },
+                {
+                    "answer": "Black Lives Matter"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué selección ganó la Copa Mundial de la FIFA celebrada en Rusia en 2018?",
+            "explanation": "Francia ganó el Mundial de 2018 al derrotar a Croacia por 4-2 en la final.",
+            "hint": "Fue su segundo título mundial.",
+            "tags": [
+                "español",
+                "deportes",
+                "futbol"
+            ],
+            "answers": [
+                {
+                    "answer": "Francia",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Croacia"
+                },
+                {
+                    "answer": "Bélgica"
+                },
+                {
+                    "answer": "Inglaterra"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué compañía espacial privada lanzó en 2018 un automóvil Tesla Roadster al espacio durante el vuelo de prueba de su cohete Falcon Heavy?",
+            "explanation": "SpaceX lanzó un Tesla Roadster como carga simbólica durante el primer vuelo del Falcon Heavy en febrero de 2018.",
+            "hint": "La empresa fue fundada por Elon Musk.",
+            "tags": [
+                "español",
+                "espacio",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "SpaceX",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Blue Origin"
+                },
+                {
+                    "answer": "NASA"
+                },
+                {
+                    "answer": "Boeing"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué cantante puertorriqueño lanzó el álbum 'Un Verano Sin Ti' en 2022?",
+            "explanation": "Bad Bunny lanzó 'Un Verano Sin Ti' en mayo de 2022 y el álbum tuvo una enorme repercusión internacional.",
+            "hint": "Es uno de los principales artistas del reguetón y la música urbana latina.",
+            "tags": [
+                "español",
+                "musica",
+                "latinoamerica"
+            ],
+            "answers": [
+                {
+                    "answer": "Bad Bunny",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "J Balvin"
+                },
+                {
+                    "answer": "Maluma"
+                },
+                {
+                    "answer": "Daddy Yankee"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué evento sanitario mundial fue declarado pandemia por la Organización Mundial de la Salud en marzo de 2020?",
+            "explanation": "La OMS caracterizó la propagación de COVID-19 como pandemia el 11 de marzo de 2020.",
+            "hint": "La enfermedad está causada por el virus SARS-CoV-2.",
+            "tags": [
+                "español",
+                "salud",
+                "historia"
+            ],
+            "answers": [
+                {
+                    "answer": "COVID-19",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Ébola"
+                },
+                {
+                    "answer": "SARS"
+                },
+                {
+                    "answer": "Gripe aviar H5N1"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué aplicación de videollamadas experimentó un enorme aumento de uso durante la pandemia de COVID-19 y se convirtió en una herramienta habitual para reuniones virtuales?",
+            "explanation": "Zoom se popularizó ampliamente durante la pandemia como plataforma para videoconferencias educativas, laborales y sociales.",
+            "hint": "Su nombre es una palabra inglesa relacionada con acercar una imagen.",
+            "tags": [
+                "español",
+                "tecnologia",
+                "pandemia"
+            ],
+            "answers": [
+                {
+                    "answer": "Zoom",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Spotify"
+                },
+                {
+                    "answer": "Pinterest"
+                },
+                {
+                    "answer": "Shazam"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué película de 2021 protagonizada por Zendaya, Timothée Chalamet y Rebecca Ferguson está basada en la novela de Frank Herbert?",
+            "explanation": "Dune, dirigida por Denis Villeneuve, es una adaptación de la primera parte de la novela de ciencia ficción de Frank Herbert.",
+            "hint": "Su historia transcurre principalmente en el planeta desértico Arrakis.",
+            "tags": [
+                "español",
+                "cine",
+                "ciencia ficcion"
+            ],
+            "answers": [
+                {
+                    "answer": "Dune",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Tenet"
+                },
+                {
+                    "answer": "Avatar"
+                },
+                {
+                    "answer": "Blade Runner 2049"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país se convirtió en 2022 en el primero de América Latina en legalizar la producción, venta y consumo recreativo de cannabis a nivel nacional?",
+            "explanation": "Uruguay estableció un sistema nacional de regulación del cannabis recreativo mediante una ley aprobada en 2013, cuya implementación comenzó posteriormente.",
+            "hint": "Es un país sudamericano ubicado entre Argentina y Brasil.",
+            "tags": [
+                "español",
+                "sociedad",
+                "latinoamerica"
+            ],
+            "answers": [
+                {
+                    "answer": "Uruguay",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "México"
+                },
+                {
+                    "answer": "Chile"
+                },
+                {
+                    "answer": "Colombia"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué empresa cambió su nombre corporativo de Facebook, Inc. a Meta Platforms, Inc. en 2021?",
+            "explanation": "En octubre de 2021, Facebook anunció el cambio de nombre corporativo a Meta Platforms, reflejando su enfoque estratégico hacia el metaverso.",
+            "hint": "La empresa también es propietaria de Instagram y WhatsApp.",
+            "tags": [
+                "español",
+                "tecnologia",
+                "empresas"
+            ],
+            "answers": [
+                {
+                    "answer": "Facebook",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Twitter"
+                },
+                {
+                    "answer": "Snapchat"
+                },
+                {
+                    "answer": "TikTok"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué aplicación de videos cortos, propiedad de ByteDance, se convirtió en una de las redes sociales más populares a nivel mundial durante la década de 2020?",
+            "explanation": "TikTok, propiedad de la empresa china ByteDance, alcanzó una enorme popularidad internacional gracias a sus videos cortos y su sistema de recomendación.",
+            "hint": "Su nombre comienza con la palabra inglesa que representa un sonido de reloj.",
+            "tags": [
+                "español",
+                "redes sociales",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "TikTok",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Reddit"
+                },
+                {
+                    "answer": "Discord"
+                },
+                {
+                    "answer": "LinkedIn"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país ganó la Copa Mundial de la FIFA de 2022 celebrada en Catar?",
+            "explanation": "Argentina ganó el Mundial de 2022 al derrotar a Francia en una final que terminó 3-3 y se decidió en penales.",
+            "hint": "Lionel Messi fue capitán de la selección campeona.",
+            "tags": [
+                "español",
+                "deportes",
+                "futbol"
+            ],
+            "answers": [
+                {
+                    "answer": "Argentina",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Francia"
+                },
+                {
+                    "answer": "Brasil"
+                },
+                {
+                    "answer": "Marruecos"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué empresa desarrolló el modelo de inteligencia artificial generativa ChatGPT, presentado públicamente en 2022?",
+            "explanation": "OpenAI presentó ChatGPT en noviembre de 2022 como una interfaz conversacional basada inicialmente en modelos de la familia GPT.",
+            "hint": "Su nombre contiene la palabra inglesa 'Open'.",
+            "tags": [
+                "español",
+                "inteligencia artificial",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "OpenAI",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "NVIDIA"
+                },
+                {
+                    "answer": "Intel"
+                },
+                {
+                    "answer": "Adobe"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué película de 2023 protagonizada por Margot Robbie y Ryan Gosling se convirtió en uno de los mayores fenómenos cinematográficos del año?",
+            "explanation": "Barbie, dirigida por Greta Gerwig, se estrenó en 2023 y tuvo un gran impacto comercial y cultural.",
+            "hint": "La protagonista está basada en una famosa muñeca de Mattel.",
+            "tags": [
+                "español",
+                "cine",
+                "cultura"
+            ],
+            "answers": [
+                {
+                    "answer": "Barbie",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Oppenheimer"
+                },
+                {
+                    "answer": "Wonka"
+                },
+                {
+                    "answer": "Poor Things"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué película de Christopher Nolan estrenada en 2023 cuenta la historia del científico J. Robert Oppenheimer y el desarrollo de la bomba atómica?",
+            "explanation": "Oppenheimer, dirigida por Christopher Nolan, narra la vida del físico J. Robert Oppenheimer y su papel en el Proyecto Manhattan.",
+            "hint": "El título es el apellido del protagonista histórico.",
+            "tags": [
+                "español",
+                "cine",
+                "historia"
+            ],
+            "answers": [
+                {
+                    "answer": "Oppenheimer",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Dunkirk"
+                },
+                {
+                    "answer": "Tenet"
+                },
+                {
+                    "answer": "Interstellar"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué artista ganó el Grammy al Álbum del Año en 2024 con 'Midnights'?",
+            "explanation": "Taylor Swift ganó el Grammy al Álbum del Año en 2024 por 'Midnights', convirtiéndose en la primera artista en obtener cuatro premios en esa categoría.",
+            "hint": "La artista estadounidense también publicó los álbumes '1989' y 'Folklore'.",
+            "tags": [
+                "español",
+                "musica",
+                "premios"
+            ],
+            "answers": [
+                {
+                    "answer": "Taylor Swift",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Billie Eilish"
+                },
+                {
+                    "answer": "Olivia Rodrigo"
+                },
+                {
+                    "answer": "Dua Lipa"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país fue sede de los Juegos Olímpicos de verano celebrados en 2024?",
+            "explanation": "Los Juegos Olímpicos de 2024 se celebraron principalmente en París, Francia.",
+            "hint": "La ceremonia de apertura se realizó sobre el río Sena.",
+            "tags": [
+                "español",
+                "deportes",
+                "olimpiadas"
+            ],
+            "answers": [
+                {
+                    "answer": "Francia",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Italia"
+                },
+                {
+                    "answer": "España"
+                },
+                {
+                    "answer": "Alemania"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué selección ganó la Eurocopa de fútbol disputada en Alemania en 2024?",
+            "explanation": "España ganó la Eurocopa 2024 al derrotar a Inglaterra por 2-1 en la final disputada en Berlín.",
+            "hint": "Con este triunfo, la selección obtuvo su cuarto Campeonato de Europa masculino.",
+            "tags": [
+                "español",
+                "deportes",
+                "futbol"
+            ],
+            "answers": [
+                {
+                    "answer": "España",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Inglaterra"
+                },
+                {
+                    "answer": "Francia"
+                },
+                {
+                    "answer": "Alemania"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué videojuego lanzado en 2017 popularizó enormemente el género battle royale y fue desarrollado por Epic Games?",
+            "explanation": "Fortnite fue desarrollado por Epic Games y su modo Battle Royale se convirtió en un fenómeno mundial a partir de 2017.",
+            "hint": "Su nombre combina las palabras inglesas relacionadas con 'quincena' y 'noche'.",
+            "tags": [
+                "español",
+                "videojuegos",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "Fortnite",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "PUBG"
+                },
+                {
+                    "answer": "Apex Legends"
+                },
+                {
+                    "answer": "Valorant"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué servicio de música en streaming fue fundado en Suecia y se lanzó en 2008, convirtiéndose en una plataforma musical de referencia durante los años 2010?",
+            "explanation": "Spotify fue fundado por Daniel Ek y Martin Lorentzon en Suecia y se expandió internacionalmente durante la década de 2010.",
+            "hint": "Su logotipo tradicional utiliza un círculo verde.",
+            "tags": [
+                "español",
+                "musica",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "Spotify",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Deezer"
+                },
+                {
+                    "answer": "SoundCloud"
+                },
+                {
+                    "answer": "Pandora"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué saga cinematográfica del Universo Cinematográfico de Marvel concluyó su primera gran etapa con 'Avengers: Endgame' en 2019?",
+            "explanation": "Avengers: Endgame cerró la denominada Saga del Infinito del Universo Cinematográfico de Marvel.",
+            "hint": "La película reúne a numerosos superhéroes de Marvel para enfrentarse a Thanos.",
+            "tags": [
+                "español",
+                "cine",
+                "marvel"
+            ],
+            "answers": [
+                {
+                    "answer": "Saga del Infinito",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Saga del Multiverso"
+                },
+                {
+                    "answer": "Saga Cósmica"
+                },
+                {
+                    "answer": "Saga de Wakanda"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué actor interpretó al villano Joker en la película de 2019 dirigida por Todd Phillips?",
+            "explanation": "Joaquin Phoenix interpretó a Arthur Fleck, quien se transforma en el personaje conocido como Joker.",
+            "hint": "El actor ganó el Óscar al Mejor Actor por este papel.",
+            "tags": [
+                "español",
+                "cine",
+                "actores"
+            ],
+            "answers": [
+                {
+                    "answer": "Joaquin Phoenix",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Heath Ledger"
+                },
+                {
+                    "answer": "Jared Leto"
+                },
+                {
+                    "answer": "Christian Bale"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué empresa tecnológica presentó el iPhone X en 2017 con reconocimiento facial Face ID?",
+            "explanation": "Apple presentó el iPhone X en septiembre de 2017, incorporando Face ID como sistema biométrico basado en reconocimiento facial.",
+            "hint": "La compañía tiene como logotipo una manzana mordida.",
+            "tags": [
+                "español",
+                "tecnologia",
+                "telefonia"
+            ],
+            "answers": [
+                {
+                    "answer": "Apple",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Samsung"
+                },
+                {
+                    "answer": "Google"
+                },
+                {
+                    "answer": "Huawei"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fenómeno natural ocurrido en México en 2017 produjo fuertes daños y tuvo una magnitud de 7.1?",
+            "explanation": "El 19 de septiembre de 2017 ocurrió un terremoto de magnitud 7.1 con epicentro cerca de Axochiapan, Morelos, que afectó gravemente a varias zonas del centro de México.",
+            "hint": "Ocurrió exactamente 32 años después del gran terremoto de 1985.",
+            "tags": [
+                "español",
+                "mexico",
+                "historia"
+            ],
+            "answers": [
+                {
+                    "answer": "Terremoto de Puebla de 2017",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Terremoto de Haití de 2010"
+                },
+                {
+                    "answer": "Terremoto de Chile de 2010"
+                },
+                {
+                    "answer": "Terremoto de Nepal de 2015"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país fue el primero en enviar una misión espacial que logró posar un vehículo en la cara oculta de la Luna en 2019?",
+            "explanation": "China logró el primer aterrizaje suave en la cara oculta de la Luna con la misión Chang'e 4 en enero de 2019.",
+            "hint": "El programa espacial del país utiliza nombres relacionados con una diosa lunar de la mitología china.",
+            "tags": [
+                "español",
+                "espacio",
+                "ciencia"
+            ],
+            "answers": [
+                {
+                    "answer": "China",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Estados Unidos"
+                },
+                {
+                    "answer": "Rusia"
+                },
+                {
+                    "answer": "India"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué telescopio espacial fue lanzado en diciembre de 2021 y está diseñado para estudiar las primeras galaxias del universo?",
+            "explanation": "El telescopio espacial James Webb fue lanzado en diciembre de 2021 y está diseñado para observar principalmente en el infrarrojo.",
+            "hint": "Su nombre corresponde al apellido de un antiguo administrador de la NASA.",
+            "tags": [
+                "español",
+                "astronomia",
+                "ciencia"
+            ],
+            "answers": [
+                {
+                    "answer": "Telescopio espacial James Webb",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Telescopio Hubble"
+                },
+                {
+                    "answer": "Telescopio Kepler"
+                },
+                {
+                    "answer": "Telescopio Spitzer"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país se convirtió en 2019 en el primero en aterrizar una misión en la cara oculta de la Luna?",
+            "explanation": "La misión china Chang'e 4 realizó el primer aterrizaje suave en la cara oculta de la Luna en enero de 2019.",
+            "hint": "Es el país más poblado de Asia y cuenta con un programa espacial propio.",
+            "tags": [
+                "español",
+                "espacio",
+                "historia"
+            ],
+            "answers": [
+                {
+                    "answer": "China",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "India"
+                },
+                {
+                    "answer": "Japón"
+                },
+                {
+                    "answer": "Estados Unidos"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué artista colombiana protagonizó junto con Bizarrap la sesión musical 'BZRP Music Sessions #53', lanzada en 2023?",
+            "explanation": "Shakira colaboró con el productor argentino Bizarrap en la BZRP Music Sessions #53, publicada en enero de 2023.",
+            "hint": "Es una cantante colombiana conocida por canciones como 'Hips Don't Lie' y 'Waka Waka'.",
+            "tags": [
+                "español",
+                "musica",
+                "latinoamerica"
+            ],
+            "answers": [
+                {
+                    "answer": "Shakira",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Karol G"
+                },
+                {
+                    "answer": "Rosalía"
+                },
+                {
+                    "answer": "Becky G"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué empresa desarrolladora lanzó el videojuego 'The Last of Us Part II' en 2020?",
+            "explanation": "Naughty Dog desarrolló The Last of Us Part II, publicado por Sony Interactive Entertainment en 2020.",
+            "hint": "El estudio también desarrolló la saga Uncharted.",
+            "tags": [
+                "español",
+                "videojuegos",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "Naughty Dog",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Rockstar Games"
+                },
+                {
+                    "answer": "Valve"
+                },
+                {
+                    "answer": "Ubisoft"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué serie surcoreana estrenada mundialmente por Netflix en 2021 se convirtió en un fenómeno internacional y gira alrededor de juegos infantiles con consecuencias mortales?",
+            "explanation": "El juego del calamar, creada por Hwang Dong-hyuk, fue estrenada por Netflix en 2021 y se convirtió en un fenómeno global.",
+            "hint": "Su título original en inglés contiene las palabras 'Squid' y 'Game'.",
+            "tags": [
+                "español",
+                "television",
+                "streaming"
+            ],
+            "answers": [
+                {
+                    "answer": "El juego del calamar",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Dark"
+                },
+                {
+                    "answer": "La casa de papel"
+                },
+                {
+                    "answer": "Stranger Things"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país ganó la Copa América de fútbol disputada en 2024?",
+            "explanation": "Argentina ganó la Copa América 2024 al derrotar a Colombia por 1-0 en la final celebrada en Miami.",
+            "hint": "La selección campeona también ganó el Mundial de 2022.",
+            "tags": [
+                "español",
+                "deportes",
+                "futbol"
+            ],
+            "answers": [
+                {
+                    "answer": "Argentina",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Colombia"
+                },
+                {
+                    "answer": "Brasil"
+                },
+                {
+                    "answer": "Uruguay"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué compañía desarrolló el sistema operativo Android y fue adquirida por Google en 2005, convirtiéndose Android en uno de los sistemas móviles dominantes durante los años 2010?",
+            "explanation": "Google adquirió Android Inc. en 2005 y posteriormente desarrolló Android como un sistema operativo móvil ampliamente utilizado.",
+            "hint": "Su nombre está asociado con el buscador web más utilizado del mundo.",
+            "tags": [
+                "español",
+                "tecnologia",
+                "telefonia"
+            ],
+            "answers": [
+                {
+                    "answer": "Google",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Microsoft"
+                },
+                {
+                    "answer": "Apple"
+                },
+                {
+                    "answer": "IBM"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué cantante estadounidense lanzó 'Blinding Lights', una de las canciones más exitosas de la década de 2020?",
+            "explanation": "The Weeknd lanzó 'Blinding Lights' como parte de su álbum 'After Hours', publicado en 2020.",
+            "hint": "Su nombre artístico comienza con las palabras 'The'.",
+            "tags": [
+                "español",
+                "musica",
+                "cultura"
+            ],
+            "answers": [
+                {
+                    "answer": "The Weeknd",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Bruno Mars"
+                },
+                {
+                    "answer": "Ed Sheeran"
+                },
+                {
+                    "answer": "Post Malone"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país fue sede de la Copa Mundial de la FIFA de 2018?",
+            "explanation": "Rusia organizó la Copa Mundial de la FIFA de 2018, torneo ganado por Francia.",
+            "hint": "Es el país más extenso del mundo por superficie.",
+            "tags": [
+                "español",
+                "deportes",
+                "futbol"
+            ],
+            "answers": [
+                {
+                    "answer": "Rusia",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Qatar"
+                },
+                {
+                    "answer": "Brasil"
+                },
+                {
+                    "answer": "Sudáfrica"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué tecnología permite registrar transacciones digitales mediante una red distribuida y está asociada originalmente con Bitcoin?",
+            "explanation": "La cadena de bloques o blockchain es una tecnología de registro distribuido utilizada por Bitcoin para mantener un historial de transacciones.",
+            "hint": "El término en inglés combina las palabras 'block' y 'chain'.",
+            "tags": [
+                "español",
+                "tecnologia",
+                "criptomonedas"
+            ],
+            "answers": [
+                {
+                    "answer": "Blockchain",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Bluetooth"
+                },
+                {
+                    "answer": "Streaming"
+                },
+                {
+                    "answer": "Cloud computing"
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál fue la primera criptomoneda descentralizada ampliamente conocida y creada bajo el seudónimo Satoshi Nakamoto?",
+            "explanation": "Bitcoin fue introducido en 2009 bajo el seudónimo Satoshi Nakamoto y se convirtió en la criptomoneda más conocida durante la década de 2010.",
+            "hint": "Su nombre combina una palabra inglesa relacionada con una unidad monetaria y otra relacionada con información informática.",
+            "tags": [
+                "español",
+                "tecnologia",
+                "criptomonedas"
+            ],
+            "answers": [
+                {
+                    "answer": "Bitcoin",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Ethereum"
+                },
+                {
+                    "answer": "Litecoin"
+                },
+                {
+                    "answer": "Dogecoin"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué película mexicana dirigida por Alfonso Cuarón fue estrenada en 2018 y recibió el Óscar a Mejor Película Internacional?",
+            "explanation": "Roma, dirigida por Alfonso Cuarón, ganó el Óscar a Mejor Película en Lengua Extranjera, categoría actualmente denominada Mejor Película Internacional.",
+            "hint": "La historia está ambientada en la Ciudad de México y toma su nombre de una colonia de la ciudad.",
+            "tags": [
+                "español",
+                "cine",
+                "mexico"
+            ],
+            "answers": [
+                {
+                    "answer": "Roma",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Amores perros"
+                },
+                {
+                    "answer": "Ya no estoy aquí"
+                },
+                {
+                    "answer": "Nuevo orden"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué fenómeno meteorológico se caracteriza por un calentamiento anómalo de las aguas superficiales del océano Pacífico ecuatorial y puede alterar el clima mundial?",
+            "explanation": "El fenómeno de El Niño consiste en un calentamiento periódico de las aguas superficiales del Pacífico ecuatorial central y oriental y puede modificar patrones climáticos.",
+            "hint": "Su nombre hace referencia a una expresión tradicional utilizada por pescadores de Perú y Ecuador.",
+            "tags": [
+                "español",
+                "ciencia",
+                "medio ambiente"
+            ],
+            "answers": [
+                {
+                    "answer": "El Niño",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "La Niña"
+                },
+                {
+                    "answer": "El monzón"
+                },
+                {
+                    "answer": "El vórtice polar"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué organización internacional adoptó en 2015 el Acuerdo de París sobre cambio climático?",
+            "explanation": "El Acuerdo de París fue adoptado en 2015 durante la Conferencia de las Partes de la Convención Marco de las Naciones Unidas sobre el Cambio Climático.",
+            "hint": "Es una organización internacional cuya sede principal está en Nueva York.",
+            "tags": [
+                "español",
+                "medio ambiente",
+                "organizaciones"
+            ],
+            "answers": [
+                {
+                    "answer": "Organización de las Naciones Unidas",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Organización Mundial del Comercio"
+                },
+                {
+                    "answer": "Organización Mundial de la Salud"
+                },
+                {
+                    "answer": "OTAN"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país fue sede de la Copa Mundial de la FIFA de 2022?",
+            "explanation": "Catar fue el país anfitrión de la Copa Mundial de la FIFA 2022, la primera edición del torneo celebrada en Oriente Medio.",
+            "hint": "Es un pequeño Estado situado en una península del golfo Pérsico.",
+            "tags": [
+                "español",
+                "deportes",
+                "futbol"
+            ],
+            "answers": [
+                {
+                    "answer": "Catar",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Emiratos Árabes Unidos"
+                },
+                {
+                    "answer": "Arabia Saudita"
+                },
+                {
+                    "answer": "Jordania"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué artista canadiense lanzó el álbum 'Justice' en 2021, que incluye la canción 'Peaches'?",
+            "explanation": "Justin Bieber lanzó el álbum 'Justice' en 2021 y 'Peaches' fue uno de sus sencillos principales.",
+            "hint": "El cantante alcanzó fama internacional desde su adolescencia.",
+            "tags": [
+                "español",
+                "musica",
+                "cultura"
+            ],
+            "answers": [
+                {
+                    "answer": "Justin Bieber",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Shawn Mendes"
+                },
+                {
+                    "answer": "Drake"
+                },
+                {
+                    "answer": "The Weeknd"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué programa de inteligencia artificial de DeepMind logró en 2020 un avance importante en la predicción de estructuras tridimensionales de proteínas?",
+            "explanation": "AlphaFold, desarrollado por DeepMind, alcanzó resultados revolucionarios en la predicción de estructuras de proteínas, especialmente a través de AlphaFold2.",
+            "hint": "Su nombre comienza con la letra griega alfa y contiene una palabra relacionada con plegamiento.",
+            "tags": [
+                "español",
+                "inteligencia artificial",
+                "ciencia"
+            ],
+            "answers": [
+                {
+                    "answer": "AlphaFold",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "AlphaGo"
+                },
+                {
+                    "answer": "Watson"
+                },
+                {
+                    "answer": "Siri"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué juego de deducción social se hizo viral en 2020, a pesar de haber sido lanzado originalmente en 2018?",
+            "explanation": "Among Us fue lanzado en 2018 por InnerSloth, pero alcanzó una enorme popularidad mundial durante 2020.",
+            "hint": "Los jugadores deben identificar a los impostores dentro de una tripulación.",
+            "tags": [
+                "español",
+                "videojuegos",
+                "cultura digital"
+            ],
+            "answers": [
+                {
+                    "answer": "Among Us",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Fall Guys"
+                },
+                {
+                    "answer": "Valorant"
+                },
+                {
+                    "answer": "Rocket League"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué artista ganó el Óscar a Mejor Canción Original en 2023 por 'Naatu Naatu', canción de la película india 'RRR'?",
+            "explanation": "La canción 'Naatu Naatu', compuesta por M. M. Keeravani con letra de Chandrabose, ganó el Óscar a Mejor Canción Original en 2023.",
+            "hint": "Es una canción de una película india cuyo título está formado por tres letras repetidas.",
+            "tags": [
+                "español",
+                "cine",
+                "musica",
+                "premios"
+            ],
+            "answers": [
+                {
+                    "answer": "M. M. Keeravani",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "A. R. Rahman"
+                },
+                {
+                    "answer": "Anirudh Ravichander"
+                },
+                {
+                    "answer": "Amit Trivedi"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué consola de videojuegos de Sony fue lanzada en 2020 como sucesora de PlayStation 4?",
+            "explanation": "PlayStation 5 fue lanzada en noviembre de 2020 como la sucesora de PlayStation 4.",
+            "hint": "Su nombre combina la marca PlayStation con el número cinco.",
+            "tags": [
+                "español",
+                "videojuegos",
+                "tecnologia"
+            ],
+            "answers": [
+                {
+                    "answer": "PlayStation 5",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Xbox Series X"
+                },
+                {
+                    "answer": "Nintendo Switch"
+                },
+                {
+                    "answer": "PlayStation 4 Pro"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué país se convirtió en 2023 en el primero en aprobar una vacuna contra el dengue para uso generalizado después de décadas de investigación y diferentes vacunas?",
+            "explanation": "En 2023, varios países ampliaron la utilización de vacunas contra el dengue; Japón, por ejemplo, ya había aprobado Qdenga anteriormente. La pregunta se refiere a una situación que requiere distinguir entre aprobación y uso generalizado.",
+            "hint": "La pregunta requiere diferenciar entre una aprobación regulatoria y la implementación de una vacuna.",
+            "tags": [
+                "español",
+                "ciencia",
+                "salud"
+            ],
+            "answers": [
+                {
+                    "answer": "Japón",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Canadá"
+                },
+                {
+                    "answer": "Australia"
+                },
+                {
+                    "answer": "Alemania"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué misión espacial de la NASA logró que el rover Perseverance aterrizara en Marte en febrero de 2021?",
+            "explanation": "La misión Mars 2020 de la NASA llevó al rover Perseverance y al helicóptero Ingenuity a Marte, aterrizando en el cráter Jezero en febrero de 2021.",
+            "hint": "El nombre de la misión contiene el nombre del planeta y el año 2020.",
+            "tags": [
+                "español",
+                "espacio",
+                "ciencia"
+            ],
+            "answers": [
+                {
+                    "answer": "Mars 2020",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Apollo 11"
+                },
+                {
+                    "answer": "Artemis I"
+                },
+                {
+                    "answer": "Voyager 1"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué competición internacional de fútbol femenino ganó España en 2023 por primera vez en su historia?",
+            "explanation": "España ganó la Copa Mundial Femenina de la FIFA 2023 al derrotar a Inglaterra por 1-0 en la final.",
+            "hint": "La final se disputó en Australia y Nueva Zelanda.",
+            "tags": [
+                "español",
+                "deportes",
+                "futbol femenino"
+            ],
+            "answers": [
+                {
+                    "answer": "Copa Mundial Femenina de la FIFA",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Eurocopa Femenina"
+                },
+                {
+                    "answer": "Copa América Femenina"
+                },
+                {
+                    "answer": "Liga de Naciones Femenina"
+                }
+            ]
+        }
+    ]
+}

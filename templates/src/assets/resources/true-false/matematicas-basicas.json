@@ -1,0 +1,1839 @@
+{
+    "title": "Matemáticas Básicas — Verdadero o Falso",
+    "time": 120,
+    "tags": [
+        "español",
+        "matemáticas",
+        "básicas",
+        "verdadero_falso"
+    ],
+    "questionsCount": 100,
+    "questions": [
+        {
+            "question": "El número cero es un número entero.",
+            "explanation": "Cero pertenece al conjunto de los números enteros, que incluye a los números naturales, sus opuestos y el cero.",
+            "hint": "¿El cero tiene parte decimal?",
+            "tags": [
+                "números",
+                "enteros",
+                "básico"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El producto de dos números negativos es siempre positivo.",
+            "explanation": "La regla de signos establece que multiplicar dos cantidades con el mismo signo da resultado positivo.",
+            "hint": "Recuerda la regla: menos por menos es...",
+            "tags": [
+                "operaciones",
+                "signos",
+                "multiplicación"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 1 es un número primo.",
+            "explanation": "Un número primo tiene exactamente dos divisores distintos; el 1 solo tiene un divisor, por lo que no es primo.",
+            "hint": "¿Cuántos divisores tiene el 1?",
+            "tags": [
+                "números",
+                "primos",
+                "definición"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Todo número natural es también un número entero.",
+            "explanation": "El conjunto de los enteros incluye a todos los naturales más el cero y los negativos.",
+            "hint": "Los naturales son 1, 2, 3... ¿Están dentro de los enteros?",
+            "tags": [
+                "conjuntos",
+                "números",
+                "naturales",
+                "enteros"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La suma de dos números pares siempre da un número par.",
+            "explanation": "Un número par es múltiplo de 2; la suma de dos múltiplos de 2 es otro múltiplo de 2.",
+            "hint": "Prueba con ejemplos: 2+4, 6+8...",
+            "tags": [
+                "números",
+                "pares",
+                "suma"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número -5 es mayor que -2.",
+            "explanation": "En la recta numérica, los números más a la derecha son mayores; -2 está a la derecha de -5.",
+            "hint": "Cuanto más negativo, menor es el número.",
+            "tags": [
+                "orden",
+                "enteros",
+                "negativos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Cualquier número multiplicado por cero da como resultado cero.",
+            "explanation": "La propiedad del elemento nulo de la multiplicación establece que a × 0 = 0 para cualquier valor de a.",
+            "hint": "¿Cuánto es 7 × 0?",
+            "tags": [
+                "multiplicación",
+                "propiedades",
+                "cero"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La división entre cero tiene como resultado el número cero.",
+            "explanation": "Dividir por cero no está definido en matemáticas; no existe un número que multiplicado por cero dé el dividendo.",
+            "hint": "¿Puedes repartir algo entre cero personas?",
+            "tags": [
+                "división",
+                "cero",
+                "indefinido"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Un número es divisible por 5 si termina en 0 o en 5.",
+            "explanation": "Criterio de divisibilidad: todos los múltiplos de 5 tienen como última cifra 0 o 5.",
+            "hint": "Mira la última cifra de 10, 15, 20...",
+            "tags": [
+                "divisibilidad",
+                "criterios",
+                "5"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 0,5 es igual a la fracción un medio (1/2).",
+            "explanation": "1 dividido entre 2 da 0,5; ambas expresiones representan el mismo valor.",
+            "hint": "Convierte 1/2 a decimal dividiendo 1 entre 2.",
+            "tags": [
+                "fracciones",
+                "decimales",
+                "equivalencia"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El cuadrado de 3 es igual a 6.",
+            "explanation": "El cuadrado de un número es multiplicarlo por sí mismo: 3² = 3 × 3 = 9.",
+            "hint": "Cuadrado = número × número.",
+            "tags": [
+                "potencias",
+                "cuadrados",
+                "operaciones"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "La raíz cuadrada de 16 es 4.",
+            "explanation": "4 multiplicado por sí mismo da 16, por lo que √16 = 4.",
+            "hint": "¿Qué número multiplicado por sí mismo da 16?",
+            "tags": [
+                "raíces",
+                "cuadradas",
+                "operaciones"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "Las fracciones 2/4 y 1/2 no son equivalentes.",
+            "explanation": "Sí lo son: simplificando 2/4 dividiendo numerador y denominador entre 2 obtenemos 1/2.",
+            "hint": "Simplifica la primera fracción.",
+            "tags": [
+                "fracciones",
+                "equivalencia",
+                "simplificación"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El número -3 es mayor que -1.",
+            "explanation": "En la recta numérica, -1 está más cerca del cero, por lo que -1 > -3.",
+            "hint": "Cuanto más a la derecha, mayor es el número.",
+            "tags": [
+                "orden",
+                "negativos",
+                "comparación"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Todo número múltiplo de 6 es también múltiplo de 2 y de 3.",
+            "explanation": "Como 6 = 2 × 3, todo múltiplo de 6 tiene a 2 y a 3 como factores.",
+            "hint": "Descompón el 6 en factores primos.",
+            "tags": [
+                "múltiplos",
+                "divisibilidad",
+                "6"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La suma de dos números impares es siempre impar.",
+            "explanation": "La suma de dos impares da un número par: ejemplo 1 + 3 = 4.",
+            "hint": "Prueba con 3 + 5, ¿el resultado es par o impar?",
+            "tags": [
+                "números",
+                "impares",
+                "suma"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El número 7 es un número primo.",
+            "explanation": "Solo es divisible entre 1 y él mismo, por lo que cumple la definición de primo.",
+            "hint": "¿Tiene algún divisor distinto de 1 y de 7?",
+            "tags": [
+                "números",
+                "primos",
+                "7"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El 12 es un divisor de 4.",
+            "explanation": "Un divisor debe ser menor o igual que el número; 4 sí divide a 12, pero no al revés.",
+            "hint": "¿12 cabe exactamente un número entero de veces en 4?",
+            "tags": [
+                "divisores",
+                "múltiplos",
+                "relación"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El valor de la expresión 5 + 3 × 2 es 11.",
+            "explanation": "Primero se multiplica: 3 × 2 = 6; luego se suma: 5 + 6 = 11 (regla de prioridad).",
+            "hint": "Las multiplicaciones van antes que las sumas.",
+            "tags": [
+                "operaciones",
+                "prioridad",
+                "orden"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "Un tercio es mayor que un medio.",
+            "explanation": "Al comparar fracciones con igual numerador, gana la de menor denominador: 1/2 > 1/3.",
+            "hint": "¿Es más grande un trozo de pastel partido en 2 o en 3?",
+            "tags": [
+                "fracciones",
+                "comparación",
+                "orden"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El cero es un número positivo.",
+            "explanation": "El cero es neutro; no es ni positivo ni negativo.",
+            "hint": "¿Está a la derecha o a la izquierda de sí mismo en la recta?",
+            "tags": [
+                "números",
+                "signo",
+                "cero"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Cualquier número elevado a la potencia cero es igual a 1.",
+            "explanation": "Propiedad: a⁰ = 1 para cualquier a distinto de cero.",
+            "hint": "Ejemplo: 5⁰ = 1",
+            "tags": [
+                "potencias",
+                "exponente_cero",
+                "propiedades"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La fracción 3/5 es mayor que 4/5.",
+            "explanation": "Con denominador común, gana el mayor numerador: 4/5 > 3/5.",
+            "hint": "Compara los numeradores cuando los denominadores son iguales.",
+            "tags": [
+                "fracciones",
+                "comparación",
+                "orden"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El producto de un número par y uno impar es siempre par.",
+            "explanation": "Al tener un factor par, el resultado es múltiplo de 2, por tanto par.",
+            "hint": "Ejemplo: 2 × 3 = 6 (par)",
+            "tags": [
+                "números",
+                "pares",
+                "impares",
+                "multiplicación"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 999 es mayor que 1000.",
+            "explanation": "1000 tiene 4 cifras y 999 solo 3; por tanto 1000 es mayor.",
+            "hint": "Cuenta las cifras de cada número.",
+            "tags": [
+                "comparación",
+                "números",
+                "cifras"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "La suma de dos números negativos da siempre un número negativo.",
+            "explanation": "Al sumar cantidades del mismo signo, se suma el valor absoluto y se mantiene el signo.",
+            "hint": "Ejemplo: (-2) + (-3) = -5",
+            "tags": [
+                "suma",
+                "negativos",
+                "signos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La raíz cuadrada de 25 es 5 y también -5.",
+            "explanation": "Al elevar al cuadrado ambos, 5² = 25 y (-5)² = 25; aunque la raíz principal es positiva, ambas son soluciones.",
+            "hint": "¿Qué número por sí mismo da 25?",
+            "tags": [
+                "raíces",
+                "cuadradas",
+                "soluciones"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 18 es divisible por 4.",
+            "explanation": "18 ÷ 4 = 4,5, no es un número entero, así que no es divisible.",
+            "hint": "¿La división da resto cero?",
+            "tags": [
+                "divisibilidad",
+                "4",
+                "cociente"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Un medio más un medio es igual a uno entero.",
+            "explanation": "1/2 + 1/2 = 2/2 = 1.",
+            "hint": "Dos mitades forman un todo.",
+            "tags": [
+                "fracciones",
+                "suma",
+                "unidad"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El 0 es mayor que cualquier número negativo.",
+            "explanation": "En la recta numérica, el cero está a la derecha de todos los negativos.",
+            "hint": "¿Dónde están los negativos respecto al cero?",
+            "tags": [
+                "orden",
+                "cero",
+                "negativos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "5² es igual a 5 × 2.",
+            "explanation": "5² = 5 × 5 = 25; 5 × 2 = 10, no son iguales.",
+            "hint": "El exponente indica cuántas veces se multiplica la base.",
+            "tags": [
+                "potencias",
+                "cuadrados",
+                "error_común"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El número 1 es divisor de todos los enteros.",
+            "explanation": "Cualquier número entre 1 da el mismo número con resto cero.",
+            "hint": "¿Todo número se puede dividir entre 1?",
+            "tags": [
+                "divisores",
+                "unidad",
+                "propiedad"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La expresión 8 ÷ 2 × 2 es igual a 2.",
+            "explanation": "Se opera de izquierda a derecha: 8 ÷ 2 = 4; luego 4 × 2 = 8.",
+            "hint": "Multiplicación y división tienen la misma prioridad.",
+            "tags": [
+                "operaciones",
+                "prioridad",
+                "izquierda_derecha"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Un número que termina en cifra par es múltiplo de 2.",
+            "explanation": "Criterio de divisibilidad por 2: basta con que la última cifra sea par.",
+            "hint": "Mira la última cifra: 0,2,4,6 u 8 → múltiplo de 2.",
+            "tags": [
+                "divisibilidad",
+                "2",
+                "criterios"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La fracción 7/3 es menor que 1.",
+            "explanation": "El numerador es mayor que el denominador → fracción impropia > 1.",
+            "hint": "¿El número de arriba es mayor que el de abajo?",
+            "tags": [
+                "fracciones",
+                "propias_impropias",
+                "comparación"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El producto de dos números impares es impar.",
+            "explanation": "Impar × Impar = Impar; ejemplo: 3 × 5 = 15.",
+            "hint": "Prueba multiplicar 7 × 9.",
+            "tags": [
+                "números",
+                "impares",
+                "multiplicación"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 0,09 es mayor que 0,1.",
+            "explanation": "0,1 = 0,10; comparando: 0,10 > 0,09.",
+            "hint": "Iguala el número de cifras decimales para comparar.",
+            "tags": [
+                "decimales",
+                "comparación",
+                "orden"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Todo número primo es impar.",
+            "explanation": "El 2 es primo y es par; por tanto la afirmación no es cierta.",
+            "hint": "¿Hay un número primo que sea par?",
+            "tags": [
+                "números",
+                "primos",
+                "pares",
+                "excepción"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El doble de un número n es n + n.",
+            "explanation": "Multiplicar por 2 equivale a sumar el número consigo mismo.",
+            "hint": "Doble = dos veces el número.",
+            "tags": [
+                "operaciones",
+                "doble",
+                "definición"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La suma de un número y su opuesto da como resultado 0.",
+            "explanation": "Propiedad del inverso aditivo: a + (-a) = 0.",
+            "hint": "Ejemplo: 5 + (-5) = ?",
+            "tags": [
+                "suma",
+                "inverso",
+                "propiedades"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 10 elevado a la potencia 3 es igual a 100.",
+            "explanation": "10³ = 10 × 10 × 10 = 1000.",
+            "hint": "¿Cuántos ceros lleva?",
+            "tags": [
+                "potencias",
+                "base_10",
+                "decenas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Tres cuartos equivalen a 0,75.",
+            "explanation": "3 ÷ 4 = 0,75.",
+            "hint": "Divide 3 entre 4.",
+            "tags": [
+                "fracciones",
+                "decimales",
+                "conversión"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 15 tiene solo dos divisores.",
+            "explanation": "Sus divisores son 1, 3, 5 y 15 → tiene cuatro.",
+            "hint": "¿Qué números dividen exactamente a 15?",
+            "tags": [
+                "divisores",
+                "números",
+                "compuestos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Si un número es múltiplo de 3, la suma de sus cifras es múltiplo de 3.",
+            "explanation": "Criterio de divisibilidad por 3: la suma de cifras debe ser múltiplo de 3.",
+            "hint": "Ejemplo: 12 → 1+2=3, que es múltiplo de 3.",
+            "tags": [
+                "divisibilidad",
+                "3",
+                "criterios",
+                "cifras"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La resta de dos números da siempre un número menor que el primero.",
+            "explanation": "Si restas un número negativo, el resultado aumenta: 5 - (-2) = 7 > 5.",
+            "hint": "¿Qué pasa si restas un número negativo?",
+            "tags": [
+                "resta",
+                "enteros",
+                "negativos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El número 2 es el único número primo par.",
+            "explanation": "Cualquier otro número par es divisible entre 2, por lo que no es primo.",
+            "hint": "¿Hay algún otro número par que sea primo?",
+            "tags": [
+                "números",
+                "primos",
+                "pares",
+                "excepción"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La fracción 5/5 equivale a 5.",
+            "explanation": "Cualquier número dividido entre sí mismo es igual a 1.",
+            "hint": "¿Cinco quintos forman cuántos enteros?",
+            "tags": [
+                "fracciones",
+                "unidad",
+                "igualdad"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El valor absoluto de un número es siempre mayor o igual a cero.",
+            "explanation": "El valor absoluto mide la distancia al cero, y la distancia no puede ser negativa.",
+            "hint": "¿La distancia puede ser negativa?",
+            "tags": [
+                "valor_absoluto",
+                "distancia",
+                "definición"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 0,3 es mayor que 0,2999.",
+            "explanation": "0,3 = 0,3000 > 0,2999.",
+            "hint": "Compara cifra por cifra de izquierda a derecha.",
+            "tags": [
+                "decimales",
+                "comparación",
+                "precisión"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El máximo común divisor de 8 y 12 es 4.",
+            "explanation": "Divisores de 8: 1,2,4,8; de 12:1,2,3,4,6,12. El mayor común es 4.",
+            "hint": "Busca el número más grande que divide a ambos.",
+            "tags": [
+                "mcd",
+                "divisores",
+                "común"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El mínimo común múltiplo de 4 y 6 es 12.",
+            "explanation": "Múltiplos de 4: 4,8,12...; de 6:6,12... El menor común es 12.",
+            "hint": "Busca el número más pequeño que es múltiplo de ambos.",
+            "tags": [
+                "mcm",
+                "múltiplos",
+                "común"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El exponente de un número indica cuántas veces se suma la base.",
+            "explanation": "El exponente indica multiplicaciones, no sumas: a³ = a×a×a.",
+            "hint": "3² = 3×3, no 3+3.",
+            "tags": [
+                "potencias",
+                "exponentes",
+                "definición"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "La suma de las longitudes de los lados de un triángulo da su perímetro.",
+            "explanation": "Perímetro = suma de todos los lados del polígono.",
+            "hint": "Suma todo el contorno.",
+            "tags": [
+                "geometría",
+                "perímetro",
+                "triángulo"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "Un triángulo tiene cuatro lados.",
+            "explanation": "Triángulo = figura de 3 lados.",
+            "hint": "Prefijo tri- significa tres.",
+            "tags": [
+                "geometría",
+                "triángulo",
+                "lados"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Un ángulo recto mide 90 grados.",
+            "explanation": "Definición: el ángulo recto forma una esquina perfecta y mide 90°.",
+            "hint": "Como la esquina de un cuadrado.",
+            "tags": [
+                "geometría",
+                "ángulos",
+                "recto"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La fracción 2/3 es mayor que 3/4.",
+            "explanation": "Con denominador común: 2/3 = 8/12 y 3/4 = 9/12 → 3/4 es mayor.",
+            "hint": "Convierte a denominador común para comparar.",
+            "tags": [
+                "fracciones",
+                "comparación",
+                "equivalencia"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El número 100 es un cuadrado perfecto.",
+            "explanation": "10 × 10 = 100, luego √100 = 10 exacto.",
+            "hint": "¿Hay un número entero que multiplicado por sí mismo dé 100?",
+            "tags": [
+                "cuadrados",
+                "perfectos",
+                "raíces"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El producto de un número positivo y uno negativo es positivo.",
+            "explanation": "Signos distintos dan resultado negativo.",
+            "hint": "+ por - da...",
+            "tags": [
+                "multiplicación",
+                "signos",
+                "regla"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Cualquier número multiplicado por 1 se mantiene igual.",
+            "explanation": "El 1 es el elemento neutro de la multiplicación: a × 1 = a.",
+            "hint": "¿Cambia el número si multiplicas una vez?",
+            "tags": [
+                "multiplicación",
+                "neutro",
+                "propiedad"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 1/4 equivale a 0,25.",
+            "explanation": "1 ÷ 4 = 0,25.",
+            "hint": "Divide 1 entre 4.",
+            "tags": [
+                "fracciones",
+                "decimales",
+                "conversión"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 7,5 es un número entero.",
+            "explanation": "Tiene parte decimal distinta de cero, por lo que es un número decimal, no entero.",
+            "hint": "¿Tiene cifras después del punto?",
+            "tags": [
+                "números",
+                "enteros",
+                "decimales"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "La raíz cuadrada de 2 es un número entero.",
+            "explanation": "√2 ≈ 1,414..., no es entero.",
+            "hint": "¿Qué número entero por sí mismo da 2?",
+            "tags": [
+                "raíces",
+                "cuadradas",
+                "irracionales"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Si multiplicas un número por 10, simplemente se le agrega un cero a la derecha.",
+            "explanation": "Ejemplo: 7 × 10 = 70; 12 × 10 = 120.",
+            "hint": "Observa qué pasa con el punto decimal.",
+            "tags": [
+                "multiplicación",
+                "base_10",
+                "decenas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 110 es divisible por 10.",
+            "explanation": "Termina en 0, cumple el criterio de divisibilidad por 10.",
+            "hint": "¿Termina en cero?",
+            "tags": [
+                "divisibilidad",
+                "10",
+                "criterios"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La suma de dos fracciones con distinto denominador se hace sumando directamente numeradores y denominadores.",
+            "explanation": "Primero deben igualarse los denominadores; no se suman directo.",
+            "hint": "Necesitas denominador común antes de sumar.",
+            "tags": [
+                "fracciones",
+                "suma",
+                "error_común"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El número -10 es menor que -1.",
+            "explanation": "En la recta numérica, -10 está más a la izquierda que -1.",
+            "hint": "Más alejado del cero hacia la izquierda = menor.",
+            "tags": [
+                "orden",
+                "negativos",
+                "recta"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El área de un rectángulo se calcula multiplicando base por altura.",
+            "explanation": "Fórmula: Área = b × h.",
+            "hint": "Cuántos cuadraditos caben dentro = base por altura.",
+            "tags": [
+                "geometría",
+                "área",
+                "rectángulo"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "Un número primo puede tener tres divisores.",
+            "explanation": "Por definición, un primo tiene exactamente dos divisores: 1 y él mismo.",
+            "hint": "¿Cuántos divisores tiene un número primo?",
+            "tags": [
+                "números",
+                "primos",
+                "definición"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El valor de 4 + 4 ÷ 4 es 2.",
+            "explanation": "Primero se divide: 4 ÷ 4 = 1; luego se suma: 4 + 1 = 5.",
+            "hint": "División antes que suma.",
+            "tags": [
+                "operaciones",
+                "prioridad",
+                "orden"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El número 36 es múltiplo de 9.",
+            "explanation": "36 ÷ 9 = 4, división exacta → sí es múltiplo.",
+            "hint": "¿La suma de sus cifras es múltiplo de 9? 3+6=9.",
+            "tags": [
+                "múltiplos",
+                "9",
+                "divisibilidad"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "Un medio más un tercio es igual a dos quintos.",
+            "explanation": "1/2 + 1/3 = 3/6 + 2/6 = 5/6 ≠ 2/5.",
+            "hint": "Iguala denominadores antes de sumar.",
+            "tags": [
+                "fracciones",
+                "suma",
+                "error_común"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Todo número natural es positivo.",
+            "explanation": "Los naturales empiezan en 1, 2, 3...; todos son mayores que cero.",
+            "hint": "¿Hay algún número natural negativo?",
+            "tags": [
+                "números",
+                "naturales",
+                "positivos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La potencia de un número negativo es siempre negativa.",
+            "explanation": "Si el exponente es par, el resultado es positivo: (-2)² = 4.",
+            "hint": "¿El exponente es par o impar?",
+            "tags": [
+                "potencias",
+                "negativos",
+                "signos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El número 0,1 es igual a una décima.",
+            "explanation": "Una décima = 1/10 = 0,1.",
+            "hint": "¿Cuántas cifras decimales hay?",
+            "tags": [
+                "decimales",
+                "fracciones",
+                "equivalencia"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 19 es un número compuesto.",
+            "explanation": "Solo es divisible entre 1 y él mismo → es primo, no compuesto.",
+            "hint": "¿Tiene algún divisor además de 1 y 19?",
+            "tags": [
+                "números",
+                "primos",
+                "compuestos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El doble de 0,5 es 1.",
+            "explanation": "0,5 × 2 = 1.",
+            "hint": "Medio más medio = un entero.",
+            "tags": [
+                "decimales",
+                "multiplicación",
+                "doble"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La raíz cuadrada de un número negativo no existe en los números reales.",
+            "explanation": "Ningún número real multiplicado por sí mismo da negativo (positivo×positivo=positivo; negativo×negativo=positivo).",
+            "hint": "¿Qué número por sí mismo da -4?",
+            "tags": [
+                "raíces",
+                "cuadradas",
+                "números_reales"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 202 es mayor que 220.",
+            "explanation": "Comparando cifra por cifra: igual en centenas (2), pero en decenas 0 < 2 → 220 es mayor.",
+            "hint": "Mira la segunda cifra de cada número.",
+            "tags": [
+                "comparación",
+                "números",
+                "cifras"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "La división es la operación inversa de la multiplicación.",
+            "explanation": "Si a × b = c, entonces c ÷ b = a.",
+            "hint": "¿Qué operación deshace a la multiplicación?",
+            "tags": [
+                "operaciones",
+                "inversas",
+                "división",
+                "multiplicación"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "Todas las fracciones se pueden expresar como número decimal finito.",
+            "explanation": "Algunas dan infinitas periódicas, como 1/3 = 0,333...",
+            "hint": "¿Qué pasa con 1/3?",
+            "tags": [
+                "fracciones",
+                "decimales",
+                "periódicos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El producto de tres números negativos es negativo.",
+            "explanation": "Negativo × Negativo = Positivo; Positivo × Negativo = Negativo.",
+            "hint": "Cuenta cuántos factores negativos hay: impar → negativo.",
+            "tags": [
+                "multiplicación",
+                "signos",
+                "negativos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 1 es el menor número natural.",
+            "explanation": "El conjunto de los números naturales comienza en 1.",
+            "hint": "¿Cuál es el primer número natural?",
+            "tags": [
+                "números",
+                "naturales",
+                "inicio"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 0,005 es igual a 5 centésimas.",
+            "explanation": "0,005 = 5 milésimas; 5 centésimas = 0,05.",
+            "hint": "Conta las posiciones después del punto.",
+            "tags": [
+                "decimales",
+                "posiciones",
+                "milésimas"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Un cuadrado tiene sus cuatro lados iguales.",
+            "explanation": "Definición: cuadrado = paralelogramo con lados iguales y ángulos rectos.",
+            "hint": "¿Todos los lados miden lo mismo?",
+            "tags": [
+                "geometría",
+                "cuadrado",
+                "lados"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La expresión 2³ es igual a 6.",
+            "explanation": "2³ = 2 × 2 × 2 = 8.",
+            "hint": "Exponente = multiplicar la base ese número de veces.",
+            "tags": [
+                "potencias",
+                "cubos",
+                "error_común"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "Todo número entero es también un número racional.",
+            "explanation": "Cualquier entero n se puede escribir como fracción n/1, que es racional.",
+            "hint": "¿Puedes ponerlo sobre 1?",
+            "tags": [
+                "conjuntos",
+                "enteros",
+                "racionales"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 8 es un número primo.",
+            "explanation": "8 tiene divisores además de 1 y 8: 2 y 4 → es compuesto.",
+            "hint": "¿Es divisible entre 2?",
+            "tags": [
+                "números",
+                "primos",
+                "compuestos"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "La mitad de un número es igual a dividirlo entre 2.",
+            "explanation": "Mitad = cantidad dividida en dos partes iguales.",
+            "hint": "Mitad = ÷ 2",
+            "tags": [
+                "operaciones",
+                "mitad",
+                "división"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "El número 10 elevado a la potencia 0 es igual a 0.",
+            "explanation": "Cualquier número distinto de cero elevado a 0 es 1 → 10⁰ = 1.",
+            "hint": "Recuerda la regla del exponente cero.",
+            "tags": [
+                "potencias",
+                "exponente_cero",
+                "base_10"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "El número 0,99 es menor que 1.",
+            "explanation": "0,99 < 1,00; le falta 0,01 para llegar a la unidad.",
+            "hint": "Compara la parte entera.",
+            "tags": [
+                "decimales",
+                "comparación",
+                "unidad"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "La suma conmuta: a + b = b + a.",
+            "explanation": "Propiedad conmutativa de la suma: el orden no altera el resultado.",
+            "hint": "¿Sumar 2+5 da lo mismo que 5+2?",
+            "tags": [
+                "propiedades",
+                "conmutativa",
+                "suma"
+            ],
+            "answers": [
+                {
+                    "answer": "Verdadero",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Falso",
+                    "isCorrect": false
+                }
+            ]
+        }
+    ]
+}
