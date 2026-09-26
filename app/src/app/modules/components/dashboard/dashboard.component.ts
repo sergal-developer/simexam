@@ -95,11 +95,9 @@ export class DashboardComponent implements OnInit {
       }
     }
 
-    const examcomplete = await this.commonServices.getQuizCompleteById(1);
-    console.log('examcomplete: ', examcomplete);
-    console.log('examcomplete JSON: ', JSON.stringify(examcomplete, null, 2));
-
     this.uiServices.showLoader(false);
+
+    this.getManifestFiles();
   }
 
   async getAttempts(quiz: QuizDTO) {
@@ -153,6 +151,12 @@ export class DashboardComponent implements OnInit {
     );
 
     this.returnMain();
+  }
+
+  async getManifestFiles() {
+    const data = await this.commonServices.getManifetFiles();
+    console.log('data: ', data);
+
   }
   //#endregion DATA
 

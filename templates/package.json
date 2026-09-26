@@ -4,11 +4,9 @@
   "scripts": {
     "ng": "ng",
     "manifest": "node scripts/generate-manifest.mjs",
-    "prestart": "npm run manifest",
-    "start": "ng serve",
-    "prebuild": "npm run manifest",
-    "build": "ng build",
-    "prewatch": "npm run manifest",
+    "build-manifest": "npm run manifest",
+    "start": "npm run build-manifest && ng serve",
+    "build": "npm run build-manifest && ng build --base-href=/simexam/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

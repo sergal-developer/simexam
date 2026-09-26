@@ -54,11 +54,13 @@ async function walk(dir) {
 
     const info = await stat(full)
     const posixPath = relative(assetsDir, full).split(sep).join(posix.sep)
+    const type = relative(assetsDir, full).split(sep).join(posix.sep).split('/');
 
     files.push({
       name: entry.name,
       /** Ruta relativa a `src/assets`, p. ej. `quiz/ingles-a1.json`. */
       path: posixPath,
+      type: type[0],
       /** Ruta servida por el dev server, con cada segmento escapado. */
       url: toUrl(posixPath),
       size: info.size,

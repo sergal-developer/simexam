@@ -1,15 +1,24 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { v4 as uuidv4 } from 'uuid';
 import { AttemptAnswerDTO, AttemptDTO, AttemptState, GradeState, LogDTO, QuizAnswerDTO, QuizAnswerOptionDTO, QuizDTO, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO, getAttemptDTO, getAttemptDTOValid, getGrade, getPermissionsDTO, getQuizDTOValid, getSettingsDTO, normalizeAttemptDTO, normalizeQuizDTO } from '../data/entities/dtos';
 import { DatabaseService } from './database/sql.database.service';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class CommonServices {
 
   availableLangs = [{ name: 'English', value: 'en' }, { name: 'Español', value: 'es' }];
   currentLang = '';
-  constructor(private _router: Router, private _services: DatabaseService) { }
+
+  private readonly manifestUrl =
+    'https://sergal-developer.github.io/simexam/assets/asset-manifest.json';
+
+
+  constructor(
+    private _http: HttpClient,
+    private _router: Router, 
+    private _services: DatabaseService) { }
 
   //#region PUBLIC METHODS
 
@@ -544,4 +553,11 @@ export class CommonServices {
     return setting;
   }
   //#endregion DEFAULT_DATA
+
+
+  //#region EXTERNAL DATA
+  async getManifetFiles(): Promise<any> {
+    return this._http.get(this.manifestUrl).toPromise();
+  }
+  //#endregion EXTERNAL DATA
 }

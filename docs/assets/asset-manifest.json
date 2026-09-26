@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-09-26T10:15:35.831Z",
+  "generatedAt": "2026-09-26T10:57:21.388Z",
   "baseUrl": "assets",
   "count": 47,
   "files": [
     {
       "name": "ingles-a1.json",
       "path": "quiz/ingles-a1.json",
+      "type": "quiz",
       "url": "assets/quiz/ingles-a1.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -14,6 +15,7 @@
     {
       "name": "ingles-a2.json",
       "path": "quiz/ingles-a2.json",
+      "type": "quiz",
       "url": "assets/quiz/ingles-a2.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -22,6 +24,7 @@
     {
       "name": "ingles-b1.json",
       "path": "quiz/ingles-b1.json",
+      "type": "quiz",
       "url": "assets/quiz/ingles-b1.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -30,6 +33,7 @@
     {
       "name": "ingles-b2.json",
       "path": "quiz/ingles-b2.json",
+      "type": "quiz",
       "url": "assets/quiz/ingles-b2.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -38,6 +42,7 @@
     {
       "name": "ingles-c1.json",
       "path": "quiz/ingles-c1.json",
+      "type": "quiz",
       "url": "assets/quiz/ingles-c1.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -46,6 +51,7 @@
     {
       "name": "ingles-c2.json",
       "path": "quiz/ingles-c2.json",
+      "type": "quiz",
       "url": "assets/quiz/ingles-c2.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -54,6 +60,7 @@
     {
       "name": "matematicas-algebra.json",
       "path": "quiz/matematicas-algebra.json",
+      "type": "quiz",
       "url": "assets/quiz/matematicas-algebra.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -62,6 +69,7 @@
     {
       "name": "matematicas-calculo-diferencial.json",
       "path": "quiz/matematicas-calculo-diferencial.json",
+      "type": "quiz",
       "url": "assets/quiz/matematicas-calculo-diferencial.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -70,6 +78,7 @@
     {
       "name": "matematicas-calculo-integral.json",
       "path": "quiz/matematicas-calculo-integral.json",
+      "type": "quiz",
       "url": "assets/quiz/matematicas-calculo-integral.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -78,6 +87,7 @@
     {
       "name": "matematicas-ecuaciones-diferenciales.json",
       "path": "quiz/matematicas-ecuaciones-diferenciales.json",
+      "type": "quiz",
       "url": "assets/quiz/matematicas-ecuaciones-diferenciales.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -86,6 +96,7 @@
     {
       "name": "matematicas-geometria-analitica.json",
       "path": "quiz/matematicas-geometria-analitica.json",
+      "type": "quiz",
       "url": "assets/quiz/matematicas-geometria-analitica.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -94,6 +105,7 @@
     {
       "name": "matematicas-probabilidad-estadistica.json",
       "path": "quiz/matematicas-probabilidad-estadistica.json",
+      "type": "quiz",
       "url": "assets/quiz/matematicas-probabilidad-estadistica.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -102,6 +114,7 @@
     {
       "name": "matematicas-puras-abstractas.json",
       "path": "quiz/matematicas-puras-abstractas.json",
+      "type": "quiz",
       "url": "assets/quiz/matematicas-puras-abstractas.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -110,6 +123,7 @@
     {
       "name": "matematicas-trigonometria.json",
       "path": "quiz/matematicas-trigonometria.json",
+      "type": "quiz",
       "url": "assets/quiz/matematicas-trigonometria.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -118,6 +132,7 @@
     {
       "name": "pisa-cuarto-primaria.json",
       "path": "quiz/pisa-cuarto-primaria.json",
+      "type": "quiz",
       "url": "assets/quiz/pisa-cuarto-primaria.json",
       "size": 24074,
       "modified": "2026-09-26 01:32",
@@ -126,6 +141,7 @@
     {
       "name": "pisa-primero-primaria.json",
       "path": "quiz/pisa-primero-primaria.json",
+      "type": "quiz",
       "url": "assets/quiz/pisa-primero-primaria.json",
       "size": 327788,
       "modified": "2026-09-26 01:06",
@@ -134,6 +150,7 @@
     {
       "name": "pisa-primero-secundaria.json",
       "path": "quiz/pisa-primero-secundaria.json",
+      "type": "quiz",
       "url": "assets/quiz/pisa-primero-secundaria.json",
       "size": 64426,
       "modified": "2026-09-26 01:44",
@@ -142,6 +159,7 @@
     {
       "name": "pisa-quinto-primaria.json",
       "path": "quiz/pisa-quinto-primaria.json",
+      "type": "quiz",
       "url": "assets/quiz/pisa-quinto-primaria.json",
       "size": 26977,
       "modified": "2026-09-26 01:34",
@@ -150,6 +168,7 @@
     {
       "name": "pisa-segundo-secundaria.json",
       "path": "quiz/pisa-segundo-secundaria.json",
+      "type": "quiz",
       "url": "assets/quiz/pisa-segundo-secundaria.json",
       "size": 53694,
       "modified": "2026-09-26 01:45",
@@ -158,6 +177,7 @@
     {
       "name": "pisa-sexto-primaria.json",
       "path": "quiz/pisa-sexto-primaria.json",
+      "type": "quiz",
       "url": "assets/quiz/pisa-sexto-primaria.json",
       "size": 61678,
       "modified": "2026-09-26 01:39",
@@ -166,6 +186,7 @@
     {
       "name": "pisa-tercero-secundaria.json",
       "path": "quiz/pisa-tercero-secundaria.json",
+      "type": "quiz",
       "url": "assets/quiz/pisa-tercero-secundaria.json",
       "size": 33430,
       "modified": "2026-09-26 01:49",
@@ -174,6 +195,7 @@
     {
       "name": "primaria-ciencias-naturales.json",
       "path": "quiz/primaria-ciencias-naturales.json",
+      "type": "quiz",
       "url": "assets/quiz/primaria-ciencias-naturales.json",
       "size": 54137,
       "modified": "2026-09-26 02:44",
@@ -182,6 +204,7 @@
     {
       "name": "primaria-civica-etica.json",
       "path": "quiz/primaria-civica-etica.json",
+      "type": "quiz",
       "url": "assets/quiz/primaria-civica-etica.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -190,6 +213,7 @@
     {
       "name": "primaria-español.json",
       "path": "quiz/primaria-español.json",
+      "type": "quiz",
       "url": "assets/quiz/primaria-espa%C3%B1ol.json",
       "size": 20943,
       "modified": "2026-09-26 00:51",
@@ -198,6 +222,7 @@
     {
       "name": "primaria-geografia.json",
       "path": "quiz/primaria-geografia.json",
+      "type": "quiz",
       "url": "assets/quiz/primaria-geografia.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -206,6 +231,7 @@
     {
       "name": "primaria-gramatica.json",
       "path": "quiz/primaria-gramatica.json",
+      "type": "quiz",
       "url": "assets/quiz/primaria-gramatica.json",
       "size": 34938,
       "modified": "2026-09-26 02:19",
@@ -214,6 +240,7 @@
     {
       "name": "primaria-historia.json",
       "path": "quiz/primaria-historia.json",
+      "type": "quiz",
       "url": "assets/quiz/primaria-historia.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -222,6 +249,7 @@
     {
       "name": "primaria-lenguajes-comunicacion.json",
       "path": "quiz/primaria-lenguajes-comunicacion.json",
+      "type": "quiz",
       "url": "assets/quiz/primaria-lenguajes-comunicacion.json",
       "size": 45041,
       "modified": "2026-09-26 02:45",
@@ -230,6 +258,7 @@
     {
       "name": "primaria-matematicas.json",
       "path": "quiz/primaria-matematicas.json",
+      "type": "quiz",
       "url": "assets/quiz/primaria-matematicas.json",
       "size": 27546,
       "modified": "2026-09-26 02:14",
@@ -238,6 +267,7 @@
     {
       "name": "secundaria-ciencias-biologia.json",
       "path": "quiz/secundaria-ciencias-biologia.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-ciencias-biologia.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -246,6 +276,7 @@
     {
       "name": "secundaria-ciencias-fisica.json",
       "path": "quiz/secundaria-ciencias-fisica.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-ciencias-fisica.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -254,6 +285,7 @@
     {
       "name": "secundaria-ciencias-quimica.json",
       "path": "quiz/secundaria-ciencias-quimica.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-ciencias-quimica.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -262,6 +294,7 @@
     {
       "name": "secundaria-español.json",
       "path": "quiz/secundaria-español.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-espa%C3%B1ol.json",
       "size": 20943,
       "modified": "2026-09-26 00:51",
@@ -270,6 +303,7 @@
     {
       "name": "secundaria-geografia-mexico.json",
       "path": "quiz/secundaria-geografia-mexico.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-geografia-mexico.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -278,6 +312,7 @@
     {
       "name": "secundaria-geografia-mundo.json",
       "path": "quiz/secundaria-geografia-mundo.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-geografia-mundo.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -286,6 +321,7 @@
     {
       "name": "secundaria-gramatica.json",
       "path": "quiz/secundaria-gramatica.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-gramatica.json",
       "size": 35434,
       "modified": "2026-09-26 02:28",
@@ -294,6 +330,7 @@
     {
       "name": "secundaria-historia-mexico-independecia-revolucion.json",
       "path": "quiz/secundaria-historia-mexico-independecia-revolucion.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-historia-mexico-independecia-revolucion.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -302,6 +339,7 @@
     {
       "name": "secundaria-historia-mexico-prehispanico-conquista-colonia.json",
       "path": "quiz/secundaria-historia-mexico-prehispanico-conquista-colonia.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-historia-mexico-prehispanico-conquista-colonia.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -310,6 +348,7 @@
     {
       "name": "secundaria-historia-mexico-siglo-xix-xx.json",
       "path": "quiz/secundaria-historia-mexico-siglo-xix-xx.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-historia-mexico-siglo-xix-xx.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -318,6 +357,7 @@
     {
       "name": "secundaria-historia-mexico.json",
       "path": "quiz/secundaria-historia-mexico.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-historia-mexico.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -326,6 +366,7 @@
     {
       "name": "secundaria-historia-mundial-moderna.json",
       "path": "quiz/secundaria-historia-mundial-moderna.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-historia-mundial-moderna.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -334,6 +375,7 @@
     {
       "name": "secundaria-historia-universal.json",
       "path": "quiz/secundaria-historia-universal.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-historia-universal.json",
       "size": 0,
       "modified": "2026-09-26 01:53",
@@ -342,6 +384,7 @@
     {
       "name": "secundaria-ingles.json",
       "path": "quiz/secundaria-ingles.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-ingles.json",
       "size": 40072,
       "modified": "2026-09-26 02:36",
@@ -350,6 +393,7 @@
     {
       "name": "secundaria-matematicas-algebra.json",
       "path": "quiz/secundaria-matematicas-algebra.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-matematicas-algebra.json",
       "size": 44026,
       "modified": "2026-09-26 02:36",
@@ -358,6 +402,7 @@
     {
       "name": "secundaria-matematicas-aritmetica.json",
       "path": "quiz/secundaria-matematicas-aritmetica.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-matematicas-aritmetica.json",
       "size": 57391,
       "modified": "2026-09-26 02:36",
@@ -366,6 +411,7 @@
     {
       "name": "secundaria-matematicas-geometria.json",
       "path": "quiz/secundaria-matematicas-geometria.json",
+      "type": "quiz",
       "url": "assets/quiz/secundaria-matematicas-geometria.json",
       "size": 58657,
       "modified": "2026-09-26 02:40",
@@ -374,6 +420,7 @@
     {
       "name": "quiz-template.json",
       "path": "templates/quiz-template.json",
+      "type": "templates",
       "url": "assets/templates/quiz-template.json",
       "size": 738,
       "modified": "2026-09-26 00:35",

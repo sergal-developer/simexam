@@ -221,38 +221,4 @@
             </div>
         </div>
     </ng-container>
-
-    <!-- <ng-container *ngIf="showIAForm">
-        <div class="simple-section" *ngIf="formIAGenerated">
-            <div class="_question" [ngClass]="{'loading_noclick': loadingDataAi }">
-                <div class="gray-backdrop drop-padding">
-                    <mat-input [title]="'form_answer_ia_topic' | translate"
-                        [mesageError]="'form_answer_ia_topic_required' | translate" [multiline]="true"
-                        [formControl]="formIAGenerated.get('topic')">
-                    </mat-input>
-
-                    <div class="_question_text_collection">
-                        <mat-input [title]="'form_answer_num' | translate"
-                            [mesageError]="'form_answer_num_required' | translate"
-                            [formControl]="formIAGenerated.get('questions')">
-                        </mat-input>
-                        <mat-input [title]="'form_answeroptions' | translate"
-                            [mesageError]="'form_answeroptions_required' | translate"
-                            [formControl]="formIAGenerated.get('options')">
-                        </mat-input>
-                    </div>
-                </div>
-
-                <div class="_question_actions fixed">
-                    <button class="primary" (click)="generateQuiz()" [disabled]="formIAGenerated.invalid">
-                        <div class="inner">
-                            {{ 'generate_questions' | translate }}
-                            <span class="material-icons">auto_awesome</span>
-                        </div>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </ng-container> -->
-
 </div>
