@@ -2,8 +2,8 @@
   "title": "Inglés Nivel A1 - Básico",
   "time": 120,
   "tags": ["inglés", "A1", "básico"],
-  "cardsCount": 100,
-  "cards": [
+  "questionsCount": 100,
+  "questions": [
     {
       "question": "¿Cómo se dice 'hola' en inglés?",
       "answer": "Hello",

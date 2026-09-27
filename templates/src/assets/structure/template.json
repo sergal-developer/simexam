@@ -1,0 +1,26 @@
+{
+    "title": "string",
+    "time": 0,
+    "tags": ["string"],
+    "questionsCount": 0,
+    "questions": [
+        {
+            "question": "string",
+            "answer": "only for card",
+            "explanation": "string",
+            "hint": "string",
+            "tags": ["string"],
+            "answers": [
+                {
+                    "answer": "string",
+                    "isCorrect": true,
+                    "popular": 0
+                },
+                {
+                    "answer": "string",
+                    "isCorrect": true
+                },
+            ]
+        }
+    ]
+}

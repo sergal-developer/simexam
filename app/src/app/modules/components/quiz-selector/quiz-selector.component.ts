@@ -16,20 +16,6 @@ import { UiServices } from 'src/app/shared/services/ui.services';
   encapsulation: ViewEncapsulation.None,
 })
 export class QuizSelectorComponent implements OnInit {
-  form: FormGroup;
-
-  formQuestion: FormGroup = new FormGroup({
-    answerId: new FormControl(null),
-    quizId: new FormControl(null),
-    title: new FormControl('', Validators.required),
-    options: new FormControl([], Validators.required),
-  })
-
-  formIAGenerated: FormGroup = new FormGroup({
-    topic: new FormControl('', Validators.required),
-    answquestionserTitle: new FormControl(2, Validators.required),
-    options: new FormControl(4, Validators.required),
-  })
 
   options: any = [];
   settings: SettingsDTO = null;
@@ -60,11 +46,16 @@ export class QuizSelectorComponent implements OnInit {
   _helper = new Utils();
 
   luIcon = {
-    left: icons.ChevronLeft,
-    right: icons.ChevronRight,
-    save: icons.SaveAll,
-    cards: icons.PlayingCards,
+    back: icons.ArrowLeft,
     list: icons.ListTodo,
+    cards: icons.PlayingCards,
+    drama: icons.Drama,
+    gFalse: icons.FaceSlightlyFrowning,
+    poll: icons.Vote,
+    aritmetic: icons.Brain,
+    download: icons.ArrowDownToLine,
+    left: icons.ChevronLeft,
+    save: icons.SaveAll,
     random: icons.Dices,
     battle: icons.Swords,
     directions: icons.GamepadDirectional,
@@ -72,11 +63,12 @@ export class QuizSelectorComponent implements OnInit {
 
   titleQuizSelection: string = 'Nuevo';
   listFilesAvailable: Array<any> = [];
+  listFilesFiltered: Array<any> = [];
+  currentFilter: string = null;
   //#endregion INTERNAL
 
   constructor(private commonServices: CommonServices,
     private uiServices: UiServices,
-    private fb: FormBuilder,
     private translate: TranslateService
   ) {
   }
@@ -84,7 +76,6 @@ export class QuizSelectorComponent implements OnInit {
   async ngOnInit() {
     this.uiServices.showLoader(true);
     this.setupLanguage(() => {
-      this.getManifestFiles();
       this.setupComponent();
     });
   }
@@ -101,26 +92,7 @@ export class QuizSelectorComponent implements OnInit {
 
   //#region DATA
   async setupComponent(injectData?: QuizDTO) {
-    this.currentAnswerIndex = 0;
-    this.isEdit = false;
-    this.formIAGenerated = this.fb.group({
-      topic: ['', Validators.required],
-      questions: [2, Validators.required],
-      options: [4, Validators.required],
-    });
-
-    this.form = this.fb.group({
-      title: [this.translateLabels.new_quiz, Validators.required],
-      time: [''],
-    });
-
-    this.durationFormShow = false;
-
-    this.quiz = getQuizDTO('', 0);
-    this.quiz.answers = [this.getNewQuestionForm()];
-
-
-    // this.setCurrentAnswer();
+    this.getManifestFiles();
     this.uiServices.showLoader(false);
   }
 
@@ -128,24 +100,44 @@ export class QuizSelectorComponent implements OnInit {
     const data = await this.commonServices.getManifetFiles();
 
     this.listFilesAvailable = data && data.files ? data.files : [];
+    this.listFilesAvailable = this.listFilesAvailable.map(x => {
+      x._name = x.name.replace('.json', '').replaceAll('-', ' ');
+      return x;
+    });
+    this.listFilesAvailable = this.listFilesAvailable.filter(x => x.isEmpty == false);
+    this.listFilesFiltered = JSON.parse(JSON.stringify(this.listFilesAvailable));
     console.log('data: ', data);
   }
 
-  getNewQuestionForm() {
-    const question = getQuizAnswerDTO(`${this.translateLabels.answer_text_default} #${this.currentAnswerIndex + 1}?`);
-    const questions = [
-      getQuizAnswerOptionDTO(`${this.translateLabels.answer_option_text_default} 1`, 1),
-      getQuizAnswerOptionDTO(`${this.translateLabels.answer_option_text_default} 2`, 2),
-      getQuizAnswerOptionDTO('', 3),
-    ];
-
-    question.options.push(...questions);
-    return question;
+  async getExternalFile(path: string) {
+    const data = await this.commonServices.getFileExternal(path);
+    console.log('data: ', data);
   }
+  //#region DATA
 
   //#region EVENTS
-  createBlankQuiz() {
-    this.commonServices.navigate('quizcreate');
+  gotoDashboard() {
+    this.commonServices.navigate('dashboard');
   }
+
+  createNewBlank(type: string = 'questionaries') {
+    this.commonServices.navigate('quizcreate', type);
+  }
+
+  async getFile(item: any) {
+    this.getExternalFile(item.path)
+  }
+
+  filterBy(type: string) {
+    this.currentFilter = type;
+    const filtered = this.listFilesAvailable.filter(x => x.type == this.currentFilter);
+    this.listFilesFiltered = filtered;
+  }
+
+  resetFilter() {
+    this.currentFilter = null;
+    this.listFilesFiltered = JSON.parse(JSON.stringify(this.listFilesAvailable));
+  }
+
   //#endregion EVENTS
 }

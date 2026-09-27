@@ -2,8 +2,8 @@
   "title": "Lógica Básica",
   "time": 150,
   "tags": ["lógica", "básica", "razonamiento"],
-  "cardsCount": 100,
-  "cards": [
+  "questionsCount": 100,
+  "questions": [
     {
       "question": "¿Qué es una proposición en lógica?",
       "answer": "Una afirmación o enunciado que puede ser verdadero o falso, pero no ambas cosas a la vez.",

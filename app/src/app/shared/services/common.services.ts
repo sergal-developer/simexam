@@ -11,8 +11,8 @@ export class CommonServices {
   availableLangs = [{ name: 'English', value: 'en' }, { name: 'Español', value: 'es' }];
   currentLang = '';
 
-  private readonly manifestUrl =
-    'https://sergal-developer.github.io/simexam/assets/asset-manifest.json';
+  private readonly resourcesUrl =
+    'https://sergal-developer.github.io/simexam/assets/';
 
 
   constructor(
@@ -557,7 +557,13 @@ export class CommonServices {
 
   //#region EXTERNAL DATA
   async getManifetFiles(): Promise<any> {
-    return this._http.get(this.manifestUrl).toPromise();
+    const url = `${ this.resourcesUrl }asset-manifest.json`;
+    return this._http.get(url).toPromise();
+  }
+
+  async getFileExternal(path): Promise<any> {
+    const url = `${ this.resourcesUrl }${ path }`;
+    return this._http.get(url).toPromise();
   }
   //#endregion EXTERNAL DATA
 }

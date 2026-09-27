@@ -2,54 +2,90 @@
     <div class="all-screen-section">
         <section-dinamic design="glass">
             <div class="arrage centers paddings-relation">
-                <h3>{{ 'list_exam' | translate }}</h3>
+                <div class="item" (click)="gotoDashboard()">
+                    <lu-icon [icon]="luIcon.back"></lu-icon>
+                </div>
+                <h4>Plantillas Genericas</h4>
+            </div>
+            <div class="arrage stacked paddings">
+                <button class="item" (click)="createNewBlank('questionaries')">
+                    <lu-icon [icon]="luIcon.list"></lu-icon>
+                    <div>Examen</div>
+                </button>
+
+                <button class="item"  (click)="createNewBlank('simple')">
+                    <lu-icon [icon]="luIcon.cards"></lu-icon>
+                    <div>Tarjetas</div>
+                </button>
+
+                <button class="item" (click)="createNewBlank('true-false')">
+                    <lu-icon [icon]="luIcon.drama"></lu-icon>
+                    <div>Verdadero / Falso</div>
+                </button>
+
+                <button class="item" (click)="createNewBlank('popularity')">
+                    <lu-icon [icon]="luIcon.poll"></lu-icon>
+                    <div>Encuesta</div>
+                </button>
+
+                <button class="item" (click)="createNewBlank('math')">
+                    <lu-icon [icon]="luIcon.aritmetic"></lu-icon>
+                    <div>Calcular</div>
+                </button>
+
             </div>
         </section-dinamic>
     </div>
 
-    <header [mode]="'text'" [title]="titleQuizSelection"></header>
     <div class="root-container quiz-form">
-        <section-dinamic design="">
 
-            <div class="arrage">
-
-                <div class="item">
+        <section-dinamic design="glass">
+            <div class="arrage centers paddings">
+                <h4>Plantillas en Linea ( <b>{{ listFilesFiltered.length }}</b> )</h4>
+                <button class="link" (click)="resetFilter()" *ngIf="currentFilter">reset</button>
+            </div>
+            <div class="arrage centers paddings">
+                <div class="item" (click)="filterBy('questionaries')">
                     <lu-icon [icon]="luIcon.list"></lu-icon>
-                    <div>Blank</div>
+                    <div>Examen</div>
                 </div>
 
-                <div class="item">
+                <div class="item" (click)="filterBy('simple')">
                     <lu-icon [icon]="luIcon.cards"></lu-icon>
-                    <div>Cards</div>
+                    <div>Tarjetas</div>
                 </div>
 
-                <div class="item">
-                    <lu-icon [icon]="luIcon.random"></lu-icon>
-                    <div>Random</div>
+                <div class="item" (click)="filterBy('true-false')">
+                    <lu-icon [icon]="luIcon.drama"></lu-icon>
+                    <div>Verdadero / Falso</div>
                 </div>
 
-                <div class="item">
-                    <lu-icon [icon]="luIcon.battle"></lu-icon>
-                    <div>Battle</div>
+                <div class="item" (click)="filterBy('popularity')">
+                    <lu-icon [icon]="luIcon.poll"></lu-icon>
+                    <div>Encuesta</div>
                 </div>
+            </div>
 
-                <div class="item">
-                    <lu-icon [icon]="luIcon.directions"></lu-icon>
-                    <div>Maze</div>
+            <div class="arrage columns paddings">
+                <div class="item" *ngFor="let item of listFilesFiltered">
+                    <div class="arrage">
+                        <div class="item">
+                            <lu-icon [icon]="luIcon.list" *ngIf="item.type == 'questionaries'"></lu-icon>
+                            <lu-icon [icon]="luIcon.cards" *ngIf="item.type == 'simple'"></lu-icon>
+                            <lu-icon [icon]="luIcon.drama" *ngIf="item.type == 'true-false'"></lu-icon>
+                            <lu-icon [icon]="luIcon.poll" *ngIf="item.type == 'popularity'"></lu-icon>
+                        </div>
+                        <div class="item">{{ item._name }}</div>
+                        <div class="item">
+                            <button class="primary" (click)="getFile(item)">
+                                Obtener <lu-icon [icon]="luIcon.download" ></lu-icon>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </section-dinamic>
 
-        <section-dinamic design="">
-
-            <div class="arrage columns">
-                <h4>Available Quiz</h4>
-                <div class="item" *ngFor="let item of listFilesAvailable">
-                    <div>{{ item.name }}</div>
-                </div>
-
-            </div>
-        </section-dinamic>
     </div>
 </div>

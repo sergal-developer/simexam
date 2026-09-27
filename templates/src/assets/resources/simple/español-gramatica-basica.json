@@ -2,8 +2,8 @@
   "title": "Español: Gramática Básica",
   "time": 120,
   "tags": ["español", "gramática", "básico"],
-  "cardsCount": 100,
-  "cards": [
+  "questionsCount": 100,
+  "questions": [
     {
       "question": "¿Qué es el sujeto en una oración?",
       "answer": "Es la persona, animal, cosa o idea que realiza la acción o de la que se dice algo.",
