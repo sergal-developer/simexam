@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } from '@angular/core';
 import { icons } from 'lucide';
-import { AttemptAnswerDTO, AttemptDTO, AttemptState, GradeState, QuizAnswerOptionDTO } from 'src/app/shared/data/entities/dtos';
-import { ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
+import { AttemptAnswerDTO, AttemptDTO, QuizAnswerOptionDTO } from 'src/app/shared/data/entities/dtos';
+import { AttemptState, GradeState, ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
 

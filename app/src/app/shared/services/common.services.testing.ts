@@ -1,29 +1,30 @@
 
 import {
+    AttemptDTO,
+    AttemptQuestDTO,
+    QuestionDTO,
+    QuestionnaireDTO,
     QuizAnswerDTO,
     QuizAnswerOptionDTO,
-    AttemptAnswerDTO,
-    AttemptDTO,
-    AttemptState,
-    LanguageDTO,
-    LogDTO,
     QuizDTO,
     SettingsDTO,
     ThemeDTO,
-    UserDTO,
+    getAnswerDTO,
+    getAttemptQuestDTO,
     getLogDTO,
-    PermissionsDTO,
-    getSettingsDTO,
     getPermissionsDTO,
-    getUserDTO,
-    getQuizDTO,
-    getQuizAnswerOptionDTO,
+    getQuestionDTO,
+    getQuestionnaireDTO,
     getQuizAnswerDTO,
-    normalizeQuizDTO,
-    getAttemptDTO
+    getQuizAnswerOptionDTO,
+    getQuizDTO,
+    getSettingsDTO,
+    getUserDTO,
+    normalizeQuestionnaireDTO,
+    normalizeQuizDTO
 } from '../data/entities/dtos';
+import { AttemptState } from '../data/enumerables/enumerables';
 import { CommonServices } from './common.services';
-import { v4 as uuidv4 } from 'uuid';
 
 
 type Log = (message: string, data?: any) => void;
@@ -160,6 +161,355 @@ export class CommonServicesTesting {
 
     }
     //#endregion USERS
+
+    //#region QUESTIONNAIRES
+    async testQuestionnaires(): Promise<void> {
+        const quiz = await this.testQuestionnaires_import();
+        this.log('QUESTIONNAIRES.imported: ', quiz);
+
+        let quizzes = await this.testQuestionnaires_all();
+        this.log('QUESTIONNAIRES: ', quizzes);
+        /*
+        const quiz = await this.testQuestionnaires_create();
+        this.log('QUESTIONNAIRES.created: ', quiz);
+
+        const quizEdited = await this.testQuestionnaires_edit(quiz)
+        this.log('QUIZ_EDITED: ', quizEdited);
+
+        const quizSearched = await this.commonServices.getQuestionnaireById(quizEdited.questionnaireId);
+        this.log('QUIZ.SEARCHEDBYID: ', quizSearched);
+
+        const quizDuplicated = await this.testQuestionnaires_duplicate(quizSearched);
+        this.log('QUIZ Origin, Duplicated ', quizDuplicated);
+        
+        let quizzes = await this.testQuestionnaires_all();
+        this.log('QUESTIONNAIRES: ', quizzes);
+
+        /*
+        await Promise.all(quizzes.map(async (quiz) => {
+            const quizDeleted = await this.testQuestionnaires_delete(quiz);
+            this.log('QUIZ Deleted: ', quizDeleted);
+        }));
+
+        quizzes = await this.testQuestionnaires_all();
+        this.log('QUESTIONNAIRES: ', quizzes);
+        */
+    }
+
+    private async testQuestionnaires_all(): Promise<QuestionnaireDTO[]> {
+        return await this.commonServices.getAllQuestionnaires();
+    }
+
+    private async testQuestionnaires_import(): Promise<QuestionnaireDTO[]> {
+        const importsQuestionnaire: QuestionnaireDTO[] = [];
+
+        const importPopularityData = {
+            "title": "Popularity Lorem ipsum dolor sit amet", "time": 120, 
+            "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "popularity",
+            "questionsCount": 2,
+            "questions": [
+                {
+                    "question": "question sit amet 1",
+                    "explanation": "explanation sit amet",
+                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "answers": [
+                        { "answer": "answer 1 sit amet", "isCorrect": true, "popular": 100 },
+                        { "answer": "answer 2 sit amet", "isCorrect": true, "popular": 75 },
+                        { "answer": "answer 3 sit amet", "isCorrect": true, "popular": 50 },
+                        { "answer": "answer 4 sit amet", "isCorrect": true, "popular": 25 },
+                        { "answer": "answer 5 sit amet", "isCorrect": false },
+                        { "answer": "answer 6 sit amet", "isCorrect": false },
+                    ]
+                },
+                {
+                    "question": "question sit amet 2",
+                    "explanation": "explanation sit amet",
+                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "answers": [
+                        { "answer": "answer 1 sit amet", "isCorrect": true, "popular": 100 },
+                        { "answer": "answer 2 sit amet", "isCorrect": true, "popular": 75 },
+                        { "answer": "answer 3 sit amet", "isCorrect": true, "popular": 50 },
+                        { "answer": "answer 4 sit amet", "isCorrect": true, "popular": 25 },
+                        { "answer": "answer 5 sit amet", "isCorrect": false },
+                        { "answer": "answer 6 sit amet", "isCorrect": false },
+                    ]
+                }
+            ]
+        };
+
+        const importQuestionarieData = {
+            "title": "Questionaries Lorem ipsum dolor sit amet", "time": 120, 
+            "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "questionaries",
+            "questionsCount": 2,
+            "questions": [
+                {
+                    "question": "question sit amet 1",
+                    "explanation": "explanation sit amet",
+                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "answers": [
+                        { "answer": "Hello", "isCorrect": true },
+                        { "answer": "Goodbye" },
+                        { "answer": "Thanks" },
+                        { "answer": "Yes" }
+                    ]
+                },
+                {
+                    "question": "question sit amet 2",
+                    "explanation": "explanation sit amet",
+                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "answers": [
+                        { "answer": "Hello" },
+                        { "answer": "Goodbye" },
+                        { "answer": "Thanks", "isCorrect": true },
+                        { "answer": "Yes" }
+                    ]
+                }
+            ]
+        };
+
+        const importSimpleData = {
+            "title": "Simple Lorem ipsum dolor sit amet", "time": 120, 
+            "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "simple",
+            "questionsCount": 2,
+            "questions": [
+                {
+                    "question": "question sit amet 1",
+                    "answer": "Es la persona, animal, cosa o idea que realiza la acción o de la que se dice algo.",
+                    "explanation": "explanation sit amet",
+                    "tags": [ "tag1", "tag2", "tag3", "tag4" ]
+                },
+                {
+                    "question": "question sit amet 2",
+                    "answer": "Es la persona, animal, cosa o idea que realiza la acción o de la que se dice algo.",
+                    "explanation": "explanation sit amet",
+                    "tags": [ "tag1", "tag2", "tag3", "tag4" ]
+                },
+            ]
+        };
+
+        const importTrueFalseData = {
+            "title": "true-false Lorem ipsum dolor sit amet", "time": 120, 
+            "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "true-false",
+            "questionsCount": 2,
+            "questions": [
+                {
+                    "question": "question sit amet 1",
+                    "explanation": "explanation sit amet",
+                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "answers": [
+                        { "answer": "Verdadero", "isCorrect": true },
+                        { "answer": "Falso", "isCorrect": false }
+                    ]
+                },
+                {
+                    "question": "question sit amet 2",
+                    "explanation": "explanation sit amet",
+                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "answers": [
+                        { "answer": "Verdadero", "isCorrect": true },
+                        { "answer": "Falso", "isCorrect": false }
+                    ]
+                }
+            ]
+        };
+
+        const _popularityData = normalizeQuestionnaireDTO((importPopularityData as QuestionnaireDTO));
+        const _popularityDb = await this.commonServices.saveQuestionnaire(_popularityData);
+        importsQuestionnaire.push(_popularityDb);
+
+        const _questionnaireData = normalizeQuestionnaireDTO((importQuestionarieData as QuestionnaireDTO));
+        const _questionnaireDb = await this.commonServices.saveQuestionnaire(_questionnaireData);
+        importsQuestionnaire.push(_questionnaireDb);
+
+        const _simpleData = normalizeQuestionnaireDTO((importSimpleData as QuestionnaireDTO));
+        const _simpleDb = await this.commonServices.saveQuestionnaire(_simpleData);
+        importsQuestionnaire.push(_simpleDb);
+
+        const _trueFalseData = normalizeQuestionnaireDTO((importTrueFalseData as QuestionnaireDTO));
+        const _trueFalseDb = await this.commonServices.saveQuestionnaire(_trueFalseData);
+        importsQuestionnaire.push(_trueFalseDb);
+
+        return importsQuestionnaire;
+    }
+
+    private async testQuestionnaires_create(): Promise<QuestionnaireDTO> {
+        const data = getQuestionnaireDTO('sample', 0);
+        const question = getQuestionDTO('question 1', null, 'explanation', 'hist');
+        question.answers = [
+            getAnswerDTO('answer 1', 1, 100),
+            getAnswerDTO('answer 2', 2),
+            getAnswerDTO('answer 3', 3),
+            getAnswerDTO('answer 4', 4),
+        ];
+        question.answers[2].isCorrect = true;
+        data.questions = [question, question];
+
+        const _data = normalizeQuestionnaireDTO(data);
+        return await this.commonServices.saveQuestionnaire(_data);
+    }
+
+    private async testQuestionnaires_edit(data: QuestionnaireDTO): Promise<QuestionnaireDTO> {
+        this.log('Questionnaire.ORIGINAL: ', data);
+        data.title = `dummy exam #${data.questionnaireId}`;
+        const question = getQuestionDTO('question 1', null, 'explanation', 'hist');
+
+        question.answers = [
+            getAnswerDTO('answer 1', 1, 100),
+            getAnswerDTO('answer 2', 2),
+            getAnswerDTO('answer 3', 3),
+            getAnswerDTO('answer 4', 4),
+        ];
+        question.answers[1].isCorrect = true;
+        (data.questions as QuestionDTO[]).push(question);
+        console.log('data: ', data);
+
+        const _data = normalizeQuestionnaireDTO(data);
+
+        return await this.commonServices.saveQuestionnaire(_data);
+    }
+
+    private async testQuestionnaires_duplicate(data: QuestionnaireDTO): Promise<QuestionnaireDTO> {
+        return await this.commonServices.duplicateQuestionnaire(data.questionnaireId);
+    }
+
+    private async testQuestionnaires_delete(data: QuestionnaireDTO): Promise<QuestionnaireDTO> {
+        return await this.commonServices.deleteQuestionnaire(data.questionnaireId);
+    }
+    //#endregion QUESTIONNAIRES
+
+    //#region ATTEMPTSQUESTIONNAIRES
+    async testAttemptQuestionnaires(): Promise<void> {
+        let quizzes = await this.testQuestionnaires_all();
+        this.log('QUESTIONNAIRES: ', quizzes);
+
+        if (!quizzes.length) {
+            return;
+        }
+
+        // get all attempts
+        let attempts = await this.commonServices.getAllAttemptQuestionnaires();
+        this.log('ATTEMPT.current', attempts);
+
+        // create new attempt
+        const attempt = await this.testAttempttestQuestionnaire_createAttempt(quizzes[0].questionnaireId);
+        this.log('ATTEMPT.created', attempt);
+
+        const attemptEdited = await this.testAttempttestQuestionnaire_editAttempt(attempt.attemptId);
+        this.log('ATTEMPT.edited', attemptEdited);
+
+        const solved = await this.testAttempttestQuestionnaire_solveAttempts(quizzes[0].questionnaireId);
+        this.log('ATTEMPT.solved', solved);
+
+        // get all attempts
+        attempts = await this.commonServices.getAllAttemptQuestionnaires();
+        this.log('ATTEMPT.current', attempts);
+
+        await Promise.all(attempts.map(async (att) => {
+            const attemptDelete = await this.testAttempttestQuestionnaire_deleteAttempt(att.attemptId);
+            this.log('ATTEMPT.deleted', attemptDelete);
+        }));
+
+        // get all attempts
+        attempts = await this.commonServices.getAllAttemptQuestionnaires();
+        this.log('ATTEMPT.current', attempts);
+        /**/
+    }
+
+    private async testAttempttestQuestionnaire_createAttempt(quizId: number): Promise<AttemptQuestDTO> {
+        const questionarie = await this.commonServices.getQuestionnaireById(quizId);
+        const attempt = getAttemptQuestDTO(questionarie, 1);
+        const response = await this.commonServices.saveAttemptQuestionnaire(attempt);
+        const attemptSaved = await this.commonServices.getAttemptQuestionnaireById(response.attemptId);
+        return attemptSaved;
+    }
+
+    private async testAttempttestQuestionnaire_editAttempt(attemptId: number): Promise<AttemptQuestDTO> {
+        const attempt = await this.commonServices.getAttemptQuestionnaireById(attemptId);
+        attempt.title = `Attemp edited  ${new Date().getTime()}`;
+        attempt.state = AttemptState.progress;
+        attempt.updatedDate = new Date().getTime();
+
+        (attempt.questions as QuestionDTO[]).map((question, index) => {
+            question._answerSelected = 100;
+            question.isCorrect = true;
+            question.answers.map((ans, idx) => {
+                ans.answer = 'Edited answer';
+                return ans;
+            })
+            return question;
+        })
+        const response = await this.commonServices.saveAttemptQuestionnaire(attempt);
+        const attemptSaved = await this.commonServices.getAttemptQuestionnaireById(response.attemptId);
+        return attemptSaved;
+    }
+
+    private async testAttempttestQuestionnaire_solveAttempts(questionnaireId: number): Promise<any> {
+        // explore questions
+        let questionnaire = await this.commonServices.getQuestionnaireById(questionnaireId);
+        const attemptsSolved: AttemptQuestDTO[] = [];
+
+        const total = questionnaire.questions.length;
+        const failing = Math.round(total * 0.20);
+        const passing = Math.round(total * 0.60);
+        const passing_aceptable = Math.round(total * 0.80);
+        const passing_perfect = Math.round(total * 1.00);
+
+        // Solve attempt randomly
+        const attemptRandom = await this._solveAttempttestQuestionnaireId(questionnaireId, 0);
+        attemptsSolved.push(attemptRandom);
+
+        // Solve at failing
+        const attemptFailing = await this._solveAttempttestQuestionnaireId(questionnaireId, failing);
+        attemptsSolved.push(attemptFailing);
+
+        // Solve at passing
+        const attemptPassing = await this._solveAttempttestQuestionnaireId(questionnaireId, passing);
+        attemptsSolved.push(attemptPassing);
+
+        // Solve at passing_aceptable
+        const attemptPassingAceptable = await this._solveAttempttestQuestionnaireId(questionnaireId, passing_aceptable);
+        attemptsSolved.push(attemptPassingAceptable);
+
+        // Solve at passing_perfect
+        const attemptPassingPerfect = await this._solveAttempttestQuestionnaireId(questionnaireId, passing_perfect);
+        attemptsSolved.push(attemptPassingPerfect);
+
+        return attemptsSolved;
+    }
+
+    private async _solveAttempttestQuestionnaireId(questionnaireId: number, successes: number): Promise<AttemptQuestDTO> {
+        const resolveRandom = successes === 0;
+        const correctQuestions = [];
+        const attempt = await this.testAttempttestQuestionnaire_createAttempt(questionnaireId);
+        attempt.state = AttemptState.progress;
+        (attempt.questions as QuestionDTO[]).map(ans => {
+            if (resolveRandom) {
+                const idxOpt = this.getRandomIndex(ans.answers);
+                ans._answerSelected = ans.answers[idxOpt].answerId;
+            } else {
+                const correct = ans.answers.find(opt => opt.isCorrect);
+                const incorrect = ans.answers.find(opt => !opt.isCorrect);
+
+                if (correctQuestions.length < successes) {
+                    ans._answerSelected = correct.answerId;
+                    correctQuestions.push(ans);
+                } else {
+                    ans._answerSelected = incorrect.answerId;
+                }
+            }
+            return ans;
+        });
+        let attemptUpdated = await this.commonServices.saveAttemptQuestionnaire(attempt);
+        const result = await this.commonServices.evalueAttemptQuestionnaireById(attemptUpdated.attemptId);
+        console.log('ATTEMPT.solved: ', result);
+        return result;
+    }
+
+    private async testAttempttestQuestionnaire_deleteAttempt(attemptId: number): Promise<AttemptQuestDTO> {
+        return await this.commonServices.deleteAttemptQuestionnaire(attemptId);
+    }
+    //#endregion ATTEMPTSQUESTIONNAIRES
+
 
     //#region QUIZ
 
@@ -360,7 +710,6 @@ export class CommonServicesTesting {
     //#endregion QUIZ
 
     //#region ATTEMPTS
-
     async testAttempts(): Promise<void> {
 
         // await Promise.all(quizzes.map(async (quiz) => {
@@ -472,7 +821,7 @@ export class CommonServicesTesting {
                 const correct = ans.options.find(opt => opt.isCorrect);
                 const incorrect = ans.options.find(opt => !opt.isCorrect);
 
-                if(correctQuestions.length < successes) {
+                if (correctQuestions.length < successes) {
                     ans.selectedOptionId = correct.optionId;
                     correctQuestions.push(ans);
                 } else {
@@ -528,12 +877,14 @@ export class CommonServicesTesting {
     async runAll(): Promise<void> {
         this.log('=== BEGIN COMMON SERVICES TEST ===');
         await this.testStructure();
-        await this.testLogs();
-        await this.testThemes();
-        await this.testSettings();
-        await this.testUsers();
-        await this.testQuizes();
-        await this.testAttempts();
+        await this.testQuestionnaires();
+        // await this.testAttemptQuestionnaires();
+        // await this.testLogs();
+        // await this.testThemes();
+        // await this.testSettings();
+        // await this.testUsers();
+        // await this.testQuizes();
+        // await this.testAttempts();
 
         // await this.testNavigate();
         this.log('=== END COMMON SERVICES TEST ===');

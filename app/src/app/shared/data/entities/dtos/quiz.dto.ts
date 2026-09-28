@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import { AttemptState, GradeState } from '../../enumerables/enumerables';
 import { TransformData } from '../../utils/transformData';
 
 const transform = new TransformData();
@@ -90,20 +91,6 @@ export interface AttemptAnswerDTO extends QuizAnswerDTO {
 
   // options?: QuizAnswerOptionDTO[]; this field exist in QuizAnswerDTO
 }
-
-export enum AttemptState {
-  new = 'new',
-  progress = 'progress',
-  completed = 'completed'
-}
-
-export enum GradeState {
-  perfect = 'perfect',
-  passed = 'passed',
-  failed = 'failed',
-  barely_passed = 'barely_passed',
-  not_submitted = 'not_submitted',
-}
 //#endregion INTERFACES
 
 // #region INITIALIZE
@@ -179,7 +166,7 @@ export function normalizeQuizDTO(quiz: QuizDTO): QuizDTO {
       option.optionIndex = idxOptions + 1;
       option.content = option.content ? option.content.trim() : '';
       option.isCorrect = option.isCorrect ? true : false;
-      
+
       // Generated
       option._selected = option.isCorrect ? true : false;
     });
@@ -355,7 +342,7 @@ export function normalizeAttemptDTO(attempt: AttemptDTO): AttemptDTO {
     attempt.correctAnswers = correctAnswer.length;
     attempt.grade = getGrade(attempt);
   }
-  
+
   return attempt;
 }
 
@@ -365,7 +352,7 @@ export function getGrade(attempt: AttemptDTO) {
   const passing = Math.round(total * 0.60);
   const passing_aceptable = Math.round(total * 0.80);
   const passing_perfect = Math.round(total * 1.00);
-  
+
   const correctAnswer = attempt.answers.filter(ans => ans.isCorrect).length;
   if (correctAnswer <= failing) {
     return GradeState.failed;

@@ -6,10 +6,14 @@ import {
     attempt_table_querys,
     AttemptAnswerDTO,
     AttemptDTO,
+    AttemptQuestDTO,
     language_table_querys,
     LanguageDTO,
     log_table_querys,
     LogDTO,
+    questionnaire_attempts_table_querys,
+    questionnaire_table_querys,
+    QuestionnaireDTO,
     quiz_answer_option_table_querys,
     quiz_answer_table_querys,
     quiz_table_querys,
@@ -208,6 +212,8 @@ export class DatabaseService {
                 user_table_querys.createTable.query,
                 settings_table_querys.createTable.query,
                 theme_table_querys.createTable.query,
+                questionnaire_table_querys.createTable.query,
+                questionnaire_attempts_table_querys.createTable.query,
                 quiz_table_querys.createTable.query,
                 quiz_answer_table_querys.createTable.query,
                 quiz_answer_option_table_querys.createTable.query,
@@ -244,6 +250,8 @@ export class DatabaseService {
                 quiz_answer_option_table_querys.deleteTable.query,
                 quiz_answer_table_querys.deleteTable.query,
                 quiz_table_querys.deleteTable.query,
+                questionnaire_table_querys.deleteTable.query,
+                questionnaire_attempts_table_querys.deleteTable.query,
                 language_table_querys.deleteTable.query,
                 theme_table_querys.deleteTable.query,
                 settings_table_querys.deleteTable.query,
@@ -453,6 +461,131 @@ export class DatabaseService {
         return await this.executeActionSQL(theme_table_querys.deleteById.query, [id]);
     }
     //#endregion
+
+    //#region Questionnaires (questionnaire_table)
+    async getAllQuestionnaires(): Promise<QuestionnaireDTO[]> {
+        this.origin = `getAllQuestionnaires()`;
+        return await this.executeActionSQL(questionnaire_table_querys.selectAll.query);
+    }
+
+    async getQuestionnaireById(id: number): Promise<QuestionnaireDTO> {
+        this.origin = `getQuestionnaireById(${id})`;
+        try {
+            const result = await this.executeActionSQL(questionnaire_table_querys.selectByIdWithRelations.query, [id]);
+
+            if (result && result.length > 0) {
+                const response = result[0];
+                return response;
+            }
+            return null;
+        } catch (error) {
+            console.error('Error al mapear el Questionnaire completo:', error);
+            return null;
+        }
+    }
+
+    async saveQuestionnaire(data: QuestionnaireDTO): Promise<QuestionnaireDTO> {
+        this.origin = `saveQuestionnaire(${JSON.stringify(data)})`;
+        let response: QuestionnaireDTO = null;
+        if (!data.questionnaireId) {
+            response = await this._postQuestionnaire(data);
+        } else {
+            response = await this._putQuestionnaire(data);
+        }
+        return response;
+    }
+
+    private async _postQuestionnaire(data: QuestionnaireDTO): Promise<QuestionnaireDTO> {
+        this.origin = `_postQuestionnaire(${JSON.stringify(data)})`;
+        const request = [data.uuid, data.title, data.time, data.tags, data.type, data.creationDate, data.updatedDate, data.questionsCount, data.questions]
+        const response = await this.executeActionSQL(questionnaire_table_querys.post.query, request);
+        return response && response.length ? response[0] : null;
+    }
+
+    private async _putQuestionnaire(data: QuestionnaireDTO): Promise<QuestionnaireDTO> {
+        this.origin = `_putQuestionnaire(${JSON.stringify(data)})`;
+        const request = [data.questionnaireId ?? null, data.uuid, data.title, data.time, data.tags, data.type, data.creationDate, data.updatedDate, data.questionsCount, data.questions]
+        const response = await this.executeActionSQL(questionnaire_table_querys.put.query, request);
+        return response && response.length ? response[0] : null;
+    }
+
+    async deleteQuestionnaire(id: number): Promise<QuestionnaireDTO> {
+        this.origin = `deleteQuestionnaire(${id})`;
+        const response = await this.executeActionSQL(questionnaire_table_querys.deleteById.query, [id]);
+        return response && response.length ? response[0] : null;
+    }
+    //#endregion
+
+    //#region AttemptQuestionnaires (questionnaire_attempts_table)
+    async getAllAttemptQuestionnaires(): Promise<AttemptQuestDTO[]> {
+        this.origin = `getAllAttemptQuestionnaires()`;
+        return await this.executeActionSQL(questionnaire_attempts_table_querys.selectAll.query);
+    }
+
+    async getAttemptByQuestionnaireId(quizId: number): Promise<AttemptQuestDTO[]> {
+        this.origin = `getAttemptByQuestionnaireId(${quizId})`;
+        try {
+            const response = await this.executeActionSQL(questionnaire_attempts_table_querys.selectByQuestionnaireId.query, [quizId]);
+
+            if (response && response.length > 0) {
+                return response;
+            }
+            return [];
+        } catch (error) {
+            console.error('Error al mapear el Questionnaire completo:', error);
+            return null;
+        }
+    }
+
+    async getAttemptQuestionnaireById(attemptId: number): Promise<AttemptQuestDTO> {
+        this.origin = `getAttemptQuestionnaireById(${attemptId})`;
+        try {
+            const response = await this.executeActionSQL(questionnaire_attempts_table_querys.selectByAttemptId.query, [attemptId]);
+
+            if (response && response.length > 0) {
+                return response[0];
+            }
+            return null;
+        } catch (error) {
+            console.error('Error al mapear el Questionnaire completo:', error);
+            return null;
+        }
+    }
+
+    async saveAttemptQuestionnaire(attempt: AttemptQuestDTO): Promise<AttemptQuestDTO> {
+        this.origin = `saveAttemptQuestionnaire(${JSON.stringify(attempt)})`;
+        let response: AttemptQuestDTO = null;
+        if (!attempt.attemptId) {
+            response = await this._postAttemptQuestionnaire(attempt);
+        } else {
+            response = await this._putAttemptQuestionnaire(attempt);
+        }
+        return response;
+    }
+
+    private async _postAttemptQuestionnaire(attempt: AttemptQuestDTO): Promise<AttemptQuestDTO> {
+        this.origin = `_postAttemptQuestionnaire(${JSON.stringify(attempt)})`;
+        const request = [ attempt.questionnaireId, attempt.userId, attempt.title, attempt.time, attempt.tags, attempt.type, attempt.score, attempt.state, attempt.creationDate, attempt.updatedDate, attempt.questionsCount, attempt.questions ]; 
+        console.log('request: ', request);
+        const response = await this.executeActionSQL(questionnaire_attempts_table_querys.post.query, request);
+        return response && response.length ? response[0] : null;
+    }
+
+    private async _putAttemptQuestionnaire(attempt: AttemptQuestDTO): Promise<AttemptQuestDTO> {
+        this.origin = `_putAttemptQuestionnaire(${JSON.stringify(attempt)})`;
+        const request = [ attempt.attemptId ?? null, attempt.questionnaireId, attempt.userId, attempt.title, attempt.time, attempt.tags, attempt.type, attempt.score, attempt.state, attempt.creationDate, attempt.updatedDate, attempt.questionsCount, attempt.questions ]; 
+        console.log('request: ', request);
+        const response = await this.executeActionSQL(questionnaire_attempts_table_querys.put.query, request);
+        return response && response.length ? response[0] : null;
+    }
+
+    async deleteAttemptQuestionnaire(attemptId: number): Promise<AttemptQuestDTO> {
+        this.origin = `deleteAttemptQuestionnaire(${attemptId})`;
+        const response = await this.executeActionSQL(questionnaire_attempts_table_querys.deleteById.query, [attemptId]);
+        return response && response.length ? response[0] : null;
+    }
+    //#endregion
+
 
     //#region Quizzes (quiz_table)
     async getAllQuizzes(): Promise<QuizDTO[]> {

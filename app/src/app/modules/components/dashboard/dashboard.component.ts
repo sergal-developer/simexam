@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { BookCheck, icons } from 'lucide';
-import { AttemptDTO, AttemptState, PermissionsDTO, QuizAnswerDTO, QuizDTO, SettingsDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
+import { icons } from 'lucide';
+import { AttemptDTO, PermissionsDTO, QuizAnswerDTO, QuizDTO, SettingsDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
+import { AttemptState } from 'src/app/shared/data/enumerables/enumerables';
 import { TransformData } from 'src/app/shared/data/utils/transformData';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';

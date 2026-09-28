@@ -58,3 +58,24 @@ export enum GamesStatus {
     progress = 'progress',
     completed = 'completed',
 }
+
+export enum AttemptState {
+  new = 'new',
+  progress = 'progress',
+  completed = 'completed'
+}
+
+export enum GradeState {
+  perfect = 'perfect',
+  passed = 'passed',
+  failed = 'failed',
+  barely_passed = 'barely_passed',
+  not_submitted = 'not_submitted',
+}
+
+export enum QuizType {
+  questionaries = 'questionaries',
+  simple = 'simple',
+  ['true-false'] = 'true-false',
+  popularity = 'popularity',
+}

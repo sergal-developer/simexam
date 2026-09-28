@@ -1,372 +1,257 @@
 import { v4 as uuidv4 } from 'uuid';
+import { AttemptState, GradeState, QuizType } from '../../enumerables/enumerables';
 import { TransformData } from '../../utils/transformData';
 
 const transform = new TransformData();
 
 //#region INTERFACES
-export interface QuizDTO {
-  quizId: number;
+export interface QuestionnaireDTO {
+  questionnaireId: number;
   uuid?: string;
   title: string;
   time: number;
+  tags: string[] | string;
+  type: QuizType;
   creationDate?: number;
   updatedDate?: number;
-  startDate?: number;
 
   // GENERATED
-  answers?: QuizAnswerDTO[];
+  questionsCount?: number;
+  questions?: string | QuestionDTO[];
 
-  // varaibles for UI and format
-  _showDetails?: boolean;
-  _status?: string;
-  _current?: boolean;
+  // variables for UI and format
   _creationDate?: string;
   _updatedDate?: string;
-  _startDate?: string;
-  _attemptsValue?: string;
-  _bestTimeValue?: string;
 }
 
-export interface QuizAnswerDTO {
-  answerId?: number;
-  quizId?: number;
-  title: string;
-  updatedDate: number;
+export interface QuestionDTO {
+  questionId?: number;
+  question: string;
+  answer?: string;
+  explanation?: string;
+  hint?: string;
+  tags: string[];
+  isCorrect?: boolean;
 
   // GENERATED
-  options?: QuizAnswerOptionDTO[];
-  _currentOption?: number | null;
-  _answerText?: string | null;
+  answers?: AnswerDTO[];
 
-  _selectedAnswer?: number | string;
-  _isEvaluated?: boolean;
+  // variables for UI and format
+  _answerSelected?: number;
   _isCorrect?: boolean;
 }
 
-export interface QuizAnswerOptionDTO {
-  optionId?: number;
-  answerId: number;
-  content: string;
-  optionIndex: number;
-  updatedDate: number;
+export interface AnswerDTO {
+  answerId?: number;
+  answer: string;
   isCorrect: boolean;
+  popular?: number;
 
   // GENERATED
   _selected?: boolean;
-  _chosenAnswer?: boolean; // @Param: se eleciona cuando el usuario eluje la respuesta en la interfaz
 }
 
-export interface AttemptDTO extends QuizDTO {
+export interface AttemptQuestDTO extends QuestionnaireDTO {
   attemptId?: number;
-  // quizId: number; the filed exist in QuizDTO
+  // questionnaireId: number; /** field into QuestionnaireDTO */
   userId: number;
-  title: string;
-  updatedDate: number;
-  startDate?: number;
+  // title: string; /** field into QuestionnaireDTO */
+  // time: number; /** field into QuestionnaireDTO */
+  // tags: string[] | string; /** field into QuestionnaireDTO */
+  // type: QuizType; /** field into QuestionnaireDTO */
   score: number;
   state: AttemptState;
-  time: number;
-  answersLinked: string;
+  // creationDate?: number; /** field into QuestionnaireDTO */
+  // updatedDate?: number; /** field into QuestionnaireDTO */
+  // questionsCount?: number; /** field into QuestionnaireDTO */
+  // questions?: string | QuestionDTO[]; /** field into QuestionnaireDTO */
 
-  // GENERATED
-  answers?: AttemptAnswerDTO[];
-  timeEnlapsed?: number;
-  correctAnswers?: number;
-  validTotalAnswers?: number;
-  grade?: GradeState;
-  _updatedDate?: string;
-  _startDate?: string;
+  // variables for UI and format 
+  // _creationDate?: string; /** field into QuestionnaireDTO */
+  // _updatedDate?: string; /** field into QuestionnaireDTO */
+  _correctQuestions?: number;
+  _grade?: GradeState;
   _score?: string;
-}
-
-export interface AttemptAnswerDTO extends QuizAnswerDTO {
-  answerAttemptId?: number;
-  attemptId: number;
-  //answerId: number; this field exist in QuizAnswerDTO
-  selectedOptionId?: number;
-  isCorrect: boolean;
-  title: string;
-  optionsLinked: string;
-
-  // options?: QuizAnswerOptionDTO[]; this field exist in QuizAnswerDTO
-}
-
-export enum AttemptState {
-  new = 'new',
-  progress = 'progress',
-  completed = 'completed'
-}
-
-export enum GradeState {
-  perfect = 'perfect',
-  passed = 'passed',
-  failed = 'failed',
-  barely_passed = 'barely_passed',
-  not_submitted = 'not_submitted',
 }
 //#endregion INTERFACES
 
 // #region INITIALIZE
-export function getQuizDTO(title: string, time: number): QuizDTO {
-  return {
-    quizId: null,
+export function getQuestionnaireDTO(title: string, time: number): QuestionnaireDTO {
+  const item = {
+    questionnaireId: null,
     uuid: uuidv4(),
     title: title,
     time: time,
+    tags: [],
     creationDate: new Date().getTime(),
     updatedDate: new Date().getTime(),
-    startDate: new Date().getTime(),
-
-    answers: [],
-    _showDetails: false,
-    _status: '',
-    _current: false,
+    questionsCount: 0,
+    questions: [],
     _creationDate: '',
     _updatedDate: '',
-    _startDate: '',
-    _attemptsValue: '',
-    _bestTimeValue: ''
-  } as QuizDTO;
-}
-
-export function getQuizAnswerDTO(title: string): QuizAnswerDTO {
-  return {
-    answerId: null,
-    quizId: null,
-    title: title,
-    updatedDate: new Date().getTime(),
-
-    options: [],
-    _currentOption: null,
-    _answerText: null,
-    _selectedAnswer: '',
-    _isEvaluated: false,
-    _isCorrect: false,
-  } as QuizAnswerDTO;
-}
-
-export function getQuizAnswerOptionDTO(content: string, optionIndex: number): QuizAnswerOptionDTO {
-  return {
-    optionId: null,
-    answerId: null,
-    content: content,
-    optionIndex: optionIndex,
-    updatedDate: new Date().getTime(),
-    isCorrect: false,
-
-    _selected: false
-  } as QuizAnswerOptionDTO;
-}
-
-export function normalizeQuizDTO(quiz: QuizDTO): QuizDTO {
-  quiz._attemptsValue = quiz._attemptsValue ?? '-';
-  quiz._bestTimeValue = quiz._bestTimeValue ?? '-';
-  quiz._creationDate = quiz.creationDate ? transform.toDate(new Date(quiz.creationDate), 'MMM/d/yy h:mm a') : '-';
-  quiz._updatedDate = quiz.updatedDate ? transform.toDate(new Date(quiz.updatedDate), 'MMM/d/yy h:mm a') : '-';
-  quiz._startDate = quiz.startDate ? transform.toDate(new Date(quiz.startDate), 'MMM/d/yy h:mm a') : '-';
-
-  quiz.answers = quiz.answers || [];
-  quiz.answers.map((answer, idxAnswer) => {
-    answer.answerId = answer.answerId || null;
-    answer.quizId = quiz.quizId || null;
-    answer._answerText = `${idxAnswer + 1}`;
-    answer.title = answer.title ? answer.title.trim() : '';
-
-    answer.options = answer.options || [];
-    answer.options.map((option, idxOptions) => {
-      option.answerId = answer.answerId || null;
-      option.optionId = option.optionId || null;
-      option.optionIndex = idxOptions + 1;
-      option.content = option.content ? option.content.trim() : '';
-      option.isCorrect = option.isCorrect ? true : false;
-      
-      // Generated
-      option._selected = option.isCorrect ? true : false;
-    });
-  });
-
-  return quiz;
-}
-
-export function getQuizDTOValid(quiz: QuizDTO): { quiz: QuizDTO, answers: QuizAnswerDTO[], answerOptions: QuizAnswerOptionDTO[] } {
-  const _quiz: QuizDTO = {
-    quizId: quiz.quizId,
-    uuid: quiz.uuid,
-    title: quiz.title,
-    time: quiz.time || 0,
-    creationDate: quiz.creationDate,
-    updatedDate: quiz.updatedDate,
-    startDate: quiz.startDate || 0,
   };
-  const answers = [];
-  const answerOptions = [];
-
-  quiz._attemptsValue = quiz._attemptsValue ?? '-';
-  quiz._bestTimeValue = quiz._bestTimeValue ?? '-';
-  quiz._creationDate = quiz.creationDate ? transform.toDate(new Date(quiz.creationDate), 'MMM/d/yy h:mm a') : '-';
-  quiz._updatedDate = quiz.updatedDate ? transform.toDate(new Date(quiz.updatedDate), 'MMM/d/yy h:mm a') : '-';
-  quiz._startDate = quiz.startDate ? transform.toDate(new Date(quiz.startDate), 'MMM/d/yy h:mm a') : '-';
-
-  quiz.answers = quiz.answers || [];
-  quiz.answers.map((answer, idxAnswer) => {
-    answer.answerId = answer.answerId || null;
-    answer.quizId = quiz.quizId || null;
-    answer._answerText = `${idxAnswer + 1}`;
-    answer.title = answer.title ? answer.title.trim() : '';
-    if (answer.title != '') {
-      answers.push(answer);
-    }
-
-    answer.options = answer.options || [];
-    answer.options.map((option, idxOptions) => {
-      option.answerId = answer.answerId || null;
-      option.optionId = option.optionId || null;
-      option.optionIndex = idxOptions + 1;
-      option.content = option.content ? option.content.trim() : '';
-
-      if (option.content != '') {
-        answerOptions.push(option);
-      }
-
-    });
-  });
-
-  return { quiz: _quiz, answers: answers, answerOptions: answerOptions };
+  return item as QuestionnaireDTO;
 }
 
-export function getAttemptDTO(quizId: number, userId: number, title: string, answers: QuizAnswerDTO[]): AttemptDTO {
-  const attemptAnswers = answers ? answers.map(ans => {
-    let item: AttemptAnswerDTO = getAttemptAnswerDTO(ans);
+export function getQuestionDTO(question: string, answer?: string, explanation?: string, hint?: string): QuestionDTO {
+  const item = {
+    questionId: null,
+    question: question,
+    answer: answer,
+    explanation: explanation,
+    hint: hint,
+    tags: [],
+    answers: [],
+    _answerSelected: null,
+    _isCorrect: null,
+  };
+  return item as QuestionDTO;
+}
+
+export function getAnswerDTO(answer: string, index: number, popular?: number): AnswerDTO {
+  const item = {
+    answerId: index,
+    answer: answer,
+    isCorrect: false,
+    popular: popular,
+    _selected: false
+  };
+  return item as AnswerDTO;
+}
+
+export function getAttemptQuestDTO(questionnaire: QuestionnaireDTO, userId: number): AttemptQuestDTO {
+  if (typeof questionnaire.tags == 'string') {
+    questionnaire.tags = JSON.parse(questionnaire.tags);
+  }
+
+  if (typeof questionnaire.questions == 'string') {
+    questionnaire.questions = JSON.parse(questionnaire.questions);
+  }
+
+  const _questions = questionnaire.questions ? (questionnaire.questions as QuestionDTO[]).map(question => {
+    let item: QuestionDTO = question;
     return item;
   }) : [];
 
-  return {
-    attemptId: null,
-    quizId: quizId,
+  const item = {
+    ...questionnaire,
+    questionnaireId: questionnaire.questionnaireId,
     userId: userId,
-    title: title,
-    updatedDate: new Date().getTime(),
-    startDate: new Date().getTime(),
     score: 0,
     state: AttemptState.new,
-    time: 0,
-    answers: attemptAnswers,
-    answersLinked: JSON.stringify(attemptAnswers),
-    timeEnlapsed: 0,
-    correctAnswers: 0,
-    validTotalAnswers: 0,
-    grade: null,
-    _updatedDate: '',
-    _startDate: '',
-  } as AttemptDTO;
-}
-
-export function getAttemptAnswerDTO(answer: QuizAnswerDTO): AttemptAnswerDTO {
-  return {
-    answerAttemptId: null,
-    attemptId: null,
-    answerId: answer.answerId,
-    selectedOptionId: null,
-    isCorrect: false,
-    title: answer.title,
-    options: answer.options,
-    optionsLinked: JSON.stringify(answer.options),
-  } as AttemptAnswerDTO;
-}
-
-export function getAttemptDTOValid(attempt: AttemptDTO): { attempt: AttemptDTO, answers: AttemptAnswerDTO[] } {
-  const _attempt: AttemptDTO = {
-    attemptId: attempt.attemptId,
-    quizId: attempt.quizId,
-    userId: attempt.userId,
-    title: attempt.title,
-    updatedDate: attempt.updatedDate,
-    startDate: attempt.startDate || null,
-    score: attempt.score || 0,
-    state: attempt.state || AttemptState.new,
-    time: attempt.time || 0,
-    answersLinked: '',
+    _correctAnswers: null,
+    _grade: GradeState.not_submitted,
+    _score: ''
   };
-  const answers: AttemptAnswerDTO[] = [];
 
-  // generated
-  _attempt.timeEnlapsed = attempt.timeEnlapsed || 0,
-    _attempt.correctAnswers = attempt.correctAnswers || 0,
-    _attempt.validTotalAnswers = attempt.validTotalAnswers || 0,
-    _attempt.grade = attempt.grade || attempt.state == AttemptState.new || _attempt.state == AttemptState.progress ? GradeState.not_submitted : null,
-    _attempt._updatedDate = attempt.updatedDate ? transform.toDate(new Date(_attempt.updatedDate), 'MMM/d/yy h:mm a') : '-';
-  _attempt._startDate = attempt.startDate ? transform.toDate(new Date(_attempt.startDate), 'MMM/d/yy h:mm a') : '-';
-
-  _attempt.answers = attempt.answers || [],
-    _attempt.answers.map((answer, idxAnswer) => {
-      answer.answerAttemptId = answer.answerAttemptId || null;
-      answer.attemptId = _attempt.attemptId || null;
-      answer.answerId = answer.answerId;
-      answer.selectedOptionId = answer.selectedOptionId || null;
-      answer.isCorrect = answer.isCorrect || false;
-      answer.title = answer.title ? answer.title.trim() : '';
-      answer.optionsLinked = answer.optionsLinked || '';
-
-      //Generated 
-      answer.options = answer.options || answer.options;
-      answer._answerText = `${idxAnswer + 1}`;
-      if (answer.title != '') {
-        answers.push(answer);
-      }
-
-      answer.optionsLinked = JSON.stringify(answer.options);
-    });
-  // _attempt.answersLinked = JSON.stringify(_attempt.answers);
-  _attempt.answersLinked = '';
-
-  return { attempt: _attempt, answers: answers };
+  console.log('NEW.AttemptQuestDTO: ', item);
+  return item as AttemptQuestDTO;
 }
 
-export function normalizeAttemptDTO(attempt: AttemptDTO): AttemptDTO {
-  attempt.timeEnlapsed = attempt.timeEnlapsed || 0;
-  attempt.correctAnswers = attempt.correctAnswers || 0;
-  attempt.validTotalAnswers = attempt.validTotalAnswers || 0;
-  attempt.grade = attempt.grade || GradeState.not_submitted;
+export function normalizeQuestionnaireDTO(data: QuestionnaireDTO): QuestionnaireDTO {
+  data.creationDate = data.creationDate || new Date().getTime();
+  data.updatedDate = data.updatedDate || new Date().getTime();
+  data._creationDate = data.creationDate ? transform.toDate(new Date(data.creationDate), 'MMM/d/yy h:mm a') : '-';
+  data._updatedDate = data.updatedDate ? transform.toDate(new Date(data.updatedDate), 'MMM/d/yy h:mm a') : '-';
+  data.type = data.type || QuizType.questionaries;
 
-  attempt._updatedDate = attempt.updatedDate ? transform.toDate(new Date(attempt.updatedDate), 'MMM/d/yy h:mm a') : '-';
-  attempt._startDate = attempt.startDate ? transform.toDate(new Date(attempt.startDate), 'MMM/d/yy h:mm a') : '-';
+  if (typeof data.tags == 'string') {
+    data.tags = JSON.parse(data.tags);
+  }
 
-  attempt.answers = attempt.answers || [];
-  attempt.answers.map((answer, idxAnswer) => {
-    answer.answerAttemptId = answer.answerAttemptId || null;
-    answer.attemptId = answer.attemptId || null;
-    answer.answerId = answer.answerId || answer.answerId;
-    answer.selectedOptionId = answer.selectedOptionId || null;
-    answer.isCorrect = answer.isCorrect || false;
-    answer.title = answer.title ? answer.title.trim() : '';
-    answer._answerText = `${idxAnswer + 1}`;
+  if (typeof data.questions == 'string') {
+    data.questions = JSON.parse(data.questions);
+  }
 
-    answer.options = answer.options || [];
-    answer.options.map((option, idxOptions) => {
-      option.answerId = answer.answerId || null;
-      option.optionId = option.optionId || null;
-      option.optionIndex = idxOptions + 1;
-      option.content = option.content ? option.content.trim() : '';
+  data.questions = data.questions || [];
+  (data.questions as QuestionDTO[]).map((question, idxQuestion) => {
+
+    question.questionId = question.questionId || (idxQuestion + 1);
+    question.question = question.question ? question.question.trim() : '';
+    question.explanation = question.explanation || '';
+    question.hint = question.hint || '';
+    question.answer = question.answer || null;
+    question.tags = question.tags || [];
+    question.hint = question.hint || '';
+
+    question._answerSelected = question._answerSelected || null;
+    question._isCorrect = question._isCorrect || null;
+
+    question.answers = question.answers || [];
+    question.answers.map((answers, idxAnswers) => {
+      answers.answerId = answers.answerId || idxAnswers + 1;
+      answers.answer = answers.answer || '';
+      answers.isCorrect = answers.isCorrect ? true : false;
+      answers.popular = answers.popular ? answers.popular : null;
+      answers._selected = answers.isCorrect ? true : null;
+
+      if (!answers.popular) { delete answers.popular; }
     });
   });
 
-  if (attempt.state == AttemptState.completed) {
-    const correctAnswer = attempt.answers.filter(ans => ans.isCorrect);
-    attempt.correctAnswers = correctAnswer.length;
-    attempt.grade = getGrade(attempt);
-  }
-  
-  return attempt;
+  data.questionsCount = data.questions.length;
+  return data;
 }
 
-export function getGrade(attempt: AttemptDTO) {
-  const total = attempt.answers.length;
+export function normalizeAttemptQuestDTO(data: AttemptQuestDTO): AttemptQuestDTO {
+  data.creationDate = data.creationDate || new Date().getTime();
+  data.updatedDate = data.updatedDate || new Date().getTime();
+  data._creationDate = data.creationDate ? transform.toDate(new Date(data.creationDate), 'MMM/d/yy h:mm a') : '-';
+  data._updatedDate = data.updatedDate ? transform.toDate(new Date(data.updatedDate), 'MMM/d/yy h:mm a') : '-';
+  data.type = data.type || QuizType.questionaries;
+
+  if (typeof data.tags == 'string') {
+    data.tags = JSON.parse(data.tags);
+  }
+
+  if (typeof data.questions == 'string') {
+    data.questions = JSON.parse(data.questions);
+  }
+
+  data.questions = data.questions || [];
+  data.questionsCount = data.questions.length;
+  data.questionnaireId = data.questionnaireId || null;
+  data.userId = data.userId || null;
+  data.score = data.score || 0;
+  data.state = data.state || AttemptState.new;
+  data._correctQuestions = data._correctQuestions || null;
+  data._grade = data._grade || GradeState.not_submitted;
+  data._score = data._score || '';
+
+  if (data.state == AttemptState.completed) {
+    const correctQuestions = (data.questions as QuestionDTO[]).filter(ans => ans.isCorrect);
+    data._correctQuestions = correctQuestions.length;
+    data._grade = setGrade(data);
+  }
+
+  return data;
+}
+
+export function queryQuestionnaireDTO(data: QuestionnaireDTO): QuestionnaireDTO {
+  data = normalizeQuestionnaireDTO(data);
+  data.uuid = data.uuid || uuidv4();
+  data.questionnaireId = data.questionnaireId || null;
+  data.tags = JSON.stringify(data.tags);
+  data.questions = JSON.stringify(data.questions);
+  return data;
+}
+
+export function queryAttemptQuestDTO(data: AttemptQuestDTO): AttemptQuestDTO {
+  data = normalizeAttemptQuestDTO(data);
+  data.attemptId = data.attemptId || null;
+  data.tags = JSON.stringify(data.tags);
+  data.questions = JSON.stringify(data.questions);
+  return data;
+}
+
+export function setGrade(attempt: AttemptQuestDTO) {
+  const total = attempt.questions.length;
   const failing = Math.round(total * 0.20);
   const passing = Math.round(total * 0.60);
   const passing_aceptable = Math.round(total * 0.80);
   const passing_perfect = Math.round(total * 1.00);
-  
-  const correctAnswer = attempt.answers.filter(ans => ans.isCorrect).length;
+
+  const correctAnswer = (attempt.questions as QuestionDTO[]).filter(ans => ans.isCorrect).length;
   if (correctAnswer <= failing) {
     return GradeState.failed;
   } else if (correctAnswer <= passing) {
@@ -383,458 +268,83 @@ export function getGrade(attempt: AttemptDTO) {
 
 // #endregion INITIALIZE
 
-export const quiz_table_querys = {
-
+export const questionnaire_table_querys = {
   createTable: {
     query: `
-      CREATE TABLE IF NOT EXISTS [quiz_table] (
-        [quizId] INTEGER PRIMARY KEY AUTOINCREMENT,
+      CREATE TABLE IF NOT EXISTS [questionnaire_table] (
+        [questionnaireId] INTEGER PRIMARY KEY AUTOINCREMENT,
         [uuid] TEXT,
         [title] TEXT,
         [time] INTEGER,
+        [tags] TEXT,
+        [type] TEXT,
         [creationDate] INTEGER,
         [updatedDate] INTEGER,
-        [startDate] INTEGER
+        [questionsCount] INTEGER,
+        [questions] TEXT
       );
     `
   },
 
   deleteTable: {
     query: `
-      DROP TABLE IF EXISTS [quiz_table];
+      DROP TABLE IF EXISTS [questionnaire_table];
     `
   },
 
   selectAll: {
     query: `
       SELECT *
-      FROM [quiz_table];
+      FROM [questionnaire_table];
     `
   },
 
   selectById: {
     query: `
       SELECT *
-      FROM [quiz_table]
-      WHERE [quizId] = ?;
+      FROM [questionnaire_table]
+      WHERE [questionnaireId] = ?;
     `
   },
 
   selectByIdWithRelations: {
     query: `
       SELECT
-        q.[quizId],
+        q.[questionnaireId],
         q.[uuid],
         q.[title],
         q.[time],
+        q.[tags],
+        q.[type],
         q.[creationDate],
         q.[updatedDate],
-        q.[startDate],
-
-        COALESCE(
-          (
-            SELECT json_group_array(
-              json_object(
-                'answerId', a.[answerId],
-                'quizId', a.[quizId],
-                'title', a.[title],
-                'updatedDate', a.[updatedDate],
-
-                'options',
-                COALESCE(
-                  (
-                    SELECT json_group_array(
-                      json_object(
-                        'optionId', ao.[optionId],
-                        'answerId', ao.[answerId],
-                        'content', ao.[content],
-                        'optionIndex', ao.[optionIndex],
-                        'updatedDate', ao.[updatedDate],
-                        'isCorrect', ao.[isCorrect]
-                      )
-                    )
-                    FROM [quiz_answer_option_table] ao
-                    WHERE ao.[answerId] = a.[answerId]
-                  ),
-                  json('[]')
-                )
-              )
-            )
-            FROM [quiz_answer_table] a
-            WHERE a.[quizId] = q.[quizId]
-          ),
-          json('[]')
-        ) AS [answers]
-
-      FROM [quiz_table] q
-
-      WHERE q.[quizId] = ?;
+        q.[questionsCount],
+        q.[questions]
+      FROM [questionnaire_table] q
+      WHERE q.[questionnaireId] = ?;
     `
   },
 
   filterBy: {
     query: `
       SELECT *
-      FROM [quiz_table]
+      FROM [questionnaire_table]
       WHERE [title] LIKE '%' || :title || '%';
     `
   },
 
   post: {
     query: `
-      INSERT INTO [quiz_table] (
+      INSERT INTO [questionnaire_table] (
         [uuid],
         [title],
         [time],
+        [tags],
+        [type],
         [creationDate],
         [updatedDate],
-        [startDate]
-      )
-      VALUES (?, ?, ?, ?, ?, ?)
-      RETURNING *;
-    `
-  },
-
-  put: {
-    query: `
-      INSERT INTO [quiz_table] (
-        [quizId],
-        [uuid],
-        [title],
-        [time],
-        [creationDate],
-        [updatedDate],
-        [startDate]
-      )
-      VALUES (?, ?, ?, ?, ?, ?, ?)
-      ON CONFLICT(quizId) DO UPDATE SET 
-            uuid = excluded.uuid,
-            title = excluded.title, 
-            time = excluded.time, 
-            creationDate = excluded.creationDate, 
-            updatedDate = excluded.updatedDate, 
-            startDate = excluded.startDate
-      RETURNING *;
-    `
-  },
-
-  deleteById: {
-    query: `
-      DELETE FROM [quiz_table]
-      WHERE [quizId] = :quizId
-      RETURNING *;
-    `
-  },
-};
-
-export const quiz_answer_table_querys = {
-
-  createTable: {
-    query: `
-      CREATE TABLE IF NOT EXISTS [quiz_answer_table] (
-        [answerId] INTEGER PRIMARY KEY,
-        [quizId] INTEGER,
-        [title] TEXT,
-        [updatedDate] INTEGER,
-        FOREIGN KEY ([quizId])
-          REFERENCES [quiz_table] ([quizId])
-          ON DELETE CASCADE
-      );
-    `
-  },
-
-  deleteTable: {
-    query: `
-      DROP TABLE IF EXISTS [quiz_answer_table];
-    `
-  },
-
-  selectAll: {
-    query: `
-      SELECT *
-      FROM [quiz_answer_table];
-    `
-  },
-
-  selectById: {
-    query: `
-      SELECT *
-      FROM [quiz_answer_table]
-      WHERE [answerId] = :answerId;
-    `
-  },
-
-  selectByQuizId: {
-    query: `
-      SELECT *
-      FROM [quiz_answer_table]
-      WHERE [quizId] = :quizId;
-    `
-  },
-
-  post: {
-    query: `
-      INSERT INTO [quiz_answer_table] (
-        [quizId],
-        [title],
-        [updatedDate]
-      )
-      VALUES (?, ?, ?)
-      RETURNING *;
-    `
-  },
-
-  put: {
-    query: `
-      INSERT INTO [quiz_answer_table] (
-        [answerId],
-        [quizId],
-        [title],
-        [updatedDate]
-      ) 
-      VALUES (?, ?, ?, ?)
-      ON CONFLICT(answerId) DO UPDATE SET 
-        [quizId] = excluded.quizId,
-        [title] = excluded.title,
-        [updatedDate] = excluded.updatedDate
-      RETURNING *;
-    `
-  },
-
-  deleteById: {
-    query: `
-      DELETE FROM [quiz_answer_table]
-      WHERE [answerId] = ?
-      RETURNING *;
-    `
-  }
-
-};
-
-export const quiz_answer_option_table_querys = {
-
-  createTable: {
-    query: `
-      CREATE TABLE IF NOT EXISTS [quiz_answer_option_table] (
-        [optionId] INTEGER PRIMARY KEY,
-        [answerId] INTEGER,
-        [content] TEXT,
-        [optionIndex] INTEGER,
-        [updatedDate] INTEGER,
-        [isCorrect] BOOLEAN,
-        FOREIGN KEY ([answerId])
-          REFERENCES [quiz_answer_table] ([answerId])
-          ON DELETE CASCADE
-      );
-    `
-  },
-
-  deleteTable: {
-    query: `
-      DROP TABLE IF EXISTS [quiz_answer_option_table];
-    `
-  },
-
-  selectAll: {
-    query: `
-      SELECT *
-      FROM [quiz_answer_option_table];
-    `
-  },
-
-  selectById: {
-    query: `
-      SELECT *
-      FROM [quiz_answer_option_table]
-      WHERE [optionId] = ?;
-    `
-  },
-
-  selectByAnswerId: {
-    query: `
-      SELECT *
-      FROM [quiz_answer_option_table]
-      WHERE [answerId] = ?
-      ORDER BY optionIndex ASC;
-    `
-  },
-
-  filterBy: {
-    query: `
-      SELECT *
-      FROM [quiz_answer_option_table]
-      WHERE [answerId] = :answerId;
-    `
-  },
-
-  post: {
-    query: `
-      INSERT INTO [quiz_answer_option_table] (
-        [answerId],
-        [content],
-        [optionIndex],
-        [updatedDate],
-        [isCorrect]
-      )
-      VALUES ( ?, ?, ?, ?, ?)
-      RETURNING *;
-    `
-  },
-
-  put: {
-    query: `
-      INSERT INTO [quiz_answer_option_table] (
-          [optionId],
-          [answerId],
-          [content],
-          [optionIndex],
-          [updatedDate],
-          [isCorrect]
-      )
-      VALUES ( ?, ?, ?, ?, ?, ?)
-      ON CONFLICT(optionId) DO UPDATE SET 
-          answerId = excluded.answerId, 
-          content = excluded.content, 
-          optionIndex = excluded.optionIndex, 
-          updatedDate = excluded.updatedDate, 
-          isCorrect = excluded.isCorrect
-      RETURNING *;
-    `
-  },
-
-  deleteById: {
-    query: `
-      DELETE FROM [quiz_answer_option_table]
-      WHERE [optionId] = :optionId
-      RETURNING *;
-    `
-  }
-
-};
-
-export const attempt_table_querys = {
-
-  createTable: {
-    query: `
-      CREATE TABLE IF NOT EXISTS [attempt_table] (
-        [attemptId] INTEGER PRIMARY KEY AUTOINCREMENT,
-        [quizId] INTEGER,
-        [userId] INTEGER,
-        [title] TEXT,
-        [updatedDate] INTEGER,
-        [startDate] INTEGER,
-        [score] REAL,
-        [state] TEXT,
-        [time] INTEGER,
-        [answersLinked] TEXT,
-        FOREIGN KEY ([quizId])
-          REFERENCES [quiz_table] ([quizId])
-          ON DELETE CASCADE
-      );
-    `
-  },
-
-  deleteTable: {
-    query: `
-      DROP TABLE IF EXISTS [attempt_table];
-    `
-  },
-
-  selectAll: {
-    query: `
-      SELECT *
-      FROM [attempt_table];
-    `
-  },
-
-  selectByQuizId: {
-    query: `
-      SELECT
-        att.[attemptId],
-        att.[quizId],
-        att.[userId],
-        att.[title],
-        att.[updatedDate],
-        att.[startDate],
-        att.[score],
-        att.[state],
-        att.[time],
-        att.[answersLinked],
-
-        COALESCE(
-          (
-            SELECT json_group_array(
-              json_object(
-                'answerAttemptId', attans.[answerAttemptId],
-                'attemptId', attans.[attemptId],
-                'answerId', attans.[answerId],
-                'selectedOptionId', attans.[selectedOptionId],
-                'isCorrect', attans.[isCorrect],
-                'title', attans.[title],
-                'optionsLinked', attans.[optionsLinked]
-              )
-            )
-            FROM [attempt_answer_table] attans
-            WHERE attans.[attemptId] = att.[attemptId]
-          ),
-          json('[]')
-        ) AS [answers]
-
-      FROM [attempt_table] att
-      WHERE att.[quizId] = ?;
-    `
-  },
-
-  selectByIdWithRelations: {
-    query: `
-      SELECT
-        att.[attemptId],
-        att.[quizId],
-        att.[userId],
-        att.[title],
-        att.[updatedDate],
-        att.[startDate],
-        att.[score],
-        att.[state],
-        att.[time],
-        att.[answersLinked],
-
-        COALESCE(
-          (
-            SELECT json_group_array(
-              json_object(
-                'answerAttemptId', attans.[answerAttemptId],
-                'attemptId', attans.[attemptId],
-                'answerId', attans.[answerId],
-                'selectedOptionId', attans.[selectedOptionId],
-                'isCorrect', attans.[isCorrect],
-                'title', attans.[title],
-                'optionsLinked', attans.[optionsLinked]
-              )
-            )
-            FROM [attempt_answer_table] attans
-            WHERE attans.[attemptId] = att.[attemptId]
-          ),
-          json('[]')
-        ) AS [answers]
-
-      FROM [attempt_table] att
-      WHERE att.[attemptId] = ?;
-    `
-  },
-
-  post: {
-    query: `
-      INSERT INTO [attempt_table] (
-        [quizId],
-        [userId],
-        [title],
-        [updatedDate],
-        [startDate],
-        [score],
-        [state],
-        [time],
-        [answersLinked]
+        [questionsCount],
+        [questions]
       )
       VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
       RETURNING *;
@@ -843,155 +353,167 @@ export const attempt_table_querys = {
 
   put: {
     query: `
-      INSERT INTO [attempt_table] (
-          [attemptId],
-          [quizId],
-          [userId],
-          [title],
-          [updatedDate],
-          [startDate],
-          [score],
-          [state],
-          [time],
-          [answersLinked]
+      INSERT INTO [questionnaire_table] (
+        [questionnaireId],
+        [uuid],
+        [title],
+        [time],
+        [tags],
+        [type],
+        [creationDate],
+        [updatedDate],
+        [questionsCount],
+        [questions]
       )
-      VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
-      ON CONFLICT(attemptId) DO UPDATE SET 
-            [quizId] = excluded.[quizId], 
-            [userId] = excluded.[userId],
-            [title] = excluded.[title],
-            [updatedDate] = excluded.[updatedDate], 
-            [startDate] = excluded.[startDate], 
-            [score] = excluded.[score],
-            [state] = excluded.[state],
-            [time] = excluded.[time],
-            [answersLinked] = excluded.[answersLinked]
+      VALUES (
+        :questionnaireId,
+        :uuid,
+        :title,
+        :time,
+        :tags,
+        :type,
+        :creationDate,
+        :updatedDate,
+        :questionsCount,
+        :questions
+      )
+      ON CONFLICT(questionnaireId) DO UPDATE SET
+        uuid = excluded.[uuid],
+        title = excluded.[title],
+        time = excluded.[time],
+        tags = excluded.[tags],
+        type = excluded.[type],
+        creationDate = excluded.[creationDate],
+        updatedDate = excluded.[updatedDate],
+        questionsCount = excluded.[questionsCount],
+        questions = excluded.[questions]
       RETURNING *;
     `
   },
 
   deleteById: {
     query: `
-      DELETE FROM [attempt_table]
-      WHERE [attemptId] = :attemptId
+      DELETE FROM [questionnaire_table]
+      WHERE [questionnaireId] = :questionnaireId
       RETURNING *;
     `
   },
 };
 
-export const attempt_answer_table_querys = {
-
+export const questionnaire_attempts_table_querys = {
   createTable: {
     query: `
-      CREATE TABLE IF NOT EXISTS [attempt_answer_table] (
-        [answerAttemptId] INTEGER PRIMARY KEY AUTOINCREMENT,
-        [attemptId] INTEGER,
-        [answerId] INTEGER,
-        [selectedOptionId] INTEGER,
-        [isCorrect] BOOLEAN,
+      CREATE TABLE IF NOT EXISTS [questionnaire_attempts_table] (
+        [attemptId] INTEGER PRIMARY KEY AUTOINCREMENT,
+        [questionnaireId] INTEGER,
+        [userId] INTEGER,
         [title] TEXT,
-        [optionsLinked] TEXT,
-
-        FOREIGN KEY ([attemptId])
-          REFERENCES [attempt_table] ([attemptId])
-          ON DELETE CASCADE,
-
-        FOREIGN KEY ([answerId])
-          REFERENCES [quiz_answer_table] ([answerId]),
-
-        FOREIGN KEY ([selectedOptionId])
-          REFERENCES [quiz_answer_option_table] ([optionId])
+        [time] INTEGER,
+        [tags] TEXT,
+        [type] TEXT,
+        [score] REAL,
+        [state] TEXT,
+        [creationDate] INTEGER,
+        [updatedDate] INTEGER,
+        [questionsCount] INTEGER,
+        [questions] TEXT,
+        FOREIGN KEY ([questionnaireId])
+          REFERENCES [questionnaire_table] ([questionnaireId])
+          ON DELETE CASCADE
       );
     `
   },
 
   deleteTable: {
     query: `
-      DROP TABLE IF EXISTS [attempt_answer_table];
+      DROP TABLE IF EXISTS [questionnaire_attempts_table];
     `
   },
 
   selectAll: {
     query: `
       SELECT *
-      FROM [attempt_answer_table];
+      FROM [questionnaire_attempts_table];
     `
   },
 
-  selectById: {
+  selectByQuestionnaireId: {
     query: `
       SELECT *
-      FROM [attempt_answer_table]
-      WHERE [answerAttemptId] = ?;
+      FROM [questionnaire_attempts_table]
+      WHERE [attemptId] = ?;
     `
   },
 
   selectByAttemptId: {
     query: `
       SELECT *
-      FROM [attempt_answer_table]
-      WHERE [attemptId] = ?;
-    `
-  },
-
-  filterBy: {
-    query: `
-      SELECT *
-      FROM [attempt_answer_table]
+      FROM [questionnaire_attempts_table]
       WHERE [attemptId] = ?;
     `
   },
 
   post: {
     query: `
-      INSERT INTO [attempt_answer_table] (
-        [attemptId],
-        [answerId],
-        [selectedOptionId],
-        [isCorrect],
+      INSERT INTO [questionnaire_attempts_table] (
+        [questionnaireId],
+        [userId],
         [title],
-        [optionsLinked]
+        [time],
+        [tags],
+        [type],
+        [score],
+        [state],
+        [creationDate],
+        [updatedDate],
+        [questionsCount],
+        [questions]
       )
-      VALUES (:attemptId, :answerId, :selectedOptionId, :isCorrect, :title, :optionsLinked)
-      ON CONFLICT(answerAttemptId) DO UPDATE SET 
-            [attemptId] = excluded.[attemptId], 
-            [answerId] = excluded.[answerId], 
-            [selectedOptionId] = excluded.[selectedOptionId], 
-            [isCorrect] = excluded.[isCorrect],
-            [optionsLinked] = excluded.[optionsLinked]
+      VALUES ( :questionnaireId, :userId, :title, :time, :tags, :type, :score, :state, :creationDate, :updatedDate, :questionsCount, :questions )
       RETURNING *;
     `
   },
 
   put: {
     query: `
-      INSERT INTO [attempt_answer_table] (
-        [answerAttemptId],
+      INSERT INTO [questionnaire_attempts_table] (
         [attemptId],
-        [answerId],
-        [selectedOptionId],
-        [isCorrect],
+        [questionnaireId],
+        [userId],
         [title],
-        [optionsLinked]
+        [time],
+        [tags],
+        [type],
+        [score],
+        [state],
+        [creationDate],
+        [updatedDate],
+        [questionsCount],
+        [questions]
       )
-      VALUES (:attempt_answer_table, :attemptId, :answerId, :selectedOptionId, :isCorrect, :title, :optionsLinked)
-      ON CONFLICT(answerAttemptId) DO UPDATE SET 
-            [attemptId] = excluded.[attemptId], 
-            [answerId] = excluded.[answerId], 
-            [selectedOptionId] = excluded.[selectedOptionId], 
-            [isCorrect] = excluded.[isCorrect],
-            [title] = excluded.[title],
-            [optionsLinked] = excluded.[optionsLinked]
+      VALUES ( :attemptId, :questionnaireId, :userId, :title, :time, :tags, :type, :score, :state, :creationDate, :updatedDate, :questionsCount, :questions )
+      ON CONFLICT(attemptId) DO UPDATE SET
+        questionnaireId = excluded.[questionnaireId], 
+        userId = excluded.[userId], 
+        title = excluded.[title], 
+        time = excluded.[time], 
+        tags = excluded.[tags], 
+        type = excluded.[type], 
+        score = excluded.[score], 
+        state = excluded.[state], 
+        creationDate = excluded.[creationDate], 
+        updatedDate = excluded.[updatedDate], 
+        questionsCount = excluded.[questionsCount], 
+        questions = excluded.[questions]
       RETURNING *;
     `
   },
 
   deleteById: {
     query: `
-      DELETE FROM [attempt_answer_table]
-      WHERE [answerAttemptId] = ?
+      DELETE FROM [questionnaire_attempts_table]
+      WHERE [attemptId] = :attemptId
       RETURNING *;
     `
-  }
-
+  },
 };
