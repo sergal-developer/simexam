@@ -166,7 +166,7 @@ export class CommonServicesTesting {
         const quizEdited = await this.testQuestionnaires_edit(quiz)
         this.log('QUIZ_EDITED: ', quizEdited);
 
-        const quizSearched = await this.commonServices.getQuestionnaireById(quizEdited.questionaryId);
+        const quizSearched = await this.commonServices.getQuestionaryById(quizEdited.questionaryId);
         this.log('QUIZ.SEARCHEDBYID: ', quizSearched);
 
         const quizDuplicated = await this.testQuestionnaires_duplicate(quizSearched);
@@ -190,7 +190,7 @@ export class CommonServicesTesting {
     }
 
     private async testQuestionnaires_all(): Promise<QuestionaryDTO[]> {
-        return await this.commonServices.getAllQuestionnaires();
+        return await this.commonServices.getAllQuestionary();
     }
 
     private async testQuestionnaires_import(): Promise<QuestionaryDTO[]> {
@@ -307,19 +307,19 @@ export class CommonServicesTesting {
         };
 
         const _popularityData = normalizeQuestionaryDTO((importPopularityData as QuestionaryDTO));
-        const _popularityDb = await this.commonServices.saveQuestionnaire(_popularityData);
+        const _popularityDb = await this.commonServices.saveQuestionary(_popularityData);
         importsQuestionnaire.push(_popularityDb);
 
         const _questionnaireData = normalizeQuestionaryDTO((importQuestionarieData as QuestionaryDTO));
-        const _questionnaireDb = await this.commonServices.saveQuestionnaire(_questionnaireData);
+        const _questionnaireDb = await this.commonServices.saveQuestionary(_questionnaireData);
         importsQuestionnaire.push(_questionnaireDb);
 
         const _simpleData = normalizeQuestionaryDTO((importSimpleData as QuestionaryDTO));
-        const _simpleDb = await this.commonServices.saveQuestionnaire(_simpleData);
+        const _simpleDb = await this.commonServices.saveQuestionary(_simpleData);
         importsQuestionnaire.push(_simpleDb);
 
         const _trueFalseData = normalizeQuestionaryDTO((importTrueFalseData as QuestionaryDTO));
-        const _trueFalseDb = await this.commonServices.saveQuestionnaire(_trueFalseData);
+        const _trueFalseDb = await this.commonServices.saveQuestionary(_trueFalseData);
         importsQuestionnaire.push(_trueFalseDb);
 
         return importsQuestionnaire;
@@ -338,7 +338,7 @@ export class CommonServicesTesting {
         data.questions = [question, question];
 
         const _data = normalizeQuestionaryDTO(data);
-        return await this.commonServices.saveQuestionnaire(_data);
+        return await this.commonServices.saveQuestionary(_data);
     }
 
     private async testQuestionnaires_edit(data: QuestionaryDTO): Promise<QuestionaryDTO> {
@@ -357,15 +357,15 @@ export class CommonServicesTesting {
 
         const _data = normalizeQuestionaryDTO(data);
 
-        return await this.commonServices.saveQuestionnaire(_data);
+        return await this.commonServices.saveQuestionary(_data);
     }
 
     private async testQuestionnaires_duplicate(data: QuestionaryDTO): Promise<QuestionaryDTO> {
-        return await this.commonServices.duplicateQuestionnaire(data.questionaryId);
+        return await this.commonServices.duplicateQuestionary(data.questionaryId);
     }
 
     private async testQuestionnaires_delete(data: QuestionaryDTO): Promise<QuestionaryDTO> {
-        return await this.commonServices.deleteQuestionnaire(data.questionaryId);
+        return await this.commonServices.deleteQuestionary(data.questionaryId);
     }
     //#endregion QUESTIONNAIRES
 
@@ -379,7 +379,7 @@ export class CommonServicesTesting {
         }
 
         // get all attempts
-        let attempts = await this.commonServices.getAllAttemptQuestionnaires();
+        let attempts = await this.commonServices.getAllAttempts();
         this.log('ATTEMPT.current', attempts);
 
         // create new attempt
@@ -393,7 +393,7 @@ export class CommonServicesTesting {
         this.log('ATTEMPT.solved', solved);
 
         // get all attempts
-        attempts = await this.commonServices.getAllAttemptQuestionnaires();
+        attempts = await this.commonServices.getAllAttempts();
         this.log('ATTEMPT.current', attempts);
 
         await Promise.all(attempts.map(async (att) => {
@@ -402,21 +402,21 @@ export class CommonServicesTesting {
         }));
 
         // get all attempts
-        attempts = await this.commonServices.getAllAttemptQuestionnaires();
+        attempts = await this.commonServices.getAllAttempts();
         this.log('ATTEMPT.current', attempts);
         /**/
     }
 
     private async testAttempttestQuestionnaire_createAttempt(quizId: number): Promise<AttemptDTO> {
-        const questionarie = await this.commonServices.getQuestionnaireById(quizId);
+        const questionarie = await this.commonServices.getQuestionaryById(quizId);
         const attempt = getNewAttemptDTO(questionarie, 1);
-        const response = await this.commonServices.saveAttemptQuestionnaire(attempt);
-        const attemptSaved = await this.commonServices.getAttemptQuestionnaireById(response.attemptId);
+        const response = await this.commonServices.saveAttempt(attempt);
+        const attemptSaved = await this.commonServices.getAttemptById(response.attemptId);
         return attemptSaved;
     }
 
     private async testAttempttestQuestionnaire_editAttempt(attemptId: number): Promise<AttemptDTO> {
-        const attempt = await this.commonServices.getAttemptQuestionnaireById(attemptId);
+        const attempt = await this.commonServices.getAttemptById(attemptId);
         attempt.title = `Attemp edited  ${new Date().getTime()}`;
         attempt.state = AttemptState.progress;
         attempt.updatedDate = new Date().getTime();
@@ -430,14 +430,14 @@ export class CommonServicesTesting {
             })
             return question;
         })
-        const response = await this.commonServices.saveAttemptQuestionnaire(attempt);
-        const attemptSaved = await this.commonServices.getAttemptQuestionnaireById(response.attemptId);
+        const response = await this.commonServices.saveAttempt(attempt);
+        const attemptSaved = await this.commonServices.getAttemptById(response.attemptId);
         return attemptSaved;
     }
 
     private async testAttempttestQuestionnaire_solveAttempts(questionaryId: number): Promise<any> {
         // explore questions
-        let questionnaire = await this.commonServices.getQuestionnaireById(questionaryId);
+        let questionnaire = await this.commonServices.getQuestionaryById(questionaryId);
         const attemptsSolved: AttemptDTO[] = [];
 
         const total = questionnaire.questions.length;
@@ -491,14 +491,14 @@ export class CommonServicesTesting {
             }
             return ans;
         });
-        let attemptUpdated = await this.commonServices.saveAttemptQuestionnaire(attempt);
-        const result = await this.commonServices.evalueAttemptQuestionnaireById(attemptUpdated.attemptId);
+        let attemptUpdated = await this.commonServices.saveAttempt(attempt);
+        const result = await this.commonServices.evalueAttemptById(attemptUpdated.attemptId);
         this.log('ATTEMPT.solved: ', result);
         return result;
     }
 
     private async testAttempttestQuestionnaire_deleteAttempt(attemptId: number): Promise<AttemptDTO> {
-        return await this.commonServices.deleteAttemptQuestionnaire(attemptId);
+        return await this.commonServices.deleteAttempt(attemptId);
     }
     //#endregion ATTEMPTSQUESTIONNAIRES
 

@@ -86,9 +86,8 @@ export class DashboardComponent implements OnInit {
   //#region DATA
   async init() {
     this.uiServices.showLoader(true);
-    const list = await this.commonServices.getAllQuestionnaires();
+    const list = await this.commonServices.getAllQuestionary();
     if (list) {
-      console.log('list: ', list);
       this.listQuestionnaire = list;
       this.currentSection = this.listQuestionnaire.length ? '_two' : '_one';
     }
@@ -104,14 +103,13 @@ export class DashboardComponent implements OnInit {
   }
 
   async getAttempts(quiz: QuestionaryDTO) {
-    const attempts = await this.commonServices.getAttemptByquestionaryId(quiz.questionaryId);
+    const attempts = await this.commonServices.getAttemptByQuestionaryId(quiz.questionaryId);
     this.listAttempts = attempts && attempts.length ? attempts : [];
-    console.log('this.listAttempts: ', this.listAttempts);
   }
 
   async createattempt() {
     try {
-      const attempt = await this.commonServices.createAttemptFromQuestionnaire(this.currentQuestionnaire.questionaryId, this.user.userId, true);
+      const attempt = await this.commonServices.createNewAttempt(this.currentQuestionnaire.questionaryId, this.user.userId, true);
       ;
       if (!attempt) {
         this.uiServices.notification(this.translateLabels.attempt_error_generation, { type: 'error' })
@@ -128,7 +126,7 @@ export class DashboardComponent implements OnInit {
   async resetAttempts(quiz: QuestionaryDTO) {
     await Promise.all(
       this.listAttempts.map(async (attemp) => {
-        await this.commonServices.deleteAttemptQuestionnaire(attemp.attemptId);
+        await this.commonServices.deleteAttempt(attemp.attemptId);
       })
     );
 
@@ -150,7 +148,7 @@ export class DashboardComponent implements OnInit {
   }
 
   async duplicateQuiz(quiz: QuestionaryDTO) {
-    const quizData = await this.commonServices.duplicateQuestionnaire(quiz.questionaryId);
+    const quizData = await this.commonServices.duplicateQuestionary(quiz.questionaryId);
     if (quizData) {
       this.uiServices.notification(`Examen Duplicado correctamente`, { type: 'info', closeTimer: 3000 });
       this.commonServices.navigate('quizedit', `${quizData.questionaryId}`);
@@ -158,7 +156,7 @@ export class DashboardComponent implements OnInit {
   }
 
   async deleteQuiz(quiz: QuestionaryDTO) {
-    const _quiz = await this.commonServices.deleteQuestionnaire(quiz.questionaryId);
+    const _quiz = await this.commonServices.deleteQuestionary(quiz.questionaryId);
     if (_quiz) {
       this.uiServices.notification(`Examen Eliminado correctamente`, { type: 'success', closeTimer: 3000 });
       this.init();
@@ -180,7 +178,6 @@ export class DashboardComponent implements OnInit {
     });
     this.currentSection = '_three';
     this.currentQuestionnaire = quiz;
-    console.log('this.currentQuestionnaire: ', this.currentQuestionnaire);
     this.getAttempts(this.currentQuestionnaire);
 
     document.querySelector('.screen-content-section').scrollTo({

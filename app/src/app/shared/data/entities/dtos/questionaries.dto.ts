@@ -459,15 +459,15 @@ export const questionnaire_attempts_table_querys = {
     `
   },
 
-  selectByquestionaryId: {
+  selectAttemptByQuestionaryId: {
     query: `
       SELECT *
       FROM [questionnaire_attempts_table]
-      WHERE [attemptId] = ?;
+      WHERE [questionaryId] = ?;
     `
   },
 
-  selectByAttemptId: {
+  selectAttemptById: {
     query: `
       SELECT *
       FROM [questionnaire_attempts_table]

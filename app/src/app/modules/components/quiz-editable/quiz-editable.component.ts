@@ -117,7 +117,7 @@ export class QuizEditableComponent implements OnInit {
 
 
     if (this.quizId) {
-      const _quiz = await this.commonServices.getQuestionnaireById(this.quizId);
+      const _quiz = await this.commonServices.getQuestionaryById(this.quizId);
 
       if (!this.quiz) {
         this.uiServices.notification(this.translateLabels.service_fail_get, { type: 'error', closeTimer: 3000 });
@@ -173,14 +173,14 @@ export class QuizEditableComponent implements OnInit {
 
       // refine request
       const quizRequest = this.quiz = this._quizRefined(true);
-      const response = await this.commonServices.saveQuestionnaire(quizRequest);
+      const response = await this.commonServices.saveQuestionary(quizRequest);
       if (!response) {
         this.uiServices.notification(this.translateLabels.service_fail_update);
         this.uiServices.showLoader(false);
         resolve(false);
       }
 
-      const _quiz = await this.commonServices.getQuestionnaireById(response.questionaryId);
+      const _quiz = await this.commonServices.getQuestionaryById(response.questionaryId);
       this.quiz = normalizeQuestionaryDTO(_quiz);
       this.uiServices.showLoader(false);
       resolve(true);
@@ -188,7 +188,7 @@ export class QuizEditableComponent implements OnInit {
   }
 
   async getQuizData(id: number) {
-    const data = await this.commonServices.getQuestionnaireById(id);
+    const data = await this.commonServices.getQuestionaryById(id);
     if (!data) {
       this.uiServices.notification(this.translateLabels.service_fail_get);
       return null;

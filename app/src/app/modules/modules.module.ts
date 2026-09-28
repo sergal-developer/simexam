@@ -20,6 +20,12 @@ import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { ModuleComponent } from './modules.component';
+import { TypeMathQuestComponent } from './components/type-math-quest/type-math-quest.component';
+import { TypePopularityComponent } from './components/type-popularity/type-popularity.component';
+import { TypetReadingComponent } from './components/type-reading/type-reading.component';
+import { TypeSimpleComponent } from './components/type-simple/type-simple.component';
+import { TypetTriviaComponent } from './components/type-trivia/type-trivia.component';
+import { TypeTrueFalseComponent } from './components/type-true-false/type-true-false.component';
 
 @NgModule({
   imports: [
@@ -42,6 +48,12 @@ import { ModuleComponent } from './modules.component';
     HeaderComponent,
     NavbarComponent,
     QuizViewComponent,
+    TypeMathQuestComponent,
+    TypePopularityComponent,
+    TypetReadingComponent,
+    TypeSimpleComponent,
+    TypetTriviaComponent,
+    TypeTrueFalseComponent,
     QuizEditableComponent,
     QuizSelectorComponent,
     RegisterComponent,
@@ -56,6 +68,12 @@ import { ModuleComponent } from './modules.component';
     HeaderComponent,
     NavbarComponent,
     QuizViewComponent,
+    TypeMathQuestComponent,
+    TypePopularityComponent,
+    TypetReadingComponent,
+    TypeSimpleComponent,
+    TypetTriviaComponent,
+    TypeTrueFalseComponent,
     QuizEditableComponent,
     QuizSelectorComponent,
     RegisterComponent,
@@ -63,6 +81,7 @@ import { ModuleComponent } from './modules.component';
     SplashComponent,
     LogComponent,
     DbClientComponent,
+    
   ],
   providers: [EventBusService, CommonServices, UiServices],
 })

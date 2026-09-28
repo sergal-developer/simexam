@@ -81,6 +81,9 @@ export class QuizViewComponent implements OnInit {
       this.id = JSON.parse(JSON.stringify(this.id));
       console.log('this.id: ', this.id);
       const attempt = await this.getAttemptData(this.id);
+      if(!attempt) {
+        return false;
+      }
       console.log('attempt: ', attempt);
       this.attempt = attempt;
 
@@ -142,12 +145,15 @@ export class QuizViewComponent implements OnInit {
   }
 
   async getAttemptData(id: number): Promise<AttemptDTO> {
-    let attempt: AttemptDTO[] = await this.commonServices.getAttemptByquestionaryId(id);
-    return attempt && attempt.length ? attempt[0] : null;
+    let attempt: AttemptDTO = await this.commonServices.getAttemptById(id);
+    if(!attempt) {
+      this.uiServices.notification("Ocurrio un error al obterner la prueba", { type: 'error', closeTimer: 0})
+    }
+    return attempt || null;
   }
 
   async evalueAttemptById(id: number): Promise<AttemptDTO> {
-    let attempt: AttemptDTO = await this.commonServices.evalueAttemptQuestionnaireById(id);
+    let attempt: AttemptDTO = await this.commonServices.evalueAttemptById(id);
     return attempt;
   }
 
@@ -174,7 +180,7 @@ export class QuizViewComponent implements OnInit {
 
     this.attempt.updatedDate = new Date().getTime();
     this.readonly = this.attempt.state == AttemptState.completed;
-    const reponse = await this.commonServices.saveAttemptQuestionnaire(this.attempt);
+    const reponse = await this.commonServices.saveAttempt(this.attempt);
     this.attempt = reponse;
 
     if (this.attempt.state == AttemptState.completed) {
@@ -290,8 +296,8 @@ export class QuizViewComponent implements OnInit {
 
   //#region CONVERTERS
   async getAssessment() {
-    const reponse = await this.commonServices.saveAttemptQuestionnaire(this.attempt)
-    const attempt = await this.commonServices.evalueAttemptQuestionnaireById(reponse.attemptId);
+    const reponse = await this.commonServices.saveAttempt(this.attempt)
+    const attempt = await this.commonServices.evalueAttemptById(reponse.attemptId);
     this.attempt = attempt;
     return this.attempt;
   }

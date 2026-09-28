@@ -50,7 +50,7 @@
                 <button class="link" (click)="resetFilter()" *ngIf="currentFilter">reset</button>
             </div>
             <div class="arrage centers paddings">
-                <div class="item" (click)="filterBy('quiz')">
+                <div class="item" (click)="filterBy('trivia')">
                     <lu-icon [icon]="luIcon.trivia"></lu-icon>
                     <div>Examen</div>
                 </div>
@@ -72,19 +72,19 @@
             </div>
 
             <div class="arrage columns paddings">
-                <div class="item" *ngFor="let item of listFilesFiltered">
+                <div class="item" *ngFor="let quiz of listFilesFiltered">
                     <div class="arrage">
                         <div class="item">
-                            <lu-icon [icon]="luIcon.trivia" *ngIf="item.type == 'trivia'"></lu-icon>
-                            <lu-icon [icon]="luIcon.simple" *ngIf="item.type == 'simple'"></lu-icon>
-                            <lu-icon [icon]="luIcon.trueFalse" *ngIf="item.type == 'true-false'"></lu-icon>
-                            <lu-icon [icon]="luIcon.popularity" *ngIf="item.type == 'popularity'"></lu-icon>
-                            <lu-icon [icon]="luIcon.martQuest" *ngIf="item.type == 'mart-quest'"></lu-icon>
-                            <lu-icon [icon]="luIcon.reading" *ngIf="item.type == 'reading'"></lu-icon>
+                            <lu-icon [icon]="luIcon.martQuest" *ngIf="quiz.type == 'mart-quest'"></lu-icon>
+                            <lu-icon [icon]="luIcon.popularity" *ngIf="quiz.type == 'popularity'"></lu-icon>
+                            <lu-icon [icon]="luIcon.reading" *ngIf="quiz.type == 'reading'"></lu-icon>
+                            <lu-icon [icon]="luIcon.simple" *ngIf="quiz.type == 'simple'"></lu-icon>
+                            <lu-icon [icon]="luIcon.trivia" *ngIf="quiz.type == 'trivia'"></lu-icon>
+                            <lu-icon [icon]="luIcon.trueFalse" *ngIf="quiz.type == 'true-false'"></lu-icon>
                         </div>
-                        <div class="item">{{ item._name }}</div>
+                        <div class="item">{{ quiz._name }}</div>
                         <div class="item">
-                            <button class="primary" (click)="getFile(item)">
+                            <button class="primary" (click)="getFile(quiz)">
                                 Obtener <lu-icon [icon]="luIcon.download" ></lu-icon>
                             </button>
                         </div>

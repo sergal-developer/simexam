@@ -3,11 +3,11 @@ import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
  
 @Component({
-  selector: 'type-math-quest',
-  templateUrl: './type-math-quest.html',
+  selector: 'type-reading',
+  templateUrl: './type-reading.html',
   encapsulation: ViewEncapsulation.None,
 })
-export class TypeMathQuestComponent implements OnInit {
+export class TypetReadingComponent implements OnInit {
   luicons = [];
 
   constructor(private commonServices: CommonServices,

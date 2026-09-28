@@ -45,7 +45,7 @@ export class QuizSelectorComponent implements OnInit {
 
   luIcon = {
     back: icons.ArrowLeft,
-    
+
     trivia: icons.ListTodo,
     simple: icons.PlayingCards,
     trueFalse: icons.Drama,
@@ -142,7 +142,7 @@ export class QuizSelectorComponent implements OnInit {
     template.type = QuizType[file.type];
     const _template = normalizeQuestionaryDTO((template as QuestionaryDTO));
 
-    const _data = await this.commonServices.saveQuestionnaire(_template);
+    const _data = await this.commonServices.saveQuestionary(_template);
     
     this.uiServices.notification(`Plantilla importada con exito`, { 
       type: 'success', closeTimer: 3500,

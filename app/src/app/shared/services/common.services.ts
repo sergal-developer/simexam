@@ -84,8 +84,8 @@ export class CommonServices {
   //#endregion USERS
 
   //#region QUESTIONNAIRES
-  async getAllQuestionnaires(): Promise<QuestionaryDTO[]> {
-    let response: QuestionaryDTO[] = await this._services.getAllQuestionnaires();
+  async getAllQuestionary(): Promise<QuestionaryDTO[]> {
+    let response: QuestionaryDTO[] = await this._services.getAllQuestionary();
     response = response && response.length ?
       response.map(data => {
         return normalizeQuestionaryDTO(data);
@@ -93,40 +93,40 @@ export class CommonServices {
     return response;
   }
 
-  async getQuestionnaireById(id: number): Promise<QuestionaryDTO> {
-    const response = await this._services.getQuestionnaireById(this.verifyNumber(id));
+  async getQuestionaryById(id: number): Promise<QuestionaryDTO> {
+    const response = await this._services.getQuestionaryById(this.verifyNumber(id));
     return response ? normalizeQuestionaryDTO(response) : null;
   }
 
-  async saveQuestionnaire(data: QuestionaryDTO): Promise<QuestionaryDTO> {
+  async saveQuestionary(data: QuestionaryDTO): Promise<QuestionaryDTO> {
     // preparar los datos en modo cadena
     data = queryQuestionaryDTO(data);
 
     // Guardar el quiz primero
-    const response: QuestionaryDTO = await this._services.saveQuestionnaire(data);
+    const response: QuestionaryDTO = await this._services.saveQuestionary(data);
     return response ? normalizeQuestionaryDTO(response) : null;
   }
 
-  async duplicateQuestionnaire(id: number): Promise<QuestionaryDTO> {
-    const _questionnaire = await this._services.getQuestionnaireById(this.verifyNumber(id));
+  async duplicateQuestionary(id: number): Promise<QuestionaryDTO> {
+    const _questionnaire = await this._services.getQuestionaryById(this.verifyNumber(id));
     // clean _quiz to save as new record
     _questionnaire.questionaryId = null;
     _questionnaire.title = `${_questionnaire.title}`;
     _questionnaire.updatedDate = new Date().getTime();
     _questionnaire.questionsCount = _questionnaire.questions.length;
 
-    return await this.saveQuestionnaire(_questionnaire);
+    return await this.saveQuestionary(_questionnaire);
   }
 
-  async deleteQuestionnaire(id: number): Promise<QuestionaryDTO> {
-    let response = await this._services.deleteQuestionnaire(this.verifyNumber(id));
+  async deleteQuestionary(id: number): Promise<QuestionaryDTO> {
+    let response = await this._services.deleteQuestionary(this.verifyNumber(id));
     return response ? normalizeQuestionaryDTO(response) : null;
   }
   //#endregion QUESTIONNAIRES
 
-  //#region ATTEMPTQUESTIONNAIRES
-  async getAllAttemptQuestionnaires(): Promise<AttemptDTO[]> {
-    let response: AttemptDTO[] = await this._services.getAllAttemptQuestionnaires()
+  //#region ATTEMPTS
+  async getAllAttempts(): Promise<AttemptDTO[]> {
+    let response: AttemptDTO[] = await this._services.getAllAttempts()
     response = response && response.length ?
       response.map(data => {
         return normalizeAttemptDTO(data);
@@ -134,21 +134,21 @@ export class CommonServices {
     return response;
   }
 
-  async getAttemptByquestionaryId(id: number): Promise<AttemptDTO[]> {
-    let response = await this._services.getAttemptByquestionaryId(this.verifyNumber(id));
+  async getAttemptByQuestionaryId(id: number): Promise<AttemptDTO[]> {
+    let response = await this._services.getAttemptByQuestionaryId(this.verifyNumber(id));
     console.log('response: ', response);
     return response ? response.map(data => {
       return normalizeAttemptDTO(data);
     }) : [];
   }
 
-  async getAttemptQuestionnaireById(id: number): Promise<AttemptDTO> {
-    let response = await this._services.getAttemptQuestionnaireById(this.verifyNumber(id));
+  async getAttemptById(id: number): Promise<AttemptDTO> {
+    let response = await this._services.getAttemptById(this.verifyNumber(id));
     return response ? normalizeAttemptDTO(response) : null;
   }
 
-  async createAttemptFromQuestionnaire(questionaryId: number, userId: number, shuffle: boolean = true,): Promise<AttemptDTO> {
-    const questionarie = await this.getQuestionnaireById(questionaryId);
+  async createNewAttempt(questionaryId: number, userId: number, shuffle: boolean = true,): Promise<AttemptDTO> {
+    const questionarie = await this.getQuestionaryById(questionaryId);
     if (!questionarie) {
       return null;
     }
@@ -162,25 +162,25 @@ export class CommonServices {
     }
 
     // SAVE DATA
-    return await this.saveAttemptQuestionnaire(rawAttempt);
+    return await this.saveAttempt(rawAttempt);
   }
 
-  async saveAttemptQuestionnaire(data: AttemptDTO): Promise<AttemptDTO> {
+  async saveAttempt(data: AttemptDTO): Promise<AttemptDTO> {
     // preparar los datos en modo cadena
     data = queryAttemptDTO(data);
 
     // Guardar el quiz primero
-    const response: AttemptDTO = await this._services.saveAttemptQuestionnaire(data);
+    const response: AttemptDTO = await this._services.saveAttempt(data);
     return response ? normalizeAttemptDTO(response) : null;
   }
 
-  async deleteAttemptQuestionnaire(id: number): Promise<AttemptDTO> {
-    let response = await this._services.deleteAttemptQuestionnaire(this.verifyNumber(id));
+  async deleteAttempt(id: number): Promise<AttemptDTO> {
+    let response = await this._services.deleteAttempt(this.verifyNumber(id));
     return response ? normalizeAttemptDTO(response) : null;
   }
 
-  async evalueAttemptQuestionnaireById(attemptId: number): Promise<AttemptDTO> {
-    let attempt = await this.getAttemptQuestionnaireById(this.verifyNumber(attemptId));
+  async evalueAttemptById(attemptId: number): Promise<AttemptDTO> {
+    let attempt = await this.getAttemptById(this.verifyNumber(attemptId));
 
     const questions = (attempt.questions as QuestionDTO[]);
     questions.map(question => {
@@ -196,10 +196,10 @@ export class CommonServices {
     attempt.state = AttemptState.completed;
     attempt._grade = setGrade(attempt);
 
-    attempt = await this.saveAttemptQuestionnaire(attempt);
+    attempt = await this.saveAttempt(attempt);
     return normalizeAttemptDTO(attempt);
   }
-  //#endregion ATTEMPTQUESTIONNAIRES
+  //#endregion ATTEMPTS
 
   /*
   //#region QUIZ

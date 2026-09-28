@@ -43,12 +43,12 @@
                                     <ng-container *ngFor="let quiz of listQuestionnaire">
                                         <div class="item-card _{{quiz.type}}">
                                             <div class="_icon">
-                                                <lu-icon [icon]="luIcon.trivia" *ngIf="quiz.type == 'trivia'"></lu-icon>
-                                                <lu-icon [icon]="luIcon.simple" *ngIf="quiz.type == 'simple'"></lu-icon>
-                                                <lu-icon [icon]="luIcon.trueFalse" *ngIf="quiz.type == 'true-false'"></lu-icon>
-                                                <lu-icon [icon]="luIcon.popularity" *ngIf="quiz.type == 'popularity'"></lu-icon>
                                                 <lu-icon [icon]="luIcon.martQuest" *ngIf="quiz.type == 'mart-quest'"></lu-icon>
+                                                <lu-icon [icon]="luIcon.popularity" *ngIf="quiz.type == 'popularity'"></lu-icon>
                                                 <lu-icon [icon]="luIcon.reading" *ngIf="quiz.type == 'reading'"></lu-icon>
+                                                <lu-icon [icon]="luIcon.simple" *ngIf="quiz.type == 'simple'"></lu-icon>
+                                                <lu-icon [icon]="luIcon.trivia" *ngIf="quiz.type == 'trivia'"></lu-icon>
+                                                <lu-icon [icon]="luIcon.trueFalse" *ngIf="quiz.type == 'true-false'"></lu-icon>
                                             </div>
                                             <div class="_description" (click)="showAttemptsScreen(quiz)">
                                                 <div class="_title">{{ quiz.title }}</div>

@@ -1,6 +1,14 @@
 <ng-container *ngIf="attempt">
     <div class="_animation_state">
         <div class="root-container quiz-form">
+
+            <type-math-quest *ngIf="attempt.type == 'mart-quest'"></type-math-quest>
+            <type-popularity *ngIf="attempt.type == 'popularity'"></type-popularity>
+            <type-reading *ngIf="attempt.type == 'reading'"></type-reading>
+            <type-simple *ngIf="attempt.type == 'simple'"></type-simple>
+            <type-trivia *ngIf="attempt.type == 'trivia'"></type-trivia>
+            <type-true-false *ngIf="attempt.type == 'true-false'"></type-true-false>
+
             <section-dinamic design="glass">
                 <div class="arrage centers paddings-relation">
                     <div class="item" (click)="gotoDashboard()">
