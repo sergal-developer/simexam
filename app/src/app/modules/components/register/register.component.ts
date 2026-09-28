@@ -194,7 +194,6 @@ export class RegisterComponent implements OnInit {
         _index = index;
         return;
       }
-      console.log('this.sections[key]: ', this.sections[key]);
     });
     return { total: keys.length, index: _index };
   }
@@ -204,7 +203,6 @@ export class RegisterComponent implements OnInit {
     if (nav.index > 0) {
       const newIndex = nav.index - 1;
       const keys = Object.keys(this.sections);
-      console.log('index: ', keys[newIndex]);
       this._changeSection(keys[newIndex]);
     }
   }
@@ -213,7 +211,6 @@ export class RegisterComponent implements OnInit {
     if (nav.index < nav.total - 1) {
       const newIndex = nav.index + 1;
       const keys = Object.keys(this.sections);
-      console.log('index: ', keys[newIndex]);
       this._changeSection(keys[newIndex]);
     }
   }

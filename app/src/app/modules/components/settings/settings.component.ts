@@ -208,7 +208,7 @@ export class SettingsComponent implements OnInit {
 
   // #region IMPORT/EXPORTS
   export() {
-    const exams = this.commonServices.getAllQuizs();
+    const exams = this.commonServices.getAllQuestionnaires();
     this.copyClipboard(JSON.stringify(exams));
     this.downloadJSON(JSON.stringify(exams), 'collection-exam.json');
   }

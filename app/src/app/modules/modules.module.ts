@@ -15,7 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { QuizEditableComponent } from './components/quiz-editable/quiz-editable.component';
 import { QuizSelectorComponent } from './components/quiz-selector/quiz-selector.component';
-import { QuizComponent } from './components/quiz/quiz.component';
+import { QuizViewComponent } from './components/quiz-view/quiz-view.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { SplashComponent } from './components/splash/splash.component';
@@ -41,7 +41,7 @@ import { ModuleComponent } from './modules.component';
     DashboardComponent,
     HeaderComponent,
     NavbarComponent,
-    QuizComponent,
+    QuizViewComponent,
     QuizEditableComponent,
     QuizSelectorComponent,
     RegisterComponent,
@@ -55,7 +55,7 @@ import { ModuleComponent } from './modules.component';
     DashboardComponent,
     HeaderComponent,
     NavbarComponent,
-    QuizComponent,
+    QuizViewComponent,
     QuizEditableComponent,
     QuizSelectorComponent,
     RegisterComponent,

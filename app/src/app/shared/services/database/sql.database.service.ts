@@ -2,24 +2,14 @@ import { Injectable } from "@angular/core";
 import { CapacitorSQLite, DBSQLiteValues, SQLiteConnection, SQLiteDBConnection } from '@capacitor-community/sqlite';
 import { Capacitor } from '@capacitor/core';
 import {
-    attempt_answer_table_querys,
-    attempt_table_querys,
-    AttemptAnswerDTO,
     AttemptDTO,
-    AttemptQuestDTO,
     language_table_querys,
     LanguageDTO,
     log_table_querys,
     LogDTO,
     questionnaire_attempts_table_querys,
     questionnaire_table_querys,
-    QuestionnaireDTO,
-    quiz_answer_option_table_querys,
-    quiz_answer_table_querys,
-    quiz_table_querys,
-    QuizAnswerDTO,
-    QuizAnswerOptionDTO,
-    QuizDTO,
+    QuestionaryDTO,
     settings_table_querys,
     SettingsDTO,
     theme_table_querys,
@@ -214,11 +204,11 @@ export class DatabaseService {
                 theme_table_querys.createTable.query,
                 questionnaire_table_querys.createTable.query,
                 questionnaire_attempts_table_querys.createTable.query,
-                quiz_table_querys.createTable.query,
-                quiz_answer_table_querys.createTable.query,
-                quiz_answer_option_table_querys.createTable.query,
-                attempt_table_querys.createTable.query,
-                attempt_answer_table_querys.createTable.query,
+                // quiz_table_querys.createTable.query,
+                // quiz_answer_table_querys.createTable.query,
+                // quiz_answer_option_table_querys.createTable.query,
+                // attempt_table_querys.createTable.query,
+                // attempt_answer_table_querys.createTable.query,
             ];
 
             for (const script of tableScripts) {
@@ -245,11 +235,11 @@ export class DatabaseService {
         try {
 
             const tableScripts = [
-                attempt_answer_table_querys.deleteTable.query,
-                attempt_table_querys.deleteTable.query,
-                quiz_answer_option_table_querys.deleteTable.query,
-                quiz_answer_table_querys.deleteTable.query,
-                quiz_table_querys.deleteTable.query,
+                // attempt_answer_table_querys.deleteTable.query,
+                // attempt_table_querys.deleteTable.query,
+                // quiz_answer_option_table_querys.deleteTable.query,
+                // quiz_answer_table_querys.deleteTable.query,
+                // quiz_table_querys.deleteTable.query,
                 questionnaire_table_querys.deleteTable.query,
                 questionnaire_attempts_table_querys.deleteTable.query,
                 language_table_querys.deleteTable.query,
@@ -463,12 +453,12 @@ export class DatabaseService {
     //#endregion
 
     //#region Questionnaires (questionnaire_table)
-    async getAllQuestionnaires(): Promise<QuestionnaireDTO[]> {
+    async getAllQuestionnaires(): Promise<QuestionaryDTO[]> {
         this.origin = `getAllQuestionnaires()`;
         return await this.executeActionSQL(questionnaire_table_querys.selectAll.query);
     }
 
-    async getQuestionnaireById(id: number): Promise<QuestionnaireDTO> {
+    async getQuestionnaireById(id: number): Promise<QuestionaryDTO> {
         this.origin = `getQuestionnaireById(${id})`;
         try {
             const result = await this.executeActionSQL(questionnaire_table_querys.selectByIdWithRelations.query, [id]);
@@ -484,10 +474,10 @@ export class DatabaseService {
         }
     }
 
-    async saveQuestionnaire(data: QuestionnaireDTO): Promise<QuestionnaireDTO> {
+    async saveQuestionnaire(data: QuestionaryDTO): Promise<QuestionaryDTO> {
         this.origin = `saveQuestionnaire(${JSON.stringify(data)})`;
-        let response: QuestionnaireDTO = null;
-        if (!data.questionnaireId) {
+        let response: QuestionaryDTO = null;
+        if (!data.questionaryId) {
             response = await this._postQuestionnaire(data);
         } else {
             response = await this._putQuestionnaire(data);
@@ -495,21 +485,21 @@ export class DatabaseService {
         return response;
     }
 
-    private async _postQuestionnaire(data: QuestionnaireDTO): Promise<QuestionnaireDTO> {
+    private async _postQuestionnaire(data: QuestionaryDTO): Promise<QuestionaryDTO> {
         this.origin = `_postQuestionnaire(${JSON.stringify(data)})`;
         const request = [data.uuid, data.title, data.time, data.tags, data.type, data.creationDate, data.updatedDate, data.questionsCount, data.questions]
         const response = await this.executeActionSQL(questionnaire_table_querys.post.query, request);
         return response && response.length ? response[0] : null;
     }
 
-    private async _putQuestionnaire(data: QuestionnaireDTO): Promise<QuestionnaireDTO> {
+    private async _putQuestionnaire(data: QuestionaryDTO): Promise<QuestionaryDTO> {
         this.origin = `_putQuestionnaire(${JSON.stringify(data)})`;
-        const request = [data.questionnaireId ?? null, data.uuid, data.title, data.time, data.tags, data.type, data.creationDate, data.updatedDate, data.questionsCount, data.questions]
+        const request = [data.questionaryId ?? null, data.uuid, data.title, data.time, data.tags, data.type, data.creationDate, data.updatedDate, data.questionsCount, data.questions]
         const response = await this.executeActionSQL(questionnaire_table_querys.put.query, request);
         return response && response.length ? response[0] : null;
     }
 
-    async deleteQuestionnaire(id: number): Promise<QuestionnaireDTO> {
+    async deleteQuestionnaire(id: number): Promise<QuestionaryDTO> {
         this.origin = `deleteQuestionnaire(${id})`;
         const response = await this.executeActionSQL(questionnaire_table_querys.deleteById.query, [id]);
         return response && response.length ? response[0] : null;
@@ -517,15 +507,15 @@ export class DatabaseService {
     //#endregion
 
     //#region AttemptQuestionnaires (questionnaire_attempts_table)
-    async getAllAttemptQuestionnaires(): Promise<AttemptQuestDTO[]> {
+    async getAllAttemptQuestionnaires(): Promise<AttemptDTO[]> {
         this.origin = `getAllAttemptQuestionnaires()`;
         return await this.executeActionSQL(questionnaire_attempts_table_querys.selectAll.query);
     }
 
-    async getAttemptByQuestionnaireId(quizId: number): Promise<AttemptQuestDTO[]> {
-        this.origin = `getAttemptByQuestionnaireId(${quizId})`;
+    async getAttemptByquestionaryId(quizId: number): Promise<AttemptDTO[]> {
+        this.origin = `getAttemptByquestionaryId(${quizId})`;
         try {
-            const response = await this.executeActionSQL(questionnaire_attempts_table_querys.selectByQuestionnaireId.query, [quizId]);
+            const response = await this.executeActionSQL(questionnaire_attempts_table_querys.selectByquestionaryId.query, [quizId]);
 
             if (response && response.length > 0) {
                 return response;
@@ -537,7 +527,7 @@ export class DatabaseService {
         }
     }
 
-    async getAttemptQuestionnaireById(attemptId: number): Promise<AttemptQuestDTO> {
+    async getAttemptQuestionnaireById(attemptId: number): Promise<AttemptDTO> {
         this.origin = `getAttemptQuestionnaireById(${attemptId})`;
         try {
             const response = await this.executeActionSQL(questionnaire_attempts_table_querys.selectByAttemptId.query, [attemptId]);
@@ -552,9 +542,9 @@ export class DatabaseService {
         }
     }
 
-    async saveAttemptQuestionnaire(attempt: AttemptQuestDTO): Promise<AttemptQuestDTO> {
+    async saveAttemptQuestionnaire(attempt: AttemptDTO): Promise<AttemptDTO> {
         this.origin = `saveAttemptQuestionnaire(${JSON.stringify(attempt)})`;
-        let response: AttemptQuestDTO = null;
+        let response: AttemptDTO = null;
         if (!attempt.attemptId) {
             response = await this._postAttemptQuestionnaire(attempt);
         } else {
@@ -563,23 +553,21 @@ export class DatabaseService {
         return response;
     }
 
-    private async _postAttemptQuestionnaire(attempt: AttemptQuestDTO): Promise<AttemptQuestDTO> {
+    private async _postAttemptQuestionnaire(attempt: AttemptDTO): Promise<AttemptDTO> {
         this.origin = `_postAttemptQuestionnaire(${JSON.stringify(attempt)})`;
-        const request = [ attempt.questionnaireId, attempt.userId, attempt.title, attempt.time, attempt.tags, attempt.type, attempt.score, attempt.state, attempt.creationDate, attempt.updatedDate, attempt.questionsCount, attempt.questions ]; 
-        console.log('request: ', request);
+        const request = [ attempt.questionaryId, attempt.userId, attempt.title, attempt.time, attempt.tags, attempt.type, attempt.score, attempt.state, attempt.creationDate, attempt.updatedDate, attempt.questionsCount, attempt.questions ]; 
         const response = await this.executeActionSQL(questionnaire_attempts_table_querys.post.query, request);
         return response && response.length ? response[0] : null;
     }
 
-    private async _putAttemptQuestionnaire(attempt: AttemptQuestDTO): Promise<AttemptQuestDTO> {
+    private async _putAttemptQuestionnaire(attempt: AttemptDTO): Promise<AttemptDTO> {
         this.origin = `_putAttemptQuestionnaire(${JSON.stringify(attempt)})`;
-        const request = [ attempt.attemptId ?? null, attempt.questionnaireId, attempt.userId, attempt.title, attempt.time, attempt.tags, attempt.type, attempt.score, attempt.state, attempt.creationDate, attempt.updatedDate, attempt.questionsCount, attempt.questions ]; 
-        console.log('request: ', request);
+        const request = [ attempt.attemptId ?? null, attempt.questionaryId, attempt.userId, attempt.title, attempt.time, attempt.tags, attempt.type, attempt.score, attempt.state, attempt.creationDate, attempt.updatedDate, attempt.questionsCount, attempt.questions ]; 
         const response = await this.executeActionSQL(questionnaire_attempts_table_querys.put.query, request);
         return response && response.length ? response[0] : null;
     }
 
-    async deleteAttemptQuestionnaire(attemptId: number): Promise<AttemptQuestDTO> {
+    async deleteAttemptQuestionnaire(attemptId: number): Promise<AttemptDTO> {
         this.origin = `deleteAttemptQuestionnaire(${attemptId})`;
         const response = await this.executeActionSQL(questionnaire_attempts_table_querys.deleteById.query, [attemptId]);
         return response && response.length ? response[0] : null;
@@ -587,6 +575,7 @@ export class DatabaseService {
     //#endregion
 
 
+    /*
     //#region Quizzes (quiz_table)
     async getAllQuizzes(): Promise<QuizDTO[]> {
         this.origin = `getAllQuizzes()`;
@@ -849,7 +838,7 @@ export class DatabaseService {
         return await this.executeActionSQL(attempt_answer_table_querys.deleteById.query, [attemptId]);
     }
     //#endregion
-
+    */
     //#endregion CRUDS
 
 

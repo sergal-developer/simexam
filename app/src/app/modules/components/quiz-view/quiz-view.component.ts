@@ -1,24 +1,24 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } from '@angular/core';
 import { icons } from 'lucide';
-import { AttemptAnswerDTO, AttemptDTO, QuizAnswerOptionDTO } from 'src/app/shared/data/entities/dtos';
+import { AnswerDTO, AttemptDTO, QuestionDTO } from 'src/app/shared/data/entities/dtos';
 import { AttemptState, GradeState, ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
 
 @Component({
-  selector: 'quiz',
-  templateUrl: './quiz.html',
+  selector: 'quiz-view',
+  templateUrl: './quiz-view.html',
   encapsulation: ViewEncapsulation.None,
 })
-export class QuizComponent implements OnInit {
+export class QuizViewComponent implements OnInit {
   @Input() id: number = null;
   @Input() review: boolean = false;
   @Output() onChange = new EventEmitter();
 
   //#region INTERNAL
   attempt: AttemptDTO = null;
-  currentAnswerIndex = 0;
-  currentAnswer: AttemptAnswerDTO = null;
+  currentQuestionIndex = 0;
+  currentQuestion: QuestionDTO = null;
   numrows = '_1';
 
   readonly = false;
@@ -79,20 +79,24 @@ export class QuizComponent implements OnInit {
   async getData() {
     if (this.id) {
       this.id = JSON.parse(JSON.stringify(this.id));
+      console.log('this.id: ', this.id);
       const attempt = await this.getAttemptData(this.id);
+      console.log('attempt: ', attempt);
       this.attempt = attempt;
 
       if (this.attempt.state == AttemptState.new) {
-        this.attempt.startDate = new Date().getTime();
+        this.attempt.updatedDate = new Date().getTime();
         this.attempt.state = AttemptState.progress;
       }
 
       if (this.attempt.state == AttemptState.progress) {
-        let idxLastResponse = this.attempt.answers.findIndex((item) => !item.selectedOptionId);
+    
+        console.log('this.attempt.questions : ', this.attempt.questions );
+        let idxLastResponse = (this.attempt.questions as QuestionDTO[]).findIndex((item) => !item._answerSelected);
         if (idxLastResponse != -1) {
           idxLastResponse = idxLastResponse == 0 ? 0 : idxLastResponse - 1;
         } else {
-          idxLastResponse = this.attempt.answers.length - 1;
+          idxLastResponse = this.attempt.questions.length - 1;
         }
 
         setTimeout(() => {
@@ -101,7 +105,7 @@ export class QuizComponent implements OnInit {
       }
 
       if (this.attempt.state == 'completed') {
-        if(this.attempt.grade == GradeState.not_submitted) {
+        if(this.attempt._grade == GradeState.not_submitted) {
           this.attempt = await this.evalueAttemptById(this.attempt.attemptId);
         }
 
@@ -117,7 +121,7 @@ export class QuizComponent implements OnInit {
       }
 
       this.redirect.module = ScreenEnum.dashboard;
-      this.redirect.action = `${ this.attempt.quizId }`;
+      this.redirect.action = `${ this.attempt.questionaryId }`;
     }
     return true;
   }
@@ -128,7 +132,7 @@ export class QuizComponent implements OnInit {
     }
 
     // this.readonly = this.attempt.state == AttemptState.completed;
-    this.currentAnswerIndex = 0;
+    this.currentQuestionIndex = 0;
     this.assigCurrentAnswer();
 
     this.getProgress();
@@ -138,12 +142,12 @@ export class QuizComponent implements OnInit {
   }
 
   async getAttemptData(id: number): Promise<AttemptDTO> {
-    let attempt: AttemptDTO = await this.commonServices.getAttemptCompleteByAttemptId(id);
-    return attempt;
+    let attempt: AttemptDTO[] = await this.commonServices.getAttemptByquestionaryId(id);
+    return attempt && attempt.length ? attempt[0] : null;
   }
 
   async evalueAttemptById(id: number): Promise<AttemptDTO> {
-    let attempt: AttemptDTO = await this.commonServices.evalueAttemptById(id);
+    let attempt: AttemptDTO = await this.commonServices.evalueAttemptQuestionnaireById(id);
     return attempt;
   }
 
@@ -170,7 +174,7 @@ export class QuizComponent implements OnInit {
 
     this.attempt.updatedDate = new Date().getTime();
     this.readonly = this.attempt.state == AttemptState.completed;
-    const reponse = await this.commonServices.saveAllAttempt(this.attempt);
+    const reponse = await this.commonServices.saveAttemptQuestionnaire(this.attempt);
     this.attempt = reponse;
 
     if (this.attempt.state == AttemptState.completed) {
@@ -182,36 +186,36 @@ export class QuizComponent implements OnInit {
   //#endregion DATA
 
   //#region EVENTS
-  selectOption(option: QuizAnswerOptionDTO) {
+  selectOption(option: AnswerDTO) {
     if (this.readonly) { return; }
 
-    if (option._chosenAnswer) {
+    if (option._selected) {
       this.nextQuestion();
     } else {
       // reset all selections
-      this.currentAnswer.options.map(opt => {
-        opt._chosenAnswer = opt.optionId == option.optionId ? true : false;
+      this.currentQuestion.answers.map(opt => {
+        opt._selected = opt.answerId == option.answerId ? true : false;
       });
     }
 
-    this.currentAnswer.selectedOptionId = option.optionId;
+    this.currentQuestion._answerSelected = option.answerId;
   }
 
   prevQuestion() {
-    if (this.currentAnswerIndex == 0) {
+    if (this.currentQuestionIndex == 0) {
       return;
     }
 
-    this.currentAnswerIndex = this.currentAnswerIndex - 1;
+    this.currentQuestionIndex = this.currentQuestionIndex - 1;
     this.assigCurrentAnswer();
   }
 
   nextQuestion() {
-    if (this.currentAnswerIndex >= this.attempt.answers.length - 1) {
+    if (this.currentQuestionIndex >= this.attempt.questions.length - 1) {
       return;
     }
 
-    this.currentAnswerIndex = this.currentAnswerIndex + 1;
+    this.currentQuestionIndex = this.currentQuestionIndex + 1;
     this.assigCurrentAnswer();
     this.updateResults();
   }
@@ -229,7 +233,7 @@ export class QuizComponent implements OnInit {
   }
 
   getProgress() {
-    this.progress = (100 / (this.attempt.answers.length)) * (this.currentAnswerIndex + 1);
+    this.progress = (100 / (this.attempt.questions.length)) * (this.currentQuestionIndex + 1);
     this.progresStyle = `width: ${this.progress}%`;
   }
 
@@ -251,7 +255,7 @@ export class QuizComponent implements OnInit {
   }
 
   gotoQuestion(index) {
-    this.currentAnswerIndex = index;
+    this.currentQuestionIndex = index;
     this.getProgress();
     this.currentSection = 'quiz';
     this.valueChange('primary');
@@ -286,8 +290,8 @@ export class QuizComponent implements OnInit {
 
   //#region CONVERTERS
   async getAssessment() {
-    const reponse = await this.commonServices.saveAllAttempt(this.attempt)
-    const attempt = await this.commonServices.evalueAttemptById(reponse.attemptId);
+    const reponse = await this.commonServices.saveAttemptQuestionnaire(this.attempt)
+    const attempt = await this.commonServices.evalueAttemptQuestionnaireById(reponse.attemptId);
     this.attempt = attempt;
     return this.attempt;
   }
@@ -299,8 +303,8 @@ export class QuizComponent implements OnInit {
   }
 
   assigCurrentAnswer() {
-    this.currentAnswer = this.attempt.answers[this.currentAnswerIndex];
-    const lengths = this.currentAnswer.options.map(x => { return x.content.length });
+    this.currentQuestion = (this.attempt.questions[this.currentQuestionIndex] as QuestionDTO);
+    const lengths = this.currentQuestion.answers.map(x => { return x.answer.length });
     const maxLength = lengths.sort((a, b) => a - b);
     this.numrows = maxLength[maxLength.length - 1] > 14 ? '_1' : '_2';
   }

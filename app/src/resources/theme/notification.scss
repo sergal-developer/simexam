@@ -30,15 +30,24 @@
         padding: 0 5px;
         &.actions {
             padding-right: 0;
-
             display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: var(--space-direct);
 
-            button {
+            button.close {
                 width: 30px;
                 height: 30px;
                 padding: 0;
                 background: transparent;
                 color: inherit;
+            }
+
+            button.action {
+                padding: 0 var(--space-direct);
+                color: inherit !important;
+                background: #00000020;
             }
         }
     }

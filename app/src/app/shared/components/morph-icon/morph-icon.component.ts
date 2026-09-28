@@ -34,15 +34,15 @@ export class MorphIconComponent implements OnInit, OnChanges {
     }
 
     ngOnChanges(changes: SimpleChanges) {
-        console.log('changes: ', changes);
+        // console.log('changes: ', changes);
         // if (changes['open']) {
         // (this.iconRef.nativeElement as any).morphTo(this.open ? this.altIcon : this.icon, this.spring);
         // }
     }
 
     change() {
-        console.log('this.Icon: ', this.icon);
-        console.log('this.altIcon: ', this.altIcon);
+        // console.log('this.Icon: ', this.icon);
+        // console.log('this.altIcon: ', this.altIcon);
         (this.iconRef.nativeElement as any).morphTo(this.altIcon, this.spring);
     }
 

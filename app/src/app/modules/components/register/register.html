@@ -85,17 +85,17 @@
                 <div class="_nav_item_collection">
                     <div class="_nav_item" [ngClass]="{'current': sections.language }" (click)="configLanguage()">
                         <lu-icon [icon]="luIcon.language"></lu-icon>
-                        <div class="_nav_item_title">{{ 'action_step_language' | translate }}</div>
+                        <!-- <div class="_nav_item_title">{{ 'action_step_language' | translate }}</div> -->
                     </div>
 
                     <div class="_nav_item" [ngClass]="{'current': sections.user }" (click)="configUser()">
                         <lu-icon [icon]="luIcon.user"></lu-icon>
-                        <div class="_nav_item_title">{{ 'action_step_user' | translate }}</div>
+                        <!-- <div class="_nav_item_title">{{ 'action_step_user' | translate }}</div> -->
                     </div>
 
                     <div class="_nav_item" [ngClass]="{'current': sections.avatars }" (click)="configAvatar()">
                         <lu-icon [icon]="luIcon.avatar"></lu-icon>
-                        <div class="_nav_item_title">{{ 'action_step_avatar' | translate }}</div>
+                        <!-- <div class="_nav_item_title">{{ 'action_step_avatar' | translate }}</div> -->
                     </div>
                 </div>
 
@@ -104,7 +104,8 @@
                 </div>
 
                 <div class="_nav_item _nav_action _next _register" (click)="register()" *ngIf="validateData()">
-                    <span>{{ 'singup' | translate }}</span><lu-icon [icon]="luIcon.register"></lu-icon>
+                    <!-- <span>{{ 'singup' | translate }}</span> -->
+                    <lu-icon [icon]="luIcon.register"></lu-icon>
                 </div>
 
             </div>

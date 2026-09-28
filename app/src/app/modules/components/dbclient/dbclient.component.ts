@@ -1,13 +1,10 @@
 import { Component, OnInit, ViewEncapsulation, } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {
-  attempt_answer_table_querys,
-  quiz_answer_option_table_querys,
-  quiz_answer_table_querys,
   language_table_querys,
   log_table_querys,
-  attempt_table_querys,
-  quiz_table_querys,
+  questionnaire_attempts_table_querys,
+  questionnaire_table_querys,
   settings_table_querys,
   theme_table_querys,
   user_table_querys
@@ -63,13 +60,10 @@ export class DbClientComponent implements OnInit {
   // #region DATA
   getAllAvailableQuerys() {
     const queryGroups = [
-      { name: 'answer_attempt', data: attempt_answer_table_querys },
-      { name: 'answer_option', data: quiz_answer_option_table_querys },
-      { name: 'answer', data: quiz_answer_table_querys },
       { name: 'language', data: language_table_querys },
       { name: 'log', data: log_table_querys },
-      { name: 'quiz_attempt', data: attempt_table_querys },
-      { name: 'quiz', data: quiz_table_querys },
+      { name: 'attempts', data: questionnaire_attempts_table_querys },
+      { name: 'questionnaire', data: questionnaire_table_querys },
       { name: 'settings', data: settings_table_querys },
       { name: 'theme', data: theme_table_querys },
       { name: 'user', data: user_table_querys },

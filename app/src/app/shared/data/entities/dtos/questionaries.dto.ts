@@ -5,8 +5,19 @@ import { TransformData } from '../../utils/transformData';
 const transform = new TransformData();
 
 //#region INTERFACES
-export interface QuestionnaireDTO {
-  questionnaireId: number;
+export interface QuestionnaireFile {
+    name: string,
+    path: string,
+    type: string,
+    url: string,
+    size: number,
+    modified: string,
+    isEmpty: boolean,
+    _name?: string
+}
+
+export interface QuestionaryDTO {
+  questionaryId: number;
   uuid?: string;
   title: string;
   time: number;
@@ -22,6 +33,8 @@ export interface QuestionnaireDTO {
   // variables for UI and format
   _creationDate?: string;
   _updatedDate?: string;
+
+  _current?: boolean;
 }
 
 export interface QuestionDTO {
@@ -51,24 +64,24 @@ export interface AnswerDTO {
   _selected?: boolean;
 }
 
-export interface AttemptQuestDTO extends QuestionnaireDTO {
+export interface AttemptDTO extends QuestionaryDTO {
   attemptId?: number;
-  // questionnaireId: number; /** field into QuestionnaireDTO */
+  // questionaryId: number; /** field into QuestionaryDTO */
   userId: number;
-  // title: string; /** field into QuestionnaireDTO */
-  // time: number; /** field into QuestionnaireDTO */
-  // tags: string[] | string; /** field into QuestionnaireDTO */
-  // type: QuizType; /** field into QuestionnaireDTO */
+  // title: string; /** field into QuestionaryDTO */
+  // time: number; /** field into QuestionaryDTO */
+  // tags: string[] | string; /** field into QuestionaryDTO */
+  // type: QuizType; /** field into QuestionaryDTO */
   score: number;
   state: AttemptState;
-  // creationDate?: number; /** field into QuestionnaireDTO */
-  // updatedDate?: number; /** field into QuestionnaireDTO */
-  // questionsCount?: number; /** field into QuestionnaireDTO */
-  // questions?: string | QuestionDTO[]; /** field into QuestionnaireDTO */
+  // creationDate?: number; /** field into QuestionaryDTO */
+  // updatedDate?: number; /** field into QuestionaryDTO */
+  // questionsCount?: number; /** field into QuestionaryDTO */
+  // questions?: string | QuestionDTO[]; /** field into QuestionaryDTO */
 
   // variables for UI and format 
-  // _creationDate?: string; /** field into QuestionnaireDTO */
-  // _updatedDate?: string; /** field into QuestionnaireDTO */
+  // _creationDate?: string; /** field into QuestionaryDTO */
+  // _updatedDate?: string; /** field into QuestionaryDTO */
   _correctQuestions?: number;
   _grade?: GradeState;
   _score?: string;
@@ -76,9 +89,9 @@ export interface AttemptQuestDTO extends QuestionnaireDTO {
 //#endregion INTERFACES
 
 // #region INITIALIZE
-export function getQuestionnaireDTO(title: string, time: number): QuestionnaireDTO {
+export function getQuestionaryDTO(title: string, time: number): QuestionaryDTO {
   const item = {
-    questionnaireId: null,
+    questionaryId: null,
     uuid: uuidv4(),
     title: title,
     time: time,
@@ -90,7 +103,7 @@ export function getQuestionnaireDTO(title: string, time: number): QuestionnaireD
     _creationDate: '',
     _updatedDate: '',
   };
-  return item as QuestionnaireDTO;
+  return item as QuestionaryDTO;
 }
 
 export function getQuestionDTO(question: string, answer?: string, explanation?: string, hint?: string): QuestionDTO {
@@ -119,7 +132,7 @@ export function getAnswerDTO(answer: string, index: number, popular?: number): A
   return item as AnswerDTO;
 }
 
-export function getAttemptQuestDTO(questionnaire: QuestionnaireDTO, userId: number): AttemptQuestDTO {
+export function getNewAttemptDTO(questionnaire: QuestionaryDTO, userId: number): AttemptDTO {
   if (typeof questionnaire.tags == 'string') {
     questionnaire.tags = JSON.parse(questionnaire.tags);
   }
@@ -128,14 +141,9 @@ export function getAttemptQuestDTO(questionnaire: QuestionnaireDTO, userId: numb
     questionnaire.questions = JSON.parse(questionnaire.questions);
   }
 
-  const _questions = questionnaire.questions ? (questionnaire.questions as QuestionDTO[]).map(question => {
-    let item: QuestionDTO = question;
-    return item;
-  }) : [];
-
   const item = {
     ...questionnaire,
-    questionnaireId: questionnaire.questionnaireId,
+    questionaryId: questionnaire.questionaryId,
     userId: userId,
     score: 0,
     state: AttemptState.new,
@@ -144,16 +152,30 @@ export function getAttemptQuestDTO(questionnaire: QuestionnaireDTO, userId: numb
     _score: ''
   };
 
-  console.log('NEW.AttemptQuestDTO: ', item);
-  return item as AttemptQuestDTO;
+  // clean unused values
+   item.questions ? (item.questions as QuestionDTO[]).map((question, idxquestion) => {
+    question.questionId = idxquestion + 1;
+    question._isCorrect = null;
+    question._answerSelected = null;
+    question.isCorrect = null;
+    question.answers.map((ans, idxans) => {
+      ans._selected = null;
+      ans.answerId = idxans + 1;
+      return ans;
+    });
+    return item;
+  }) : [];
+
+
+  return item as AttemptDTO;
 }
 
-export function normalizeQuestionnaireDTO(data: QuestionnaireDTO): QuestionnaireDTO {
+export function normalizeQuestionaryDTO(data: QuestionaryDTO): QuestionaryDTO {
   data.creationDate = data.creationDate || new Date().getTime();
   data.updatedDate = data.updatedDate || new Date().getTime();
   data._creationDate = data.creationDate ? transform.toDate(new Date(data.creationDate), 'MMM/d/yy h:mm a') : '-';
   data._updatedDate = data.updatedDate ? transform.toDate(new Date(data.updatedDate), 'MMM/d/yy h:mm a') : '-';
-  data.type = data.type || QuizType.questionaries;
+  data.type = data.type || QuizType.trivia;
 
   if (typeof data.tags == 'string') {
     data.tags = JSON.parse(data.tags);
@@ -193,12 +215,12 @@ export function normalizeQuestionnaireDTO(data: QuestionnaireDTO): Questionnaire
   return data;
 }
 
-export function normalizeAttemptQuestDTO(data: AttemptQuestDTO): AttemptQuestDTO {
+export function normalizeAttemptDTO(data: AttemptDTO): AttemptDTO {
   data.creationDate = data.creationDate || new Date().getTime();
   data.updatedDate = data.updatedDate || new Date().getTime();
   data._creationDate = data.creationDate ? transform.toDate(new Date(data.creationDate), 'MMM/d/yy h:mm a') : '-';
   data._updatedDate = data.updatedDate ? transform.toDate(new Date(data.updatedDate), 'MMM/d/yy h:mm a') : '-';
-  data.type = data.type || QuizType.questionaries;
+  data.type = data.type || QuizType.trivia;
 
   if (typeof data.tags == 'string') {
     data.tags = JSON.parse(data.tags);
@@ -210,7 +232,7 @@ export function normalizeAttemptQuestDTO(data: AttemptQuestDTO): AttemptQuestDTO
 
   data.questions = data.questions || [];
   data.questionsCount = data.questions.length;
-  data.questionnaireId = data.questionnaireId || null;
+  data.questionaryId = data.questionaryId || null;
   data.userId = data.userId || null;
   data.score = data.score || 0;
   data.state = data.state || AttemptState.new;
@@ -227,24 +249,24 @@ export function normalizeAttemptQuestDTO(data: AttemptQuestDTO): AttemptQuestDTO
   return data;
 }
 
-export function queryQuestionnaireDTO(data: QuestionnaireDTO): QuestionnaireDTO {
-  data = normalizeQuestionnaireDTO(data);
+export function queryQuestionaryDTO(data: QuestionaryDTO): QuestionaryDTO {
+  data = normalizeQuestionaryDTO(data);
   data.uuid = data.uuid || uuidv4();
-  data.questionnaireId = data.questionnaireId || null;
+  data.questionaryId = data.questionaryId || null;
   data.tags = JSON.stringify(data.tags);
   data.questions = JSON.stringify(data.questions);
   return data;
 }
 
-export function queryAttemptQuestDTO(data: AttemptQuestDTO): AttemptQuestDTO {
-  data = normalizeAttemptQuestDTO(data);
+export function queryAttemptDTO(data: AttemptDTO): AttemptDTO {
+  data = normalizeAttemptDTO(data);
   data.attemptId = data.attemptId || null;
   data.tags = JSON.stringify(data.tags);
   data.questions = JSON.stringify(data.questions);
   return data;
 }
 
-export function setGrade(attempt: AttemptQuestDTO) {
+export function setGrade(attempt: AttemptDTO) {
   const total = attempt.questions.length;
   const failing = Math.round(total * 0.20);
   const passing = Math.round(total * 0.60);
@@ -272,7 +294,7 @@ export const questionnaire_table_querys = {
   createTable: {
     query: `
       CREATE TABLE IF NOT EXISTS [questionnaire_table] (
-        [questionnaireId] INTEGER PRIMARY KEY AUTOINCREMENT,
+        [questionaryId] INTEGER PRIMARY KEY AUTOINCREMENT,
         [uuid] TEXT,
         [title] TEXT,
         [time] INTEGER,
@@ -303,14 +325,14 @@ export const questionnaire_table_querys = {
     query: `
       SELECT *
       FROM [questionnaire_table]
-      WHERE [questionnaireId] = ?;
+      WHERE [questionaryId] = ?;
     `
   },
 
   selectByIdWithRelations: {
     query: `
       SELECT
-        q.[questionnaireId],
+        q.[questionaryId],
         q.[uuid],
         q.[title],
         q.[time],
@@ -321,7 +343,7 @@ export const questionnaire_table_querys = {
         q.[questionsCount],
         q.[questions]
       FROM [questionnaire_table] q
-      WHERE q.[questionnaireId] = ?;
+      WHERE q.[questionaryId] = ?;
     `
   },
 
@@ -354,7 +376,7 @@ export const questionnaire_table_querys = {
   put: {
     query: `
       INSERT INTO [questionnaire_table] (
-        [questionnaireId],
+        [questionaryId],
         [uuid],
         [title],
         [time],
@@ -366,7 +388,7 @@ export const questionnaire_table_querys = {
         [questions]
       )
       VALUES (
-        :questionnaireId,
+        :questionaryId,
         :uuid,
         :title,
         :time,
@@ -377,7 +399,7 @@ export const questionnaire_table_querys = {
         :questionsCount,
         :questions
       )
-      ON CONFLICT(questionnaireId) DO UPDATE SET
+      ON CONFLICT(questionaryId) DO UPDATE SET
         uuid = excluded.[uuid],
         title = excluded.[title],
         time = excluded.[time],
@@ -394,7 +416,7 @@ export const questionnaire_table_querys = {
   deleteById: {
     query: `
       DELETE FROM [questionnaire_table]
-      WHERE [questionnaireId] = :questionnaireId
+      WHERE [questionaryId] = :questionaryId
       RETURNING *;
     `
   },
@@ -405,7 +427,7 @@ export const questionnaire_attempts_table_querys = {
     query: `
       CREATE TABLE IF NOT EXISTS [questionnaire_attempts_table] (
         [attemptId] INTEGER PRIMARY KEY AUTOINCREMENT,
-        [questionnaireId] INTEGER,
+        [questionaryId] INTEGER,
         [userId] INTEGER,
         [title] TEXT,
         [time] INTEGER,
@@ -417,8 +439,8 @@ export const questionnaire_attempts_table_querys = {
         [updatedDate] INTEGER,
         [questionsCount] INTEGER,
         [questions] TEXT,
-        FOREIGN KEY ([questionnaireId])
-          REFERENCES [questionnaire_table] ([questionnaireId])
+        FOREIGN KEY ([questionaryId])
+          REFERENCES [questionnaire_table] ([questionaryId])
           ON DELETE CASCADE
       );
     `
@@ -437,7 +459,7 @@ export const questionnaire_attempts_table_querys = {
     `
   },
 
-  selectByQuestionnaireId: {
+  selectByquestionaryId: {
     query: `
       SELECT *
       FROM [questionnaire_attempts_table]
@@ -456,7 +478,7 @@ export const questionnaire_attempts_table_querys = {
   post: {
     query: `
       INSERT INTO [questionnaire_attempts_table] (
-        [questionnaireId],
+        [questionaryId],
         [userId],
         [title],
         [time],
@@ -469,7 +491,7 @@ export const questionnaire_attempts_table_querys = {
         [questionsCount],
         [questions]
       )
-      VALUES ( :questionnaireId, :userId, :title, :time, :tags, :type, :score, :state, :creationDate, :updatedDate, :questionsCount, :questions )
+      VALUES ( :questionaryId, :userId, :title, :time, :tags, :type, :score, :state, :creationDate, :updatedDate, :questionsCount, :questions )
       RETURNING *;
     `
   },
@@ -478,7 +500,7 @@ export const questionnaire_attempts_table_querys = {
     query: `
       INSERT INTO [questionnaire_attempts_table] (
         [attemptId],
-        [questionnaireId],
+        [questionaryId],
         [userId],
         [title],
         [time],
@@ -491,9 +513,9 @@ export const questionnaire_attempts_table_querys = {
         [questionsCount],
         [questions]
       )
-      VALUES ( :attemptId, :questionnaireId, :userId, :title, :time, :tags, :type, :score, :state, :creationDate, :updatedDate, :questionsCount, :questions )
+      VALUES ( :attemptId, :questionaryId, :userId, :title, :time, :tags, :type, :score, :state, :creationDate, :updatedDate, :questionsCount, :questions )
       ON CONFLICT(attemptId) DO UPDATE SET
-        questionnaireId = excluded.[questionnaireId], 
+        questionaryId = excluded.[questionaryId], 
         userId = excluded.[userId], 
         title = excluded.[title], 
         time = excluded.[time], 

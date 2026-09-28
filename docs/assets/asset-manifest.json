@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T00:17:49.525Z",
+  "generatedAt": "2026-09-28T20:14:12.895Z",
   "baseUrl": "assets",
   "count": 71,
   "files": [
@@ -37,447 +37,6 @@
       "url": "assets/resources/popularity/cultura-general-90-2000s.json",
       "size": 240145,
       "modified": "2026-09-26 13:03",
-      "isEmpty": false
-    },
-    {
-      "name": "cultura-general-20-26s.json",
-      "path": "resources/questionaries/cultura-general-20-26s.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/cultura-general-20-26s.json",
-      "size": 64120,
-      "modified": "2026-09-26 12:17",
-      "isEmpty": false
-    },
-    {
-      "name": "ingles-a1.json",
-      "path": "resources/questionaries/ingles-a1.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/ingles-a1.json",
-      "size": 21791,
-      "modified": "2026-09-26 12:05",
-      "isEmpty": false
-    },
-    {
-      "name": "ingles-a2.json",
-      "path": "resources/questionaries/ingles-a2.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/ingles-a2.json",
-      "size": 24732,
-      "modified": "2026-09-26 12:17",
-      "isEmpty": false
-    },
-    {
-      "name": "ingles-b1.json",
-      "path": "resources/questionaries/ingles-b1.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/ingles-b1.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "ingles-b2.json",
-      "path": "resources/questionaries/ingles-b2.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/ingles-b2.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "ingles-c1.json",
-      "path": "resources/questionaries/ingles-c1.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/ingles-c1.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "ingles-c2.json",
-      "path": "resources/questionaries/ingles-c2.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/ingles-c2.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "logica-basica.json",
-      "path": "resources/questionaries/logica-basica.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/logica-basica.json",
-      "size": 25249,
-      "modified": "2026-09-26 12:17",
-      "isEmpty": false
-    },
-    {
-      "name": "matematicas-algebra.json",
-      "path": "resources/questionaries/matematicas-algebra.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/matematicas-algebra.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "matematicas-aritmetica.json",
-      "path": "resources/questionaries/matematicas-aritmetica.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/matematicas-aritmetica.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "matematicas-calculo-diferencial.json",
-      "path": "resources/questionaries/matematicas-calculo-diferencial.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/matematicas-calculo-diferencial.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "matematicas-calculo-integral.json",
-      "path": "resources/questionaries/matematicas-calculo-integral.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/matematicas-calculo-integral.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "matematicas-ecuaciones-diferenciales.json",
-      "path": "resources/questionaries/matematicas-ecuaciones-diferenciales.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/matematicas-ecuaciones-diferenciales.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "matematicas-geometria-analitica.json",
-      "path": "resources/questionaries/matematicas-geometria-analitica.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/matematicas-geometria-analitica.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "matematicas-probabilidad-estadistica.json",
-      "path": "resources/questionaries/matematicas-probabilidad-estadistica.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/matematicas-probabilidad-estadistica.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "matematicas-puras-abstractas.json",
-      "path": "resources/questionaries/matematicas-puras-abstractas.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/matematicas-puras-abstractas.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "matematicas-trigonometria.json",
-      "path": "resources/questionaries/matematicas-trigonometria.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/matematicas-trigonometria.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "pisa-cuarto-primaria.json",
-      "path": "resources/questionaries/pisa-cuarto-primaria.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/pisa-cuarto-primaria.json",
-      "size": 21345,
-      "modified": "2026-09-26 15:05",
-      "isEmpty": false
-    },
-    {
-      "name": "pisa-primero-primaria.json",
-      "path": "resources/questionaries/pisa-primero-primaria.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/pisa-primero-primaria.json",
-      "size": 362954,
-      "modified": "2026-09-26 15:05",
-      "isEmpty": false
-    },
-    {
-      "name": "pisa-primero-secundaria.json",
-      "path": "resources/questionaries/pisa-primero-secundaria.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/pisa-primero-secundaria.json",
-      "size": 56643,
-      "modified": "2026-09-26 15:05",
-      "isEmpty": false
-    },
-    {
-      "name": "pisa-quinto-primaria.json",
-      "path": "resources/questionaries/pisa-quinto-primaria.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/pisa-quinto-primaria.json",
-      "size": 23934,
-      "modified": "2026-09-26 15:06",
-      "isEmpty": false
-    },
-    {
-      "name": "pisa-segundo-secundaria.json",
-      "path": "resources/questionaries/pisa-segundo-secundaria.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/pisa-segundo-secundaria.json",
-      "size": 47027,
-      "modified": "2026-09-26 15:26",
-      "isEmpty": false
-    },
-    {
-      "name": "pisa-sexto-primaria.json",
-      "path": "resources/questionaries/pisa-sexto-primaria.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/pisa-sexto-primaria.json",
-      "size": 54391,
-      "modified": "2026-09-26 15:26",
-      "isEmpty": false
-    },
-    {
-      "name": "pisa-tercero-secundaria.json",
-      "path": "resources/questionaries/pisa-tercero-secundaria.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/pisa-tercero-secundaria.json",
-      "size": 36852,
-      "modified": "2026-09-26 15:25",
-      "isEmpty": false
-    },
-    {
-      "name": "primaria-ciencias-naturales.json",
-      "path": "resources/questionaries/primaria-ciencias-naturales.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/primaria-ciencias-naturales.json",
-      "size": 47222,
-      "modified": "2026-09-26 15:25",
-      "isEmpty": false
-    },
-    {
-      "name": "primaria-civica-etica.json",
-      "path": "resources/questionaries/primaria-civica-etica.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/primaria-civica-etica.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "primaria-español.json",
-      "path": "resources/questionaries/primaria-español.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/primaria-espa%C3%B1ol.json",
-      "size": 22223,
-      "modified": "2026-09-26 15:25",
-      "isEmpty": false
-    },
-    {
-      "name": "primaria-geografia.json",
-      "path": "resources/questionaries/primaria-geografia.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/primaria-geografia.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "primaria-gramatica.json",
-      "path": "resources/questionaries/primaria-gramatica.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/primaria-gramatica.json",
-      "size": 31365,
-      "modified": "2026-09-26 15:25",
-      "isEmpty": false
-    },
-    {
-      "name": "primaria-historia.json",
-      "path": "resources/questionaries/primaria-historia.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/primaria-historia.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "primaria-lenguajes-comunicacion.json",
-      "path": "resources/questionaries/primaria-lenguajes-comunicacion.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/primaria-lenguajes-comunicacion.json",
-      "size": 38870,
-      "modified": "2026-09-26 15:23",
-      "isEmpty": false
-    },
-    {
-      "name": "primaria-matematicas.json",
-      "path": "resources/questionaries/primaria-matematicas.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/primaria-matematicas.json",
-      "size": 31098,
-      "modified": "2026-09-26 15:23",
-      "isEmpty": false
-    },
-    {
-      "name": "secundaria-ciencias-biologia.json",
-      "path": "resources/questionaries/secundaria-ciencias-biologia.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-ciencias-biologia.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-ciencias-fisica.json",
-      "path": "resources/questionaries/secundaria-ciencias-fisica.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-ciencias-fisica.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-ciencias-quimica.json",
-      "path": "resources/questionaries/secundaria-ciencias-quimica.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-ciencias-quimica.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-español.json",
-      "path": "resources/questionaries/secundaria-español.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-espa%C3%B1ol.json",
-      "size": 18469,
-      "modified": "2026-09-26 15:22",
-      "isEmpty": false
-    },
-    {
-      "name": "secundaria-geografia-mexico.json",
-      "path": "resources/questionaries/secundaria-geografia-mexico.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-geografia-mexico.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-geografia-mundo.json",
-      "path": "resources/questionaries/secundaria-geografia-mundo.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-geografia-mundo.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-gramatica.json",
-      "path": "resources/questionaries/secundaria-gramatica.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-gramatica.json",
-      "size": 31787,
-      "modified": "2026-09-26 15:22",
-      "isEmpty": false
-    },
-    {
-      "name": "secundaria-historia-mexico-independecia-revolucion.json",
-      "path": "resources/questionaries/secundaria-historia-mexico-independecia-revolucion.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-historia-mexico-independecia-revolucion.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-historia-mexico-prehispanico-conquista-colonia.json",
-      "path": "resources/questionaries/secundaria-historia-mexico-prehispanico-conquista-colonia.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-historia-mexico-prehispanico-conquista-colonia.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-historia-mexico-siglo-xix-xx.json",
-      "path": "resources/questionaries/secundaria-historia-mexico-siglo-xix-xx.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-historia-mexico-siglo-xix-xx.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-historia-mexico.json",
-      "path": "resources/questionaries/secundaria-historia-mexico.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-historia-mexico.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-historia-mundial-moderna.json",
-      "path": "resources/questionaries/secundaria-historia-mundial-moderna.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-historia-mundial-moderna.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-historia-universal.json",
-      "path": "resources/questionaries/secundaria-historia-universal.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-historia-universal.json",
-      "size": 0,
-      "modified": "2026-09-26 01:53",
-      "isEmpty": true
-    },
-    {
-      "name": "secundaria-ingles.json",
-      "path": "resources/questionaries/secundaria-ingles.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-ingles.json",
-      "size": 35837,
-      "modified": "2026-09-26 15:20",
-      "isEmpty": false
-    },
-    {
-      "name": "secundaria-matematicas-algebra.json",
-      "path": "resources/questionaries/secundaria-matematicas-algebra.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-matematicas-algebra.json",
-      "size": 37855,
-      "modified": "2026-09-26 15:20",
-      "isEmpty": false
-    },
-    {
-      "name": "secundaria-matematicas-aritmetica.json",
-      "path": "resources/questionaries/secundaria-matematicas-aritmetica.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-matematicas-aritmetica.json",
-      "size": 49484,
-      "modified": "2026-09-26 15:20",
-      "isEmpty": false
-    },
-    {
-      "name": "secundaria-matematicas-geometria.json",
-      "path": "resources/questionaries/secundaria-matematicas-geometria.json",
-      "type": "questionaries",
-      "url": "assets/resources/questionaries/secundaria-matematicas-geometria.json",
-      "size": 50874,
-      "modified": "2026-09-26 15:18",
       "isEmpty": false
     },
     {
@@ -596,6 +155,447 @@
       "size": 0,
       "modified": "2026-09-26 01:53",
       "isEmpty": true
+    },
+    {
+      "name": "cultura-general-20-26s.json",
+      "path": "resources/trivia/cultura-general-20-26s.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/cultura-general-20-26s.json",
+      "size": 64120,
+      "modified": "2026-09-26 12:17",
+      "isEmpty": false
+    },
+    {
+      "name": "ingles-a1.json",
+      "path": "resources/trivia/ingles-a1.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/ingles-a1.json",
+      "size": 21791,
+      "modified": "2026-09-26 12:05",
+      "isEmpty": false
+    },
+    {
+      "name": "ingles-a2.json",
+      "path": "resources/trivia/ingles-a2.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/ingles-a2.json",
+      "size": 24732,
+      "modified": "2026-09-26 12:17",
+      "isEmpty": false
+    },
+    {
+      "name": "ingles-b1.json",
+      "path": "resources/trivia/ingles-b1.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/ingles-b1.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "ingles-b2.json",
+      "path": "resources/trivia/ingles-b2.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/ingles-b2.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "ingles-c1.json",
+      "path": "resources/trivia/ingles-c1.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/ingles-c1.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "ingles-c2.json",
+      "path": "resources/trivia/ingles-c2.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/ingles-c2.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "logica-basica.json",
+      "path": "resources/trivia/logica-basica.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/logica-basica.json",
+      "size": 25249,
+      "modified": "2026-09-26 12:17",
+      "isEmpty": false
+    },
+    {
+      "name": "matematicas-algebra.json",
+      "path": "resources/trivia/matematicas-algebra.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/matematicas-algebra.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "matematicas-aritmetica.json",
+      "path": "resources/trivia/matematicas-aritmetica.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/matematicas-aritmetica.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "matematicas-calculo-diferencial.json",
+      "path": "resources/trivia/matematicas-calculo-diferencial.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/matematicas-calculo-diferencial.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "matematicas-calculo-integral.json",
+      "path": "resources/trivia/matematicas-calculo-integral.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/matematicas-calculo-integral.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "matematicas-ecuaciones-diferenciales.json",
+      "path": "resources/trivia/matematicas-ecuaciones-diferenciales.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/matematicas-ecuaciones-diferenciales.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "matematicas-geometria-analitica.json",
+      "path": "resources/trivia/matematicas-geometria-analitica.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/matematicas-geometria-analitica.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "matematicas-probabilidad-estadistica.json",
+      "path": "resources/trivia/matematicas-probabilidad-estadistica.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/matematicas-probabilidad-estadistica.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "matematicas-puras-abstractas.json",
+      "path": "resources/trivia/matematicas-puras-abstractas.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/matematicas-puras-abstractas.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "matematicas-trigonometria.json",
+      "path": "resources/trivia/matematicas-trigonometria.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/matematicas-trigonometria.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "pisa-cuarto-primaria.json",
+      "path": "resources/trivia/pisa-cuarto-primaria.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/pisa-cuarto-primaria.json",
+      "size": 21345,
+      "modified": "2026-09-26 15:05",
+      "isEmpty": false
+    },
+    {
+      "name": "pisa-primero-primaria.json",
+      "path": "resources/trivia/pisa-primero-primaria.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/pisa-primero-primaria.json",
+      "size": 362954,
+      "modified": "2026-09-26 15:05",
+      "isEmpty": false
+    },
+    {
+      "name": "pisa-primero-secundaria.json",
+      "path": "resources/trivia/pisa-primero-secundaria.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/pisa-primero-secundaria.json",
+      "size": 56643,
+      "modified": "2026-09-26 15:05",
+      "isEmpty": false
+    },
+    {
+      "name": "pisa-quinto-primaria.json",
+      "path": "resources/trivia/pisa-quinto-primaria.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/pisa-quinto-primaria.json",
+      "size": 23934,
+      "modified": "2026-09-26 15:06",
+      "isEmpty": false
+    },
+    {
+      "name": "pisa-segundo-secundaria.json",
+      "path": "resources/trivia/pisa-segundo-secundaria.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/pisa-segundo-secundaria.json",
+      "size": 47027,
+      "modified": "2026-09-26 15:26",
+      "isEmpty": false
+    },
+    {
+      "name": "pisa-sexto-primaria.json",
+      "path": "resources/trivia/pisa-sexto-primaria.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/pisa-sexto-primaria.json",
+      "size": 54391,
+      "modified": "2026-09-26 15:26",
+      "isEmpty": false
+    },
+    {
+      "name": "pisa-tercero-secundaria.json",
+      "path": "resources/trivia/pisa-tercero-secundaria.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/pisa-tercero-secundaria.json",
+      "size": 36852,
+      "modified": "2026-09-26 15:25",
+      "isEmpty": false
+    },
+    {
+      "name": "primaria-ciencias-naturales.json",
+      "path": "resources/trivia/primaria-ciencias-naturales.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/primaria-ciencias-naturales.json",
+      "size": 47222,
+      "modified": "2026-09-26 15:25",
+      "isEmpty": false
+    },
+    {
+      "name": "primaria-civica-etica.json",
+      "path": "resources/trivia/primaria-civica-etica.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/primaria-civica-etica.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "primaria-español.json",
+      "path": "resources/trivia/primaria-español.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/primaria-espa%C3%B1ol.json",
+      "size": 22223,
+      "modified": "2026-09-26 15:25",
+      "isEmpty": false
+    },
+    {
+      "name": "primaria-geografia.json",
+      "path": "resources/trivia/primaria-geografia.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/primaria-geografia.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "primaria-gramatica.json",
+      "path": "resources/trivia/primaria-gramatica.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/primaria-gramatica.json",
+      "size": 31365,
+      "modified": "2026-09-26 15:25",
+      "isEmpty": false
+    },
+    {
+      "name": "primaria-historia.json",
+      "path": "resources/trivia/primaria-historia.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/primaria-historia.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "primaria-lenguajes-comunicacion.json",
+      "path": "resources/trivia/primaria-lenguajes-comunicacion.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/primaria-lenguajes-comunicacion.json",
+      "size": 38870,
+      "modified": "2026-09-26 15:23",
+      "isEmpty": false
+    },
+    {
+      "name": "primaria-matematicas.json",
+      "path": "resources/trivia/primaria-matematicas.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/primaria-matematicas.json",
+      "size": 31098,
+      "modified": "2026-09-26 15:23",
+      "isEmpty": false
+    },
+    {
+      "name": "secundaria-ciencias-biologia.json",
+      "path": "resources/trivia/secundaria-ciencias-biologia.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-ciencias-biologia.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-ciencias-fisica.json",
+      "path": "resources/trivia/secundaria-ciencias-fisica.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-ciencias-fisica.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-ciencias-quimica.json",
+      "path": "resources/trivia/secundaria-ciencias-quimica.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-ciencias-quimica.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-español.json",
+      "path": "resources/trivia/secundaria-español.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-espa%C3%B1ol.json",
+      "size": 18469,
+      "modified": "2026-09-26 15:22",
+      "isEmpty": false
+    },
+    {
+      "name": "secundaria-geografia-mexico.json",
+      "path": "resources/trivia/secundaria-geografia-mexico.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-geografia-mexico.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-geografia-mundo.json",
+      "path": "resources/trivia/secundaria-geografia-mundo.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-geografia-mundo.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-gramatica.json",
+      "path": "resources/trivia/secundaria-gramatica.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-gramatica.json",
+      "size": 31787,
+      "modified": "2026-09-26 15:22",
+      "isEmpty": false
+    },
+    {
+      "name": "secundaria-historia-mexico-independecia-revolucion.json",
+      "path": "resources/trivia/secundaria-historia-mexico-independecia-revolucion.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-historia-mexico-independecia-revolucion.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-historia-mexico-prehispanico-conquista-colonia.json",
+      "path": "resources/trivia/secundaria-historia-mexico-prehispanico-conquista-colonia.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-historia-mexico-prehispanico-conquista-colonia.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-historia-mexico-siglo-xix-xx.json",
+      "path": "resources/trivia/secundaria-historia-mexico-siglo-xix-xx.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-historia-mexico-siglo-xix-xx.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-historia-mexico.json",
+      "path": "resources/trivia/secundaria-historia-mexico.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-historia-mexico.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-historia-mundial-moderna.json",
+      "path": "resources/trivia/secundaria-historia-mundial-moderna.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-historia-mundial-moderna.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-historia-universal.json",
+      "path": "resources/trivia/secundaria-historia-universal.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-historia-universal.json",
+      "size": 0,
+      "modified": "2026-09-26 01:53",
+      "isEmpty": true
+    },
+    {
+      "name": "secundaria-ingles.json",
+      "path": "resources/trivia/secundaria-ingles.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-ingles.json",
+      "size": 35837,
+      "modified": "2026-09-26 15:20",
+      "isEmpty": false
+    },
+    {
+      "name": "secundaria-matematicas-algebra.json",
+      "path": "resources/trivia/secundaria-matematicas-algebra.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-matematicas-algebra.json",
+      "size": 37855,
+      "modified": "2026-09-26 15:20",
+      "isEmpty": false
+    },
+    {
+      "name": "secundaria-matematicas-aritmetica.json",
+      "path": "resources/trivia/secundaria-matematicas-aritmetica.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-matematicas-aritmetica.json",
+      "size": 49484,
+      "modified": "2026-09-26 15:20",
+      "isEmpty": false
+    },
+    {
+      "name": "secundaria-matematicas-geometria.json",
+      "path": "resources/trivia/secundaria-matematicas-geometria.json",
+      "type": "trivia",
+      "url": "assets/resources/trivia/secundaria-matematicas-geometria.json",
+      "size": 50874,
+      "modified": "2026-09-26 15:18",
+      "isEmpty": false
     },
     {
       "name": "biologia.json",

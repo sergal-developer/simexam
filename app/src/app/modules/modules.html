@@ -27,11 +27,11 @@
         </div>
 
         <div class="screen" [ngClass]="{'open': screen === _screen.attemptevalue }">
-            <quiz [id]="submodule" [review]="false" class="_screen screen_quiz" *ngIf="screen === _screen.attemptevalue" (onChange)="onChangeUI($event)"></quiz>
+            <quiz-view [id]="submodule" [review]="false" class="_screen screen_quiz" *ngIf="screen === _screen.attemptevalue" (onChange)="onChangeUI($event)"></quiz-view>
         </div>
 
         <div class="screen" [ngClass]="{'open': screen === _screen.attemptreview }">
-            <quiz [id]="submodule" [review]="true" class="_screen screen_quiz" *ngIf="screen === _screen.attemptreview" (onChange)="onChangeUI($event)"></quiz>
+            <quiz-view [id]="submodule" [review]="true" class="_screen screen_quiz" *ngIf="screen === _screen.attemptreview" (onChange)="onChangeUI($event)"></quiz-view>
         </div>
 
         <div class="screen" [ngClass]="{'open': screen === _screen.quizselection }">
@@ -59,10 +59,12 @@
 
 <div class="notification {{ uiServices._notification.type }}"
     [ngClass]="{'show': uiServices._notification.show }">
-    <div class="item" *ngIf="uiServices._notification.icon"><span class="material-icons">{{
-            uiServices._notification.icon }}</span></div>
+    <div class="item" *ngIf="uiServices._notification.icon">
+        <span class="material-icons">{{ uiServices._notification.icon }}</span>
+    </div>
     <div class="item" [innerHTML]="uiServices._notification.text"></div>
     <div class="item actions">
-        <button (click)="uiServices.closeNotification()"> <span class="material-icons">close</span> </button>
+        <button class="action" *ngIf="uiServices._notification.action.event" [innerHTML]="uiServices._notification.action.text" (click)="uiServices.emitAction()"></button>
+        <button class="close" *ngIf="uiServices._notification.closeAction.show" (click)="uiServices.closeNotification()"> <span class="material-icons">close</span> </button>
     </div>
 </div>

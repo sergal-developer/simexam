@@ -94,7 +94,6 @@ export class SectionDinamicComponent implements AfterViewInit, OnChanges, OnDest
 
     @HostListener('pointermove', ['$event'])
     onMouseMove(event: PointerEvent): void {
-        console.log('Pointer Type: ', event.pointerType);
         this._onMove(event);
     }
 

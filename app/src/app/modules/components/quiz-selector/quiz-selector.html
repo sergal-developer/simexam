@@ -8,29 +8,34 @@
                 <h4>Plantillas Genericas</h4>
             </div>
             <div class="arrage stacked paddings">
-                <button class="item" (click)="createNewBlank('questionaries')">
-                    <lu-icon [icon]="luIcon.list"></lu-icon>
+                <button class="item" (click)="createNewBlank('trivia')">
+                    <lu-icon [icon]="luIcon.trivia"></lu-icon>
                     <div>Examen</div>
                 </button>
 
                 <button class="item"  (click)="createNewBlank('simple')">
-                    <lu-icon [icon]="luIcon.cards"></lu-icon>
+                    <lu-icon [icon]="luIcon.simple"></lu-icon>
                     <div>Tarjetas</div>
                 </button>
 
                 <button class="item" (click)="createNewBlank('true-false')">
-                    <lu-icon [icon]="luIcon.drama"></lu-icon>
+                    <lu-icon [icon]="luIcon.trueFalse"></lu-icon>
                     <div>Verdadero / Falso</div>
                 </button>
 
                 <button class="item" (click)="createNewBlank('popularity')">
-                    <lu-icon [icon]="luIcon.poll"></lu-icon>
+                    <lu-icon [icon]="luIcon.popularity"></lu-icon>
                     <div>Encuesta</div>
                 </button>
 
-                <button class="item" (click)="createNewBlank('math')">
-                    <lu-icon [icon]="luIcon.aritmetic"></lu-icon>
+                <button class="item" (click)="createNewBlank('math-quest')">
+                    <lu-icon [icon]="luIcon.martQuest"></lu-icon>
                     <div>Calcular</div>
+                </button>
+
+                <button class="item" (click)="createNewBlank('reading')">
+                    <lu-icon [icon]="luIcon.reading"></lu-icon>
+                    <div>Lectura</div>
                 </button>
 
             </div>
@@ -45,23 +50,23 @@
                 <button class="link" (click)="resetFilter()" *ngIf="currentFilter">reset</button>
             </div>
             <div class="arrage centers paddings">
-                <div class="item" (click)="filterBy('questionaries')">
-                    <lu-icon [icon]="luIcon.list"></lu-icon>
+                <div class="item" (click)="filterBy('quiz')">
+                    <lu-icon [icon]="luIcon.trivia"></lu-icon>
                     <div>Examen</div>
                 </div>
 
                 <div class="item" (click)="filterBy('simple')">
-                    <lu-icon [icon]="luIcon.cards"></lu-icon>
+                    <lu-icon [icon]="luIcon.simple"></lu-icon>
                     <div>Tarjetas</div>
                 </div>
 
                 <div class="item" (click)="filterBy('true-false')">
-                    <lu-icon [icon]="luIcon.drama"></lu-icon>
+                    <lu-icon [icon]="luIcon.trueFalse"></lu-icon>
                     <div>Verdadero / Falso</div>
                 </div>
 
                 <div class="item" (click)="filterBy('popularity')">
-                    <lu-icon [icon]="luIcon.poll"></lu-icon>
+                    <lu-icon [icon]="luIcon.popularity"></lu-icon>
                     <div>Encuesta</div>
                 </div>
             </div>
@@ -70,10 +75,12 @@
                 <div class="item" *ngFor="let item of listFilesFiltered">
                     <div class="arrage">
                         <div class="item">
-                            <lu-icon [icon]="luIcon.list" *ngIf="item.type == 'questionaries'"></lu-icon>
-                            <lu-icon [icon]="luIcon.cards" *ngIf="item.type == 'simple'"></lu-icon>
-                            <lu-icon [icon]="luIcon.drama" *ngIf="item.type == 'true-false'"></lu-icon>
-                            <lu-icon [icon]="luIcon.poll" *ngIf="item.type == 'popularity'"></lu-icon>
+                            <lu-icon [icon]="luIcon.trivia" *ngIf="item.type == 'trivia'"></lu-icon>
+                            <lu-icon [icon]="luIcon.simple" *ngIf="item.type == 'simple'"></lu-icon>
+                            <lu-icon [icon]="luIcon.trueFalse" *ngIf="item.type == 'true-false'"></lu-icon>
+                            <lu-icon [icon]="luIcon.popularity" *ngIf="item.type == 'popularity'"></lu-icon>
+                            <lu-icon [icon]="luIcon.martQuest" *ngIf="item.type == 'mart-quest'"></lu-icon>
+                            <lu-icon [icon]="luIcon.reading" *ngIf="item.type == 'reading'"></lu-icon>
                         </div>
                         <div class="item">{{ item._name }}</div>
                         <div class="item">

@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { v4 as uuidv4 } from 'uuid';
-import { AttemptAnswerDTO, AttemptDTO, AttemptQuestDTO, getAttemptDTO, getAttemptDTOValid, getGrade, getPermissionsDTO, getQuizDTOValid, getSettingsDTO, LogDTO, normalizeAttemptDTO, normalizeAttemptQuestDTO, normalizeQuestionnaireDTO, normalizeQuizDTO, queryAttemptQuestDTO, queryQuestionnaireDTO, QuestionDTO, QuestionnaireDTO, QuizAnswerDTO, QuizAnswerOptionDTO, QuizDTO, setGrade, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from '../data/entities/dtos';
+import { AttemptDTO, getNewAttemptDTO, getPermissionsDTO, getSettingsDTO, LogDTO, normalizeAttemptDTO, normalizeQuestionaryDTO, queryAttemptDTO, queryQuestionaryDTO, QuestionDTO, QuestionaryDTO, setGrade, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from '../data/entities/dtos';
 import { AttemptState } from '../data/enumerables/enumerables';
+import { TransformData } from '../data/utils/transformData';
 import { DatabaseService } from './database/sql.database.service';
 
 @Injectable()
@@ -15,10 +15,11 @@ export class CommonServices {
   private readonly resourcesUrl =
     'https://sergal-developer.github.io/simexam/assets/';
 
+  transform = new TransformData();
 
   constructor(
     private _http: HttpClient,
-    private _router: Router, 
+    private _router: Router,
     private _services: DatabaseService) { }
 
   //#region PUBLIC METHODS
@@ -83,33 +84,33 @@ export class CommonServices {
   //#endregion USERS
 
   //#region QUESTIONNAIRES
-  async getAllQuestionnaires(): Promise<QuestionnaireDTO[]> {
-    let response: QuestionnaireDTO[] = await this._services.getAllQuestionnaires();
-    response = response && response.length ? 
+  async getAllQuestionnaires(): Promise<QuestionaryDTO[]> {
+    let response: QuestionaryDTO[] = await this._services.getAllQuestionnaires();
+    response = response && response.length ?
       response.map(data => {
-        return normalizeQuestionnaireDTO(data);
-    }) : []
+        return normalizeQuestionaryDTO(data);
+      }) : []
     return response;
   }
 
-  async getQuestionnaireById(id: number): Promise<QuestionnaireDTO> {
-    let response = await this._services.getQuestionnaireById(this.verifyNumber(id));
-    return response ? normalizeQuestionnaireDTO(response) : null;
+  async getQuestionnaireById(id: number): Promise<QuestionaryDTO> {
+    const response = await this._services.getQuestionnaireById(this.verifyNumber(id));
+    return response ? normalizeQuestionaryDTO(response) : null;
   }
 
-  async saveQuestionnaire(data: QuestionnaireDTO): Promise<QuestionnaireDTO> {
+  async saveQuestionnaire(data: QuestionaryDTO): Promise<QuestionaryDTO> {
     // preparar los datos en modo cadena
-    data = queryQuestionnaireDTO(data);
+    data = queryQuestionaryDTO(data);
 
     // Guardar el quiz primero
-    const response: QuestionnaireDTO = await this._services.saveQuestionnaire(data);
-    return response ? normalizeQuestionnaireDTO(response) : null;
+    const response: QuestionaryDTO = await this._services.saveQuestionnaire(data);
+    return response ? normalizeQuestionaryDTO(response) : null;
   }
 
-  async duplicateQuestionnaire(id: number): Promise<QuestionnaireDTO> {
+  async duplicateQuestionnaire(id: number): Promise<QuestionaryDTO> {
     const _questionnaire = await this._services.getQuestionnaireById(this.verifyNumber(id));
     // clean _quiz to save as new record
-    _questionnaire.questionnaireId = null;
+    _questionnaire.questionaryId = null;
     _questionnaire.title = `${_questionnaire.title}`;
     _questionnaire.updatedDate = new Date().getTime();
     _questionnaire.questionsCount = _questionnaire.questions.length;
@@ -117,47 +118,68 @@ export class CommonServices {
     return await this.saveQuestionnaire(_questionnaire);
   }
 
-  async deleteQuestionnaire(id: number): Promise<QuestionnaireDTO> {
+  async deleteQuestionnaire(id: number): Promise<QuestionaryDTO> {
     let response = await this._services.deleteQuestionnaire(this.verifyNumber(id));
-    return response ? normalizeQuestionnaireDTO(response) : null;
+    return response ? normalizeQuestionaryDTO(response) : null;
   }
   //#endregion QUESTIONNAIRES
 
   //#region ATTEMPTQUESTIONNAIRES
-  async getAllAttemptQuestionnaires(): Promise<AttemptQuestDTO[]> {
-    let response: AttemptQuestDTO[] = await this._services.getAllAttemptQuestionnaires()
-    response = response && response.length ? 
+  async getAllAttemptQuestionnaires(): Promise<AttemptDTO[]> {
+    let response: AttemptDTO[] = await this._services.getAllAttemptQuestionnaires()
+    response = response && response.length ?
       response.map(data => {
-        return normalizeAttemptQuestDTO(data);
-    }) : []
+        return normalizeAttemptDTO(data);
+      }) : []
     return response;
   }
 
-  async getAttemptByQuestionnaireId(id: number): Promise<AttemptQuestDTO[]> {
-    let response = await this._services.getAttemptByQuestionnaireId(this.verifyNumber(id));
-    return response ? response : [];
+  async getAttemptByquestionaryId(id: number): Promise<AttemptDTO[]> {
+    let response = await this._services.getAttemptByquestionaryId(this.verifyNumber(id));
+    console.log('response: ', response);
+    return response ? response.map(data => {
+      return normalizeAttemptDTO(data);
+    }) : [];
   }
 
-  async getAttemptQuestionnaireById(id: number): Promise<AttemptQuestDTO> {
+  async getAttemptQuestionnaireById(id: number): Promise<AttemptDTO> {
     let response = await this._services.getAttemptQuestionnaireById(this.verifyNumber(id));
-    return response ? normalizeAttemptQuestDTO(response) : null;
+    return response ? normalizeAttemptDTO(response) : null;
   }
 
-  async saveAttemptQuestionnaire(data: AttemptQuestDTO): Promise<AttemptQuestDTO> {
+  async createAttemptFromQuestionnaire(questionaryId: number, userId: number, shuffle: boolean = true,): Promise<AttemptDTO> {
+    const questionarie = await this.getQuestionnaireById(questionaryId);
+    if (!questionarie) {
+      return null;
+    }
+
+    // create new atempt
+    const rawAttempt = getNewAttemptDTO(questionarie, userId);
+
+    // SHUFFLE questions
+    if(shuffle) {
+      rawAttempt.questions = this.transform.shuffleArray((rawAttempt.questions as QuestionDTO[]));
+    }
+
+    // SAVE DATA
+    return await this.saveAttemptQuestionnaire(rawAttempt);
+  }
+
+  async saveAttemptQuestionnaire(data: AttemptDTO): Promise<AttemptDTO> {
     // preparar los datos en modo cadena
-    data = queryAttemptQuestDTO(data);
+    data = queryAttemptDTO(data);
 
     // Guardar el quiz primero
-    const response: AttemptQuestDTO = await this._services.saveAttemptQuestionnaire(data);
-    return response ? normalizeAttemptQuestDTO(response) : null;
+    const response: AttemptDTO = await this._services.saveAttemptQuestionnaire(data);
+    return response ? normalizeAttemptDTO(response) : null;
   }
 
-  async deleteAttemptQuestionnaire(id: number): Promise<AttemptQuestDTO> {
+  async deleteAttemptQuestionnaire(id: number): Promise<AttemptDTO> {
     let response = await this._services.deleteAttemptQuestionnaire(this.verifyNumber(id));
-    return response ? normalizeAttemptQuestDTO(response) : null;
+    return response ? normalizeAttemptDTO(response) : null;
   }
 
-  async evalueAttemptQuestionnaireById(attemptId: number): Promise<AttemptQuestDTO> {
+  async evalueAttemptQuestionnaireById(attemptId: number): Promise<AttemptDTO> {
     let attempt = await this.getAttemptQuestionnaireById(this.verifyNumber(attemptId));
 
     const questions = (attempt.questions as QuestionDTO[]);
@@ -173,14 +195,13 @@ export class CommonServices {
     attempt.score = (correctquestions.length * 100) / total;
     attempt.state = AttemptState.completed;
     attempt._grade = setGrade(attempt);
-    console.log('attempt: ', attempt);
 
     attempt = await this.saveAttemptQuestionnaire(attempt);
-    return normalizeAttemptQuestDTO(attempt);
+    return normalizeAttemptDTO(attempt);
   }
   //#endregion ATTEMPTQUESTIONNAIRES
 
-  
+  /*
   //#region QUIZ
   async getAllQuizs(): Promise<QuizDTO[]> {
     let response: QuizDTO[] = await this._services.getAllQuizzes();
@@ -380,8 +401,6 @@ export class CommonServices {
     attempt.score = (correctAnswers.length * 100) / total;
     attempt.state = AttemptState.completed;
     attempt.grade = getGrade(attempt);
-    console.log('attempt: ', attempt);
-
     attempt = await this.saveAllAttempt(attempt);
     return normalizeAttemptDTO(attempt);
   }
@@ -400,7 +419,8 @@ export class CommonServices {
     return await this._services.saveAttemptAnswers(data);
   }
   //#endregion ANSWERS_ATTEMPTS
-
+  */
+  
   //#region LOGS
   async getAllLogs(): Promise<LogDTO[]> {
     return await this._services.getAllLogs();
@@ -657,12 +677,12 @@ export class CommonServices {
 
   //#region EXTERNAL DATA
   async getManifetFiles(): Promise<any> {
-    const url = `${ this.resourcesUrl }asset-manifest.json`;
+    const url = `${this.resourcesUrl}asset-manifest.json`;
     return this._http.get(url).toPromise();
   }
 
   async getFileExternal(path): Promise<any> {
-    const url = `${ this.resourcesUrl }${ path }`;
+    const url = `${this.resourcesUrl}${path}`;
     return this._http.get(url).toPromise();
   }
   //#endregion EXTERNAL DATA

@@ -9,10 +9,11 @@ export class UiServices {
   activeTimer: any;
   public _notification: any = {
     type: 'info',
-    closeTimer: 3000,
     text: '',
     show: false,
-    icon: ''
+    icon: '',
+    action: { text: 'action', event: null },
+    closeAction: { closeTimer: 3000, show: true },
   };
 
   public _loader = {
@@ -22,43 +23,60 @@ export class UiServices {
   constructor() { }
 
   ///#region NOTIFICATIONS
-  public notification(text: string, options?: { type?: 'info' | 'success' | 'warning' | 'error' | 'full-IA' , closeTimer?: number }) {
-
+  public notification(text: string, 
+    options?: { 
+      type?: 'info' | 'success' | 'warning' | 'error' | 'full-IA' , 
+      closeTimer?: number,
+      closeShow?: boolean,
+      actionText?: string,
+      actionEvent?: Function
+    }) {
     // Reset notification
     this._notification = {
       type: 'info',
-      closeTimer: 3000,
       text: '',
       show: false,
-      icon: ''
+      icon: '',
+      action: { text: 'action', event: null },
+      closeAction: { closeTimer: 3000, show: true }
     };
 
     this._notification.text = this._helper.formatText(text);
     if (options) {
       this._notification.type = options?.type || 'info';
-      this._notification.closeTimer = options?.closeTimer != undefined ? options?.closeTimer : 3000;
+      this._notification.closeAction.closeTimer = options?.closeTimer != undefined ? options?.closeTimer : 3000;
+      this._notification.closeAction.show = options?.closeShow != undefined ? options?.closeShow : true;
+      this._notification.action.text = options?.actionText != undefined ? options?.actionText : 'action';
+      this._notification.action.event = options?.actionEvent != undefined ? options?.actionEvent : null;
     }
+
     this._notification.show = true;
     this.onCloseTimer();
   }
 
   onCloseTimer() {
-    if ((this._notification.closeTimer && this._notification.closeTimer > 0) && this._notification.show) {
+    if ((this._notification.closeAction.closeTimer && this._notification.closeAction.closeTimer > 0) && this._notification.show) {
       this.activeTimer = setTimeout(() => {
         this._notification.show = false;
-      }, this._notification.closeTimer);
+      }, this._notification.closeAction.closeTimer);
     } else {
       clearTimeout(this.activeTimer);
       this.activeTimer = null;
     }
   }
 
-  closeNotification() {
+  public closeNotification() {
     if (this.activeTimer) {
       clearTimeout(this.activeTimer);
       this.activeTimer = null;
     }
     this._notification.show = false;
+  }
+
+  emitAction() {
+    if(this._notification.action.event) {
+      this._notification.action.event();
+    }
   }
 
   applyTheme(theme: ThemeDTO) {

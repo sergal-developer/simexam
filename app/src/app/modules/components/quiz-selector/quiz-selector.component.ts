@@ -1,12 +1,10 @@
 import { Component, OnInit, ViewEncapsulation, } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { icons } from "lucide";
-import { getQuizAnswerDTO, getQuizAnswerOptionDTO, getQuizDTO, QuizAnswerDTO, QuizDTO, SettingsDTO } from 'src/app/shared/data/entities/dtos';
-import { ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
+import { normalizeQuestionaryDTO, QuestionnaireFile, QuestionDTO, QuestionaryDTO, SettingsDTO } from 'src/app/shared/data/entities/dtos';
+import { QuizType } from 'src/app/shared/data/enumerables/enumerables';
 import { Utils } from 'src/app/shared/data/utils/utils';
 import { CommonServices } from 'src/app/shared/services/common.services';
-import { DatabaseService } from 'src/app/shared/services/database/sql.database.service';
 import { UiServices } from 'src/app/shared/services/ui.services';
 
 
@@ -19,8 +17,8 @@ export class QuizSelectorComponent implements OnInit {
 
   options: any = [];
   settings: SettingsDTO = null;
-  quiz: QuizDTO = null;
-  currentAnswer: QuizAnswerDTO = null;
+  quiz: QuestionaryDTO = null;
+  currentAnswer: QuestionDTO = null;
   currentAnswerIndex = 0;
 
   translateLabels = {
@@ -47,12 +45,14 @@ export class QuizSelectorComponent implements OnInit {
 
   luIcon = {
     back: icons.ArrowLeft,
-    list: icons.ListTodo,
-    cards: icons.PlayingCards,
-    drama: icons.Drama,
-    gFalse: icons.FaceSlightlyFrowning,
-    poll: icons.Vote,
-    aritmetic: icons.Brain,
+    
+    trivia: icons.ListTodo,
+    simple: icons.PlayingCards,
+    trueFalse: icons.Drama,
+    popularity: icons.Vote,
+    martQuest: icons.Brain,
+    reading: icons.BookOpenText,
+
     download: icons.ArrowDownToLine,
     left: icons.ChevronLeft,
     save: icons.SaveAll,
@@ -91,7 +91,7 @@ export class QuizSelectorComponent implements OnInit {
   }
 
   //#region DATA
-  async setupComponent(injectData?: QuizDTO) {
+  async setupComponent(injectData?: QuestionaryDTO) {
     this.getManifestFiles();
     this.uiServices.showLoader(false);
   }
@@ -106,26 +106,47 @@ export class QuizSelectorComponent implements OnInit {
     });
     this.listFilesAvailable = this.listFilesAvailable.filter(x => x.isEmpty == false);
     this.listFilesFiltered = JSON.parse(JSON.stringify(this.listFilesAvailable));
-    console.log('data: ', data);
   }
 
   async getExternalFile(path: string) {
-    const data = await this.commonServices.getFileExternal(path);
-    console.log('data: ', data);
+    return await this.commonServices.getFileExternal(path);
   }
   //#region DATA
 
   //#region EVENTS
   gotoDashboard() {
     this.commonServices.navigate('dashboard');
+    this.uiServices.closeNotification();
   }
 
-  createNewBlank(type: string = 'questionaries') {
+  createNewBlank(type: string = 'quiz') {
     this.commonServices.navigate('quizcreate', type);
   }
 
   async getFile(item: any) {
-    this.getExternalFile(item.path)
+    const data = await this.getExternalFile(item.path);
+    console.info('data: ', item, data);
+    
+    const _template = normalizeQuestionaryDTO((data as QuestionaryDTO));
+    console.log('_template: ', _template);
+    
+    
+    this.uiServices.notification(`¿Importar plantilla?`, { 
+      type: 'info', closeTimer: 0,
+      actionText: 'IMPORTAR', actionEvent: () => { this.importTemplateFile(item, _template) } });
+  }
+
+  async importTemplateFile(file: QuestionnaireFile, template: QuestionaryDTO) {
+    this.uiServices.closeNotification();
+    
+    template.type = QuizType[file.type];
+    const _template = normalizeQuestionaryDTO((template as QuestionaryDTO));
+
+    const _data = await this.commonServices.saveQuestionnaire(_template);
+    
+    this.uiServices.notification(`Plantilla importada con exito`, { 
+      type: 'success', closeTimer: 3500,
+      actionText: 'IR A INICIO', actionEvent: () => { this.gotoDashboard() } });
   }
 
   filterBy(type: string) {

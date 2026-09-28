@@ -1,11 +1,11 @@
 export class UxUtils {
     waitForAnimation(element: HTMLElement): Promise<void> {
         return new Promise(resolve => {
-            console.log('start event: ');
+            console.info('start.animation');
             element.addEventListener(
                 'transitionend',
                 () => {        
-                    console.log('end: ');
+                    console.info('end.animation');
                     resolve()
                 },
                 { once: true }

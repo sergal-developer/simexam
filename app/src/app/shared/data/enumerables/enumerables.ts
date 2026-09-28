@@ -74,8 +74,10 @@ export enum GradeState {
 }
 
 export enum QuizType {
-  questionaries = 'questionaries',
+  trivia = 'trivia',
   simple = 'simple',
-  ['true-false'] = 'true-false',
+  'true-false' = 'true-false',
   popularity = 'popularity',
+  'math-quest' = 'math-quest',
+  'reading' = 'reading'
 }

@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation, } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { icons } from 'lucide';
-import { getQuizAnswerDTO, getQuizAnswerOptionDTO, getQuizDTO, normalizeQuizDTO, QuizAnswerDTO, QuizAnswerOptionDTO, QuizDTO, SettingsDTO } from 'src/app/shared/data/entities/dtos';
+import { getQuestionDTO, getAnswerDTO, getQuestionaryDTO, normalizeQuestionaryDTO, QuestionDTO, AnswerDTO, QuestionaryDTO, SettingsDTO } from 'src/app/shared/data/entities/dtos';
 import { Utils } from 'src/app/shared/data/utils/utils';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
@@ -32,8 +32,8 @@ export class QuizEditableComponent implements OnInit {
   })
 
   options: any = [];
-  quiz: QuizDTO = null;
-  currentAnswer: QuizAnswerDTO = null;
+  quiz: QuestionaryDTO = null;
+  currentAnswer: QuestionDTO = null;
   currentAnswerIndex = 0;
 
   translateLabels = {
@@ -96,7 +96,7 @@ export class QuizEditableComponent implements OnInit {
   }
 
   //#region DATA
-  async setupComponent(injectData?: QuizDTO) {
+  async setupComponent(injectData?: QuestionaryDTO) {
     this.currentAnswerIndex = 0;
     this.isEdit = this.quizId ? true : false;
     this.formIAGenerated = this.fb.group({
@@ -112,12 +112,12 @@ export class QuizEditableComponent implements OnInit {
 
     this.durationFormShow = false;
 
-    this.quiz = getQuizDTO('', 0);
-    this.quiz.answers = [this.getNewQuestionForm()];
+    this.quiz = getQuestionaryDTO('', 0);
+    this.quiz.questions = [this.getNewQuestionForm()];
 
 
     if (this.quizId) {
-      const _quiz = await this.commonServices.getQuizCompleteById(this.quizId);
+      const _quiz = await this.commonServices.getQuestionnaireById(this.quizId);
 
       if (!this.quiz) {
         this.uiServices.notification(this.translateLabels.service_fail_get, { type: 'error', closeTimer: 3000 });
@@ -125,7 +125,7 @@ export class QuizEditableComponent implements OnInit {
         return;
       }
 
-      this.quiz = normalizeQuizDTO(_quiz);
+      this.quiz = normalizeQuestionaryDTO(_quiz);
     }
 
     this.setCurrentAnswer();
@@ -133,23 +133,21 @@ export class QuizEditableComponent implements OnInit {
   }
 
   setCurrentAnswer() {
-    const answerItem = this.quiz.answers[this.currentAnswerIndex];
+    const answerItem = (this.quiz.questions[this.currentAnswerIndex] as QuestionDTO);
 
     const optionArray = [];
-    answerItem.options.map(opt => {
+    answerItem.answers.map(opt => {
       optionArray.push(this.getNewOptionForm(opt))
     });
 
-    const optionEmpty = answerItem.options[answerItem.options.length - 1].content !== '';
+    const optionEmpty = answerItem.answers[answerItem.answers.length - 1].answer !== '';
     if (optionEmpty) {
       optionArray.push(this.getNewOptionForm())
     }
 
     this.formQuestion = this.fb.group({
-      answerId: [answerItem.answerId],
-      quizId: [answerItem.quizId],
-      title: [answerItem.title],
-      updatedDate: [answerItem.updatedDate],
+      answerId: [answerItem.questionId],
+      title: [answerItem.question],
       options: this.fb.array(optionArray)
     });
   }
@@ -161,9 +159,9 @@ export class QuizEditableComponent implements OnInit {
   get validActions(): boolean {
     const formValid = this.form.valid ?? false;
     const formQuestionValid = this.formQuestion.valid ?? false;
-    const question: QuizAnswerDTO = this.formQuestion.value;
-    const questionsValid = question.options.length >= 3;
-    const selectedAwnser = question.options.find(opt => opt._selected);
+    const question: QuestionDTO = this.formQuestion.value;
+    const questionsValid = question.answers.length >= 3;
+    const selectedAwnser = question.answers.find(opt => opt._selected);
     return formValid && formQuestionValid && selectedAwnser && questionsValid;
   }
 
@@ -171,26 +169,26 @@ export class QuizEditableComponent implements OnInit {
     return new Promise(async (resolve, reject) => {
       this.uiServices.showLoader(true);
       // save the last changes
-      this.quiz.answers[this.currentAnswerIndex] = this.formQuestion.value;
+      (this.quiz.questions as QuestionDTO[])[this.currentAnswerIndex] = this.formQuestion.value;
 
       // refine request
       const quizRequest = this.quiz = this._quizRefined(true);
-      const response = await this.commonServices.saveAllQuiz(quizRequest);
+      const response = await this.commonServices.saveQuestionnaire(quizRequest);
       if (!response) {
         this.uiServices.notification(this.translateLabels.service_fail_update);
         this.uiServices.showLoader(false);
         resolve(false);
       }
 
-      const _quiz = await this.commonServices.getQuizCompleteById(response.quizId);
-      this.quiz = normalizeQuizDTO(_quiz);
+      const _quiz = await this.commonServices.getQuestionnaireById(response.questionaryId);
+      this.quiz = normalizeQuestionaryDTO(_quiz);
       this.uiServices.showLoader(false);
       resolve(true);
     })
   }
 
   async getQuizData(id: number) {
-    const data = await this.commonServices.getQuizCompleteById(id);
+    const data = await this.commonServices.getQuestionnaireById(id);
     if (!data) {
       this.uiServices.notification(this.translateLabels.service_fail_get);
       return null;
@@ -210,14 +208,14 @@ export class QuizEditableComponent implements OnInit {
 
   //#region EVENTS
   selectAnswerCorrect(option: FormGroup) {
-    const _option = option.value as QuizAnswerOptionDTO;
+    const _option = option.value as AnswerDTO;
     // reset all items
-    this.formQuestion.value.options.map((opt, index) => {
+    this.formQuestion.value.answers.map((opt, index) => {
       this.getFormOptions().controls[index].get('_selected').setValue(false);
     });
 
     // assing correct
-    if (_option.content) {
+    if (_option.answer) {
       option.controls['_selected'].setValue(true);
     }
   }
@@ -230,12 +228,12 @@ export class QuizEditableComponent implements OnInit {
     //   }, 100);
     // }
 
-    const lastIndex = this.formQuestion.value.options.length - 1;
-    const lastValue = this.formQuestion.value.options[lastIndex].content;
+    const lastIndex = this.formQuestion.value.answers.length - 1;
+    const lastValue = this.formQuestion.value.answers[lastIndex].content;
     if (lastIndex >= 0 && lastValue != '') {
       this.getFormOptions().push(this.getNewOptionForm());
     } else if (lastIndex > 0 && lastValue == '') {
-      const optionLast = this.formQuestion.value.options[lastIndex - 1];
+      const optionLast = this.formQuestion.value.answers[lastIndex - 1];
       const postlastValue = optionLast.content;
       if (postlastValue == '') {
         this.getFormOptions().removeAt(lastIndex);
@@ -244,18 +242,18 @@ export class QuizEditableComponent implements OnInit {
   }
 
   gotoDashboard() {
-    this.commonServices.navigate('dashboard', this.quiz.quizId ? this.quiz.quizId.toString() : '');
+    this.commonServices.navigate('dashboard', this.quiz.questionaryId ? this.quiz.questionaryId.toString() : '');
   }
 
   async nextQuestion() {
-    if (this.currentAnswerIndex <= this.quiz.answers.length - 1) {
-      this.quiz.answers[this.currentAnswerIndex] = this.formQuestion.value;
+    if (this.currentAnswerIndex <= this.quiz.questions.length - 1) {
+      (this.quiz.questions as QuestionDTO[])[this.currentAnswerIndex] = this.formQuestion.value;
 
       await this.updateQuiz();
 
       this.currentAnswerIndex = this.currentAnswerIndex + 1;
-      if (this.currentAnswerIndex > this.quiz.answers.length - 1) {
-        this.quiz.answers.push(this.getNewQuestionForm());
+      if (this.currentAnswerIndex > this.quiz.questions.length - 1) {
+        (this.quiz.questions as QuestionDTO[]).push(this.getNewQuestionForm());
       }
 
       this.setCurrentAnswer();
@@ -265,7 +263,7 @@ export class QuizEditableComponent implements OnInit {
 
   async prevQuestion() {
     if (this.currentAnswerIndex != 0) {
-      this.quiz.answers[this.currentAnswerIndex] = this.formQuestion.value;
+      (this.quiz.questions as QuestionDTO[])[this.currentAnswerIndex] = this.formQuestion.value;
       this.currentAnswerIndex = this.currentAnswerIndex - 1;
 
       this.setCurrentAnswer();
@@ -294,15 +292,15 @@ export class QuizEditableComponent implements OnInit {
   //#region CONVERTERS
 
   private _getQuizUpdated() {
-    const options = [];
-    this.quiz.answers.map(ans => {
-      ans.options.map(opt => {
-        options.push(opt);
+    const answers = [];
+    (this.quiz.questions as QuestionDTO[]).map(ans => {
+      ans.answers.map(opt => {
+        answers.push(opt);
       })
     });
   }
 
-  private _quizRefined(cleanUnused = false): QuizDTO {
+  private _quizRefined(cleanUnused = false): QuestionaryDTO {
     const _quiz = JSON.parse(JSON.stringify(this.quiz));
 
     const { title, time } = this.form.value;
@@ -310,15 +308,15 @@ export class QuizEditableComponent implements OnInit {
     _quiz.time = time;
     _quiz.updatedDate = new Date().getTime();
 
-    _quiz.answers = JSON.parse(JSON.stringify(_quiz.answers)) || [];
+    _quiz.questions = JSON.parse(JSON.stringify(_quiz.questions)) || [];
     if (cleanUnused) {
-      _quiz.answers = _quiz.answers.filter((opt: QuizAnswerDTO) => opt.title !== '');
+      _quiz.questions = _quiz.questions.filter((opt: QuestionDTO) => opt.question !== '');
     }
-    _quiz.answers.map((answer: QuizAnswerDTO) => {
+    _quiz.questions.map((answer: QuestionDTO) => {
       if (cleanUnused) {
-        answer.options = answer.options.filter((opt: QuizAnswerOptionDTO) => opt.content !== '');
+        answer.answers = answer.answers.filter((opt: AnswerDTO) => opt.answer !== '');
       }
-      answer.options.map(opt => {
+      answer.answers.map(opt => {
         opt.isCorrect = opt._selected;
         return opt;
       });
@@ -335,30 +333,27 @@ export class QuizEditableComponent implements OnInit {
   }
 
   getNewQuestionForm() {
-    const question = getQuizAnswerDTO(`${this.translateLabels.answer_text_default} #${this.currentAnswerIndex + 1}?`);
+    const question = getQuestionDTO(`${this.translateLabels.answer_text_default} #${this.currentAnswerIndex + 1}?`);
     const questions = [
-      getQuizAnswerOptionDTO(`${this.translateLabels.answer_option_text_default} 1`, 1),
-      getQuizAnswerOptionDTO(`${this.translateLabels.answer_option_text_default} 2`, 2),
-      getQuizAnswerOptionDTO('', 3),
+      getAnswerDTO(`${this.translateLabels.answer_option_text_default} 1`, 1),
+      getAnswerDTO(`${this.translateLabels.answer_option_text_default} 2`, 2),
+      getAnswerDTO('', 3),
     ];
 
-    question.options.push(...questions);
+    question.answers.push(...questions);
     return question;
   }
 
-  getNewOptionForm(optionValue?: QuizAnswerOptionDTO) {
-    const question = this.quiz.answers[this.currentAnswerIndex];
-    const option = getQuizAnswerOptionDTO('', question.options.length + 1);
+  getNewOptionForm(optionValue?: AnswerDTO) {
+    const question = (this.quiz.questions[this.currentAnswerIndex] as QuestionDTO);
+    const option = getAnswerDTO('', question.answers.length + 1);
 
     if (!optionValue) {
-      const length = this.formQuestion ? this.formQuestion.value.options.length : 0;
-      option.optionIndex = length + 1;
+      const length = this.formQuestion ? this.formQuestion.value.answers.length : 0;
+      option.answerId = length + 1;
     } else {
       option.answerId = optionValue.answerId;
-      option.content = optionValue.content;
-      option.optionId = optionValue.optionId;
-      option.optionIndex = optionValue.optionIndex;
-      option.updatedDate = optionValue.updatedDate;
+      option.answer = optionValue.answer;
       // GENERATED
       option.isCorrect = optionValue.isCorrect;
       option._selected = optionValue._selected;
