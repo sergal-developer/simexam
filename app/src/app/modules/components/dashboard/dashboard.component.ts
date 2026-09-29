@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit {
   currentSection: '_one' | '_two' | '_three' = '_one';
   listAttempts: AttemptDTO[] = [];
   uistate = 'init';
+  actionsAttempts = false;
 
   transform = new TransformData();
   user: UserDTO = null;
@@ -37,23 +38,32 @@ export class DashboardComponent implements OnInit {
   };
 
   luIcon = {
-    language: icons.Globe,
     empty: icons.SquareDashedKanban,
-    avatar: icons.SquareUserRound,
-    return: icons.ChevronLeft,
-    add: icons.CirclePlus,
-    settings: icons.Settings,
     attempts: icons.ChevronRight,
-
-    exam: icons.NotebookText,
-    examOpen: icons.BookOpenText,
+    open: icons.SquareArrowOutUpRight,
+    review: icons.ListChecks,
+    resolve: icons.ArrowRightFromLine,
     
+
+    back: icons.ArrowLeft,
+    actions: icons.EllipsisVertical,
+    asterisk: icons.Asterisk,
+    help: icons.MessageCircleQuestionMark,
+    delete: icons.Trash,
+    edit: icons.PencilRuler,
+    clone: icons.Copy,
+
     trivia: icons.ListTodo,
     simple: icons.PlayingCards,
     trueFalse: icons.Drama,
     popularity: icons.Vote,
     martQuest: icons.Brain,
     reading: icons.BookOpenText,
+
+    gradeFailed: icons.CircleX,
+    gradeBarely: icons.CircleDashedCheck,
+    gradePassed: icons.CircleCheckBig,
+    gradePerfect: icons.Sparkles,
   }
 
   constructor(private commonServices: CommonServices,
@@ -87,6 +97,7 @@ export class DashboardComponent implements OnInit {
   async init() {
     this.uiServices.showLoader(true);
     const list = await this.commonServices.getAllQuestionary();
+    console.log('list: ', list);
     if (list) {
       this.listQuestionnaire = list;
       this.currentSection = this.listQuestionnaire.length ? '_two' : '_one';
@@ -135,6 +146,19 @@ export class DashboardComponent implements OnInit {
   //#endregion DATA
 
   //#region EVENTS
+  returnMain() {
+    this.currentSection = '_two';
+    setTimeout(() => {
+      this.listQuestionnaire.map((item) => {
+        item._current = false;
+      });
+      this.currentQuestionnaire = null;
+      this.commonServices.navigate('dashboard');
+
+      setTimeout(() => { this.valueChange('primary'); }, 500);
+    }, 500);
+  }
+
   createQuiz() {
     this.commonServices.navigate('quizcreate');
   }
@@ -147,23 +171,6 @@ export class DashboardComponent implements OnInit {
     this.commonServices.navigate('quizedit', quiz.questionaryId.toString());
   }
 
-  async duplicateQuiz(quiz: QuestionaryDTO) {
-    const quizData = await this.commonServices.duplicateQuestionary(quiz.questionaryId);
-    if (quizData) {
-      this.uiServices.notification(`Examen Duplicado correctamente`, { type: 'info', closeTimer: 3000 });
-      this.commonServices.navigate('quizedit', `${quizData.questionaryId}`);
-    }
-  }
-
-  async deleteQuiz(quiz: QuestionaryDTO) {
-    const _quiz = await this.commonServices.deleteQuestionary(quiz.questionaryId);
-    if (_quiz) {
-      this.uiServices.notification(`Examen Eliminado correctamente`, { type: 'success', closeTimer: 3000 });
-      this.init();
-      this.returnMain();
-    }
-  }
-
   goToCompleteAttempt(attempt: AttemptDTO) {
     this.commonServices.navigate('attemptevalue', attempt.attemptId.toString());
   }
@@ -172,7 +179,23 @@ export class DashboardComponent implements OnInit {
     this.commonServices.navigate('attemptreview', attempt.attemptId.toString());
   }
 
+  showActions() {
+    this.actionsAttempts = !this.actionsAttempts;
+  }
+  
+  valueChange(value: string) {
+    this.onChange.emit({ action: 'ui_update', value: value });
+  }
+
+  onAction(evt: { event: string, value: any }) {
+    if (evt.event == 'create' && evt.value == "quiz") {
+      this.selectQuiz();
+      // this.createQuiz();
+    }
+  }
+
   async showAttemptsScreen(quiz: QuestionaryDTO) {
+    this.actionsAttempts = false;
     this.listQuestionnaire.map((item) => {
       item._current = quiz.questionaryId == item.questionaryId;
     });
@@ -190,27 +213,20 @@ export class DashboardComponent implements OnInit {
     setTimeout(() => { this.valueChange('secondary'); }, 500);
   }
 
-  returnMain() {
-    this.currentSection = '_two';
-    setTimeout(() => {
-      this.listQuestionnaire.map((item) => {
-        item._current = false;
-      });
-      this.currentQuestionnaire = null;
-      this.commonServices.navigate('dashboard');
-
-      setTimeout(() => { this.valueChange('primary'); }, 500);
-    }, 500);
+  async duplicateQuiz(quiz: QuestionaryDTO) {
+    const quizData = await this.commonServices.duplicateQuestionary(quiz.questionaryId);
+    if (quizData) {
+      this.uiServices.notification(`Examen Duplicado correctamente`, { type: 'info', closeTimer: 3000 });
+      this.commonServices.navigate('quizedit', `${quizData.questionaryId}`);
+    }
   }
 
-  valueChange(value: string) {
-    this.onChange.emit({ action: 'ui_update', value: value });
-  }
-
-  onAction(evt: { event: string, value: any }) {
-    if (evt.event == 'create' && evt.value == "quiz") {
-      this.selectQuiz();
-      // this.createQuiz();
+  async deleteQuiz(quiz: QuestionaryDTO) {
+    const _quiz = await this.commonServices.deleteQuestionary(quiz.questionaryId);
+    if (_quiz) {
+      this.uiServices.notification(`Examen Eliminado correctamente`, { type: 'success', closeTimer: 3000 });
+      this.init();
+      this.returnMain();
     }
   }
   //#endregion EVENTS

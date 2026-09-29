@@ -28,7 +28,7 @@ export interface QuestionaryDTO {
 
   // GENERATED
   questionsCount?: number;
-  questions?: string | QuestionDTO[];
+  questions?: QuestionDTO[] | string;
 
   // variables for UI and format
   _creationDate?: string;
@@ -85,6 +85,9 @@ export interface AttemptDTO extends QuestionaryDTO {
   _correctQuestions?: number;
   _grade?: GradeState;
   _score?: string;
+
+  _questionsSolved?: number;
+  _progress?: string;
 }
 //#endregion INTERFACES
 
@@ -216,10 +219,12 @@ export function normalizeQuestionaryDTO(data: QuestionaryDTO): QuestionaryDTO {
 }
 
 export function normalizeAttemptDTO(data: AttemptDTO): AttemptDTO {
+  // transform data for show most frendly in UI
   data.creationDate = data.creationDate || new Date().getTime();
   data.updatedDate = data.updatedDate || new Date().getTime();
   data._creationDate = data.creationDate ? transform.toDate(new Date(data.creationDate), 'MMM/d/yy h:mm a') : '-';
   data._updatedDate = data.updatedDate ? transform.toDate(new Date(data.updatedDate), 'MMM/d/yy h:mm a') : '-';
+
   data.type = data.type || QuizType.trivia;
 
   if (typeof data.tags == 'string') {
@@ -240,10 +245,25 @@ export function normalizeAttemptDTO(data: AttemptDTO): AttemptDTO {
   data._grade = data._grade || GradeState.not_submitted;
   data._score = data._score || '';
 
+  // prepare data for show stadistics in progress
+  if (data.state == AttemptState.progress) { 
+    const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
+    data._questionsSolved = questionsSolved.length;
+    const progress = (data._questionsSolved * 100) / data.questionsCount;
+    data._progress = `${Math.round( progress )}%`
+  }
+
+  // prepare data for evalue
   if (data.state == AttemptState.completed) {
+    const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
+    data._questionsSolved = questionsSolved.length;
+    const progress = (data._questionsSolved * 100) / data.questionsCount;
+    data._progress = `${Math.round( progress )}%`
+    
     const correctQuestions = (data.questions as QuestionDTO[]).filter(ans => ans.isCorrect);
     data._correctQuestions = correctQuestions.length;
     data._grade = setGrade(data);
+    data._score = `${ Math.round(data.score) }%`
   }
 
   return data;
@@ -262,25 +282,28 @@ export function queryAttemptDTO(data: AttemptDTO): AttemptDTO {
   data = normalizeAttemptDTO(data);
   data.attemptId = data.attemptId || null;
   data.tags = JSON.stringify(data.tags);
-  data.questions = JSON.stringify(data.questions);
+  const _questions = JSON.stringify(data.questions);  
+  data.questions = _questions;
   return data;
 }
 
 export function setGrade(attempt: AttemptDTO) {
   const total = attempt.questions.length;
-  const failing = Math.round(total * 0.20);
-  const passing = Math.round(total * 0.60);
+  const failing = Math.round(total * 0.60);
+  const passing = Math.round(total * 0.70);
   const passing_aceptable = Math.round(total * 0.80);
   const passing_perfect = Math.round(total * 1.00);
 
+  console.log('grades: ', failing, passing, passing_aceptable, passing_perfect);
+
   const correctAnswer = (attempt.questions as QuestionDTO[]).filter(ans => ans.isCorrect).length;
-  if (correctAnswer <= failing) {
+  if (correctAnswer > 0 && correctAnswer <= failing) {
     return GradeState.failed;
-  } else if (correctAnswer <= passing) {
+  } else if (correctAnswer > failing && correctAnswer <= passing) {
     return GradeState.barely_passed;
-  } else if (correctAnswer <= passing_aceptable) {
+  } else if (correctAnswer > passing && correctAnswer <= passing_aceptable) {
     return GradeState.passed;
-  } else if (correctAnswer <= passing_perfect) {
+  } else if (correctAnswer > passing_aceptable && correctAnswer < passing_perfect) {
     return GradeState.passed;
   } else if (correctAnswer == passing_perfect) {
     return GradeState.perfect;

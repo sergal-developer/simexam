@@ -4,17 +4,15 @@ import { IconNode } from 'lucide';
 @Component({
     selector: 'morph-i',
     template: `
-        <div>
-            <morph-icon
-                #icon
-                [attr.icon]="icon"
-                [attr.label]="label"
-                [attr.size]="size"
-                [attr.color]="color"
-                [attr.strokeWidth]="strokeWidth"
-                [attr.reducedMotion]="reducedMotion">
-            </morph-icon>
-        </div>`,
+        <morph-icon
+            #icon
+            [attr.icon]="icon"
+            [attr.label]="label"
+            [attr.size]="size"
+            [attr.color]="color"
+            [attr.strokeWidth]="strokeWidth"
+            [attr.reducedMotion]="reducedMotion">
+        </morph-icon>`,
     styleUrls: ['./morph-icon.scss']
 })
 export class MorphIconComponent implements OnInit, OnChanges {
@@ -28,6 +26,12 @@ export class MorphIconComponent implements OnInit, OnChanges {
     @Input() strokeWidth = 2;
     @Input() spring = 'snappy';
     @Input() reducedMotion: 'never' | 'user' | 'always' = 'never';
+    @Input() changeAtSeconds = 0;
+    @Input() intervals = 3;
+
+    activeTimer: any = null;
+    intervalsCount = 0;
+    backupIcon: IconNode | string;
 
     ngOnInit(): void {
         (this.iconRef.nativeElement as any).morphTo(this.icon, this.spring);
@@ -38,6 +42,32 @@ export class MorphIconComponent implements OnInit, OnChanges {
         // if (changes['open']) {
         // (this.iconRef.nativeElement as any).morphTo(this.open ? this.altIcon : this.icon, this.spring);
         // }
+        this.setupTimer();
+    }
+
+    setupTimer() {
+        if (this.changeAtSeconds && !this.activeTimer) {
+            this.activeTimer = setInterval(() => {
+                if (this.intervals != 0) {
+                    this.intervalsCount += 1;
+                    if (this.intervalsCount % 2) {
+                        this.backupIcon = this.altIcon;
+                        this.altIcon = this.icon;
+                    } else {
+                        this.altIcon = this.backupIcon;
+                        this.backupIcon = this.icon;
+                    }
+                }
+                this.change();
+
+                if (this.intervals != 0 && this.intervalsCount > this.intervals) {
+                    console.log('end timer')
+                    this.intervalsCount = 0;
+                    clearTimeout(this.activeTimer);
+                    this.activeTimer = null;
+                }
+            }, 1000 * this.changeAtSeconds);
+        }
     }
 
     change() {

@@ -1,5 +1,150 @@
-<div class="arrage centers paddings-relation">
-    <div class="item">
-        <h3>Trivia</h3>
-    </div>
+<div class="arrage columns paddings-down">
+    <ng-container *ngIf="currentSection == 'quiz' && attempt.questions[index]">
+        <section-dinamic design="glass">
+            <div class="arrage columns paddings _question_section">
+                <div class="item font_variable">
+                    <p>{{ attempt.questions[index].question }}</p>
+                </div>
+            </div>
+        </section-dinamic>
+
+        <section-dinamic design="glass">
+            <div class="arrage columns paddings">
+                <div class="item">
+                    <div class="arrage row {{numrows}} _answer_collection">
+                        <ng-container *ngFor="let option of attempt.questions[index].answers">
+                            <div class="_answer arrage stacked" [ngClass]="{   
+                                        'selected': option._selected, 
+                                        'view': readonly,
+                                        'correct': readonly && (option.id == attempt.questions[index]._answerSelected),
+                                        'disabled': savingData }" (click)="selectOption(option)">
+                                <div class="_answer_selection font_variable">
+                                    <ng-container *ngIf="readonly">
+                                        <lu-icon
+                                            *ngIf="(option.id != attempt.questions[index].isCorrect) && !option._selected"
+                                            [icon]="luIcon.unchecked"></lu-icon>
+                                        <lu-icon *ngIf="option.id == attempt.questions[index].isCorrect"
+                                            [icon]="luIcon.correct"></lu-icon>
+                                        <lu-icon
+                                            *ngIf="(option.id != attempt.questions[index].isCorrect) && option._selected"
+                                            [icon]="luIcon.incorrect"></lu-icon>
+                                    </ng-container>
+                                    <ng-container *ngIf="!readonly">
+                                        <lu-icon *ngIf="!option._selected" [icon]="luIcon.unchecked"></lu-icon>
+                                        <lu-icon *ngIf="option._selected" [icon]="luIcon.selected"></lu-icon>
+                                    </ng-container>
+                                </div>
+                                <div class="_answer_text font_variable" [innerHTML]="option.answer">
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </section-dinamic>
+
+        <div class="_navbarFixedBottom">
+            <div class="_navOfButtons">
+
+                <button (click)="prevQuestion()" [disabled]="!index" *ngIf="index">
+                    <lu-icon [icon]="luIcon.left"></lu-icon>
+                    <span>{{ 'action_prev' | translate }}</span>
+                </button>
+
+                <button (click)="finishQuiz()" *ngIf="index == attempt.questions.length - 1 && !readonly">
+                    <span>{{ 'action_complete' | translate }}</span>
+                </button>
+
+                <button class="primary" (click)="showFinishPage()" *ngIf="attempt.state == 'completed' ">
+                    <lu-icon [icon]="luIcon.results"></lu-icon>
+                    <!-- <span>{{ 'action_results' | translate }}</span> -->
+                </button>
+
+                <button (click)="nextQuestion()" [disabled]="!attempt.questions[index]._answerSelected"
+                    *ngIf="index < attempt.questions.length - 1">
+                    <span>{{ 'action_next' | translate }}</span>
+                    <lu-icon [icon]="luIcon.right"></lu-icon>
+                </button>
+            </div>
+        </div>
+
+    </ng-container>
+
+    <ng-container *ngIf="currentSection == 'results'">
+        <section-dinamic design="glass">
+            <div class="arrage centers columns paddings full-width">
+                <div class="item arrage centers">
+                    <h1>
+                        <ng-container *ngIf="attempt._grade == _gradeState.passed">
+                            <span>{{ 'attempt_status_approved' | translate }}</span>
+                            <span class="material-icons">
+                                verified
+                            </span>
+                        </ng-container>
+                        <ng-container *ngIf="attempt._grade == _gradeState.barely_passed">
+                            <span>{{ 'attempt_status_passed' | translate }}</span>
+                            <span class="material-icons">
+                                done
+                            </span>
+                        </ng-container>
+                        <ng-container *ngIf="attempt._grade == _gradeState.failed">
+                            <span>{{ 'attempt_status_failed' | translate }}</span>
+                            <span class="material-icons">
+                                warning_amber
+                            </span>
+                        </ng-container>
+                        <ng-container *ngIf="attempt._grade == _gradeState.perfect">
+                            <span>{{ 'attempt_status_perfect' | translate }}</span>
+                            <span class="material-icons">
+                                verified
+                            </span>
+                        </ng-container>
+
+                    </h1>
+                </div>
+
+                <div class="item">
+                    {{ 'attempt_subtitle' | translate }}
+                </div>
+
+                <div class="item arrage row _2 paddings">
+                    <div class="stadistic">
+                        <h3>{{ 'attempt_status_hits' | translate }}</h3>
+                        <div class="_accent color">{{ attempt._correctQuestions }} de {{
+                            attempt.questions.length
+                            }}</div>
+                    </div>
+
+                    <div class="stadistic">
+                        <h3>{{ 'attempt_status_rating' | translate }}</h3>
+                        <div class="_accent color">{{ attempt._score }}</div>
+                    </div>
+                </div>
+
+                <div class="item arrage columns centers paddings">
+                    <h3>{{ 'attempt_status_rating_correct' | translate }}</h3>
+                    <div class="_collection overflow_180">
+                        <ng-container *ngFor="let item of attempt.questions; let i = index">
+                            <div class="question-dot" [ngClass]="{'correct': item.isCorrect }"
+                                (click)="gotoQuestion(i)">
+                                {{ i + 1 }}
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+
+                <div class="item arrage centers paddings">
+                    <button (click)="showQuiz()">
+                        <div class="inner">
+                            <span class="material-icons">
+                                rule
+                            </span>
+                            {{ 'action_review' | translate }}
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+        </section-dinamic>
+    </ng-container>
 </div>

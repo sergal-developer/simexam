@@ -1,43 +1,42 @@
 <ng-container *ngIf="attempt">
     <div class="_animation_state">
-        <div class="root-container quiz-form">
-
-            <type-math-quest *ngIf="attempt.type == 'mart-quest'"></type-math-quest>
-            <type-popularity *ngIf="attempt.type == 'popularity'"></type-popularity>
-            <type-reading *ngIf="attempt.type == 'reading'"></type-reading>
-            <type-simple *ngIf="attempt.type == 'simple'"></type-simple>
-            <type-trivia *ngIf="attempt.type == 'trivia'"></type-trivia>
-            <type-true-false *ngIf="attempt.type == 'true-false'"></type-true-false>
-
+        <div class="arrage columns paddings-down" [ngClass]="{'onWait': onLoading }">
             <section-dinamic design="glass">
+
                 <div class="arrage centers paddings-relation">
+
                     <div class="item" (click)="gotoDashboard()">
                         <lu-icon [icon]="luIcon.back"></lu-icon>
                     </div>
+
                     <div class="item">
                         <h3>{{ attempt?.title }}</h3>
                     </div>
+
                 </div>
 
                 <div class="timer-status" *ngIf="currentSection == 'quiz'">
+
                     <div class="step-counter">
                         <span class="material-icons">
                             layers
                         </span>
-                        {{ currentQuestionIndex + 1 }} {{ 'form_of_range' |
+                        {{ index + 1 }} {{ 'form_of_range' |
                         translate }} {{ attempt.questions.length }}
                     </div>
-                    <div class="timer" [ngClass]="{'timer-green':  currentQuestionIndex == attempt.questions.length - 1 }">
+
+                    <div class="timer" [ngClass]="{'timer-green':  index == attempt.questions.length - 1 }">
                         <div class="timer-bar" [attr.style]="progresStyle"></div>
                     </div>
+
                     <div class="remaining-time" *ngIf="!readonly && attempt.time">
                         <span class="material-icons">
                             schedule
                         </span>
                         {{ attempt.time }}
                     </div>
-                    <div class="status completed" *ngIf="readonly"> {{ 'attempt_status_complete' | translate }} </div>
 
+                    <div class="status completed" *ngIf="readonly"> {{ 'attempt_status_complete' | translate }} </div>
 
                     <div class="zoom" (click)="updateZoom()">
                         <span class="material-icons">text_fields</span>
@@ -46,158 +45,12 @@
                 </div>
             </section-dinamic>
 
-            <ng-container *ngIf="currentSection == 'quiz' && currentQuestion">
-                <section-dinamic design="glass">
-                    <div class="arrage columns paddings _question_section">
-                        <div class="item _question_section_quizname">
-                            <p>{{ currentQuestion.question }}</p>
-                        </div>
-                    </div>
-                </section-dinamic>
-
-                <section-dinamic design="glass">
-                    <div class="arrage columns paddings">
-                        <div class="item">
-                            <div class="arrage row {{numrows}} _answer_collection">
-                                <ng-container *ngFor="let option of currentQuestion.answers">
-                                    <div class="_answer arrage stacked" [ngClass]="{   
-                                        'selected': option._selected, 
-                                        'view': readonly,
-                                        'correct': readonly && (option.id == currentQuestion._answerSelected) }"
-                                        (click)="selectOption(option)">
-                                        <div class="_answer_selection font_variable">
-                                            <ng-container *ngIf="readonly">
-                                                <lu-icon
-                                                    *ngIf="(option.id != currentQuestion.isCorrect) && !option._selected"
-                                                    [icon]="luIcon.unchecked"></lu-icon>
-                                                <lu-icon *ngIf="option.id == currentQuestion.isCorrect"
-                                                    [icon]="luIcon.correct"></lu-icon>
-                                                <lu-icon
-                                                    *ngIf="(option.id != currentQuestion.isCorrect) && option._selected"
-                                                    [icon]="luIcon.incorrect"></lu-icon>
-                                            </ng-container>
-                                            <ng-container *ngIf="!readonly">
-                                                <lu-icon *ngIf="!option._selected"
-                                                    [icon]="luIcon.unchecked"></lu-icon>
-                                                <lu-icon *ngIf="option._selected"
-                                                    [icon]="luIcon.selected"></lu-icon>
-                                            </ng-container>
-                                        </div>
-                                        <div class="_answer_text font_variable" [innerHTML]="option.answer">
-                                        </div>
-                                    </div>
-                                </ng-container>
-                            </div>
-                        </div>
-                    </div>
-                </section-dinamic>
-
-                <div class="_navbarFixedBottom">
-                    <div class="_navOfButtons">
-
-                        <button (click)="prevQuestion()" [disabled]="!currentQuestionIndex" *ngIf="currentQuestionIndex">
-                            <lu-icon [icon]="luIcon.left"></lu-icon>
-                            <span>{{ 'action_prev' | translate }}</span>
-                        </button>
-
-                        <button (click)="finishQuiz()"
-                            *ngIf="currentQuestionIndex == attempt.questions.length - 1 && !readonly">
-                            <span>{{ 'action_complete' | translate }}</span>
-                        </button>
-
-                        <button class="primary" (click)="showFinishPage()"
-                            *ngIf="attempt.state == 'completed' && currentQuestionIndex">
-                            <lu-icon [icon]="luIcon.results"></lu-icon>
-                            <!-- <span>{{ 'action_results' | translate }}</span> -->
-                        </button>
-
-                        <button (click)="nextQuestion()" [disabled]="!currentQuestion.selectedOptionId"
-                            *ngIf="currentQuestionIndex < attempt.questions.length - 1">
-                            <span>{{ 'action_next' | translate }}</span>
-                            <lu-icon [icon]="luIcon.right"></lu-icon>
-                        </button>
-                    </div>
-                </div>
-
-            </ng-container>
-
-            <ng-container *ngIf="currentSection == 'results'">
-                <section-dinamic design="glass">
-                    <div class="arrage centers columns paddings full-width">
-                        <div class="item arrage centers">
-                            <h1>
-                                <ng-container *ngIf="attempt.grade == _gradeState.passed">
-                                    <span>{{ 'attempt_status_approved' | translate }}</span>
-                                    <span class="material-icons">
-                                        verified
-                                    </span>
-                                </ng-container>
-                                <ng-container *ngIf="attempt.grade == _gradeState.barely_passed">
-                                    <span>{{ 'attempt_status_passed' | translate }}</span>
-                                    <span class="material-icons">
-                                        done
-                                    </span>
-                                </ng-container>
-                                <ng-container *ngIf="attempt.grade == _gradeState.failed">
-                                    <span>{{ 'attempt_status_failed' | translate }}</span>
-                                    <span class="material-icons">
-                                        warning_amber
-                                    </span>
-                                </ng-container>
-                                <ng-container *ngIf="attempt.grade == _gradeState.perfect">
-                                    <span>{{ 'attempt_status_perfect' | translate }}</span>
-                                    <span class="material-icons">
-                                        verified
-                                    </span>
-                                </ng-container>
-
-                            </h1>
-                        </div>
-
-                        <div class="item">
-                            {{ 'attempt_subtitle' | translate }}
-                        </div>
-
-                        <div class="item arrage row _2 paddings">
-                            <div class="stadistic">
-                                <h3>{{ 'attempt_status_hits' | translate }}</h3>
-                                <div class="_accent color">{{ attempt.correctAnswers }} de {{
-                                    attempt.questions.length
-                                    }}</div>
-                            </div>
-
-                            <div class="stadistic">
-                                <h3>{{ 'attempt_status_rating' | translate }}</h3>
-                                <div class="_accent color">{{ attempt._score }}</div>
-                            </div>
-                        </div>
-
-                        <div class="item arrage columns centers paddings">
-                            <h3>{{ 'attempt_status_rating_correct' | translate }}</h3>
-                            <div class="_collection overflow_180">
-                                <ng-container *ngFor="let item of attempt.questions; let i = index">
-                                    <div class="question-dot" [ngClass]="{'correct': item.isCorrect }"
-                                        (click)="gotoQuestion(i)">
-                                        {{ i + 1 }}
-                                    </div>
-                                </ng-container>
-                            </div>
-                        </div>
-
-                        <div class="item arrage centers paddings">
-                            <button (click)="showQuiz()">
-                                <div class="inner">
-                                    <span class="material-icons">
-                                        rule
-                                    </span>
-                                    {{ 'action_review' | translate }}
-                                </div>
-                            </button>
-                        </div>
-
-                    </div>
-                </section-dinamic>
-            </ng-container>
+            <type-math-quest *ngIf="attempt.type == 'mart-quest'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-math-quest>
+            <type-popularity *ngIf="attempt.type == 'popularity'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-popularity>
+            <type-reading *ngIf="attempt.type == 'reading'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-reading>
+            <type-simple *ngIf="attempt.type == 'simple'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-simple>
+            <type-trivia *ngIf="attempt.type == 'trivia'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-trivia>
+            <type-true-false *ngIf="attempt.type == 'true-false'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-true-false>
         </div>
     </div>
 </ng-container>

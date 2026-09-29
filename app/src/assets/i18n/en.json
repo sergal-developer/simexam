@@ -45,6 +45,7 @@
   "evaluations": "Evaluations",
   "questions": "Questions",
   "best_time": "Best Time",
+  "attempt": "Attempt",
   "empty_attempt_text": "First evaluation",
   "new_attempt_text": "New evaluation",
   "start_attempt": "Start",

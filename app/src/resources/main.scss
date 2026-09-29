@@ -33,6 +33,7 @@
     --notificationColor: #d0d0d0;
     --notificationColorContrast: #000000;
     --notificationSuccess: #8e9f0f;
+    --notificationSuccessTransparent: #074b0750;
     --notificationWarning: #edc464;
     --notificationError: #c12323;
     --notificationInfo: #a6cce3;
@@ -44,10 +45,12 @@
     --gradeBackgroundBarely: #F6EDC8;
     --gradeColorBarely: #453a0b;
 
-    --gradePanelPassed: rgba(69, 83, 65, 0.5);
-    --gradePanelFailed: rgba(43, 11, 17, 0.5);
-    --gradePanelBarely: rgba(89, 89, 20, 0.5);
-
+    
+    --gradePanelFailed: #ff8158;
+    --gradePanelBarely: #ffc229;
+    --gradePanelPassed: #86d718;
+    --gradePanelPerfect: #3a8e08;
+    ;
 
     --pillBackground: #3d3d3d;
     --pillColor: #585858;

@@ -19,16 +19,9 @@ export class QuizEditableComponent implements OnInit {
   form: FormGroup;
 
   formQuestion: FormGroup = new FormGroup({
-    answerId: new FormControl(null),
-    quizId: new FormControl(null),
-    title: new FormControl('', Validators.required),
-    options: new FormControl([], Validators.required),
-  })
-
-  formIAGenerated: FormGroup = new FormGroup({
-    topic: new FormControl('', Validators.required),
-    answquestionserTitle: new FormControl(2, Validators.required),
-    options: new FormControl(4, Validators.required),
+    questionId: new FormControl(null),
+    question: new FormControl('', Validators.required),
+    answers: new FormControl([], Validators.required),
   })
 
   options: any = [];
@@ -99,11 +92,6 @@ export class QuizEditableComponent implements OnInit {
   async setupComponent(injectData?: QuestionaryDTO) {
     this.currentAnswerIndex = 0;
     this.isEdit = this.quizId ? true : false;
-    this.formIAGenerated = this.fb.group({
-      topic: ['', Validators.required],
-      questions: [2, Validators.required],
-      options: [4, Validators.required],
-    });
 
     this.form = this.fb.group({
       title: [this.translateLabels.new_quiz, Validators.required],
@@ -146,21 +134,21 @@ export class QuizEditableComponent implements OnInit {
     }
 
     this.formQuestion = this.fb.group({
-      answerId: [answerItem.questionId],
-      title: [answerItem.question],
-      options: this.fb.array(optionArray)
+      questionId: [answerItem.questionId],
+      question: [answerItem.question],
+      answers: this.fb.array(optionArray)
     });
   }
 
   getFormOptions(): FormArray {
-    return this.formQuestion.get('options') as FormArray;
+    return this.formQuestion.get('answers') as FormArray;
   }
 
   get validActions(): boolean {
     const formValid = this.form.valid ?? false;
     const formQuestionValid = this.formQuestion.valid ?? false;
     const question: QuestionDTO = this.formQuestion.value;
-    const questionsValid = question.answers.length >= 3;
+    const questionsValid = question.answers ? question.answers.length >= 3 : false;
     const selectedAwnser = question.answers.find(opt => opt._selected);
     return formValid && formQuestionValid && selectedAwnser && questionsValid;
   }
@@ -229,12 +217,12 @@ export class QuizEditableComponent implements OnInit {
     // }
 
     const lastIndex = this.formQuestion.value.answers.length - 1;
-    const lastValue = this.formQuestion.value.answers[lastIndex].content;
+    const lastValue = this.formQuestion.value.answers[lastIndex].answer;
     if (lastIndex >= 0 && lastValue != '') {
       this.getFormOptions().push(this.getNewOptionForm());
     } else if (lastIndex > 0 && lastValue == '') {
       const optionLast = this.formQuestion.value.answers[lastIndex - 1];
-      const postlastValue = optionLast.content;
+      const postlastValue = optionLast.answer;
       if (postlastValue == '') {
         this.getFormOptions().removeAt(lastIndex);
       }
@@ -356,7 +344,7 @@ export class QuizEditableComponent implements OnInit {
       option.answer = optionValue.answer;
       // GENERATED
       option.isCorrect = optionValue.isCorrect;
-      option._selected = optionValue._selected;
+      option._selected = optionValue._selected; 
     }
     return this.fb.group(option)
   }

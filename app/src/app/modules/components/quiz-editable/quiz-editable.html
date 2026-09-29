@@ -24,29 +24,29 @@
 
                 <div class="item _question_section_quizname">
                     <mat-input [title]="'form_question' | translate"
-                        [mesageError]="'form_question_required' | translate" [formControl]="formQuestion.get('title')"
+                        [mesageError]="'form_question_required' | translate" [formControl]="formQuestion.get('question')"
                         [multiline]="true">
                     </mat-input>
                 </div>
 
                 <div class="item">
-                    <div class="arrage columns" *ngIf="formQuestion.get('options')">
-                        <ng-container *ngIf="formQuestion.get('options').controls">
-                            <ng-container *ngFor="let option of formQuestion.get('options').controls">
+                    <div class="arrage columns" *ngIf="formQuestion.get('answers')">
+                        <ng-container *ngIf="formQuestion.get('answers').controls">
+                            <ng-container *ngFor="let answer of formQuestion.get('answers').controls">
                                 <div class="_answer_section arrage stacked spaceBetween"
-                                    [ngClass]="{'correct': option.get('_selected')?.value }">
-                                    <div class="_answer_selection" (click)="selectAnswerCorrect(option)">
-                                        <span *ngIf="!option.get('_selected').value" class="material-icons">
+                                    [ngClass]="{'correct': answer.get('_selected')?.value }">
+                                    <div class="_answer_selection" (click)="selectAnswerCorrect(answer)">
+                                        <span *ngIf="!answer.get('_selected').value" class="material-icons">
                                             radio_button_unchecked
                                         </span>
-                                        <span *ngIf="option.get('_selected').value" class="material-icons">
+                                        <span *ngIf="answer.get('_selected').value" class="material-icons">
                                             verified</span>
                                     </div>
                                     <div class="_answer_text">
                                         <mat-input class="flat-form" [title]="'form_answer' | translate"
                                             [mesageError]="'form_answer_required' | translate"
-                                            [formControl]="option.get('content')" [formName]="'content'"
-                                            [multiline]="true" (onChange)="onOptionChange($event, option)">
+                                            [formControl]="answer.get('answer')" [formName]="'answer'"
+                                            [multiline]="true" (onChange)="onOptionChange($event, answer)">
                                         </mat-input>
                                     </div>
                                 </div>
@@ -67,11 +67,11 @@
 
                 <div class="_nav_item_collection">
                     <button class="_nav_item" *ngIf="quiz && settings">
-                        <div class="step-counter" *ngIf="quiz.answers.length != 1">
-                            {{ currentAnswerIndex + 1 }} : {{ quiz.answers.length }}
+                        <div class="step-counter" *ngIf="quiz.questions.length != 1">
+                            {{ currentAnswerIndex + 1 }} : {{ quiz.questions.length }}
                         </div>
-                        <div class="step-counter" *ngIf="quiz.answers.length == 1">
-                            {{ quiz.answers.length }}
+                        <div class="step-counter" *ngIf="quiz.questions.length == 1">
+                            {{ quiz.questions.length }}
                         </div>
                     </button>
                 </div>
@@ -81,7 +81,7 @@
                 </button>
 
                 <button class="_nav_item _nav_action _next _register" (click)="finishCreation()" [disabled]="!validActions"
-                    *ngIf="quiz && quiz.answers.length > 1"><lu-icon [icon]="luIcon.save"></lu-icon>
+                    *ngIf="quiz && quiz.questions.length > 1"><lu-icon [icon]="luIcon.save"></lu-icon>
                 </button>
 
             </div>
@@ -93,7 +93,7 @@
     <ng-container *ngIf="!showIAForm">
         <div class="step-counter">
             <span>{{ 'form_total_question' | translate }}:</span> {{ currentAnswerIndex + 1 }} {{ 'form_of_range' |
-            translate }} {{ quiz.answers.length }}
+            translate }} {{ quiz.questions.length }}
         </div>
         <!-- <div class="timer">
         <div class="timer-bar"></div>
@@ -159,9 +159,9 @@
                     <div>{{ 'help_quiz_options' | translate }}</div>
                 </div>
                 <div class="_answer_collection gray-backdrop drop-padding drop-bottom"
-                    *ngIf="formQuestion.get('options')">
-                    <ng-container *ngIf="formQuestion.get('options').controls">
-                        <ng-container *ngFor="let option of formQuestion.get('options').controls">
+                    *ngIf="formQuestion.get('answers')">
+                    <ng-container *ngIf="formQuestion.get('answers').controls">
+                        <ng-container *ngFor="let option of formQuestion.get('answers').controls">
                             <div class="_answer flat" [ngClass]="{'correct': option.get('_selected')?.value }">
                                 <div class="_answer_selection" (click)="selectAnswerCorrect(option)">
                                     <span *ngIf="!option.get('_selected').value" class="material-icons">
@@ -193,14 +193,14 @@
                         </div>
                     </button>
 
-                    <!-- <button class="primary" (click)="saveQuiz()" *ngIf="quiz && quiz.answers.length > 1">
+                    <!-- <button class="primary" (click)="saveQuiz()" *ngIf="quiz && quiz.questions.length > 1">
                         <div class="inner">
                             {{ 'action_save' | translate }}
                         </div>
                     </button> -->
 
                     <button class="primary" (click)="finishCreation()" [disabled]="!validActions"
-                        *ngIf="quiz && quiz.answers.length > 1">
+                        *ngIf="quiz && quiz.questions.length > 1">
                         <div class="inner">
                             {{ 'action_finish' | translate }}
                         </div>

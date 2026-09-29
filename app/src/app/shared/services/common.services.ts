@@ -166,11 +166,9 @@ export class CommonServices {
   }
 
   async saveAttempt(data: AttemptDTO): Promise<AttemptDTO> {
-    // preparar los datos en modo cadena
-    data = queryAttemptDTO(data);
-
+    const _data = queryAttemptDTO(data);
     // Guardar el quiz primero
-    const response: AttemptDTO = await this._services.saveAttempt(data);
+    const response: AttemptDTO = await this._services.saveAttempt(_data);
     return response ? normalizeAttemptDTO(response) : null;
   }
 
