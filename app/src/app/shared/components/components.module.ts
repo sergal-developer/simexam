@@ -6,6 +6,7 @@ import { LogoComponent } from "./logo/logo.component";
 import { LucideIconComponent } from "./lucide-icon/lucide-icon.component";
 import { MatAutocompleteComponent } from "./mat-autocomplete/mat-autocomplete.component";
 import { MatInputComponent } from "./mat-input/mat-input.component";
+import { MatSelectComponent } from "./mat-select/mat-select.component";
 import { ModalComponent } from "./modal/modal.component";
 import { MorphIconComponent } from "./morph-icon/morph-icon.component";
 import { SectionDinamicComponent } from "./section-dinamic/section-dinamic.component";
@@ -20,6 +21,7 @@ import { SectionDinamicComponent } from "./section-dinamic/section-dinamic.compo
         LogoComponent,
         MatInputComponent,
         MatAutocompleteComponent,
+        MatSelectComponent,
         ModalComponent,
         MorphIconComponent,
         LucideIconComponent,
@@ -29,6 +31,7 @@ import { SectionDinamicComponent } from "./section-dinamic/section-dinamic.compo
         LogoComponent,
         MatInputComponent,
         MatAutocompleteComponent,
+        MatSelectComponent,
         ModalComponent,
         MorphIconComponent,
         LucideIconComponent,

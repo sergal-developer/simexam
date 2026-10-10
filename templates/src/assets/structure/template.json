@@ -1,7 +1,7 @@
 {
     "title": "string",
-    "time": 0,
     "tags": ["string"],
+    "type": "trivia",
     "questionsCount": 0,
     "questions": [
         {
@@ -10,6 +10,9 @@
             "explanation": "string",
             "hint": "string",
             "tags": ["string"],
+            "time": null,
+            "answerSelected": null,
+            "isCorrect": null,
             "answers": [
                 {
                     "answer": "string",
@@ -18,8 +21,9 @@
                 },
                 {
                     "answer": "string",
-                    "isCorrect": true
-                },
+                    "isCorrect": true,
+                    "popular": 0
+                }
             ]
         }
     ]

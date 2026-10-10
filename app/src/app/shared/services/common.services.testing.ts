@@ -197,7 +197,7 @@ export class CommonServicesTesting {
         const importsQuestionnaire: QuestionaryDTO[] = [];
 
         const importPopularityData = {
-            "title": "Popularity Lorem ipsum dolor sit amet", "time": 120, 
+            "title": "Popularity Lorem ipsum dolor sit amet",
             "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "popularity",
             "questionsCount": 2,
             "questions": [
@@ -231,7 +231,7 @@ export class CommonServicesTesting {
         };
 
         const importQuestionarieData = {
-            "title": "quiz Lorem ipsum dolor sit amet", "time": 120, 
+            "title": "quiz Lorem ipsum dolor sit amet",
             "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "quiz",
             "questionsCount": 2,
             "questions": [
@@ -261,7 +261,7 @@ export class CommonServicesTesting {
         };
 
         const importSimpleData = {
-            "title": "Simple Lorem ipsum dolor sit amet", "time": 120, 
+            "title": "Simple Lorem ipsum dolor sit amet",
             "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "simple",
             "questionsCount": 2,
             "questions": [
@@ -281,7 +281,7 @@ export class CommonServicesTesting {
         };
 
         const importTrueFalseData = {
-            "title": "true-false Lorem ipsum dolor sit amet", "time": 120, 
+            "title": "true-false Lorem ipsum dolor sit amet",
             "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "true-false",
             "questionsCount": 2,
             "questions": [
@@ -326,7 +326,7 @@ export class CommonServicesTesting {
     }
 
     private async testQuestionnaires_create(): Promise<QuestionaryDTO> {
-        const data = getQuestionaryDTO('sample', 0);
+        const data = getQuestionaryDTO('sample', '');
         const question = getQuestionDTO('question 1', null, 'explanation', 'hist');
         question.answers = [
             getAnswerDTO('answer 1', 1, 100),

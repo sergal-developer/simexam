@@ -22,6 +22,11 @@
     --accentBackgroundHover: #d1aa56;
     --accentColor: #444444;
 
+    --disabled: #818181;
+    --disabledBackground: #818181;
+    --disabledBackgroundHover: #acacac;
+    --disabledColor: #c0c0c0;
+
     --scrollColor: #919191;
     --scrollBackground: #940d82;
 
@@ -45,7 +50,7 @@
     --gradeBackgroundBarely: #F6EDC8;
     --gradeColorBarely: #453a0b;
 
-    
+
     --gradePanelFailed: #ff8158;
     --gradePanelBarely: #ffc229;
     --gradePanelPassed: #86d718;
@@ -112,8 +117,7 @@ body {
     color: var(--appColor);
     font-size: var(--appFontSize);
     font-weight: normal;
-    line-height: 1.3;
-    // letter-spacing: 0.05em;
+    line-height: 1;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

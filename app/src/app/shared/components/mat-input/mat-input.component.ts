@@ -12,10 +12,20 @@ export class MatInputComponent implements OnInit, ControlValueAccessor {
     @Input() formName: string = '';
     @Input() title: string = '';
     @Input() mesageError: string = '';
-    @Input() type: string = 'text';
+    @Input() type: 'regex' | 'color' | 'date' | 'datetime-local' | 'email' | 'file' | 'hidden' | 'image' | 'month' | 'number' | 'password' | 'radio' | 'range' | 'reset' | 'search' | 'submit' | 'tel' | 'text' | 'time' | 'url' | 'week' = 'text';
     @Input() maxlength: number = -1;
     @Input() multiline: boolean = false;
+    @Input() properties: {
+        maxNum: number | null,
+        minNum: number | null,
+        regex: any
+    } = {
+        maxNum: null,
+        minNum: 0,
+        regex: null
+    };
     @Output() onChange = new EventEmitter();
+ 
     //#endregion
 
     //#region INTERNAL-PROPERTIES

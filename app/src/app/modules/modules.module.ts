@@ -26,6 +26,7 @@ import { TypetReadingComponent } from './components/type-reading/type-reading.co
 import { TypeSimpleComponent } from './components/type-simple/type-simple.component';
 import { TypetTriviaComponent } from './components/type-trivia/type-trivia.component';
 import { TypeTrueFalseComponent } from './components/type-true-false/type-true-false.component';
+import { TypeGenericComponent } from './components/type-generic/type-generic';
 
 @NgModule({
   imports: [
@@ -48,6 +49,7 @@ import { TypeTrueFalseComponent } from './components/type-true-false/type-true-f
     HeaderComponent,
     NavbarComponent,
     QuizViewComponent,
+    TypeGenericComponent,
     TypeMathQuestComponent,
     TypePopularityComponent,
     TypetReadingComponent,
@@ -68,6 +70,7 @@ import { TypeTrueFalseComponent } from './components/type-true-false/type-true-f
     HeaderComponent,
     NavbarComponent,
     QuizViewComponent,
+    TypeGenericComponent,
     TypeMathQuestComponent,
     TypePopularityComponent,
     TypetReadingComponent,

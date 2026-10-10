@@ -1,8 +1,9 @@
-import { AttemptDTO } from "./questionaries.dto";
+import { AttemptDTO, QuestionaryDTO } from "./questionaries.dto";
 
 export interface UITypeStatus {
   index: number;
-  attempt: AttemptDTO,
+  attempt?: AttemptDTO,
+  questionary?: QuestionaryDTO,
   savedata: boolean;
 }
 

@@ -6,21 +6,20 @@ const transform = new TransformData();
 
 //#region INTERFACES
 export interface QuestionnaireFile {
-    name: string,
-    path: string,
-    type: string,
-    url: string,
-    size: number,
-    modified: string,
-    isEmpty: boolean,
-    _name?: string
+  name: string,
+  path: string,
+  type: string,
+  url: string,
+  size: number,
+  modified: string,
+  isEmpty: boolean,
+  _name?: string
 }
 
 export interface QuestionaryDTO {
   questionaryId: number;
   uuid?: string;
   title: string;
-  time: number;
   tags: string[] | string;
   type: QuizType;
   creationDate?: number;
@@ -44,6 +43,7 @@ export interface QuestionDTO {
   explanation?: string;
   hint?: string;
   tags: string[];
+  time: number;
   isCorrect?: boolean;
 
   // GENERATED
@@ -92,12 +92,24 @@ export interface AttemptDTO extends QuestionaryDTO {
 //#endregion INTERFACES
 
 // #region INITIALIZE
-export function getQuestionaryDTO(title: string, time: number): QuestionaryDTO {
+export function getNewQuestionary(title: string, type: string, options: {
+  question: string, answer?: string, explanation?: string, hint?: string, time?: number,
+  answerText: string }): QuestionaryDTO {
+  const answer = getAnswerDTO(options.answerText, 0, 0);
+  const _question = getQuestionDTO(options.question, options.answer, options.explanation, options.hint, options.time);
+  _question.answers.push(answer);
+  const questionary = getQuestionaryDTO(title, type);
+
+  (questionary.questions as QuestionDTO[]).push(_question);
+  return normalizeQuestionaryDTO(questionary);
+}
+
+export function getQuestionaryDTO(title: string, type: string): QuestionaryDTO {
   const item = {
     questionaryId: null,
     uuid: uuidv4(),
     title: title,
-    time: time,
+    type: type,
     tags: [],
     creationDate: new Date().getTime(),
     updatedDate: new Date().getTime(),
@@ -109,7 +121,7 @@ export function getQuestionaryDTO(title: string, time: number): QuestionaryDTO {
   return item as QuestionaryDTO;
 }
 
-export function getQuestionDTO(question: string, answer?: string, explanation?: string, hint?: string): QuestionDTO {
+export function getQuestionDTO(question: string, answer?: string, explanation?: string, hint?: string, time?: number): QuestionDTO {
   const item = {
     questionId: null,
     question: question,
@@ -117,9 +129,10 @@ export function getQuestionDTO(question: string, answer?: string, explanation?: 
     explanation: explanation,
     hint: hint,
     tags: [],
+    time: time,
+    answerSelected: null,
+    isCorrect: null,
     answers: [],
-    _answerSelected: null,
-    _isCorrect: null,
   };
   return item as QuestionDTO;
 }
@@ -156,7 +169,7 @@ export function getNewAttemptDTO(questionnaire: QuestionaryDTO, userId: number):
   };
 
   // clean unused values
-   item.questions ? (item.questions as QuestionDTO[]).map((question, idxquestion) => {
+  item.questions ? (item.questions as QuestionDTO[]).map((question, idxquestion) => {
     question.questionId = idxquestion + 1;
     question._isCorrect = null;
     question._answerSelected = null;
@@ -246,11 +259,11 @@ export function normalizeAttemptDTO(data: AttemptDTO): AttemptDTO {
   data._score = data._score || '';
 
   // prepare data for show stadistics in progress
-  if (data.state == AttemptState.progress) { 
+  if (data.state == AttemptState.progress) {
     const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
     data._questionsSolved = questionsSolved.length;
     const progress = (data._questionsSolved * 100) / data.questionsCount;
-    data._progress = `${Math.round( progress )}%`
+    data._progress = `${Math.round(progress)}%`
   }
 
   // prepare data for evalue
@@ -258,12 +271,12 @@ export function normalizeAttemptDTO(data: AttemptDTO): AttemptDTO {
     const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
     data._questionsSolved = questionsSolved.length;
     const progress = (data._questionsSolved * 100) / data.questionsCount;
-    data._progress = `${Math.round( progress )}%`
-    
+    data._progress = `${Math.round(progress)}%`
+
     const correctQuestions = (data.questions as QuestionDTO[]).filter(ans => ans.isCorrect);
     data._correctQuestions = correctQuestions.length;
     data._grade = setGrade(data);
-    data._score = `${ Math.round(data.score) }%`
+    data._score = `${Math.round(data.score)}%`
   }
 
   return data;
@@ -282,7 +295,7 @@ export function queryAttemptDTO(data: AttemptDTO): AttemptDTO {
   data = normalizeAttemptDTO(data);
   data.attemptId = data.attemptId || null;
   data.tags = JSON.stringify(data.tags);
-  const _questions = JSON.stringify(data.questions);  
+  const _questions = JSON.stringify(data.questions);
   data.questions = _questions;
   return data;
 }
@@ -317,16 +330,15 @@ export const questionnaire_table_querys = {
   createTable: {
     query: `
       CREATE TABLE IF NOT EXISTS [questionnaire_table] (
-        [questionaryId] INTEGER PRIMARY KEY AUTOINCREMENT,
-        [uuid] TEXT,
-        [title] TEXT,
-        [time] INTEGER,
-        [tags] TEXT,
-        [type] TEXT,
-        [creationDate] INTEGER,
-        [updatedDate] INTEGER,
-        [questionsCount] INTEGER,
-        [questions] TEXT
+          [questionaryId] INTEGER PRIMARY KEY AUTOINCREMENT,
+          [uuid] TEXT,
+          [title] TEXT,
+          [tags] TEXT,
+          [type] TEXT,
+          [creationDate] INTEGER,
+          [updatedDate] INTEGER,
+          [questionsCount] INTEGER,
+          [questions] TEXT
       );
     `
   },
@@ -354,17 +366,7 @@ export const questionnaire_table_querys = {
 
   selectByIdWithRelations: {
     query: `
-      SELECT
-        q.[questionaryId],
-        q.[uuid],
-        q.[title],
-        q.[time],
-        q.[tags],
-        q.[type],
-        q.[creationDate],
-        q.[updatedDate],
-        q.[questionsCount],
-        q.[questions]
+      SELECT *
       FROM [questionnaire_table] q
       WHERE q.[questionaryId] = ?;
     `
@@ -383,7 +385,6 @@ export const questionnaire_table_querys = {
       INSERT INTO [questionnaire_table] (
         [uuid],
         [title],
-        [time],
         [tags],
         [type],
         [creationDate],
@@ -391,7 +392,7 @@ export const questionnaire_table_querys = {
         [questionsCount],
         [questions]
       )
-      VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+      VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
       RETURNING *;
     `
   },
@@ -402,7 +403,6 @@ export const questionnaire_table_querys = {
         [questionaryId],
         [uuid],
         [title],
-        [time],
         [tags],
         [type],
         [creationDate],
@@ -414,7 +414,6 @@ export const questionnaire_table_querys = {
         :questionaryId,
         :uuid,
         :title,
-        :time,
         :tags,
         :type,
         :creationDate,
@@ -425,7 +424,6 @@ export const questionnaire_table_querys = {
       ON CONFLICT(questionaryId) DO UPDATE SET
         uuid = excluded.[uuid],
         title = excluded.[title],
-        time = excluded.[time],
         tags = excluded.[tags],
         type = excluded.[type],
         creationDate = excluded.[creationDate],
@@ -453,7 +451,6 @@ export const questionnaire_attempts_table_querys = {
         [questionaryId] INTEGER,
         [userId] INTEGER,
         [title] TEXT,
-        [time] INTEGER,
         [tags] TEXT,
         [type] TEXT,
         [score] REAL,
@@ -504,7 +501,6 @@ export const questionnaire_attempts_table_querys = {
         [questionaryId],
         [userId],
         [title],
-        [time],
         [tags],
         [type],
         [score],
@@ -514,7 +510,7 @@ export const questionnaire_attempts_table_querys = {
         [questionsCount],
         [questions]
       )
-      VALUES ( :questionaryId, :userId, :title, :time, :tags, :type, :score, :state, :creationDate, :updatedDate, :questionsCount, :questions )
+      VALUES ( :questionaryId, :userId, :title, :tags, :type, :score, :state, :creationDate, :updatedDate, :questionsCount, :questions )
       RETURNING *;
     `
   },
@@ -526,7 +522,6 @@ export const questionnaire_attempts_table_querys = {
         [questionaryId],
         [userId],
         [title],
-        [time],
         [tags],
         [type],
         [score],
@@ -536,12 +531,11 @@ export const questionnaire_attempts_table_querys = {
         [questionsCount],
         [questions]
       )
-      VALUES ( :attemptId, :questionaryId, :userId, :title, :time, :tags, :type, :score, :state, :creationDate, :updatedDate, :questionsCount, :questions )
+      VALUES ( :attemptId, :questionaryId, :userId, :title, :tags, :type, :score, :state, :creationDate, :updatedDate, :questionsCount, :questions )
       ON CONFLICT(attemptId) DO UPDATE SET
         questionaryId = excluded.[questionaryId], 
         userId = excluded.[userId], 
-        title = excluded.[title], 
-        time = excluded.[time], 
+        title = excluded.[title],
         tags = excluded.[tags], 
         type = excluded.[type], 
         score = excluded.[score], 

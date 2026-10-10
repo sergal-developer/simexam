@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
+import { QuizType, ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
 import { SettingsDTO, ThemeDTO } from '../shared/data/entities/dtos';
 import { CommonServices } from '../shared/services/common.services';
 import { DatabaseService } from '../shared/services/database/sql.database.service';
@@ -22,6 +22,7 @@ export class ModuleComponent implements OnInit, AfterViewInit {
 
   module: string;
   submodule: string;
+  type: string;
   uistate = '';
   uisubstate = '';
   screenwidth = 0;
@@ -42,6 +43,7 @@ export class ModuleComponent implements OnInit, AfterViewInit {
           this.screen = this._screen[this.module];
         }
 
+        this.type = this._activatedRoute.snapshot.queryParamMap.get('type');
         this.submodule = this._activatedRoute.snapshot.queryParamMap.get('action');
 
         setTimeout(() => {

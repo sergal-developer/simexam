@@ -1,11 +1,14 @@
-import { Component, Input, OnInit, ViewEncapsulation, } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild, ViewEncapsulation, } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { icons } from 'lucide';
-import { getQuestionDTO, getAnswerDTO, getQuestionaryDTO, normalizeQuestionaryDTO, QuestionDTO, AnswerDTO, QuestionaryDTO, SettingsDTO } from 'src/app/shared/data/entities/dtos';
+import { getNewQuestionary, getQuestionaryDTO, normalizeQuestionaryDTO, QuestionaryDTO, QuestionDTO, SettingsDTO } from 'src/app/shared/data/entities/dtos';
+import { UIMainStates, UITypeStatus } from 'src/app/shared/data/entities/dtos/ui.dto';
+import { QuizType, ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
 import { Utils } from 'src/app/shared/data/utils/utils';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
+import { TypeGenericComponent } from '../type-generic/type-generic';
 
 @Component({
   selector: 'quiz-editable',
@@ -14,24 +17,40 @@ import { UiServices } from 'src/app/shared/services/ui.services';
 })
 export class QuizEditableComponent implements OnInit {
   @Input() quizId: number = null;
+  @Input() typeQuiz: string = null;
+  @Output() onChange = new EventEmitter();
+  @ViewChild(TypeGenericComponent) typeGenericComponent: TypeGenericComponent;
 
   //#region INTERNAL
-  form: FormGroup;
+  formDescription: FormGroup = new FormGroup({
+    title: new FormControl('', Validators.required),
+    tags: new FormControl(''),
+    type: new FormControl('', Validators.required),
+  });
 
-  formQuestion: FormGroup = new FormGroup({
-    questionId: new FormControl(null),
-    question: new FormControl('', Validators.required),
-    answers: new FormControl([], Validators.required),
-  })
+  types = [
+    { name: 'trivia', id: 'trivia', control: 'type' },
+    { name: 'simple', id: 'simple', control: 'type' },
+    { name: 'true-false', id: 'true-false', control: 'type' },
+    { name: 'popularity', id: 'popularity', control: 'type' },
+    { name: 'math-quest', id: 'math-quest', control: 'type' },
+    { name: 'reading', id: 'reading', control: 'type' },
+  ];
 
-  options: any = [];
-  quiz: QuestionaryDTO = null;
+  questionary: QuestionaryDTO = null;
   currentAnswer: QuestionDTO = null;
-  currentAnswerIndex = 0;
+  index = 0;
+  redirect = { module: ScreenEnum.dashboard, action: '' };
+  zoomlevel = '100%';
+  zoomlevelLabel = '1.1x';
+  progress = 0;
+  progresStyle = '';
+  onLoading = false;
 
   translateLabels = {
     new_quiz: '',
     form_time: '',
+    form_type: '',
     service_fail_generate: '',
     service_fail_get: '',
     service_sucess_save: '',
@@ -43,13 +62,18 @@ export class QuizEditableComponent implements OnInit {
     answer_text_default: '',
     answer_option_text_default: '',
     answer_option_correct_text_default: '',
+    quiz_default: '',
+    quiz_type_trivia: '',
+    quiz_type_simple: '',
+    quiz_type_true_false: '',
+    quiz_type_popularity: '',
+    quiz_type_reading: '',
+    quiz_type_math_quest: '',
+    form_value_true: '',
+    form_value_false: ''
   };
 
-  durationFormShow = false;
-  showIAForm = false;
-  loadingDataAi = false;
   settings: SettingsDTO = null;
-  isEdit = false;
   _helper = new Utils();
 
   luIcon = {
@@ -60,10 +84,16 @@ export class QuizEditableComponent implements OnInit {
     right: icons.ChevronRight,
     register: icons.UserPlus,
     back: icons.ArrowLeft,
-    save: icons.SaveAll
+    save: icons.SaveAll,
+
+    answer: icons.MessageCircleReply,
+    explanation: icons.MessageSquareWarning,
+    hint: icons.Info,
+    time: icons.Timer,
   }
   //#endregion INTERNAL
 
+  //#region LIFECYCLE
   constructor(private commonServices: CommonServices,
     private uiServices: UiServices,
     private fb: FormBuilder,
@@ -78,6 +108,9 @@ export class QuizEditableComponent implements OnInit {
     });
   }
 
+  //#endregion LIFECYCLE
+
+  //#region DATA
   async setupLanguage(next) {
     this.settings = await this.commonServices.getCurrentSettings();
     this.translate.setDefaultLang(this.settings.language);
@@ -88,266 +121,201 @@ export class QuizEditableComponent implements OnInit {
     });
   }
 
-  //#region DATA
   async setupComponent(injectData?: QuestionaryDTO) {
-    this.currentAnswerIndex = 0;
-    this.isEdit = this.quizId ? true : false;
+    this.index = 0;
+    const _type = this.typeQuiz ? QuizType[this.typeQuiz] : QuizType.trivia;
 
-    this.form = this.fb.group({
-      title: [this.translateLabels.new_quiz, Validators.required],
-      time: [''],
+    this.formDescription = this.fb.group({
+      title: ['', Validators.required],
+      tags: [''],
+      type: [_type, Validators.required],
     });
 
-    this.durationFormShow = false;
-
-    this.quiz = getQuestionaryDTO('', 0);
-    this.quiz.questions = [this.getNewQuestionForm()];
-
+    let _questionary = getNewQuestionary('', '', {
+      question: '', answer: '', hint: '', explanation: '', time: null, answerText: ''
+    });
+    _questionary.type = _type;
 
     if (this.quizId) {
       const _quiz = await this.commonServices.getQuestionaryById(this.quizId);
 
-      if (!this.quiz) {
+      if (!_quiz) {
         this.uiServices.notification(this.translateLabels.service_fail_get, { type: 'error', closeTimer: 3000 });
         this.uiServices.showLoader(false);
         return;
       }
-
-      this.quiz = normalizeQuestionaryDTO(_quiz);
+      _questionary = normalizeQuestionaryDTO(_quiz);
     }
 
-    this.setCurrentAnswer();
+    // update type labels to current lenguage
+    this.types.map(ty => {
+      ty.name = ty.id == 'trivia' ? this.translateLabels.quiz_type_trivia :
+        ty.id == 'simple' ? this.translateLabels.quiz_type_simple :
+          ty.id == 'true-false' ? this.translateLabels.quiz_type_true_false :
+            ty.id == 'popularity' ? this.translateLabels.quiz_type_popularity :
+              ty.id == 'math-quest' ? this.translateLabels.quiz_type_math_quest :
+                ty.id == 'reading' ? this.translateLabels.quiz_type_reading :
+                  this.translateLabels.quiz_default
+      return ty;
+    });
+
+    this.questionary = _questionary;
+    await this.wait(300);
+    this.setQuestionary(_questionary);
+    this.updateValue({});
     this.uiServices.showLoader(false);
   }
 
-  setCurrentAnswer() {
-    const answerItem = (this.quiz.questions[this.currentAnswerIndex] as QuestionDTO);
-
-    const optionArray = [];
-    answerItem.answers.map(opt => {
-      optionArray.push(this.getNewOptionForm(opt))
-    });
-
-    const optionEmpty = answerItem.answers[answerItem.answers.length - 1].answer !== '';
-    if (optionEmpty) {
-      optionArray.push(this.getNewOptionForm())
-    }
-
-    this.formQuestion = this.fb.group({
-      questionId: [answerItem.questionId],
-      question: [answerItem.question],
-      answers: this.fb.array(optionArray)
-    });
-  }
-
-  getFormOptions(): FormArray {
-    return this.formQuestion.get('answers') as FormArray;
-  }
-
-  get validActions(): boolean {
-    const formValid = this.form.valid ?? false;
-    const formQuestionValid = this.formQuestion.valid ?? false;
-    const question: QuestionDTO = this.formQuestion.value;
-    const questionsValid = question.answers ? question.answers.length >= 3 : false;
-    const selectedAwnser = question.answers.find(opt => opt._selected);
-    return formValid && formQuestionValid && selectedAwnser && questionsValid;
-  }
-
-  async updateQuiz() {
-    return new Promise(async (resolve, reject) => {
-      this.uiServices.showLoader(true);
-      // save the last changes
-      (this.quiz.questions as QuestionDTO[])[this.currentAnswerIndex] = this.formQuestion.value;
-
-      // refine request
-      const quizRequest = this.quiz = this._quizRefined(true);
-      const response = await this.commonServices.saveQuestionary(quizRequest);
-      if (!response) {
-        this.uiServices.notification(this.translateLabels.service_fail_update);
-        this.uiServices.showLoader(false);
-        resolve(false);
+  async getData() {
+    if (this.quizId) {
+      this.quizId = JSON.parse(JSON.stringify(this.quizId));
+      const questionary = await this.getQuestionaryById(this.quizId);
+      if (!questionary) {
+        return false;
       }
+      this.questionary = questionary;
+      console.log('questionary: ', questionary);
 
-      const _quiz = await this.commonServices.getQuestionaryById(response.questionaryId);
-      this.quiz = normalizeQuestionaryDTO(_quiz);
-      this.uiServices.showLoader(false);
-      resolve(true);
-    })
-  }
-
-  async getQuizData(id: number) {
-    const data = await this.commonServices.getQuestionaryById(id);
-    if (!data) {
-      this.uiServices.notification(this.translateLabels.service_fail_get);
-      return null;
+      this.redirect.module = ScreenEnum.dashboard;
+      this.redirect.action = `${this.questionary.questionaryId}`;
     }
-    return data;
+    return true;
   }
 
-  finishCreation() {
-    this.updateQuiz();
-    this.gotoDashboard();
+  private async getQuestionaryById(id: number): Promise<QuestionaryDTO> {
+    let attempt: QuestionaryDTO = await this.commonServices.getQuestionaryById(id);
+    if (!attempt) {
+      this.uiServices.notification("Ocurrio un error al obterner la prueba", { type: 'error', closeTimer: 0 })
+    }
+    return attempt || null;
   }
 
-  saveQuiz() {
-    this.updateQuiz();
+  private async saveQuestionary(questionary: QuestionaryDTO): Promise<QuestionaryDTO> {
+    // unlink reference of object
+    const _questionary = JSON.parse(JSON.stringify(questionary));
+    let response: QuestionaryDTO = await this.commonServices.saveQuestionary(_questionary);
+    if (!response) {
+      this.uiServices.notification("Ocurrio un error al salvar los datos", { type: 'error', closeTimer: 0 })
+    }
+    return response || null;
   }
   //#endregion DATA
 
   //#region EVENTS
-  selectAnswerCorrect(option: FormGroup) {
-    const _option = option.value as AnswerDTO;
-    // reset all items
-    this.formQuestion.value.answers.map((opt, index) => {
-      this.getFormOptions().controls[index].get('_selected').setValue(false);
-    });
-
-    // assing correct
-    if (_option.answer) {
-      option.controls['_selected'].setValue(true);
-    }
-  }
-
-  onOptionChange(event: { control: string, value: any }, option: FormGroup) {
-    // if (event.value && option.controls['isCorrect'].value) {
-    //   option.controls['_selected'].patchValue(false);
-    //   setTimeout(() => {
-    //     option.controls['_selected'].updateValueAndValidity();
-    //   }, 100);
-    // }
-
-    const lastIndex = this.formQuestion.value.answers.length - 1;
-    const lastValue = this.formQuestion.value.answers[lastIndex].answer;
-    if (lastIndex >= 0 && lastValue != '') {
-      this.getFormOptions().push(this.getNewOptionForm());
-    } else if (lastIndex > 0 && lastValue == '') {
-      const optionLast = this.formQuestion.value.answers[lastIndex - 1];
-      const postlastValue = optionLast.answer;
-      if (postlastValue == '') {
-        this.getFormOptions().removeAt(lastIndex);
-      }
-    }
-  }
-
   gotoDashboard() {
-    this.commonServices.navigate('dashboard', this.quiz.questionaryId ? this.quiz.questionaryId.toString() : '');
+    if (this.quizId) {
+      this.commonServices.navigate('dashboard', this.questionary.questionaryId.toString());
+    } else {
+      this.commonServices.navigate('dashboard');
+    }
   }
 
-  async nextQuestion() {
-    if (this.currentAnswerIndex <= this.quiz.questions.length - 1) {
-      (this.quiz.questions as QuestionDTO[])[this.currentAnswerIndex] = this.formQuestion.value;
+  updateZoom() {
+    const currentLevel = parseInt(this.zoomlevel.replace('%', ''));
+    const increment = 10;
+    let lavel = currentLevel <= 160 ? currentLevel + increment :
+      currentLevel >= 160 ? 70 + increment : 100;
 
-      await this.updateQuiz();
+    this.zoomlevel = `${lavel}%`;
+    this.uiServices.applyThemeKey('zoomLevel', this.zoomlevel);
+    this.zoomlevelLabel = this.getZoomLevel(this.zoomlevel);
 
-      this.currentAnswerIndex = this.currentAnswerIndex + 1;
-      if (this.currentAnswerIndex > this.quiz.questions.length - 1) {
-        (this.quiz.questions as QuestionDTO[]).push(this.getNewQuestionForm());
+    // this.uiServices.applyTheme(this.settings.themeProps[this.settings.theme.toLowerCase()])
+  }
+
+  setZoom() {
+    this.uiServices.applyThemeKey('zoomLevel', this.zoomlevel);
+  }
+
+  getProgress() {
+    this.progress = (100 / (this.questionary.questions.length)) * (this.index + 1);
+    this.progresStyle = `width: ${this.progress}%`;
+  }
+
+  async onChangeChildren(event: UITypeStatus | UIMainStates) {
+    console.log('onChangeByParent: ', event);
+    if ((event as UIMainStates).action) {
+      const evt: UIMainStates = (event as UIMainStates);
+      this.onChange.emit({ action: evt.action, value: evt.substate });
+      return;
+    }
+
+    if ((event as UITypeStatus).questionary) {
+      const evt: UITypeStatus = (event as UITypeStatus);
+
+      if (this.onLoading) {
+        return;
       }
 
-      this.setCurrentAnswer();
-      this._getQuizUpdated();
+      this.onLoading = true;
+      this.index = evt.index;
+      const _questionary = normalizeQuestionaryDTO(evt.questionary);
+
+      if (evt.savedata) {
+        const response = await this.saveQuestionary(_questionary);
+        this.questionary = response;
+      } else {
+        this.questionary = _questionary;
+      }
+      this.typeGenericComponent.setQuestionary(this.questionary);
+
+      this.onLoading = false;
+      return;
     }
   }
 
-  async prevQuestion() {
-    if (this.currentAnswerIndex != 0) {
-      (this.quiz.questions as QuestionDTO[])[this.currentAnswerIndex] = this.formQuestion.value;
-      this.currentAnswerIndex = this.currentAnswerIndex - 1;
+  updateValue(evt) {
+    console.log('evt: ', evt, this.typeQuiz);
+    const { title, type } = this.formDescription.value;
 
-      this.setCurrentAnswer();
-      this._getQuizUpdated();
+    let _defaultTitle = this.typeGenericComponent.setupQuestionaryTitle(this.translateLabels.quiz_default, this.translateLabels);
+    console.log('_defaultTitle: ', _defaultTitle, this.typeQuiz);
+
+    // Set title 
+    this.questionary.title = title ? title.trim() : _defaultTitle;
+    this.formDescription.get('title').setValue(this.questionary.title);
+
+    // update type
+    if (this.typeQuiz != type) {
+      this.typeQuiz = type;
+      this.questionary.type = QuizType[this.typeQuiz];
+      this.setQuestionary(this.questionary);
+      // reset structure of questionary
+      this.typeGenericComponent.resetQuestionary();
+
+      if (title && title.trim() == _defaultTitle) {
+        const newTitle = this.typeGenericComponent.setupQuestionaryTitle(this.translateLabels.quiz_default, this.translateLabels);
+        this.formDescription.get('title').setValue(newTitle);
+        this.questionary.title = newTitle;
+      }
     }
-  }
-
-  editDuration() {
-    this.durationFormShow = !this.durationFormShow;
-    if (this.durationFormShow) {
-      this.form.get('time').setValue([1]);
-    }
-  }
-
-  onChangeDuration(event) {
-    if (event.value == 0 || event.value == '') {
-      this.editDuration();
-    }
-  }
-
-  enableIA() {
-    this.showIAForm = !this.showIAForm;
   }
   //#endregion EVENTS
 
   //#region CONVERTERS
+  async setQuestionary(questionary?: QuestionaryDTO) {
+    this.uiServices.showLoader(true);
+    const _questionary = JSON.stringify(questionary || this.questionary);
+    // this.questionary = null;
 
-  private _getQuizUpdated() {
-    const answers = [];
-    (this.quiz.questions as QuestionDTO[]).map(ans => {
-      ans.answers.map(opt => {
-        answers.push(opt);
-      })
+    // await this.wait(300);
+    this.questionary = JSON.parse(_questionary);
+    this.typeGenericComponent.setupQuestionaryType();
+    this.uiServices.showLoader(false);
+  }
+
+  getZoomLevel(zoomLevel: string) {
+    zoomLevel = zoomLevel || "100%";
+    const num = parseInt(zoomLevel.replace('%', ''));
+    return `${num / 100}x`;
+  }
+
+  async wait(miliseconds: number) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(true);
+      }, miliseconds);
     });
-  }
-
-  private _quizRefined(cleanUnused = false): QuestionaryDTO {
-    const _quiz = JSON.parse(JSON.stringify(this.quiz));
-
-    const { title, time } = this.form.value;
-    _quiz.title = title;
-    _quiz.time = time;
-    _quiz.updatedDate = new Date().getTime();
-
-    _quiz.questions = JSON.parse(JSON.stringify(_quiz.questions)) || [];
-    if (cleanUnused) {
-      _quiz.questions = _quiz.questions.filter((opt: QuestionDTO) => opt.question !== '');
-    }
-    _quiz.questions.map((answer: QuestionDTO) => {
-      if (cleanUnused) {
-        answer.answers = answer.answers.filter((opt: AnswerDTO) => opt.answer !== '');
-      }
-      answer.answers.map(opt => {
-        opt.isCorrect = opt._selected;
-        return opt;
-      });
-      return answer;
-    });
-    return _quiz;
-  }
-
-  getletter(index) {
-    const ascii = 64; // 65 es el código ASCII de 'A', 90 es el de 'Z'
-    const asciiLimit = 90;
-    const letter = ascii + index;
-    return String.fromCharCode(letter)
-  }
-
-  getNewQuestionForm() {
-    const question = getQuestionDTO(`${this.translateLabels.answer_text_default} #${this.currentAnswerIndex + 1}?`);
-    const questions = [
-      getAnswerDTO(`${this.translateLabels.answer_option_text_default} 1`, 1),
-      getAnswerDTO(`${this.translateLabels.answer_option_text_default} 2`, 2),
-      getAnswerDTO('', 3),
-    ];
-
-    question.answers.push(...questions);
-    return question;
-  }
-
-  getNewOptionForm(optionValue?: AnswerDTO) {
-    const question = (this.quiz.questions[this.currentAnswerIndex] as QuestionDTO);
-    const option = getAnswerDTO('', question.answers.length + 1);
-
-    if (!optionValue) {
-      const length = this.formQuestion ? this.formQuestion.value.answers.length : 0;
-      option.answerId = length + 1;
-    } else {
-      option.answerId = optionValue.answerId;
-      option.answer = optionValue.answer;
-      // GENERATED
-      option.isCorrect = optionValue.isCorrect;
-      option._selected = optionValue._selected; 
-    }
-    return this.fb.group(option)
   }
   //#endregion CONVERTERS
-
 }

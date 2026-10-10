@@ -3,7 +3,7 @@
     <div class="all-screen-section" *ngIf="permissions">
 
         <section-dinamic design="glass" *ngIf="currentSection != '_one'">
-            <div class="arrage centers paddings-relation">
+            <div class="arrage spaceBetween paddings-relation">
                 <ng-container *ngIf="currentSection == '_two'">
                     <h3>{{ 'list_exam' | translate }}</h3>
                 </ng-container>
@@ -57,8 +57,8 @@
                                     <ng-container *ngFor="let quiz of listQuestionnaire">
                                         <div class="item-card _{{quiz.type}}">
                                             <div class="_icon">
-                                                <lu-icon [icon]="luIcon.martQuest"
-                                                    *ngIf="quiz.type == 'mart-quest'"></lu-icon>
+                                                <lu-icon [icon]="luIcon.mathQuest"
+                                                    *ngIf="quiz.type == 'math-quest'"></lu-icon>
                                                 <lu-icon [icon]="luIcon.popularity"
                                                     *ngIf="quiz.type == 'popularity'"></lu-icon>
                                                 <lu-icon [icon]="luIcon.reading"
@@ -93,7 +93,7 @@
                                 <div class="item arrage spaceBetween paddings-down">
                                     <div class="arrage stacked centers-vertical _accent color">
                                         <lu-icon [icon]="luIcon.martQuest"
-                                            *ngIf="currentQuestionnaire.type == 'mart-quest'"></lu-icon>
+                                            *ngIf="currentQuestionnaire.type == 'math-quest'"></lu-icon>
                                         <lu-icon [icon]="luIcon.popularity"
                                             *ngIf="currentQuestionnaire.type == 'popularity'"></lu-icon>
                                         <lu-icon [icon]="luIcon.reading"

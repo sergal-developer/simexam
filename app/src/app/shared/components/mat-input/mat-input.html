@@ -1,11 +1,15 @@
 <div class="mat-form-field">
-    <div class="mat-label" [ngClass]="{'empty': !ngControl.control.value, 'disabled': ngControl.control.disabled  }">
+    <div class="mat-label" [ngClass]="{ 'empty': !ngControl.control.value,
+                         'disabled': !ngControl.control.disable,
+                         'multiline': multiline }">
         <div class="mat-label-text">{{ title }}</div>
 
-        <input *ngIf="!multiline" placeholder="{{ title }}" [attr.maxlength]="maxlength"
-            [formControl]="ngControl.control" type="{{type}}" (input)="valueChange($event)" (click)="onClickInput($event)">
+        <div class="mat-input-wrapper" *ngIf="!multiline">
+            <input placeholder="{{ title }}" [attr.maxlength]="maxlength" [formControl]="ngControl.control"
+                type="{{type}}" (input)="valueChange($event)" (click)="onClickInput($event)">
+        </div>
 
-        <div class="textarea-warp" *ngIf="multiline" [attr.data-replicated-value]="ngControl.control.value">
+        <div class="mat-input-wrapper" *ngIf="multiline" [attr.data-replicated-value]="ngControl.control.value">
             <textarea placeholder="{{ title }}" [attr.maxlength]="maxlength" [formControl]="ngControl.control"
                 (input)="valueChangeTextarea($event)" (click)="onClickInput($event)">
             </textarea>

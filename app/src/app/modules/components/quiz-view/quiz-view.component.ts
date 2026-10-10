@@ -37,6 +37,7 @@ export class QuizViewComponent implements OnInit {
   }
   //#endregion INTERNAL
 
+  //#region LIFECYCLE
   constructor(private commonServices: CommonServices,
     private uiServices: UiServices
   ) { }
@@ -54,6 +55,7 @@ export class QuizViewComponent implements OnInit {
       this.uiServices.showLoader(false);
     }, 500);
   }
+  //#endregion LIFECYCLE
 
   //#region DATA
   async getData() {
@@ -126,7 +128,7 @@ export class QuizViewComponent implements OnInit {
   }
 
   async onChangeChildren(event: UITypeStatus | UIMainStates) {
-    console.log('event: ', event);
+    console.log('onChangeByParent: ', event);
     if ((event as UIMainStates).action) {
       const evt: UIMainStates = (event as UIMainStates);
       this.onChange.emit({ action: evt.action, value: evt.substate });

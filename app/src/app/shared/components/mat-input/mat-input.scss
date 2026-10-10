@@ -1,7 +1,7 @@
 @import '../../../../resources/theme/core/mixins';
 @import '../../../../resources/theme/core/typography';
 
-$boxMinHeight: 50px;
+$boxMinHeight: 40px;
 $boxMinHeightFlat: 20px;
 $boxMaxHeight: 300px;
 
@@ -9,6 +9,7 @@ $boxMaxHeight: 300px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: var(--space-relation) 0;
 
     .mat-label {
         position: relative;
@@ -20,13 +21,12 @@ $boxMaxHeight: 300px;
         background: var(--formBackground);
         border-radius: 10px;
         color: var(--appColor);
-        margin: 15px 0;
         min-height: $boxMinHeight;
         font-size: rem(18px);
 
         .mat-label-text {
-            transform: translate(10px, 5px);
-            font-size: 70%;
+            transform: translate(15px, 0);
+            font-size: 60%;
             user-select: none;
             width: auto;
             pointer-events: none;
@@ -48,33 +48,18 @@ $boxMaxHeight: 300px;
             }
         }
 
-        .textarea-warp,
-        input,
-        textarea {
-            margin: 0;
-            padding: 10px;
-            font-size: 100%;
-            min-height: $boxMinHeight;
-            height: $boxMinHeight;
-        }
-
-        .textarea-warp {
-            width: 100%;
-            padding: 0;
-            height: auto;
-            line-height: 1;
-            display: grid;
+        .mat-input-wrapper {
             position: relative;
+            width: 100%;
 
-            &:after,
-            textarea {
-                content: attr(data-replicated-value) " ";
+            &:after {
+                content: attr(data-replicated-value) "";
                 white-space: pre-wrap;
                 visibility: hidden;
                 grid-area: 1 / 1 / 2 / 2;
-                padding: 0 10px;
                 line-height: 1;
-                min-height: $boxMinHeight;
+                // min-height: $boxMinHeight;
+                min-height: 10px;
                 max-height: $boxMaxHeight;
                 overflow: auto;
                 height: auto;
@@ -83,30 +68,74 @@ $boxMaxHeight: 300px;
                 width: 100%;
             }
 
+            input,
             textarea {
-                visibility: visible;
+                width: 100%;
+                min-height: $boxMinHeight;
+                padding: 10px 15px;
+            }
+
+            textarea {
+                height: auto;
+                grid-area: 1 / 1 / 2 / 2;
+                max-height: $boxMaxHeight;
             }
         }
 
-        textarea {
-            width: 100%;
-            height: auto;
+        &.multiline {
+            .mat-input-wrapper {
+                width: 100%;
+                padding: 10px 0px 5px 15px;
+                height: auto;
+                line-height: 1;
+                display: grid;
+
+                textarea {
+                    padding: 0;
+                    padding-right: 10px;
+                    min-height: calc(#{$boxMinHeight} - 25px);
+                }
+            }
         }
 
         &.empty {
             .mat-label-text {
-                transform: translate(12px, calc(#{$boxMinHeight} / 4));
+                transform: translate(15px, calc(#{$boxMinHeight} / 4));
                 font-size: 100%;
                 color: inherit;
                 opacity: 0.7;
             }
 
-            textarea,
-            input {
-                height: $boxMinHeight;
+            .mat-input-wrapper {
 
-                &::placeholder {
-                    opacity: 0;
+                input,
+                textarea {
+                    line-height: $boxMinHeight;
+                    height: $boxMinHeight;
+                    overflow: hidden;
+
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+
+                textarea {
+                    line-height: calc(#{$boxMinHeight} / 2);
+                }
+            }
+
+            &.multiline {
+                .mat-input-wrapper {
+                    padding: 0px;
+
+                    &:after {
+                        content: '';
+                        display: none;
+                    }
+
+                    textarea {
+                        padding: 10px 15px;
+                    }
                 }
             }
         }
@@ -117,6 +146,30 @@ $boxMaxHeight: 300px;
     }
 }
 
+.small-field {
+    .mat-label {
+        .mat-label-text {
+            opacity: 0;
+        }
+
+        &.empty {
+            .mat-label-text {
+                // transform: translate(12px, calc(#{$boxMinHeightFlat} / 4));
+                opacity: 0.5;
+            }
+
+            // textarea,
+            // input {
+            //     &::placeholder {
+            //         opacity: 0;
+            //     }
+            // }
+        }
+    }
+
+}
+
+/*
 .flat-form {
     .mat-label {
         min-height: $boxMinHeightFlat;
@@ -134,12 +187,12 @@ $boxMaxHeight: 300px;
                 opacity: 0.5;
             }
 
-            textarea,
-            input {
-                &::placeholder {
-                    opacity: 0;
-                }
-            }
+            // textarea,
+            // input {
+            //     &::placeholder {
+            //         opacity: 0;
+            //     }
+            // }
         }
     }
 
@@ -147,14 +200,15 @@ $boxMaxHeight: 300px;
         margin: 0;
         min-height: $boxMinHeightFlat;
         height: auto;
-        
-        textarea,
-        input,
-        &:after {
-            min-height: $boxMinHeightFlat;
-            height: auto;
-            margin: 0;
-            padding: 10px 0px;
-        }
+
+        // textarea,
+        // input,
+        // &:after {
+        //     min-height: $boxMinHeightFlat;
+        //     height: auto;
+        //     margin: 0;
+        //     padding: 10px 0px;
+        // }
     }
 }
+*/

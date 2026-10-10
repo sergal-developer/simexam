@@ -45,7 +45,7 @@
                 </div>
             </section-dinamic>
 
-            <type-math-quest *ngIf="attempt.type == 'mart-quest'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-math-quest>
+            <type-math-quest *ngIf="attempt.type == 'math-quest'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-math-quest>
             <type-popularity *ngIf="attempt.type == 'popularity'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-popularity>
             <type-reading *ngIf="attempt.type == 'reading'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-reading>
             <type-simple *ngIf="attempt.type == 'simple'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-simple>

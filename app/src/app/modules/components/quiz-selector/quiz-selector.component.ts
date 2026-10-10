@@ -50,7 +50,7 @@ export class QuizSelectorComponent implements OnInit {
     simple: icons.PlayingCards,
     trueFalse: icons.Drama,
     popularity: icons.Vote,
-    martQuest: icons.Brain,
+    mathQuest: icons.Brain,
     reading: icons.BookOpenText,
 
     download: icons.ArrowDownToLine,
@@ -120,7 +120,7 @@ export class QuizSelectorComponent implements OnInit {
   }
 
   createNewBlank(type: string = 'quiz') {
-    this.commonServices.navigate('quizcreate', type);
+    this.commonServices.navigate('quizcreate', 'create', null, { type: type });
   }
 
   async getFile(item: any) {

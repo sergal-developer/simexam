@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } fr
 import { icons } from 'lucide';
 import { AnswerDTO, AttemptDTO, normalizeAttemptDTO, QuestionDTO } from 'src/app/shared/data/entities/dtos';
 import { UIMainStates, UITypeStatus } from 'src/app/shared/data/entities/dtos/ui.dto';
-import { AttemptState, GradeState, ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
+import { AttemptState, GradeState } from 'src/app/shared/data/enumerables/enumerables';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
 

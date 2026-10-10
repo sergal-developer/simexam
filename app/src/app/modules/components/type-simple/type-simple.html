@@ -1,5 +1,39 @@
-<div class="arrage centers paddings-relation">
-    <div class="item">
-        <h3>Simple</h3>
-    </div>
+<div class="arrage centers paddings-relation" *ngIf="attempt.questions[index]">
+    <ng-container>
+        <section-dinamic design="glass">
+            <div class="arrage columns paddings _question_section">
+                <div class="item font_variable" 
+                    [innerHTML]="attempt.questions[index].question">
+                </div>
+            </div>
+        </section-dinamic>
+
+        <section-dinamic design="glass">
+            <div class="arrage stacked paddings-relation">
+                <div class="item font_variable"
+                    [innerHTML]="attempt.questions[index].answer">
+                </div>
+            </div>
+        </section-dinamic>
+
+        <div class="_navbarFixedBottom">
+            <div class="_navOfButtons">
+                <button (click)="prev()" [disabled]="!index">
+                    <lu-icon [icon]="luIcon.left"></lu-icon>
+                    <span>{{ 'action_prev' | translate }}</span>
+                </button>
+
+                <button (click)="finish()" *ngIf="index == attempt.questions.length - 1">
+                    <span>{{ 'action_complete' | translate }}</span>
+                </button>
+
+                <button (click)="next()"
+                    *ngIf="index < attempt.questions.length - 1">
+                    <span>{{ 'action_next' | translate }}</span>
+                    <lu-icon [icon]="luIcon.right"></lu-icon>
+                </button>
+            </div>
+        </div>
+    </ng-container>
+
 </div>

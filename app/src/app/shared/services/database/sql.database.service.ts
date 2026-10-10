@@ -487,14 +487,14 @@ export class DatabaseService {
 
     private async _postQuestionnaire(data: QuestionaryDTO): Promise<QuestionaryDTO> {
         this.origin = `_postQuestionnaire(${JSON.stringify(data)})`;
-        const request = [data.uuid, data.title, data.time, data.tags, data.type, data.creationDate, data.updatedDate, data.questionsCount, data.questions]
+        const request = [data.uuid, data.title, data.tags, data.type, data.creationDate, data.updatedDate, data.questionsCount, data.questions]
         const response = await this.executeActionSQL(questionnaire_table_querys.post.query, request);
         return response && response.length ? response[0] : null;
     }
 
     private async _putQuestionnaire(data: QuestionaryDTO): Promise<QuestionaryDTO> {
         this.origin = `_putQuestionnaire(${JSON.stringify(data)})`;
-        const request = [data.questionaryId ?? null, data.uuid, data.title, data.time, data.tags, data.type, data.creationDate, data.updatedDate, data.questionsCount, data.questions]
+        const request = [data.questionaryId ?? null, data.uuid, data.title, data.tags, data.type, data.creationDate, data.updatedDate, data.questionsCount, data.questions]
         const response = await this.executeActionSQL(questionnaire_table_querys.put.query, request);
         return response && response.length ? response[0] : null;
     }
@@ -554,14 +554,14 @@ export class DatabaseService {
 
     private async _postAttemptQuestionnaire(attempt: AttemptDTO): Promise<AttemptDTO> {
         this.origin = `_postAttemptQuestionnaire(${JSON.stringify(attempt)})`;
-        const request = [ attempt.questionaryId, attempt.userId, attempt.title, attempt.time, attempt.tags, attempt.type, attempt.score, attempt.state, attempt.creationDate, attempt.updatedDate, attempt.questionsCount, attempt.questions ]; 
+        const request = [ attempt.questionaryId, attempt.userId, attempt.title, attempt.tags, attempt.type, attempt.score, attempt.state, attempt.creationDate, attempt.updatedDate, attempt.questionsCount, attempt.questions ]; 
         const response = await this.executeActionSQL(questionnaire_attempts_table_querys.post.query, request);
         return response && response.length ? response[0] : null;
     }
 
     private async _putAttemptQuestionnaire(attempt: AttemptDTO): Promise<AttemptDTO> {
         this.origin = `_putAttemptQuestionnaire(${JSON.stringify(attempt)})`;
-        const request = [ attempt.attemptId ?? null, attempt.questionaryId, attempt.userId, attempt.title, attempt.time, attempt.tags, attempt.type, attempt.score, attempt.state, attempt.creationDate, attempt.updatedDate, attempt.questionsCount, attempt.questions ]; 
+        const request = [ attempt.attemptId ?? null, attempt.questionaryId, attempt.userId, attempt.title, attempt.tags, attempt.type, attempt.score, attempt.state, attempt.creationDate, attempt.updatedDate, attempt.questionsCount, attempt.questions ]; 
         const response = await this.executeActionSQL(questionnaire_attempts_table_querys.put.query, request);
         return response && response.length ? response[0] : null;
     }

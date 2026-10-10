@@ -57,7 +57,7 @@ export class DashboardComponent implements OnInit {
     simple: icons.PlayingCards,
     trueFalse: icons.Drama,
     popularity: icons.Vote,
-    martQuest: icons.Brain,
+    mathQuest: icons.Brain,
     reading: icons.BookOpenText,
 
     gradeFailed: icons.CircleX,

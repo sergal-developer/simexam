@@ -1,0 +1,32 @@
+<div class="mat-form-field">
+    <div class="mat-label" [ngClass]="{'empty': isEmpty && !placeholder, 'disabled': isDisabled }">
+        <div class="mat-label-text">{{ title }}</div>
+
+        <div class="select-trigger" role="combobox" [attr.aria-expanded]="isOpen" [attr.aria-disabled]="isDisabled"
+            [tabindex]="isDisabled ? -1 : 0" [class.open]="isOpen" (click)="toggle()" (keydown)="onKeyDown($event)"
+            (blur)="onBlur()">
+            <div class="select-value" [ngClass]="{ 'placeholder': isEmpty }">{{ triggerText }}</div>
+            <div class="select-arrow"></div>
+        </div>
+
+        <div class="select-dropdown" *ngIf="isOpen && !isDisabled" role="listbox">
+            <div class="select-option" *ngFor="let option of options; let i = index" role="option"
+                [class.selected]="isSelected(option)" [class.highlighted]="i === highlightedIndex"
+                (mousedown)="selectOption(option)" (mouseenter)="highlightedIndex = i">
+                {{ getDisplayValue(option) }}
+            </div>
+
+            <div class="select-empty" *ngIf="options.length === 0">
+                {{ notFoundText }}
+            </div>
+        </div>
+
+        <div class="mat-error"
+            *ngIf="control?.invalid && (control?.dirty || control?.touched)"
+            [ngClass]="{'error': control?.errors }">
+            <div *ngIf="control?.errors">
+                {{ mesageError }}
+            </div>
+        </div>
+    </div>
+</div>

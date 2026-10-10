@@ -1,13 +1,13 @@
 <div class="_animation_state">
     <div class="all-screen-section">
         <section-dinamic design="glass">
-            <div class="arrage centers paddings-relation">
+            <div class="arrage spaceBetween paddings-relation">
                 <div class="item" (click)="gotoDashboard()">
                     <lu-icon [icon]="luIcon.back"></lu-icon>
                 </div>
                 <h4>Plantillas Genericas</h4>
             </div>
-            <div class="arrage stacked paddings">
+            <div class="arrage stacked paddings-relation _types">
                 <button class="item" (click)="createNewBlank('trivia')">
                     <lu-icon [icon]="luIcon.trivia"></lu-icon>
                     <div>Examen</div>
@@ -29,7 +29,7 @@
                 </button>
 
                 <button class="item" (click)="createNewBlank('math-quest')">
-                    <lu-icon [icon]="luIcon.martQuest"></lu-icon>
+                    <lu-icon [icon]="luIcon.mathQuest"></lu-icon>
                     <div>Calcular</div>
                 </button>
 
@@ -75,7 +75,7 @@
                 <div class="item" *ngFor="let quiz of listFilesFiltered">
                     <div class="arrage">
                         <div class="item">
-                            <lu-icon [icon]="luIcon.martQuest" *ngIf="quiz.type == 'mart-quest'"></lu-icon>
+                            <lu-icon [icon]="luIcon.martQuest" *ngIf="quiz.type == 'math-quest'"></lu-icon>
                             <lu-icon [icon]="luIcon.popularity" *ngIf="quiz.type == 'popularity'"></lu-icon>
                             <lu-icon [icon]="luIcon.reading" *ngIf="quiz.type == 'reading'"></lu-icon>
                             <lu-icon [icon]="luIcon.simple" *ngIf="quiz.type == 'simple'"></lu-icon>
