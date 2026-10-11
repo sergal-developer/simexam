@@ -14,25 +14,20 @@
                     <div class="arrage row {{numrows}} _answer_collection">
                         <ng-container *ngFor="let option of attempt.questions[index].answers">
                             <div class="_answer arrage stacked" [ngClass]="{   
-                                        'selected': option._selected, 
-                                        'view': readonly,
-                                        'correct': readonly && (option.id == attempt.questions[index]._answerSelected),
+                                        'selected': option._selected,
+                                        'incorrect': readonly && !option.isCorrect,
+                                        'correct': readonly && option.isCorrect,
                                         'disabled': savingData }" (click)="selectOption(option)">
                                 <div class="_answer_selection font_variable">
-                                    <ng-container *ngIf="readonly">
-                                        <lu-icon
-                                            *ngIf="(option.id != attempt.questions[index].isCorrect) && !option._selected"
-                                            [icon]="luIcon.unchecked"></lu-icon>
-                                        <lu-icon *ngIf="option.id == attempt.questions[index].isCorrect"
-                                            [icon]="luIcon.correct"></lu-icon>
-                                        <lu-icon
-                                            *ngIf="(option.id != attempt.questions[index].isCorrect) && option._selected"
-                                            [icon]="luIcon.incorrect"></lu-icon>
-                                    </ng-container>
-                                    <ng-container *ngIf="!readonly">
-                                        <lu-icon *ngIf="!option._selected" [icon]="luIcon.unchecked"></lu-icon>
-                                        <lu-icon *ngIf="option._selected" [icon]="luIcon.selected"></lu-icon>
-                                    </ng-container>
+                                    <lu-icon *ngIf="readonly && option.isCorrect" [icon]="luIcon.correct"></lu-icon>
+                                    <lu-icon *ngIf="readonly && !option.isCorrect && !option._selected"
+                                        [icon]="luIcon.incorrect"></lu-icon>
+                                    <lu-icon *ngIf="readonly && !option.isCorrect && option._selected"
+                                        [icon]="luIcon.selected"></lu-icon>
+
+                                    <lu-icon *ngIf="!readonly && !option._selected"
+                                        [icon]="luIcon.unselected"></lu-icon>
+                                    <lu-icon *ngIf="!readonly && option._selected" [icon]="luIcon.selected"></lu-icon>
                                 </div>
                                 <div class="_answer_text font_variable" [innerHTML]="option.answer">
                                 </div>

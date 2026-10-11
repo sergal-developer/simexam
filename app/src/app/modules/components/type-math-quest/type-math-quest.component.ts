@@ -244,5 +244,4 @@ export class TypeMathQuestComponent implements OnInit {
     return this.getCurrentQuestion();
   }
   //#endregion CONVERTERS
-
 }

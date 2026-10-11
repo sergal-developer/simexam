@@ -3,6 +3,7 @@ import { icons } from 'lucide';
 import { AnswerDTO, AttemptDTO, normalizeAttemptDTO, QuestionDTO } from 'src/app/shared/data/entities/dtos';
 import { UIMainStates, UITypeStatus } from 'src/app/shared/data/entities/dtos/ui.dto';
 import { AttemptState, GradeState } from 'src/app/shared/data/enumerables/enumerables';
+import { UxUtils } from 'src/app/shared/data/utils/uxUtils';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
 
@@ -19,12 +20,10 @@ export class TypetTriviaComponent implements OnInit {
 
   //#region INTERNAL
   index = 0;
-  // currentQuestion: QuestionDTO = null;
   numrows = '_1';
   onLoading = false;
   readonly = false;
   currentSection: 'quiz' | 'results' = 'quiz';
-
   _gradeState = GradeState;
 
   luIcon = {
@@ -37,78 +36,33 @@ export class TypetTriviaComponent implements OnInit {
     back: icons.ArrowLeft,
     save: icons.SaveAll,
 
-    unchecked: icons.CircleDashed,
-    checked: icons.CircleDashedCheck,
+
+    perfect: icons.BadgeCheck,
+
+    unselected: icons.CircleDashed,
     selected: icons.CircleDot,
-    correct: icons.CircleCheckBig,
-    incorrect: icons.CircleX,
-    results: icons.ListChecks,
-  }
+    correct: icons.CircleCheck,
+    incorrect: icons.CircleSlash2,
+  };
+
+  _utilsUX = new UxUtils();
   //#endregion INTERNAL
 
+  //#region LIFECICLE
   constructor(private commonServices: CommonServices,
     public uiServices: UiServices) { }
 
   async ngOnInit() {
     this.uiServices.showLoader(true);
     this.setupComponent();
-    setTimeout(() => {
-      this.uiServices.showLoader(false);
-    }, 500);
+    await this._utilsUX.wait(500);
+    this.uiServices.showLoader(false);
   }
+  //#endregion LIFECICLE
 
   //#region DATA
-  async getData() {
-    if (this.attempt.questionaryId) {
-      this.attempt.questionaryId = JSON.parse(JSON.stringify(this.attempt.questionaryId));
-      const attempt = await this.getAttemptData(this.attempt.questionaryId);
-      if (!attempt) {
-        return false;
-      }
-      this.attempt = attempt;
-
-      if (this.attempt.state == AttemptState.new) {
-        this.attempt.updatedDate = new Date().getTime();
-        this.attempt.state = AttemptState.progress;
-      }
-
-      if (this.attempt.state == AttemptState.progress) {
-        let idxLastResponse = (this.attempt.questions as QuestionDTO[]).findIndex((item) => !item._answerSelected);
-        if (idxLastResponse != -1) {
-          idxLastResponse = idxLastResponse == 0 ? 0 : idxLastResponse - 1;
-        } else {
-          idxLastResponse = this.attempt.questions.length - 1;
-        }
-
-        setTimeout(() => {
-          this.gotoQuestion(idxLastResponse);
-        }, 500);
-      }
-
-      if (this.attempt.state == 'completed') {
-        if (this.attempt._grade == GradeState.not_submitted) {
-          this.attempt = await this.evalueAttemptById(this.attempt.attemptId);
-        }
-
-        this.attempt._score = this.attempt.score.toFixed(2);
-        this.showFinishPage();
-      }
-
-      this.readonly = this.attempt.state == AttemptState.completed;
-
-      if (!this.attempt) {
-        this.uiServices.notification('Ocurrio un error al recuperar los datos', { type: 'error', closeTimer: 3000 });
-        return false;
-      }
-    }
-    return true;
-  }
-
   async setupComponent() {
-    if (!this.attempt) {
-      return;
-    }
-
+    console.log('this.attempt: ', this.attempt);
     this.readonly = this.attempt.state == AttemptState.completed;
     this.index = 0;
     this.calculateAnswerWidth();
@@ -130,18 +84,9 @@ export class TypetTriviaComponent implements OnInit {
         idxLastResponse = this.attempt.questions.length - 1;
       }
 
-      setTimeout(() => {
-        this.gotoQuestion(idxLastResponse);
-      }, 500);
+      await this._utilsUX.wait(500);
+      this.gotoQuestion(idxLastResponse);
     }
-  }
-
-  async getAttemptData(id: number): Promise<AttemptDTO> {
-    let attempt: AttemptDTO = await this.commonServices.getAttemptById(id);
-    if (!attempt) {
-      this.uiServices.notification("Ocurrio un error al obterner la prueba", { type: 'error', closeTimer: 0 })
-    }
-    return attempt || null;
   }
 
   async evalueAttemptById(id: number): Promise<AttemptDTO> {
@@ -149,12 +94,13 @@ export class TypetTriviaComponent implements OnInit {
     return attempt;
   }
 
-  async updateResults(options: { updateData: boolean, finish: boolean }) {
+  private async updateResults(options: { updateData: boolean, finish: boolean }) {
     if (this.attempt.state == AttemptState.completed) {
+      options.updateData = false;
+      this.updateAttempt(options.updateData);
       return;
     }
 
-    console.log('options: ', options);
     if (this.attempt.state == AttemptState.new) {
       this.attempt.state = AttemptState.progress;
     }
@@ -170,41 +116,8 @@ export class TypetTriviaComponent implements OnInit {
     this.updateAttempt(options.updateData);
   }
 
-  async _updateResultss(isFinish = false) {
-    if (this.onLoading) {
-      return;
-    }
-
-    if (this.attempt.state == AttemptState.completed) {
-      return;
-    }
-
-    this.onLoading = true;
-
-    if (this.readonly) { return; }
-
-    if (isFinish) {
-      this.attempt.state = AttemptState.completed;
-      this.attempt = await this.getAssessment();
-    } else {
-      this.attempt.state = AttemptState.progress;
-    }
-
-    this.attempt.updatedDate = new Date().getTime();
-    this.readonly = this.attempt.state == AttemptState.completed;
-
-    const reponse = await this.commonServices.saveAttempt(this.attempt);
-    console.log('reponse: ', reponse);
-    this.attempt = reponse;
-
-    if (this.attempt.state == AttemptState.completed) {
-      this.showFinishPage();
-    }
-
-    this.onLoading = false;
-  }
-
   private updateAttempt(savedata: boolean) {
+    this.highlightAnswers();
     const event: UITypeStatus = {
       index: this.index,
       attempt: normalizeAttemptDTO(JSON.parse(JSON.stringify(this.attempt))),
@@ -259,7 +172,6 @@ export class TypetTriviaComponent implements OnInit {
   }
 
   finishQuiz() {
-
     this.updateResults({ finish: true, updateData: true });
     this.showFinishPage();
   }
@@ -283,17 +195,18 @@ export class TypetTriviaComponent implements OnInit {
     this.updateAttempt(false);
   }
 
-  gotoDashboard() {
-    this.commonServices.navigate('dashboard', this.attempt.questionaryId.toString());
-  }
-
   valueChange(value: string) {
-    const states: UIMainStates = { action: 'ui_update', substate: value }
+    const states: UIMainStates = { action: 'ui_update', substate: value, attemptStatus: this.attempt.state }
     this.onChange.emit(states);
   }
   //#endregion EVENTS
 
   //#region CONVERTERS
+  highlightAnswers() {
+    this.readonly = this.attempt.state == AttemptState.completed;
+  }
+
+
   async getAssessment() {
     const reponse = await this.commonServices.saveAttempt(this.attempt)
     const attempt = await this.commonServices.evalueAttemptById(reponse.attemptId);
