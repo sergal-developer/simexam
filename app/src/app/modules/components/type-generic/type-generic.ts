@@ -192,30 +192,6 @@ export class TypeGenericComponent implements OnInit {
     }
   }
 
-  setupQuestionaryTitle(titleLabel: string, translateLabels) {
-    this.translateLabels = translateLabels;
-    let typeLabel = '';
-    if (this.questionary.type == QuizType.trivia) {
-      typeLabel = translateLabels.quiz_type_trivia;
-    }
-    if (this.questionary.type == QuizType.simple) {
-      typeLabel = translateLabels.quiz_type_simple;
-    }
-    if (this.questionary.type == QuizType['true-false']) {
-      typeLabel = translateLabels.quiz_type_true_false;
-    }
-    if (this.questionary.type == QuizType.popularity) {
-      typeLabel = translateLabels.quiz_type_popularity;
-    }
-    if (this.questionary.type == QuizType.reading) {
-      typeLabel = translateLabels.quiz_type_reading;
-    }
-    if (this.questionary.type == QuizType['math-quest']) {
-      typeLabel = translateLabels.quiz_type_math_quest;
-    }
-    return `${titleLabel} - ${typeLabel}`;
-  }
-
   private async updateQuestionaryPosition(options: { updateData: boolean, finish: boolean }) {
     this.questionary.updatedDate = new Date().getTime();
     this.setCurrentQuestion();
@@ -223,6 +199,7 @@ export class TypeGenericComponent implements OnInit {
   }
 
   private emitQuestionary(savedata: boolean) {
+    console.log('emitQuestionary: ', savedata);
     const event: UITypeStatus = {
       index: this.index,
       questionary: normalizeQuestionaryDTO(this.questionary),

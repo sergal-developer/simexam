@@ -18,7 +18,6 @@ export class QuizViewComponent implements OnInit {
 
   //#region INTERNAL
   attempt: AttemptDTO = null;
-  currentSection: 'quiz' | 'results' = 'quiz';
   readonly = false;
   index = 0;
   progress = 0;
@@ -31,6 +30,8 @@ export class QuizViewComponent implements OnInit {
   zoomlevelLabel = '1.1x';
   settings = null;
   redirect = { module: ScreenEnum.dashboard, action: '' };
+  isAttemptCompleted = false;
+  isAttemptReview = false;
 
   luIcon = {
     back: icons.ArrowLeft,
@@ -47,7 +48,6 @@ export class QuizViewComponent implements OnInit {
     this.settings = await this.commonServices.getSettingCompleteById(0);
 
     await this.getData();
-    this.setupComponent();
 
     setTimeout(() => {
       this.zoomlevel = this.uiServices.getThemeKey('zoomLevel');
@@ -62,22 +62,22 @@ export class QuizViewComponent implements OnInit {
     if (this.id) {
       this.id = JSON.parse(JSON.stringify(this.id));
       const attempt = await this.getAttemptData(this.id);
+
       if (!attempt) {
         return false;
       }
+
       this.attempt = attempt;
-      console.log('attempt: ', attempt);
+
+      this.isAttemptCompleted = this.attempt.state == AttemptState.completed;
+      console.log('this.isAttemptCompleted: ', this.isAttemptCompleted);
+      this.isAttemptReview = false;
 
       this.redirect.module = ScreenEnum.dashboard;
       this.redirect.action = `${this.attempt.questionaryId}`;
+      this.updateProgressBar();
     }
     return true;
-  }
-
-  async setupComponent() {
-    if (!this.attempt) {
-      return;
-    }
   }
 
   private async getAttemptData(id: number): Promise<AttemptDTO> {
@@ -122,16 +122,20 @@ export class QuizViewComponent implements OnInit {
     this.uiServices.applyThemeKey('zoomLevel', this.zoomlevel);
   }
 
-  getProgress() {
+  updateProgressBar() {
     this.progress = (100 / (this.attempt.questions.length)) * (this.index + 1);
     this.progresStyle = `width: ${this.progress}%`;
   }
 
   async onChangeChildren(event: UITypeStatus | UIMainStates) {
-    console.log('onChangeByParent: ', event);
+    console.log('event: ', event);
     if ((event as UIMainStates).action) {
       const evt: UIMainStates = (event as UIMainStates);
       this.onChange.emit({ action: evt.action, value: evt.substate });
+
+      this.isAttemptCompleted = evt.substate == 'secondary' && (evt.attemptStatus && evt.attemptStatus == AttemptState.completed);
+      this.isAttemptReview = evt.substate == 'primary' && (evt.attemptStatus && evt.attemptStatus == AttemptState.completed);
+
       return;
     }
 
@@ -147,14 +151,18 @@ export class QuizViewComponent implements OnInit {
 
       if (evt.savedata) {
         const response = await this.saveAttempt(evt.attempt);
+        console.log('attempt.saved: ', response);
         this.attempt = response;
       } else {
         this.attempt = evt.attempt;
       }
 
       this.onLoading = false;
+      this.updateProgressBar();
       return;
     }
+
+    this.updateProgressBar();
   }
   //#endregion EVENTS
 

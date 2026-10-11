@@ -47,15 +47,17 @@ button,
     background: var(--primaryBackground);
     color: var(--primaryColor);
     border: 1px solid transparent;
-    transition: all 300ms;
+    transition: color, background, padding 300ms;
     cursor: pointer;
-    padding: 10px 25px;
-    padding: 8px 15px;
-    font-weight: 600;
-    font-size: 16px;
+    padding: 7px 12px;
+    font-weight: normal;
+    font-size: rem(16px);
     border-radius: 5px;
-    display: inline-block;
+    display: flex;
     margin: 0;
+    gap: var(--space-joined);
+    align-items: center;
+    line-height: 1;
 
     .inner {
         display: flex;
@@ -68,6 +70,11 @@ button,
 
     .material-icons {
         display: inline-block;
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
     }
 
     &:hover,
@@ -92,7 +99,26 @@ button,
         font-size: rem(25px);
     }
 
-    &.primary {
+    &.primary,
+    &.secondary,
+    &.accent {
+        background: var(--primaryBackground);
+        color: var(--primaryColor);
+
+        &:hover,
+        &.hover {
+            background: var(--primaryBackgroundHover);
+            color: var(--primaryColor);
+        }
+
+        &:disabled,
+        &.disabled {
+            background: var(--disabledBackground) !important;
+            color: var(--disabledColor) !important;
+        }
+    }
+
+    &.secondary {
         background: var(--secondaryBackground);
         color: var(--secondaryColor);
 
@@ -101,11 +127,16 @@ button,
             background: var(--secondaryBackgroundHover);
             color: var(--secondaryColor);
         }
+    }
 
-        &:disabled,
-        &.disabled {
-            background: var(--disabledBackground) !important;
-            color: var(--disabledColor) !important;
+    &.accent {
+        background: var(--accentBackground);
+        color: var(--accentColor);
+
+        &:hover,
+        &.hover {
+            background: var(--accentBackgroundHover);
+            color: var(--accentColor);
         }
     }
 
@@ -146,8 +177,26 @@ button,
         &.uppercase {
             text-transform: uppercase;
         }
+
+        &:disabled,
+        &.disabled {
+            background: none !important;
+            color: var(--disabledColor) !important;
+        }
     }
 
+    &.square {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-joined);
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
 }
 
 .clickable {

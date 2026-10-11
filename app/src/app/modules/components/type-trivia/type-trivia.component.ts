@@ -313,7 +313,7 @@ export class TypetTriviaComponent implements OnInit {
   }
 
   private getCurrentQuestion() {
-    // ask if field questiosn is string to assign data 
+    // ask if field questiosn is string to assign data x
     if (typeof this.attempt.questions == 'string') {
       this.attempt.questions = JSON.parse(this.attempt.questions);
     }

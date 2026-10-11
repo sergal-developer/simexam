@@ -995,87 +995,87 @@ h6 {
     }
 }
 
-._answer_collection {
+._answer {
     display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--answerBorderColor);
+    background: var(--grayBackdropBackground);
+    font-size: rem(14px);
 
-    ._answer {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px;
-        border-radius: 10px;
-        border: 2px solid var(--answerBorderColor);
-        background: var(--grayBackdropBackground);
-        font-size: rem(14px);
+    gap: var(--space-joined);
+    border: 1px solid white;
 
-        gap: var(--space-joined);
-        border: 1px solid white;
+    ._answer_selection {
+        width: 30px;
+        font-size: 25px;
+    }
 
-        ._answer_selection {
-            width: 30px;
-            font-size: 25px;
+    ._answer_text {
+        width: 100%;
+    }
+
+    &.hover,
+    &:hover {
+        background: var(--secondaryBackgroundAlterHover);
+    }
+
+    &.selected {
+        color: var(--answerSelectedColor);
+        border-color: var(--borderColorTransparent);
+        background: var(--answerSelectedBackground);
+        box-shadow: 0 0 10px var(--answerSelectedBackground);
+    }
+
+    &.correct {
+        color: var(--answerCorrectColor);
+        border-color: var(--answerCorrectBorderColor);
+        background: var(--answerCorrectBackground);
+        // box-shadow: 0 0 10px var(--answerCorrectBackground);
+    }
+
+    &.incorrect {
+        color: var(--answerIncorrectColor);
+        border-color: var(--answerIncorrectBorderColor);
+        background: var(--answerIncorrectBackground);
+
+        &.selected {
+            box-shadow: 0 0 10px var(--answerIncorrectBackground);
         }
+    }
 
-        ._answer_text {
-            width: 100%;
-        }
+    &.disabled {
+        opacity: 0.5;
+    }
+
+    &.view {
+        cursor: default;
 
         &.hover,
         &:hover {
-            background: var(--secondaryBackgroundAlterHover);
+            background: unset;
+            color: unset;
+            border-color: inherit;
         }
+    }
 
-        &.selected {
-            color: var(--answerSelectedColor);
-            border-color: var(--borderColorTransparent);
-            background: var(--answerSelectedBackground);
-            box-shadow: 0 0 10px var(--answerSelectedBackground);
+    &.flat {
+        padding: 0;
+
+        ._answer_selection {
+            padding: 5px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #646464;
         }
-
-        &.correct {
-            color: var(--answerCorrectColor);
-            border-color: var(--answerCorrectBorderColor);
-            background: var(--answerCorrectBackground);
-            box-shadow: 0 0 10px var(--answerCorrectBackground);
-        }
-
-        &.incorrect {
-            color: var(--answerIncorrectColor);
-            border-color: var(--answerIncorrectBorderColor);
-            background: var(--answerIncorrectBackground);
-        }
-
-        &.disabled {
-            opacity: 0.5;
-        }
-
-        &.view {
-            cursor: default;
-
-            &.hover,
-            &:hover {
-                background: unset;
-                color: unset;
-                border-color: inherit;
-            }
-        }
-
-        &.flat {
-            padding: 0;
-
-            ._answer_selection {
-                padding: 5px 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-right: 1px solid #646464;
-            }
-        }
+    }
 
 
-        &.flat {
-            padding: 0;
-        }
+    &.flat {
+        padding: 0;
     }
 }
 
@@ -2209,14 +2209,6 @@ navbar-component {
 
 }
 
-._types {
-    gap: var(--space-joined);
-
-    .item {
-        padding: var(--space-joined);
-        font-size: 10px;
-    }
-}
 
 type-generic {
     .screen-wrapper {

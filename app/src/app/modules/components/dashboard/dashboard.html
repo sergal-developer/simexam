@@ -29,7 +29,7 @@
                 </div>
 
                 <ng-container *ngIf="!uiServices._loader.show">
-                    <div class="arrage columns vertical gaps-joined">
+                    <div class="content-section">
                         <ng-container *ngIf="currentSection == '_one'">
                             <div class="arrage columns centers">
                                 <lu-icon class="mainIcon" [icon]="luIcon.empty"></lu-icon>
@@ -52,37 +52,35 @@
 
                     <div class="content-section">
                         <ng-container *ngIf="currentSection == '_two'">
-                            <div class="exam-section centred">
-                                <div class="exam-collection">
-                                    <ng-container *ngFor="let quiz of listQuestionnaire">
-                                        <div class="item-card _{{quiz.type}}">
-                                            <div class="_icon">
-                                                <lu-icon [icon]="luIcon.mathQuest"
-                                                    *ngIf="quiz.type == 'math-quest'"></lu-icon>
-                                                <lu-icon [icon]="luIcon.popularity"
-                                                    *ngIf="quiz.type == 'popularity'"></lu-icon>
-                                                <lu-icon [icon]="luIcon.reading"
-                                                    *ngIf="quiz.type == 'reading'"></lu-icon>
-                                                <lu-icon [icon]="luIcon.simple" *ngIf="quiz.type == 'simple'"></lu-icon>
-                                                <lu-icon [icon]="luIcon.trivia" *ngIf="quiz.type == 'trivia'"></lu-icon>
-                                                <lu-icon [icon]="luIcon.trueFalse"
-                                                    *ngIf="quiz.type == 'true-false'"></lu-icon>
-                                            </div>
-                                            <div class="_description" (click)="showAttemptsScreen(quiz)">
-                                                <div class="_title">{{ quiz.title }}</div>
-                                                <div class="_accent color">
-                                                    {{ quiz._updatedDate }}
-                                                </div>
-                                            </div>
-                                            <div class="_action _accent color clickable"
-                                                (click)="showAttemptsScreen(quiz)">
-                                                <lu-icon [icon]="luIcon.open"></lu-icon>
+                            <!-- <div class="exam-section centred"> -->
+                            <div class="arrage columns gaps-linked">
+                                <ng-container *ngFor="let quiz of listQuestionnaire">
+                                    <div class="item-card _{{quiz.type}}">
+                                        <div class="_icon">
+                                            <lu-icon [icon]="luIcon.mathQuest"
+                                                *ngIf="quiz.type == 'math-quest'"></lu-icon>
+                                            <lu-icon [icon]="luIcon.popularity"
+                                                *ngIf="quiz.type == 'popularity'"></lu-icon>
+                                            <lu-icon [icon]="luIcon.reading" *ngIf="quiz.type == 'reading'"></lu-icon>
+                                            <lu-icon [icon]="luIcon.simple" *ngIf="quiz.type == 'simple'"></lu-icon>
+                                            <lu-icon [icon]="luIcon.trivia" *ngIf="quiz.type == 'trivia'"></lu-icon>
+                                            <lu-icon [icon]="luIcon.trueFalse"
+                                                *ngIf="quiz.type == 'true-false'"></lu-icon>
+                                        </div>
+                                        <div class="_description" (click)="showAttemptsScreen(quiz)">
+                                            <div class="_title">{{ quiz.title }}</div>
+                                            <div class="_accent color">
+                                                {{ quiz._updatedDate }}
                                             </div>
                                         </div>
-                                    </ng-container>
+                                        <div class="_action _accent color clickable" (click)="showAttemptsScreen(quiz)">
+                                            <lu-icon [icon]="luIcon.open"></lu-icon>
+                                        </div>
+                                    </div>
+                                </ng-container>
 
-                                </div>
                             </div>
+                            <!-- </div> -->
                         </ng-container>
                     </div>
 

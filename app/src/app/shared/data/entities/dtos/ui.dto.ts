@@ -1,3 +1,4 @@
+import { AttemptState } from "../../enumerables/enumerables";
 import { AttemptDTO, QuestionaryDTO } from "./questionaries.dto";
 
 export interface UITypeStatus {
@@ -12,4 +13,5 @@ export interface UIMainStates {
   action: string;
   state?: string;
   substate?: string;
+  attemptStatus?: AttemptState;
 }

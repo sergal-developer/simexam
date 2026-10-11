@@ -15,7 +15,7 @@
 
                 </div>
 
-                <div class="timer-status" *ngIf="currentSection == 'quiz'">
+                <div class="timer-status" *ngIf="!isAttemptCompleted">
 
                     <div class="step-counter">
                         <span class="material-icons">
@@ -25,7 +25,7 @@
                         translate }} {{ attempt.questions.length }}
                     </div>
 
-                    <div class="timer" [ngClass]="{'timer-green':  index == attempt.questions.length - 1 }">
+                    <div class="timer" [ngClass]="{'timer-green':  attempt.state == 'completed' }">
                         <div class="timer-bar" [attr.style]="progresStyle"></div>
                     </div>
 
@@ -45,12 +45,18 @@
                 </div>
             </section-dinamic>
 
-            <type-math-quest *ngIf="attempt.type == 'math-quest'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-math-quest>
-            <type-popularity *ngIf="attempt.type == 'popularity'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-popularity>
-            <type-reading *ngIf="attempt.type == 'reading'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-reading>
-            <type-simple *ngIf="attempt.type == 'simple'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-simple>
-            <type-trivia *ngIf="attempt.type == 'trivia'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-trivia>
-            <type-true-false *ngIf="attempt.type == 'true-false'" [attempt]="attempt" (onChange)="onChangeChildren($event)"></type-true-false>
+            <type-math-quest *ngIf="attempt.type == 'math-quest'" [attempt]="attempt"
+                (onChange)="onChangeChildren($event)"></type-math-quest>
+            <type-popularity *ngIf="attempt.type == 'popularity'" [attempt]="attempt"
+                (onChange)="onChangeChildren($event)"></type-popularity>
+            <type-reading *ngIf="attempt.type == 'reading'" [attempt]="attempt"
+                (onChange)="onChangeChildren($event)"></type-reading>
+            <type-simple *ngIf="attempt.type == 'simple'" [attempt]="attempt"
+                (onChange)="onChangeChildren($event)"></type-simple>
+            <type-trivia *ngIf="attempt.type == 'trivia'" [attempt]="attempt"
+                (onChange)="onChangeChildren($event)"></type-trivia>
+            <type-true-false *ngIf="attempt.type == 'true-false'" [attempt]="attempt"
+                (onChange)="onChangeChildren($event)"></type-true-false>
         </div>
     </div>
 </ng-container>
