@@ -858,7 +858,7 @@ h6 {
 
     &.register-form {
         padding: 20px;
-        padding-bottom: 0;
+        padding-bottom: 110px;
 
         ._content {
             // background: var(--formBackgroundSolid);
@@ -1706,6 +1706,13 @@ $gold-dark: #7a5412;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: flex-start;
+    }
+
+    &.vertical {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
     }
 
     &.centers {

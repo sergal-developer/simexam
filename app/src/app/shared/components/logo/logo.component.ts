@@ -36,23 +36,36 @@ export class LogoComponent implements AfterViewInit {
     logoState = '';
     elementLogo;
     uxUtils = new UxUtils();
+    luIcon = {
+        logo: icons.GraduationCap,
+    }
     //#endregion PROPERTIES
 
     constructor() {
     }
 
     ngOnInit(): void {
+
     }
 
-    ngAfterViewInit(): void {
-        this.morphIconsComponent = this.morphIcons?.first;
-        setTimeout(() => {
-            this.logoState = 'init';
-            setTimeout(() => {
-                this.logoState = 'transitionIcons';
-            }, 500);
-            this.gotThroughIcons();
-        }, 1200);
+    async ngAfterViewInit() {
+        // this.morphIconsComponent = this.morphIcons?.first;
+        // setTimeout(() => {
+        //     this.logoState = 'init';
+        //     setTimeout(() => {
+        //         this.logoState = 'transitionIcons';
+        //     }, 500);
+        //     this.gotThroughIcons();
+        // }, 1200);
+
+        await this.uxUtils.wait(1000);
+        this.logoState = 'init';
+        await this.uxUtils.wait(1500);
+        this.logoState = 'middle';
+        await this.uxUtils.wait(500);
+        this.logoState = 'finish';
+        await this.uxUtils.wait(500);
+        this.onFInishAnim();
     }
 
 

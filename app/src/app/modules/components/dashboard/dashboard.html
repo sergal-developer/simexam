@@ -29,9 +29,9 @@
                 </div>
 
                 <ng-container *ngIf="!uiServices._loader.show">
-                    <div class="content-section empty arrage">
+                    <div class="arrage columns vertical gaps-joined">
                         <ng-container *ngIf="currentSection == '_one'">
-                            <div class="exam-section centred">
+                            <div class="arrage columns centers">
                                 <lu-icon class="mainIcon" [icon]="luIcon.empty"></lu-icon>
                                 <h3>{{ 'empty_exam_title' | translate }}</h3>
                                 <div>{{ 'empty_exam_subtitle' | translate }}</div>
@@ -118,7 +118,8 @@
                                     </ng-container>
                                 </div>
 
-                                <div class="item arrage stacked spaceBetween collection-actions" *ngIf="actionsAttempts">
+                                <div class="item arrage stacked spaceBetween collection-actions"
+                                    *ngIf="actionsAttempts">
                                     <ng-container *ngIf="permissions.duplicate">
                                         <button class=" _uppercase" (click)="duplicateQuiz(currentQuestionnaire)">
                                             <div class="inner">
@@ -187,13 +188,23 @@
                                 <div class="item">
                                     <ng-container *ngIf="listAttempts.length">
                                         <div class="arrage columns">
-                                            <div class="item-card _grade {{ attempt._grade }}" *ngFor="let attempt of listAttempts; let i = index">
+                                            <div class="item-card _grade {{ attempt._grade }}"
+                                                *ngFor="let attempt of listAttempts; let i = index">
                                                 <div class="_icon">
-                                                    <lu-icon [icon]="luIcon.asterisk" *ngIf="attempt.state != 'completed'"></lu-icon>
-                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradeFailed" [changeAtSeconds]="2" *ngIf="attempt._grade == 'failed'"></morph-i>
-                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradeBarely" [changeAtSeconds]="2" *ngIf="attempt._grade == 'barely_passed'"></morph-i>
-                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradePassed" [changeAtSeconds]="2" *ngIf="attempt._grade == 'passed'"></morph-i>
-                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradePerfect" [changeAtSeconds]="2" *ngIf="attempt._grade == 'perfect'"></morph-i>
+                                                    <lu-icon [icon]="luIcon.asterisk"
+                                                        *ngIf="attempt.state != 'completed'"></lu-icon>
+                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradeFailed"
+                                                        [changeAtSeconds]="2"
+                                                        *ngIf="attempt._grade == 'failed'"></morph-i>
+                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradeBarely"
+                                                        [changeAtSeconds]="2"
+                                                        *ngIf="attempt._grade == 'barely_passed'"></morph-i>
+                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradePassed"
+                                                        [changeAtSeconds]="2"
+                                                        *ngIf="attempt._grade == 'passed'"></morph-i>
+                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradePerfect"
+                                                        [changeAtSeconds]="2"
+                                                        *ngIf="attempt._grade == 'perfect'"></morph-i>
                                                 </div>
 
                                                 <div class="_description">

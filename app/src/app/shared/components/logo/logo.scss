@@ -2,7 +2,6 @@
 @import '../../../../resources/theme/core/typography';
 
 .logo-app {
-    font-size: rem(65px);
     font-family: $lexendDecaFont;
     font-weight: bold;
     letter-spacing: -5px;
@@ -12,15 +11,25 @@
     position: relative;
 
     .logo {
-        margin-top: -50px;
         position: relative;
         opacity: 0;
         transition: all 300ms;
-        transform: translateY(-30px);
+        transform: translateY(30px);
+        font-size: rem(65px);
     }
 
-    svg {
-        stroke-width: 1.5 !important;
+    lu-icon {
+        opacity: 0;
+        transition: all 300ms;
+
+        svg {
+            stroke-width: 0.5 !important;
+            width: 150px;
+            height: 150px;
+            width: 50px;
+            height: 50px;
+            transition: all 300ms;
+        }
     }
 
     morph-i {
@@ -33,7 +42,16 @@
     &.init {
         .logo {
             opacity: 1;
-            transform: translateY(-60px);
+            transform: translateY(-30px);
+        }
+
+        lu-icon {
+            opacity: 1;
+
+            svg {
+                width: 150px;
+                height: 150px;
+            }
         }
 
         morph-i {
@@ -42,17 +60,49 @@
         }
     }
 
+    &.middle {
+        .logo {
+            opacity: 1;
+            transform: translateY(-50px);
+        }
+
+        lu-icon {
+            opacity: 0;
+            transform: translateY(30px);
+
+            svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    &.finish {
+        .logo {
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+
+        lu-icon {
+            opacity: 1;
+            transform: scale(2);
+
+            svg {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
     &.transitionIcons {
         .logo {
             opacity: 0;
-            transform: translateY(-60px)
-                       scale(1.8);
+            transform: translateY(-60px) scale(1.8);
         }
 
         morph-i {
             opacity: 1;
-            transform: translateY(0px)
-                       scale(1);
+            transform: translateY(0px) scale(1);
             transition-delay: 200ms;
         }
     }

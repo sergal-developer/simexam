@@ -138,6 +138,7 @@ export class QuizEditableComponent implements OnInit {
 
     if (this.quizId) {
       const _quiz = await this.commonServices.getQuestionaryById(this.quizId);
+      console.log('_quiz: ', _quiz);
 
       if (!_quiz) {
         this.uiServices.notification(this.translateLabels.service_fail_get, { type: 'error', closeTimer: 3000 });
@@ -267,11 +268,9 @@ export class QuizEditableComponent implements OnInit {
   }
 
   updateValue(evt) {
-    console.log('evt: ', evt, this.typeQuiz);
     const { title, type } = this.formDescription.value;
 
     let _defaultTitle = this.typeGenericComponent.setupQuestionaryTitle(this.translateLabels.quiz_default, this.translateLabels);
-    console.log('_defaultTitle: ', _defaultTitle, this.typeQuiz);
 
     // Set title 
     this.questionary.title = title ? title.trim() : _defaultTitle;

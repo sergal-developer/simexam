@@ -2,11 +2,11 @@
     <div class="root-container register-form">
         <section-dinamic design="glass">
             <div class="simple-section" *ngIf="sections.language">
-                <div class="_content flex centred">
+                <div class="arrage row centers paddings">
                     <h2>{{ 'register_title' | translate }}</h2>
                     <p>{{ 'register_language'| translate }}</p>
 
-                    <div class="flex horizontal" *ngIf="languages.length">
+                    <div class="arrage stacked centers" *ngIf="languages.length">
                         <ng-container *ngFor="let lan of languages">
                             <button class="btn" [ngClass]="{
                                     'primary': lan.value == settings.language, 
@@ -18,17 +18,17 @@
             </div>
 
             <div class="simple-section" *ngIf="sections.user">
-                <div class="_content flex centred">
+                <div class="arrage row centers paddings">
                     <h2>{{ 'register_title_question' | translate }}</h2>
 
-                    <form [formGroup]="form">
-                        <div class="mat-form-field">
+                    <form [formGroup]="form" class="arrage row gaps full-width">
+                        <div class="item mat-form-field">
                             <mat-input [title]="'form_name' | translate"
                                 [mesageError]="'form_name_required' | translate" [formControl]="form.get('name')">
                             </mat-input>
                         </div>
 
-                        <div class="mat-form-field">
+                        <div class="item mat-form-field">
                             <div class="mat-label-text">
                                 <label for="legal" class="mat-checkbox">
                                     <input type="checkbox" id="legal" [formControl]="form.get('legal')">
@@ -49,7 +49,7 @@
             </div>
 
             <div class="simple-section" *ngIf="sections.avatars">
-                <div class="_content flex centred">
+                <div class="arrage row centers paddings">
                     <h2>{{ 'form_image' | translate }}</h2>
 
                     <form [formGroup]="form">
@@ -75,14 +75,14 @@
             </div>
         </section-dinamic>
 
-        <section-dinamic design="glass" className="rounded">
+        <section-dinamic design="glass" className="rounded" *ngIf="false">
             <div class="_navbarBottom">
 
                 <div class="_nav_item _nav_action _prev" (click)="prev()" [attr.disabled]="sections.language">
                     <lu-icon [icon]="luIcon.left"></lu-icon><span>{{ 'action_prev' | translate }}</span>
                 </div>
 
-                <div class="_nav_item_collection">
+                <div class="_nav_item_collection" *ngIf="false">
                     <div class="_nav_item" [ngClass]="{'current': sections.language }" (click)="configLanguage()">
                         <lu-icon [icon]="luIcon.language"></lu-icon>
                         <!-- <div class="_nav_item_title">{{ 'action_step_language' | translate }}</div> -->
@@ -99,16 +99,36 @@
                     </div>
                 </div>
 
-                <div class="_nav_item _nav_action _next" (click)="next()" *ngIf="!validateData()" [attr.disabled]="sections.avatars">
+                <div class="_nav_item _nav_action _next" (click)="next()" *ngIf="!validateData()"
+                    [attr.disabled]="sections.avatars">
                     <span>{{ 'action_next' | translate }}</span><lu-icon [icon]="luIcon.right"></lu-icon>
                 </div>
 
                 <div class="_nav_item _nav_action _next _register" (click)="register()" *ngIf="validateData()">
-                    <!-- <span>{{ 'singup' | translate }}</span> -->
+                    <span>{{ 'singup' | translate }}</span>
                     <lu-icon [icon]="luIcon.register"></lu-icon>
                 </div>
 
             </div>
         </section-dinamic>
+
+        <div class="_navbarFixedBottom">
+            <div class="_navOfButtons">
+                <button (click)="prev()" [attr.disabled]="sections.language">
+                    <lu-icon [icon]="luIcon.left"></lu-icon>
+                    <span>{{ 'action_prev' | translate }}</span>
+                </button>
+
+                <button (click)="next()" *ngIf="!validateData()">
+                    <span>{{ 'action_next' | translate }}</span>
+                    <lu-icon [icon]="luIcon.right"></lu-icon>
+                </button>
+
+                <button (click)="register()" *ngIf="validateData()">
+                    <span>{{ 'singup' | translate }}</span>
+                    <lu-icon [icon]="luIcon.register"></lu-icon>
+                </button>
+            </div>
+        </div>
     </div>
 </div>
