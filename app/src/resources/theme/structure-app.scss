@@ -1610,6 +1610,23 @@ h6 {
         font-size: 160%;
         text-transform: none;
     }
+
+    &.form {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+
+        input {
+            font-size: rem(14px);
+            width: 30px;
+            background: #292929;
+            padding: 0px 5px;
+            border-radius: 5px;
+            height: auto;
+            min-height: auto !important;
+        }
+    }
 }
 
 $gold-base: #c99a2e;

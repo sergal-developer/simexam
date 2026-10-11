@@ -254,6 +254,8 @@ export class QuizEditableComponent implements OnInit {
       if (evt.savedata) {
         const response = await this.saveQuestionary(_questionary);
         this.questionary = response;
+
+        this.gotoDashboard();
       } else {
         this.questionary = _questionary;
       }

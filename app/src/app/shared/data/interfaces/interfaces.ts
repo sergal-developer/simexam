@@ -11,3 +11,4 @@ export interface EventData {
   data?: any;
   component?: any;
 }
+

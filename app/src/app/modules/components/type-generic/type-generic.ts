@@ -5,6 +5,7 @@ import { icons } from 'lucide';
 import { AnswerDTO, AttemptDTO, getAnswerDTO, getQuestionDTO, normalizeQuestionaryDTO, QuestionaryDTO, QuestionDTO } from 'src/app/shared/data/entities/dtos';
 import { UITypeStatus } from 'src/app/shared/data/entities/dtos/ui.dto';
 import { QuizType } from 'src/app/shared/data/enumerables/enumerables';
+import { DigitRange, Generator, MathOperators, MathQuestion } from 'src/app/shared/data/utils/generator.services';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
 
@@ -41,6 +42,11 @@ export class TypeGenericComponent implements OnInit {
     answers: icons.ListTodo,
     addAnswers: icons.MessageCirclePlus,
     check: icons.Check,
+
+    operationPlus: icons.Plus,
+    operationMinus: icons.Minus,
+    operationDivide: icons.Divide,
+    operationMultiplication: icons.X,
   };
 
   formQuestion: FormGroup = new FormGroup({
@@ -52,6 +58,12 @@ export class TypeGenericComponent implements OnInit {
     answers: new FormControl([]),
   });
 
+  formMathQuest: FormGroup = new FormGroup({
+    min: new FormControl(1, Validators.required),
+    max: new FormControl(2, Validators.required),
+    levels: new FormControl(10, Validators.required),
+  });
+
   formControl = {
     showQuestion: false,
     showAnswer: false,
@@ -61,6 +73,28 @@ export class TypeGenericComponent implements OnInit {
     showAnswers: false,
     showPopular: false,
   }
+
+  _generator = new Generator()
+
+  // varaibles only for math quests
+  mathOperators: MathOperators = {
+    plus: true,
+    minus: true,
+    divide: true,
+    multiplication: true,
+  };
+  digitRange: DigitRange = {
+    min: 1,
+    max: 2,
+  };
+  mathLevels = 10;
+
+  mathQuestions: MathQuestion = {
+    operation: '',
+    result: [],
+    estimatedTime: 10,
+  };
+
   //#endregion INTERNAL
 
   //#region LIFECICLE
@@ -225,8 +259,52 @@ export class TypeGenericComponent implements OnInit {
     return !valid;
   }
 
+  canGenerateMathQuest() {
+    let valid = false;
+
+    const operatorsInvalid =
+      !this.mathOperators.plus && !this.mathOperators.minus &&
+      !this.mathOperators.divide && !this.mathOperators.multiplication;
+
+    const digitInvalid = this.digitRange.min <= 0 || this.digitRange.max <= 0 || this.mathLevels <= 0;
+
+    const digitEquivalencyInvalid = this.digitRange.max < this.digitRange.min;
+
+    valid = operatorsInvalid || digitInvalid || digitEquivalencyInvalid;
+
+    // if return true disable button 
+    return valid;
+  }
+
   getTotalQuestions() {
     return `${this.questionary.questions.length}`;
+  }
+
+  generateMathQuest() {
+    const mathQuestions = this._generator.generateMathQuest(this.mathOperators, this.digitRange, this.mathLevels);
+
+    const questions: QuestionDTO[] = [];
+    mathQuestions.map(math => {
+      const answers = [];
+      math.result.map((res, idx) => {
+        const answer = getAnswerDTO(`${res.value}`, idx + 1, null);
+        answer.isCorrect = res.isCorrect;
+        answers.push(answer);
+      });
+
+      const question = getQuestionDTO(math.operation, null, null, null, math.estimatedTime);
+      question.answers = answers;
+      questions.push(question);
+    });
+
+    const currentQuestion = (this.questionary.questions as QuestionDTO[])[this.index];
+    if (currentQuestion.question == '') {
+      (this.questionary.questions as QuestionDTO[]).pop();
+    }
+
+    (this.questionary.questions as QuestionDTO[]).push(...questions);
+    this.questionary = normalizeQuestionaryDTO(this.questionary);
+    this.setCurrentQuestion();
   }
   //#endregion DATA
 
@@ -272,6 +350,17 @@ export class TypeGenericComponent implements OnInit {
         this.getFormAnswers().push(this.createNewAnswerForm());
       }
     }
+  }
+
+  onInputChangeMathQuest(evt) {
+    const value = this.formMathQuest.value;
+    this.mathLevels = value.levels;
+    this.digitRange.min = value.min;
+    this.digitRange.max = value.max;
+  }
+
+  updateOperation(operator: 'plus' | 'minus' | 'divide' | 'multiplication') {
+    this.mathOperators[operator] = !this.mathOperators[operator];
   }
 
   private getFormAnswers(): FormArray {

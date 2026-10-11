@@ -77,6 +77,80 @@
             </div>
         </section-dinamic>
 
+        <ng-container *ngIf="questionary.type == 'math-quest'">
+            <section-dinamic design="glass">
+                <div class="arrage columns paddings-direct gaps-joined">
+                    <div class="arrage row gaps-joined font_variable paddings-direct">
+                        <div class="item _help_section">
+                            <div>{{ 'help_quiz_title' | translate }}</div>
+                        </div>
+                    </div>
+                    <div class="arrage row centers gaps-joined font_variable">
+                        <div class="arrage stacked gaps-joined">
+                            <div class="badge">
+                                <div>Operations</div>
+
+                                <div class="badge" [ngClass]="{'primary': mathOperators.plus }"
+                                    (click)="updateOperation('plus')">
+                                    <lu-icon [icon]="luIcon.operationPlus"></lu-icon>
+                                </div>
+                                <div class="badge" [ngClass]="{'primary': mathOperators.minus }"
+                                    (click)="updateOperation('minus')">
+                                    <lu-icon [icon]="luIcon.operationMinus"></lu-icon>
+                                </div>
+                                <div class="badge" [ngClass]="{'primary': mathOperators.divide }"
+                                    (click)="updateOperation('divide')">
+                                    <lu-icon [icon]="luIcon.operationDivide"></lu-icon>
+                                </div>
+                                <div class="badge" [ngClass]="{'primary': mathOperators.multiplication }"
+                                    (click)="updateOperation('multiplication')">
+                                    <lu-icon [icon]="luIcon.operationMultiplication"></lu-icon>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="arrage stacked gaps-joined">
+                            <div class="badge">
+                                <div>Numbers</div>
+
+                                <div class="badge form">
+                                    <div>Min</div>
+                                    <input type="number" [formControl]="formMathQuest.get('min')"
+                                        (input)="onInputChangeMathQuest($event)">
+
+                                </div>
+                                <div class="badge form">
+                                    <div>Max</div>
+                                    <input type="number" [formControl]="formMathQuest.get('max')"
+                                        (input)="onInputChangeMathQuest($event)">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="arrage stacked gaps-joined">
+                            <div class="badge">
+                                <div>Levels</div>
+
+                                <div class="badge form">
+                                    <input type="number" [formControl]="formMathQuest.get('levels')"
+                                        (input)="onInputChangeMathQuest($event)">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="item">
+                            <button [disabled]="canGenerateMathQuest()" (click)="generateMathQuest()">
+                                <div>Generate</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section-dinamic>
+        </ng-container>
+
         <section-dinamic design="glass">
             <div class="screen-container arrage columns paddings-direct gaps-joined">
                 <div class="item font_variable" [ngClass]="{'hidden': !formControl.showQuestion }">
@@ -119,7 +193,7 @@
                     </div>
                 </ng-container>
                 <ng-container *ngIf="formQuestion.get('answers').controls.length">
-                    <div class="arrage columns" [ngClass]="{'hidden': !formControl.showAnswers }">
+                    <div class="arrage columns gaps" [ngClass]="{'hidden': !formControl.showAnswers }">
                         <ng-container *ngFor="let answer of formQuestion.get('answers').controls; index as i">
                             <div class="item arrage stacked font_variable middle spaceBetween"
                                 [ngClass]="{'_accent color': answer.get('isCorrect')?.value }">
@@ -156,7 +230,6 @@
             </div>
         </section-dinamic>
 
-
         <div class="_navbarFixedBottom">
             <div class="_navOfButtons">
                 <button (click)="prev()" *ngIf="index != 0">
@@ -173,47 +246,3 @@
     </ng-container>
 
 </div>
-
-<!--
-<div class="arrage columns paddings _question_section">
-                <div class="item _help_section">
-                    <span class="material-icons _accent color">
-                        help
-                    </span>
-                    <div>{{ 'help_quiz_title' | translate }}</div>
-                </div>
-
-                <div class="item _question_section_quizname">
-                    <mat-input [title]="'form_question' | translate"
-                        [mesageError]="'form_required_' | translate" [formControl]="formQuestion.get('question')"
-                        [multiline]="true">
-                    </mat-input>
-                </div>
-
-                <div class="item">
-                    <div class="arrage columns" *ngIf="formQuestion.get('answers')">
-                        <ng-container *ngIf="formQuestion.get('answers').controls">
-                            <ng-container *ngFor="let answer of formQuestion.get('answers').controls">
-                                <div class="_answer_section arrage stacked spaceBetween"
-                                    [ngClass]="{'correct': answer.get('_selected')?.value }">
-                                    <div class="_answer_selection" (click)="selectAnswerCorrect(answer)">
-                                        <span *ngIf="!answer.get('_selected').value" class="material-icons">
-                                            radio_button_unchecked
-                                        </span>
-                                        <span *ngIf="answer.get('_selected').value" class="material-icons">
-                                            verified</span>
-                                    </div>
-                                    <div class="_answer_text">
-                                        <mat-input [title]="'form_answer' | translate"
-                                            [mesageError]="'form_answer_required' | translate"
-                                            [formControl]="answer.get('answer')" [formName]="'answer'"
-                                            [multiline]="true" (onChange)="onOptionChange($event, answer)">
-                                        </mat-input>
-                                    </div>
-                                </div>
-                            </ng-container>
-                        </ng-container>
-                    </div>
-                </div>
-            </div>
--->
