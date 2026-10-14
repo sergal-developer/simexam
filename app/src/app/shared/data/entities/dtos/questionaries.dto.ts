@@ -52,6 +52,13 @@ export interface QuestionDTO {
   // variables for UI and format
   _answerSelected?: number;
   _isCorrect?: boolean;
+
+  // for cards and reading
+  _flip?: boolean;
+  _hasFlipped?: boolean;
+  _startEditTime?: number;
+  _endEditTime?: number;
+  _totalTime?: logTimeDTO;
 }
 
 export interface AnswerDTO {
@@ -88,13 +95,31 @@ export interface AttemptDTO extends QuestionaryDTO {
 
   _questionsSolved?: number;
   _progress?: string;
+
+  // calculate for cards progress and read
+  _solutionTimeIntervals?: any[],
+  _startTotalTime?: number,
+  _endTotalTime?: number,
+  _totalTime?: logTimeDTO;
 }
+
+export interface logTimeDTO {
+  days: number,
+  hours: number,
+  minutes: number,
+  seconds: number,
+  miliseconds: number,
+  highestMs: string,
+  format: string
+}
+
 //#endregion INTERFACES
 
 // #region INITIALIZE
 export function getNewQuestionary(title: string, type: string, options: {
   question: string, answer?: string, explanation?: string, hint?: string, time?: number,
-  answerText: string }): QuestionaryDTO {
+  answerText: string
+}): QuestionaryDTO {
   const answer = getAnswerDTO(options.answerText, 0, 0);
   const _question = getQuestionDTO(options.question, options.answer, options.explanation, options.hint, options.time);
   _question.answers.push(answer);
@@ -259,28 +284,146 @@ export function normalizeAttemptDTO(data: AttemptDTO): AttemptDTO {
   data._score = data._score || '';
 
   // prepare data for show stadistics in progress
-  if (data.state == AttemptState.progress) {
-    const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
-    data._questionsSolved = questionsSolved.length;
-    const progress = (data._questionsSolved * 100) / data.questionsCount;
-    data._progress = `${Math.round(progress)}%`
+  if (data.state == AttemptState.new || data.state == AttemptState.progress) {
+    data =
+      data.type == QuizType['math-quest'] ? processAttemptTypeMathQuest(data) :
+        data.type == QuizType.popularity ? processAttemptTypePopularity(data) :
+          data.type == QuizType.reading ? processAttemptTypeReading(data) :
+            data.type == QuizType.simple ? processAttemptTypeSimple(data) :
+              data.type == QuizType.trivia ? processAttemptTypeTrivia(data) :
+                data.type == QuizType['true-false'] ? processAttemptTypeTrueFalse(data) : data;
   }
 
   // prepare data for evalue
   if (data.state == AttemptState.completed) {
-    const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
-    data._questionsSolved = questionsSolved.length;
-    const progress = (data._questionsSolved * 100) / data.questionsCount;
-    data._progress = `${Math.round(progress)}%`
+    data = data.type == QuizType.trivia ? evalueAttemptByTypeTrivia(data) :
+      data.type == QuizType['math-quest'] ? evalueAttemptByTypeTrivia(data) :
+        data.type == QuizType['true-false'] ? evalueAttemptByTypeTrivia(data) :
+          data.type == QuizType.simple ? evalueAttemptByTypeSimple(data) :
+            data.type == QuizType.reading ? evalueAttemptByTypeReading(data) :
+              data.type == QuizType.popularity ? evalueAttemptByTypePopularity(data) : data;
 
-    const correctQuestions = (data.questions as QuestionDTO[]).filter(ans => ans.isCorrect);
-    data._correctQuestions = correctQuestions.length;
-    data._grade = setGrade(data);
-    data._score = `${Math.round(data.score)}%`
   }
 
   return data;
 }
+
+// the nexts functions prepare data to show stadistics for each type
+function processAttemptTypePopularity(data: AttemptDTO): AttemptDTO {
+  const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
+  data._questionsSolved = questionsSolved.length;
+  const progress = (data._questionsSolved * 100) / data.questionsCount;
+  data._progress = `${Math.round(progress)}%`;
+  return data;
+}
+
+function processAttemptTypeReading(data: AttemptDTO): AttemptDTO {
+  const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
+  data._questionsSolved = questionsSolved.length;
+  const progress = (data._questionsSolved * 100) / data.questionsCount;
+  data._progress = `${Math.round(progress)}%`;
+  return data;
+}
+
+function processAttemptTypeSimple(data: AttemptDTO): AttemptDTO {
+  const questions = (data.questions as QuestionDTO[]);
+  questions.map(question => {
+    if (question._startEditTime && question._endEditTime) {
+      question._totalTime = calculateDiffBetweenDates(question._startEditTime, question._endEditTime);
+    }
+  });
+
+  const questionsSolved = questions.filter(question => question._hasFlipped == true);
+  data._questionsSolved = questionsSolved.length;
+  const progress = (data._questionsSolved * 100) / data.questionsCount;
+  data._progress = `${Math.round(progress)}%`;
+
+
+  return data;
+}
+
+function processAttemptTypeTrivia(data: AttemptDTO): AttemptDTO {
+  const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
+  data._questionsSolved = questionsSolved.length;
+  const progress = (data._questionsSolved * 100) / data.questionsCount;
+  data._progress = `${Math.round(progress)}%`;
+  return data;
+}
+
+function processAttemptTypeTrueFalse(data: AttemptDTO): AttemptDTO {
+  return processAttemptTypeTrivia(data);
+}
+
+function processAttemptTypeMathQuest(data: AttemptDTO): AttemptDTO {
+  return processAttemptTypeTrivia(data);
+}
+
+function evalueAttemptByTypeTrivia(attempt: AttemptDTO): AttemptDTO {
+  const correctQuestions = (attempt.questions as QuestionDTO[]).filter(ans => ans.isCorrect);
+  attempt._correctQuestions = correctQuestions.length;
+  attempt._grade = setGrade(attempt);
+  attempt._score = `${Math.round(attempt.score)}%`;
+  return attempt;
+}
+
+function evalueAttemptByTypeSimple(attempt: AttemptDTO): AttemptDTO {
+  const questions = (attempt.questions as QuestionDTO[]);
+  const startTime = questions[0]._startEditTime;
+  const endTime = questions[questions.length - 1]._endEditTime;
+  questions.map(question => {
+    if (question._startEditTime && question._endEditTime) {
+      question._totalTime = calculateDiffBetweenDates(question._startEditTime, question._endEditTime);
+    }
+  });
+
+  attempt._correctQuestions = questions.length;
+  attempt._grade = GradeState.finished;
+  attempt._score = `${Math.round(attempt.score)}%`;
+  attempt._startTotalTime = startTime;
+  attempt._endTotalTime = endTime;
+  attempt._totalTime = startTime && endTime ? calculateDiffBetweenDates(startTime, endTime) : null;
+
+  return attempt;
+}
+
+function evalueAttemptByTypeReading(attempt: AttemptDTO): AttemptDTO {
+  attempt.state = AttemptState.completed;
+  return attempt;
+}
+
+function evalueAttemptByTypePopularity(attempt: AttemptDTO): AttemptDTO {
+  attempt.state = AttemptState.completed;
+  return attempt;
+}
+
+function calculateDiffBetweenDates(startDate: number, endDate: number): logTimeDTO {
+  const diffMs = endDate - startDate;
+  const msSeconds = Math.floor(diffMs / 1000);
+  const msMinutes = Math.floor(diffMs / (1000 * 60));
+  const msHours = Math.floor(diffMs / (1000 * 60 * 60));
+  const msDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  const format = msDays != 0 ? `${msDays} d, ${msHours} h, ${msMinutes} min, ${msSeconds} seg` :
+    msHours != 0 ? `${msHours} h, ${msMinutes} min, ${msSeconds} seg` :
+      msMinutes != 0 ? `${msMinutes} min, ${msSeconds} seg` :
+        msSeconds != 0 ? `${msSeconds} seg` : '-';
+
+  const highestMs = msDays != 0 ? 'days' :
+    msHours != 0 ? 'hours' :
+      msMinutes != 0 ? 'minutes' :
+        msSeconds != 0 ? 'seconds' : 'miliseconds';
+
+  return {
+    days: msDays,
+    hours: msHours,
+    minutes: msMinutes,
+    seconds: msSeconds,
+    miliseconds: diffMs,
+    highestMs: highestMs,
+    format: format
+  }
+}
+
 
 export function queryQuestionaryDTO(data: QuestionaryDTO): QuestionaryDTO {
   data = normalizeQuestionaryDTO(data);

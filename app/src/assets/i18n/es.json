@@ -76,6 +76,7 @@
   "attempt_status_perfect": "Perfecto!!",
   "attempt_status_complete": "Completado",
   "attempt_status_approved": "Aprobado",
+  "attempt_status_finished": "Finalizado",
   "attempt_status_passed": "Aprobaste por poco",
   "attempt_status_failed": "Reprobado",
   "attempt_subtitle": "Felicidades, has completado el examen. A continuación, se muestran algunas estadísticas:",

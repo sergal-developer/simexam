@@ -152,11 +152,11 @@ export class TypeTrueFalseComponent implements OnInit {
   }
 
   prevQuestion() {
-    if (this.index == 0) {
+    if (this.index <= 0) {
       return;
     }
 
-    this.index = this.index - 1;
+    this.index = this.index <= 0 ? 0 : this.index - 1;
     this.calculateAnswerWidth();
     this.updateResults({ finish: false, updateData: false });
   }
@@ -166,7 +166,7 @@ export class TypeTrueFalseComponent implements OnInit {
       return;
     }
 
-    this.index = this.index + 1;
+    this.index = this.index >= this.attempt.questions.length - 1 ? this.attempt.questions.length - 1 : this.index + 1;
     this.calculateAnswerWidth();
     this.updateResults({ finish: false, updateData: false });
   }

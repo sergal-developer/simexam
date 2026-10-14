@@ -70,7 +70,6 @@ export class QuizViewComponent implements OnInit {
       this.attempt = attempt;
 
       this.isAttemptCompleted = this.attempt.state == AttemptState.completed;
-      console.log('this.isAttemptCompleted: ', this.isAttemptCompleted);
       this.isAttemptReview = false;
 
       this.redirect.module = ScreenEnum.dashboard;
@@ -128,7 +127,7 @@ export class QuizViewComponent implements OnInit {
   }
 
   async onChangeChildren(event: UITypeStatus | UIMainStates) {
-    console.log('event: ', event);
+    console.log('onChangeChildren: ', event);
     if ((event as UIMainStates).action) {
       const evt: UIMainStates = (event as UIMainStates);
       this.onChange.emit({ action: evt.action, value: evt.substate });

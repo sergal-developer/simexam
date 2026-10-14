@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AttemptDTO, getNewAttemptDTO, getPermissionsDTO, getSettingsDTO, LogDTO, normalizeAttemptDTO, normalizeQuestionaryDTO, queryAttemptDTO, queryQuestionaryDTO, QuestionDTO, QuestionaryDTO, setGrade, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from '../data/entities/dtos';
-import { AttemptState } from '../data/enumerables/enumerables';
+import { AttemptState, GradeState, QuizType } from '../data/enumerables/enumerables';
 import { TransformData } from '../data/utils/transformData';
 import { DatabaseService } from './database/sql.database.service';
 
@@ -157,7 +157,7 @@ export class CommonServices {
     const rawAttempt = getNewAttemptDTO(questionarie, userId);
 
     // SHUFFLE questions
-    if(shuffle) {
+    if (shuffle) {
       rawAttempt.questions = this.transform.shuffleArray((rawAttempt.questions as QuestionDTO[]));
     }
 
@@ -179,21 +179,9 @@ export class CommonServices {
 
   async evalueAttemptById(attemptId: number): Promise<AttemptDTO> {
     let attempt = await this.getAttemptById(this.verifyNumber(attemptId));
-
-    const questions = (attempt.questions as QuestionDTO[]);
-    questions.map(question => {
-      const optCorrect = question.answers.find(opt => opt.isCorrect);
-      question.isCorrect = optCorrect ? question._answerSelected == optCorrect.answerId : false;
-      return question;
-    });
-
-    const total = questions.length;
-    const correctquestions = questions.filter(question => question.isCorrect);
-
-    attempt.score = (correctquestions.length * 100) / total;
     attempt.state = AttemptState.completed;
-    attempt._grade = setGrade(attempt);
-
+    attempt = normalizeAttemptDTO(attempt);
+    // debugger;
     attempt = await this.saveAttempt(attempt);
     return normalizeAttemptDTO(attempt);
   }
@@ -418,7 +406,7 @@ export class CommonServices {
   }
   //#endregion ANSWERS_ATTEMPTS
   */
-  
+
   //#region LOGS
   async getAllLogs(): Promise<LogDTO[]> {
     return await this._services.getAllLogs();

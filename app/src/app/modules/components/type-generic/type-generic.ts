@@ -281,6 +281,7 @@ export class TypeGenericComponent implements OnInit {
 
     (this.questionary.questions as QuestionDTO[]).push(...questions);
     this.questionary = normalizeQuestionaryDTO(this.questionary);
+    console.log('this.questionary: ', this.questionary);
     this.setCurrentQuestion();
   }
   //#endregion DATA

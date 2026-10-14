@@ -76,6 +76,7 @@
   "attempt_status_perfect": "Perfect!!",
   "attempt_status_complete": "Completed",
   "attempt_status_approved": "Approved",
+  "attempt_status_finished": "Finalized",
   "attempt_status_passed": "Passed narrowly",
   "attempt_status_failed": "Failed",
   "attempt_subtitle": "Congratulations, you have completed the exam. Below are some statistics:",

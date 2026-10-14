@@ -1330,6 +1330,12 @@ h6 {
     &.correct {
         background: var(--answerCorrectColorText);
     }
+
+    .label-time {
+        position: absolute;
+        margin-top: 60px;
+        width: 45px;
+    }
 }
 
 // depurar clase
@@ -1861,6 +1867,34 @@ $gold-dark: #7a5412;
         }
     }
 
+    &.height {
+        height: auto;
+
+        &-100 {
+            height: 100%;
+        }
+
+        &-50 {
+            height: 50%;
+        }
+
+        &-60-px {
+            height: 60px;
+        }
+
+        &-100-view {
+            height: 100vh;
+        }
+
+        &-75-view {
+            height: 75vh;
+        }
+
+        &-50-view {
+            height: 50vh;
+        }
+    }
+
     &._1 {
         >* {
             width: calc(100% - var(--space-relation));
@@ -2228,6 +2262,121 @@ type-generic {
 
 // #endregion SCREEN COMPONENTS
 
+.flash-card {
+    width: 88vw;
+    height: 75vh;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+    font-size: rem(50px);
+
+    &-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.7s ease-in-out;
+    }
+
+    &.is-flipped &-inner {
+        transform: rotateY(180deg);
+    }
+
+    &-face {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+
+        // Oculta la cara cuando está de espaldas
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    &-front {
+        background: #2563eb;
+        color: #fff;
+    }
+
+    &-back {
+        background: #111827;
+        color: #fff;
+        transform: rotateY(180deg);
+    }
+}
+
+.flip-card {
+    width: 320px;
+    height: 220px;
+    perspective: 1000px;
+    cursor: pointer;
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.7s ease-in-out;
+    }
+
+    // Se activa desde TypeScript
+    &.is-flipped &__inner {
+        transform: rotateY(180deg);
+    }
+
+    &__face {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+
+        // Oculta la cara cuando está de espaldas
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+
+        h2 {
+            margin: 0 0 12px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin: 0 0 16px;
+            line-height: 1.5;
+        }
+
+        span {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+    }
+
+    &__front {
+        background: #2563eb;
+        color: #fff;
+    }
+
+    &__back {
+        background: #111827;
+        color: #fff;
+        transform: rotateY(180deg);
+    }
+}
 
 // #region HELPERS
 // #endregion HELPERS

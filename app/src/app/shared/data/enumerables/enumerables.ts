@@ -18,7 +18,7 @@ export enum ScreenEnum {
     quizresults = 'quizresults',
     dbclient = 'dbclient',
 
-    
+
     exam = 'exam',
     create = 'create',
     admin = 'admin',
@@ -60,24 +60,25 @@ export enum GamesStatus {
 }
 
 export enum AttemptState {
-  new = 'new',
-  progress = 'progress',
-  completed = 'completed'
+    new = 'new',
+    progress = 'progress',
+    completed = 'completed'
 }
 
 export enum GradeState {
-  perfect = 'perfect',
-  passed = 'passed',
-  failed = 'failed',
-  barely_passed = 'barely_passed',
-  not_submitted = 'not_submitted',
+    perfect = 'perfect',
+    passed = 'passed',
+    failed = 'failed',
+    barely_passed = 'barely_passed',
+    not_submitted = 'not_submitted',
+    finished = 'finished',
 }
 
 export enum QuizType {
-  trivia = 'trivia',
-  simple = 'simple',
-  'true-false' = 'true-false',
-  popularity = 'popularity',
-  'math-quest' = 'math-quest',
-  'reading' = 'reading'
+    trivia = 'trivia',
+    simple = 'simple',
+    'true-false' = 'true-false',
+    popularity = 'popularity',
+    'math-quest' = 'math-quest',
+    'reading' = 'reading'
 }

@@ -272,7 +272,7 @@ export class QuizEditableComponent implements OnInit {
       this.questionary.type = QuizType[this.typeQuiz];
       this.setQuestionary(this.questionary);
       // reset structure of questionary
-      this.typeGenericComponent.resetQuestionary();
+      // this.typeGenericComponent.resetQuestionary();
 
       if (title && title.trim() == _defaultTitle) {
         const newTitle = this.getDefaultQuestionaryTitle(this.translateLabels.quiz_default);
