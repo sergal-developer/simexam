@@ -156,10 +156,8 @@ export class CommonServicesTesting {
 
     //#region QUESTIONNAIRES
     async testQuestionnaires(): Promise<void> {
-    
         let quizzes = await this.testQuestionnaires_all();
         this.log('QUESTIONNAIRES: ', quizzes);
-        
         const quiz = await this.testQuestionnaires_create();
         this.log('QUESTIONNAIRES.created: ', quiz);
 
@@ -171,7 +169,6 @@ export class CommonServicesTesting {
 
         const quizDuplicated = await this.testQuestionnaires_duplicate(quizSearched);
         this.log('QUIZ Origin, Duplicated ', quizDuplicated);
-        
         const quizImported = await this.testQuestionnaires_import();
         this.log('QUESTIONNAIRES.imported: ', quizImported);
 
@@ -198,13 +195,13 @@ export class CommonServicesTesting {
 
         const importPopularityData = {
             "title": "Popularity Lorem ipsum dolor sit amet",
-            "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "popularity",
+            "tags": ["tag1", "tag2", "tag3", "tag4"], "type": "popularity",
             "questionsCount": 2,
             "questions": [
                 {
                     "question": "question sit amet 1",
                     "explanation": "explanation sit amet",
-                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "tags": ["tag1", "tag2", "tag3", "tag4"],
                     "answers": [
                         { "answer": "answer 1 sit amet", "isCorrect": true, "popular": 100 },
                         { "answer": "answer 2 sit amet", "isCorrect": true, "popular": 75 },
@@ -217,7 +214,7 @@ export class CommonServicesTesting {
                 {
                     "question": "question sit amet 2",
                     "explanation": "explanation sit amet",
-                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "tags": ["tag1", "tag2", "tag3", "tag4"],
                     "answers": [
                         { "answer": "answer 1 sit amet", "isCorrect": true, "popular": 100 },
                         { "answer": "answer 2 sit amet", "isCorrect": true, "popular": 75 },
@@ -232,13 +229,13 @@ export class CommonServicesTesting {
 
         const importQuestionarieData = {
             "title": "quiz Lorem ipsum dolor sit amet",
-            "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "quiz",
+            "tags": ["tag1", "tag2", "tag3", "tag4"], "type": "quiz",
             "questionsCount": 2,
             "questions": [
                 {
                     "question": "question sit amet 1",
                     "explanation": "explanation sit amet",
-                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "tags": ["tag1", "tag2", "tag3", "tag4"],
                     "answers": [
                         { "answer": "Hello", "isCorrect": true },
                         { "answer": "Goodbye" },
@@ -249,7 +246,7 @@ export class CommonServicesTesting {
                 {
                     "question": "question sit amet 2",
                     "explanation": "explanation sit amet",
-                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "tags": ["tag1", "tag2", "tag3", "tag4"],
                     "answers": [
                         { "answer": "Hello" },
                         { "answer": "Goodbye" },
@@ -262,33 +259,33 @@ export class CommonServicesTesting {
 
         const importSimpleData = {
             "title": "Simple Lorem ipsum dolor sit amet",
-            "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "simple",
+            "tags": ["tag1", "tag2", "tag3", "tag4"], "type": "simple",
             "questionsCount": 2,
             "questions": [
                 {
                     "question": "question sit amet 1",
                     "answer": "Es la persona, animal, cosa o idea que realiza la acción o de la que se dice algo.",
                     "explanation": "explanation sit amet",
-                    "tags": [ "tag1", "tag2", "tag3", "tag4" ]
+                    "tags": ["tag1", "tag2", "tag3", "tag4"]
                 },
                 {
                     "question": "question sit amet 2",
                     "answer": "Es la persona, animal, cosa o idea que realiza la acción o de la que se dice algo.",
                     "explanation": "explanation sit amet",
-                    "tags": [ "tag1", "tag2", "tag3", "tag4" ]
+                    "tags": ["tag1", "tag2", "tag3", "tag4"]
                 },
             ]
         };
 
         const importTrueFalseData = {
             "title": "true-false Lorem ipsum dolor sit amet",
-            "tags": [ "tag1", "tag2", "tag3", "tag4" ], "type": "true-false",
+            "tags": ["tag1", "tag2", "tag3", "tag4"], "type": "true-false",
             "questionsCount": 2,
             "questions": [
                 {
                     "question": "question sit amet 1",
                     "explanation": "explanation sit amet",
-                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "tags": ["tag1", "tag2", "tag3", "tag4"],
                     "answers": [
                         { "answer": "Verdadero", "isCorrect": true },
                         { "answer": "Falso", "isCorrect": false }
@@ -297,7 +294,7 @@ export class CommonServicesTesting {
                 {
                     "question": "question sit amet 2",
                     "explanation": "explanation sit amet",
-                    "tags": [ "tag1", "tag2", "tag3", "tag4" ],
+                    "tags": ["tag1", "tag2", "tag3", "tag4"],
                     "answers": [
                         { "answer": "Verdadero", "isCorrect": true },
                         { "answer": "Falso", "isCorrect": false }
@@ -422,7 +419,7 @@ export class CommonServicesTesting {
         attempt.updatedDate = new Date().getTime();
 
         (attempt.questions as QuestionDTO[]).map((question, index) => {
-            question._answerSelected = 100;
+            question.answerSelected = 100;
             question.isCorrect = true;
             question.answers.map((ans, idx) => {
                 ans.answer = 'Edited answer';
@@ -477,16 +474,16 @@ export class CommonServicesTesting {
         (attempt.questions as QuestionDTO[]).map(ans => {
             if (resolveRandom) {
                 const idxOpt = this.getRandomIndex(ans.answers);
-                ans._answerSelected = ans.answers[idxOpt].answerId;
+                ans.answerSelected = ans.answers[idxOpt].answerId;
             } else {
                 const correct = ans.answers.find(opt => opt.isCorrect);
                 const incorrect = ans.answers.find(opt => !opt.isCorrect);
 
                 if (correctQuestions.length < successes) {
-                    ans._answerSelected = correct.answerId;
+                    ans.answerSelected = correct.answerId;
                     correctQuestions.push(ans);
                 } else {
-                    ans._answerSelected = incorrect.answerId;
+                    ans.answerSelected = incorrect.answerId;
                 }
             }
             return ans;
@@ -881,7 +878,7 @@ export class CommonServicesTesting {
         // await this.testQuizes();
         // await this.testAttempts();
         await this.testNavigate();
-        
+
         this.log('=== END COMMON SERVICES TEST ===');
     }
 }

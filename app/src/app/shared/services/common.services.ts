@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { AttemptDTO, getNewAttemptDTO, getPermissionsDTO, getSettingsDTO, LogDTO, normalizeAttemptDTO, normalizeQuestionaryDTO, queryAttemptDTO, queryQuestionaryDTO, QuestionDTO, QuestionaryDTO, setGrade, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from '../data/entities/dtos';
-import { AttemptState, GradeState, QuizType } from '../data/enumerables/enumerables';
+import { AttemptDTO, getNewAttemptDTO, getPermissionsDTO, getSettingsDTO, LogDTO, normalizeAttemptDTO, normalizeQuestionaryDTO, queryAttemptDTO, queryQuestionaryDTO, QuestionaryDTO, QuestionDTO, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from '../data/entities/dtos';
+import { AttemptState } from '../data/enumerables/enumerables';
 import { TransformData } from '../data/utils/transformData';
 import { DatabaseService } from './database/sql.database.service';
 

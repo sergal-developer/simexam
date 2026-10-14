@@ -76,7 +76,7 @@ export class TypetReadingComponent implements OnInit {
     }
 
     if (this.attempt.state == AttemptState.progress) {
-      let idxLastResponse = (this.attempt.questions as QuestionDTO[]).findIndex((item) => !item._answerSelected);
+      let idxLastResponse = (this.attempt.questions as QuestionDTO[]).findIndex((item) => !item.answerSelected);
       if (idxLastResponse != -1) {
         idxLastResponse = idxLastResponse == 0 ? 0 : idxLastResponse - 1;
       } else {
@@ -145,7 +145,7 @@ export class TypetReadingComponent implements OnInit {
     }
 
     const question = this.getCurrentQuestion();
-    question._answerSelected = option.answerId;
+    question.answerSelected = option.answerId;
     this.setCurrentQuestion(question);
     this.updateResults({ finish: false, updateData: true });
   }

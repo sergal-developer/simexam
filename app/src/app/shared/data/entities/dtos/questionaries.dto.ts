@@ -50,8 +50,7 @@ export interface QuestionDTO {
   answers?: AnswerDTO[];
 
   // variables for UI and format
-  _answerSelected?: number;
-  _isCorrect?: boolean;
+  answerSelected?: number;
 
   // for cards and reading
   _flip?: boolean;
@@ -196,8 +195,7 @@ export function getNewAttemptDTO(questionnaire: QuestionaryDTO, userId: number):
   // clean unused values
   item.questions ? (item.questions as QuestionDTO[]).map((question, idxquestion) => {
     question.questionId = idxquestion + 1;
-    question._isCorrect = null;
-    question._answerSelected = null;
+    question.answerSelected = null;
     question.isCorrect = null;
     question.answers.map((ans, idxans) => {
       ans._selected = null;
@@ -237,8 +235,8 @@ export function normalizeQuestionaryDTO(data: QuestionaryDTO): QuestionaryDTO {
     question.tags = question.tags || [];
     question.hint = question.hint || '';
 
-    question._answerSelected = question._answerSelected || null;
-    question._isCorrect = question._isCorrect || null;
+    question.answerSelected = question.answerSelected || null;
+    question.isCorrect = question.isCorrect || null;
 
     question.answers = question.answers || [];
     question.answers.map((answers, idxAnswers) => {
@@ -310,7 +308,7 @@ export function normalizeAttemptDTO(data: AttemptDTO): AttemptDTO {
 
 // the nexts functions prepare data to show stadistics for each type
 function processAttemptTypePopularity(data: AttemptDTO): AttemptDTO {
-  const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
+  const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans.answerSelected != null);
   data._questionsSolved = questionsSolved.length;
   const progress = (data._questionsSolved * 100) / data.questionsCount;
   data._progress = `${Math.round(progress)}%`;
@@ -318,7 +316,7 @@ function processAttemptTypePopularity(data: AttemptDTO): AttemptDTO {
 }
 
 function processAttemptTypeReading(data: AttemptDTO): AttemptDTO {
-  const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
+  const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans.answerSelected != null);
   data._questionsSolved = questionsSolved.length;
   const progress = (data._questionsSolved * 100) / data.questionsCount;
   data._progress = `${Math.round(progress)}%`;
@@ -343,7 +341,7 @@ function processAttemptTypeSimple(data: AttemptDTO): AttemptDTO {
 }
 
 function processAttemptTypeTrivia(data: AttemptDTO): AttemptDTO {
-  const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans._answerSelected != null);
+  const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans.answerSelected != null);
   data._questionsSolved = questionsSolved.length;
   const progress = (data._questionsSolved * 100) / data.questionsCount;
   data._progress = `${Math.round(progress)}%`;
@@ -359,9 +357,17 @@ function processAttemptTypeMathQuest(data: AttemptDTO): AttemptDTO {
 }
 
 function evalueAttemptByTypeTrivia(attempt: AttemptDTO): AttemptDTO {
+  let questions = (attempt.questions as QuestionDTO[]);
+  questions = questions.map(question => {
+    const _answer = question.answers.find(answer => answer._selected);
+    question.isCorrect = _answer && _answer.isCorrect ? true : false;
+    return question;
+  });
+
   const correctQuestions = (attempt.questions as QuestionDTO[]).filter(ans => ans.isCorrect);
   attempt._correctQuestions = correctQuestions.length;
   attempt._grade = setGrade(attempt);
+  attempt.score = getScoreAttempt(attempt);
   attempt._score = `${Math.round(attempt.score)}%`;
   return attempt;
 }
@@ -443,7 +449,13 @@ export function queryAttemptDTO(data: AttemptDTO): AttemptDTO {
   return data;
 }
 
-export function setGrade(attempt: AttemptDTO) {
+function getScoreAttempt(attempt: AttemptDTO) {
+  const total = attempt.questions.length;
+  const correctAnswer = (attempt.questions as QuestionDTO[]).filter(ans => ans.isCorrect).length;
+  return Math.round((correctAnswer / total) * 100);
+}
+
+function setGrade(attempt: AttemptDTO) {
   const total = attempt.questions.length;
   const failing = Math.round(total * 0.60);
   const passing = Math.round(total * 0.70);
