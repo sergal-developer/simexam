@@ -58,6 +58,10 @@ export interface QuestionDTO {
   _startEditTime?: number;
   _endEditTime?: number;
   _totalTime?: logTimeDTO;
+
+  // for popularity
+  answersSelected?: number[];
+  score?: number;
 }
 
 export interface AnswerDTO {
@@ -308,7 +312,14 @@ export function normalizeAttemptDTO(data: AttemptDTO): AttemptDTO {
 
 // the nexts functions prepare data to show stadistics for each type
 function processAttemptTypePopularity(data: AttemptDTO): AttemptDTO {
-  const questionsSolved = (data.questions as QuestionDTO[]).filter(ans => ans.answerSelected != null);
+  let _question = (data.questions as QuestionDTO[]);
+  _question = _question.map(question => {
+    question.answers.map(ans => {
+      ans.popular = ans.popular || 0;
+    });
+    return question;
+  })
+  const questionsSolved = _question.filter(ans => ans.answersSelected != null);
   data._questionsSolved = questionsSolved.length;
   const progress = (data._questionsSolved * 100) / data.questionsCount;
   data._progress = `${Math.round(progress)}%`;

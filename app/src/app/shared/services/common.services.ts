@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { AttemptDTO, getNewAttemptDTO, getPermissionsDTO, getSettingsDTO, LogDTO, normalizeAttemptDTO, normalizeQuestionaryDTO, queryAttemptDTO, queryQuestionaryDTO, QuestionaryDTO, QuestionDTO, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from '../data/entities/dtos';
+import { AnswerDTO, AttemptDTO, getNewAttemptDTO, getPermissionsDTO, getSettingsDTO, LogDTO, normalizeAttemptDTO, normalizeQuestionaryDTO, queryAttemptDTO, queryQuestionaryDTO, QuestionaryDTO, QuestionDTO, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from '../data/entities/dtos';
 import { AttemptState } from '../data/enumerables/enumerables';
 import { TransformData } from '../data/utils/transformData';
 import { DatabaseService } from './database/sql.database.service';
@@ -156,9 +156,16 @@ export class CommonServices {
     // create new atempt
     const rawAttempt = getNewAttemptDTO(questionarie, userId);
 
-    // SHUFFLE questions
+    // SHUFFLE questions and answers
     if (shuffle) {
-      rawAttempt.questions = this.transform.shuffleArray((rawAttempt.questions as QuestionDTO[]));
+      let _questions = (rawAttempt.questions as QuestionDTO[]);
+      _questions = _questions.map(question => {
+        question.answers = question.answers && question.answers.length ? this.transform.shuffleArray((question.answers as AnswerDTO[])) : [];
+        question.answers = question.answers.filter(ans => ans.answer != '');
+        return question;
+      })
+      rawAttempt.questions = this.transform.shuffleArray((_questions));
+      rawAttempt.questions = rawAttempt.questions.filter(question => question.question != '');
     }
 
     // SAVE DATA

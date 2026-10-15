@@ -28,8 +28,6 @@ export class Utils {
         }
         return shuffledArray;
     }
-    
-
 
     formatText(text?: string) {
         let res = '';
@@ -37,5 +35,10 @@ export class Utils {
             res = text.replace(/\n/g, '<br>').replace(/\r/g, '<br>');
         }
         return res;
+    }
+
+    convertToNumber(value: string | number) {
+        const _num = Number(value);
+        return Number.isFinite(_num) ? _num : 0;
     }
 }

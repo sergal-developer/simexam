@@ -3,6 +3,7 @@ import { icons } from 'lucide';
 import { AnswerDTO, AttemptDTO, normalizeAttemptDTO, QuestionDTO } from 'src/app/shared/data/entities/dtos';
 import { UIMainStates, UITypeStatus } from 'src/app/shared/data/entities/dtos/ui.dto';
 import { AttemptState, GradeState } from 'src/app/shared/data/enumerables/enumerables';
+import { Utils } from 'src/app/shared/data/utils/utils';
 import { UxUtils } from 'src/app/shared/data/utils/uxUtils';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
@@ -25,6 +26,10 @@ export class TypePopularityComponent implements OnInit {
   readonly = false;
   currentSection: 'quiz' | 'results' = 'quiz';
   _gradeState = GradeState;
+  optionsSelected = [];
+  revealedQuiz = false;
+  calculatedQuiz = false;
+  statusScore: string = null;
 
   luIcon = {
     language: icons.Globe,
@@ -42,10 +47,11 @@ export class TypePopularityComponent implements OnInit {
     unselected: icons.CircleDashed,
     selected: icons.CircleDot,
     correct: icons.CircleCheck,
-    incorrect: icons.CircleSlash2,
+    incorrect: icons.CircleX,
   };
 
   _utilsUX = new UxUtils();
+  _utils = new Utils();
   //#endregion INTERNAL
 
   //#region LIFECICLE
@@ -63,6 +69,8 @@ export class TypePopularityComponent implements OnInit {
   //#region DATA
   async setupComponent() {
     console.log('this.attempt: ', this.attempt);
+    this.attempt = normalizeAttemptDTO(this.attempt);
+
     this.readonly = this.attempt.state == AttemptState.completed;
     this.index = 0;
     this.calculateAnswerWidth();
@@ -77,7 +85,7 @@ export class TypePopularityComponent implements OnInit {
     }
 
     if (this.attempt.state == AttemptState.progress) {
-      let idxLastResponse = (this.attempt.questions as QuestionDTO[]).findIndex((item) => !item.answerSelected);
+      let idxLastResponse = (this.attempt.questions as QuestionDTO[]).findIndex((item) => !item.answersSelected);
       if (idxLastResponse != -1) {
         idxLastResponse = idxLastResponse == 0 ? 0 : idxLastResponse - 1;
       } else {
@@ -86,7 +94,10 @@ export class TypePopularityComponent implements OnInit {
 
       await this._utilsUX.wait(500);
       this.gotoQuestion(idxLastResponse);
+
     }
+
+    this.resetScoreboardQuiz();
   }
 
   async evalueAttemptById(id: number): Promise<AttemptDTO> {
@@ -106,10 +117,10 @@ export class TypePopularityComponent implements OnInit {
     }
 
     if (options.finish) {
-      this.attempt = normalizeAttemptDTO(this.attempt);
       this.attempt.state = AttemptState.completed;
-      this.attempt = await this.evalueAttemptById(this.attempt.attemptId);
-      this.attempt._score = this.attempt.score.toFixed(2);
+      this.attempt = normalizeAttemptDTO(this.attempt);
+      // this.attempt = await this.evalueAttemptById(this.attempt.attemptId);
+      // this.attempt._score = this.attempt.score.toFixed(2);
     }
 
     this.attempt.updatedDate = new Date().getTime();
@@ -128,27 +139,76 @@ export class TypePopularityComponent implements OnInit {
   //#endregion DATA
 
   //#region EVENTS
+  resetScoreboardQuiz() {
+    this.optionsSelected = [];
+    this.revealedQuiz = false;
+    this.calculatedQuiz = false;
+    this.statusScore = null;
+  }
+
   selectOption(option: AnswerDTO) {
-    if (this.onLoading) {
+    if (this.onLoading || this.revealedQuiz || this.readonly) {
       return;
     }
 
-    if (this.readonly) { return; }
+    option._selected = !option._selected;
+    this.optionsSelected = (this.attempt.questions[this.index] as QuestionDTO).answers.filter(ans => ans._selected);
+  }
 
-    if (option._selected) {
-      this.nextQuestion();
-      return;
-    } else {
-      // reset all selections
-      this.getCurrentQuestion().answers.map(opt => {
-        opt._selected = opt.answerId == option.answerId ? true : false;
-      });
-    }
+  async revealQuiz() {
+    this.statusScore = 'Revelando Puntos ...'
+    await this._utilsUX.wait(500);
 
-    const question = this.getCurrentQuestion();
-    question.answerSelected = option.answerId;
-    this.setCurrentQuestion(question);
+    this.revealedQuiz = true;
+    this.statusScore = 'Puntos Revelados';
+    this.calculateQuiz();
+  }
+
+  async calculateQuiz() {
+    const question = (this.attempt.questions[this.index] as QuestionDTO);
+    const _answersSelected = question.answers.filter(ans => ans._selected);
+
+    let actualScore = 0;
+    const answersSelected = [];
+    _answersSelected.map(ans => {
+      actualScore = actualScore + this._utils.convertToNumber(ans.popular);
+      answersSelected.push(ans.answerId);
+    });
+
+    // setValues in attempt
+    (this.attempt.questions[this.index] as QuestionDTO).isCorrect = true;
+    (this.attempt.questions[this.index] as QuestionDTO).answersSelected = answersSelected;
+    this.attempt.score = this.getAttemptScore();
+
+    await this._utilsUX.wait(1000);
+
+    this.statusScore = 'Calculando...'
+    await this._utilsUX.wait(1000);
+
+    // show current points
+    this.statusScore = `Puntos Ganados: ${actualScore}`;
+    console.log('this.attempt.score: ', this.attempt);
+    this.calculatedQuiz = true;
+
+    // update attempt
     this.updateResults({ finish: false, updateData: true });
+  }
+
+  private getAttemptScore(): number {
+    let totalScore = 0;
+    const questions = (this.attempt.questions as QuestionDTO[]);
+
+    questions.forEach(question => {
+      question.score = question.answers.reduce((score, ans) => {
+        if (ans._selected) {
+          const popular = this._utils.convertToNumber(ans.popular);
+          totalScore += popular;
+          return score + popular;
+        }
+        return score;
+      }, 0);
+    });
+    return totalScore;
   }
 
   prevQuestion() {
@@ -156,6 +216,7 @@ export class TypePopularityComponent implements OnInit {
       return;
     }
 
+    this.resetScoreboardQuiz();
     this.index = this.index <= 0 ? 0 : this.index - 1;
     this.calculateAnswerWidth();
     this.updateResults({ finish: false, updateData: false });
@@ -166,29 +227,43 @@ export class TypePopularityComponent implements OnInit {
       return;
     }
 
+    this.resetScoreboardQuiz();
     this.index = this.index >= this.attempt.questions.length - 1 ? this.attempt.questions.length - 1 : this.index + 1;
     this.calculateAnswerWidth();
-    this.updateResults({ finish: false, updateData: false });
+    this.updateResults({ finish: false, updateData: true });
   }
 
   finishQuiz() {
+    this.resetScoreboardQuiz();
     this.updateResults({ finish: true, updateData: true });
     this.showFinishPage();
   }
 
   showFinishPage() {
+
+    const questionHighScore = this.getHighestScore();
+    this.attempt['highestScore'] = questionHighScore ? questionHighScore.score : 0;
+    this.attempt['highestScoreId'] = questionHighScore ? questionHighScore.questionId : 0;
     this.currentSection = 'results';
     this.valueChange('secondary');
   }
 
+  private getHighestScore(): QuestionDTO {
+    const questions = JSON.parse(JSON.stringify(this.attempt.questions as QuestionDTO[]));
+    const questionsByScore = questions.sort(this._utils.dynamicSort('-score'));
+    console.log('questionsByScore: ', questionsByScore);
+    return questionsByScore.length ? questionsByScore[0] : null;
+  }
+
   showQuiz() {
-    // this.setupComponent();
+    this.resetScoreboardQuiz();
     this.currentSection = 'quiz';
     this.valueChange('primary');
     this.gotoQuestion(0);
   }
 
   gotoQuestion(index) {
+    this.resetScoreboardQuiz();
     this.index = index;
     this.currentSection = 'quiz';
     this.valueChange('primary');
@@ -205,7 +280,6 @@ export class TypePopularityComponent implements OnInit {
   highlightAnswers() {
     this.readonly = this.attempt.state == AttemptState.completed;
   }
-
 
   async getAssessment() {
     const reponse = await this.commonServices.saveAttempt(this.attempt)
@@ -225,21 +299,11 @@ export class TypePopularityComponent implements OnInit {
     this.numrows = maxLength[maxLength.length - 1] > 14 ? '_1' : '_2';
   }
 
-  private getCurrentQuestion() {
-    // ask if field questiosn is string to assign data x
-    if (typeof this.attempt.questions == 'string') {
-      this.attempt.questions = JSON.parse(this.attempt.questions);
-    }
-
+  private getCurrentQuestion(): QuestionDTO {
     return (this.attempt.questions[this.index] as QuestionDTO);
   }
 
   private setCurrentQuestion(question: QuestionDTO): QuestionDTO {
-    // ask if field questiosn is string to assign data 
-    if (typeof this.attempt.questions == 'string') {
-      this.attempt.questions = JSON.parse(this.attempt.questions);
-    }
-
     (this.attempt.questions[this.index] as QuestionDTO) = question;
     return this.getCurrentQuestion();
   }
