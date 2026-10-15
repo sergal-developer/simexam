@@ -2379,4 +2379,19 @@ type-generic {
 }
 
 // #region HELPERS
+
+.word {
+    color: white;
+    // outline: 1px solid gray;
+    font-size: 20px;
+
+    &.signal {
+        margin-left: -2px;
+    }
+
+    &.hasMarked {
+        color: var(--accent);
+    }
+}
+
 // #endregion HELPERS

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AnswerDTO, AttemptDTO, getNewAttemptDTO, getPermissionsDTO, getSettingsDTO, LogDTO, normalizeAttemptDTO, normalizeQuestionaryDTO, queryAttemptDTO, queryQuestionaryDTO, QuestionaryDTO, QuestionDTO, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from '../data/entities/dtos';
-import { AttemptState } from '../data/enumerables/enumerables';
+import { AttemptState, QuizType } from '../data/enumerables/enumerables';
 import { TransformData } from '../data/utils/transformData';
 import { DatabaseService } from './database/sql.database.service';
 
@@ -157,15 +157,18 @@ export class CommonServices {
     const rawAttempt = getNewAttemptDTO(questionarie, userId);
 
     // SHUFFLE questions and answers
-    if (shuffle) {
-      let _questions = (rawAttempt.questions as QuestionDTO[]);
-      _questions = _questions.map(question => {
-        question.answers = question.answers && question.answers.length ? this.transform.shuffleArray((question.answers as AnswerDTO[])) : [];
-        question.answers = question.answers.filter(ans => ans.answer != '');
-        return question;
-      })
-      rawAttempt.questions = this.transform.shuffleArray((_questions));
-      rawAttempt.questions = rawAttempt.questions.filter(question => question.question != '');
+    const suffleTypes = [QuizType.trivia, QuizType['true-false'], QuizType.simple, QuizType.popularity];
+    if (suffleTypes.includes(questionarie.type)) {
+      if (shuffle) {
+        let _questions = (rawAttempt.questions as QuestionDTO[]);
+        _questions = _questions.map(question => {
+          question.answers = question.answers && question.answers.length ? this.transform.shuffleArray((question.answers as AnswerDTO[])) : [];
+          question.answers = question.answers.filter(ans => ans.answer != '');
+          return question;
+        })
+        rawAttempt.questions = this.transform.shuffleArray((_questions));
+        rawAttempt.questions = rawAttempt.questions.filter(question => question.question != '');
+      }
     }
 
     // SAVE DATA

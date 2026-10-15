@@ -1,12 +1,19 @@
 <div class="arrage columns centers paddings-relation" *ngIf="attempt.questions[index]">
     <ng-container *ngIf="currentSection == 'quiz' && attempt.questions[index]">
         <section-dinamic design="glass">
-            <div class="arrage columns paddings _question_section">
-                <div class="item font_variable" [innerHTML]="attempt.questions[index].explanation">
+            <div class="arrage columns paddings _question_section" *ngIf="attempt.questions[index].explanationArray">
+                <div class="arrage row gaps-joined font_variable">
+                    <ng-container *ngFor="let item of attempt.questions[index].explanationArray">
+                        <div class="word" [ngClass]="{
+                            'hasMarked': item.hasMarked || item.id == readingIndex, 
+                            'signal': item.hasPause }">
+                            {{ item.word }}
+                        </div>
+                    </ng-container>
                 </div>
             </div>
         </section-dinamic>
-
+        <!-- 
         <section-dinamic design="glass">
             <div class="arrage columns paddings">
                 <div class="item">
@@ -35,7 +42,7 @@
                     </div>
                 </div>
             </div>
-        </section-dinamic>
+        </section-dinamic> -->
 
         <div class="_navbarFixedBottom">
             <div class="_navOfButtons">
@@ -46,6 +53,11 @@
 
                 <button (click)="finishQuiz()" *ngIf="index == attempt.questions.length - 1">
                     <span>{{ 'action_complete' | translate }}</span>
+                </button>
+
+                <button (click)="startReading()">
+                    <span *ngIf="!inReading">Iniciar lectura</span>
+                    <span *ngIf="inReading">pausar lectura</span>
                 </button>
 
                 <button (click)="nextQuestion()" *ngIf="index < attempt.questions.length - 1">

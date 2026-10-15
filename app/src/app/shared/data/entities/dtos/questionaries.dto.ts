@@ -62,6 +62,9 @@ export interface QuestionDTO {
   // for popularity
   answersSelected?: number[];
   score?: number;
+
+  // for cards and reading
+  explanationArray?: wordDTO[];
 }
 
 export interface AnswerDTO {
@@ -114,6 +117,14 @@ export interface logTimeDTO {
   miliseconds: number,
   highestMs: string,
   format: string
+}
+
+export interface wordDTO {
+  word: string,
+  id: number,
+  hasMarked: boolean,
+  hasPause: boolean,
+  duration: number
 }
 
 //#endregion INTERFACES

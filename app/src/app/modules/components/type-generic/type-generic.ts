@@ -319,6 +319,7 @@ export class TypeGenericComponent implements OnInit {
   }
 
   onInputChange(evt: { control: string, value: any }, index: number = null) {
+    console.log('evt: ', evt);
     this.synchronizeFormToQuestionary();
     if (evt.control == 'answer' && index != null) {
       const answers = (this.questionary.questions[this.index] as QuestionDTO).answers;
@@ -326,6 +327,15 @@ export class TypeGenericComponent implements OnInit {
       if (lastIndex != null && answers[answers.length - 1].answer != '') {
         (this.questionary.questions[this.index] as QuestionDTO).answers.push(getAnswerDTO('', 0));
         this.getFormAnswers().push(this.createNewAnswerForm());
+      }
+    }
+
+    if (this.questionary.type == QuizType.reading) {
+      // set proposed time
+      const explanation = this.formQuestion.get('explanation').value;
+      const words = explanation ? explanation.trim().split(' ') : [];
+      if (words.length) {
+        this.formQuestion.get('time').setValue(words.length * 0.005)
       }
     }
   }
