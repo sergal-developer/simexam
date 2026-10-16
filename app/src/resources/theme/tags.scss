@@ -2,13 +2,29 @@
 @import './core/typography';
 @import './core/mixins';
 
+.debugger * * {
+    outline: 1px solid rgba(255, 3, 255, 0.1);
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-    line-height: inherit;
+h6,
+p,
+pre {
+    line-height: 1;
     font-weight: normal;
     margin: 0;
     padding: 0;
@@ -16,11 +32,18 @@ h6 {
     align-items: center;
 }
 
+p {
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-joined);
+}
+
 form,
 .form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-relation);
 }
 
 textarea,
@@ -44,33 +67,21 @@ input {
 button,
 .button,
 .btn {
-    background: var(--primaryBackground);
-    color: var(--primaryColor);
+    background: var(--baseBackground);
+    color: var(--baseColor);
     border: 1px solid transparent;
     transition: color, background, padding 300ms;
     cursor: pointer;
-    padding: 7px 12px;
+    padding: var(--space-def) var(--space-separation);
+    font-family: var(--font-outfit-bold);
     font-weight: normal;
-    font-size: rem(16px);
+    font-size: var(--appFontSizeResponsive);
     border-radius: 5px;
     display: flex;
     margin: 0;
     gap: var(--space-joined);
     align-items: center;
     line-height: 1;
-
-    .inner {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        line-height: 1;
-        gap: 5px;
-    }
-
-    .material-icons {
-        display: inline-block;
-    }
 
     svg {
         width: 16px;
@@ -83,6 +94,17 @@ button,
         color: var(--primaryColor);
     }
 
+    &.unselected {
+        background: var(--disabledBackground);
+        color: var(--disabledColor);
+
+        &:hover,
+        &.hover {
+            background: var(--disabledBackgroundHover);
+            color: var(--disabledColor);
+        }
+    }
+
     &:disabled,
     &.disabled {
         background: var(--disabledBackground);
@@ -90,8 +112,66 @@ button,
         border-color: var(--disabledBackground) !important;
         opacity: 0.7;
         text-decoration: none;
+
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            background: var(--disabledBackground);
+            color: var(--disabledColor);
+            border-color: var(--disabledBackground)
+        }
     }
 
+    &.primary,
+    &.secondary,
+    &.accent {
+        background: var(--primaryBackground);
+        color: var(--primaryColor);
+
+        &:hover,
+        &.hover {
+            background: var(--primaryBackgroundHover);
+            color: var(--primaryColor);
+        }
+    }
+
+    &.secondary {
+        background: var(--secondaryBackground);
+        color: var(--secondaryColor);
+
+        &:hover,
+        &.hover {
+            background: var(--secondaryBackgroundHover);
+            color: var(--secondaryColor);
+        }
+    }
+
+    &.accent {
+        background: var(--accentBackground);
+        color: var(--accentColor);
+
+        &:hover,
+        &.hover {
+            background: var(--accentBackgroundHover);
+            color: var(--accentColor);
+        }
+    }
+
+
+    &.small {
+        padding: var(--space-def) var(--space-direct);
+    }
+
+    &.medium {
+        padding: var(--space-def) var(--space-relation);
+    }
+
+    &.big {
+        padding: var(--space-def) var(--space-separation);
+    }
+
+    /*
     &.circle {
         border-radius: 50%;
         width: 50px;
@@ -197,8 +277,21 @@ button,
             height: 20px;
         }
     }
+   */
 }
 
-.clickable {
-    cursor: pointer;
+
+
+.-title {
+    font-size: 100%;
+    color: var(--baseColor);
+
+    &-big {
+        font-size: 280%;
+        line-height: 1;
+    }
+
+    .emphasis {
+        color: var(--baseColorEmphasis);
+    }
 }

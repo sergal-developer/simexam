@@ -33,7 +33,7 @@ export class LogoComponent implements AfterViewInit {
         size: 120
     }
 
-    logoState = '';
+    logoState = 'hidden';
     elementLogo;
     uxUtils = new UxUtils();
     luIcon = {
@@ -49,23 +49,23 @@ export class LogoComponent implements AfterViewInit {
     }
 
     async ngAfterViewInit() {
-        // this.morphIconsComponent = this.morphIcons?.first;
-        // setTimeout(() => {
-        //     this.logoState = 'init';
-        //     setTimeout(() => {
-        //         this.logoState = 'transitionIcons';
-        //     }, 500);
-        //     this.gotThroughIcons();
-        // }, 1200);
+        this.animationSplash();
+    }
+
+    async animationSplash() {
+        this.logoState = 'hidden';
+
+        await this.uxUtils.wait(1500);
+        this.logoState = 'start';
+
+        await this.uxUtils.wait(1500);
+        this.logoState = 'focus';
+
+        await this.uxUtils.wait(1500);
+        this.logoState = 'end';
 
         await this.uxUtils.wait(1000);
-        this.logoState = 'init';
-        await this.uxUtils.wait(1500);
-        this.logoState = 'middle';
-        await this.uxUtils.wait(500);
-        this.logoState = 'finish';
-        await this.uxUtils.wait(500);
-        this.onFInishAnim();
+        this.onRedirectApp();
     }
 
 
@@ -90,7 +90,7 @@ export class LogoComponent implements AfterViewInit {
         } else {
             this.currentIndex = 0;
             this.logoState = '';
-            this.onFInishAnim();
+            this.onRedirectApp();
         }
 
         if (this.logoState != '') {
@@ -101,7 +101,7 @@ export class LogoComponent implements AfterViewInit {
         }
     }
 
-    onFInishAnim() {
+    onRedirectApp() {
         this.onChange.emit({ event: 'finishLoad' });
     }
 }

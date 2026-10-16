@@ -2,31 +2,6 @@
 @import './core/typography';
 @import './core/mixins';
 
-.clickable {
-    cursor: pointer;
-}
-
-.debugger * * {
-    outline: 1px solid rgba(255, 3, 255, 0.1);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-
-    .material-icons,
-    .material-icons-outlined {
-        font-size: 150%;
-    }
-}
-
-.hidden {
-    display: none !important;
-}
-
 .wrapper {
     position: relative;
     width: 100vw;
@@ -37,6 +12,7 @@ h6 {
     align-items: flex-start;
     flex-direction: row;
     justify-content: flex-start;
+
     @include scroll(5px, var(--scrollColor), var(--scrollBackground), 0);
 
     .screen-collection {

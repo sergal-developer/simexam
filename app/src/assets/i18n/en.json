@@ -1,8 +1,12 @@
 {
   "en": "English",
   "es": "Español",
-  "register_title": "Hello, it's a pleasure to meet you",
+  "register_title": "Hi, it's a pleasure",
+  "register_title_connector": "to meet you.",
   "register_language": "In which language would you like the content displayed?",
+  "register_language_connector": "Let's deep dive into the new world",
+  "register_title_welcome": "Welcome, ",
+  "register_title_welcome_connector": "How can I name you?",
   "register_title_question": "what's your name?",
   "singup": "Sign Up",
   "welcome": "Welcome",

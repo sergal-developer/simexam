@@ -1,7 +1,9 @@
-import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit, QueryList, ViewChildren, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { QuizType, ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
+import { IconNode, icons } from 'lucide';
+import { ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
+import { MorphIconComponent } from '../shared/components/morph-icon/morph-icon.component';
 import { SettingsDTO, ThemeDTO } from '../shared/data/entities/dtos';
 import { CommonServices } from '../shared/services/common.services';
 import { DatabaseService } from '../shared/services/database/sql.database.service';
@@ -13,7 +15,6 @@ import { UiServices } from '../shared/services/ui.services';
   encapsulation: ViewEncapsulation.None,
 })
 export class ModuleComponent implements OnInit, AfterViewInit {
-  
   browserLangs: string[] = [];
   currentLang = '';
 
@@ -27,6 +28,10 @@ export class ModuleComponent implements OnInit, AfterViewInit {
   uisubstate = '';
   screenwidth = 0;
   screenheight = 0;
+
+  luIcon = {
+    badge: icons.Badge
+  }
 
   constructor(
     private _router: Router,
@@ -55,12 +60,12 @@ export class ModuleComponent implements OnInit, AfterViewInit {
   }
 
   async ngOnInit() {
-    this.getPropsScreen();
     const existStructure = await this.loadDatabaseStructure();
     this.setupDefaultData(existStructure);
   }
 
   async ngAfterViewInit() {
+    this.getPropsDevice();
   }
 
   async loadDatabaseStructure() {
@@ -95,17 +100,17 @@ export class ModuleComponent implements OnInit, AfterViewInit {
     }
   }
 
-  getPropsScreen() {
-    this.screenwidth = window.innerWidth
-      || document.documentElement.clientWidth
-      || document.body.clientWidth;
+  private getPropsDevice() {
+    const props = this.commonServices.getDeviceProperties();
+    console.log('props: ', props);
+  }
 
-    this.screenheight = window.innerHeight
-      || document.documentElement.clientHeight
-      || document.body.clientHeight;
+  @HostListener('window:resize', ['\$event'])
+  onResize() {
+    this.getPropsDevice();
   }
 
   showSQL() {
-      this.commonServices.navigate('dbclient');
+    this.commonServices.navigate('dbclient');
   }
 }

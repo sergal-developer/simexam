@@ -37,70 +37,70 @@
 $loaderSize: 25px;
 $loaderWidth: 40px;
 
-.main-loader {
-    position: fixed;
-    bottom: 15%;
-    right: 0px;
-    left: 0px;
-    margin: 0 auto;
-    z-index: 200;
-    width: $loaderWidth;
-}
+// .main-loader {
+//     position: fixed;
+//     bottom: 15%;
+//     right: 0px;
+//     left: 0px;
+//     margin: 0 auto;
+//     z-index: 200;
+//     width: $loaderWidth;
+// }
 
-.loader {
-    width: $loaderWidth;
-    height: $loaderWidth;
-    aspect-ratio: 1;
-    position: relative;
+// .loader {
+//     width: $loaderWidth;
+//     height: $loaderWidth;
+//     aspect-ratio: 1;
+//     position: relative;
 
-    &:before,
-    &:after {
-        content: "";
-        position: absolute;
-        border-radius: 50px;
-        box-shadow: 0 0 0 3px inset #fff;
-        animation: squares 2.5s infinite;
-    }
+//     &:before,
+//     &:after {
+//         content: "";
+//         position: absolute;
+//         border-radius: 50px;
+//         box-shadow: 0 0 0 3px inset #fff;
+//         animation: squares 2.5s infinite;
+//     }
 
-    &:after {
-        animation-delay: -1.25s;
-    }
-}
+//     &:after {
+//         animation-delay: -1.25s;
+//     }
+// }
 
-@keyframes squares {
-    0% {
-        inset: 0 #{$loaderSize} #{$loaderSize} 0;
-    }
+// @keyframes squares {
+//     0% {
+//         inset: 0 #{$loaderSize} #{$loaderSize} 0;
+//     }
 
-    12.5% {
-        inset: 0 #{$loaderSize} 0 0;
-    }
+//     12.5% {
+//         inset: 0 #{$loaderSize} 0 0;
+//     }
 
-    25% {
-        inset: #{$loaderSize} #{$loaderSize} 0 0;
-    }
+//     25% {
+//         inset: #{$loaderSize} #{$loaderSize} 0 0;
+//     }
 
-    37.5% {
-        inset: #{$loaderSize} 0 0 0;
-    }
+//     37.5% {
+//         inset: #{$loaderSize} 0 0 0;
+//     }
 
-    50% {
-        inset: #{$loaderSize} 0 0 #{$loaderSize};
-    }
+//     50% {
+//         inset: #{$loaderSize} 0 0 #{$loaderSize};
+//     }
 
-    62.5% {
-        inset: 0 0 0 #{$loaderSize};
-    }
+//     62.5% {
+//         inset: 0 0 0 #{$loaderSize};
+//     }
 
-    75% {
-        inset: 0 0 #{$loaderSize} #{$loaderSize};
-    }
+//     75% {
+//         inset: 0 0 #{$loaderSize} #{$loaderSize};
+//     }
 
-    87.5% {
-        inset: 0 0 #{$loaderSize} 0;
-    }
+//     87.5% {
+//         inset: 0 0 #{$loaderSize} 0;
+//     }
 
-    100% {
-        inset: 0 #{$loaderSize} #{$loaderSize} 0;
-    }
-}
+//     100% {
+//         inset: 0 #{$loaderSize} #{$loaderSize} 0;
+//     }
+// }

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, } from '@angular/core';
+import { Component, HostListener, OnInit, ViewEncapsulation, } from '@angular/core';
 import { icons } from "lucide";
 import { ScreenEnum } from 'src/app/shared/data/enumerables/enumerables';
 import { CommonServices } from 'src/app/shared/services/common.services';
@@ -26,6 +26,7 @@ export class SplashComponent implements OnInit {
     // this.uiServices.showLoader(true);
 
     // before logo finish animation send event and analyze the structure of database and init app
+    this.getPropsDevice();
   }
 
   async loadDatabaseStructure() {
@@ -43,13 +44,23 @@ export class SplashComponent implements OnInit {
       module = !profile ? ScreenEnum.register : ScreenEnum.dashboard;
     }
     this.uiServices.showLoader(false);
-
-
     this.commonServices.navigate(module);
   }
 
   async onChange(evt: { event: string }) {
     const existStructure = await this.loadDatabaseStructure();
     this.checkInit(existStructure);
+  }
+
+  @HostListener('window:resize', ['\$event'])
+  onResize() {
+    this.getPropsDevice();
+  }
+
+  private getPropsDevice() {
+
+    const props = this.commonServices.getDeviceProperties();
+    const styles = this.commonServices.getRootVariableStyles();
+    console.log('props: ', { styles, props });
   }
 }

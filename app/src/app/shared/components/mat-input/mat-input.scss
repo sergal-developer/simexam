@@ -1,38 +1,36 @@
 @import '../../../../resources/theme/core/mixins';
 @import '../../../../resources/theme/core/typography';
 
-$boxMinHeight: 40px;
-$boxMinHeightFlat: 20px;
-$boxMaxHeight: 300px;
-
 .mat-form-field {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: var(--space-relation) 0;
+    gap: var(--space-direct);
+    margin: var(--space-direct) 0;
+    width: 100%;
 
     .mat-label {
         position: relative;
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 5px;
+        gap: var(--space-joined);
         align-items: flex-start;
         background: var(--formBackground);
         border-radius: 10px;
         color: var(--appColor);
-        min-height: $boxMinHeight;
+        min-height: var(--form-field-height);
         font-size: rem(18px);
 
         .mat-label-text {
-            transform: translate(15px, 0);
-            font-size: 60%;
+            transform: translate(15px, 10px);
+            font-size: 75%;
             user-select: none;
             width: auto;
             pointer-events: none;
             transition: all 300ms;
             position: absolute;
-            opacity: 0.5;
+            // opacity: 0.5;
+            color: var(--formColor);
         }
 
         .mat-error {
@@ -58,9 +56,9 @@ $boxMaxHeight: 300px;
                 visibility: hidden;
                 grid-area: 1 / 1 / 2 / 2;
                 line-height: 1;
-                // min-height: $boxMinHeight;
+                // min-height: var(--form-field-height);
                 min-height: 10px;
-                max-height: $boxMaxHeight;
+                max-height: var(--form-field-height-max);
                 overflow: auto;
                 height: auto;
                 box-sizing: border-box;
@@ -71,14 +69,15 @@ $boxMaxHeight: 300px;
             input,
             textarea {
                 width: 100%;
-                min-height: $boxMinHeight;
+                min-height: var(--form-field-height);
                 padding: 10px 15px;
+                padding: 10px 15px 0px;
             }
 
             textarea {
                 height: auto;
                 grid-area: 1 / 1 / 2 / 2;
-                max-height: $boxMaxHeight;
+                max-height: var(--form-field-height-max);
             }
         }
 
@@ -93,14 +92,14 @@ $boxMaxHeight: 300px;
                 textarea {
                     padding: 0;
                     padding-right: 10px;
-                    min-height: calc(#{$boxMinHeight} - 25px);
+                    min-height: calc(var(--form-field-height) - 25px);
                 }
             }
         }
 
         &.empty {
             .mat-label-text {
-                transform: translate(15px, calc(#{$boxMinHeight} / 4));
+                transform: translate(15px, calc(var(--form-field-height) / 3));
                 font-size: 100%;
                 color: inherit;
                 opacity: 0.7;
@@ -110,9 +109,10 @@ $boxMaxHeight: 300px;
 
                 input,
                 textarea {
-                    line-height: $boxMinHeight;
-                    height: $boxMinHeight;
+                    line-height: var(--form-field-height);
+                    height: var(--form-field-height);
                     overflow: hidden;
+                    padding: 10px 15px;
 
                     &::placeholder {
                         opacity: 0;
@@ -120,7 +120,7 @@ $boxMaxHeight: 300px;
                 }
 
                 textarea {
-                    line-height: calc(#{$boxMinHeight} / 2);
+                    line-height: calc(var(--form-field-height) / 2);
                 }
             }
 
@@ -154,7 +154,7 @@ $boxMaxHeight: 300px;
 
         &.empty {
             .mat-label-text {
-                // transform: translate(12px, calc(#{$boxMinHeightFlat} / 4));
+                // transform: translate(12px, calc(#{var(--form-field-height)Flat} / 4));
                 opacity: 0.5;
             }
 
@@ -169,10 +169,30 @@ $boxMaxHeight: 300px;
 
 }
 
+.mat-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: var(--space-relation);
+    font-size: var(--appFontSizeResponsive);
+
+    input {
+        min-height: 10px;
+        height: 30px;
+        width: 30px;
+    }
+
+    a {
+        color: var(--accent);
+    }
+}
+
+
 /*
 .flat-form {
     .mat-label {
-        min-height: $boxMinHeightFlat;
+        min-height: var(--form-field-height)Flat;
         background: transparent;
         margin: 0;
         align-items: stretch;
@@ -183,7 +203,7 @@ $boxMaxHeight: 300px;
 
         &.empty {
             .mat-label-text {
-                transform: translate(12px, calc(#{$boxMinHeightFlat} / 4));
+                transform: translate(12px, calc(#{var(--form-field-height)Flat} / 4));
                 opacity: 0.5;
             }
 
@@ -198,13 +218,13 @@ $boxMaxHeight: 300px;
 
     .textarea-warp {
         margin: 0;
-        min-height: $boxMinHeightFlat;
+        min-height: var(--form-field-height)Flat;
         height: auto;
 
         // textarea,
         // input,
         // &:after {
-        //     min-height: $boxMinHeightFlat;
+        //     min-height: var(--form-field-height)Flat;
         //     height: auto;
         //     margin: 0;
         //     padding: 10px 0px;

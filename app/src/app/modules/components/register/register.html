@@ -1,134 +1,186 @@
-<div class="_animation_state {{ uistate }}">
-    <div class="root-container register-form">
-        <section-dinamic design="glass">
-            <div class="simple-section" *ngIf="sections.language">
-                <div class="arrage row centers paddings">
-                    <h2>{{ 'register_title' | translate }}</h2>
-                    <p>{{ 'register_language'| translate }}</p>
+<div class="arrange --full-screen {{ uistate }}">
 
-                    <div class="arrage stacked centers" *ngIf="languages.length">
-                        <ng-container *ngFor="let lan of languages">
-                            <button class="btn" [ngClass]="{
+    <div class="arrange --full-screen --justify-center --align-center --border-radius glass glass-no-border">
+
+        <div class="arrange --full-screen --justify-left --align-center screen-slider">
+
+            <div class="screen-slider-container -count-2 {{ uxView }}">
+
+                <div class="screen-slider-view">
+                    <div class="arrange --column --justify-center --align-center --full-screen --padding-separation">
+                        <div class="logo">SIMEXAM.</div>
+                    </div>
+                </div>
+
+                <div class="screen-slider-view">
+                    <div class="arrange --column --full-screen --justify-between">
+
+                        <div class="arrange --height-50">
+
+                            <div class="arrange --width-100 --justify-center --padding-separation">
+                                <div class="badge big --language" *ngIf="currentLanguage">{{ currentLanguage.name }}
+                                </div>
+                                <lu-icon class="hero-icon" [icon]="luIcon.language"></lu-icon>
+                            </div>
+                        </div>
+
+                        <div class="arrange --height-50 screen-slider">
+
+                            <div class="screen-slider-container -count-3 {{ uxFormView[uxFormIndex].class }}">
+
+                                <div class="screen-slider-view">
+
+                                    <div
+                                        class="arrange --column --center --padding-separation --height-auto --gap-separation">
+                                        <div class="-title -title-big">
+                                            <span>{{ 'register_title' | translate }} </span>
+                                            <span class="emphasis">{{ 'register_title_connector' | translate }}</span>
+                                        </div>
+
+                                        <p>
+                                            <b>{{ 'register_language_connector'| translate }}</b>
+                                            {{ 'register_language'| translate }}
+                                        </p>
+
+                                        <div class="joined-elements">
+                                            <ng-container *ngFor="let lan of languages">
+                                                <button class="element" [ngClass]="{
                                     'primary': lan.value == settings.language, 
                                     'unselected': lan.value != settings.language }"
-                                (click)="changeLanguage(lan.value)">{{ lan.value | translate }}</button>
-                        </ng-container>
-                    </div>
-                </div>
-            </div>
+                                                    (click)="changeLanguage(lan.value)">{{ lan.value | translate
+                                                    }}</button>
+                                            </ng-container>
+                                        </div>
 
-            <div class="simple-section" *ngIf="sections.user">
-                <div class="arrage row centers paddings">
-                    <h2>{{ 'register_title_question' | translate }}</h2>
-
-                    <form [formGroup]="form" class="arrage row gaps full-width">
-                        <div class="item mat-form-field">
-                            <mat-input [title]="'form_name' | translate"
-                                [mesageError]="'form_name_required' | translate" [formControl]="form.get('name')">
-                            </mat-input>
-                        </div>
-
-                        <div class="item mat-form-field">
-                            <div class="mat-label-text">
-                                <label for="legal" class="mat-checkbox">
-                                    <input type="checkbox" id="legal" [formControl]="form.get('legal')">
-                                    <div>
-                                        {{ 'help_accept_terms' | translate }}
-                                        <a href="https://sergal.site/#/legal/simexam/terms" target="_blank">{{
-                                            'terms_conditions' | translate }}</a>, {{ 'help_accept_terms_join' |
-                                        translate
-                                        }}
-                                        <a href="https://sergal.site/#/legal/simexam/privacy" target="_blank">{{
-                                            'privacy_policy' | translate }} </a>
+                                        <div class="joined-elements">
+                                            <button class="element accent" (click)="next()">
+                                                <span>{{ 'action_next' | translate }}</span><lu-icon
+                                                    [icon]="luIcon.right"></lu-icon>
+                                            </button>
+                                        </div>
                                     </div>
-                                </label>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
 
-            <div class="simple-section" *ngIf="sections.avatars">
-                <div class="arrage row centers paddings">
-                    <h2>{{ 'form_image' | translate }}</h2>
+                                </div>
 
-                    <form [formGroup]="form">
-                        <div class="mat-form-field">
-                            <div class="_collection">
-                                <div class="avatar-image" *ngFor="let item of defaultAvatars"
-                                    [ngClass]="{'selected': item.selected }" (click)="selectAvatar(item)">
-                                    <img [attr.src]="item.url" [attr.alt]="item.url">
+                                <div class="screen-slider-view">
+
+                                    <div
+                                        class="arrange --column --center --padding-separation --height-auto --gap-separation">
+                                        <div class="-title -title-big">
+                                            <span class="emphasis">{{'register_title_welcome' | translate }}</span> <br>
+                                            <span *ngIf="!formData.name">{{ 'register_title_welcome_connector' |
+                                                translate }} </span>
+                                            <span *ngIf="formData.name">{{ formData.name }}. </span>
+                                        </div>
+                                        <div class="-title" *ngIf="formData.name">
+                                            Gestiona tu tiempo y tu aprendizaje de manera integrada.
+                                        </div>
+
+                                        <form [formGroup]="form"
+                                            class="arrange --column --justify-center --align-center --gap-0 --text-center --width-100">
+                                            <div class="item mat-form-field">
+                                                <mat-input [title]="'form_name' | translate"
+                                                    [mesageError]="'form_name_required' | translate"
+                                                    [formControl]="form.get('name')" (change)="onChangeInput($event)">
+                                                </mat-input>
+                                            </div>
+
+                                            <div class="item mat-form-field">
+                                                <div class="mat-label-text">
+                                                    <label for="legal" class="mat-checkbox arrange --row-nowrap">
+                                                        <input type="checkbox" id="legal"
+                                                            [formControl]="form.get('legal')"
+                                                            (change)="onChangeInput($event)">
+                                                        <div>
+                                                            {{ 'help_accept_terms' | translate }}
+                                                            <a href="https://sergal.site/#/legal/simexam/terms"
+                                                                target="_blank">{{
+                                                                'terms_conditions' | translate }}</a>, {{
+                                                            'help_accept_terms_join' |
+                                                            translate
+                                                            }}
+                                                            <a href="https://sergal.site/#/legal/simexam/privacy"
+                                                                target="_blank">{{
+                                                                'privacy_policy' | translate }} </a>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <div class="joined-elements">
+
+                                            <button class="element accent" (click)="prev()">
+                                                <lu-icon [icon]="luIcon.left"></lu-icon><span>{{ 'action_prev' |
+                                                    translate }}</span>
+                                            </button>
+                                            <button class="element accent" (click)="next()"
+                                                [disabled]="!validateData()">
+                                                <span>{{ 'action_next' | translate }}</span><lu-icon
+                                                    [icon]="luIcon.right"></lu-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="screen-slider-view">
+
+                                    <div
+                                        class="arrange --column --center --padding-separation --height-auto --gap-separation">
+                                        <div class="-title -title-big">
+                                            <span>{{ 'form_image' | translate }}</span> <br>
+                                            <span class="emphasis">{{'register_title_welcome' | translate }}</span> <br>
+                                            <span>{{ 'register_title_welcome_connector' | translate }} </span>
+                                        </div>
+                                        <div class="-title" *ngIf="formData.name">
+                                            Gestiona tu tiempo y tu aprendizaje de manera integrada.
+                                        </div>
+
+                                        <form [formGroup]="form">
+                                            <div class="mat-form-field">
+                                                <div class="_collection">
+                                                    <div class="avatar-image" *ngFor="let item of defaultAvatars"
+                                                        [ngClass]="{'selected': item.selected }"
+                                                        (click)="selectAvatar(item)">
+                                                        <img [attr.src]="item.url" [attr.alt]="item.url">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mat-error"
+                                                    *ngIf="form.get('image').invalid && (form.get('image').dirty || form.get('image').touched)"
+                                                    [ngClass]="{'error': form.get('image').errors }">
+                                                    <div *ngIf="form.get('image').errors">
+                                                        {{ mesageError }}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                        <div class="joined-elements">
+                                            <button class="element accent" (click)="prev()">
+                                                <lu-icon [icon]="luIcon.left"></lu-icon><span>{{ 'action_prev' |
+                                                    translate }}</span>
+                                            </button>
+                                            <button class="element accent" (click)="register()" *ngIf="validateData()">
+                                                <span>{{ 'singup' | translate }}</span>
+                                                <lu-icon [icon]="luIcon.register"></lu-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <div class="mat-error"
-                                *ngIf="form.get('image').invalid && (form.get('image').dirty || form.get('image').touched)"
-                                [ngClass]="{'error': form.get('image').errors }">
-                                <div *ngIf="form.get('image').errors">
-                                    {{ mesageError }}
-                                </div>
-                            </div>
+
                         </div>
-
-                    </form>
-                </div>
-            </div>
-        </section-dinamic>
-
-        <section-dinamic design="glass" className="rounded" *ngIf="false">
-            <div class="_navbarBottom">
-
-                <div class="_nav_item _nav_action _prev" (click)="prev()" [attr.disabled]="sections.language">
-                    <lu-icon [icon]="luIcon.left"></lu-icon><span>{{ 'action_prev' | translate }}</span>
-                </div>
-
-                <div class="_nav_item_collection" *ngIf="false">
-                    <div class="_nav_item" [ngClass]="{'current': sections.language }" (click)="configLanguage()">
-                        <lu-icon [icon]="luIcon.language"></lu-icon>
-                        <!-- <div class="_nav_item_title">{{ 'action_step_language' | translate }}</div> -->
                     </div>
 
-                    <div class="_nav_item" [ngClass]="{'current': sections.user }" (click)="configUser()">
-                        <lu-icon [icon]="luIcon.user"></lu-icon>
-                        <!-- <div class="_nav_item_title">{{ 'action_step_user' | translate }}</div> -->
-                    </div>
-
-                    <div class="_nav_item" [ngClass]="{'current': sections.avatars }" (click)="configAvatar()">
-                        <lu-icon [icon]="luIcon.avatar"></lu-icon>
-                        <!-- <div class="_nav_item_title">{{ 'action_step_avatar' | translate }}</div> -->
-                    </div>
                 </div>
 
-                <div class="_nav_item _nav_action _next" (click)="next()" *ngIf="!validateData()"
-                    [attr.disabled]="sections.avatars">
-                    <span>{{ 'action_next' | translate }}</span><lu-icon [icon]="luIcon.right"></lu-icon>
-                </div>
-
-                <div class="_nav_item _nav_action _next _register" (click)="register()" *ngIf="validateData()">
-                    <span>{{ 'singup' | translate }}</span>
-                    <lu-icon [icon]="luIcon.register"></lu-icon>
-                </div>
-
-            </div>
-        </section-dinamic>
-
-        <div class="_navbarFixedBottom">
-            <div class="_navOfButtons">
-                <button (click)="prev()" [attr.disabled]="sections.language">
-                    <lu-icon [icon]="luIcon.left"></lu-icon>
-                    <span>{{ 'action_prev' | translate }}</span>
-                </button>
-
-                <button (click)="next()" *ngIf="!validateData()">
-                    <span>{{ 'action_next' | translate }}</span>
-                    <lu-icon [icon]="luIcon.right"></lu-icon>
-                </button>
-
-                <button (click)="register()" *ngIf="validateData()">
-                    <span>{{ 'singup' | translate }}</span>
-                    <lu-icon [icon]="luIcon.register"></lu-icon>
-                </button>
             </div>
         </div>
+
     </div>
 </div>

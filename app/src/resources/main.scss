@@ -1,9 +1,24 @@
 :root {
-    --appBackground: #000000;
-    --appBackgroundTransparent: #00000050;
-    --appColor: #d0d0d0;
-    --appFontSize: 16px;
-    --textFontSize: 16px;
+
+    --appBackground: #cfced4;
+    --appBackgroundTransparent: #cfced450;
+    --appColor: #151513;
+
+    --screenWidth: 1300;
+    --screenHeight: 800;
+    --baseSizeText: 18;
+    --responsiveSizeText: 18;
+    --appFontSize: calc(var(--baseSizeText) * 1px);
+    --appFontSizeResponsive: calc(var(--responsiveSizeText) * 1px);
+    --orientation: "portrait";
+
+    --base: #ebecf1;
+    --baseBackground: #d3d3d3;
+    --baseBackgroundHover: #fafaf8;
+    --baseBackgroundTransparent: #ebecf150;
+    --baseColor: #202123;
+    --baseColorEmphasis: #3c3c3c;
+
 
     --primary: #174FA1;
     --primaryBackground: #174FA1;
@@ -31,7 +46,8 @@
     --scrollBackground: #940d82;
 
     --formErrorColor: #f08d9c;
-    --formBackground: rgba(33, 33, 33, 0.7);
+    --formBackground: #c5c5c580;
+    --formColor: #4c4c4c;
     --formBackgroundSolid: #494949;
     --formBackgroundTransparent: #494949ab;
 
@@ -94,6 +110,38 @@
     --space-separation: 32px;
     --space-section: 48px;
     --space-block: 64px;
+
+    --font-outfit: 'outfit';
+    --font-outfit-bold: 'outfit-bold';
+    --font-outfit-light: 'outfit-light';
+    --font-dmsans: 'dmsans';
+    --font-dmsans-light: 'dmsans-light';
+    --font-dmsans-bold: 'dmsans-bold';
+    --font-dmsans-italic: 'dmsans-italic';
+    --font-monospace: 'monospace';
+    --font-default: 'dmsans';
+
+    --form-field-height: 50px;
+    --form-field-height-max: 300px;
+
+    --badge-color: #555361;
+    --badge-background: #d7d6dc;
+    --badge-border: #d7d6dc;
+    --badge-active-color: #87a9f2;
+    --badge-active-background: #f4fcff;
+    --badge-active-border: #87a9f2;
+    --badge-waiting-color: #362c14;
+    --badge-waiting-background: #f7fdb1;
+    --badge-waiting-border: #d4a64a;
+    --badge-danger-color: #bc5c4f;
+    --badge-danger-background: #feb7b4;
+    --badge-danger-border: #bc5c4f;
+    --badge-success-color: #058258;
+    --badge-success-background: #6ce6bd;
+    --badge-success-border: #6ce6bd;
+    --badge-common-color: #474747;
+    --badge-common-background: #bbbbbb;
+    --badge-common-border: #474747;
 }
 
 @import './theme/core/reset';
@@ -103,8 +151,9 @@
 @import './theme/core/typography';
 
 @import './theme/tags.scss';
-@import './theme/structure-app.scss';
 @import './theme/notification.scss';
+// @import './theme/structure-app.scss';
+@import './theme/layout.scss';
 
 html,
 body {
@@ -113,9 +162,9 @@ body {
     padding: 0;
     scroll-behavior: smooth;
 
-    font-family: $outfitFont;
+    font-family: var(--font-default);
     color: var(--appColor);
-    font-size: var(--appFontSize);
+    font-size: var(--appFontSizeResponsive);
     font-weight: normal;
     line-height: 1;
     text-rendering: optimizeLegibility;

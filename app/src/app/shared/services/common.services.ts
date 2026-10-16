@@ -619,8 +619,12 @@ export class CommonServices {
     if (!settings) {
       await this._services.postLanguage({ name: 'Español', value: 'es' });
       await this._services.postLanguage({ name: 'English', value: 'en' });
-      await this._services.postTheme({ id: 'light', content: this.defaultThemeLight });
-      await this._services.postTheme({ id: 'dark', content: this.defaultThemeDark });
+      // verify if data is saved 
+      const languages = await this._services.getAllLanguages();
+      console.log('languages: ', languages);
+      await this._services.postTheme({ id: 'light', content: this.getRootVariableStyles() });
+      const themes = await this._services.getAllThemes();
+      console.log('themes: ', themes);
 
       const permissions = {
         create: true,
@@ -630,9 +634,14 @@ export class CommonServices {
         ai: false
       };
 
-      await this._services.postSetting({ settingId: 0, language: 'en', theme: 'dark', permissions: permissions });
+      await this._services.postSetting({ settingId: 0, language: 'en', theme: 'light', permissions: permissions });
       settings = await this._services.getSettingCompleteById(0);
     }
+
+    const languages = await this._services.getAllLanguages();
+    console.log('languages: ', languages);
+    const themes = await this._services.getAllThemes();
+    console.log('themes: ', themes);
     return settings;
   }
 
@@ -661,8 +670,7 @@ export class CommonServices {
 
     setting._languages = languages;
     setting._themes = [
-      { id: 'light', content: this.defaultThemeLight },
-      { id: 'dark', content: this.defaultThemeDark },
+      { id: 'light', content: this.getRootVariableStyles() },
     ];
     setting._colors = [];
 
@@ -682,4 +690,60 @@ export class CommonServices {
     return this._http.get(url).toPromise();
   }
   //#endregion EXTERNAL DATA
+
+  //#region UX
+  getRootVariableStyles(): { [name: string]: string } {
+    const rootStyles = getComputedStyle(document.querySelector(':root'));
+    const styleVarNames = Array.from(rootStyles).filter(style => style.includes('--'));
+    const variableObject = {};
+    styleVarNames.map(name => {
+      const formatName = name.replace('--', '');
+      variableObject[formatName] = this.getRootVariableStyle(name);
+    });
+    return variableObject;
+  }
+
+  setRootVariableStyle(name: string, value: string) {
+    document.documentElement.style.setProperty(name, value);
+  }
+
+  getRootVariableStyle(name: string) {
+    const rootStyles = getComputedStyle(document.querySelector(':root'));
+    return rootStyles.getPropertyValue(name).trim();
+  }
+
+  getDeviceProperties() {
+    const _screenWidth = window.innerWidth;
+    const _screenHeight = window.innerHeight;
+    const orientation = window.matchMedia("(orientation: portrait)").matches;
+
+    const baseSizeText = _screenWidth * 0.02;
+    let responsiveSizeText = baseSizeText;
+
+    if (_screenWidth > 1200) {
+      responsiveSizeText = 24;
+    }
+
+    if (responsiveSizeText < 14) {
+      responsiveSizeText = 14;
+    }
+
+    const deviceProps = {
+      screenWidth: _screenWidth,
+      screenHeight: _screenHeight,
+      baseSizeText: baseSizeText,
+      responsiveSizeText: responsiveSizeText,
+      orientation: orientation ? 'portrait' : 'landscape',
+    }
+
+    // update values of global styles
+    this.setRootVariableStyle('--screenWidth', `${deviceProps.screenWidth}`);
+    this.setRootVariableStyle('--screenHeight', `${deviceProps.screenHeight}`);
+    this.setRootVariableStyle('--baseSizeText', `${deviceProps.baseSizeText}`);
+    this.setRootVariableStyle('--responsiveSizeText', `${deviceProps.responsiveSizeText}`);
+    this.setRootVariableStyle('--orientation', `${deviceProps.orientation}`);
+    this.setRootVariableStyle('--screenWidth', `${deviceProps.screenWidth}`);
+    return deviceProps;
+  }
+  //#endregion UX
 }

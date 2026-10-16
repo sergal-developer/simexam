@@ -1,4 +1,37 @@
 @import './material_icons/index.scss';
-@import './josefin_sans/index.scss';
-@import './lexenddeca/index.scss';
 @import './outfit/index.scss';
+@import './dm_sans/index.scss';
+
+.font {
+    &-outfit {
+        font-family: 'outfit';
+    }
+
+    &-outfit-bold {
+        font-family: 'outfit-bold';
+    }
+
+    &-outfit-light {
+        font-family: 'outfit-light';
+    }
+
+    &-dmsans {
+        font-family: 'dmsans';
+    }
+
+    &-dmsans-light {
+        font-family: 'dmsans-light';
+    }
+
+    &-dmsans-bold {
+        font-family: 'dmsans-bold';
+    }
+
+    &-dmsans-italic {
+        font-family: 'dmsans-italic';
+    }
+
+    &-monospace {
+        font-family: monospace;
+    }
+}

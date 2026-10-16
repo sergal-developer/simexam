@@ -23,7 +23,10 @@ export class SectionDinamicComponent implements AfterViewInit, OnChanges, OnDest
     design: 'none' | 'acrilic' | 'glass' | 'gold' = 'none';
 
     @Input()
-    minHeight = 30;
+    minHeight = 1;
+
+    @Input()
+    autoSize: boolean = false;
 
     @ViewChild('content', { static: true })
     content!: ElementRef<HTMLElement>;
@@ -58,7 +61,9 @@ export class SectionDinamicComponent implements AfterViewInit, OnChanges, OnDest
      */
     ngOnChanges(changes: SimpleChanges): void {
         if (changes['minHeight']) {
-            this.updateHeight();
+            if (this.autoSize) {
+                this.updateHeight();
+            }
         }
     }
 
@@ -92,15 +97,15 @@ export class SectionDinamicComponent implements AfterViewInit, OnChanges, OnDest
         this.resizeObserver?.disconnect();
     }
 
-    @HostListener('pointermove', ['$event'])
-    onMouseMove(event: PointerEvent): void {
-        this._onMove(event);
-    }
+    // @HostListener('pointermove', ['$event'])
+    // onMouseMove(event: PointerEvent): void {
+    //     this._onMove(event);
+    // }
 
-    @HostListener('pointerleave')
-    onMouseLeave(): void {
-        this._resetMove();
-    }
+    // @HostListener('pointerleave')
+    // onMouseLeave(): void {
+    //     this._resetMove();
+    // }
 
     //#region EVENTS
     private _onMove(event) {
@@ -108,10 +113,10 @@ export class SectionDinamicComponent implements AfterViewInit, OnChanges, OnDest
         const rect = element.getBoundingClientRect();
 
         const x = ((event.clientX - rect.left) / rect.width) * 100;
-        const y =((event.clientY - rect.top) / rect.height) * 100;
+        const y = ((event.clientY - rect.top) / rect.height) * 100;
 
-        element.style.setProperty( '--mouse-x', `${x}%`);
-        element.style.setProperty( '--mouse-y', `${y}%`);
+        element.style.setProperty('--mouse-x', `${x}%`);
+        element.style.setProperty('--mouse-y', `${y}%`);
     }
 
     private _resetMove() {
