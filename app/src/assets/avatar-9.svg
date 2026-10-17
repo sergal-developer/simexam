@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 99 91" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;">
+    <g transform="matrix(1,0,0,1,-10.769231,-15.538462)">
+        <path d="M12,59C16.667,45.667 23,34 31,24C39,16.667 47.667,14.667 57,18C71,12.667 83.333,16 94,28C103.333,38 108.333,50.333 109,65C110.333,78.333 105.333,89.667 94,99C82,105.667 68,107.667 52,105C37.333,107 25.667,101.667 17,89C11,79.667 9.333,69.667 12,59Z" style="fill:rgb(189,168,226);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-10.769231,-15.538462)">
+        <circle cx="42" cy="56" r="6.5" style="fill:rgb(248,245,252);"/>
+        <circle cx="78" cy="56" r="6.5" style="fill:rgb(248,245,252);"/>
+        <circle cx="42" cy="56" r="3.3" style="fill:rgb(41,34,45);"/>
+        <circle cx="78" cy="56" r="3.3" style="fill:rgb(41,34,45);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-10.769231,-15.538462)">
+        <path d="M55,68L65,68" style="fill:none;fill-rule:nonzero;stroke:rgb(41,34,45);stroke-width:3.5px;"/>
+    </g>
+</svg>

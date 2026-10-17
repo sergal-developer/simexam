@@ -460,28 +460,32 @@
         // Width
         // ----------------------------------------
 
-        &width-screen {
-            width: 100vw;
-        }
+
 
         &width-auto {
             width: auto;
         }
 
-        &width-100 {
-            width: 100%;
+        @for $i from 0 through 100 {
+            &width-#{$i} {
+                width: #{$i * 1%};
+            }
         }
 
-        &width-50 {
-            width: 50%;
+        @for $i from 0 through 100 {
+            &width-#{$i}-vh {
+                width: #{$i * 1vh};
+            }
         }
 
-        &width-40 {
-            width: 40px;
+        &width-screen {
+            width: 100vw;
         }
 
-        &width-150 {
-            width: 150px;
+        @for $i from 0 through 50 {
+            &width-#{$i * 10}-px {
+                width: #{$i * 10%};
+            }
         }
 
         &full-width {
@@ -498,36 +502,26 @@
             height: auto;
         }
 
-        &height-100 {
-            height: 100%;
+        @for $i from 0 through 100 {
+            &height-#{$i} {
+                height: #{$i * 1%};
+            }
         }
 
-        &height-50 {
-            height: 50%;
+        @for $i from 0 through 100 {
+            &height-#{$i}-vh {
+                height: #{$i * 1vh};
+            }
         }
 
-        &height-30 {
-            height: 33.33%;
-        }
-
-        &height-20 {
-            height: 20%;
-        }
-
-        &height-60 {
-            height: 60px;
+        @for $i from 0 through 50 {
+            &height-#{$i * 10}-px {
+                height: #{$i * 10%};
+            }
         }
 
         &height-screen {
             height: 100vh;
-        }
-
-        &height-75vh {
-            height: 75vh;
-        }
-
-        &height-50vh {
-            height: 50vh;
         }
 
         &full-screen {
@@ -580,6 +574,25 @@
 }
 
 // #endregion ARRANGE
+
+// #region ANIMATIONS
+.list-reveal {
+    opacity: 0;
+    transform: translateY(12px) scale(0.9);
+    animation: list-reveal 0.4s ease-out forwards;
+
+    @for $i from 1 through 50 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{($i - 1) * 0.1}s;
+        }
+    }
+
+    &-initial {
+        opacity: 0;
+    }
+}
+
+// #endregion ANIMATIONS
 
 
 // #region COMPONENTS
@@ -648,37 +661,37 @@
         pointer-events: none;
         opacity: 0;
 
-        &.stain-1 {
+        &.shape-1 {
             width: 200px;
             height: 209px;
         }
 
-        &.circle-1 {
+        &.shape-2 {
             width: 243px;
             height: 243px;
         }
 
-        &.circle-outline-1 {
+        &.shape-3 {
             width: 200px;
             height: 298px;
         }
 
-        &.circle-outline-2 {
+        &.shape-4 {
             width: 200px;
             height: 200px;
         }
 
-        &.circle-outline-dots {
+        &.shape-5 {
             width: 200px;
             height: 200px;
         }
 
-        &.stain-2 {
+        &.shape-6 {
             width: 200px;
             height: 130px;
         }
 
-        &.stain-dots {
+        &.shape-7 {
             width: 200px;
             height: 150px;
         }
@@ -690,91 +703,117 @@
     }
 
     // change for state (uistate) and uisubstate
-
     &.__register {
-        &.welcome {
-            .background-item {
-                opacity: 1;
-            }
+        .background-item {
+            opacity: 0.5;
+        }
 
-            .stain-1 {
+        &.welcome {
+            // .background-item {
+            //     opacity: 1;
+            // }
+
+            .shape-1 {
                 transform: translate(0, -20%) scale(1);
             }
 
-            .circle-1 {
+            .shape-2 {
                 transform: translate(-10%, 0) scale(1);
             }
         }
 
         &.language {
-            .background-item {
-                opacity: 0.6;
-            }
 
-            .stain-1 {
+            .shape-1 {
                 transform: translate(46%, 200%) scale(1.4);
             }
 
-            .circle-1 {
+            .shape-2 {
                 transform: translate(-66%, 114%) scale(1.7);
             }
 
-            .circle-outline-1 {
+            .shape-3 {
                 transform: translate(-13%, 141%) scale(1);
             }
 
-            .circle-outline-2 {
+            .shape-4 {
                 transform: translate(13%, 78%) scale(1.5);
             }
 
-            .circle-outline-dots {
+            .shape-5 {
                 transform: translate(-20%, 168%) scale(2);
             }
 
-            .stain-2 {
+            .shape-6 {
                 transform: translate(0%, 400%) scale(1.5);
             }
 
-            .stain-dots {
+            .shape-7 {
                 transform: translate(98%, 229%) scale(1);
             }
         }
 
         &.user {
-            .background-item {
-                opacity: 0.6;
-            }
 
-            .stain-1 {
+            .shape-1 {
                 transform: translate(80%, 60%) scale(1.4);
             }
 
-            .circle-1 {
+            .shape-2 {
                 transform: translate(50%, 87%) scale(2);
             }
 
-            .circle-outline-1 {
+            .shape-3 {
                 transform: translate(-13%, 141%) scale(1);
             }
 
-            .circle-outline-2 {
+            .shape-4 {
                 transform: translate(13%, 78%) scale(1.5);
             }
 
-            .circle-outline-dots {
+            .shape-5 {
                 transform: translate(-20%, 168%) scale(2);
             }
 
-            .stain-2 {
+            .shape-6 {
                 transform: translate(-90%, 187%) scale(2.5);
             }
 
-            .stain-dots {
+            .shape-7 {
                 transform: translate(-98%, 262%) scale(1.5);
             }
         }
-    }
 
+        &.avatar {
+            .shape-1 {
+                transform: translate(0%, 252%) scale(2);
+            }
+
+            .shape-2 {
+                transform: translate(0, 140%) scale(2);
+            }
+
+            .shape-3 {
+                transform: translate(0, 128%) scale(2);
+            }
+
+            .shape-4 {
+                transform: translate(0, 36%) scale(1.4)
+            }
+
+            .shape-5 {
+                transform: translate(-21%, -11%) scale(2.5);
+            }
+
+            .shape-6 {
+                transform: translate(-40%, 86%) scale(1.2);
+            }
+
+            .shape-7 {
+                transform: translate(0%, 200%) scale(3);
+            }
+        }
+    }
 }
 
 .screen-slider {
@@ -893,19 +932,6 @@
     }
 }
 
-.logo {
-    font-family: var(--font-outfit-light);
-    font-size: 400%;
-}
-
-.hero-icon {
-    svg {
-        width: 250px;
-        height: auto;
-        stroke-width: 0.5 !important;
-    }
-}
-
 .badge {
     background: var(--badge-background);
     color: var(--badge-color);
@@ -921,6 +947,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: all 300ms;
 
     &.inverted {
         color: var(--badge-background);
@@ -996,16 +1023,6 @@
     }
 }
 
-.--language,
-.--username {
-    position: absolute;
-    transform: translate(120px, 288px) rotate(330deg);
-}
-
-.--username {
-    transform: translate(-25px, 267px) rotate(46deg);
-}
-
 .glass {
     background: #3838385d !important;
     backdrop-filter: blur(24px) saturate(150%) contrast(110%);
@@ -1054,7 +1071,6 @@
     }
 }
 
-
 .joined-elements {
     display: flex;
     flex-wrap: nowrap;
@@ -1085,6 +1101,167 @@
     }
 }
 
-
-
 // #endregion COMPONENTS
+
+
+// #region MODULES STYLES
+
+// #region MODULE.REGISTER
+register {
+
+    .logo {
+        font-family: var(--font-outfit-light);
+        font-size: 400%;
+    }
+
+    .hero-component {
+        .hero-icon {
+            width: 250px;
+            height: 350px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            .iconitem {
+                position: absolute;
+                transition: opacity 200ms,
+                    transform 300ms ease;
+
+                svg {
+                    width: 250px;
+                    height: auto;
+                    stroke-width: 0.5 !important;
+                }
+
+                &.--language {
+                    opacity: 0;
+                    transform: translate(0, 0) scale(1) rotateY(90deg);
+                }
+
+                &.--username {
+                    opacity: 0;
+                    transform: translate(0, 0) scale(1) rotateY(90deg);
+                }
+
+                &.--avatar {
+                    opacity: 0;
+                    width: 250px;
+                    height: 250px;
+                    transform: translate(0, 0) scale(1) rotateY(90deg);
+                }
+            }
+        }
+
+        .badge {
+            position: absolute;
+            bottom: 0;
+
+            &.--language {
+                transform: translate(0, 0) scale(1);
+            }
+
+            &.--username {
+                transform: translate(0, 0px) scale(1);
+            }
+        }
+
+        &.language {
+            .iconitem {
+                &.--language {
+                    opacity: 1;
+                    transform: translate(0, 0) scale(1) rotateY(0deg);
+                }
+
+                &.--username {
+                    opacity: 0;
+                    transform: translate(0, 0) scale(1) rotateY(90deg);
+                }
+
+                &.--avatar {
+                    opacity: 0;
+                    transform: translate(0, 0) scale(1) rotateY(90deg);
+                }
+            }
+
+            .badge {
+                &.--language {
+                    transform: translate(0, 0) scale(1.8);
+                    font-family: var(--font-dmsans);
+                }
+
+                &.--username {
+                    transform: translate(0, -40px) scale(1);
+                }
+            }
+        }
+
+        &.user {
+            .iconitem {
+                &.--language {
+                    opacity: 0;
+                    transform: translate(0, 0) scale(1) rotateY(180deg);
+                }
+
+                &.--username {
+                    opacity: 1;
+                    transform: translate(0, 0) scale(1) rotateY(0deg);
+                }
+
+                &.--avatar {
+                    opacity: 0;
+                    transform: translate(0, 0) scale(1) rotateY(90deg);
+                }
+            }
+
+            .badge {
+                &.--language {
+                    transform: translate(0, 20px) scale(1);
+                }
+
+                &.--username {
+                    transform: translate(0, -20px) scale(1.8);
+                    font-family: var(--font-dmsans);
+                }
+            }
+        }
+
+        &.avatar {
+            .iconitem {
+                &.--language {
+                    opacity: 0;
+                    transform: translate(0, 0) scale(1) rotateY(180deg);
+                }
+
+                &.--username {
+                    opacity: 0;
+                    transform: translate(0, 0) scale(1) rotateY(180deg);
+                }
+
+                &.--avatar {
+                    opacity: 1;
+                    transform: translate(0, 0) scale(1) rotateY(0deg);
+                }
+            }
+
+            .badge {
+                &.--language {
+                    transform: translate(0, 20px) scale(1);
+                }
+
+                &.--username {
+                    transform: translate(0, -20px) scale(1.8);
+                    font-family: var(--font-dmsans);
+                }
+            }
+        }
+    }
+}
+
+
+// #endregion MODULE.REGISTER
+
+
+// #endregion MODULES STYLES

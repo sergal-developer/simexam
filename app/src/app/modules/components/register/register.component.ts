@@ -40,7 +40,17 @@ export class RegisterComponent implements OnInit, AfterContentInit {
     { url: "/assets/avatar-4.svg", selected: false },
     { url: "/assets/avatar-5.svg", selected: false },
     { url: "/assets/avatar-6.svg", selected: false },
+    { url: "/assets/avatar-7.svg", selected: false },
+    { url: "/assets/avatar-8.svg", selected: false },
+    { url: "/assets/avatar-9.svg", selected: false },
+    { url: "/assets/avatar-10.svg", selected: false },
+    { url: "/assets/avatar-11.svg", selected: false },
+    { url: "/assets/avatar-12.svg", selected: false },
+    { url: "/assets/avatar-13.svg", selected: false },
+    { url: "/assets/avatar-14.svg", selected: false }
   ];
+  animateAvatar = '';
+  listAvatarAnimation = '';
 
   translateLabels = {
     service_sucess_save: '',
@@ -53,20 +63,24 @@ export class RegisterComponent implements OnInit, AfterContentInit {
   uistate = 'init';
   uxView: '-view-1' | '-view-2' = '-view-1';
   uxFormView = [
-    { name: 'language', show: false, class: '-view-1' },
-    { name: 'user', show: false, class: '-view-2' },
-    { name: 'avatar', show: false, class: '-view-3' },
+    { name: 'language', class: '-view-1' },
+    { name: 'user', class: '-view-2' },
+    { name: 'avatar', class: '-view-3' },
   ];
   uxFormIndex = 0;
 
   uxUtils = new UxUtils();
 
-  sections = {
-    welcome: false,
-    language: false,
-    user: false,
-    avatars: false,
+  luIcon = {
+    language: icons.Globe,
+    username: icons.CircleUserRound,
+    avatar: icons.Crown,
+    left: icons.ChevronLeft,
+    right: icons.ChevronRight,
+    login: icons.LogIn
   }
+  currentLanguage = '';
+
 
   _icon = {
     start: icons.GraduationCap, // icons.GraduationCap,
@@ -75,21 +89,9 @@ export class RegisterComponent implements OnInit, AfterContentInit {
     strokeWidth: 1,
     size: 120
   }
-
-  luIcon = {
-    language: icons.Globe,
-    user: icons.UserRound,
-    userRound: icons.CircleUserRound,
-    avatar: icons.SquareUserRound,
-    left: icons.ChevronLeft,
-    right: icons.ChevronRight,
-    register: icons.UserPlus
-  }
-
-  currentLanguage = '';
   //#endregion INTERNAL
 
-  constructor(private fb: FormBuilder,
+  constructor(
     private commonServices: CommonServices,
     private uiServices: UiServices,
     private translate: TranslateService,
@@ -101,10 +103,17 @@ export class RegisterComponent implements OnInit, AfterContentInit {
   async ngOnInit() {
     this.uistate = '';
     this.uxView = '-view-1';
-    this.resetSections();
   }
 
   async ngAfterContentInit() {
+    this.init();
+  }
+  //#endregion LIFECYCLE
+
+  //#region DATA
+
+  async init() {
+    this.showView('-view-1');
     this._updateExternalSection('welcome');
     await this.uxUtils.wait(1000);
     this.showView('-view-1', async () => {
@@ -115,9 +124,6 @@ export class RegisterComponent implements OnInit, AfterContentInit {
       });
     });
   }
-  //#endregion LIFECYCLE
-
-  //#region DATA
 
   async getInitialData(after?: Function) {
     this.translate.get(['service_sucess_save', 'service_fail_save']).subscribe((res) => {
@@ -134,6 +140,7 @@ export class RegisterComponent implements OnInit, AfterContentInit {
         settings = await this.commonServices.getCurrentSettings();
       }
 
+      console.log('settings: ', settings);
       this.settings = settings;
       this.languages = this.settings._languages;
       this.currentLanguage = this.languages.find(x => x.value == this.settings.language);
@@ -150,36 +157,6 @@ export class RegisterComponent implements OnInit, AfterContentInit {
 
     if (after) { after(null) }
     return true;
-  }
-
-  async checkInitialSettings() {
-    this.translate.get(['service_sucess_save', 'service_fail_save']).subscribe((res) => {
-      this.translateLabels = res;
-    });
-
-    const existStructure = await this.loadDatabaseStructure();
-    if (existStructure) {
-      this.settings = await this.commonServices.saveDefaultData();
-      if (this.settings) {
-        this.languages = this.settings._languages;
-      }
-
-      this.currentLanguage = this.languages.find(x => x.value == this.settings.language);
-      console.log('this.currentLanguage : ', this.currentLanguage);
-
-      const profile = await this.commonServices.getCurrentUser()
-
-      if (profile) {
-        this.commonServices.navigate('dashboard');
-      } else {
-        await this.uxUtils.wait(2000);
-        this.configLanguage();
-      }
-    } else {
-      this.uiServices.notification("Error al establecer conexion SQL. reintentando", { type: 'error', closeTimer: 0 })
-      await this.uxUtils.wait(2000);
-      this.checkInitialSettings();
-    }
   }
 
   async loadDatabaseStructure() {
@@ -218,19 +195,31 @@ export class RegisterComponent implements OnInit, AfterContentInit {
     }
   }
 
-  validateData() {
+  validateUserLegal() {
+    return this.formData.name && this.formData.legal
+  }
+
+  validateForm() {
     const invalid = this.form.valid;
     const terms = this.form.get('legal').value;
-    return invalid && (invalid == terms);
+    return invalid && terms;
   }
   //#endregion DATA
 
   //#region EVENTS
-  selectAvatar(item) {
+  async selectAvatar(item) {
+    this.animateAvatar = '';
     this.defaultAvatars.map(image => {
       image.selected = image.url == item.url ? true : false;
     });
     this.form.get('image').setValue(item.url);
+
+    this.formData.image = item.url;
+    this.onChangeInput({});
+
+    this.animateAvatar = 'animate';
+    await this.uxUtils.wait(500);
+    this.animateAvatar = '';
   }
 
   async changeLanguage(language) {
@@ -242,37 +231,20 @@ export class RegisterComponent implements OnInit, AfterContentInit {
     this.settings.language = language;
 
     this.translate.setDefaultLang(this.settings.language);
-    await this.commonServices.saveSettings({
-      language: this.settings.language,
-      permissions: this.settings.permissions,
-      theme: this.settings.theme,
-      settingId: this.settings.settingId
-    });
+    await this.commonServices.saveSettings(this.settings);
 
     this.currentLanguage = this.languages.find(x => x.value == this.settings.language);
-    console.log('this.currentLanguage : ', this.currentLanguage);
   }
 
   onChangeInput(event) {
-    console.log('event: ', event, this.form.value);
     const { image, legal, name } = this.form.value;
-    this.formData.name = name
-
-    // this.formData.name = 
-  }
-
-  resetSections() {
-    this.sections = {
-      welcome: false,
-      language: false,
-      user: false,
-      avatars: false,
-    }
+    this.formData.name = name;
+    this.formData.legal = legal || false;
+    this.formData.image = image;
   }
 
   showView(name: '-view-1' | '-view-2', after?: Function) {
     this.uxView = name;
-
     const section = name == '-view-1' ? 'welcome' : 'language';
     this._updateExternalSection(section);
     if (after) { after() }
@@ -281,15 +253,19 @@ export class RegisterComponent implements OnInit, AfterContentInit {
   showFormView(name: 'language' | 'user' | 'avatar', after?: Function) {
     const newIndex = this.uxFormView.findIndex(form => form.name == name);
     this.uxFormIndex = newIndex;
-    console.log('this.uxFormView: ', this.uxFormView[this.uxFormIndex]);
     if (after) { after() }
   }
 
-  // this._updateExternalSection('welcome');
+  async getCurrentSection() {
+    this.listAvatarAnimation = '';
 
-  getCurrentSection() {
     const item = this.uxFormView[this.uxFormIndex];
     this._updateExternalSection(item.name);
+
+    if (this.uxFormIndex == 2) {
+      await this.uxUtils.wait(300);
+      this.listAvatarAnimation = 'list-reveal';
+    }
   }
 
   next() {
@@ -307,65 +283,8 @@ export class RegisterComponent implements OnInit, AfterContentInit {
     } else {
       this.uxFormIndex = this.uxFormView.length - 1;
     }
+    this.listAvatarAnimation = '';
     this.getCurrentSection();
-  }
-
-
-  async configWelcome() {
-    this._changeSection('welcome');
-    await this.checkInitialSettings();
-  }
-
-  async configUser() {
-    this._changeSection('user');
-  }
-
-  async configLanguage() {
-    this._changeSection('language');
-  }
-
-  async configAvatar() {
-    this._changeSection('avatars');
-  }
-
-  getCurrentNav(): { total: number, index: number } {
-    const keys = Object.keys(this.sections);
-    let _index = -1;
-    keys.map((key, index) => {
-      if (this.sections[key] == true) {
-        _index = index;
-        return;
-      }
-    });
-    return { total: keys.length, index: _index };
-  }
-
-
-  prevs() {
-    const nav = this.getCurrentNav();
-    if (nav.index > 0) {
-      const newIndex = nav.index - 1;
-      const keys = Object.keys(this.sections);
-      this._changeSection(keys[newIndex]);
-    }
-  }
-
-  nexts() {
-    const nav = this.getCurrentNav();
-    if (nav.index < nav.total - 1) {
-      const newIndex = nav.index + 1;
-      const keys = Object.keys(this.sections);
-      this._changeSection(keys[newIndex]);
-    }
-  }
-
-
-  private async _changeSection(key: string) {
-    this.changeMainBackground(key);
-    this.resetSections();
-    await this.uxUtils.wait(300);
-    this.sections[key] = true;
-    console.log('this.sections: ', this.sections);
   }
 
   private _updateExternalSection(section: string) {

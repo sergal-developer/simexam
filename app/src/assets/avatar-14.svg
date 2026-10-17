@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 90 93" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-15.75,-14.2)">
+        <path d="M17,69C13.667,53.667 17,39.667 27,27C35.667,16.333 46.333,12.333 59,15C73.667,13.667 85.667,19.333 95,32C103.667,43.333 106.667,56.667 104,72C101.333,80.667 97.333,87 92,91L93,101C89,105.667 84.333,105.333 79,100L73,95C69,105 64.333,108.333 59,105L51,96C45.667,105.333 40.333,107.333 35,102L29,94C21,94 17,90 17,82L17,69Z" style="fill:rgb(245,201,170);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.75,-14.2)">
+        <circle cx="39" cy="49" r="3.1" style="fill:rgb(48,38,34);"/>
+        <circle cx="81" cy="49" r="3.1" style="fill:rgb(48,38,34);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-15.75,-14.2)">
+        <ellipse cx="60" cy="65" rx="6.5" ry="11" style="fill:rgb(233,151,155);"/>
+    </g>
+</svg>

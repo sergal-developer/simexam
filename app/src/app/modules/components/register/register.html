@@ -1,11 +1,11 @@
 <div class="arrange --full-screen {{ uistate }}">
-
     <div class="arrange --full-screen --justify-center --align-center --border-radius glass glass-no-border">
 
+        <!-- MAIN SLIDER SCREEN -->
         <div class="arrange --full-screen --justify-left --align-center screen-slider">
-
             <div class="screen-slider-container -count-2 {{ uxView }}">
 
+                <!-- INITIAL SCREEN WELCOME -->
                 <div class="screen-slider-view">
                     <div class="arrange --column --justify-center --align-center --full-screen --padding-separation">
                         <div class="logo">SIMEXAM.</div>
@@ -13,34 +13,53 @@
                 </div>
 
                 <div class="screen-slider-view">
-                    <div class="arrange --column --full-screen --justify-between">
+                    <div
+                        class="arrange --column --full-screen --justify-between --gap-0 --position-relative --overflow-hidden">
 
-                        <div class="arrange --height-50">
+                        <!-- MAIN ICON -->
+                        <div
+                            class="arrange --height-50 hero-component {{ uxFormView[uxFormIndex].name }} --position-relative --overflow-hidden">
 
                             <div class="arrange --width-100 --justify-center --padding-separation">
-                                <div class="badge big --language" *ngIf="currentLanguage">{{ currentLanguage.name }}
+                                <div class="hero-icon">
+                                    <lu-icon class="iconitem --language" [icon]="luIcon.language"></lu-icon>
+                                    <lu-icon class="iconitem --username" [icon]="luIcon.username"></lu-icon>
+                                    <div class="iconitem --avatar">
+                                        <lu-icon [icon]="luIcon.avatar" *ngIf="!formData.image"></lu-icon>
+                                        <div class="-avatar -avatar-size-250 selected" *ngIf="formData.image">
+                                            <img [attr.src]="formData.image" [attr.alt]="formData.image"
+                                                [class.animate]="animateAvatar">
+                                        </div>
+                                    </div>
+
+                                    <div class="badge --language" *ngIf="currentLanguage">
+                                        {{ currentLanguage.name }}
+                                    </div>
+                                    <div class="badge common inverted --username">
+                                        {{ formData.name || 'form_username' | translate }}
+                                    </div>
                                 </div>
-                                <lu-icon class="hero-icon" [icon]="luIcon.language"></lu-icon>
                             </div>
+
                         </div>
 
-                        <div class="arrange --height-50 screen-slider">
-
+                        <!-- SCREEN SLIDER  -->
+                        <div class="arrange --height-50 --position-relative --overflow-hidden screen-slider">
                             <div class="screen-slider-container -count-3 {{ uxFormView[uxFormIndex].class }}">
 
+                                <!-- LANGUAGE SCREEN -->
                                 <div class="screen-slider-view">
-
                                     <div
-                                        class="arrange --column --center --padding-separation --height-auto --gap-separation">
-                                        <div class="-title -title-big">
+                                        class="arrange --column --padding-separation --height-100 --gap-section --align-center --text-center --justify-start --gap-separation">
+                                        <div class="-title -title-size-280">
                                             <span>{{ 'register_title' | translate }} </span>
                                             <span class="emphasis">{{ 'register_title_connector' | translate }}</span>
                                         </div>
 
-                                        <p>
+                                        <div class="-title -title-size-120">
                                             <b>{{ 'register_language_connector'| translate }}</b>
                                             {{ 'register_language'| translate }}
-                                        </p>
+                                        </div>
 
                                         <div class="joined-elements">
                                             <ng-container *ngFor="let lan of languages">
@@ -52,28 +71,30 @@
                                             </ng-container>
                                         </div>
 
-                                        <div class="joined-elements">
+                                        <div class="joined-elements arrange --margin-top-auto">
+                                            <!-- <button class="element primary" (click)="init()">
+                                                <lu-icon [icon]="luIcon.left"></lu-icon><span>{{ 'action_prev' |
+                                                    translate }}</span>
+                                            </button> -->
                                             <button class="element accent" (click)="next()">
                                                 <span>{{ 'action_next' | translate }}</span><lu-icon
                                                     [icon]="luIcon.right"></lu-icon>
                                             </button>
                                         </div>
                                     </div>
-
                                 </div>
 
+                                <!-- USER SCREEN -->
                                 <div class="screen-slider-view">
-
                                     <div
-                                        class="arrange --column --center --padding-separation --height-auto --gap-separation">
-                                        <div class="-title -title-big">
-                                            <span class="emphasis">{{'register_title_welcome' | translate }}</span> <br>
-                                            <span *ngIf="!formData.name">{{ 'register_title_welcome_connector' |
-                                                translate }} </span>
-                                            <span *ngIf="formData.name">{{ formData.name }}. </span>
+                                        class="arrange --column --padding-separation --height-100 --gap-group --align-center --text-center --justify-start">
+                                        <div class="-title -title-size-280">
+                                            <span class="emphasis">{{'register_title_welcome' | translate }}</span>
                                         </div>
-                                        <div class="-title" *ngIf="formData.name">
-                                            Gestiona tu tiempo y tu aprendizaje de manera integrada.
+                                        <div class="-title -title-size-130">
+                                            {{ 'register_title_welcome_connector' | translate }}</div>
+                                        <div class="-title">
+                                            <div>{{ 'register_subtitle_username' | translate }}</div>
                                         </div>
 
                                         <form [formGroup]="form"
@@ -108,39 +129,38 @@
                                             </div>
                                         </form>
 
-                                        <div class="joined-elements">
+                                        <div class="joined-elements arrange --margin-top-auto">
 
                                             <button class="element accent" (click)="prev()">
                                                 <lu-icon [icon]="luIcon.left"></lu-icon><span>{{ 'action_prev' |
                                                     translate }}</span>
                                             </button>
                                             <button class="element accent" (click)="next()"
-                                                [disabled]="!validateData()">
+                                                [disabled]="!validateUserLegal()">
                                                 <span>{{ 'action_next' | translate }}</span><lu-icon
                                                     [icon]="luIcon.right"></lu-icon>
                                             </button>
                                         </div>
                                     </div>
-
                                 </div>
 
+                                <!-- AVATAR SCREEN -->
                                 <div class="screen-slider-view">
-
                                     <div
-                                        class="arrange --column --center --padding-separation --height-auto --gap-separation">
-                                        <div class="-title -title-big">
-                                            <span>{{ 'form_image' | translate }}</span> <br>
-                                            <span class="emphasis">{{'register_title_welcome' | translate }}</span> <br>
-                                            <span>{{ 'register_title_welcome_connector' | translate }} </span>
+                                        class="arrange --column --padding-separation --height-100 --gap-direct --align-center --text-center --justify-start">
+                                        <div class="-title -title-size-230">
+                                            {{ 'register_title_avatar' | translate }}
                                         </div>
-                                        <div class="-title" *ngIf="formData.name">
-                                            Gestiona tu tiempo y tu aprendizaje de manera integrada.
+                                        <div class="-title -title-size-130">
+                                            <span class="emphasis">{{ 'register_subtitle_avatar' | translate }}</span>
                                         </div>
 
                                         <form [formGroup]="form">
                                             <div class="mat-form-field">
-                                                <div class="_collection">
-                                                    <div class="avatar-image" *ngFor="let item of defaultAvatars"
+                                                <div
+                                                    class="arrange --align-start --justify-center --gap-joined --padding-group">
+                                                    <div class="-avatar -avatar-size-50 list-reveal-initial {{ listAvatarAnimation }}"
+                                                        *ngFor="let item of defaultAvatars"
                                                         [ngClass]="{'selected': item.selected }"
                                                         (click)="selectAvatar(item)">
                                                         <img [attr.src]="item.url" [attr.alt]="item.url">
@@ -158,18 +178,18 @@
 
                                         </form>
 
-                                        <div class="joined-elements">
+                                        <div class="joined-elements arrange --margin-top-auto">
                                             <button class="element accent" (click)="prev()">
                                                 <lu-icon [icon]="luIcon.left"></lu-icon><span>{{ 'action_prev' |
                                                     translate }}</span>
                                             </button>
-                                            <button class="element accent" (click)="register()" *ngIf="validateData()">
-                                                <span>{{ 'singup' | translate }}</span>
-                                                <lu-icon [icon]="luIcon.register"></lu-icon>
+                                            <button class="element secondary" (click)="register()"
+                                                [disabled]="!validateForm()">
+                                                <span>{{ 'register_action' | translate }}</span>
+                                                <lu-icon [icon]="luIcon.login"></lu-icon>
                                             </button>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
 
