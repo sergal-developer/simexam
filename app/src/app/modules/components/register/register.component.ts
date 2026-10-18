@@ -184,11 +184,11 @@ export class RegisterComponent implements OnInit, AfterContentInit {
 
     let user = await this.commonServices.getCurrentUser();
     if (user) {
-      this.uiServices.notification(this.translateLabels.service_sucess_save, { type: 'success', closeTimer: 1500 });
+      // this.uiServices.notification(this.translateLabels.service_sucess_save, { type: 'success', closeTimer: 1500 });
       this.uistate = 'exit';
       setTimeout(() => {
         this.commonServices.navigate('dashboard');
-      }, 1500);
+      }, 1000);
     } else {
       this.uistate = '';
       this.uiServices.notification(this.translateLabels.service_fail_save, { type: 'error', closeTimer: 1500 });

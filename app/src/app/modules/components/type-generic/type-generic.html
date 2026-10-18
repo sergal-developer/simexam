@@ -1,14 +1,14 @@
-<div class="screen-wrapper arrage columns" *ngIf="questionary && questionary.questions[index]">
+<div class="screen-wrapper arrange columns" *ngIf="questionary && questionary.questions[index]">
     <ng-container>
         <section-dinamic design="glass">
-            <div class="screen-container arrage columns paddings-direct gaps-joined">
-                <div class="arrage row gaps-joined font_variable paddings-direct">
+            <div class="screen-container arrange columns paddings-direct gaps-joined">
+                <div class="arrange row gaps-joined font_variable paddings-direct">
                     <div class="item _help_section">
                         <!-- <span class="material-icons _accent color">help</span> -->
                         <div>{{ 'help_quiz_title' | translate }}</div>
                     </div>
                 </div>
-                <div class="arrage row centers gaps-joined font_variable">
+                <div class="arrange row centers gaps-joined font_variable">
                     <div class="item" (click)="saveData()">
                         <div class="badge secondary">
                             <div>{{ 'save' | translate }}</div>
@@ -79,14 +79,14 @@
 
         <ng-container *ngIf="questionary.type == 'math-quest'">
             <section-dinamic design="glass">
-                <div class="arrage columns paddings-direct gaps-joined">
-                    <div class="arrage row gaps-joined font_variable paddings-direct">
+                <div class="arrange columns paddings-direct gaps-joined">
+                    <div class="arrange row gaps-joined font_variable paddings-direct">
                         <div class="item _help_section">
                             <div>{{ 'help_quiz_title' | translate }}</div>
                         </div>
                     </div>
-                    <div class="arrage row centers gaps-joined font_variable">
-                        <div class="arrage stacked gaps-joined">
+                    <div class="arrange row centers gaps-joined font_variable">
+                        <div class="arrange stacked gaps-joined">
                             <div class="badge">
                                 <div>Operations</div>
 
@@ -110,7 +110,7 @@
 
                         </div>
 
-                        <div class="arrage stacked gaps-joined">
+                        <div class="arrange stacked gaps-joined">
                             <div class="badge">
                                 <div>Numbers</div>
 
@@ -129,7 +129,7 @@
                             </div>
                         </div>
 
-                        <div class="arrage stacked gaps-joined">
+                        <div class="arrange stacked gaps-joined">
                             <div class="badge">
                                 <div>Levels</div>
 
@@ -152,7 +152,7 @@
         </ng-container>
 
         <section-dinamic design="glass">
-            <div class="screen-container arrage columns paddings-direct gaps-joined">
+            <div class="screen-container arrange columns paddings-direct gaps-joined">
                 <div class="item font_variable" [ngClass]="{'hidden': !formControl.showQuestion }">
                     <mat-input [title]="'question' | translate" [mesageError]="'form_required_question' | translate"
                         [formControl]="formQuestion.get('question')" [multiline]="true"
@@ -185,17 +185,17 @@
                 </div>
 
                 <ng-container *ngIf="!formQuestion.get('answers').controls.length">
-                    <div class="arrage columns paddings" [ngClass]="{'hidden': !formControl.showAnswers }">
-                        <div class="item arrage stacked centers font_variable" (click)="setAnswersFormOfQuestion()">
+                    <div class="arrange columns paddings" [ngClass]="{'hidden': !formControl.showAnswers }">
+                        <div class="item arrange stacked centers font_variable" (click)="setAnswersFormOfQuestion()">
                             <lu-icon [icon]="luIcon.addAnswers"></lu-icon>
                             <div>{{ 'add' | translate }} {{ 'answer' | translate }}</div>
                         </div>
                     </div>
                 </ng-container>
                 <ng-container *ngIf="formQuestion.get('answers').controls.length">
-                    <div class="arrage columns gaps" [ngClass]="{'hidden': !formControl.showAnswers }">
+                    <div class="arrange columns gaps" [ngClass]="{'hidden': !formControl.showAnswers }">
                         <ng-container *ngFor="let answer of formQuestion.get('answers').controls; index as i">
-                            <div class="item arrage stacked font_variable middle spaceBetween"
+                            <div class="item arrange stacked font_variable middle --justify-between"
                                 [ngClass]="{'_accent color': answer.get('isCorrect')?.value }">
                                 <button class="link" (click)="setCorrectAnswer(answer, i)"
                                     *ngIf="questionary.type != 'popularity'">
@@ -203,14 +203,14 @@
                                     <lu-icon *ngIf="answer.get('isCorrect')?.value"
                                         [icon]="luIcon.questionCorrect"></lu-icon>
                                 </button>
-                                <div class="arrage width-100">
+                                <div class="arrange width-100">
                                     <mat-input class="small-field" [title]="'opcion' | translate"
                                         [mesageError]="'form_required_opcion' | translate"
                                         [formControl]="answer.get('answer')" [formName]="'answer'" [multiline]="true"
                                         (onChange)="onInputChange($event, i)">
                                     </mat-input>
                                 </div>
-                                <div class="arrage" style="width: 130px;"
+                                <div class="arrange" style="width: 130px;"
                                     [ngClass]="{'hidden': !formControl.showPopular }">
                                     <mat-input class="small-field" [title]="'popularity' | translate" type="number"
                                         [mesageError]="'form_required_popularity' | translate"

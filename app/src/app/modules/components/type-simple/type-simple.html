@@ -1,4 +1,4 @@
-<div class="arrage columns centers paddings-relation height-75-view" *ngIf="attempt.questions[index]">
+<div class="arrange columns centers --padding-relation height-75-view" *ngIf="attempt.questions[index]">
     <ng-container *ngIf="currentSection == 'quiz' && attempt.questions[index]">
 
         <div class="flash-card" [ngClass]="{'is-flipped': attempt.questions[index]._flip }" (click)="flipCurrentCard()">
@@ -18,11 +18,11 @@
         <ng-container *ngIf="false">
 
             <section-dinamic design="glass">
-                <div class="arrage columns paddings">
+                <div class="arrange columns paddings">
                     <div class="item">
-                        <div class="arrage row {{numrows}}">
+                        <div class="arrange row {{numrows}}">
                             <ng-container *ngFor="let option of attempt.questions[index].answers">
-                                <div class="_answer arrage stacked" [ngClass]="{   
+                                <div class="_answer arrange stacked" [ngClass]="{   
                                         'selected': option._selected,
                                         'incorrect': readonly && !option.isCorrect,
                                         'correct': readonly && option.isCorrect,
@@ -72,8 +72,8 @@
 
     <ng-container *ngIf="currentSection == 'results'">
         <section-dinamic design="glass">
-            <div class="arrage centers columns paddings full-width">
-                <div class="item arrage centers">
+            <div class="arrange centers columns paddings full-width">
+                <div class="item arrange centers">
                     <h1>
                         <ng-container *ngIf="attempt._grade == _gradeState.finished">
                             <span>{{ 'attempt_status_finished' | translate }}</span>
@@ -90,14 +90,14 @@
                     y por tarjeta
                 </div>
 
-                <div class="item arrage row _2 centers paddings">
+                <div class="item arrange row _2 centers paddings">
                     <div class="stadistic">
                         <h3>Tiempo total de la ronda</h3>
                         <div class="_accent color">{{ attempt?._totalTimeFormat?.format || '-' }}</div>
                     </div>
                 </div>
 
-                <div class="item arrage columns centers paddings">
+                <div class="item arrange columns centers paddings">
                     <h3>Listado de tarjetas</h3>
                     <div class="_collection overflow_180">
                         <ng-container *ngFor="let item of attempt.questions; let i = index">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
 
-                <div class="item arrage centers paddings">
+                <div class="item arrange centers paddings">
                     <button (click)="showQuiz()">
                         <span class="material-icons">
                             rule

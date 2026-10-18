@@ -285,8 +285,6 @@ button,
    */
 }
 
-
-
 .-title {
     font-size: 100%;
     color: var(--baseColor);
@@ -299,6 +297,55 @@ button,
 
     .emphasis {
         color: var(--baseColorEmphasis);
+    }
+}
+
+.-svg {
+    svg {
+        width: auto;
+        height: 24px;
+    }
+
+    @for $i from 1 through 300 {
+        &-size-#{$i} {
+            svg {
+                width: auto;
+                height: #{$i * 1px};
+            }
+        }
+    }
+
+    &-stroke-05 {
+        svg {
+            stroke-width: 0.5;
+        }
+    }
+
+    &-stroke-07 {
+        svg {
+            stroke-width: 0.7;
+        }
+    }
+
+    &-stroke-08 {
+        svg {
+            stroke-width: 0.8;
+        }
+    }
+
+    &-stroke-09 {
+        svg {
+            stroke-width: 0.9;
+        }
+    }
+
+    @for $i from 1 through 100 {
+        &-stroke-#{$i} {
+            svg {
+                stroke-width: #{$i * 1};
+                ;
+            }
+        }
     }
 }
 

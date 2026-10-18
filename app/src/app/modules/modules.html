@@ -3,48 +3,57 @@
     <lu-icon [icon]="luIcon.badge"></lu-icon>
 </div>
 
-<div class="screen-component {{ uistate }} {{ uisubstate }}">
-    <div class="screen-container {{ '__' + screen }}">
+<div class="arrange --full-screen screen-slider {{ uistate }} {{ uisubstate }}">
+    <div class="screen-slider-container -count-10" [ngClass]="{
+            '-view-1': screen === _screen.register,
+            '-view-2': screen === _screen.dashboard,
+            '-view-3': screen === _screen.settings,
+            '-view-4': screen === _screen.quizcreate,
+            '-view-5': screen === _screen.quizedit,
+            '-view-6': screen === _screen.attemptevalue,
+            '-view-7': screen === _screen.attemptreview,
+            '-view-8': screen === _screen.quizselection,
+            '-view-9': screen === _screen.dbclient }">
 
-        <div class="screen-module" [ngClass]="{'open': screen === _screen.register }">
+        <div class="screen-slider-view">
             <register class="_screen screen_register" *ngIf="screen === _screen.register"
                 (onChange)="onChangeUI($event)"></register>
         </div>
 
-        <div class="screen-module" [ngClass]="{'open': screen === _screen.dashboard }">
+        <div class="screen-slider-view">
             <dashboard [selected]="submodule" class="_screen screen_main" *ngIf="screen === _screen.dashboard"
                 (onChange)="onChangeUI($event)"></dashboard>
         </div>
 
-        <div class="screen-module" [ngClass]="{'open': screen === _screen.settings }">
+        <div class="screen-slider-view">
             <settings class="_screen screen_settings" *ngIf="screen === _screen.settings"></settings>
         </div>
 
-        <div class="screen-module" [ngClass]="{'open': screen === _screen.quizcreate }">
+        <div class="screen-slider-view">
             <quiz-editable [typeQuiz]="type" class="_screen screen_quiz"
                 *ngIf="screen === _screen.quizcreate"></quiz-editable>
         </div>
 
-        <div class="screen-module" [ngClass]="{'open': screen === _screen.quizedit }">
+        <div class="screen-slider-view">
             <quiz-editable [quizId]="submodule" [typeQuiz]="type" class="_screen screen_quiz"
                 *ngIf="screen === _screen.quizedit"></quiz-editable>
         </div>
 
-        <div class="screen-module" [ngClass]="{'open': screen === _screen.attemptevalue }">
+        <div class="screen-slider-view">
             <quiz-view [id]="submodule" [review]="false" class="_screen screen_quiz"
                 *ngIf="screen === _screen.attemptevalue" (onChange)="onChangeUI($event)"></quiz-view>
         </div>
 
-        <div class="screen-module" [ngClass]="{'open': screen === _screen.attemptreview }">
+        <div class="screen-slider-view">
             <quiz-view [id]="submodule" [review]="true" class="_screen screen_quiz"
                 *ngIf="screen === _screen.attemptreview" (onChange)="onChangeUI($event)"></quiz-view>
         </div>
 
-        <div class="screen-module" [ngClass]="{'open': screen === _screen.quizselection }">
+        <div class="screen-slider-view">
             <quiz-selector class="_screen screen_quiz" *ngIf="screen === _screen.quizselection"></quiz-selector>
         </div>
 
-        <div class="screen-module" [ngClass]="{'open': screen === _screen.dbclient }">
+        <div class="screen-slider-view">
             <dbclient class="_screen screen_quiz" *ngIf="screen === _screen.dbclient"></dbclient>
         </div>
 

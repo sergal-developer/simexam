@@ -1,8 +1,8 @@
-<div class="arrage columns centers paddings-relation" *ngIf="attempt.questions[index]">
+<div class="arrange columns centers --padding-relation" *ngIf="attempt.questions[index]">
     <ng-container *ngIf="currentSection == 'quiz' && attempt.questions[index]">
         <section-dinamic design="glass">
-            <div class="arrage columns paddings _question_section" *ngIf="attempt.questions[index].explanationArray">
-                <div class="arrage row gaps-joined font_variable">
+            <div class="arrange columns paddings _question_section" *ngIf="attempt.questions[index].explanationArray">
+                <div class="arrange row gaps-joined font_variable">
                     <ng-container *ngFor="let item of attempt.questions[index].explanationArray">
                         <div class="word" [ngClass]="{
                             'hasMarked': item.hasMarked || item.id == readingIndex, 
@@ -15,11 +15,11 @@
         </section-dinamic>
         <!-- 
         <section-dinamic design="glass">
-            <div class="arrage columns paddings">
+            <div class="arrange columns paddings">
                 <div class="item">
-                    <div class="arrage row {{numrows}}">
+                    <div class="arrange row {{numrows}}">
                         <ng-container *ngFor="let option of attempt.questions[index].answers">
-                            <div class="_answer arrage stacked" [ngClass]="{   
+                            <div class="_answer arrange stacked" [ngClass]="{   
                                         'selected': option._selected,
                                         'incorrect': readonly && !option.isCorrect,
                                         'correct': readonly && option.isCorrect,
@@ -70,8 +70,8 @@
 
     <ng-container *ngIf="currentSection == 'results'">
         <section-dinamic design="glass">
-            <div class="arrage centers columns paddings full-width">
-                <div class="item arrage centers">
+            <div class="arrange centers columns paddings full-width">
+                <div class="item arrange centers">
                     <h1>
                         <ng-container *ngIf="attempt._grade == _gradeState.passed">
                             <span>{{ 'attempt_status_approved' | translate }}</span>
@@ -105,7 +105,7 @@
                     {{ 'attempt_subtitle' | translate }}
                 </div>
 
-                <div class="item arrage row _2 paddings">
+                <div class="item arrange row _2 paddings">
                     <div class="stadistic">
                         <h3>{{ 'attempt_status_hits' | translate }}</h3>
                         <div class="_accent color">{{ attempt._correctQuestions }} de {{
@@ -119,7 +119,7 @@
                     </div>
                 </div>
 
-                <div class="item arrage columns centers paddings">
+                <div class="item arrange columns centers paddings">
                     <h3>{{ 'attempt_status_rating_correct' | translate }}</h3>
                     <div class="_collection overflow_180">
                         <ng-container *ngFor="let item of attempt.questions; let i = index">
@@ -131,7 +131,7 @@
                     </div>
                 </div>
 
-                <div class="item arrage centers paddings">
+                <div class="item arrange centers paddings">
                     <button (click)="showQuiz()">
                         <div class="inner">
                             <span class="material-icons">

@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { icons } from 'lucide';
 import { AttemptDTO, PermissionsDTO, QuestionaryDTO, SettingsDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
 import { TransformData } from 'src/app/shared/data/utils/transformData';
+import { UxUtils } from 'src/app/shared/data/utils/uxUtils';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
 
@@ -11,15 +12,22 @@ import { UiServices } from 'src/app/shared/services/ui.services';
   templateUrl: './dashboard.html',
   encapsulation: ViewEncapsulation.None,
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterViewInit {
   @Output() onChange = new EventEmitter();
   @Input() selected: number = null;
 
   listQuestionnaire: QuestionaryDTO[] = [];
   currentQuestionnaire: QuestionaryDTO = null;
-  currentSection: '_one' | '_two' | '_three' = '_one';
   listAttempts: AttemptDTO[] = [];
   uistate = 'init';
+  uxView: '-view-1' | '-view-2' | '-view-3' = '-view-1';
+  uxContentView = [
+    { name: 'empty', class: '-view-1' },
+    { name: 'dashboard', class: '-view-2' },
+    { name: 'details', class: '-view-3' },
+  ];
+  uxContentIndex = 0;
+
   actionsAttempts = false;
 
   transform = new TransformData();
@@ -38,12 +46,12 @@ export class DashboardComponent implements OnInit {
   };
 
   luIcon = {
-    empty: icons.SquareDashedKanban,
+    empty: icons.Ghost,
+    new: icons.CirclePlus,
     attempts: icons.ChevronRight,
     open: icons.SquareArrowOutUpRight,
     review: icons.ListChecks,
     resolve: icons.ArrowRightFromLine,
-    
 
     back: icons.ArrowLeft,
     actions: icons.EllipsisVertical,
@@ -65,42 +73,55 @@ export class DashboardComponent implements OnInit {
     gradePassed: icons.CircleCheckBig,
     gradePerfect: icons.Sparkles,
   }
+  uxUtils = new UxUtils();
 
   constructor(private commonServices: CommonServices,
     private uiServices: UiServices,
     private translate: TranslateService) { }
 
   async ngOnInit() {
-    this.uiServices.showLoader(true);
-    this.setupLanguage(async () => {
-      setTimeout(() => {
-        this.uistate = '';
-        this.init();
-      }, 800);
-    });
   }
 
-  async setupLanguage(next) {
-    this.settings = await this.commonServices.getCurrentSettings();
-    this.user = await this.commonServices.getCurrentUser();
-    this.permissions = this.settings.permissions as PermissionsDTO;
-
-    this.translate.setDefaultLang(this.settings.language);
-    const keys = Object.keys(this.translateLabels);
-    this.translate.get(keys).subscribe((res) => {
-      this.translateLabels = res;
-      next();
-    });
+  async ngAfterViewInit() {
+    this.uiServices.showLoader(true);
+    this.uistate = '';
+    // await this.uxUtils.wait(300);
+    this.setupLanguage();
+    this.init();
   }
 
   //#region DATA
+  async setupLanguage(next?: Function) {
+    this.settings = await this.commonServices.getCurrentSettings();
+    this.user = await this.commonServices.getCurrentUser();
+    console.log('this.settings: ', this.settings);
+
+    if (this.settings) {
+      this.permissions = this.settings.permissions as PermissionsDTO;
+      this.translate.setDefaultLang(this.settings.language);
+      const keys = Object.keys(this.translateLabels);
+      this.translate.get(keys).subscribe((res) => {
+        this.translateLabels = res;
+      });
+      if (next) { next(); }
+      return true;
+    }
+    return false;
+  }
+
   async init() {
     this.uiServices.showLoader(true);
+
     const list = await this.commonServices.getAllQuestionary();
-    console.log('list: ', list);
     if (list) {
       this.listQuestionnaire = list;
-      this.currentSection = this.listQuestionnaire.length ? '_two' : '_one';
+      console.log('this.listQuestionnaire: ', this.listQuestionnaire);
+
+      if (this.listQuestionnaire.length) {
+        this.showView('dashboard');
+      } else {
+        this.showView('empty');
+      }
     }
 
     if (this.selected) {
@@ -147,7 +168,7 @@ export class DashboardComponent implements OnInit {
 
   //#region EVENTS
   returnMain() {
-    this.currentSection = '_two';
+    this.uxView = '-view-2';
     setTimeout(() => {
       this.listQuestionnaire.map((item) => {
         item._current = false;
@@ -182,7 +203,7 @@ export class DashboardComponent implements OnInit {
   showActions() {
     this.actionsAttempts = !this.actionsAttempts;
   }
-  
+
   valueChange(value: string) {
     this.onChange.emit({ action: 'ui_update', value: value });
   }
@@ -199,7 +220,7 @@ export class DashboardComponent implements OnInit {
     this.listQuestionnaire.map((item) => {
       item._current = quiz.questionaryId == item.questionaryId;
     });
-    this.currentSection = '_three';
+    this.uxView = '-view-3';
     this.currentQuestionnaire = quiz;
     this.getAttempts(this.currentQuestionnaire);
 
@@ -232,5 +253,25 @@ export class DashboardComponent implements OnInit {
   //#endregion EVENTS
 
   //#region CONVERTERS
+  _viewEmpty() {
+    this.showView('empty');
+  }
+
+  _viewDashboard() {
+    this.showView('dashboard');
+  }
+
+  _viewDetails() {
+    this.showView('details');
+  }
+
+  showView(name: 'empty' | 'dashboard' | 'details', after?: Function) {
+    const newIndex = this.uxContentView.findIndex(form => form.name == name);
+    this.uxView = this.uxContentView[newIndex].class as '-view-1' | '-view-2' | '-view-3';
+    this.uxContentIndex = newIndex;
+
+    this.valueChange(this.uxContentView[newIndex].name);
+    if (after) { after() }
+  }
   //#endregion CONVERTERS
 }

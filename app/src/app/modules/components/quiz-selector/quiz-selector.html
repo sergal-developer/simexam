@@ -1,13 +1,13 @@
 <div class="_animation_state">
     <div class="all-screen-section">
         <section-dinamic design="glass">
-            <div class="arrage spaceBetween paddings-relation">
+            <div class="arrange --justify-between --padding-relation">
                 <div class="item" (click)="gotoDashboard()">
                     <lu-icon [icon]="luIcon.back"></lu-icon>
                 </div>
                 <h3>Plantillas Genericas</h3>
             </div>
-            <div class="arrage row paddings-relation gaps-joined _2">
+            <div class="arrange row --padding-relation gaps-joined _2">
                 <button class="square" (click)="createNewBlank('trivia')">
                     <lu-icon [icon]="luIcon.trivia"></lu-icon>
                     <div>{{ 'quiz_type_trivia' | translate }}</div>
@@ -45,11 +45,11 @@
     <div class="root-container quiz-form">
 
         <section-dinamic design="glass">
-            <div class="arrage centers paddings">
+            <div class="arrange centers paddings">
                 <h3>Plantillas en Linea ( <b>{{ listFilesFiltered.length }}</b> )</h3>
                 <button class="link" (click)="resetFilter()" *ngIf="currentFilter">reset</button>
             </div>
-            <div class="arrage centers gaps-joined">
+            <div class="arrange centers gaps-joined">
                 <button class="square" (click)="filterBy('trivia')">
                     <lu-icon [icon]="luIcon.trivia"></lu-icon>
                     <div>{{ 'quiz_type_trivia' | translate }}</div>
@@ -71,8 +71,8 @@
                 </button>
             </div>
 
-            <div class="arrage columns paddings">
-                <div class="arrage left spaceBetween" *ngFor="let quiz of listFilesFiltered">
+            <div class="arrange columns paddings">
+                <div class="arrange left --justify-between" *ngFor="let quiz of listFilesFiltered">
                     <div class="item">
                         <button class="accent" (click)="getFile(quiz)">
                             <lu-icon [icon]="luIcon.download"></lu-icon>
