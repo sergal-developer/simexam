@@ -1,254 +1,249 @@
-<header [mode]="'settings'"></header>
+<div class="arrange --full-screen">
+    <div class="arrange --full-screen --gap-0 glass glass-no-border">
+        <!-- MODULE HEADER -->
+        <div class="arrange --width-screen --padding-group --padding-bottom-0 --height-8-vh">
+            <div class="arrange --row-nowrap --align-center --justify-start --width-100">
+                <ng-container>
 
-<div class="root-container">
+                    <div class="-svg -svg-size-25" (click)="returnMain()">
+                        <lu-icon [icon]="luIcon.back"></lu-icon>
+                    </div>
+                    <div class="-title -title-size-160 -title-bold">Configuracion</div>
+                </ng-container>
+            </div>
+        </div>
 
-    <div class="simple-section gray-backdrop">
-        <div class="_content small" *ngIf="profile">
-            <h4 class="title-upper">{{ 'profile' | translate }}</h4>
-            <div class="_content_inner">
-                <div class="_item_option _help_section">
-                    <div class="icon _secondary color">
-                        <span class="material-icons">
-                            help
-                        </span>
-                    </div>
-                    <div>{{ 'help_profile' | translate }}</div>
-                </div>
-                <div class="_item_option _profile_dinamic_section">
-                    <div class="item _avatar_collection" [ngClass]="{'closed': !profileUI.avatarEdit }">
-                        <div class="_wrap_collection">
-                            <ng-container *ngFor="let item of defaultAvatars">
-                                <div class="avatar-image" *ngIf="profileUI.avatarEdit"
-                                    [ngClass]="{'selected': item.selected }" (click)="selectAvatar(item)">
-                                    <img [attr.src]="item.url" [attr.alt]="item.url">
-                                </div>
-                            </ng-container>
-                        </div>
-                    </div>
-                    <div class="item _avatar_default"
-                        [ngClass]="{'open_props': profileUI.avatarEdit, 'closed': profileUI.usernameEdit }">
-                        <ng-container *ngIf="!profileUI.usernameEdit">
-                            <div class="image" (click)="editAvatar()" *ngIf="!profileUI.avatarEdit">
-                                <img [attr.src]="profile.avatarUrl" alt="">
+        <!-- MAIN SCREEN SLIDER -->
+
+        <div id="quiz-list-screen-slider"
+            class="arrange --justify-left --align-start --padding-top-0 --padding-bottom-12 screen-slider --height-90-vh">
+            <div class="screen-slider-container -count-3 -view-1">
+
+                <!-- SCREEN ACTIVITY/DASHBOARD -->
+                <div class="screen-slider-view">
+                    <div
+                        class="arrange --column --justify-between --padding-group --padding-top-0 --padding-bottom-0 --gaps-linked">
+                        <ng-container *ngIf="profile">
+                            <div class="-title -title-size-180">{{ 'profile' | translate }}</div>
+
+                            <div class="-title -title-size-120">
+                                <span class="material-icons">help</span>
+                                {{ 'help_profile' | translate }}
                             </div>
-                            <button class="primary" (click)="editAvatar()" *ngIf="profileUI.avatarEdit">
-                                <div class="inner"><span class="material-icons">done</span></div>
-                            </button>
-                        </ng-container>
-                    </div>
-                    <div class="item _username_default" [ngClass]="{'closed': profileUI.avatarEdit }">
-                        <ng-container *ngIf="!profileUI.avatarEdit">
-                            <mat-input [title]="'form_name' | translate"
-                                [mesageError]="'form_name_required' | translate" [formControl]="form.get('name')">
-                            </mat-input>
-                            <button (click)="editUsername()" *ngIf="!profileUI.usernameEdit">
-                                <div class="inner"><span class="material-icons">edit</span></div>
-                            </button>
-                        </ng-container>
-                    </div>
-                    <div class="item _username_actions" [ngClass]="{'closed': !profileUI.usernameEdit }">
-                        <ng-container *ngIf="profileUI.usernameEdit">
 
-                            <button class="primary" (click)="editUsernameConfirm()">
-                                <div class="inner"><span class="material-icons">done</span></div>
-                            </button>
-                            <button (click)="editUsernameCancel()">
-                                <div class="inner"><span class="material-icons">close</span></div>
-                            </button>
-                        </ng-container>
-                    </div>
-                </div>
+                            <div class="divider"></div>
 
-            </div>
-        </div>
+                            <div class="arrange --row-nowrap --center">
 
-        <div class="_content small" *ngIf="settings">
-            <h4 class="title-upper">{{ 'permission_theme' | translate }}</h4>
-            <div class="_content_inner">
-                <div class="_item_option _profile_dinamic_section">
-                    <div class="item _generic_actions">
-                        <div class="icon">
-                            <span class="material-icons">app_registration</span>
-                        </div>
-
-                        <ng-container *ngFor="let theme of availableThemes">
-                            <button class="link"
-                                [ngClass]="{'primary': theme == settings.theme, 'link': theme != settings.theme }"
-                                (click)="changeTheme(theme)">
-                                <div class="inner">
-                                    <ng-container *ngIf="theme == 'light'"><span
-                                            class="material-icons">light_mode</span>{{ 'permission_theme_light' |
-                                        translate }}</ng-container>
-                                    <ng-container *ngIf="theme == 'dark'"><span
-                                            class="material-icons">brightness_2</span>{{ 'permission_theme_dark' |
-                                        translate }}</ng-container>
-                                    <ng-container *ngIf="theme == 'custom'">{{ 'permission_theme_custom' |
-                                        translate }}</ng-container>
+                                <div class="-avatar -avatar-size-60  -avatar-border-width-2"
+                                    *ngIf="!profileUI.avatarEdit" (click)="editAvatar()">
+                                    <img [attr.src]="profile.avatarUrl">
                                 </div>
-                            </button>
-                        </ng-container>
-                    </div>
-                </div>
-                <div class="_item_option _profile_dinamic_section" *ngIf="false">
-                    <div class="item _generic_actions helper">
-                        <div class="icon">
-                            <span class="material-icons">palette</span>
-                        </div>
 
-                        <button class="link" (click)="customizeColors()">
-                            <div class="inner">{{ 'customize' | translate }}</div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                <button class="primary" (click)="editAvatar()" *ngIf="profileUI.avatarEdit">
+                                    <div class="inner"><span class="material-icons">done</span></div>
+                                </button>
 
-        <div class="_content small" *ngIf="themeProps && customizeColorsMode">
-            <h4 class="title-upper">{{ 'customize' | translate }}</h4>
-            <div class="_content_inner">
-                <div class="_item_option _help_section _column _warp">
-                    <ng-container *ngFor="let prop of themeProps">
-                        <div class="color-container">
-                            <div class="color-description">
-                                {{ prop.name }}
+                                <mat-input [title]="'form_name' | translate"
+                                    [mesageError]="'form_name_required' | translate" [formControl]="form.get('name')">
+                                </mat-input>
+
+                                <button (click)="editUsername()" *ngIf="!profileUI.usernameEdit">
+                                    <div class="inner"><span class="material-icons">edit</span></div>
+                                </button>
+                                <ng-container *ngIf="profileUI.usernameEdit">
+                                    <button class="primary" (click)="editUsernameConfirm()">
+                                        <div class="inner"><span class="material-icons">done</span></div>
+                                    </button>
+                                    <button (click)="editUsernameCancel()">
+                                        <div class="inner"><span class="material-icons">close</span></div>
+                                    </button>
+                                </ng-container>
                             </div>
-                            <input type="color" class="color-square" name="" id="" [(ngModel)]="prop.value" (change)="updateColors()">
-                        </div>
-                    </ng-container>
-                </div>
-            </div>
-        </div>
 
-        <div class="_content small" *ngIf="settings">
-            <h4 class="title-upper">{{ 'permission_language' | translate }}</h4>
-            <div class="_content_inner">
-                <div class="_item_option _profile_dinamic_section">
-                    <div class="item _generic_actions">
-                        <div class="icon">
-                            <span class="material-icons">
-                                language
-                            </span>
-                        </div>
-                        <ng-container *ngFor="let lan of settings._languages">
-                            <button class="link"
-                                [ngClass]="{'primary': lan.value == settings.language, 'link': lan.value != settings.language }"
-                                (click)="changeLanguage(lan.value)">{{ lan.value | translate }}</button>
+                            <div class="arrange --row --center">
+                                <ng-container *ngFor="let item of defaultAvatars">
+                                    <div class="-avatar -avatar-size-60 -avatar-border-width-2"
+                                        [ngClass]="{'selected': item.selected }" *ngIf="profileUI.avatarEdit"
+                                        (click)="selectAvatar(item)">
+                                        <img [attr.src]="item.url" [attr.alt]="item.url">
+                                    </div>
+                                </ng-container>
+                            </div>
                         </ng-container>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="_content small" *ngIf="settings">
-            <h4 class="title-upper">{{ 'permission' | translate }}</h4>
-            <div class="_content_inner">
-                <div class="_item_option _help_section">
-                    <div class="icon _secondary color">
-                        <span class="material-icons">
-                            help
-                        </span>
-                    </div>
-                    <div>{{ 'help_flags' | translate }}</div>
-                </div>
-                <div class="_item_option">
-                    <div class="description full">
-                        <div class="description-title">{{ 'permission_create' | translate }}</div>
-                    </div>
-                    <div class="action clickable" (click)="tooglePermission('create')"
-                        [ngClass]="{'active': settings.permissions.create }">
-                        <span class="material-icons" *ngIf="settings.permissions.create">toggle_on</span>
-                        <span class="material-icons" *ngIf="!settings.permissions.create">toggle_off</span>
-                    </div>
-                </div>
-                <div class="_item_option">
-                    <div class="description full">
-                        <div class="description-title">{{ 'permission_edit' | translate }}</div>
-                    </div>
-                    <div class="action clickable" (click)="tooglePermission('edit')"
-                        [ngClass]="{'active': settings.permissions.edit }">
-                        <span class="material-icons" *ngIf="settings.permissions.edit">toggle_on</span>
-                        <span class="material-icons" *ngIf="!settings.permissions.edit">toggle_off</span>
-                    </div>
-                </div>
-                <div class="_item_option">
-                    <div class="description full">
-                        <div class="description-title">{{ 'permission_duplicate' | translate }}</div>
-                    </div>
-                    <div class="action clickable" (click)="tooglePermission('duplicate')"
-                        [ngClass]="{'active': settings.permissions.duplicate }">
-                        <span class="material-icons" *ngIf="settings.permissions.duplicate">toggle_on</span>
-                        <span class="material-icons" *ngIf="!settings.permissions.duplicate">toggle_off</span>
-                    </div>
-                </div>
-                <div class="_item_option">
-                    <div class="description full">
-                        <div class="description-title">{{ 'permission_delete' | translate }}</div>
-                    </div>
-                    <div class="action clickable" (click)="tooglePermission('delete')"
-                        [ngClass]="{'active': settings.permissions.delete }">
-                        <span class="material-icons" *ngIf="settings.permissions.delete">toggle_on</span>
-                        <span class="material-icons" *ngIf="!settings.permissions.delete">toggle_off</span>
-                    </div>
-                </div>
-                <div class="_item_option">
-                    <div class="description full">
-                        <div class="description-title">{{ 'permission_ia' | translate }}</div>
-                    </div>
-                    <div class="action clickable" (click)="tooglePermission('ai')"
-                        [ngClass]="{'active': settings.permissions.ai }">
-                        <span class="material-icons" *ngIf="settings.permissions.ai">toggle_on</span>
-                        <span class="material-icons" *ngIf="!settings.permissions.ai">toggle_off</span>
-                    </div>
-                </div>
+                        <ng-container>
+                            <div class="divider"></div>
 
-            </div>
-        </div>
+                            <div class="-title -title-size-180">{{ 'permission_theme' | translate }}</div>
 
-        <div class="_content small" *ngIf="settings">
-            <h4 class="title-upper">{{ 'legal_title' | translate }}</h4>
-            <div class="_content_inner">
-                <div class="_item_option">
-                    <div class="icon _secondary color">
-                        <span class="material-icons">
-                            gavel
-                        </span>
-                    </div>
-                        <a class="_accent color" href="https://sergal.site/#/legal/simexam/terms" target="_blank">{{
-                            'terms_conditions' | translate }}</a>
-                </div>
-                <div class="_item_option">
-                    <div class="icon _secondary color">
-                        <span class="material-icons">
-                            policy
-                        </span>
-                    </div>
-                        <a class="_accent color" href="https://sergal.site/#/legal/simexam/privacy" target="_blank">{{
-                            'privacy_policy' | translate }} </a>
-                </div>
-            </div>
-        </div>
+                            <div class="arrange --row-nowrap --align-center --justify-left">
 
-        <div class="_content small" *ngIf="false">
-            <h4 class="title-upper">{{ 'permission_data' | translate }}</h4>
-            <div class="_content_inner">
-                <div class="_item_option">
-                    <div class="description full">
-                        <div class="description-title">{{ 'permission_import' | translate }}</div>
-                    </div>
-                    <div class="action active clickable">
-                        <span class="material-icons">
-                            unarchive
-                        </span>
-                    </div>
-                </div>
-                <div class="_item_option">
-                    <div class="description full">
-                        <div class="description-title">{{ 'permission_export' | translate }}</div>
-                    </div>
-                    <div class="action active clickable">
-                        <span class="material-icons">
-                            assignment_returned
-                        </span>
+                                <lu-icon [icon]="luIcon.theme"></lu-icon>
+
+                                <ng-container *ngFor="let theme of availableThemes">
+                                    <button class="small"
+                                        [ngClass]="{'primary': theme == settings.theme, 'link': theme != settings.theme }"
+                                        (click)="changeTheme(theme)">
+                                        <ng-container *ngIf="theme == 'light'">
+                                            <lu-icon [icon]="luIcon.themeLight"></lu-icon>
+                                            <div>{{ 'permission_theme_light' | translate }}</div>
+                                        </ng-container>
+                                        <ng-container *ngIf="theme == 'dark'">
+                                            <lu-icon [icon]="luIcon.themeDark"></lu-icon>
+                                            <div>{{ 'permission_theme_dark' | translate }}</div>
+                                        </ng-container>
+                                        <ng-container *ngIf="theme == 'custom'">
+                                            {{ 'permission_theme_custom' | translate }}
+                                        </ng-container>
+                                    </button>
+                                </ng-container>
+                            </div>
+
+                        </ng-container>
+
+                        <ng-container *ngIf="false">
+                            <div class="-title -title-size-180">{{ 'customize' | translate }}</div>
+
+                            <div class="arrange --row-nowrap --align-center --justify-left">
+                                <div class="_item_option _help_section _column _warp">
+                                    <ng-container *ngFor="let prop of themeProps">
+                                        <div class="color-container">
+                                            <div class="color-description">
+                                                {{ prop.name }}
+                                            </div>
+                                            <input type="color" class="color-square" name="" id=""
+                                                [(ngModel)]="prop.value" (change)="updateColors()">
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </ng-container>
+
+
+                        <ng-container *ngIf="settings">
+                            <div class="divider"></div>
+
+                            <div class="-title -title-size-180">{{ 'permission_language' | translate }}</div>
+
+                            <div class="arrange --row-nowrap --align-center --justify-left">
+                                <lu-icon [icon]="luIcon.language"></lu-icon>
+
+                                <ng-container *ngFor="let lan of settings._languages">
+                                    <button class="small"
+                                        [ngClass]="{'primary': lan.value == settings.language, 'link': lan.value != settings.language }"
+                                        (click)="changeLanguage(lan.value)">{{ lan.value | translate }}</button>
+                                </ng-container>
+                            </div>
+                        </ng-container>
+
+                        <ng-container *ngIf="settings">
+                            <div class="divider"></div>
+
+                            <div class="-title -title-size-180">{{ 'permission' | translate }}</div>
+
+                            <div class="arrange --row-nowrap --justify-left --aling-center">
+                                <div class="icon _secondary color">
+                                    <span class="material-icons">
+                                        help
+                                    </span>
+                                </div>
+                                <div>{{ 'help_flags' | translate }}</div>
+                            </div>
+
+                            <div class="divider"></div>
+                            <div
+                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center">
+                                <div class="-text -text-size-130">{{ 'permission_create' | translate }}</div>
+                                <div class="arrange --margin-left-auto" (click)="tooglePermission('create')"
+                                    [ngClass]="{'active': settings.permissions.create }">
+                                    <lu-icon class="-svg -svg-size-30 -svg-stroke-2"
+                                        *ngIf="!settings.permissions.create" [icon]="luIcon.propInactive"></lu-icon>
+                                    <lu-icon class="-svg -svg-size-30 -svg-stroke-2" *ngIf="settings.permissions.create"
+                                        [icon]="luIcon.propActive"></lu-icon>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+                            <div
+                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center">
+                                <div class="-text -text-size-130">{{ 'permission_edit' | translate }}</div>
+                                <div class="arrange --margin-left-auto" (click)="tooglePermission('edit')"
+                                    [ngClass]="{'active': settings.permissions.edit }">
+                                    <lu-icon class="-svg -svg-size-30 -svg-stroke-2" *ngIf="!settings.permissions.edit"
+                                        [icon]="luIcon.propInactive"></lu-icon>
+                                    <lu-icon class="-svg -svg-size-30 -svg-stroke-2" *ngIf="settings.permissions.edit"
+                                        [icon]="luIcon.propActive"></lu-icon>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+                            <div
+                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center">
+                                <div class="-text -text-size-130">{{ 'permission_duplicate' | translate }}</div>
+                                <div class="arrange --margin-left-auto" (click)="tooglePermission('duplicate')"
+                                    [ngClass]="{'active': settings.permissions.duplicate }">
+                                    <lu-icon class="-svg -svg-size-30 -svg-stroke-2"
+                                        *ngIf="!settings.permissions.duplicate" [icon]="luIcon.propInactive"></lu-icon>
+                                    <lu-icon class="-svg -svg-size-30 -svg-stroke-2"
+                                        *ngIf="settings.permissions.duplicate" [icon]="luIcon.propActive"></lu-icon>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+                            <div
+                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center">
+                                <div class="-text -text-size-130">{{ 'permission_delete' | translate }}</div>
+                                <div class="arrange --margin-left-auto" (click)="tooglePermission('delete')"
+                                    [ngClass]="{'active': settings.permissions.delete }">
+                                    <lu-icon class="-svg -svg-size-30 -svg-stroke-2"
+                                        *ngIf="!settings.permissions.delete" [icon]="luIcon.propInactive"></lu-icon>
+                                    <lu-icon class="-svg -svg-size-30 -svg-stroke-2" *ngIf="settings.permissions.delete"
+                                        [icon]="luIcon.propActive"></lu-icon>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+
+                            <div class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center"
+                                *ngIf="false">
+                                <div class="-text -text-size-130">{{ 'permission_ia' | translate }}</div>
+                                <div class="arrange --margin-left-auto" (click)="tooglePermission('ai')"
+                                    [ngClass]="{'active': settings.permissions.ai }">
+                                    <lu-icon class="-svg -svg-size-30 -svg-stroke-2" *ngIf="!settings.permissions.ai"
+                                        [icon]="luIcon.propInactive"></lu-icon>
+                                    <lu-icon class="-svg -svg-size-30 -svg-stroke-2" *ngIf="settings.permissions.ai"
+                                        [icon]="luIcon.propActive"></lu-icon>
+                                </div>
+                            </div>
+
+                        </ng-container>
+
+                        <ng-container *ngIf="settings">
+                            <div class="-title -title-size-180">{{ 'legal_title' | translate }}</div>
+
+                            <div class="arrange --row-nowrap --justify-left --aling-center">
+                                <div class="icon _secondary color">
+                                    <span class="material-icons">
+                                        gavel
+                                    </span>
+                                </div>
+                                <a class="_accent color" href="https://sergal.site/#/legal/simexam/terms"
+                                    target="_blank">{{
+                                    'terms_conditions' | translate }}</a>
+                            </div>
+
+                            <div class="arrange --row-nowrap --justify-left --aling-center">
+                                <div class="icon _secondary color">
+                                    <span class="material-icons">
+                                        policy
+                                    </span>
+                                </div>
+                                <a class="_accent color" href="https://sergal.site/#/legal/simexam/privacy"
+                                    target="_blank">{{
+                                    'privacy_policy' | translate }} </a>
+                            </div>
+
+                        </ng-container>
                     </div>
                 </div>
 

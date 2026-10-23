@@ -212,6 +212,11 @@ export class TypetReadingComponent implements OnInit, OnDestroy {
     const states: UIMainStates = { action: 'ui_update', substate: value, attemptStatus: this.attempt.state }
     this.onChange.emit(states);
   }
+
+  scrollToCurrentWord() {
+    const element = document.querySelector(".word.hasMarked");
+    element.scrollIntoView();
+  }
   //#endregion EVENTS
 
   //#region CONVERTERS
@@ -277,6 +282,8 @@ export class TypetReadingComponent implements OnInit, OnDestroy {
         if (this.readingIndex >= this.getCurrentQuestion().explanationArray.length) {
           this.readingIndex = 0;
         }
+
+        this.scrollToCurrentWord();
       }, msWord);
     } else {
       clearInterval(this.readingInterval);

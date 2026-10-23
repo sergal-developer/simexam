@@ -1,7 +1,9 @@
 import { Component, EventEmitter, OnInit, Output, ViewEncapsulation, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
+import { icons } from 'lucide';
 import { SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
+import { UxUtils } from 'src/app/shared/data/utils/uxUtils';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { UiServices } from 'src/app/shared/services/ui.services';
 
@@ -13,10 +15,18 @@ import { UiServices } from 'src/app/shared/services/ui.services';
 export class SettingsComponent implements OnInit {
   @Output() onChange = new EventEmitter();
 
+  uxView: '-view-1' | '-view-2' | '-view-3' = '-view-1';
+  uxContentView = [
+    { name: 'empty', class: '-view-1' },
+    { name: 'dashboard', class: '-view-2' },
+    { name: 'details', class: '-view-3' },
+  ];
+  uxContentIndex = 0;
+
   profile: UserDTO;
   settings: SettingsDTO;
   pendingChanges: {
-    profile?: UserDTO,
+    profile?: UserDTO
     settings?: SettingsDTO;
   }
   profileUI = {
@@ -25,6 +35,48 @@ export class SettingsComponent implements OnInit {
   };
 
   updating = false;
+
+  luIcon = {
+    empty: icons.Ghost,
+    new: icons.CirclePlus,
+    search: icons.Search,
+    chevronRight: icons.ChevronRight,
+    add: icons.CirclePlus,
+    settings: icons.Settings,
+    attempts: icons.ChevronRight,
+    open: icons.SquareArrowOutUpRight,
+    review: icons.ListChecks,
+    resolve: icons.ArrowRightFromLine,
+
+    back: icons.ArrowLeft,
+    actions: icons.EllipsisVertical,
+    asterisk: icons.Asterisk,
+    help: icons.MessageCircleQuestionMark,
+    delete: icons.Trash,
+    edit: icons.PencilRuler,
+    clone: icons.Copy,
+
+    trivia: icons.ListTodo,
+    simple: icons.PlayingCards,
+    trueFalse: icons.Drama,
+    popularity: icons.Vote,
+    mathQuest: icons.Brain,
+    reading: icons.BookOpenText,
+
+    gradeFailed: icons.CircleX,
+    gradeBarely: icons.CircleDashedCheck,
+    gradePassed: icons.CircleCheckBig,
+    gradePerfect: icons.Sparkles,
+
+    theme: icons.Palette,
+    themeLight: icons.Sun,
+    themeDark: icons.Moon,
+
+    language: icons.Globe,
+
+    propInactive: icons.ToggleLeft,
+    propActive: icons.ToggleRight,
+  }
 
   defaultAvatars = [
     { url: "/assets/avatar-1.svg", selected: false },
@@ -40,6 +92,8 @@ export class SettingsComponent implements OnInit {
   form: FormGroup;
   themeProps: Array<{ name: string, value: string }> = null;
   customizeColorsMode = false;
+
+  uxUtils = new UxUtils();
 
   constructor(private commonServices: CommonServices,
     private uiServices: UiServices,
@@ -131,6 +185,11 @@ export class SettingsComponent implements OnInit {
   //#endregion DATA
 
   //#region EVENTS
+  async returnMain() {
+    this.showView('dashboard');
+    this.commonServices.navigate('dashboard');
+  }
+
   selectAvatar(item) {
     this.defaultAvatars.map(image => {
       image.selected = image.url == item.url ? true : false;
@@ -206,6 +265,10 @@ export class SettingsComponent implements OnInit {
     };
     const result = await this.commonServices.saveUser(user);
     return result;
+  }
+
+  valueChange(value: string) {
+    this.onChange.emit({ action: 'ui_update', value: value });
   }
 
   // #region IMPORT/EXPORTS
@@ -302,4 +365,16 @@ export class SettingsComponent implements OnInit {
 
   //#endregion EVENTS
 
+
+  //#region CONVERTERS
+  async showView(name: 'empty' | 'dashboard' | 'details', after?: Function) {
+    const newIndex = this.uxContentView.findIndex(form => form.name == name);
+    this.uxView = this.uxContentView[newIndex].class as '-view-1' | '-view-2' | '-view-3';
+    this.uxContentIndex = newIndex;
+
+    await this.uxUtils.wait(500);
+    this.valueChange(this.uxContentView[newIndex].name);
+    if (after) { after() }
+  }
+  //#endregion CONVERTERS
 }

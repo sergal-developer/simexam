@@ -1,126 +1,118 @@
-<div class="arrange columns centers --padding-relation" *ngIf="attempt.questions[index]">
+<div class="arrange --column --gap-0 --height-88-vh" [ngClass]="{'--center': currentSection == 'results' }"
+    *ngIf="attempt.questions[index]">
     <ng-container *ngIf="currentSection == 'quiz' && attempt.questions[index]">
-        <section-dinamic design="glass">
-            <div class="arrange columns paddings _question_section">
-                <div class="item font_variable" [innerHTML]="attempt.questions[index].question">
-                </div>
-            </div>
-        </section-dinamic>
 
-        <section-dinamic design="glass">
-            <div class="arrange columns paddings">
-                <div class="item">Seleciona una o amas respuestas correctas.</div>
+        <div class="arrange --height-50 --center">
+            <div class="-text -text-size-500" [innerHTML]="attempt.questions[index].question"></div>
+        </div>
 
-                <div class="item" *ngIf="statusScore">{{ statusScore }}</div>
+        <div class="arrange --column --height-50 --center">
+            <div class="item">Seleciona las respuestas correctas.</div>
 
-                <div class="item">
-                    <div class="arrange row {{numrows}}">
-                        <ng-container *ngFor="let option of attempt.questions[index].answers">
-                            <div class="_answer arrange stacked" [ngClass]="{   
+            <div class="item" *ngIf="statusScore">{{ statusScore }}</div>
+
+            <div class="arrange --row {{numrows}} --divided-children-2">
+                <ng-container *ngFor="let option of attempt.questions[index].answers">
+                    <div class="arrange --row-nowrap --center" [ngClass]="{   
                                         'selected': option._selected,
                                         'incorrect': readonly && !option.popular,
                                         'correct': readonly && option.popular != 0,
                                         'disabled': savingData }" (click)="selectOption(option)">
-                                <div class="_answer_selection font_variable">
-                                    <lu-icon *ngIf="readonly && option.isCorrect" [icon]="luIcon.correct"></lu-icon>
-                                    <lu-icon *ngIf="readonly && !option.isCorrect && !option._selected"
-                                        [icon]="luIcon.incorrect"></lu-icon>
-                                    <lu-icon *ngIf="readonly && !option.isCorrect && option._selected"
-                                        [icon]="luIcon.selected"></lu-icon>
+                        <div class="_answer_selection font_variable">
+                            <lu-icon *ngIf="readonly && option.isCorrect" [icon]="luIcon.correct"></lu-icon>
+                            <lu-icon *ngIf="readonly && !option.isCorrect && !option._selected"
+                                [icon]="luIcon.incorrect"></lu-icon>
+                            <lu-icon *ngIf="readonly && !option.isCorrect && option._selected"
+                                [icon]="luIcon.selected"></lu-icon>
 
-                                    <lu-icon *ngIf="!readonly && !option._selected"
-                                        [icon]="luIcon.unselected"></lu-icon>
-                                    <lu-icon *ngIf="!readonly && option._selected" [icon]="luIcon.selected"></lu-icon>
-                                </div>
-                                <div class="_answer_text font_variable" [innerHTML]="option.answer">
-                                </div>
-                                <div *ngIf="revealedQuiz || readonly" class="font_variable">
-                                    <div class="btn">
-                                        {{ option.popular }}
-                                    </div>
-                                </div>
+                            <lu-icon *ngIf="!readonly && !option._selected" [icon]="luIcon.unselected"></lu-icon>
+                            <lu-icon *ngIf="!readonly && option._selected" [icon]="luIcon.selected"></lu-icon>
+                        </div>
+                        <div class="-text -text-size-300" [innerHTML]="option.answer">
+                        </div>
+                        <div *ngIf="revealedQuiz || readonly" class="font_variable">
+                            <div class="btn">
+                                {{ option.popular }}
                             </div>
-                        </ng-container>
+                        </div>
                     </div>
-                </div>
+                </ng-container>
             </div>
-        </section-dinamic>
+        </div>
 
-        <div class="_navbarFixedBottom">
-            <div class="_navOfButtons">
-                <button (click)="prevQuestion()" [disabled]="!index">
-                    <lu-icon [icon]="luIcon.left"></lu-icon>
-                    <span>{{ 'action_prev' | translate }}</span>
-                </button>
+        <div class="joined-elements --margin-top-auto">
+            <button class="element" (click)="prevQuestion()" [disabled]="!index">
+                <lu-icon [icon]="luIcon.left"></lu-icon>
+                <span>{{ 'action_prev' | translate }}</span>
+            </button>
 
-                <button (click)="finishQuiz()" *ngIf="index == attempt.questions.length - 1">
-                    <span>{{ 'action_complete' | translate }}</span>
-                </button>
+            <button class="element" (click)="finishQuiz()" *ngIf="index == attempt.questions.length - 1">
+                <span>{{ 'action_complete' | translate }}</span>
+            </button>
 
-                <button (click)="revealQuiz()" [disabled]="!optionsSelected.length" *ngIf="!calculatedQuiz">
-                    <span>Revelar</span>
-                </button>
+            <button class="element" (click)="revealQuiz()" [disabled]="!optionsSelected.length" *ngIf="!calculatedQuiz">
+                <span>Revelar</span>
+            </button>
 
-                <button (click)="nextQuestion()" [disabled]="!calculatedQuiz"
-                    *ngIf="index < attempt.questions.length - 1">
-                    <span>{{ 'action_next' | translate }}</span>
-                    <lu-icon [icon]="luIcon.right"></lu-icon>
-                </button>
-            </div>
+            <button class="element" (click)="nextQuestion()" [disabled]="!calculatedQuiz"
+                *ngIf="index < attempt.questions.length - 1">
+                <span>{{ 'action_next' | translate }}</span>
+                <lu-icon [icon]="luIcon.right"></lu-icon>
+            </button>
         </div>
     </ng-container>
 
     <ng-container *ngIf="currentSection == 'results'">
-        <section-dinamic design="glass">
-            <div class="arrange centers columns paddings full-width">
-                <div class="item arrange centers">
-                    <h1>
-                        Ronda completada!!
-                    </h1>
+        <div class="arrange --column --align-center --gap-separation --padding-section">
+            <div class="arrange">
+                <div class="arrange --center -title -title-size-300">
+                    Ronda completada
                 </div>
-
-                <div class="item">
-                    {{ 'attempt_subtitle' | translate }}
-                </div>
-
-                <div class="item arrange row _2 paddings">
-                    <div class="stadistic">
-                        <h3>Seccion con mas puntaje</h3>
-                        <div>{{ attempt.highestScoreId }} <b class="_accent color">({{ attempt.highestScore }})</b>
-                        </div>
-                    </div>
-
-                    <div class="stadistic">
-                        <h3>Puntaje total</h3>
-                        <div class="_accent color">{{ attempt.score }}</div>
-                    </div>
-                </div>
-
-                <div class="item arrange columns centers paddings">
-                    <h3>{{ 'attempt_status_rating_correct' | translate }}</h3>
-                    <div class="_collection overflow_180">
-                        <ng-container *ngFor="let item of attempt.questions; let i = index">
-                            <div class="question-dot" [ngClass]="{'correct': item.isCorrect }"
-                                (click)="gotoQuestion(i)">
-                                <div>{{ i + 1 }}</div>
-                                <div class="label-time">{{ item.score }}</div>
-                            </div>
-                        </ng-container>
-                    </div>
-                </div>
-
-                <div class="item arrange centers paddings">
-                    <button (click)="showQuiz()">
-                        <div class="inner">
-                            <span class="material-icons">
-                                rule
-                            </span>
-                            {{ 'action_review' | translate }}
-                        </div>
-                    </button>
-                </div>
-
             </div>
-        </section-dinamic>
+
+            <div class="item">
+                {{ 'attempt_subtitle' | translate }}
+            </div>
+
+            <div class="arrange --row --divided-children-2">
+                <div class="arrange --padding-relation --center">
+                    <div class="-text -text-size-120">
+                        Seccion con mas puntaje
+                    </div>
+                    <div class="-text -text-bold">
+                        {{ attempt.highestScoreId }} <b class="_accent color">({{ attempt.highestScore }})</b>
+                    </div>
+                </div>
+
+                <div class="arrange --padding-relation --center">
+                    <div class="-text -text-size-120">Puntaje total</div>
+                    <div class="-text -text-bold">{{ attempt.score }}</div>
+                </div>
+            </div>
+
+            <div class="arrange --column">
+                <div class="-title -title-size-160">{{ 'attempt_status_rating_correct' | translate }}</div>
+                <div class="arrange --row --gap-joined --center">
+                    <ng-container *ngFor="let item of attempt.questions; let i = index">
+                        <button class="small" [ngClass]="{'correct': item.isCorrect }" (click)="gotoQuestion(i)">
+                            {{ i + 1 }}
+                            <div class="label-time">{{ item.score }}</div>
+                        </button>
+                    </ng-container>
+                </div>
+            </div>
+
+            <div class="item arrange --center --padding">
+                <button (click)="showQuiz()">
+                    <div class="inner">
+                        <span class="material-icons">
+                            rule
+                        </span>
+                        {{ 'action_review' | translate }}
+                    </div>
+                </button>
+            </div>
+
+        </div>
     </ng-container>
 </div>

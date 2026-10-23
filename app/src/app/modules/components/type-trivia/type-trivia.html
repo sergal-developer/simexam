@@ -1,4 +1,5 @@
-<div class="arrange --column --gap-0 --height-88-vh" [ngClass]="{'--center': currentSection == 'results' }">
+<div class="arrange --column --gap-0 --height-88-vh" [ngClass]="{'--center': currentSection == 'results' }"
+    *ngIf="attempt.questions[index]">
     <ng-container *ngIf="currentSection == 'quiz' && attempt.questions[index]">
         <div class="arrange --height-50 --center">
             <div class="-text -text-size-500" [innerHTML]="attempt.questions[index].question"></div>
@@ -50,7 +51,6 @@
                 <span>{{ 'action_next' | translate }}</span>
                 <lu-icon [icon]="luIcon.right"></lu-icon>
             </button>
-
         </div>
     </ng-container>
 
@@ -117,7 +117,7 @@
                 </div>
             </div>
 
-            <div class="item arrange centers paddings">
+            <div class="item arrange --center --padding">
                 <button (click)="showQuiz()">
                     <div class="inner">
                         <span class="material-icons">
