@@ -156,5 +156,10 @@
   "form_required_popularity": "The Popularity is required.",
   "form_required_option": "The Option is required.",
   "form_value_true": "Truly",
-  "form_value_false": "False"
+  "form_value_false": "False",
+  "template_title_blank": "Blank templates",
+  "template_subtitle_blank": "Select a template to create a blank activity.",
+  "template_title_online": "Online activities",
+  "template_subtitle_online": "Select a ready-made template to import all your data into the application.",
+  "template_title_online_return": "Return to the list"
 }

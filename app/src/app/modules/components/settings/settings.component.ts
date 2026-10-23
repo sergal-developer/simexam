@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewEncapsulation, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
@@ -11,6 +11,8 @@ import { UiServices } from 'src/app/shared/services/ui.services';
   encapsulation: ViewEncapsulation.None,
 })
 export class SettingsComponent implements OnInit {
+  @Output() onChange = new EventEmitter();
+
   profile: UserDTO;
   settings: SettingsDTO;
   pendingChanges: {
@@ -294,10 +296,10 @@ export class SettingsComponent implements OnInit {
     return result;
   }
 
-  
+
   //#endregion
 
-  
+
   //#endregion EVENTS
 
 }

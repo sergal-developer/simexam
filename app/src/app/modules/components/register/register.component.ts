@@ -7,6 +7,7 @@ import { SettingsDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
 import { UxUtils } from 'src/app/shared/data/utils/uxUtils';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { DatabaseService } from 'src/app/shared/services/database/sql.database.service';
+import { AppStateStore } from 'src/app/shared/services/global.store.service';
 import { UiServices } from 'src/app/shared/services/ui.services';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -95,7 +96,7 @@ export class RegisterComponent implements OnInit, AfterContentInit {
     private commonServices: CommonServices,
     private uiServices: UiServices,
     private translate: TranslateService,
-    private databaseService: DatabaseService
+    public store: AppStateStore
   ) { }
 
 
@@ -131,40 +132,20 @@ export class RegisterComponent implements OnInit, AfterContentInit {
     });
 
     // validate if db is started 
-    const db = await this.loadDatabaseStructure();
-    if (db) {
-      let settings = await this.commonServices.getCurrentSettings();
+    let state = await this.store.getAll();
+    console.log('register.state: ', state);
 
-      if (!settings) {
-        const defaultData = await this.commonServices.saveDefaultData();
-        settings = await this.commonServices.getCurrentSettings();
-      }
-
-      console.log('settings: ', settings);
-      this.settings = settings;
-      this.languages = this.settings._languages;
-      this.currentLanguage = this.languages.find(x => x.value == this.settings.language);
-
-      // check if exist profile
-      const profile = await this.commonServices.getCurrentUser();
-      if (profile) {
-        this.commonServices.navigate('dashboard');
-      } else {
-        await this.uxUtils.wait(2000);
-        if (after) { after(this.settings) }
-      }
+    this.settings = state;
+    this.languages = state.languagesAvailable;
+    this.currentLanguage = this.languages.find(x => x.value == this.settings.language);
+    if (state.user) {
+      this.commonServices.navigate('dashboard');
+    } else {
+      await this.uxUtils.wait(2000);
+      if (after) { after(this.settings) }
     }
 
-    if (after) { after(null) }
     return true;
-  }
-
-  async loadDatabaseStructure() {
-    const structure = await this.databaseService.initialDatabase();
-    if (!structure) {
-      this.uiServices.notification("Error al establecer conexion SQL.", { type: 'error', closeTimer: 0 })
-    }
-    return structure ? true : false;
   }
 
   async register() {
@@ -184,6 +165,8 @@ export class RegisterComponent implements OnInit, AfterContentInit {
 
     let user = await this.commonServices.getCurrentUser();
     if (user) {
+      this.store.setUser(user);
+      const response = await this.store.getAll();
       // this.uiServices.notification(this.translateLabels.service_sucess_save, { type: 'success', closeTimer: 1500 });
       this.uistate = 'exit';
       setTimeout(() => {

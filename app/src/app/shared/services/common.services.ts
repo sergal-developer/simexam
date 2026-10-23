@@ -452,6 +452,7 @@ export class CommonServices {
       })
     }
 
+    console.log('props: ', props);
     if (!props.action) {
       this._router.navigateByUrl(`/${section}`);
     } else {

@@ -1,98 +1,145 @@
-<div class="_animation_state">
-    <div class="all-screen-section">
-        <section-dinamic design="glass">
-            <div class="arrange --justify-between --padding-relation">
-                <div class="item" (click)="gotoDashboard()">
-                    <lu-icon [icon]="luIcon.back"></lu-icon>
+<div class="arrange --full-screen {{ uistate }}">
+    <div class="arrange --full-screen --justify-center --align-center --border-radius glass glass-no-border">
+
+        <!-- MAIN SCREEN SLIDER -->
+        <div class="arrange --full-screen --justify-left --align-center screen-slider" id="quiz-selector-screen-slider">
+            <div class="screen-slider-container -count-2 {{ uxView }}">
+                <!-- SCREEN LIST -->
+                <div class="screen-slider-view">
+                    <div class="arrange --column --full-screen --padding-group --gap-section">
+                        <div class="arrange --column --gap">
+                            <div class="arrange --justify-start">
+                                <div class="item" (click)="gotoDashboard()">
+                                    <lu-icon [icon]="luIcon.back"></lu-icon>
+                                </div>
+                                <div class="-title -title-size-140">
+                                    {{ 'template_title_blank' | translate }}
+                                </div>
+                            </div>
+
+                            <div class="joined-elements">
+                                <button class="element arrange --padding-left-20 --padding-right-20"
+                                    (click)="createNewBlank('trivia')">
+                                    <lu-icon [icon]="luIcon.trivia"></lu-icon>
+                                    <div class="element-text">{{ 'quiz_type_trivia' | translate }}</div>
+                                </button>
+
+                                <button class="element arrange --padding-left-20 --padding-right-20"
+                                    (click)="createNewBlank('simple')">
+                                    <lu-icon [icon]="luIcon.simple"></lu-icon>
+                                    <div class="element-text">{{ 'quiz_type_simple' | translate }}</div>
+                                </button>
+
+                                <button class="element arrange --padding-left-20 --padding-right-20"
+                                    (click)="createNewBlank('true-false')">
+                                    <lu-icon [icon]="luIcon.trueFalse"></lu-icon>
+                                    <div class="element-text">{{ 'quiz_type_true_false' | translate }}</div>
+                                </button>
+
+                                <button class="element arrange --padding-left-20 --padding-right-20"
+                                    (click)="createNewBlank('popularity')">
+                                    <lu-icon [icon]="luIcon.popularity"></lu-icon>
+                                    <div class="element-text">{{ 'quiz_type_popularity' | translate }}</div>
+                                </button>
+
+                                <button class="element arrange --padding-left-20 --padding-right-20"
+                                    (click)="createNewBlank('reading')">
+                                    <lu-icon [icon]="luIcon.reading"></lu-icon>
+                                    <div class="element-text">{{ 'quiz_type_reading' | translate }}</div>
+                                </button>
+
+                                <button class="element arrange --padding-left-20 --padding-right-20"
+                                    (click)="createNewBlank('math-quest')">
+                                    <lu-icon [icon]="luIcon.mathQuest"></lu-icon>
+                                    <div class="element-text">{{ 'quiz_type_math_quest' | translate }}</div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="arrange --column --gap --justify-start">
+                            <div class="arrange --center">
+                                <div class="-title -title-size-120">
+                                    {{ 'template_title_online' | translate }} ( <b>{{ listFilesFiltered.length
+                                        }}</b> )
+                                </div>
+                                <button class="link" (click)="resetFilter()" *ngIf="currentFilter">reset</button>
+                            </div>
+
+                            <div class="joined-elements">
+                                <button class="element" (click)="filterBy('trivia')">
+                                    <lu-icon [icon]="luIcon.trivia"></lu-icon>
+                                    <div class="element-text">{{ 'quiz_type_trivia' | translate }}</div>
+                                </button>
+
+                                <button class="element" (click)="filterBy('simple')">
+                                    <lu-icon [icon]="luIcon.simple"></lu-icon>
+                                    <div class="element-text">{{ 'quiz_type_simple' | translate }}</div>
+                                </button>
+
+                                <button class="element" (click)="filterBy('true-false')">
+                                    <lu-icon [icon]="luIcon.trueFalse"></lu-icon>
+                                    <div class="element-text">{{ 'quiz_type_true_false' | translate }}</div>
+                                </button>
+
+                                <button class="element" (click)="filterBy('popularity')">
+                                    <lu-icon [icon]="luIcon.popularity"></lu-icon>
+                                    <div class="element-text">{{ 'quiz_type_popularity' | translate }}</div>
+                                </button>
+                            </div>
+
+                            <div class="arrange --column">
+                                <div class="arrange --row-nowrap --align-center --justify-start"
+                                    *ngFor="let quiz of listFilesFiltered">
+
+                                    <div class="item">
+                                        <button class="small" (click)="viewSummary(quiz)">
+                                            <lu-icon [icon]="luIcon.summary"></lu-icon>
+                                        </button>
+
+                                    </div>
+                                    <div class="item">
+                                        <lu-icon [icon]="luIcon.martQuest" *ngIf="quiz.type == 'math-quest'"></lu-icon>
+                                        <lu-icon [icon]="luIcon.popularity" *ngIf="quiz.type == 'popularity'"></lu-icon>
+                                        <lu-icon [icon]="luIcon.reading" *ngIf="quiz.type == 'reading'"></lu-icon>
+                                        <lu-icon [icon]="luIcon.simple" *ngIf="quiz.type == 'simple'"></lu-icon>
+                                        <lu-icon [icon]="luIcon.trivia" *ngIf="quiz.type == 'trivia'"></lu-icon>
+                                        <lu-icon [icon]="luIcon.trueFalse" *ngIf="quiz.type == 'true-false'"></lu-icon>
+                                    </div>
+                                    <div class="item">
+                                        <p>{{ quiz._name }}</p>
+                                    </div>
+
+                                    <div class="arrange --margin-left-auto">
+                                        <button class="small" (click)="getFile(quiz)">
+                                            <lu-icon [icon]="luIcon.download"></lu-icon>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <h3>Plantillas Genericas</h3>
-            </div>
-            <div class="arrange row --padding-relation gaps-joined _2">
-                <button class="square" (click)="createNewBlank('trivia')">
-                    <lu-icon [icon]="luIcon.trivia"></lu-icon>
-                    <div>{{ 'quiz_type_trivia' | translate }}</div>
-                </button>
 
-                <button class="square" (click)="createNewBlank('simple')">
-                    <lu-icon [icon]="luIcon.simple"></lu-icon>
-                    <div>{{ 'quiz_type_simple' | translate }}</div>
-                </button>
+                <!-- SCREEN DETAILS -->
+                <div class="screen-slider-view">
+                    <div class="arrange --column --full-screen --padding-group">
+                        <div class="arrange --justify-start">
+                            <div class="item" (click)="_viewList()">
+                                <lu-icon [icon]="luIcon.back"></lu-icon>
+                            </div>
+                            <div class="-title -title-size-140">
+                                {{ 'template_title_online_return' | translate }}
+                            </div>
+                        </div>
 
-                <button class="square" (click)="createNewBlank('true-false')">
-                    <lu-icon [icon]="luIcon.trueFalse"></lu-icon>
-                    <div>{{ 'quiz_type_true_false' | translate }}</div>
-                </button>
-
-                <button class="square" (click)="createNewBlank('popularity')">
-                    <lu-icon [icon]="luIcon.popularity"></lu-icon>
-                    <div>{{ 'quiz_type_popularity' | translate }}</div>
-                </button>
-
-                <button class="square" (click)="createNewBlank('reading')">
-                    <lu-icon [icon]="luIcon.reading"></lu-icon>
-                    <div>{{ 'quiz_type_reading' | translate }}</div>
-                </button>
-
-                <button class="square" (click)="createNewBlank('math-quest')">
-                    <lu-icon [icon]="luIcon.mathQuest"></lu-icon>
-                    <div>{{ 'quiz_type_math_quest' | translate }}</div>
-                </button>
-
-            </div>
-        </section-dinamic>
-    </div>
-
-    <div class="root-container quiz-form">
-
-        <section-dinamic design="glass">
-            <div class="arrange centers paddings">
-                <h3>Plantillas en Linea ( <b>{{ listFilesFiltered.length }}</b> )</h3>
-                <button class="link" (click)="resetFilter()" *ngIf="currentFilter">reset</button>
-            </div>
-            <div class="arrange centers gaps-joined">
-                <button class="square" (click)="filterBy('trivia')">
-                    <lu-icon [icon]="luIcon.trivia"></lu-icon>
-                    <div>{{ 'quiz_type_trivia' | translate }}</div>
-                </button>
-
-                <button class="square" (click)="filterBy('simple')">
-                    <lu-icon [icon]="luIcon.simple"></lu-icon>
-                    <div>{{ 'quiz_type_simple' | translate }}</div>
-                </button>
-
-                <button class="square" (click)="filterBy('true-false')">
-                    <lu-icon [icon]="luIcon.trueFalse"></lu-icon>
-                    <div>{{ 'quiz_type_true_false' | translate }}</div>
-                </button>
-
-                <button class="square" (click)="filterBy('popularity')">
-                    <lu-icon [icon]="luIcon.popularity"></lu-icon>
-                    <div>{{ 'quiz_type_popularity' | translate }}</div>
-                </button>
-            </div>
-
-            <div class="arrange columns paddings">
-                <div class="arrange left --justify-between" *ngFor="let quiz of listFilesFiltered">
-                    <div class="item">
-                        <button class="accent" (click)="getFile(quiz)">
-                            <lu-icon [icon]="luIcon.download"></lu-icon>
-                        </button>
-                    </div>
-                    <div class="item">
-                        <lu-icon [icon]="luIcon.martQuest" *ngIf="quiz.type == 'math-quest'"></lu-icon>
-                        <lu-icon [icon]="luIcon.popularity" *ngIf="quiz.type == 'popularity'"></lu-icon>
-                        <lu-icon [icon]="luIcon.reading" *ngIf="quiz.type == 'reading'"></lu-icon>
-                        <lu-icon [icon]="luIcon.simple" *ngIf="quiz.type == 'simple'"></lu-icon>
-                        <lu-icon [icon]="luIcon.trivia" *ngIf="quiz.type == 'trivia'"></lu-icon>
-                        <lu-icon [icon]="luIcon.trueFalse" *ngIf="quiz.type == 'true-false'"></lu-icon>
-                    </div>
-                    <div class="item">
-                        <p>{{ quiz._name }}</p>
+                        <div class="joined-elements arrange --margin-top-auto">
+                            <button class="element" (click)="_viewList()">List</button>
+                            <button class="element hover" (click)="_viewDetails()">Details</button>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </section-dinamic>
-
+        </div>
     </div>
 </div>

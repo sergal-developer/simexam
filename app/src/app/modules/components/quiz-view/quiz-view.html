@@ -1,22 +1,17 @@
-<ng-container *ngIf="attempt">
-    <div class="_animation_state">
-        <div class="arrange columns paddings-down" [ngClass]="{'onWait': onLoading }">
-            <section-dinamic design="glass">
+<div class="arrange --full-screen">
+    <div class="arrange --full-screen --gap-0 glass glass-no-border">
+        <ng-container *ngIf="attempt">
+            <!-- MODULE HEADER -->
+            <div class="arrange --width-screen --padding-group --padding-bottom-0 --height-8-vh --gap-joined">
+                <div class="arrange --row-nowrap --align-center --justify-start --width-100">
 
-                <div class="arrange centers --padding-relation">
-
-                    <div class="item" (click)="gotoDashboard()">
+                    <div class="-svg -svg-size-25" (click)="gotoDashboard()">
                         <lu-icon [icon]="luIcon.back"></lu-icon>
                     </div>
-
-                    <div class="item">
-                        <h3>{{ attempt?.title }}</h3>
-                    </div>
+                    <div class="-title -title-size-160 -title-bold">{{ attempt?.title }}</div>
 
                 </div>
-
-                <div class="timer-status" *ngIf="!isAttemptCompleted">
-
+                <div class="arrange --row-nowrap --width-100 --justify-between" *ngIf="!isAttemptCompleted">
                     <div class="step-counter">
                         <span class="material-icons">
                             layers
@@ -36,30 +31,35 @@
                         {{ attempt.time }}
                     </div>
 
-                    <div class="status completed" *ngIf="readonly"> {{ 'attempt_status_complete' | translate }} </div>
+                    <div class="status completed" *ngIf="readonly"> {{ 'attempt_status_complete' | translate }}
+                    </div>
 
                     <div class="zoom" (click)="updateZoom()">
                         <span class="material-icons">text_fields</span>
                         {{ zoomlevelLabel }}
                     </div>
                 </div>
-            </section-dinamic>
+            </div>
 
-            <type-math-quest *ngIf="attempt.type == 'math-quest'" [attempt]="attempt"
-                (onChange)="onChangeChildren($event)"></type-math-quest>
-            <type-popularity *ngIf="attempt.type == 'popularity'" [attempt]="attempt"
-                (onChange)="onChangeChildren($event)"></type-popularity>
-            <type-reading *ngIf="attempt.type == 'reading'" [attempt]="attempt"
-                (onChange)="onChangeChildren($event)"></type-reading>
-            <type-simple *ngIf="attempt.type == 'simple'" [attempt]="attempt"
-                (onChange)="onChangeChildren($event)"></type-simple>
-            <type-trivia *ngIf="attempt.type == 'trivia'" [attempt]="attempt"
-                (onChange)="onChangeChildren($event)"></type-trivia>
-            <type-true-false *ngIf="attempt.type == 'true-false'" [attempt]="attempt"
-                (onChange)="onChangeChildren($event)"></type-true-false>
-        </div>
+            <div
+                class="arrange --column --width-100 --padding-group --padding-bottom-0 --padding-top-0 --height-90-vh --gap-0">
+                <type-math-quest *ngIf="attempt.type == 'math-quest'" [attempt]="attempt"
+                    (onChange)="onChangeChildren($event)"></type-math-quest>
+                <type-popularity *ngIf="attempt.type == 'popularity'" [attempt]="attempt"
+                    (onChange)="onChangeChildren($event)"></type-popularity>
+                <type-reading *ngIf="attempt.type == 'reading'" [attempt]="attempt"
+                    (onChange)="onChangeChildren($event)"></type-reading>
+                <type-simple *ngIf="attempt.type == 'simple'" [attempt]="attempt"
+                    (onChange)="onChangeChildren($event)"></type-simple>
+                <type-trivia *ngIf="attempt.type == 'trivia'" [attempt]="attempt"
+                    (onChange)="onChangeChildren($event)"></type-trivia>
+                <type-true-false *ngIf="attempt.type == 'true-false'" [attempt]="attempt"
+                    (onChange)="onChangeChildren($event)"></type-true-false>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="!attempt">
+            <h1>{{ 'service_loading' | translate }}</h1>
+        </ng-container>
+
     </div>
-</ng-container>
-<ng-container *ngIf="!attempt">
-    <h1>{{ 'service_loading' | translate }}</h1>
-</ng-container>
+</div>

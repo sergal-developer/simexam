@@ -155,5 +155,10 @@
   "form_required_popularity": "La Popularidad es requerida.",
   "form_required_option": "La Opción es requerida.",
   "form_value_true": "Verdadero",
-  "form_value_false": "Falso"
+  "form_value_false": "Falso",
+  "template_title_blank": "Plantillas en blanco",
+  "template_subtitle_blank": "Selecciona una plantilla para crear una actividad en blanco.",
+  "template_title_online": "Actividades en línea",
+  "template_subtitle_online": "Selecciona una plantilla preparada para importar todos sus datos dentro de la aplicacion.",
+  "template_title_online_return": "Volver a la lista"
 }

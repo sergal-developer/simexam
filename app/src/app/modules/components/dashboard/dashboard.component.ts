@@ -5,6 +5,7 @@ import { AttemptDTO, PermissionsDTO, QuestionaryDTO, SettingsDTO, UserDTO } from
 import { TransformData } from 'src/app/shared/data/utils/transformData';
 import { UxUtils } from 'src/app/shared/data/utils/uxUtils';
 import { CommonServices } from 'src/app/shared/services/common.services';
+import { AppStateStore } from 'src/app/shared/services/global.store.service';
 import { UiServices } from 'src/app/shared/services/ui.services';
 
 @Component({
@@ -16,10 +17,28 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   @Output() onChange = new EventEmitter();
   @Input() selected: number = null;
 
+  settings: SettingsDTO = null;
+  profile: UserDTO = {
+    userId: null,
+    current: false,
+    userName: '',
+    uuid: '',
+    age: null,
+    avatarUrl: null,
+    avatarBody: null,
+  };
+
+  permissions = {
+    create: false,
+    duplicate: false,
+    edit: false,
+    delete: false,
+    ai: false
+  }
+
   listQuestionnaire: QuestionaryDTO[] = [];
   currentQuestionnaire: QuestionaryDTO = null;
   listAttempts: AttemptDTO[] = [];
-  uistate = 'init';
   uxView: '-view-1' | '-view-2' | '-view-3' = '-view-1';
   uxContentView = [
     { name: 'empty', class: '-view-1' },
@@ -31,15 +50,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   actionsAttempts = false;
 
   transform = new TransformData();
-  user: UserDTO = null;
-  settings: SettingsDTO = null;
-  permissions = {
-    create: false,
-    duplicate: false,
-    edit: false,
-    delete: false,
-    ai: false
-  }
+
+
 
   translateLabels = {
     attempt_error_generation: '',
@@ -48,6 +60,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   luIcon = {
     empty: icons.Ghost,
     new: icons.CirclePlus,
+    search: icons.Search,
+    chevronRight: icons.ChevronRight,
+    add: icons.CirclePlus,
+    settings: icons.Settings,
     attempts: icons.ChevronRight,
     open: icons.SquareArrowOutUpRight,
     review: icons.ListChecks,
@@ -77,24 +93,26 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   constructor(private commonServices: CommonServices,
     private uiServices: UiServices,
-    private translate: TranslateService) { }
+    private translate: TranslateService,
+    public store: AppStateStore) { }
 
   async ngOnInit() {
   }
 
   async ngAfterViewInit() {
-    this.uiServices.showLoader(true);
-    this.uistate = '';
-    // await this.uxUtils.wait(300);
-    this.setupLanguage();
+    this.showView('empty');
+    await this.setupLanguage();
     this.init();
   }
 
   //#region DATA
   async setupLanguage(next?: Function) {
-    this.settings = await this.commonServices.getCurrentSettings();
-    this.user = await this.commonServices.getCurrentUser();
-    console.log('this.settings: ', this.settings);
+    this.showView('empty');
+    let state = await this.store.getAll();
+    console.log('dashboard.state: ', state);
+
+    this.settings = state;
+    this.profile = state.user;
 
     if (this.settings) {
       this.permissions = this.settings.permissions as PermissionsDTO;
@@ -141,7 +159,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   async createattempt() {
     try {
-      const attempt = await this.commonServices.createNewAttempt(this.currentQuestionnaire.questionaryId, this.user.userId, true);
+      const attempt = await this.commonServices.createNewAttempt(this.currentQuestionnaire.questionaryId, this.profile.userId, true);
       ;
       if (!attempt) {
         this.uiServices.notification(this.translateLabels.attempt_error_generation, { type: 'error' })
@@ -167,16 +185,17 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   //#endregion DATA
 
   //#region EVENTS
-  returnMain() {
-    this.uxView = '-view-2';
+  async returnMain() {
+    this.showView('dashboard');
+    this.commonServices.navigate('dashboard');
+
+    return;
     setTimeout(() => {
       this.listQuestionnaire.map((item) => {
         item._current = false;
       });
       this.currentQuestionnaire = null;
       this.commonServices.navigate('dashboard');
-
-      setTimeout(() => { this.valueChange('primary'); }, 500);
     }, 500);
   }
 
@@ -220,18 +239,17 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.listQuestionnaire.map((item) => {
       item._current = quiz.questionaryId == item.questionaryId;
     });
-    this.uxView = '-view-3';
+    this.showView('details');
     this.currentQuestionnaire = quiz;
     this.getAttempts(this.currentQuestionnaire);
 
-    document.querySelector('.screen-content-section').scrollTo({
+    document.querySelector('#quiz-list-screen-slider').scrollTo({
       top: 0,
       left: 0,
       behavior: 'smooth'
     });
-
     this.commonServices.navigate('dashboard', this.currentQuestionnaire.questionaryId.toString());
-    setTimeout(() => { this.valueChange('secondary'); }, 500);
+    // setTimeout(() => { this.valueChange('secondary'); }, 500);
   }
 
   async duplicateQuiz(quiz: QuestionaryDTO) {
@@ -250,9 +268,22 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       this.returnMain();
     }
   }
+
+  showSearch() {
+    console.log('showSearch: ');
+  }
   //#endregion EVENTS
 
   //#region CONVERTERS
+
+  onNewQuiz() {
+    this.onAction({ event: 'create', value: 'quiz' });
+  }
+
+  gotoSettings() {
+    this.commonServices.navigate('settings');
+  }
+
   _viewEmpty() {
     this.showView('empty');
   }
@@ -265,11 +296,12 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.showView('details');
   }
 
-  showView(name: 'empty' | 'dashboard' | 'details', after?: Function) {
+  async showView(name: 'empty' | 'dashboard' | 'details', after?: Function) {
     const newIndex = this.uxContentView.findIndex(form => form.name == name);
     this.uxView = this.uxContentView[newIndex].class as '-view-1' | '-view-2' | '-view-3';
     this.uxContentIndex = newIndex;
 
+    await this.uxUtils.wait(500);
     this.valueChange(this.uxContentView[newIndex].name);
     if (after) { after() }
   }

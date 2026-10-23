@@ -1,15 +1,40 @@
-<div class="arrange --full-screen {{ uistate }}">
-    <div class="arrange --full-screen --justify-center --align-center --border-radius glass glass-no-border">
+<div class="arrange --full-screen">
+    <div class="arrange --full-screen --gap-0 glass glass-no-border">
+
+        <!-- MODULE HEADER -->
+        <div class="arrange --width-screen --padding-group --padding-bottom-0 --height-8-vh"
+            *ngIf="uxView != '-view-1'">
+            <div class="arrange --row-nowrap --align-center --justify-start --width-100">
+                <ng-container *ngIf="uxView == '-view-2'">
+                    <div class="-title -title-size-190">{{ 'list_exam' | translate }}</div>
+                    <div class="arrange --margin-left-auto -svg -svg-size-20" (click)="showSearch()">
+                        <lu-icon [icon]="luIcon.search"></lu-icon>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngIf="currentQuestionnaire && uxView == '-view-3'">
+
+                    <div class="-svg -svg-size-25" (click)="returnMain()">
+                        <lu-icon [icon]="luIcon.back"></lu-icon>
+                    </div>
+                    <div class="-title -title-size-160 -title-bold">{{ currentQuestionnaire.title }}</div>
+                    <div class="arrange --margin-left-auto -svg -svg-size-25" (click)="showActions()">
+                        <lu-icon [icon]="luIcon.actions"></lu-icon>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
 
         <!-- MAIN SCREEN SLIDER -->
-        <div class="arrange --full-screen --justify-left --align-center screen-slider">
+        <div id="quiz-list-screen-slider"
+            class="arrange --justify-left --align-start --padding-top-0 --padding-bottom-12 screen-slider"
+            [ngClass]="{'--height-83-vh': uxView != '-view-1', '--full-screen': uxView == '-view-1' }">
             <div class="screen-slider-container -count-3 {{ uxView }}">
 
                 <!-- SCREEN EMPTY -->
                 <div class="screen-slider-view">
-                    <div class="arrange --column --full-screen --center">
-
-                        <div class="arrange --column --full-screen --center  --padding-separation --gap-relation">
+                    <div class="arrange --column --center">
+                        <div class="arrange --column --height-98-vh --center --padding-group  --gap-relation">
                             <div class="-svg -svg-size-150 -svg-stroke-07">
                                 <lu-icon class="mainIcon" [icon]="luIcon.empty"></lu-icon>
                             </div>
@@ -24,314 +49,226 @@
                             </div>
                         </div>
 
-                        <div class="joined-elements arrange --margin-top-auto" *ngIf="false">
-                            <button class="element hover" (click)="_viewEmpty()">Empty</button>
-                            <button class="element" (click)="_viewDashboard()">Dashboard</button>
-                            <button class="element" (click)="_viewDetails()">Details</button>
-                        </div>
                     </div>
                 </div>
 
                 <!-- SCREEN ACTIVITY/DASHBOARD -->
                 <div class="screen-slider-view">
-                    <div class="arrange --column --justify-center --align-center --full-screen --padding-separation">
-                        <h2>DASHBOARD</h2>
+                    <div class="arrange --column --justify-between --padding-group --padding-top-0 --padding-bottom-0">
+                        <ng-container *ngIf="uxView == '-view-2'">
+                            <!-- <div class="exam-section centred"> -->
+                            <div class="arrange --column --gaps-linked">
+                                <ng-container *ngFor="let quiz of listQuestionnaire">
+                                    <div class="quiz-card _{{quiz.type}}">
+                                        <div class="qc-icon">
+                                            <lu-icon [icon]="luIcon.mathQuest"
+                                                *ngIf="quiz.type == 'math-quest'"></lu-icon>
+                                            <lu-icon [icon]="luIcon.popularity"
+                                                *ngIf="quiz.type == 'popularity'"></lu-icon>
+                                            <lu-icon [icon]="luIcon.reading" *ngIf="quiz.type == 'reading'"></lu-icon>
+                                            <lu-icon [icon]="luIcon.simple" *ngIf="quiz.type == 'simple'"></lu-icon>
+                                            <lu-icon [icon]="luIcon.trivia" *ngIf="quiz.type == 'trivia'"></lu-icon>
+                                            <lu-icon [icon]="luIcon.trueFalse"
+                                                *ngIf="quiz.type == 'true-false'"></lu-icon>
+                                        </div>
+                                        <div class="qc-description" (click)="showAttemptsScreen(quiz)">
+                                            <div class="qc-title">{{ quiz.title }}</div>
+                                            <div class="_accent color">
+                                                {{ quiz._updatedDate }}
+                                            </div>
+                                        </div>
+                                        <div class="qc-action _accent color clickable"
+                                            (click)="showAttemptsScreen(quiz)">
+                                            <lu-icon [icon]="luIcon.open"></lu-icon>
+                                        </div>
+                                    </div>
+                                </ng-container>
 
-                        <div class="joined-elements arrange --margin-top-auto">
-                            <button class="element" (click)="_viewEmpty()">Empty</button>
-                            <button class="element hover" (click)="_viewDashboard()">Dashboard</button>
-                            <button class="element" (click)="_viewDetails()">Details</button>
-                        </div>
+                            </div>
+                            <!-- </div> -->
+                        </ng-container>
                     </div>
                 </div>
 
                 <!-- SCREEN DETAILS/QUIZ -->
                 <div class="screen-slider-view">
-                    <div class="arrange --column --justify-center --align-center --full-screen --padding-separation">
-                        <h2>DETAILS</h2>
+                    <div class="arrange --column --justify-between --padding-group --padding-top-0 --padding-bottom-0">
+                        <ng-container *ngIf="currentQuestionnaire && uxView == '-view-3'">
 
-                        <div class="joined-elements arrange --margin-top-auto">
-                            <button class="element" (click)="_viewEmpty()">Empty</button>
-                            <button class="element" (click)="_viewDashboard()">Dashboard</button>
-                            <button class="element hover" (click)="_viewDetails()">Details</button>
-                        </div>
+                            <div class="arrange --column --padding-top-10">
+                                <div class="arrange --width-100">
+                                    <div class="arrange --row-nowrap --align-center">
+                                        <lu-icon [icon]="luIcon.martQuest"
+                                            *ngIf="currentQuestionnaire.type == 'math-quest'"></lu-icon>
+                                        <lu-icon [icon]="luIcon.popularity"
+                                            *ngIf="currentQuestionnaire.type == 'popularity'"></lu-icon>
+                                        <lu-icon [icon]="luIcon.reading"
+                                            *ngIf="currentQuestionnaire.type == 'reading'"></lu-icon>
+                                        <lu-icon [icon]="luIcon.simple"
+                                            *ngIf="currentQuestionnaire.type == 'simple'"></lu-icon>
+                                        <lu-icon [icon]="luIcon.trivia"
+                                            *ngIf="currentQuestionnaire.type == 'trivia'"></lu-icon>
+                                        <lu-icon [icon]="luIcon.trueFalse"
+                                            *ngIf="currentQuestionnaire.type == 'true-false'"></lu-icon>
+
+                                        <div class="-title -title-size-160">{{ 'evaluations' | translate }}</div>
+                                    </div>
+
+                                    <ng-container *ngIf="listAttempts.length">
+                                        <button class="link uppercase" (click)="resetAttempts(currentQuestionnaire)">
+                                            <div class="inner _secondary color">
+                                                {{ 'action_reset' | translate }}
+                                                <span class="material-icons">replay</span>
+                                            </div>
+                                        </button>
+                                    </ng-container>
+                                </div>
+
+                                <div class="arrange --row-nowrap --align-center collection-actions"
+                                    *ngIf="actionsAttempts">
+                                    <ng-container *ngIf="permissions.duplicate">
+                                        <button class="small" (click)="duplicateQuiz(currentQuestionnaire)">
+                                            {{ 'permission_duplicate' | translate }}
+                                            <lu-icon [icon]="luIcon.clone"></lu-icon>
+                                        </button>
+                                    </ng-container>
+                                    <ng-container *ngIf="permissions.edit">
+                                        <button class="small" (click)="editQuiz(currentQuestionnaire)">
+                                            {{ 'action_edit' | translate }}
+                                            <lu-icon [icon]="luIcon.edit"></lu-icon>
+                                        </button>
+                                    </ng-container>
+                                    <ng-container *ngIf="permissions.delete">
+                                        <button class="small" (click)="deleteQuiz(currentQuestionnaire)">
+                                            {{ 'action_delete' | translate }}
+                                            <lu-icon [icon]="luIcon.delete"></lu-icon>
+                                        </button>
+                                    </ng-container>
+                                </div>
+
+                                <div
+                                    class="arrange --row-nowrap --width-100 --padding-direct --padding-left-0 --padding-right-0">
+                                    <lu-icon class="-svg -svg-size-30" [icon]="luIcon.help"></lu-icon>
+                                    <div>{{ 'help_attempt' | translate }}</div>
+                                </div>
+
+                                <div class="item arrange paddings-top-down">
+                                    <button class="small" (click)="createattempt()">
+                                        <div *ngIf="listAttempts.length">
+                                            {{ 'start_attempt' | translate}}
+                                            {{ 'new_attempt_text' | translate }}
+                                        </div>
+                                        <div *ngIf="!listAttempts.length">
+                                            {{ 'start_attempt' | translate }}
+                                            {{ 'empty_attempt_text' | translate }}
+                                        </div>
+                                        <lu-icon [icon]="luIcon.chevronRight"></lu-icon>
+                                    </button>
+                                </div>
+
+                                <div class="arrange">
+                                    <ng-container *ngIf="listAttempts.length">
+                                        <div class="arrange --column --width-100">
+                                            <div class="quiz-card arrange --width-100 _grade {{ attempt._grade }}"
+                                                *ngFor="let attempt of listAttempts; let i = index">
+                                                <div class="qc-icon">
+                                                    <lu-icon [icon]="luIcon.asterisk"></lu-icon>
+                                                    <!-- 
+                                                    <lu-icon [icon]="luIcon.asterisk"
+                                                        *ngIf="attempt.state != 'completed'"></lu-icon>
+                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradeFailed"
+                                                        [changeAtSeconds]="2"
+                                                        *ngIf="attempt._grade == 'failed'"></morph-i>
+                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradeBarely"
+                                                        [changeAtSeconds]="2"
+                                                        *ngIf="attempt._grade == 'barely_passed'"></morph-i>
+                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradePassed"
+                                                        [changeAtSeconds]="2"
+                                                        *ngIf="attempt._grade == 'passed'"></morph-i>
+                                                    <morph-i [icon]="luIcon.asterisk" [altIcon]="luIcon.gradePerfect"
+                                                        [changeAtSeconds]="2"
+                                                        *ngIf="attempt._grade == 'perfect'"></morph-i> -->
+                                                </div>
+
+                                                <div class="qc-description">
+                                                    <!-- <div class="_title">{{ attempt.title }}</div> -->
+                                                    <div class="qc--title -title-size-120 -title-bold">
+                                                        <div>{{ 'attempt' | translate }} <b>{{ i + 1 }}</b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="-text -text-size-80">
+                                                        <span class="_accent color">{{ attempt._updatedDate
+                                                            }}</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="qc-action arrange columns">
+                                                    <div class="badge"
+                                                        [ngClass]="{'success': attempt.state == 'completed'}">
+                                                        {{ attempt.state }}
+                                                        <div *ngIf="attempt.state == 'progress'">{{
+                                                            attempt._progress }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="qc-action">
+
+                                                    <button class="small link uppercase"
+                                                        (click)="goToReviewAttempt(attempt)"
+                                                        *ngIf="attempt.state != 'completed'">
+                                                        <div class="inner">
+                                                            <!-- <span>{{ 'review_attempt' | translate }}</span> -->
+                                                            <lu-icon [icon]="luIcon.resolve"></lu-icon>
+                                                        </div>
+                                                    </button>
+                                                    <button class="small link uppercase"
+                                                        (click)="goToCompleteAttempt(attempt)"
+                                                        *ngIf="attempt.state == 'completed'">
+                                                        <div class="inner">
+                                                            <lu-icon [icon]="luIcon.review"></lu-icon>
+                                                            <!-- <span>{{ 'complete_attempt_review' | translate }}</span> -->
+                                                        </div>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-container>
+
+                                </div>
+
+                            </div>
+
+                        </ng-container>
                     </div>
                 </div>
 
-                <div class="all-screen-section" *ngIf="false">
+            </div>
+        </div>
 
-                    <section-dinamic design="glass" *ngIf="currentSection != '_one'">
-                        <div class="arrange --justify-between --padding-relation">
-                            <ng-container *ngIf="currentSection == '_two'">
-                                <h3>{{ 'list_exam' | translate }}</h3>
-                            </ng-container>
-                            <ng-container *ngIf="currentQuestionnaire && currentSection == '_three'">
-                                <div class="item" (click)="returnMain()">
-                                    <lu-icon [icon]="luIcon.back"></lu-icon>
-                                </div>
-                                <div class="item arrange stacked left">
-                                    <h4> {{ currentQuestionnaire.title }} </h4>
-                                </div>
-                                <div class="item" (click)="showActions()">
-                                    <lu-icon [icon]="luIcon.actions"></lu-icon>
-                                </div>
-                            </ng-container>
-                        </div>
-                    </section-dinamic>
+        <!-- MODULE FOOTER  -->
+        <div class="arrange --width-screen --padding-group --padding-top-0 --padding-bottom-12 --height-8-vh --align-center"
+            *ngIf="uxView != '-view-1'">
 
-                    <section-dinamic design="none">
-                        <div class="screen-content-section horizontal-collection three-screens {{ currentSection }}"
-                            [ngClass]="{'full-height': currentSection == '_one' }">
+            <div class="joined-elements --separed card" *ngIf="profile">
+                <div class="element">
+                    <div class="-avatar -avatar-size-30 selected -avatar-border-width-2">
+                        <img [attr.src]="profile.avatarUrl">
+                    </div>
 
-                            <div class="content-section empty" *ngIf="uiServices._loader.show">
-                            </div>
-
-                            <ng-container *ngIf="!uiServices._loader.show">
-                                <div class="content-section">
-                                    <ng-container *ngIf="currentSection == '_one'">
-                                        <div class="arrange columns centers">
-                                            <lu-icon class="mainIcon" [icon]="luIcon.empty"></lu-icon>
-                                            <h3>{{ 'empty_exam_title' | translate }}</h3>
-                                            <div>{{ 'empty_exam_subtitle' | translate }}</div>
-
-                                            <ng-container *ngIf="permissions.create">
-                                                <button (click)="selectQuiz()">
-                                                    <div class="inner">
-                                                        <span>{{ 'new_quiz' | translate }}</span> <span
-                                                            class="material-icons-outlined">
-                                                            add
-                                                        </span>
-                                                    </div>
-                                                </button>
-                                            </ng-container>
-                                        </div>
-                                    </ng-container>
-                                </div>
-
-                                <div class="content-section">
-                                    <ng-container *ngIf="currentSection == '_two'">
-                                        <!-- <div class="exam-section centred"> -->
-                                        <div class="arrange columns gaps-linked">
-                                            <ng-container *ngFor="let quiz of listQuestionnaire">
-                                                <div class="item-card _{{quiz.type}}">
-                                                    <div class="_icon">
-                                                        <lu-icon [icon]="luIcon.mathQuest"
-                                                            *ngIf="quiz.type == 'math-quest'"></lu-icon>
-                                                        <lu-icon [icon]="luIcon.popularity"
-                                                            *ngIf="quiz.type == 'popularity'"></lu-icon>
-                                                        <lu-icon [icon]="luIcon.reading"
-                                                            *ngIf="quiz.type == 'reading'"></lu-icon>
-                                                        <lu-icon [icon]="luIcon.simple"
-                                                            *ngIf="quiz.type == 'simple'"></lu-icon>
-                                                        <lu-icon [icon]="luIcon.trivia"
-                                                            *ngIf="quiz.type == 'trivia'"></lu-icon>
-                                                        <lu-icon [icon]="luIcon.trueFalse"
-                                                            *ngIf="quiz.type == 'true-false'"></lu-icon>
-                                                    </div>
-                                                    <div class="_description" (click)="showAttemptsScreen(quiz)">
-                                                        <div class="_title">{{ quiz.title }}</div>
-                                                        <div class="_accent color">
-                                                            {{ quiz._updatedDate }}
-                                                        </div>
-                                                    </div>
-                                                    <div class="_action _accent color clickable"
-                                                        (click)="showAttemptsScreen(quiz)">
-                                                        <lu-icon [icon]="luIcon.open"></lu-icon>
-                                                    </div>
-                                                </div>
-                                            </ng-container>
-
-                                        </div>
-                                        <!-- </div> -->
-                                    </ng-container>
-                                </div>
-
-                                <div class="content-section details">
-                                    <ng-container *ngIf="currentQuestionnaire && currentSection == '_three'">
-
-                                        <div class="arrange columns --padding-relation">
-                                            <div class="item arrange --justify-between paddings-down">
-                                                <div class="arrange stacked centers-vertical _accent color">
-                                                    <lu-icon [icon]="luIcon.martQuest"
-                                                        *ngIf="currentQuestionnaire.type == 'math-quest'"></lu-icon>
-                                                    <lu-icon [icon]="luIcon.popularity"
-                                                        *ngIf="currentQuestionnaire.type == 'popularity'"></lu-icon>
-                                                    <lu-icon [icon]="luIcon.reading"
-                                                        *ngIf="currentQuestionnaire.type == 'reading'"></lu-icon>
-                                                    <lu-icon [icon]="luIcon.simple"
-                                                        *ngIf="currentQuestionnaire.type == 'simple'"></lu-icon>
-                                                    <lu-icon [icon]="luIcon.trivia"
-                                                        *ngIf="currentQuestionnaire.type == 'trivia'"></lu-icon>
-                                                    <lu-icon [icon]="luIcon.trueFalse"
-                                                        *ngIf="currentQuestionnaire.type == 'true-false'"></lu-icon>
-
-                                                    <h2>{{ 'evaluations' | translate }}</h2>
-                                                </div>
-
-                                                <ng-container *ngIf="listAttempts.length">
-                                                    <button class="link uppercase"
-                                                        (click)="resetAttempts(currentQuestionnaire)">
-                                                        <div class="inner _secondary color">
-                                                            {{ 'action_reset' | translate }}
-                                                            <span class="material-icons">replay</span>
-                                                        </div>
-                                                    </button>
-                                                </ng-container>
-                                            </div>
-
-                                            <div class="item arrange stacked --justify-between collection-actions"
-                                                *ngIf="actionsAttempts">
-                                                <ng-container *ngIf="permissions.duplicate">
-                                                    <button class=" _uppercase"
-                                                        (click)="duplicateQuiz(currentQuestionnaire)">
-                                                        <div class="inner">
-                                                            {{ 'permission_duplicate' | translate }}
-                                                            <!-- <span class="material-icons">copy_all</span> -->
-                                                            <lu-icon [icon]="luIcon.clone"></lu-icon>
-                                                        </div>
-                                                    </button>
-                                                </ng-container>
-                                                <ng-container *ngIf="permissions.edit">
-                                                    <button class=" _uppercase"
-                                                        (click)="editQuiz(currentQuestionnaire)">
-                                                        <div class="inner">
-                                                            {{ 'action_edit' | translate }}
-                                                            <!-- <span class="material-icons">mode_edit</span> -->
-                                                            <lu-icon [icon]="luIcon.edit"></lu-icon>
-                                                        </div>
-                                                    </button>
-                                                </ng-container>
-                                                <ng-container *ngIf="permissions.delete">
-                                                    <button class="_uppercase"
-                                                        (click)="deleteQuiz(currentQuestionnaire)">
-                                                        <div class="inner">
-                                                            {{ 'action_delete' | translate }}
-                                                            <!-- <span class="material-icons">delete</span> -->
-                                                            <lu-icon [icon]="luIcon.delete"></lu-icon>
-                                                        </div>
-                                                    </button>
-                                                </ng-container>
-                                            </div>
-
-                                            <div class="item arrange stacked centers-vertical">
-                                                <lu-icon [icon]="luIcon.help"></lu-icon>
-                                                <div>{{ 'help_attempt' | translate }}</div>
-                                            </div>
-
-                                            <!-- <div class="item">
-                                    <div class="stadistic">
-                                        <h4>{{ 'evaluations' | translate }}</h4>
-                                        <div>{{ currentQuestionnaire._attemptsValue }}</div>
-                                    </div>
-                                    <div class="stadistic">
-                                        <h4>{{ 'questions' | translate }}</h4>
-                                        <div>{{ currentQuestionnaire.questions.length }}</div>
-                                    </div>
-
-                                    <div class="stadistic">
-                                        <h4>{{ 'best_time' | translate }}</h4>
-                                        <div>{{ currentQuestionnaire._bestTimeValue }}</div>
-                                    </div>
-                                </div> -->
-                                            <div class="item arrange paddings-top-down">
-                                                <button class="link uppercase" (click)="createattempt()">
-                                                    <div class="inner">
-                                                        <span *ngIf="listAttempts.length">{{ 'start_attempt' | translate
-                                                            }}
-                                                            {{
-                                                            'new_attempt_text' | translate }} </span>
-                                                        <span *ngIf="!listAttempts.length">{{ 'start_attempt' |
-                                                            translate }}
-                                                            {{
-                                                            'empty_attempt_text' | translate }} </span>
-                                                        <span class="material-icons _accent color">
-                                                            play_arrow
-                                                        </span>
-                                                    </div>
-                                                </button>
-                                            </div>
-
-                                            <div class="item">
-                                                <ng-container *ngIf="listAttempts.length">
-                                                    <div class="arrange columns">
-                                                        <div class="item-card _grade {{ attempt._grade }}"
-                                                            *ngFor="let attempt of listAttempts; let i = index">
-                                                            <div class="_icon">
-                                                                <lu-icon [icon]="luIcon.asterisk"
-                                                                    *ngIf="attempt.state != 'completed'"></lu-icon>
-                                                                <morph-i [icon]="luIcon.asterisk"
-                                                                    [altIcon]="luIcon.gradeFailed" [changeAtSeconds]="2"
-                                                                    *ngIf="attempt._grade == 'failed'"></morph-i>
-                                                                <morph-i [icon]="luIcon.asterisk"
-                                                                    [altIcon]="luIcon.gradeBarely" [changeAtSeconds]="2"
-                                                                    *ngIf="attempt._grade == 'barely_passed'"></morph-i>
-                                                                <morph-i [icon]="luIcon.asterisk"
-                                                                    [altIcon]="luIcon.gradePassed" [changeAtSeconds]="2"
-                                                                    *ngIf="attempt._grade == 'passed'"></morph-i>
-                                                                <morph-i [icon]="luIcon.asterisk"
-                                                                    [altIcon]="luIcon.gradePerfect"
-                                                                    [changeAtSeconds]="2"
-                                                                    *ngIf="attempt._grade == 'perfect'"></morph-i>
-                                                            </div>
-
-                                                            <div class="_description">
-                                                                <!-- <div class="_title">{{ attempt.title }}</div> -->
-                                                                <div class="_title arrange --justify-between">
-                                                                    <div>{{ 'attempt' | translate }} <b>{{ i + 1 }}</b>
-                                                                    </div>
-
-
-                                                                </div>
-                                                                <div class="arrange stacked">
-                                                                    <span class="_accent color">{{ attempt._updatedDate
-                                                                        }}</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="_action arrange columns">
-                                                                <div class="badge"
-                                                                    [ngClass]="{'success': attempt.state == 'completed'}">
-                                                                    {{ attempt.state }}
-                                                                    <div *ngIf="attempt.state == 'progress'">{{
-                                                                        attempt._progress }}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="_action">
-
-                                                                <button class="link uppercase"
-                                                                    (click)="goToReviewAttempt(attempt)"
-                                                                    *ngIf="attempt.state != 'completed'">
-                                                                    <div class="inner">
-                                                                        <!-- <span>{{ 'review_attempt' | translate }}</span> -->
-                                                                        <lu-icon [icon]="luIcon.resolve"></lu-icon>
-                                                                    </div>
-                                                                </button>
-                                                                <button class="link uppercase"
-                                                                    (click)="goToCompleteAttempt(attempt)"
-                                                                    *ngIf="attempt.state == 'completed'">
-                                                                    <div class="inner">
-                                                                        <lu-icon [icon]="luIcon.review"></lu-icon>
-                                                                        <!-- <span>{{ 'complete_attempt_review' | translate }}</span> -->
-                                                                    </div>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </ng-container>
-
-                                            </div>
-
-                                        </div>
-
-                                    </ng-container>
-                                </div>
-                            </ng-container>
-                        </div>
-                    </section-dinamic>
-
-                    <navbar-component [mode]="'dashboard'" (onAction)="onAction($event)"></navbar-component>
+                    <div>{{ profile.userName }}</div>
                 </div>
 
+                <div class="element" (click)="onNewQuiz()">
+                    <lu-icon [icon]="luIcon.add"></lu-icon>
+                    <div class="_nav_title">{{ 'new' | translate }}</div>
+                </div>
+
+                <div class="element" (click)="gotoSettings()">
+                    <div class="_nav_title">{{ 'header_settings' | translate }}</div>
+                    <lu-icon [icon]="luIcon.settings"></lu-icon>
+                </div>
             </div>
         </div>
     </div>

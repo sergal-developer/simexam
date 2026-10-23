@@ -1,10 +1,12 @@
-import { Component, OnInit, ViewEncapsulation, } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, OnInit, Output, ViewEncapsulation, } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { icons } from "lucide";
 import { normalizeQuestionaryDTO, QuestionnaireFile, QuestionDTO, QuestionaryDTO, SettingsDTO } from 'src/app/shared/data/entities/dtos';
 import { QuizType } from 'src/app/shared/data/enumerables/enumerables';
 import { Utils } from 'src/app/shared/data/utils/utils';
+import { UxUtils } from 'src/app/shared/data/utils/uxUtils';
 import { CommonServices } from 'src/app/shared/services/common.services';
+import { AppStateStore } from 'src/app/shared/services/global.store.service';
 import { UiServices } from 'src/app/shared/services/ui.services';
 
 
@@ -13,7 +15,16 @@ import { UiServices } from 'src/app/shared/services/ui.services';
   templateUrl: './quiz-selector.html',
   encapsulation: ViewEncapsulation.None,
 })
-export class QuizSelectorComponent implements OnInit {
+export class QuizSelectorComponent implements OnInit, AfterViewInit {
+  @Output() onChange = new EventEmitter();
+
+  uistate = 'init';
+  uxView: '-view-1' | '-view-2' = '-view-1';
+  uxContentView = [
+    { name: 'list', class: '-view-1' },
+    { name: 'details', class: '-view-2' },
+  ];
+  uxContentIndex = 0;
 
   options: any = [];
   settings: SettingsDTO = null;
@@ -42,9 +53,11 @@ export class QuizSelectorComponent implements OnInit {
   loadingDataAi = false;
   isEdit = false;
   _helper = new Utils();
+  uxUtils = new UxUtils();
 
   luIcon = {
     back: icons.ArrowLeft,
+    summary: icons.Summary,
 
     trivia: icons.ListTodo,
     simple: icons.PlayingCards,
@@ -69,19 +82,27 @@ export class QuizSelectorComponent implements OnInit {
 
   constructor(private commonServices: CommonServices,
     private uiServices: UiServices,
-    private translate: TranslateService
+    private translate: TranslateService,
+    public store: AppStateStore
   ) {
   }
 
   async ngOnInit() {
-    this.uiServices.showLoader(true);
+    this.uistate = '';
+  }
+
+  async ngAfterViewInit() {
+    await this.uxUtils.wait(500);
     this.setupLanguage(() => {
+      this.showView('list');
       this.setupComponent();
     });
   }
 
   async setupLanguage(next) {
-    this.settings = await this.commonServices.getCurrentSettings();
+    const store = await this.store.getAll();
+    this.settings = store;
+
     this.translate.setDefaultLang(this.settings.language);
     const keys = Object.keys(this.translateLabels);
     this.translate.get(keys).subscribe((res) => {
@@ -92,11 +113,12 @@ export class QuizSelectorComponent implements OnInit {
 
   //#region DATA
   async setupComponent(injectData?: QuestionaryDTO) {
-    this.getManifestFiles();
+    await this.getManifestFiles();
     this.uiServices.showLoader(false);
   }
 
   async getManifestFiles() {
+    this.uiServices.showLoader(true);
     const data = await this.commonServices.getManifetFiles();
 
     this.listFilesAvailable = data && data.files ? data.files : [];
@@ -106,6 +128,9 @@ export class QuizSelectorComponent implements OnInit {
     });
     this.listFilesAvailable = this.listFilesAvailable.filter(x => x.isEmpty == false);
     this.listFilesFiltered = JSON.parse(JSON.stringify(this.listFilesAvailable));
+
+    this.uiServices.showLoader(false);
+    return true;
   }
 
   async getExternalFile(path: string) {
@@ -126,27 +151,27 @@ export class QuizSelectorComponent implements OnInit {
   async getFile(item: any) {
     const data = await this.getExternalFile(item.path);
     console.info('data: ', item, data);
-    
+
     const _template = normalizeQuestionaryDTO((data as QuestionaryDTO));
     console.log('_template: ', _template);
-    
-    
-    this.uiServices.notification(`¿Importar plantilla?`, { 
+    this.uiServices.notification(`¿Importar plantilla?`, {
       type: 'info', closeTimer: 0,
-      actionText: 'IMPORTAR', actionEvent: () => { this.importTemplateFile(item, _template) } });
+      actionText: 'IMPORTAR', actionEvent: () => { this.importTemplateFile(item, _template) }
+    });
   }
 
   async importTemplateFile(file: QuestionnaireFile, template: QuestionaryDTO) {
     this.uiServices.closeNotification();
-    
+
     template.type = QuizType[file.type];
     const _template = normalizeQuestionaryDTO((template as QuestionaryDTO));
 
     const _data = await this.commonServices.saveQuestionary(_template);
-    
-    this.uiServices.notification(`Plantilla importada con exito`, { 
+
+    this.uiServices.notification(`Plantilla importada con exito`, {
       type: 'success', closeTimer: 3500,
-      actionText: 'IR A INICIO', actionEvent: () => { this.gotoDashboard() } });
+      actionText: 'IR A INICIO', actionEvent: () => { this.gotoDashboard() }
+    });
   }
 
   filterBy(type: string) {
@@ -160,5 +185,43 @@ export class QuizSelectorComponent implements OnInit {
     this.listFilesFiltered = JSON.parse(JSON.stringify(this.listFilesAvailable));
   }
 
+  valueChange(value: string) {
+    this.onChange.emit({ action: 'ui_update', value: value });
+  }
+
+  viewSummary(item) {
+    this._viewDetails();
+  }
   //#endregion EVENTS
+
+  //#region CONVERTERS
+  _viewList() {
+    this.showView('list');
+
+    document.querySelector('#quiz-selector-screen-slider').scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  _viewDetails() {
+    this.showView('details');
+
+    document.querySelector('#quiz-selector-screen-slider').scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  showView(name: 'list' | 'details', after?: Function) {
+    const newIndex = this.uxContentView.findIndex(form => form.name == name);
+    this.uxView = this.uxContentView[newIndex].class as '-view-1' | '-view-2';
+    this.uxContentIndex = newIndex;
+
+    this.valueChange(this.uxContentView[newIndex].name);
+    if (after) { after() }
+  }
+  //#endregion CONVERTERS
 }
