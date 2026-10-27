@@ -46,8 +46,9 @@ export class TypeSimpleComponent implements OnInit {
   };
 
   _utilsUX = new UxUtils();
-
   indexFliped = false;
+  uxView: string = '-view-1';
+  uxCountScreen: string = '-count-1';
   //#endregion INTERNAL
 
   //#region LIFECICLE
@@ -55,6 +56,13 @@ export class TypeSimpleComponent implements OnInit {
     public uiServices: UiServices) { }
 
   async ngOnInit() {
+    const total = (this.attempt.questions as QuestionDTO[]).length;
+    const questions = (this.attempt.questions as QuestionDTO[]).map(x => {
+      x._flip = false;
+      return x;
+    });
+    console.log('questions: ', questions);
+    this.uxCountScreen = `-count-${total}`;
     this.uiServices.showLoader(true);
     this.setupComponent();
     await this._utilsUX.wait(500);
@@ -134,24 +142,14 @@ export class TypeSimpleComponent implements OnInit {
   //#endregion DATA
 
   //#region EVENTS
-  flipCurrentCard() {
-    const listCards = (this.attempt.questions as QuestionDTO[]);
-    const current = listCards[this.index];
-    const isLastCard = this.index == listCards.length - 1;
-
-    if (current._flip && !isLastCard) {
-      this.nextQuestion();
-      return;
-    }
-
-    current._flip = !current._flip;
-    current._hasFlipped = true;
+  flipCurrentCard(card: QuestionDTO) {
+    card._flip = !card._flip;
+    card._hasFlipped = true;
     this.indexFliped = true;
 
-    if (current._hasFlipped) {
+    if (card._hasFlipped) {
       this.setCurrentEndEditQuestion();
     }
-
 
     this.attempt = normalizeAttemptDTO(this.attempt);
     console.log('this.attempt: ', this.attempt.questions[this.index]);
@@ -163,10 +161,10 @@ export class TypeSimpleComponent implements OnInit {
       return;
     }
 
-    this.setCurrentEndEditQuestion();
     this.resetFlipValidation();
-    await this._utilsUX.wait(300);
+    this.setCurrentEndEditQuestion();
     this.index = this.index <= 0 ? 0 : this.index - 1;
+    this.setCurrentQuestionView();
     this.updateResults({ finish: false, updateData: false });
   }
 
@@ -176,11 +174,10 @@ export class TypeSimpleComponent implements OnInit {
       return;
     }
 
-    this.setCurrentEndEditQuestion();
     this.resetFlipValidation();
-    await this._utilsUX.wait(300);
+    this.setCurrentEndEditQuestion();
     this.index = this.index >= this.attempt.questions.length - 1 ? this.attempt.questions.length - 1 : this.index + 1;
-    this.setCurrentStartEditQuestion();
+    this.setCurrentQuestionView();
     this.updateResults({ finish: false, updateData: true });
   }
 
@@ -228,26 +225,28 @@ export class TypeSimpleComponent implements OnInit {
   }
 
   private resetFlipValidation() {
-    const current = (this.attempt.questions[this.index] as QuestionDTO);
-    current['flip'] = false;
+    (this.attempt.questions[this.index] as QuestionDTO)._flip = false;
     this.indexFliped = false;
   }
 
-  private setCurrentStartEditQuestion() {
+  private setCurrentStartEditQuestion(index?: number) {
     if (this.attempt.state == AttemptState.new || this.attempt.state == AttemptState.progress) {
-      const current = (this.attempt.questions[this.index] as QuestionDTO);
+      const _index = index || this.index;
+      const current = (this.attempt.questions[_index] as QuestionDTO);
       current._startEditTime = current._startEditTime || new Date().getTime();
-      console.log('current._startEditTime: ', current._startEditTime);
     }
   }
 
-  private setCurrentEndEditQuestion() {
+  private setCurrentEndEditQuestion(index?: number) {
     if (this.attempt.state == AttemptState.new || this.attempt.state == AttemptState.progress) {
-      const current = (this.attempt.questions[this.index] as QuestionDTO);
-      // current._endEditTime = current._endEditTime || new Date().getTime();
+      const _index = index || this.index;
+      const current = (this.attempt.questions[_index] as QuestionDTO)
       current._endEditTime = new Date().getTime();
-      console.log('current._endEditTime: ', current._endEditTime);
     }
+  }
+
+  private setCurrentQuestionView() {
+    this.uxView = `-view-${this.index + 1}`;
   }
   //#endregion CONVERTERS
 }

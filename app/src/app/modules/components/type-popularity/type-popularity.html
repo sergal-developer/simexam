@@ -1,65 +1,86 @@
-<div class="arrange --column --gap-0 --height-88-vh" [ngClass]="{'--center': currentSection == 'results' }"
+<div class="arrange --column --gap-0 --height-91-vh" [ngClass]="{'--center': currentSection == 'results' }"
     *ngIf="attempt.questions[index]">
-    <ng-container *ngIf="currentSection == 'quiz' && attempt.questions[index]">
+    <ng-container *ngIf="currentSection == 'quiz' && attempt.questions">
 
-        <div class="arrange --height-50 --center">
-            <div class="-text -text-size-500" [innerHTML]="attempt.questions[index].question"></div>
-        </div>
+        <!-- MAIN SCREEN SLIDER -->
+        <div id="quiz-list-screen-slider" class="arrange --justify-left --align-start --height-91-vh screen-slider">
+            <!-- SCREEN SLIDER CONTAINER -->
+            <div class="screen-slider-container {{ uxCountScreen }} {{ uxView }}">
+                <!-- SCREEN BY QUESTION -->
+                <div class="screen-slider-view" *ngFor="let item of attempt.questions">
+                    <div class="arrange --column --height-91-vh --padding-group">
 
-        <div class="arrange --column --height-50 --center">
-            <div class="item">Seleciona las respuestas correctas.</div>
+                        <div class="arrange --height-50 --center">
+                            <div class="-text -text-size-500" [innerHTML]="item.question"></div>
+                        </div>
 
-            <div class="item" *ngIf="statusScore">{{ statusScore }}</div>
+                        <div class="arrange --column --height-40 --center">
+                            <div class="item">Seleciona las respuestas correctas.</div>
 
-            <div class="arrange --row {{numrows}} --divided-children-2">
-                <ng-container *ngFor="let option of attempt.questions[index].answers">
-                    <div class="arrange --row-nowrap --center" [ngClass]="{   
+                            <div class="item" *ngIf="statusScore">{{ statusScore }}</div>
+
+                            <div class="arrange --row {{numrows}} --divided-children-2">
+                                <ng-container *ngFor="let option of item.answers">
+                                    <div class="arrange --row-nowrap --center" [ngClass]="{   
                                         'selected': option._selected,
                                         'incorrect': readonly && !option.popular,
                                         'correct': readonly && option.popular != 0,
                                         'disabled': savingData }" (click)="selectOption(option)">
-                        <div class="_answer_selection font_variable">
-                            <lu-icon *ngIf="readonly && option.isCorrect" [icon]="luIcon.correct"></lu-icon>
-                            <lu-icon *ngIf="readonly && !option.isCorrect && !option._selected"
-                                [icon]="luIcon.incorrect"></lu-icon>
-                            <lu-icon *ngIf="readonly && !option.isCorrect && option._selected"
-                                [icon]="luIcon.selected"></lu-icon>
+                                        <div class="_answer_selection font_variable">
+                                            <lu-icon *ngIf="readonly && option.isCorrect"
+                                                [icon]="luIcon.correct"></lu-icon>
+                                            <lu-icon *ngIf="readonly && !option.isCorrect && !option._selected"
+                                                [icon]="luIcon.incorrect"></lu-icon>
+                                            <lu-icon *ngIf="readonly && !option.isCorrect && option._selected"
+                                                [icon]="luIcon.selected"></lu-icon>
 
-                            <lu-icon *ngIf="!readonly && !option._selected" [icon]="luIcon.unselected"></lu-icon>
-                            <lu-icon *ngIf="!readonly && option._selected" [icon]="luIcon.selected"></lu-icon>
-                        </div>
-                        <div class="-text -text-size-300" [innerHTML]="option.answer">
-                        </div>
-                        <div *ngIf="revealedQuiz || readonly" class="font_variable">
-                            <div class="btn">
-                                {{ option.popular }}
+                                            <lu-icon *ngIf="!readonly && !option._selected"
+                                                [icon]="luIcon.unselected"></lu-icon>
+                                            <lu-icon *ngIf="!readonly && option._selected"
+                                                [icon]="luIcon.selected"></lu-icon>
+                                        </div>
+                                        <div class="-text -text-size-300" [innerHTML]="option.answer">
+                                        </div>
+                                        <div *ngIf="revealedQuiz || readonly" class="font_variable">
+                                            <div class="btn">
+                                                {{ option.popular }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-container>
                             </div>
                         </div>
+
+                        <div class="joined-elements --margin-top-auto">
+                            <button class="element" (click)="prevQuestion()" [disabled]="!index">
+                                <lu-icon [icon]="luIcon.left"></lu-icon>
+                                <span>{{ 'action_prev' | translate }}</span>
+                            </button>
+
+                            <button class="element" (click)="finishQuiz()"
+                                *ngIf="index == attempt.questions.length - 1">
+                                <span>{{ 'action_complete' | translate }}</span>
+                            </button>
+
+                            <button class="element" (click)="revealQuiz()" [disabled]="!optionsSelected.length"
+                                *ngIf="!calculatedQuiz">
+                                <span>Revelar</span>
+                            </button>
+
+                            <button class="element" (click)="nextQuestion()" [disabled]="!calculatedQuiz"
+                                *ngIf="index < attempt.questions.length - 1">
+                                <span>{{ 'action_next' | translate }}</span>
+                                <lu-icon [icon]="luIcon.right"></lu-icon>
+                            </button>
+                        </div>
+
                     </div>
-                </ng-container>
+                </div>
             </div>
         </div>
 
-        <div class="joined-elements --margin-top-auto">
-            <button class="element" (click)="prevQuestion()" [disabled]="!index">
-                <lu-icon [icon]="luIcon.left"></lu-icon>
-                <span>{{ 'action_prev' | translate }}</span>
-            </button>
 
-            <button class="element" (click)="finishQuiz()" *ngIf="index == attempt.questions.length - 1">
-                <span>{{ 'action_complete' | translate }}</span>
-            </button>
 
-            <button class="element" (click)="revealQuiz()" [disabled]="!optionsSelected.length" *ngIf="!calculatedQuiz">
-                <span>Revelar</span>
-            </button>
-
-            <button class="element" (click)="nextQuestion()" [disabled]="!calculatedQuiz"
-                *ngIf="index < attempt.questions.length - 1">
-                <span>{{ 'action_next' | translate }}</span>
-                <lu-icon [icon]="luIcon.right"></lu-icon>
-            </button>
-        </div>
     </ng-container>
 
     <ng-container *ngIf="currentSection == 'results'">

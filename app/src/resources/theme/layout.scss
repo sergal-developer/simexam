@@ -1,47 +1,70 @@
+@use "sass:map";
+
 @import './core/colors';
 @import './core/typography';
 @import './core/mixins';
 @import './core/animations';
 
-
 // #region ARRANGE
+$arrange-spaces: (
+    0: 0,
+    joined: var(--space-joined),
+    direct: var(--space-direct),
+    relation: var(--space-relation),
+    group: var(--space-group),
+    separation: var(--space-separation),
+    section: var(--space-section),
+    block: var(--space-block)
+);
+
+$arrange-alignments: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    stretch: stretch
+);
+
+$arrange-justifications: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    between: space-between,
+    around: space-around,
+    evenly: space-evenly
+);
+
 .arrange {
-    // Layout base
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: var(--space-relation);
     box-sizing: border-box;
     z-index: 10;
 
+    >* {
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
     &.-- {
 
-        // ----------------------------------------
-        // Direction & wrapping
-        // ----------------------------------------
+        // Direction
         &row {
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-flow: row wrap;
         }
 
         &row-nowrap {
-            flex-direction: row;
-            flex-wrap: nowrap;
+            flex-flow: row nowrap;
         }
 
         &column {
-            flex-direction: column;
-            flex-wrap: nowrap;
+            flex-flow: column nowrap;
         }
 
         &column-wrap {
-            flex-direction: column;
-            flex-wrap: wrap;
+            flex-flow: column wrap;
         }
 
-        // ----------------------------------------
-        // Overflow
-        // ----------------------------------------
+        // Position and overflow
         &position-relative {
             position: relative;
         }
@@ -64,48 +87,17 @@
             @include scroll(5px, var(--scrollColor), var(--scrollBackground), 0);
         }
 
-        // ----------------------------------------
         // Alignment
-        // ----------------------------------------
-
-        &align-start {
-            align-items: flex-start;
+        @each $name, $value in $arrange-alignments {
+            &align-#{$name} {
+                align-items: $value;
+            }
         }
 
-        &align-center {
-            align-items: center;
-        }
-
-        &align-end {
-            align-items: flex-end;
-        }
-
-        &align-stretch {
-            align-items: stretch;
-        }
-
-        &justify-start {
-            justify-content: flex-start;
-        }
-
-        &justify-center {
-            justify-content: center;
-        }
-
-        &justify-end {
-            justify-content: flex-end;
-        }
-
-        &justify-between {
-            justify-content: space-between;
-        }
-
-        &justify-around {
-            justify-content: space-around;
-        }
-
-        &justify-evenly {
-            justify-content: space-evenly;
+        @each $name, $value in $arrange-justifications {
+            &justify-#{$name} {
+                justify-content: $value;
+            }
         }
 
         &center {
@@ -131,80 +123,22 @@
             text-align: right;
         }
 
-        // ----------------------------------------
         // Gap
-        // ----------------------------------------
-
-        &gap-0 {
-            gap: 0;
+        @each $name, $value in $arrange-spaces {
+            &gap-#{$name} {
+                gap: $value;
+            }
         }
 
-        &gap-joined {
-            gap: var(--space-joined);
-        }
-
-        &gap-direct {
-            gap: var(--space-direct);
-        }
-
-        &gap-relation {
-            gap: var(--space-relation);
-        }
-
-        &gap-default {
-            gap: var(--space-def);
-        }
-
-        &gap-group {
-            gap: var(--space-group);
-        }
-
-        &gap-separation {
-            gap: var(--space-separation);
-        }
-
-        &gap-section {
-            gap: var(--space-section);
-        }
-
-        &gap-block {
-            gap: var(--space-block);
-        }
-
-        // ----------------------------------------
-        // Padding & Margin
-        // ----------------------------------------
-
+        // Padding
         &padding {
             padding: var(--space-def);
         }
 
-        &padding-joined {
-            padding: var(--space-joined);
-        }
-
-        &padding-direct {
-            padding: var(--space-direct);
-        }
-
-        &padding-relation {
-            padding: var(--space-relation);
-        }
-
-        &padding-group {
-            padding: var(--space-group);
-        }
-
-        &padding-separation {
-            padding: var(--space-separation);
-        }
-
-        &padding-section {
-            padding: var(--space-section);
-        }
-
-        &padding-block {
-            padding: var(--space-block);
+        @each $name, $value in $arrange-spaces {
+            &padding-#{$name} {
+                padding: $value;
+            }
         }
 
         &padding-y {
@@ -221,31 +155,38 @@
 
         @for $i from 0 through 300 {
             &padding-top-#{$i} {
-                padding-top: #{$i * 1px};
+                padding-top: #{$i}px;
             }
 
             &padding-bottom-#{$i} {
-                padding-bottom: #{$i * 1px};
+                padding-bottom: #{$i}px;
             }
 
             &padding-left-#{$i} {
-                padding-left: #{$i * 1px};
+                padding-left: #{$i}px;
             }
 
             &padding-right-#{$i} {
-                padding-right: #{$i * 1px};
+                padding-right: #{$i}px;
             }
         }
 
+        // Margin
         &margin {
             margin: var(--space-def);
+        }
+
+        @each $name, $value in $arrange-spaces {
+            &margin-#{$name} {
+                margin: $value;
+            }
         }
 
         &margin-top-auto {
             margin-top: auto;
         }
 
-        &margin-buttom-auto {
+        &margin-bottom-auto {
             margin-bottom: auto;
         }
 
@@ -259,39 +200,34 @@
 
         @for $i from 0 through 300 {
             &margin-top-#{$i} {
-                margin-top: #{$i * 1px};
+                margin-top: #{$i}px;
             }
 
             &margin-bottom-#{$i} {
-                margin-bottom: #{$i * 1px};
+                margin-bottom: #{$i}px;
             }
 
             &margin-left-#{$i} {
-                margin-left: #{$i * 1px};
+                margin-left: #{$i}px;
             }
 
             &margin-right-#{$i} {
-                margin-right: #{$i * 1px};
+                margin-right: #{$i}px;
             }
         }
 
-        // ----------------------------------------
         // Width
-        // ----------------------------------------
-
         &width-auto {
             width: auto;
         }
 
         @for $i from 0 through 100 {
             &width-#{$i} {
-                width: #{$i * 1%};
+                width: #{$i}#{"%"};
             }
-        }
 
-        @for $i from 0 through 100 {
             &width-#{$i}-vh {
-                width: #{$i * 1vh};
+                width: #{$i}vh;
             }
         }
 
@@ -301,7 +237,7 @@
 
         @for $i from 0 through 50 {
             &width-#{$i * 10}-px {
-                width: #{$i * 10%};
+                width: #{$i * 10}px;
             }
         }
 
@@ -311,35 +247,26 @@
             }
         }
 
-        // ----------------------------------------
         // Height
-        // ----------------------------------------
-
         &height-auto {
             height: auto;
         }
 
         @for $i from 0 through 100 {
             &height-#{$i} {
-                height: #{$i * 1%};
+                height: #{$i}#{"%"};
             }
-        }
 
-        @for $i from 0 through 100 {
             &height-#{$i}-vh {
-                height: #{$i * 1vh};
+                height: #{$i}vh;
             }
-        }
 
-        @for $i from 0 through 100 {
             &height-max-#{$i}-vh {
-                max-height: #{$i * 1vh};
+                max-height: #{$i}vh;
             }
-        }
 
-        @for $i from 0 through 50 {
             &height-#{$i * 10}-px {
-                height: #{$i * 10%};
+                height: #{$i * 10}px;
             }
         }
 
@@ -352,43 +279,22 @@
             height: 100vh;
         }
 
-        // ----------------------------------------
-        // Borders
-        // ----------------------------------------
+        // Border
         &border-radius {
             border-radius: 10px;
         }
 
-        // ----------------------------------------
         // Equal-width columns
-        // ----------------------------------------
-
-        &columns-1 {
-            >* {
-                flex: 0 0 100%;
-                min-width: 0;
+        @for $i from 1 through 20 {
+            &columns-#{$i} {
+                >* {
+                    flex: 0 0 calc((100% - (#{$i - 1} * var(--space-relation))) / #{$i});
+                    min-width: 0;
+                }
             }
         }
 
-        &columns-2 {
-            >* {
-                flex: 0 0 calc((100% - var(--space-relation)) / 2);
-                min-width: 0;
-            }
-        }
-
-        &columns-3 {
-            >* {
-                flex: 0 0 calc((100% - 2 * var(--space-relation)) / 3);
-                min-width: 0;
-            }
-        }
-
-        // ----------------------------------------
-        // Children
-        // ----------------------------------------
-
-
+        // Divided children
         &divided-children-1 {
             >* {
                 width: calc(100% - var(--space-relation));
@@ -397,25 +303,15 @@
 
         &divided-children-2 {
             >* {
-                width: calc(50% - (var(--space-relation) / 2));
+                width: calc(50% - var(--space-relation) / 2);
             }
         }
 
         &divided-children-3 {
             >* {
-                width: calc((100% / 3) - (var(--space-relation) / 1.5));
+                width: calc(100% / 3 - var(--space-relation) / 1.5);
             }
         }
-
-    }
-
-    // ----------------------------------------
-    // Children
-    // ----------------------------------------
-
-    >* {
-        box-sizing: border-box;
-        min-width: 0;
     }
 }
 
@@ -473,6 +369,93 @@
     }
 }
 
+$background-positions: (
+    initial: (shape-1: translate(9%, 0) scale(1.5),
+        shape-2: translate(9%, 0) scale(1),
+        shape-3: translate(7%, -16%) scale(1.4),
+        shape-4: translate(6%, 0%) scale(1),
+        shape-5: translate(19%, 0%) scale(1.5),
+        shape-6: translate(1%, -7%) scale(1.5)),
+
+
+    centers: (shape-1: translate(9%, 0) scale(1.5),
+        shape-2: translate(9%, 0) scale(1),
+        shape-3: translate(7%, -16%) scale(1.4),
+        shape-4: translate(6%, 0%) scale(1),
+        shape-5: translate(19%, 0%) scale(1.5),
+        shape-6: translate(1%, -7%) scale(1.5)),
+
+    alination1: (shape-1: translate(16%, 250%) scale(2.5),
+        shape-2: translate(14%, 100%) scale(2),
+        shape-3: translate(15%, -10%) scale(2),
+        shape-4: translate(10%, 95%) scale(3),
+        shape-5: translate(26%, 180%) scale(2.5),
+        shape-6: translate(10%, 105%) scale(1)),
+
+    alination2: (shape-1: translate(16%, 259%) scale(3.5),
+        shape-2: translate(14%, 218%) scale(2),
+        shape-3: translate(15%, 190%) scale(4),
+        shape-4: translate(10%, 290%) scale(4),
+        shape-5: translate(28%, 329%) scale(3),
+        shape-6: translate(10%, 200%) scale(5)),
+
+    alination3: (shape-1: translate(16%, 259%) scale(3.5),
+        shape-2: translate(-66%, 218%) scale(3) rotate(119deg),
+        shape-3: translate(15%, 190%) scale(4) rotate(45deg),
+        shape-4: translate(10%, 290%) scale(0),
+        shape-5: translate(28%, 329%) scale(0),
+        shape-6: translate(10%, 200%) scale(0)),
+
+    alination4: (shape-1: translate(16%, 150%) scale(4),
+        shape-2: translate(14%, 150%) scale(2),
+        shape-3: translate(15%, 150%) scale(1.5),
+        shape-4: translate(10%, 158%) scale(2),
+        shape-5: translate(28%, 150%) scale(2),
+        shape-6: translate(30%, 58%) scale(1) rotate(100deg)),
+
+    alination5: (shape-1: translate(46%, 200%) scale(1.4),
+        shape-2: translate(-66%, 114%) scale(1.7),
+        shape-3: translate(-13%, 141%) scale(1),
+        shape-4: translate(13%, 78%) scale(1.5),
+        shape-5: translate(-20%, 168%) scale(2),
+        shape-6: translate(0%, 400%) scale(1.5),
+        shape-7: translate(98%, 229%) scale(1)),
+
+    alination6: (shape-1: translate(80%, 60%) scale(1.4),
+        shape-2: translate(50%, 87%) scale(2),
+        shape-3: translate(-13%, 141%) scale(1),
+        shape-4: translate(13%, 78%) scale(1.5),
+        shape-5: translate(-20%, 168%) scale(2),
+        shape-6: translate(-90%, 187%) scale(2.5),
+        shape-7: translate(-98%, 262%) scale(1.5)),
+
+    alination7: (shape-1: translate(0%, 252%) scale(2),
+        shape-2: translate(0, 140%) scale(2),
+        shape-3: translate(0, 128%) scale(2),
+        shape-4: translate(0, 36%) scale(1.4),
+        shape-5: translate(-21%, -11%) scale(2.5),
+        shape-6: translate(-40%, 86%) scale(1.2),
+        shape-7: translate(0%, 200%) scale(3)),
+
+    alination8: (shape-1: translate(0%, 117%) scale(2),
+        shape-2: translate(-111%, 60%) scale(2.5) rotate(45deg),
+        shape-3: translate(14%, 186%) scale(2),
+        shape-4: translate(111%, 54%) scale(2),
+        shape-5: translate(25%, 270%) scale(4),
+        shape-6: translate(7%, 190%) scale(2),
+        shape-7: translate(0%, 200%) scale(3)),
+);
+
+@mixin background-position($state) {
+    $positions: map.get($background-positions, $state);
+
+    @each $shape, $transform in $positions {
+        .#{$shape} {
+            transform: $transform;
+        }
+    }
+}
+
 .background-component {
     position: absolute;
     top: 0;
@@ -500,8 +483,6 @@
 
     .background-item {
         position: absolute;
-        top: 0;
-        left: 0;
         top: calc((100% / 2) - 100px);
         left: calc((100% / 2) - 100px);
         transition: transform 400ms ease;
@@ -512,38 +493,45 @@
         opacity: 0;
 
         &.shape-1 {
-            width: 200px;
-            height: 209px;
+            width: 150px;
+            height: 150px;
+            transform: translate(0, 0) scale(0);
         }
 
         &.shape-2 {
-            width: 243px;
-            height: 243px;
+            width: 150px;
+            height: 150px;
+            transform: translate(0, 0) scale(0);
         }
 
         &.shape-3 {
-            width: 200px;
-            height: 298px;
+            width: 150px;
+            height: 150px;
+            transform: translate(0, 0) scale(0);
         }
 
         &.shape-4 {
-            width: 200px;
-            height: 200px;
+            width: 157px;
+            height: 150px;
+            transform: translate(0, 0) scale(0);
         }
 
         &.shape-5 {
-            width: 200px;
-            height: 200px;
+            width: 130px;
+            height: 150px;
+            transform: translate(0, 0) scale(0);
         }
 
         &.shape-6 {
-            width: 200px;
-            height: 130px;
+            width: 165px;
+            height: 150px;
+            transform: translate(0, 0) scale(0);
         }
 
         &.shape-7 {
-            width: 200px;
+            width: 234px;
             height: 150px;
+            transform: translate(-17%, 0) scale(0);
         }
 
         img {
@@ -558,110 +546,22 @@
             opacity: 0.5;
         }
 
+        @include background-position(centers);
+
         &.welcome {
-            // .background-item {
-            //     opacity: 1;
-            // }
-
-            .shape-1 {
-                transform: translate(0, -20%) scale(1);
-            }
-
-            .shape-2 {
-                transform: translate(-10%, 0) scale(1);
-            }
+            @include background-position(alination4);
         }
 
         &.language {
-
-            .shape-1 {
-                transform: translate(46%, 200%) scale(1.4);
-            }
-
-            .shape-2 {
-                transform: translate(-66%, 114%) scale(1.7);
-            }
-
-            .shape-3 {
-                transform: translate(-13%, 141%) scale(1);
-            }
-
-            .shape-4 {
-                transform: translate(13%, 78%) scale(1.5);
-            }
-
-            .shape-5 {
-                transform: translate(-20%, 168%) scale(2);
-            }
-
-            .shape-6 {
-                transform: translate(0%, 400%) scale(1.5);
-            }
-
-            .shape-7 {
-                transform: translate(98%, 229%) scale(1);
-            }
+            @include background-position(alination5);
         }
 
         &.user {
-
-            .shape-1 {
-                transform: translate(80%, 60%) scale(1.4);
-            }
-
-            .shape-2 {
-                transform: translate(50%, 87%) scale(2);
-            }
-
-            .shape-3 {
-                transform: translate(-13%, 141%) scale(1);
-            }
-
-            .shape-4 {
-                transform: translate(13%, 78%) scale(1.5);
-            }
-
-            .shape-5 {
-                transform: translate(-20%, 168%) scale(2);
-            }
-
-            .shape-6 {
-                transform: translate(-90%, 187%) scale(2.5);
-            }
-
-            .shape-7 {
-                transform: translate(-98%, 262%) scale(1.5);
-            }
+            @include background-position(alination6);
         }
 
         &.avatar {
-            .shape-1 {
-                transform: translate(0%, 252%) scale(2);
-            }
-
-            .shape-2 {
-                transform: translate(0, 140%) scale(2);
-            }
-
-            .shape-3 {
-                transform: translate(0, 128%) scale(2);
-            }
-
-            .shape-4 {
-                transform: translate(0, 36%) scale(1.4)
-            }
-
-            .shape-5 {
-                transform: translate(-21%, -11%) scale(2.5);
-            }
-
-            .shape-6 {
-                transform: translate(-40%, 86%) scale(1.2);
-            }
-
-            .shape-7 {
-                transform: translate(0%, 200%) scale(3);
-            }
+            @include background-position(alination7);
         }
     }
 
@@ -670,110 +570,18 @@
             opacity: 0.5;
         }
 
-        &.empty2 {
-            // .background-item {
-            //     opacity: 1;
-            // }
-
-            .shape-1 {
-                transform: translate(0, -20%) scale(1);
-            }
-
-            .shape-2 {
-                transform: translate(-10%, 0) scale(1);
-            }
-        }
+        @include background-position(alination7);
 
         &.empty {
-
-            .shape-1 {
-                transform: translate(46%, 200%) scale(1.4);
-            }
-
-            .shape-2 {
-                transform: translate(-66%, 114%) scale(1.7);
-            }
-
-            .shape-3 {
-                transform: translate(-13%, 141%) scale(1);
-            }
-
-            .shape-4 {
-                transform: translate(13%, 78%) scale(1.5);
-            }
-
-            .shape-5 {
-                transform: translate(-20%, 168%) scale(2);
-            }
-
-            .shape-6 {
-                transform: translate(0%, 400%) scale(1.5);
-            }
-
-            .shape-7 {
-                transform: translate(98%, 229%) scale(1);
-            }
+            @include background-position(alination5);
         }
 
         &.details {
-
-            .shape-1 {
-                transform: translate(80%, 60%) scale(1.4);
-            }
-
-            .shape-2 {
-                transform: translate(50%, 87%) scale(2);
-            }
-
-            .shape-3 {
-                transform: translate(-13%, 141%) scale(1);
-            }
-
-            .shape-4 {
-                transform: translate(13%, 78%) scale(1.5);
-            }
-
-            .shape-5 {
-                transform: translate(-20%, 168%) scale(2);
-            }
-
-            .shape-6 {
-                transform: translate(-90%, 187%) scale(2.5);
-            }
-
-            .shape-7 {
-                transform: translate(-98%, 262%) scale(1.5);
-            }
+            @include background-position(alination6);
         }
 
         &.dashboard {
-            .shape-1 {
-                transform: translate(0%, 252%) scale(2);
-            }
-
-            .shape-2 {
-                transform: translate(0, 140%) scale(2);
-            }
-
-            .shape-3 {
-                transform: translate(0, 128%) scale(2);
-            }
-
-            .shape-4 {
-                transform: translate(0, 36%) scale(1.4)
-            }
-
-            .shape-5 {
-                transform: translate(-21%, -11%) scale(2.5);
-            }
-
-            .shape-6 {
-                transform: translate(-40%, 86%) scale(1.2);
-            }
-
-            .shape-7 {
-                transform: translate(0%, 200%) scale(3);
-            }
+            @include background-position(alination7);
         }
     }
 
@@ -783,132 +591,35 @@
             opacity: 0.5;
         }
 
+        @include background-position(centers);
+
         &.details {
-
-            .shape-1 {
-                transform: translate(46%, 200%) scale(1.4);
-            }
-
-            .shape-2 {
-                transform: translate(-66%, 114%) scale(1.7);
-            }
-
-            .shape-3 {
-                transform: translate(-13%, 141%) scale(1);
-            }
-
-            .shape-4 {
-                transform: translate(13%, 78%) scale(1.5);
-            }
-
-            .shape-5 {
-                transform: translate(-20%, 168%) scale(2);
-            }
-
-            .shape-6 {
-                transform: translate(0%, 400%) scale(1.5);
-            }
-
-            .shape-7 {
-                transform: translate(98%, 229%) scale(1);
-            }
+            @include background-position(alination5);
         }
 
         &.list {
-
-            .shape-1 {
-                transform: translate(80%, 60%) scale(1.4);
-            }
-
-            .shape-2 {
-                transform: translate(50%, 87%) scale(2);
-            }
-
-            .shape-3 {
-                transform: translate(-13%, 141%) scale(1);
-            }
-
-            .shape-4 {
-                transform: translate(13%, 78%) scale(1.5);
-            }
-
-            .shape-5 {
-                transform: translate(-20%, 168%) scale(2);
-            }
-
-            .shape-6 {
-                transform: translate(-90%, 187%) scale(2.5);
-            }
-
-            .shape-7 {
-                transform: translate(-98%, 262%) scale(1.5);
-            }
+            @include background-position(alination6);
         }
 
         &.lists {
-            .shape-1 {
-                transform: translate(0%, 252%) scale(2);
-            }
-
-            .shape-2 {
-                transform: translate(0, 140%) scale(2);
-            }
-
-            .shape-3 {
-                transform: translate(0, 128%) scale(2);
-            }
-
-            .shape-4 {
-                transform: translate(0, 36%) scale(1.4)
-            }
-
-            .shape-5 {
-                transform: translate(-21%, -11%) scale(2.5);
-            }
-
-            .shape-6 {
-                transform: translate(-40%, 86%) scale(1.2);
-            }
-
-            .shape-7 {
-                transform: translate(0%, 200%) scale(3);
-            }
+            @include background-position(alination7);
         }
     }
 
-    &.__settings,
+    &.__settings {
+        .background-item {
+            opacity: 0.5;
+        }
+
+        @include background-position(alination1);
+    }
+
     &.__attemptevalue {
         .background-item {
             opacity: 0.5;
         }
 
-        .shape-1 {
-            transform: translate(0%, 252%) scale(2);
-        }
-
-        .shape-2 {
-            transform: translate(0, 140%) scale(2);
-        }
-
-        .shape-3 {
-            transform: translate(0, 128%) scale(2);
-        }
-
-        .shape-4 {
-            transform: translate(0, 36%) scale(1.4)
-        }
-
-        .shape-5 {
-            transform: translate(-21%, -11%) scale(2.5);
-        }
-
-        .shape-6 {
-            transform: translate(-40%, 86%) scale(1.2);
-        }
-
-        .shape-7 {
-            transform: translate(0%, 200%) scale(3);
-        }
+        @include background-position(centers);
     }
 }
 
@@ -920,20 +631,17 @@
     justify-content: flex-start !important;
     flex-direction: row !important;
     align-items: flex-start !important;
+
     @include scroll(5px, var(--scrollColor), var(--scrollBackground), 0);
 
     &-container {
         width: auto;
-        min-width: calc(100vw);
-
+        min-width: 100vw;
         display: flex;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
+        flex-flow: row nowrap !important;
         justify-content: flex-start !important;
 
-        // Movimiento rápido al inicio y frenado suave al final
-        transition: all 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
-        // transition: all 350ms cubic-bezier(0.1, 0.99, 1, -0.25);
+        transition: margin-left 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
         will-change: margin-left;
 
         @for $i from 2 through 300 {
@@ -951,10 +659,28 @@
 
     &-view {
         width: 100vw;
-        transition: transform, margin 400ms;
+        transition: transform 400ms, margin 400ms;
         transform: translate(0, 0);
     }
 }
+
+$badge-states: (
+    active: (color: var(--badge-active-color),
+        background: var(--badge-active-background),
+        border: var(--badge-active-border)),
+    waiting: (color: var(--badge-waiting-color),
+        background: var(--badge-waiting-background),
+        border: var(--badge-waiting-border)),
+    danger: (color: var(--badge-danger-color),
+        background: var(--badge-danger-background),
+        border: var(--badge-danger-border)),
+    success: (color: var(--badge-success-color),
+        background: var(--badge-success-background),
+        border: var(--badge-success-border)),
+    common: (color: var(--badge-common-color),
+        background: var(--badge-common-background),
+        border: var(--badge-common-border))
+);
 
 .badge {
     background: var(--badge-background);
@@ -971,7 +697,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: all 300ms;
+    transition: color 300ms, background-color 300ms, border-color 300ms;
 
     &.inverted {
         color: var(--badge-background);
@@ -979,63 +705,17 @@
         border-color: var(--badge-color);
     }
 
-    &.active {
-        color: var(--badge-active-color);
-        background: var(--badge-active-background);
-        border-color: var(--badge-active-border);
+    @each $name, $state in $badge-states {
+        &.#{$name} {
+            color: map.get($state, color);
+            background: map.get($state, background);
+            border-color: map.get($state, border);
 
-        &.inverted {
-            color: var(--badge-active-background);
-            background: var(--badge-active-color);
-            border-color: var(--badge-active-color);
-        }
-    }
-
-    &.waiting {
-        color: var(--badge-waiting-color);
-        background: var(--badge-waiting-background);
-        border-color: var(--badge-waiting-border);
-
-        &.inverted {
-            color: var(--badge-waiting-background);
-            background: var(--badge-waiting-color);
-            border-color: var(--badge-waiting-color);
-        }
-    }
-
-    &.danger {
-        color: var(--badge-danger-color);
-        background: var(--badge-danger-background);
-        border-color: var(--badge-danger-border);
-
-        &.inverted {
-            color: var(--badge-danger-background);
-            background: var(--badge-danger-color);
-            border-color: var(--badge-danger-color);
-        }
-    }
-
-    &.success {
-        color: var(--badge-success-color);
-        background: var(--badge-success-background);
-        border-color: var(--badge-success-border);
-
-        &.inverted {
-            color: var(--badge-success-background);
-            background: var(--badge-success-color);
-            border-color: var(--badge-success-color);
-        }
-    }
-
-    &.common {
-        color: var(--badge-common-color);
-        background: var(--badge-common-background);
-        border-color: var(--badge-common-border);
-
-        &.inverted {
-            color: var(--badge-common-background);
-            background: var(--badge-common-color);
-            border-color: var(--badge-common-color);
+            &.inverted {
+                color: map.get($state, background);
+                background: map.get($state, color);
+                border-color: map.get($state, color);
+            }
         }
     }
 
@@ -1105,10 +785,7 @@
     justify-content: space-between;
     gap: 0;
 
-    &.--separed {
-        gap: var(--space-direct);
-    }
-
+    &.--separed,
     &.--padding-small {
         gap: var(--space-direct);
     }

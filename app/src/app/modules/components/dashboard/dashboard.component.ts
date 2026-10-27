@@ -1,8 +1,7 @@
-import { AfterContentInit, AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation, } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { icons } from 'lucide';
 import { AttemptDTO, PermissionsDTO, QuestionaryDTO, SettingsDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
-import { TransformData } from 'src/app/shared/data/utils/transformData';
 import { UxUtils } from 'src/app/shared/data/utils/uxUtils';
 import { CommonServices } from 'src/app/shared/services/common.services';
 import { AppStateStore } from 'src/app/shared/services/global.store.service';
@@ -27,7 +26,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     avatarUrl: null,
     avatarBody: null,
   };
-
   permissions = {
     create: false,
     duplicate: false,
@@ -48,10 +46,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   uxContentIndex = 0;
 
   actionsAttempts = false;
-
-  transform = new TransformData();
-
-
 
   translateLabels = {
     attempt_error_generation: '',
@@ -186,17 +180,14 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   //#region EVENTS
   async returnMain() {
+    this.listQuestionnaire.map((item) => {
+      item._current = false;
+    });
+    this.currentQuestionnaire = null;
+
+    await this.uxUtils.wait(500);
     this.showView('dashboard');
     this.commonServices.navigate('dashboard');
-
-    return;
-    setTimeout(() => {
-      this.listQuestionnaire.map((item) => {
-        item._current = false;
-      });
-      this.currentQuestionnaire = null;
-      this.commonServices.navigate('dashboard');
-    }, 500);
   }
 
   createQuiz() {
@@ -223,17 +214,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.actionsAttempts = !this.actionsAttempts;
   }
 
-  valueChange(value: string) {
-    this.onChange.emit({ action: 'ui_update', value: value });
-  }
-
-  onAction(evt: { event: string, value: any }) {
-    if (evt.event == 'create' && evt.value == "quiz") {
-      this.selectQuiz();
-      // this.createQuiz();
-    }
-  }
-
   async showAttemptsScreen(quiz: QuestionaryDTO) {
     this.actionsAttempts = false;
     this.listQuestionnaire.map((item) => {
@@ -249,7 +229,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       behavior: 'smooth'
     });
     this.commonServices.navigate('dashboard', this.currentQuestionnaire.questionaryId.toString());
-    // setTimeout(() => { this.valueChange('secondary'); }, 500);
   }
 
   async duplicateQuiz(quiz: QuestionaryDTO) {
@@ -272,9 +251,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   showSearch() {
     console.log('showSearch: ');
   }
-  //#endregion EVENTS
-
-  //#region CONVERTERS
 
   onNewQuiz() {
     this.onAction({ event: 'create', value: 'quiz' });
@@ -284,26 +260,28 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.commonServices.navigate('settings');
   }
 
-  _viewEmpty() {
-    this.showView('empty');
-  }
-
-  _viewDashboard() {
-    this.showView('dashboard');
-  }
-
-  _viewDetails() {
-    this.showView('details');
-  }
-
   async showView(name: 'empty' | 'dashboard' | 'details', after?: Function) {
     const newIndex = this.uxContentView.findIndex(form => form.name == name);
     this.uxView = this.uxContentView[newIndex].class as '-view-1' | '-view-2' | '-view-3';
     this.uxContentIndex = newIndex;
 
-    await this.uxUtils.wait(500);
+    await this.uxUtils.wait(1500);
     this.valueChange(this.uxContentView[newIndex].name);
     if (after) { after() }
   }
+
+  valueChange(value: string) {
+    this.onChange.emit({ action: 'ui_update', value: value });
+  }
+
+  onAction(evt: { event: string, value: any }) {
+    if (evt.event == 'create' && evt.value == "quiz") {
+      this.selectQuiz();
+    }
+  }
+  //#endregion EVENTS
+
+  //#region CONVERTERS
+
   //#endregion CONVERTERS
 }

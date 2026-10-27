@@ -35,7 +35,7 @@ export class TypetTriviaComponent implements OnInit {
     register: icons.UserPlus,
     back: icons.ArrowLeft,
     save: icons.SaveAll,
-
+    results: icons.ListX,
 
     perfect: icons.BadgeCheck,
 
@@ -46,6 +46,9 @@ export class TypetTriviaComponent implements OnInit {
   };
 
   _utilsUX = new UxUtils();
+  uxView: string = '-view-1';
+  uxCountScreen: string = '-count-1';
+
   //#endregion INTERNAL
 
   //#region LIFECICLE
@@ -53,6 +56,8 @@ export class TypetTriviaComponent implements OnInit {
     public uiServices: UiServices) { }
 
   async ngOnInit() {
+    const total = (this.attempt.questions as QuestionDTO[]).length;
+    this.uxCountScreen = `-count-${total}`;
     this.uiServices.showLoader(true);
     this.setupComponent();
     await this._utilsUX.wait(500);
@@ -153,12 +158,12 @@ export class TypetTriviaComponent implements OnInit {
 
   prevQuestion() {
     if (this.index <= 0) {
-      90
       return;
     }
 
     this.index = this.index <= 0 ? 0 : this.index - 1;
     this.calculateAnswerWidth();
+    this.setCurrentQuestionView();
     this.updateResults({ finish: false, updateData: false });
   }
 
@@ -169,12 +174,20 @@ export class TypetTriviaComponent implements OnInit {
 
     this.index = this.index >= this.attempt.questions.length - 1 ? this.attempt.questions.length - 1 : this.index + 1;
     this.calculateAnswerWidth();
+    this.setCurrentQuestionView();
     this.updateResults({ finish: false, updateData: false });
   }
 
   finishQuiz() {
     this.updateResults({ finish: true, updateData: true });
+    this.setCurrentQuestionView();
     this.showFinishPage();
+  }
+
+  validateCurrentResponse() {
+    const selected = (this.attempt.questions[this.index] as QuestionDTO).answerSelected;
+    console.log('selected: ', selected);
+    return selected;
   }
 
   showFinishPage() {
@@ -233,6 +246,10 @@ export class TypetTriviaComponent implements OnInit {
     }
 
     return (this.attempt.questions[this.index] as QuestionDTO);
+  }
+
+  private setCurrentQuestionView() {
+    this.uxView = `-view-${this.index + 1}`;
   }
 
   private setCurrentQuestion(question: QuestionDTO): QuestionDTO {
