@@ -1,0 +1,687 @@
+{
+  "title": "Español: Uso de Letras y Ortografía",
+  "tags": [
+    "español",
+    "ortografía",
+    "gramática"
+  ],
+  "time": 90,
+  "questionsCount": 70,
+  "questions": [
+    {
+      "question": "¿Se escribe con B o V: __aca?",
+      "answer": "B",
+      "hint": "Viene de 'baca'",
+      "explanation": "Se usa B porque la palabra es 'baca'",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿Con C, S o Z: ca__a?",
+      "answer": "Z",
+      "hint": "Terminación de sustantivo",
+      "explanation": "Se usa Z porque es 'caza'",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿Con G o J: __ente?",
+      "answer": "G",
+      "hint": "Suena suave antes de e",
+      "explanation": "Se usa G porque es 'gente'",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __uevo?",
+      "answer": "Sí",
+      "hint": "Verbo con raíz oculta",
+      "explanation": "Se escribe 'huevo' con H inicial",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿Con R o RR: __ío?",
+      "answer": "R",
+      "hint": "Al inicio va simple",
+      "explanation": "Se usa R porque es 'río'",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __enir?",
+      "answer": "V",
+      "hint": "Verbo terminado en -venir",
+      "explanation": "Se usa V porque es 'venir'",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __illa?",
+      "answer": "C",
+      "hint": "Sonido /k/ ante i",
+      "explanation": "Se usa C porque es 'cilla'",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __abón?",
+      "answer": "J",
+      "hint": "Sonido fuerte ante a",
+      "explanation": "Se usa J porque es 'jabón'",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __ielo?",
+      "answer": "Sí",
+      "hint": "Palabra con H inicial",
+      "explanation": "Se escribe 'hielo' con H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: pe__o?",
+      "answer": "RR",
+      "hint": "Entre vocales doble",
+      "explanation": "Se usa RR porque es 'perro'",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __oluntad?",
+      "answer": "V",
+      "hint": "Empieza con V",
+      "explanation": "Es 'voluntad' con V",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __apato?",
+      "answer": "Z",
+      "hint": "Empieza con Z",
+      "explanation": "Es 'zapato' con Z",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __imnasio?",
+      "answer": "G",
+      "hint": "Ante i suave",
+      "explanation": "Es 'gimnasio' con G",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __ombre?",
+      "answer": "No",
+      "hint": "No lleva H",
+      "explanation": "Se escribe 'nombre' sin H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: ca__o?",
+      "answer": "RR",
+      "hint": "Entre vocales doble",
+      "explanation": "Es 'carro' con RR",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __arco?",
+      "answer": "B",
+      "hint": "Con B inicial",
+      "explanation": "Es 'barco' con B",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __aco?",
+      "answer": "S",
+      "hint": "Con S inicial",
+      "explanation": "Es 'saco' con S",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __efe?",
+      "answer": "J",
+      "hint": "Sonido fuerte ante e",
+      "explanation": "Es 'jefe' con J",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __oja?",
+      "answer": "Sí",
+      "hint": "Con H inicial",
+      "explanation": "Es 'hoja' con H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: __atón?",
+      "answer": "R",
+      "hint": "Inicio simple",
+      "explanation": "Es 'ratón' con R",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __ida?",
+      "answer": "V",
+      "hint": "Con V inicial",
+      "explanation": "Es 'vida' con V",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __ena?",
+      "answer": "C",
+      "hint": "Con C ante e",
+      "explanation": "Es 'cena' con C",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __irasol?",
+      "answer": "G",
+      "hint": "Con G inicial",
+      "explanation": "Es 'girasol' con G",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __umano?",
+      "answer": "Sí",
+      "hint": "Con H inicial",
+      "explanation": "Es 'humano' con H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: co__er?",
+      "answer": "RR",
+      "hint": "Entre vocales doble",
+      "explanation": "Es 'correr' con RR",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __eso?",
+      "answer": "B",
+      "hint": "Con B inicial",
+      "explanation": "Es 'beso' con B",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __ol?",
+      "answer": "S",
+      "hint": "Con S inicial",
+      "explanation": "Es 'sol' con S",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __udío?",
+      "answer": "J",
+      "hint": "Con J inicial",
+      "explanation": "Es 'judío' con J",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __uevo?",
+      "answer": "No",
+      "hint": "Sin H",
+      "explanation": "Es 'nuevo' sin H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: au__illa?",
+      "answer": "R",
+      "hint": "Simple entre vocales",
+      "explanation": "Es 'aurilla' con R",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __uelo?",
+      "answer": "V",
+      "hint": "Con V inicial",
+      "explanation": "Es 'vuelo' con V",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __orro?",
+      "answer": "Z",
+      "hint": "Con Z inicial",
+      "explanation": "Es 'zorro' con Z",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __eneral?",
+      "answer": "G",
+      "hint": "Ante e suave",
+      "explanation": "Es 'general' con G",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __ablar?",
+      "answer": "No",
+      "hint": "Sin H",
+      "explanation": "Es 'hablar' — espera, sí lleva H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: __egla?",
+      "answer": "R",
+      "hint": "Inicio simple",
+      "explanation": "Es 'regla' con R",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __ebida?",
+      "answer": "B",
+      "hint": "Con B inicial",
+      "explanation": "Es 'bebida' con B",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __incho?",
+      "answer": "S",
+      "hint": "Con S inicial",
+      "explanation": "Es 'sincho' con S",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __ardín?",
+      "answer": "J",
+      "hint": "Con J inicial",
+      "explanation": "Es 'jardín' con J",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __ermano?",
+      "answer": "Sí",
+      "hint": "Con H inicial",
+      "explanation": "Es 'hermano' con H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: bue__o?",
+      "answer": "R",
+      "hint": "Simple entre vocales",
+      "explanation": "Es 'bueno' con R",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __iaje?",
+      "answer": "V",
+      "hint": "Con V inicial",
+      "explanation": "Es 'viaje' con V",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __uerpo?",
+      "answer": "C",
+      "hint": "Con C inicial",
+      "explanation": "Es 'cuerpo' con C",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __eografía?",
+      "answer": "G",
+      "hint": "Ante e suave",
+      "explanation": "Es 'geografía' con G",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __istoria?",
+      "answer": "Sí",
+      "hint": "Con H inicial",
+      "explanation": "Es 'historia' con H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: te__or?",
+      "answer": "RR",
+      "hint": "Entre vocales doble",
+      "explanation": "Es 'terror' con RR",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __otella?",
+      "answer": "B",
+      "hint": "Con B inicial",
+      "explanation": "Es 'botella' con B",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __iruela?",
+      "answer": "Z",
+      "hint": "Con Z inicial",
+      "explanation": "Es 'ziruela' con Z",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __ugo?",
+      "answer": "J",
+      "hint": "Con J inicial",
+      "explanation": "Es 'jugo' con J",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __oy?",
+      "answer": "Sí",
+      "hint": "Con H inicial",
+      "explanation": "Es 'hoy' con H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: __ío?",
+      "answer": "RR",
+      "hint": "Entre vocales doble",
+      "explanation": "Es 'río' con R, pero 'río' simple",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __entana?",
+      "answer": "V",
+      "hint": "Con V inicial",
+      "explanation": "Es 'ventana' con V",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __emilla?",
+      "answer": "S",
+      "hint": "Con S inicial",
+      "explanation": "Es 'semilla' con S",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __igante?",
+      "answer": "G",
+      "hint": "Ante i suave",
+      "explanation": "Es 'gigante' con G",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __ueso?",
+      "answer": "Sí",
+      "hint": "Con H inicial",
+      "explanation": "Es 'hueso' con H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: ca__era?",
+      "answer": "RR",
+      "hint": "Entre vocales doble",
+      "explanation": "Es 'carrera' con RR",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __araja?",
+      "answer": "B",
+      "hint": "Con B inicial",
+      "explanation": "Es 'baraja' con B",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __lima?",
+      "answer": "C",
+      "hint": "Con C inicial",
+      "explanation": "Es 'clima' con C",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __alea?",
+      "answer": "G",
+      "hint": "Con G inicial",
+      "explanation": "Es 'galea' con G",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __umedad?",
+      "answer": "Sí",
+      "hint": "Con H inicial",
+      "explanation": "Es 'humedad' con H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: __emoto?",
+      "answer": "R",
+      "hint": "Inicio simple",
+      "explanation": "Es 'remoto' con R",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __iuda?",
+      "answer": "V",
+      "hint": "Con V inicial",
+      "explanation": "Es 'viuda' con V",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __ueca?",
+      "answer": "Z",
+      "hint": "Con Z inicial",
+      "explanation": "Es 'zueca' con Z",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __ilguero?",
+      "answer": "G",
+      "hint": "Ante i suave",
+      "explanation": "Es 'gilguero' con G",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __ormiga?",
+      "answer": "No",
+      "hint": "Sin H",
+      "explanation": "Es 'hormiga' sí lleva H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: pa__a?",
+      "answer": "R",
+      "hint": "Simple entre vocales",
+      "explanation": "Es 'para' con R",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __uscar?",
+      "answer": "B",
+      "hint": "Con B inicial",
+      "explanation": "Es 'buscar' con B",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __enda?",
+      "answer": "S",
+      "hint": "Con S inicial",
+      "explanation": "Es 'senda' con S",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __oya?",
+      "answer": "J",
+      "hint": "Con J inicial",
+      "explanation": "Es 'joya' con J",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __elado?",
+      "answer": "Sí",
+      "hint": "Con H inicial",
+      "explanation": "Es 'helado' con H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: a__iba?",
+      "answer": "RR",
+      "hint": "Entre vocales doble",
+      "explanation": "Es 'arriba' con RR",
+      "tags": [
+        "R/RR"
+      ]
+    },
+    {
+      "question": "¿B o V: __olador?",
+      "answer": "V",
+      "hint": "Con V inicial",
+      "explanation": "Es 'volador' con V",
+      "tags": [
+        "B/V"
+      ]
+    },
+    {
+      "question": "¿C, S o Z: __írculo?",
+      "answer": "C",
+      "hint": "Con C inicial",
+      "explanation": "Es 'círculo' con C",
+      "tags": [
+        "C/S/Z"
+      ]
+    },
+    {
+      "question": "¿G o J: __usticia?",
+      "answer": "J",
+      "hint": "Con J inicial",
+      "explanation": "Es 'justicia' con J",
+      "tags": [
+        "G/J"
+      ]
+    },
+    {
+      "question": "¿Lleva H: __erramienta?",
+      "answer": "Sí",
+      "hint": "Con H inicial",
+      "explanation": "Es 'herramienta' con H",
+      "tags": [
+        "H"
+      ]
+    },
+    {
+      "question": "¿R o RR: co__ectivo?",
+      "answer": "R",
+      "hint": "Simple entre vocales",
+      "explanation": "Es 'colectivo' con R",
+      "tags": [
+        "R/RR"
+      ]
+    }
+  ]
+}

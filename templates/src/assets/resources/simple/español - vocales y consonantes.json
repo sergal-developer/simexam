@@ -1,0 +1,512 @@
+{
+  "title": "Español: Vocales, Consonantes y Mayúsculas",
+  "tags": [
+    "lengua española",
+    "ortografía",
+    "fonética"
+  ],
+  "time": 140,
+  "questionsCount": 35,
+  "questions": [
+    {
+      "question": "¿Cuántas vocales tiene el español?",
+      "answer": "Cinco",
+      "hint": "Son las más básicas del idioma",
+      "explanation": "Las vocales son a, e, i, o, u, sin variaciones adicionales en su conjunto básico.",
+      "tags": [
+        "vocales",
+        "fonética"
+      ]
+    },
+    {
+      "question": "¿Cuál es la primera vocal del abecedario?",
+      "answer": "a",
+      "hint": "Es la más abierta",
+      "explanation": "La letra 'a' ocupa el primer lugar en el abecedario español.",
+      "tags": [
+        "vocales",
+        "abecedario"
+      ]
+    },
+    {
+      "question": "¿Las vocales se pronuncian siempre igual?",
+      "answer": "Sí",
+      "hint": "No cambian su sonido",
+      "explanation": "A diferencia de otros idiomas, en español las vocales tienen pronunciación fija.",
+      "tags": [
+        "vocales",
+        "pronunciación"
+      ]
+    },
+    {
+      "question": "¿Qué letra es vocal y también semivocal?",
+      "answer": "i, u",
+      "hint": "Actúan así en diptongos",
+      "explanation": "i y u funcionan como semivocales cuando forman diptongo junto a otra vocal.",
+      "tags": [
+        "vocales",
+        "diptongos"
+      ]
+    },
+    {
+      "question": "¿Cuál es la vocal más cerrada?",
+      "answer": "i, u",
+      "hint": "La boca se abre menos",
+      "explanation": "Al pronunciar i o u la cavidad oral es más reducida.",
+      "tags": [
+        "vocales",
+        "articulación"
+      ]
+    },
+    {
+      "question": "¿Tiene el español vocales dobles?",
+      "answer": "No",
+      "hint": "No existen como letra única",
+      "explanation": "No hay letras con sonido de vocal doble; se escriben separadas si aparecen juntas.",
+      "tags": [
+        "vocales",
+        "ortografía"
+      ]
+    },
+    {
+      "question": "¿Las vocales llevan tilde siempre?",
+      "answer": "No",
+      "hint": "Solo en casos específicos",
+      "explanation": "La tilde se coloca solo para marcar acento o diferenciar palabras, no por ser vocal.",
+      "tags": [
+        "vocales",
+        "tilde"
+      ]
+    },
+    {
+      "question": "¿Qué vocal no puede formar diptongo consigo misma?",
+      "answer": "Todas",
+      "hint": "Dos iguales siempre se separan",
+      "explanation": "La unión de dos vocales iguales forma hiato, no diptongo.",
+      "tags": [
+        "vocales",
+        "hiato"
+      ]
+    },
+    {
+      "question": "¿Cuántas vocales son de sonido fuerte?",
+      "answer": "Tres",
+      "hint": "a, e, o",
+      "explanation": "Se consideran vocales abiertas o fuertes: a, e, o; las otras son cerradas.",
+      "tags": [
+        "vocales",
+        "clasificación"
+      ]
+    },
+    {
+      "question": "¿Las vocales pueden aparecer solas en sílaba?",
+      "answer": "Sí",
+      "hint": "Es muy común",
+      "explanation": "Una vocal puede constituir por sí sola una sílaba completa.",
+      "tags": [
+        "vocales",
+        "silabación"
+      ]
+    },
+    {
+      "question": "¿Qué son las consonantes?",
+      "answer": "Son sonidos que se unen a vocales",
+      "hint": "No se pronuncian solas con facilidad",
+      "explanation": "Su sonido requiere el apoyo de una vocal y se produce con obstrucción del aire.",
+      "tags": [
+        "consonantes",
+        "definición"
+      ]
+    },
+    {
+      "question": "¿Cuántas consonantes tiene el abecedario español?",
+      "answer": "Veintidós",
+      "hint": "Además de las 5 vocales",
+      "explanation": "El abecedario tiene 27 letras; restando las 5 vocales quedan 22 consonantes.",
+      "tags": [
+        "consonantes",
+        "abecedario"
+      ]
+    },
+    {
+      "question": "¿La letra 'y' es vocal o consonante?",
+      "answer": "Ambas según el caso",
+      "hint": "Su sonido cambia",
+      "explanation": "Como consonante suena /y/; al final de sílaba o sola equivale a la vocal i.",
+      "tags": [
+        "consonantes",
+        "vocales"
+      ]
+    },
+    {
+      "question": "¿Qué consonante representa dos sonidos distintos?",
+      "answer": "c, g, r",
+      "hint": "Depende de la vocal que siga",
+      "explanation": "c suena /k/ o /θ/; g suena /g/ o /x/; r tiene sonido suave o fuerte.",
+      "tags": [
+        "consonantes",
+        "pronunciación"
+      ]
+    },
+    {
+      "question": "¿La 'h' es una consonante con sonido propio?",
+      "answer": "No",
+      "hint": "Es muda casi siempre",
+      "explanation": "La h no tiene sonido en español; solo se pronuncia si va precedida de 'c'.",
+      "tags": [
+        "consonantes",
+        "ortografía"
+      ]
+    },
+    {
+      "question": "¿Cuáles son las consonantes dobles del español?",
+      "answer": "ll, ch, rr",
+      "hint": "Cada una representa un solo sonido",
+      "explanation": "Estas combinaciones se consideran dígrafos y tienen valor de letra única.",
+      "tags": [
+        "consonantes",
+        "dígrafos"
+      ]
+    },
+    {
+      "question": "¿La 'w' es una letra nativa del español?",
+      "answer": "No",
+      "hint": "Viene de otros idiomas",
+      "explanation": "La w se usa solo en préstamos extranjeros y se adapta su escritura.",
+      "tags": [
+        "consonantes",
+        "extranjerismos"
+      ]
+    },
+    {
+      "question": "¿Qué consonante cambia de forma ante 'e' e 'i'?",
+      "answer": "g, c, qu",
+      "hint": "Para conservar el sonido",
+      "explanation": "Se usa g, gu o qu para mantener el sonido /g/ o /k/ ante e e i.",
+      "tags": [
+        "consonantes",
+        "ortografía"
+      ]
+    },
+    {
+      "question": "¿La 'ñ' es una letra propia del español?",
+      "answer": "Sí",
+      "hint": "Es característica nuestra",
+      "explanation": "La ñ es una letra exclusiva del español y otros idiomas romances peninsulares.",
+      "tags": [
+        "consonantes",
+        "letras propias"
+      ]
+    },
+    {
+      "question": "¿Las consonantes pueden iniciar sílaba?",
+      "answer": "Sí",
+      "hint": "Es su posición habitual",
+      "explanation": "La mayoría de las sílabas comienzan con una o más consonantes seguidas de vocal.",
+      "tags": [
+        "consonantes",
+        "silabación"
+      ]
+    },
+    {
+      "question": "¿Cuándo se usa mayúscula inicial?",
+      "answer": "Al comenzar oración y en nombres propios",
+      "hint": "Es la regla más básica",
+      "explanation": "Toda oración empieza con mayúscula; también los nombres de personas, lugares e instituciones.",
+      "tags": [
+        "mayúsculas",
+        "reglas básicas"
+      ]
+    },
+    {
+      "question": "¿Después de punto se usa mayúscula?",
+      "answer": "Sí",
+      "hint": "Indica inicio de nueva oración",
+      "explanation": "Punto seguido, punto y aparte o punto y coma exigen mayúscula en la palabra siguiente.",
+      "tags": [
+        "mayúsculas",
+        "puntuación"
+      ]
+    },
+    {
+      "question": "¿Los días de la semana llevan mayúscula?",
+      "answer": "No",
+      "hint": "Son nombres comunes",
+      "explanation": "Lunes, martes... se escriben con minúscula salvo que inicien texto o vayan tras punto.",
+      "tags": [
+        "mayúsculas",
+        "nombres comunes"
+      ]
+    },
+    {
+      "question": "¿Los meses llevan mayúscula?",
+      "answer": "No",
+      "hint": "Igual que los días",
+      "explanation": "Enero, febrero... se escriben con minúscula en uso general.",
+      "tags": [
+        "mayúsculas",
+        "nombres comunes"
+      ]
+    },
+    {
+      "question": "¿Los nombres propios de personas van con mayúscula?",
+      "answer": "Sí",
+      "hint": "Es obligatorio",
+      "explanation": "Nombre y apellidos se escriben con mayúscula inicial en la primera letra de cada uno.",
+      "tags": [
+        "mayúsculas",
+        "nombres propios"
+      ]
+    },
+    {
+      "question": "¿Se escribe con mayúscula 'españa'?",
+      "answer": "Sí",
+      "hint": "Es un país",
+      "explanation": "Los nombres de países, ciudades y regiones son nombres propios y llevan mayúscula.",
+      "tags": [
+        "mayúsculas",
+        "lugares"
+      ]
+    },
+    {
+      "question": "¿La palabra 'usted' se escribe con mayúscula?",
+      "answer": "No, salvo en saludo formal",
+      "hint": "Generalmente minúscula",
+      "explanation": "Por norma general va en minúscula; solo se mayúsculea en encabezados o por cortesía especial.",
+      "tags": [
+        "mayúsculas",
+        "tratamientos"
+      ]
+    },
+    {
+      "question": "¿Los títulos de libros llevan mayúscula en cada palabra?",
+      "answer": "Solo la primera y nombres propios",
+      "hint": "No todo va en mayúscula",
+      "explanation": "En títulos solo la primera palabra y los nombres propios se escriben con mayúscula inicial.",
+      "tags": [
+        "mayúsculas",
+        "títulos"
+      ]
+    },
+    {
+      "question": "¿Las instituciones llevan mayúscula?",
+      "answer": "Sí en su nombre oficial",
+      "hint": "Si es nombre propio",
+      "explanation": "Universidades, ministerios y organismos se escriben con mayúscula en su denominación oficial.",
+      "tags": [
+        "mayúsculas",
+        "instituciones"
+      ]
+    },
+    {
+      "question": "¿Se mayúsculea los puntos cardinales?",
+      "answer": "No, salvo como nombre propio",
+      "hint": "Generalmente minúscula",
+      "explanation": "Norte, sur, este, oeste van en minúscula; mayúscula si forman parte de un nombre propio.",
+      "tags": [
+        "mayúsculas",
+        "lugares"
+      ]
+    },
+    {
+      "question": "¿La 'ch' se considera letra separada?",
+      "answer": "No, es dígrafo",
+      "hint": "Va junto en escritura",
+      "explanation": "ch representa un solo sonido y se escribe junta, aunque no sea letra independiente.",
+      "tags": [
+        "consonantes",
+        "dígrafos"
+      ]
+    },
+    {
+      "question": "¿La 'll' tiene sonido fijo?",
+      "answer": "No, varía por zona",
+      "hint": "Su pronunciación cambia según el país",
+      "explanation": "Se pronuncia /ʎ/ o /j/ según la región, pero su escritura es siempre ll.",
+      "tags": [
+        "consonantes",
+        "pronunciación"
+      ]
+    },
+    {
+      "question": "¿La 'rr' solo va entre vocales?",
+      "answer": "No, también al inicio",
+      "hint": "Puede aparecer al principio de palabra",
+      "explanation": "rr se usa entre vocales; para sonido fuerte al inicio se usa r simple.",
+      "tags": [
+        "consonantes",
+        "ortografía"
+      ]
+    },
+    {
+      "question": "¿La 'b' y la 'v' suenan diferente?",
+      "answer": "No, suenan igual",
+      "hint": "Su escritura no marca diferencia sonora",
+      "explanation": "En español estándar b y v tienen el mismo sonido; solo la escritura las distingue.",
+      "tags": [
+        "consonantes",
+        "pronunciación"
+      ]
+    },
+    {
+      "question": "¿La 'z' tiene sonido distinto en América?",
+      "answer": "Sí, suena igual que s",
+      "hint": "Se confunde con s en muchos lugares",
+      "explanation": "En casi toda América z se pronuncia /s/; en España puede ser /θ/.",
+      "tags": [
+        "consonantes",
+        "pronunciación"
+      ]
+    },
+    {
+      "question": "¿La 'x' siempre suena como 'ks'?",
+      "answer": "No, cambia según palabra",
+      "hint": "Tiene varios sonidos posibles",
+      "explanation": "x puede sonar /ks/, /s/, /x/ o /gz/ dependiendo de la palabra y su origen.",
+      "tags": [
+        "consonantes",
+        "pronunciación"
+      ]
+    },
+    {
+      "question": "¿La 'q' va siempre seguida de 'u'?",
+      "answer": "Sí, salvo excepciones",
+      "hint": "Suele ir con u muda",
+      "explanation": "q aparece solo ante e e i, siempre acompañada de u que no se pronuncia.",
+      "tags": [
+        "consonantes",
+        "ortografía"
+      ]
+    },
+    {
+      "question": "¿La 'k' es letra frecuente en español?",
+      "answer": "No, es poco común",
+      "hint": "Viene de otros idiomas",
+      "explanation": "k se usa casi exclusivamente en palabras de origen extranjero.",
+      "tags": [
+        "consonantes",
+        "extranjerismos"
+      ]
+    },
+    {
+      "question": "¿La 'h' se pone para separar vocales?",
+      "answer": "Sí, entre dos vocales",
+      "hint": "Rompe el diptongo",
+      "explanation": "La h intercalada evita la unión de dos vocales en diptongo, formando hiato.",
+      "tags": [
+        "consonantes",
+        "hiato"
+      ]
+    },
+    {
+      "question": "¿La 'l' doble se separa en sílabas?",
+      "answer": "No, se mantiene junta",
+      "hint": "Es un dígrafo",
+      "explanation": "ll forma una sola unidad en la silabación y no se divide entre sílabas.",
+      "tags": [
+        "consonantes",
+        "silabación"
+      ]
+    },
+    {
+      "question": "¿Los nombres de idiomas llevan mayúscula?",
+      "answer": "No, salvo inicio de frase",
+      "hint": "Son comunes",
+      "explanation": "español, inglés, francés... se escriben con minúscula en uso general.",
+      "tags": [
+        "mayúsculas",
+        "nombres comunes"
+      ]
+    },
+    {
+      "question": "¿Los nombres de religiones van con mayúscula?",
+      "answer": "No, salvo nombres propios",
+      "hint": "La fe es común, los dioses no",
+      "explanation": "catolicismo, islam... en minúscula; los nombres de divinidades o libros sagrados con mayúscula.",
+      "tags": [
+        "mayúsculas",
+        "religión"
+      ]
+    },
+    {
+      "question": "¿Los títulos académicos llevan mayúscula?",
+      "answer": "Solo si preceden nombre propio",
+      "hint": "Si van solos, minúscula",
+      "explanation": "doctor García, pero el doctor García; igual con profesor, ingeniero, etc.",
+      "tags": [
+        "mayúsculas",
+        "tratamientos"
+      ]
+    },
+    {
+      "question": "¿Se mayúsculea 'ciudad' antes del nombre?",
+      "answer": "No, va en minúscula",
+      "hint": "Es un título genérico",
+      "explanation": "ciudad de México, reino de España... la palabra genérica va en minúscula.",
+      "tags": [
+        "mayúsculas",
+        "lugares"
+      ]
+    },
+    {
+      "question": "¿Los acontecimientos históricos van con mayúscula?",
+      "answer": "Solo si son reconocidos",
+      "hint": "Nombre propio del suceso",
+      "explanation": "Revolución Francesa, Segunda Guerra Mundial; en otros casos, minúscula.",
+      "tags": [
+        "mayúsculas",
+        "historia"
+      ]
+    },
+    {
+      "question": "¿Las marcas comerciales van con mayúscula?",
+      "answer": "Sí, son nombres propios",
+      "hint": "Como cualquier marca",
+      "explanation": "Nike, Coca-Cola... se escriben tal como las registran sus creadores.",
+      "tags": [
+        "mayúsculas",
+        "marcas"
+      ]
+    },
+    {
+      "question": "¿Las estaciones del año llevan mayúscula?",
+      "answer": "No",
+      "hint": "Son conceptos generales",
+      "explanation": "primavera, verano, otoño, invierno se escriben con minúscula siempre.",
+      "tags": [
+        "mayúsculas",
+        "nombres comunes"
+      ]
+    },
+    {
+      "question": "¿Los cuerpos celestes llevan mayúscula?",
+      "answer": "Sí si son nombres propios",
+      "hint": "Sol, Luna, Tierra cuando se refieren a los nuestros",
+      "explanation": "Se mayúsculean los nombres de planetas y astros; si se usan genéricamente, minúscula.",
+      "tags": [
+        "mayúsculas",
+        "astronomía"
+      ]
+    },
+    {
+      "question": "¿Los ríos y montañas llevan mayúscula?",
+      "answer": "Sí en su nombre",
+      "hint": "El genérico va en minúscula",
+      "explanation": "río Amazonas, sierra Madre; el nombre específico sí va en mayúscula.",
+      "tags": [
+        "mayúsculas",
+        "lugares"
+      ]
+    },
+    {
+      "question": "¿Los apellidos se escriben con mayúscula?",
+      "answer": "Sí, la inicial",
+      "hint": "Igual que el nombre",
+      "explanation": "Cada apellido lleva mayúscula en su primera letra: María López García.",
+      "tags": [
+        "mayúsculas",
+        "nombres propios"
+      ]
+    }
+  ]
+}

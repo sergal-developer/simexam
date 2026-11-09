@@ -1,0 +1,419 @@
+{
+  "title": "Español: Fonética Básica",
+  "tags": [
+    "español",
+    "fonética",
+    "lengua"
+  ],
+  "time": 120,
+  "questionsCount": 115,
+  "questions": [
+    {
+      "question": "¿Qué estudia la fonética de la lengua española?",
+      "answer": "La fonética estudia los sonidos del habla, su producción, transmisión y percepción física.",
+      "hint": "Se enfoca en los aspectos físicos y articulatorios de los sonidos.",
+      "explanation": "Se distingue de la fonología, que estudia el sistema de sonidos desde el punto de vista de su función en la lengua.",
+      "tags": [
+        "español",
+        "fonética",
+        "definición"
+      ]
+    },
+    {
+      "question": "¿Cuáles son los tres órganos principales que intervienen en la producción de los sonidos del habla?",
+      "answer": "Los órganos respiratorios, los fonadores y los articuladores.",
+      "hint": "Uno suministra el aire, otro produce la vibración y el tercero da forma al sonido.",
+      "explanation": "Los pulmones generan la corriente de aire; las cuerdas vocales producen la voz; lengua, labios y paladar configuran los sonidos.",
+      "tags": [
+        "español",
+        "fonética",
+        "articulación"
+      ]
+    },
+    {
+      "question": "¿Qué elemento produce la vibración que da origen a la voz en español?",
+      "answer": "Las cuerdas vocales, situadas en la laringe.",
+      "hint": "Están dentro de la garganta y se abren o cierran al pasar el aire.",
+      "explanation": "Cuando las cuerdas vocales vibran, el sonido es sonoro; si no vibran, es sordo.",
+      "tags": [
+        "español",
+        "fonética",
+        "fonación"
+      ]
+    },
+    {
+      "question": "¿Cómo se clasifican los sonidos del español según la intervención de la voz?",
+      "answer": "Se clasifican en sonoros y sordos.",
+      "hint": "Depende de si vibran o no las cuerdas vocales.",
+      "explanation": "Sonoros: cuerdas vocales vibran (ej. b, d, g, vocales). Sordos: no hay vibración (ej. p, t, k, s).",
+      "tags": [
+        "español",
+        "fonética",
+        "sonoridad"
+      ]
+    },
+    {
+      "question": "¿Qué es un fonema en español?",
+      "answer": "Es la unidad mínima de sonido que permite distinguir significados entre palabras.",
+      "hint": "No es el sonido físico, sino la representación mental del mismo.",
+      "explanation": "Por ejemplo, /p/ y /b/ son fonemas distintos porque cambia el significado entre 'pato' y 'bato'.",
+      "tags": [
+        "español",
+        "fonética",
+        "fonema"
+      ]
+    },
+    {
+      "question": "¿Cuántos fonemas vocálicos existen en el español estándar?",
+      "answer": "Existen 5 fonemas vocálicos: a, e, i, o, u.",
+      "hint": "Coinciden con las letras vocales del abecedario español.",
+      "explanation": "Cada vocal tiene una pronunciación estable en todo el ámbito hispanohablante, sin variación cualitativa.",
+      "tags": [
+        "español",
+        "fonética",
+        "vocales"
+      ]
+    },
+    {
+      "question": "¿Cómo se articula la vocal /a/ en español?",
+      "answer": "Es una vocal central, abierta y no redondeada.",
+      "hint": "La lengua está en posición media, la boca muy abierta.",
+      "explanation": "Es la vocal con mayor apertura de boca y posición neutra de la lengua.",
+      "tags": [
+        "español",
+        "fonética",
+        "vocales"
+      ]
+    },
+    {
+      "question": "¿Cómo se clasifican las vocales según la apertura de la boca en español?",
+      "answer": "En abiertas o bajas (/a/), medias (/e/, /o/) y cerradas o altas (/i/, /u/).",
+      "hint": "Piensa en cuánto se separan la mandíbula y el paladar al pronunciarlas.",
+      "explanation": "La apertura disminuye progresivamente desde la /a/ hasta la /i/ y la /u/.",
+      "tags": [
+        "español",
+        "fonética",
+        "vocales",
+        "clasificación"
+      ]
+    },
+    {
+      "question": "¿Cuáles son las vocales anteriores del español?",
+      "answer": "Son /e/ e /i/.",
+      "hint": "La parte delantera de la lengua se eleva hacia el paladar al pronunciarlas.",
+      "explanation": "Se denominan anteriores porque la lengua avanza hacia la zona dental y alveolar.",
+      "tags": [
+        "español",
+        "fonética",
+        "vocales"
+      ]
+    },
+    {
+      "question": "¿Cuáles son las vocales posteriores del español?",
+      "answer": "Son /o/ y /u/.",
+      "hint": "La parte trasera de la lengua se eleva hacia el velo del paladar.",
+      "explanation": "En la pronunciación de estas vocales la lengua se desplaza hacia la parte posterior de la cavidad bucal.",
+      "tags": [
+        "español",
+        "fonética",
+        "vocales"
+      ]
+    },
+    {
+      "question": "¿Qué es un diptongo en español?",
+      "answer": "Es la unión de dos vocales pronunciadas en una sola sílaba.",
+      "hint": "Siempre hay una vocal más fuerte y otra más débil dentro de la sílaba.",
+      "explanation": "Se forma al combinar una vocal abierta con una cerrada, dos cerradas distintas o una cerrada con otra abierta.",
+      "tags": [
+        "español",
+        "fonética",
+        "diptongo"
+      ]
+    },
+    {
+      "question": "¿Qué es un triptongo en español?",
+      "answer": "Es la unión de tres vocales en una sola sílaba.",
+      "hint": "Necesita una vocal abierta en medio y dos cerradas, una a cada lado.",
+      "explanation": "Estructura: vocal cerrada + abierta + cerrada, todas en la misma sílaba. Ejemplos: 'Uruguay', 'buey'.",
+      "tags": [
+        "español",
+        "fonética",
+        "triptongo"
+      ]
+    },
+    {
+      "question": "¿Qué es un hiato en español?",
+      "answer": "Es la separación de dos vocales que pertenecen a sílabas distintas.",
+      "hint": "Ocurre cuando dos vocales fuertes van juntas o una débil acentuada junto a otra vocal.",
+      "explanation": "Rompe la formación de diptongo. Ejemplos: 'ca-er', 'pa-ís'.",
+      "tags": [
+        "español",
+        "fonética",
+        "hiato"
+      ]
+    },
+    {
+      "question": "¿Qué condición debe cumplirse para que dos vocales formen diptongo en español?",
+      "answer": "Una debe ser tónica y la otra átona, o bien una abierta y la otra cerrada/distinta.",
+      "hint": "Las vocales cerradas idénticas o dos abiertas iguales no forman diptongo.",
+      "explanation": "La regla general: abierta + cerrada átona / cerrada átona + abierta / dos cerradas distintas.",
+      "tags": [
+        "español",
+        "fonética",
+        "diptongo",
+        "reglas"
+      ]
+    },
+    {
+      "question": "¿Cómo se clasifican las consonantes según el modo de articulación en español?",
+      "answer": "En oclusivas, fricativas, africadas, nasales, laterales y vibrantes.",
+      "hint": "Depende de cómo se comporta el aire al salir por la boca.",
+      "explanation": "Cada modo define el grado de obstrucción del paso del aire: cierre total, estrechamiento, combinación con salida nasal, etc.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "clasificación"
+      ]
+    },
+    {
+      "question": "¿Qué son las consonantes oclusivas en español?",
+      "answer": "Son aquellas en las que el paso del aire se interrumpe totalmente y luego se libera de golpe.",
+      "hint": "Al pronunciarlas, la boca se cierra por completo en un punto determinado.",
+      "explanation": "Ejemplos: /p/, /t/, /k/, /b/, /d/, /g/. Se produce un cierre y una explosión posterior.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "oclusivas"
+      ]
+    },
+    {
+      "question": "¿Qué son las consonantes fricativas en español?",
+      "answer": "Son aquellas en las que se estrecha el paso del aire sin cerrarlo del todo, generando fricción.",
+      "hint": "El aire pasa por un canal muy angosto y produce un sonido de roce.",
+      "explanation": "Ejemplos: /f/, /s/, /x/, /ʝ/. No hay explosión, solo fricción continua.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "fricativas"
+      ]
+    },
+    {
+      "question": "¿Qué son las consonantes nasales en español?",
+      "answer": "Son aquellas en las que el aire sale por la nariz porque se bloquea la salida por la boca.",
+      "hint": "El velo del paladar baja y el aire se dirige hacia las fosas nasales.",
+      "explanation": "Ejemplos: /m/, /n/, /ɲ/. La cavidad nasal actúa como caja de resonancia.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "nasales"
+      ]
+    },
+    {
+      "question": "¿Qué son las consonantes laterales en español?",
+      "answer": "Son aquellas en las que el aire pasa por los lados de la lengua, bloqueando el centro.",
+      "hint": "La lengua toca el paladar y el aire se desvía a los costados.",
+      "explanation": "En español estándar son /l/ y /ʎ/. La obstrucción es central, no lateral.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "laterales"
+      ]
+    },
+    {
+      "question": "¿Qué son las consonantes vibrantes en español?",
+      "answer": "Son aquellas en las que la lengua vibra al contacto con el paladar.",
+      "hint": "Existen dos variantes: una simple y una múltiple.",
+      "explanation": "Las vibrantes son /r/ simple y /rr/ múltiple. La punta de la lengua golpea o vibra repetidamente.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "vibrantes"
+      ]
+    },
+    {
+      "question": "¿Cómo se llaman los puntos donde se forman las consonantes en la boca?",
+      "answer": "Puntos de articulación.",
+      "hint": "Se refiere a la zona exacta donde los órganos articuladores se aproximan.",
+      "explanation": "Ejemplos: bilabial, labiodental, dental, alveolar, palatal y velar.",
+      "tags": [
+        "español",
+        "fonética",
+        "articulación",
+        "puntos"
+      ]
+    },
+    {
+      "question": "¿Qué consonantes son bilabiales en español?",
+      "answer": "/p/, /b/, /m/.",
+      "hint": "Se pronuncian juntando los dos labios.",
+      "explanation": "Ambos labios se tocan para interrumpir o modificar el paso del aire.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "bilabiales"
+      ]
+    },
+    {
+      "question": "¿Qué consonante es labiodental en español?",
+      "answer": "La consonante /f/.",
+      "hint": "Se forma con el labio inferior y los dientes superiores.",
+      "explanation": "El labio inferior toca levemente los incisivos superiores y el aire pasa entre ellos.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "labiodental"
+      ]
+    },
+    {
+      "question": "¿Qué consonantes son dentales en español?",
+      "answer": "/t/, /d/.",
+      "hint": "La lengua toca la cara interna de los dientes superiores.",
+      "explanation": "El punto de articulación está en la zona de los dientes, no en los alvéolos.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "dentales"
+      ]
+    },
+    {
+      "question": "¿Qué consonantes son alveolares en español?",
+      "answer": "/s/, /n/, /l/, /r/.",
+      "hint": "La lengua toca la zona justo detrás de los dientes superiores.",
+      "explanation": "Los alvéolos son las prominencias óseas donde se asientan las raíces de los dientes.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "alveolares"
+      ]
+    },
+    {
+      "question": "¿Qué consonantes son palatales en español?",
+      "answer": "/ʧ/, /ʃ/, /ɲ/, /ʎ/, /j/.",
+      "hint": "Se pronuncian con la parte media de la lengua elevada hacia el paladar.",
+      "explanation": "El paladar duro es la zona media del techo de la boca; aquí se forman sonidos como los de 'ch', 'ñ' o 'll'.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "palatales"
+      ]
+    },
+    {
+      "question": "¿Qué consonantes son velares en español?",
+      "answer": "/k/, /g/, /x/.",
+      "hint": "La parte posterior de la lengua se eleva hacia el velo del paladar.",
+      "explanation": "El velo del paladar es la zona blanda y posterior del techo de la boca. Ejemplos: 'casa', 'gato', 'jalea'.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "velares"
+      ]
+    },
+    {
+      "question": "¿Cómo se llama la variante de un fonema que se pronuncia de forma concreta?",
+      "answer": "Alófono.",
+      "hint": "Es la realización material, el sonido físico que se escucha.",
+      "explanation": "Un mismo fonema puede tener varios alófonos según el contexto, sin cambiar el significado.",
+      "tags": [
+        "español",
+        "fonética",
+        "alófono"
+      ]
+    },
+    {
+      "question": "¿Cuándo se produce la fricativa bilabial de /b/, /d/, /g/ en español?",
+      "answer": "Entre vocales o entre vocal y líquida en la misma palabra.",
+      "hint": "No hay cierre total, sino un roce suave.",
+      "explanation": "En posición intervocálica, /b/, /d/, /g/ pierden la oclusión y se convierten en fricativas aproximadas: 'cabeza', 'cada', 'página'.",
+      "tags": [
+        "español",
+        "fonética",
+        "alófonos",
+        "b-d-g"
+      ]
+    },
+    {
+      "question": "¿En qué posición se pronuncian /b/, /d/, /g/ con oclusión fuerte en español?",
+      "answer": "Al inicio de la palabra o después de pausa o de consonante nasal u oclusiva.",
+      "hint": "El sonido es explosivo, con cierre total del aire.",
+      "explanation": "Ejemplos: 'bueno', 'donde', 'gato', 'un beso', 'el dato'. En estas posiciones recuperan la oclusión plena.",
+      "tags": [
+        "español",
+        "fonética",
+        "b-d-g",
+        "pronunciación"
+      ]
+    },
+    {
+      "question": "¿Cómo se pronuncia la letra 'ch' en español?",
+      "answer": "Como una africada palatal sorda /ʧ/.",
+      "hint": "Combina un cierre y luego una fricción rápida.",
+      "explanation": "Primero se cierra el paso del aire y luego se abre estrechándolo; es un solo fonema, no dos.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "ch"
+      ]
+    },
+    {
+      "question": "¿Cómo se pronuncia la letra 'ñ' en español?",
+      "answer": "Como nasal palatal /ɲ/.",
+      "hint": "Es una 'n' pero con la lengua tocando el paladar, no los dientes.",
+      "explanation": "A diferencia de la /n/ alveolar, la /ɲ/ se articula con la parte media de la lengua contra el paladar duro.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "ñ"
+      ]
+    },
+    {
+      "question": "¿Cómo se pronuncia la 'll' en el español estándar?",
+      "answer": "Como aproximante palatal sonora /ʎ/ o como fricativa palatal /j/ según la zona.",
+      "hint": "En muchas regiones suena igual que la 'y' al inicio de sílaba.",
+      "explanation": "La pronunciación más extendida hoy en día es la /j/ (yeísmo), que coincide con la 'y'.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "ll"
+      ]
+    },
+    {
+      "question": "¿Qué es el yeísmo en español?",
+      "answer": "Es la pronunciación idéntica de 'll' y 'y' como el sonido /j/, sin distinción entre ambas.",
+      "hint": "Es la forma predominante en la mayor parte del mundo hispanohablante.",
+      "explanation": "Supone la fusión de dos antiguos fonemas en uno solo; la distinción se mantiene solo en ciertas zonas rurales.",
+      "tags": [
+        "español",
+        "fonética",
+        "yeísmo",
+        "variación"
+      ]
+    },
+    {
+      "question": "¿Cómo se pronuncia la 'j' en español?",
+      "answer": "Como fricativa velar sorda /x/.",
+      "hint": "Se forma en la garganta, con un roce suave pero audible.",
+      "explanation": "El sonido es igual para 'j' y para 'g' antes de e, i. Ejemplos: 'jardín', 'gente'.",
+      "tags": [
+        "español",
+        "fonética",
+        "consonantes",
+        "jota"
+      ]
+    }
+  ]
+}

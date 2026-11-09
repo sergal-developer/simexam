@@ -1,0 +1,703 @@
+{
+  "title": "Práctica Completa: Sílabas en Español",
+  "tags": [
+    "español",
+    "sílabas",
+    "lengua",
+    "gramática"
+  ],
+  "time": 60,
+  "questionsCount": 115,
+  "questions": [
+    {
+      "question": "¿Qué es una sílaba?",
+      "answer": "Es cada uno de los golpes de voz con los que pronunciamos una palabra.",
+      "hint": "Se forma alrededor de un sonido central, casi siempre una vocal.",
+      "explanation": "La sílaba es la unidad mínima de pronunciación con sentido fónico, organizada sobre un núcleo vocalico."
+    },
+    {
+      "question": "¿Qué elemento es el núcleo de toda sílaba?",
+      "answer": "Una vocal.",
+      "hint": "Es el sonido más fuerte y no puede faltar.",
+      "explanation": "El núcleo silábico siempre es una vocal; sin vocal no hay sílaba en español."
+    },
+    {
+      "question": "¿Cómo se llama la sílaba que lleva la mayor fuerza de voz?",
+      "answer": "Sílaba tónica.",
+      "hint": "Es la que se pronuncia con énfasis.",
+      "explanation": "La sílaba tónica es la acentuada; las demás se denominan átonas."
+    },
+    {
+      "question": "¿Cómo se denominan las sílabas que no llevan la fuerza de voz?",
+      "answer": "Sílabas átonas.",
+      "hint": "Son las que se pronuncian con menor intensidad.",
+      "explanation": "Las sílabas sin acento prosódico son átonas y dependen de la tónica."
+    },
+    {
+      "question": "¿Cuántas sílabas tiene la palabra 'sol'?",
+      "answer": "Una sílaba.",
+      "hint": "Se pronuncia con un solo golpe de voz.",
+      "explanation": "Las palabras de una sola sílaba se llaman monosílabas."
+    },
+    {
+      "question": "¿Cómo se llaman las palabras formadas por una sola sílaba?",
+      "answer": "Monosílabas.",
+      "hint": "Ejemplos: pan, luz, mar.",
+      "explanation": "Tienen una única emisión fónica y, por regla general, no llevan tilde."
+    },
+    {
+      "question": "¿Cuántas sílabas tiene la palabra 'casa'?",
+      "answer": "Dos sílabas: ca-sa.",
+      "hint": "Divídela al pronunciarla lentamente.",
+      "explanation": "Ca-sa: dos emisiones de voz → palabra bisílaba."
+    },
+    {
+      "question": "¿Cómo se llaman las palabras de dos sílabas?",
+      "answer": "Bisílabas.",
+      "hint": "Ejemplos: ca-sa, pe-rro, li-bro.",
+      "explanation": "Constan exactamente de dos unidades silábicas."
+    },
+    {
+      "question": "¿Cuántas sílabas tiene 'árbol'?",
+      "answer": "Tres sílabas: ár-bol.",
+      "hint": "Fíjate en la vocal tónica.",
+      "explanation": "Ár-bol → tres emisiones fónicas: trisílaba."
+    },
+    {
+      "question": "¿Cómo se denominan las palabras de tres sílabas?",
+      "answer": "Trisílabas.",
+      "hint": "Ejemplos: me-sa-no, ca-rre-ra.",
+      "explanation": "Se estructuran en tres golpes de voz."
+    },
+    {
+      "question": "¿Cómo se llaman las palabras de cuatro o más sílabas?",
+      "answer": "Polisílabas.",
+      "hint": "Ejemplos: es-tu-dian-te, bi-blio-te-ca.",
+      "explanation": "Comprenden cuatro o más unidades silábicas."
+    },
+    {
+      "question": "¿Qué es un diptongo?",
+      "answer": "La unión de dos vocales en una misma sílaba.",
+      "hint": "Una vocal fuerte y una débil, o dos débiles.",
+      "explanation": "Se forman cuando dos vocales se pronuncian en un solo golpe de voz."
+    },
+    {
+      "question": "¿Qué es un hiato?",
+      "answer": "La separación de dos vocales en sílabas distintas.",
+      "hint": "Ocurre cuando las vocales no forman diptongo.",
+      "explanation": "Dos vocales juntas van a sílabas separadas; suele ocurrir con dos fuertes o una débil acentuada junto a otra."
+    },
+    {
+      "question": "¿Cuáles son las vocales fuertes?",
+      "answer": "a, e, o.",
+      "hint": "Se pronuncian con mayor apertura.",
+      "explanation": "Las vocales abiertas son a, e, o; las cerradas son i, u."
+    },
+    {
+      "question": "¿Cuáles son las vocales débiles?",
+      "answer": "i, u.",
+      "hint": "Son las vocales cerradas.",
+      "explanation": "Tienen menor intensidad y apertura; pueden formar diptongo con una fuerte o entre sí."
+    },
+    {
+      "question": "¿Se forma diptongo entre dos vocales fuertes?",
+      "answer": "No, siempre forman hiato.",
+      "hint": "a-a, e-o, a-e van en sílabas separadas.",
+      "explanation": "Dos vocales abiertas juntas nunca comparten sílaba: le-ón, ca-os."
+    },
+    {
+      "question": "¿Qué ocurre si una vocal débil lleva tilde junto a una fuerte?",
+      "answer": "Se rompe el diptongo y hay hiato.",
+      "hint": "Ejemplo: pa-ís.",
+      "explanation": "La tilde en la vocal débil le da fuerza y separa las vocales en sílabas distintas."
+    },
+    {
+      "question": "Divide en sílabas la palabra 'reina'.",
+      "answer": "rei-na.",
+      "hint": "La 'e' y la 'i' forman diptongo.",
+      "explanation": "ei = diptongo → va todo junto en la misma sílaba."
+    },
+    {
+      "question": "Divide en sílabas la palabra 'país'.",
+      "answer": "pa-ís.",
+      "hint": "La tilde rompe el diptongo.",
+      "explanation": "La 'i' acentuada tiene fuerza propia → va en sílaba aparte."
+    },
+    {
+      "question": "Divide en sílabas 'hola'.",
+      "answer": "ho-la.",
+      "hint": "La h no separa sílabas.",
+      "explanation": "La 'h' muda no actúa como separador; se une a la vocal siguiente."
+    },
+    {
+      "question": "¿Cómo se divide 'ahí'?",
+      "answer": "a-hí.",
+      "hint": "La h intercalada separa sílabas.",
+      "explanation": "La h entre vocales marca límite silábico aunque sea muda."
+    },
+    {
+      "question": "Divide 'autor'.",
+      "answer": "au-tor.",
+      "hint": "a + u forman diptongo.",
+      "explanation": "Vocal abierta + vocal cerrada átona = diptongo en la primera sílaba."
+    },
+    {
+      "question": "Divide 'auto'.",
+      "answer": "au-to.",
+      "hint": "Igual que en 'autor', el diptongo se mantiene.",
+      "explanation": "au permanece unido; la división va tras el diptongo."
+    },
+    {
+      "question": "Divide 'oído'.",
+      "answer": "o-í-do.",
+      "hint": "La í lleva tilde → hiato.",
+      "explanation": "Dos sílabas separadas: la o y la í no comparten emisión."
+    },
+    {
+      "question": "Divide 'hacia'.",
+      "answer": "ha-cia.",
+      "hint": "i + a sin tilde = diptongo.",
+      "explanation": "La i átona junto a la a forma diptongo → cia va junto."
+    },
+    {
+      "question": "Divide 'día'.",
+      "answer": "dí-a.",
+      "hint": "La tilde en la i rompe el diptongo.",
+      "explanation": "Sin tilde sería dia con diptongo; con tilde es dí-a en dos sílabas."
+    },
+    {
+      "question": "Divide 'camión'.",
+      "answer": "ca-mión.",
+      "hint": "ó + n van juntos; la i forma diptongo con la ó.",
+      "explanation": "ión constituye un diptongo final en una sola sílaba."
+    },
+    {
+      "question": "Divide 'rió'.",
+      "answer": "ri-ó.",
+      "hint": "La tilde en la o separa las vocales.",
+      "explanation": "Si la o lleva tilde, adquiere fuerza y se separa de la i."
+    },
+    {
+      "question": "Divide 'miedo'.",
+      "answer": "mie-do.",
+      "hint": "ie forma diptongo.",
+      "explanation": "Dos vocales, una abierta y otra cerrada átona, van unidas."
+    },
+    {
+      "question": "Divide 'ríe'.",
+      "answer": "rí-e.",
+      "hint": "La tilde en la i produce hiato.",
+      "explanation": "La i tónica se separa de la e abierta."
+    },
+    {
+      "question": "Divide 'ciudad'.",
+      "answer": "ciu-dad.",
+      "hint": "iu forma diptongo.",
+      "explanation": "Dos vocales cerradas distintas sin tilde van juntas."
+    },
+    {
+      "question": "Divide 'país' y 'paisaje' y compara.",
+      "answer": "pa-ís / pai-sa-je.",
+      "hint": "La tilde cambia la división.",
+      "explanation": "País lleva tilde → hiato; paisaje no lleva → diptongo ai."
+    },
+    {
+      "question": "¿Qué pasa con 'gu' ante e?",
+      "answer": "La u es muda y no cuenta como vocal para el diptongo.",
+      "hint": "Ejemplo: gue-rro → dos sílabas.",
+      "explanation": "En gue, gui la u no se pronuncia; por tanto, no forma diptongo."
+    },
+    {
+      "question": "Divide 'guitarra'.",
+      "answer": "gui-ta-rra.",
+      "hint": "La u de gui sí se pronuncia aquí.",
+      "explanation": "La u entre g y i se pronuncia y forma diptongo con la i."
+    },
+    {
+      "question": "Divide 'pingüino'.",
+      "answer": "pin-güi-no.",
+      "hint": "La diéresis ü indica que se pronuncia la u.",
+      "explanation": "ü se pronuncia junto a i → diptongo üi en la misma sílaba."
+    },
+    {
+      "question": "Divide 'buey'.",
+      "answer": "buey.",
+      "hint": "Es monosílaba; y al final funciona como i.",
+      "explanation": "buey: diptongo ue + y (i) formando un solo núcleo → una sílaba."
+    },
+    {
+      "question": "¿Cómo funciona la 'y' al final de sílaba?",
+      "answer": "Equivale a la vocal i y forma diptongo.",
+      "hint": "Ejemplos: rey, voy, hay.",
+      "explanation": "En posición final silábica la y tiene valor vocálico de i y se une a la vocal anterior."
+    },
+    {
+      "question": "Divide 'rey'.",
+      "answer": "rey (una sola sílaba).",
+      "hint": "y = i → e + i = diptongo.",
+      "explanation": "No hay separación; la unión ei forma una única sílaba."
+    },
+    {
+      "question": "Divide 'reír'.",
+      "answer": "re-ír.",
+      "hint": "Dos íes, una con tilde → hiato.",
+      "explanation": "La e y la í van separadas por la fuerza de la vocal tónica."
+    },
+    {
+      "question": "Divide 'caer'.",
+      "answer": "ca-er.",
+      "hint": "a + e son dos vocales fuertes → hiato.",
+      "explanation": "Dos vocales abiertas juntas siempre van en sílabas distintas."
+    },
+    {
+      "question": "Divide 'peor'.",
+      "answer": "pe-or.",
+      "hint": "e + o son dos fuertes → hiato.",
+      "explanation": "No comparten sílaba aunque vayan juntas."
+    },
+    {
+      "question": "Divide 'teatro'.",
+      "answer": "te-a-tro.",
+      "hint": "e + a = hiato.",
+      "explanation": "Dos vocales abiertas → división entre ellas."
+    },
+    {
+      "question": "Divide 'poeta'.",
+      "answer": "po-e-ta.",
+      "hint": "o + e = hiato.",
+      "explanation": "Cada vocal abierta constituye núcleo propio."
+    },
+    {
+      "question": "Divide 'triángulo'.",
+      "answer": "tri-ángu-lo.",
+      "hint": "La tilde en la a separa del diptongo ia que habría sin ella.",
+      "explanation": "tri-ángu-lo: la a tónica evita que se forme diptongo con la i."
+    },
+    {
+      "question": "Divide 'suave'.",
+      "answer": "sua-ve.",
+      "hint": "ua = diptongo.",
+      "explanation": "u cerrada + a abierta sin tilde van juntas."
+    },
+    {
+      "question": "Divide 'tía'.",
+      "answer": "tí-a.",
+      "hint": "Tilde en i → hiato.",
+      "explanation": "La i tónica rompe la unión con la a."
+    },
+    {
+      "question": "Divide 'cielo'.",
+      "answer": "cie-lo.",
+      "hint": "ie = diptongo.",
+      "explanation": "i cerrada + e abierta átona comparten sílaba."
+    },
+    {
+      "question": "Divide 'dios'.",
+      "answer": "dios.",
+      "hint": "io = diptongo → una sola sílaba.",
+      "explanation": "Sin tilde → unión; sería di-os si llevara tilde en la o."
+    },
+    {
+      "question": "Divide 'días'.",
+      "answer": "dí-as.",
+      "hint": "Tilde en i → hiato.",
+      "explanation": "La i tónica se separa de la a: dos sílabas."
+    },
+    {
+      "question": "Divide 'feúcho' (con tilde en u).",
+      "answer": "fe-ú-cho.",
+      "hint": "Tilde en u → hiato entre e y ú.",
+      "explanation": "La u tónica adquiere independencia silábica frente a la e."
+    },
+    {
+      "question": "¿Cómo se agrupa la consonante 'ch'?",
+      "answer": "Va entera con la vocal siguiente; no se divide.",
+      "hint": "Ejemplo: co-che, no *c- hoche.",
+      "explanation": "ch forma un dígrafo y se mantiene unido a la sílaba que le sigue."
+    },
+    {
+      "question": "Divide 'coche'.",
+      "answer": "co-che.",
+      "hint": "ch va junto a la segunda sílaba.",
+      "explanation": "Nunca se separa la c de la h en ch; el dígrafo permanece íntegro."
+    },
+    {
+      "question": "¿Cómo se divide la 'll'?",
+      "answer": "Va entera con la vocal siguiente; no se separa.",
+      "hint": "Ejemplo: lla-ve, no *l-lave.",
+      "explanation": "ll es un dígrafo que representa un solo sonido → permanece unido."
+    },
+    {
+      "question": "Divide 'llave'.",
+      "answer": "lla-ve.",
+      "hint": "La ll no se corta.",
+      "explanation": "El dígrafo ll va completo en la sílaba inicial."
+    },
+    {
+      "question": "¿Qué ocurre con las consonantes dobles como 'rr'?",
+      "answer": "Van juntas en la sílaba siguiente.",
+      "hint": "Ejemplo: co-rre, no *cor-re.",
+      "explanation": "rr se pronuncia como un solo sonido fuerte → no se divide."
+    },
+    {
+      "question": "Divide 'carro'.",
+      "answer": "ca-rro.",
+      "hint": "rr va junto a la segunda sílaba.",
+      "explanation": "Las dos r forman un grupo fónico unitario en posición inicial de sílaba."
+    },
+    {
+      "question": "Si hay dos consonantes entre vocales, ¿cómo se reparten?",
+      "answer": "La primera con la sílaba anterior y la segunda con la siguiente.",
+      "hint": "Ejemplo: pan-ta.",
+      "explanation": "Dos consonantes intermedias se separan: una a cada lado del límite."
+    },
+    {
+      "question": "Divide 'carta'.",
+      "answer": "car-ta.",
+      "hint": "r con la primera, t con la segunda.",
+      "explanation": "Dos consonantes entre vocales → reparto uno y uno."
+    },
+    {
+      "question": "¿Qué pares consonánticos no se separan nunca?",
+      "answer": "bl, br, cl, cr, dr, fl, fr, gl, gr, pl, pr, tr.",
+      "hint": "Ambas se mantienen en la sílaba de la vocal siguiente.",
+      "explanation": "Son grupos de sonido inseparables; siempre van juntos a la sílaba posterior."
+    },
+    {
+      "question": "Divide 'tabla'.",
+      "answer": "ta-bla.",
+      "hint": "bl no se separa.",
+      "explanation": "b + l forman pareja fija → ambas con la segunda sílaba."
+    },
+    {
+      "question": "Divide 'libro'.",
+      "answer": "li-bro.",
+      "hint": "br permanece unido.",
+      "explanation": "El par br va completo a la sílaba siguiente."
+    },
+    {
+      "question": "Divide 'acceso'.",
+      "answer": "ac-ce-so.",
+      "hint": "cc se separa: una con cada sílaba.",
+      "explanation": "cc no forma pareja fija → la primera c con la sílaba anterior, la segunda con la siguiente."
+    },
+    {
+      "question": "Divide 'acción'.",
+      "answer": "ac-ción.",
+      "hint": "cc se separa; ió lleva tilde y es hiato.",
+      "explanation": "ac-ción: la primera c con a, la segunda c con ión; ió = hiato por tilde."
+    },
+    {
+      "question": "Divide 'instituto'.",
+      "answer": "ins-ti-tu-to.",
+      "hint": "Tres consonantes iniciales intermedias: la primera se queda, el resto pasa.",
+      "explanation": "ns-ti: n con la sílaba anterior, s y t con la siguiente."
+    },
+    {
+      "question": "¿Con cuántas sílabas se considera una palabra 'aguda'?",
+      "answer": "No importa el número; la sílaba tónica es la última.",
+      "hint": "Ejemplos: ca-fé, a-mor, cam-pión.",
+      "explanation": "La clasificación depende de la posición de la sílaba tónica, no de la cantidad."
+    },
+    {
+      "question": "¿Qué es una palabra llana o grave?",
+      "answer": "La tónica es la penúltima sílaba.",
+      "hint": "Ejemplos: ca-sa, ár-bol, es-tu-dia.",
+      "explanation": "La fuerza recae en la sílaba que precede a la última."
+    },
+    {
+      "question": "¿Qué es una palabra esdrújula?",
+      "answer": "La tónica es la antepenúltima sílaba.",
+      "hint": "Ejemplos: es-drú-ju-la, mú-si-ca.",
+      "explanation": "La sílaba acentuada está tres posiciones antes del final."
+    },
+    {
+      "question": "¿Qué es una palabra sobreesdrújula?",
+      "answer": "La tónica está antes de la antepenúltima sílaba.",
+      "hint": "Suelen ser palabras con prefijos o pronombres añadidos: dí-ga-me-lo.",
+      "explanation": "La fuerza va en una sílaba anterior a la antepenúltima; siempre llevan tilde."
+    },
+    {
+      "question": "¿Las palabras agudas llevan tilde si terminan en...?",
+      "answer": "n, s o vocal.",
+      "hint": "Ejemplos: ca-fé, co-rré, a-mí.",
+      "explanation": "Regla: aguda + terminación n/s/vocal → tilde; si termina en otra consonante, no lleva."
+    },
+    {
+      "question": "¿Las palabras llanas llevan tilde si terminan en...?",
+      "answer": "No llevan si terminan en n, s o vocal; llevan si terminan en otra consonante.",
+      "hint": "ár-bol (termina en l → tilde); ca-sa (termina en a → sin tilde).",
+      "explanation": "Regla inversa a las agudas: la excepción es cuando acaban en consonante distinta de n/s."
+    },
+    {
+      "question": "¿Las esdrújulas llevan tilde?",
+      "answer": "Sí, siempre.",
+      "hint": "No importa su terminación.",
+      "explanation": "Toda palabra cuya sílaba tónica sea la antepenúltima o anterior requiere tilde obligatoriamente."
+    },
+    {
+      "question": "¿Por qué 'café' lleva tilde?",
+      "answer": "Es aguda y termina en vocal.",
+      "hint": "ca-fé → tónica al final + terminación e.",
+      "explanation": "Cumple la regla de las agudas con terminación vocal → tilde en la e final."
+    },
+    {
+      "question": "¿Por qué 'árbol' lleva tilde?",
+      "answer": "Es llana y termina en l, que no es n ni s.",
+      "hint": "Ár-bol → tónica en penúltima + termina en l.",
+      "explanation": "Las llanas con terminación distinta de vocal/n/s necesitan tilde para marcar la fuerza."
+    },
+    {
+      "question": "¿Por qué 'música' lleva tilde?",
+      "answer": "Es esdrújula y siempre se acentúa.",
+      "hint": "mú-si-ca → tónica en antepenúltima.",
+      "explanation": "No hay excepción: todas las esdrújulas llevan tilde independientemente de su terminación."
+    },
+    {
+      "question": "¿Por qué 'paisaje' no lleva tilde?",
+      "answer": "Es llana, termina en e y el diptongo no se rompe.",
+      "hint": "pai-sa-je → tónica en sa, penúltima.",
+      "explanation": "Llana terminada en vocal → sin tilde; ai permanece como diptongo."
+    },
+    {
+      "question": "¿Por qué 'país' sí lleva tilde?",
+      "answer": "Es aguda terminada en s y además la tilde marca el hiato.",
+      "hint": "pa-ís → tónica en la última sílaba.",
+      "explanation": "Cumple dos funciones: acentuar la sílaba final y separar las vocales en hiato."
+    },
+    {
+      "question": "¿Por qué 'tía' lleva tilde?",
+      "answer": "Es llana y la tilde marca el hiato entre i y a.",
+      "hint": "tí-a → tónica en la penúltima.",
+      "explanation": "Sin tilde sería tia con diptongo; la tilde separa y mantiene la clasificación llana."
+    },
+    {
+      "question": "Divide 'reúne'.",
+      "answer": "re-ú-ne.",
+      "hint": "La u lleva tilde → hiato.",
+      "explanation": "La u tónica se separa de la e: tres sílabas en total."
+    },
+    {
+      "question": "Divide 'frío'.",
+      "answer": "frí-o.",
+      "hint": "Tilde en i → hiato.",
+      "explanation": "Dos sílabas; la i tónica no comparte emisión con la o."
+    },
+    {
+      "question": "Divide 'riada'.",
+      "answer": "ria-da.",
+      "hint": "Sin tilde → diptongo ia.",
+      "explanation": "La i átona se une a la a → ria va junta en la primera sílaba."
+    },
+    {
+      "question": "Divide 'río'.",
+      "answer": "rí-o.",
+      "hint": "Tilde en i → hiato.",
+      "explanation": "La i tónica fuerza la separación de la o en dos sílabas."
+    },
+    {
+      "question": "¿Cuántas sílabas tiene 'estudiar'?",
+      "answer": "Cinco sílabas: es-tu-di-ar.",
+      "hint": "Marca el hiato final a-r.",
+      "explanation": "es-tu-di-ar: la última sílaba reúne la diptongación final ar."
+    },
+    {
+      "question": "¿Es 'estudiar' aguda, llana o esdrújula?",
+      "answer": "Aguda; la tónica es la última sílaba ar.",
+      "hint": "es-tu-di-ár → tónica al final.",
+      "explanation": "Llevaría tilde si no terminara en vocal; como termina en r, no la lleva."
+    },
+    {
+      "question": "Divide 'paraguas'.",
+      "answer": "pa-ra-guas.",
+      "hint": "ua = diptongo.",
+      "explanation": "Tres sílabas; la u y la a van juntas en la última."
+    },
+    {
+      "question": "Divide 'paragüero'.",
+      "answer": "pa-ra-güe-ro.",
+      "hint": "üe = diptongo; la diéresis indica pronunciación de la u.",
+      "explanation": "La ü se pronuncia y forma diptongo con la e en la tercera sílaba."
+    },
+    {
+      "question": "¿Cómo se divide 'subrayar'?",
+      "answer": "sub-ra-yar.",
+      "hint": "b con la primera, r con la segunda; y final = i → diptongo ar-yar.",
+      "explanation": "La secuencia br no se separa; sub se mantiene como sílaba inicial."
+    },
+    {
+      "question": "Divide 'desarrollo'.",
+      "answer": "de-sa-rro-llo.",
+      "hint": "rr y ll no se separan.",
+      "explanation": "Dos dígrafos que permanecen íntegros: rro y llo van juntos."
+    },
+    {
+      "question": "Divide 'inconsistente'.",
+      "answer": "in-con-sis-ten-te.",
+      "hint": "nc se separa: n con la primera, c con la segunda.",
+      "explanation": "Las consonantes intermedias se reparten según la regla general: una por lado salvo parejas fijas."
+    },
+    {
+      "question": "Divide 'transporte'.",
+      "answer": "trans-por-te.",
+      "hint": "Tres consonantes iniciales intermedias: ns se quedan, p pasa.",
+      "explanation": "trans-por-te: la agrupación ns va con la sílaba anterior."
+    },
+    {
+      "question": "¿Tiene diptongo 'construir'?",
+      "answer": "Sí, ui en la última sílaba: cons-tru-ir.",
+      "hint": "La u y la i sin tilde forman diptongo.",
+      "explanation": "Dos vocales cerradas sin tilde comparten sílaba → diptongo ui."
+    },
+    {
+      "question": "¿Tiene hiato 'construí'?",
+      "answer": "Sí: cons-tru-í → la tilde en la i lo separa.",
+      "hint": "La i tónica rompe la unión con la u.",
+      "explanation": "Sin tilde sería construir con diptongo; con tilde es hiato."
+    },
+    {
+      "question": "Divide 'amplitud'.",
+      "answer": "am-pli-tud.",
+      "hint": "pl no se separa.",
+      "explanation": "El par pl permanece unido en la segunda sílaba."
+    },
+    {
+      "question": "Divide 'obligar'.",
+      "answer": "ob-li-gar.",
+      "hint": "bl no se separa.",
+      "explanation": "b + l forman pareja fija → ambas con la segunda sílaba."
+    },
+    {
+      "question": "Divide 'atlántico'.",
+      "answer": "at-lán-ti-co.",
+      "hint": "tl no es pareja fija → se separa.",
+      "explanation": "t con la primera, l con la segunda; la sílaba tónica lleva tilde por ser esdrújula."
+    },
+    {
+      "question": "Divide 'drama'.",
+      "answer": "dra-ma.",
+      "hint": "dr no se separa.",
+      "explanation": "Al inicio de palabra, las parejas consonánticas van juntas."
+    },
+    {
+      "question": "Divide 'magia'.",
+      "answer": "ma-gia.",
+      "hint": "ia = diptongo.",
+      "explanation": "g + ia forman sílaba única; la i átona se une a la a."
+    },
+    {
+      "question": "Divide 'mago'.",
+      "answer": "ma-go.",
+      "hint": "Dos sílabas simples sin diptongo.",
+      "explanation": "Sin vocales juntas, la división va entre consonante y vocal siguiente."
+    },
+    {
+      "question": "¿Qué sílaba lleva la fuerza en 'física'?",
+      "answer": "fí- si-ca → la primera sílaba.",
+      "hint": "Es esdrújula.",
+      "explanation": "Todas las esdrújulas tienen la tónica en la antepenúltima; la tilde lo confirma."
+    },
+    {
+      "question": "¿Qué sílaba lleva la fuerza en 'rapidez'?",
+      "answer": "ra-pi-dez → la última sílaba dez.",
+      "hint": "Es aguda terminada en z.",
+      "explanation": "Las agudas terminadas en z no llevan tilde, pero la fuerza está al final."
+    },
+    {
+      "question": "Divide 'revisión'.",
+      "answer": "re-vi-sión.",
+      "hint": "ión = diptongo con tilde.",
+      "explanation": "La tilde marca la sílaba tónica y mantiene el diptongo al ser la vocal débil la átona."
+    },
+    {
+      "question": "Divide 'radiografía'.",
+      "answer": "ra-dio-gra-fí-a.",
+      "hint": "dio = diptongo; í-a = hiato.",
+      "explanation": "Combinación: diptongo en el centro y hiato final por tilde."
+    },
+    {
+      "question": "¿Por qué 'búho' lleva tilde?",
+      "answer": "Para marcar el hiato entre ú y o; sería llana sin tilde si hubiera diptongo.",
+      "hint": "bú-ho → dos sílabas, tónica en la primera.",
+      "explanation": "La u tónica rompe la unión con la o y la tilde lo señala obligatoriamente."
+    },
+    {
+      "question": "Divide 'dueto'.",
+      "answer": "du-e-to.",
+      "hint": "u-e sin tilde = hiato por dos vocales de distinta fuerza sin tilde en la débil.",
+      "explanation": "La u átona junto a e abierta sin tilde no forma diptongo → división entre ellas."
+    },
+    {
+      "question": "Divide 'diurético'.",
+      "answer": "diu-ré-ti-co.",
+      "hint": "iu = diptongo; ré lleva tilde por ser la tónica en posición llana con terminación en vocal.",
+      "explanation": "La pareja iu va junta; la tilde marca la sílaba tónica en la penúltima."
+    },
+    {
+      "question": "¿Es 'hervir' aguda o llana?",
+      "answer": "Aguda; la tónica es la última sílaba vir.",
+      "hint": "her-vir → termina en r, no lleva tilde.",
+      "explanation": "Las agudas terminadas en consonante distinta de n/s no llevan tilde."
+    },
+    {
+      "question": "Divide 'averigüar'.",
+      "answer": "a-ve-rigüar.",
+      "hint": "güa = diptongo; la diéresis indica pronunciación de la u.",
+      "explanation": "üa forma diptongo; la sílaba final reúne ambos sonidos vocálicos."
+    },
+    {
+      "question": "¿Cómo se llama la sílaba que lleva tilde gráfica?",
+      "answer": "Sigue llamándose tónica; la tilde es solo su señal escrita.",
+      "hint": "No cambia su naturaleza, solo su representación.",
+      "explanation": "La tilde no crea la sílaba tónica, solo la marca cuando las reglas ortográficas lo requieren."
+    },
+    {
+      "question": "Divide 'deshacer'.",
+      "answer": "des-ha-cer.",
+      "hint": "La h intercalada separa sílabas aunque sea muda.",
+      "explanation": "des-ha-cer: la h marca límite silábico entre sílabas."
+    },
+    {
+      "question": "Divide 'examen'.",
+      "answer": "e-xa-men.",
+      "hint": "x se divide entre dos sílabas.",
+      "explanation": "La x entre vocales reparte su sonido: ks → k con la sílaba anterior, s con la siguiente."
+    },
+    {
+      "question": "Divide 'éxito'.",
+      "answer": "é-xi-to.",
+      "hint": "x inicial de sílaba va entera con la vocal siguiente.",
+      "explanation": "En posición inicial de sílaba, la x no se separa de la vocal que le sigue."
+    },
+    {
+      "question": "¿Cuántas sílabas tiene 'instrucción'?",
+      "answer": "Cuatro: ins-truc-ción.",
+      "hint": "cc se separa; ión = diptongo con tilde.",
+      "explanation": "ins-truc-ción: la primera c con truc, la segunda con ión."
+    },
+    {
+      "question": "¿Por qué 'constituí' lleva tilde?",
+      "answer": "Porque la i final es tónica y además marca hiato con la u.",
+      "hint": "cons-ti-tu-í → aguda terminada en vocal + hiato.",
+      "explanation": "Cumple la regla de aguda terminada en vocal y además señala el hiato ui/úi."
+    },
+    {
+      "question": "Divide 'coordinar'.",
+      "answer": "co-or-di-nar.",
+      "hint": "o-o = hiato; vocales iguales fuertes se separan.",
+      "explanation": "Dos vocales idénticas abiertas juntas van en sílabas distintas."
+    },
+    {
+      "question": "Divide 'reaccionar'.",
+      "answer": "re-ac-cio-nar.",
+      "hint": "e-a = hiato; cc se separa; io = diptongo.",
+      "explanation": "Combinación de hiato, dígrafo separado y diptongo en una misma palabra."
+    },
+    {
+      "question": "¿Qué relación existe entre la división silábica y el corte de palabra al final de renglón?",
+      "answer": "Se corta la palabra siguiendo exactamente la división en sílabas.",
+      "hint": "Nunca se separan los dígrafos ch, ll, rr ni las parejas consonánticas fijas.",
+      "explanation": "La división silábica es la guía obligatoria para el salto de línea; las reglas de corte coinciden con las de separación de sílabas."
+    }
+  ]
+}

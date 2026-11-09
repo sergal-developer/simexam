@@ -1,0 +1,553 @@
+{
+    "title": "Lógica para Nivel Primaria",
+    "tags": [
+        "lógica",
+        "primaria",
+        "razonamiento",
+        "matemáticas",
+        "pensamiento"
+    ],
+    "time": 120,
+    "questionsCount": 49,
+    "questions": [
+        {
+            "question": "Si todos los gatos tienen bigotes y Mishi es un gato, ¿qué podemos concluir?",
+            "answer": "Mishi tiene bigotes",
+            "hint": "Usa la información general para aplicarla al caso específico",
+            "explanation": "Si todos los miembros de un grupo tienen una característica, cada uno de ellos la tiene",
+            "tags": [
+                "lógica deductiva",
+                "grupos",
+                "primaria"
+            ]
+        },
+        {
+            "question": "Completa la secuencia: 2, 4, 6, 8, ?",
+            "answer": "10",
+            "hint": "Observa cuánto aumenta cada número respecto al anterior",
+            "explanation": "La secuencia avanza sumando 2 cada vez: 8 + 2 = 10",
+            "tags": [
+                "secuencias",
+                "números",
+                "patrones"
+            ]
+        },
+        {
+            "question": "¿Qué figura no pertenece al grupo: círculo, cuadrado, triángulo, pelota?",
+            "answer": "pelota",
+            "hint": "Fíjate si son figuras planas o cuerpos",
+            "explanation": "La pelota es un cuerpo tridimensional; las demás son figuras planas",
+            "tags": [
+                "clasificación",
+                "figuras",
+                "diferencias"
+            ]
+        },
+        {
+            "question": "Si Ana es más alta que Luis y Luis es más alto que Pedro, ¿quién es el más bajo?",
+            "answer": "Pedro",
+            "hint": "Ordena las alturas de mayor a menor",
+            "explanation": "Ana > Luis > Pedro, por lo tanto Pedro es el más bajo",
+            "tags": [
+                "comparación",
+                "relaciones",
+                "orden"
+            ]
+        },
+        {
+            "question": "¿Cuál es el número que sigue: 5, 10, 15, 20, ?",
+            "answer": "25",
+            "hint": "Observa de cuánto en cuánto avanza la serie",
+            "explanation": "Se suma 5 en cada paso: 20 + 5 = 25",
+            "tags": [
+                "secuencias",
+                "suma",
+                "patrones numéricos"
+            ]
+        },
+        {
+            "question": "Si llueve, entonces no salgo a jugar. Hoy llueve, ¿qué hago?",
+            "answer": "No salgo a jugar",
+            "hint": "Aplica la condición dada",
+            "explanation": "La condición se cumple, así que se cumple la consecuencia",
+            "tags": [
+                "condicional",
+                "razonamiento",
+                "lógica básica"
+            ]
+        },
+        {
+            "question": "¿Qué palabra no pertenece: manzana, plátano, zanahoria, uva?",
+            "answer": "zanahoria",
+            "hint": "Piensa si son frutas o verduras",
+            "explanation": "La zanahoria es una verdura; las demás son frutas",
+            "tags": [
+                "clasificación",
+                "alimentos",
+                "diferencias"
+            ]
+        },
+        {
+            "question": "Completa: 1, 3, 5, 7, ?",
+            "answer": "9",
+            "hint": "Son números impares ordenados",
+            "explanation": "Se avanza sumando 2: 7 + 2 = 9",
+            "tags": [
+                "secuencias",
+                "números impares",
+                "patrones"
+            ]
+        },
+        {
+            "question": "Si tengo más lápices que María y tengo 5, ¿cuántos lápices puede tener María?",
+            "answer": "Menos de 5",
+            "hint": "Piensa en cantidades menores a 5",
+            "explanation": "Si tengo más, la cantidad de María es menor que la mía",
+            "tags": [
+                "comparación",
+                "cantidades",
+                "desigualdad"
+            ]
+        },
+        {
+            "question": "¿Cuál es la forma de continuar: sol, luna, sol, luna, ?",
+            "answer": "sol",
+            "hint": "Identifica el patrón que se repite",
+            "explanation": "El patrón es sol-luna, después de luna vuelve sol",
+            "tags": [
+                "patrones",
+                "repetición",
+                "secuencias"
+            ]
+        },
+        {
+            "question": "Todos los pájaros tienen alas. El águila es un pájaro. ¿El águila tiene alas?",
+            "answer": "Sí",
+            "hint": "Aplica la regla general al caso específico",
+            "explanation": "Si todos los pájaros tienen alas, el águila también las tiene",
+            "tags": [
+                "lógica deductiva",
+                "animales",
+                "grupos"
+            ]
+        },
+        {
+            "question": "Encuentra el número que falta: 10, 20, 30, ?, 50",
+            "answer": "40",
+            "hint": "De cuánto en cuánto va la serie",
+            "explanation": "Suma 10 cada vez: 30 + 10 = 40",
+            "tags": [
+                "secuencias",
+                "decenas",
+                "patrones"
+            ]
+        },
+        {
+            "question": "¿Qué no tiene la misma forma: moneda, hoja de papel, mesa, cuaderno?",
+            "answer": "moneda",
+            "hint": "Observa si son redondos o tienen esquinas rectas",
+            "explanation": "La moneda es redonda; las demás tienen forma de rectángulo o cuadrado",
+            "tags": [
+                "formas",
+                "clasificación",
+                "objetos"
+            ]
+        },
+        {
+            "question": "Si rojas hay más que azules y azules hay más que verdes, ¿cuáles hay menos?",
+            "answer": "verdes",
+            "hint": "Ordena de mayor a menor cantidad",
+            "explanation": "Rojas > azules > verdes, así que las verdes son las menos",
+            "tags": [
+                "comparación",
+                "cantidades",
+                "orden"
+            ]
+        },
+        {
+            "question": "Siguiente número: 12, 10, 8, 6, ?",
+            "answer": "4",
+            "hint": "¿Suma o resta en cada paso?",
+            "explanation": "Se restan 2 cada vez: 6 - 2 = 4",
+            "tags": [
+                "secuencias",
+                "resta",
+                "patrones decrecientes"
+            ]
+        },
+        {
+            "question": "Si es de día, hay luz. Ahora no hay luz. ¿Es de día?",
+            "answer": "No",
+            "hint": "Si la consecuencia no se cumple, la causa tampoco",
+            "explanation": "De día implica luz; sin luz no puede ser de día",
+            "tags": [
+                "condicional",
+                "negación",
+                "razonamiento"
+            ]
+        },
+        {
+            "question": "¿Cuál no es un animal doméstico: perro, lobo, gato, conejo?",
+            "answer": "lobo",
+            "hint": "Piensa cuál vive en libertad y no con personas",
+            "explanation": "El lobo es salvaje; los demás suelen vivir con personas",
+            "tags": [
+                "clasificación",
+                "animales",
+                "diferencias"
+            ]
+        },
+        {
+            "question": "Completa: 1, 2, 4, 8, ?",
+            "answer": "16",
+            "hint": "Mira por cuánto multiplicas cada número",
+            "explanation": "Cada número se multiplica por 2: 8 × 2 = 16",
+            "tags": [
+                "secuencias",
+                "multiplicación",
+                "patrones"
+            ]
+        },
+        {
+            "question": "La pluma es más barata que el cuaderno y el cuaderno más barato que el libro. ¿Qué es lo más caro?",
+            "answer": "el libro",
+            "hint": "Ordena de menor a mayor precio",
+            "explanation": "Pluma < cuaderno < libro, así que el libro es lo más caro",
+            "tags": [
+                "comparación",
+                "precios",
+                "orden"
+            ]
+        },
+        {
+            "question": "¿Qué sigue: cuadrado, círculo, cuadrado, círculo, ?",
+            "answer": "cuadrado",
+            "hint": "Repite el patrón que ves",
+            "explanation": "El orden se repite: cuadrado luego círculo, así que después de círculo va cuadrado",
+            "tags": [
+                "patrones",
+                "figuras",
+                "repetición"
+            ]
+        },
+        {
+            "question": "Todos los niños de la clase tienen mochila. Juan está en la clase. ¿Juan tiene mochila?",
+            "answer": "Sí",
+            "hint": "Aplica lo que dice la primera oración",
+            "explanation": "Si todos tienen mochila, Juan también",
+            "tags": [
+                "lógica deductiva",
+                "grupos",
+                "aplicación"
+            ]
+        },
+        {
+            "question": "Número que falta: 100, 90, 80, ?, 60",
+            "answer": "70",
+            "hint": "Va disminuyendo de 10 en 10",
+            "explanation": "80 - 10 = 70",
+            "tags": [
+                "secuencias",
+                "decenas",
+                "decrecimiento"
+            ]
+        },
+        {
+            "question": "¿Qué no es estación del año: primavera, mañana, invierno, otoño?",
+            "answer": "mañana",
+            "hint": "Las estaciones son cuatro y se refieren a épocas del año",
+            "explanation": "Mañana es un momento del día, no una estación",
+            "tags": [
+                "clasificación",
+                "tiempo",
+                "estaciones"
+            ]
+        },
+        {
+            "question": "Si camino 3 cuadras y luego regreso 1, ¿avancé en total?",
+            "answer": "Sí, avancé 2 cuadras",
+            "hint": "Haz la resta: lo que avanzas menos lo que retrocedes",
+            "explanation": "3 - 1 = 2, por lo tanto quedan 2 cuadras adelante",
+            "tags": [
+                "desplazamiento",
+                "suma y resta",
+                "razonamiento"
+            ]
+        },
+        {
+            "question": "Siguiente: 1, 10, 100, ?",
+            "answer": "1000",
+            "hint": "Mira cuántos ceros se agregan",
+            "explanation": "Cada vez se multiplica por 10: 100 × 10 = 1000",
+            "tags": [
+                "secuencias",
+                "potencias de 10",
+                "patrones"
+            ]
+        },
+        {
+            "question": "Si estudio, aprendo. Estudio. ¿Aprendo?",
+            "answer": "Sí",
+            "hint": "Se cumple la condición, así que se cumple el resultado",
+            "explanation": "Estudiar lleva a aprender; al estudiar se aprende",
+            "tags": [
+                "condicional",
+                "causa-efecto",
+                "razonamiento"
+            ]
+        },
+        {
+            "question": "¿Cuál no es fruto: lechuga, pera, durazno, fresa?",
+            "answer": "lechuga",
+            "hint": "Parte de la planta que se come",
+            "explanation": "La lechuga es una hortaliza de hoja, no un fruto",
+            "tags": [
+                "clasificación",
+                "plantas",
+                "alimentos"
+            ]
+        },
+        {
+            "question": "Completa: 3, 6, 9, 12, ?",
+            "answer": "15",
+            "hint": "Son múltiplos de 3",
+            "explanation": "Se suma 3 cada vez: 12 + 3 = 15",
+            "tags": [
+                "secuencias",
+                "múltiplos",
+                "patrones"
+            ]
+        },
+        {
+            "question": "El rojo es más largo que el azul. El azul es más corto que el verde. ¿El más largo?",
+            "answer": "No se puede saber con seguridad",
+            "hint": "Falta comparar rojo y verde",
+            "explanation": "Solo sabemos que rojo > azul y verde > azul, pero no se sabe cuál es mayor entre rojo y verde",
+            "tags": [
+                "comparación",
+                "información incompleta",
+                "relaciones"
+            ]
+        },
+        {
+            "question": "¿Qué sigue: arriba, abajo, arriba, abajo, ?",
+            "answer": "arriba",
+            "hint": "El patrón se repite de a dos",
+            "explanation": "Después de abajo vuelve arriba",
+            "tags": [
+                "patrones",
+                "direcciones",
+                "repetición"
+            ]
+        },
+        {
+            "question": "Todos los lápices escriben. Este objeto no es lápiz. ¿Escribe o no?",
+            "answer": "No se puede saber",
+            "hint": "La regla dice solo de los lápices, no de otros objetos",
+            "explanation": "Que los lápices escriban no significa que otros objetos no puedan o no puedan escribir",
+            "tags": [
+                "lógica",
+                "conjuntos",
+                "información incompleta"
+            ]
+        },
+        {
+            "question": "Número que falta: 50, 45, 40, ?, 30",
+            "answer": "35",
+            "hint": "De cuánto baja cada número",
+            "explanation": "Se restan 5: 40 - 5 = 35",
+            "tags": [
+                "secuencias",
+                "resta",
+                "decrecimiento"
+            ]
+        },
+        {
+            "question": "¿Cuál no es medio de transporte: bicicleta, silla, autobús, barco?",
+            "answer": "silla",
+            "hint": "Sirve para moverse de un lugar a otro",
+            "explanation": "La silla es un mueble; los demás sirven para transportar personas",
+            "tags": [
+                "clasificación",
+                "transporte",
+                "objetos"
+            ]
+        },
+        {
+            "question": "Si tengo una moneda y la lanzo, cae cara o cruz. Cayó cara. ¿Puede caer cruz?",
+            "answer": "No, ya cayó cara",
+            "hint": "Un evento ya ocurrió y no cambia",
+            "explanation": "El resultado ya se definió; no puede ser los dos a la vez",
+            "tags": [
+                "lógica",
+                "eventos",
+                "certeza"
+            ]
+        },
+        {
+            "question": "Siguiente: 2, 5, 8, 11, ?",
+            "answer": "14",
+            "hint": "Cuánto se suma cada vez",
+            "explanation": "Se suman 3: 11 + 3 = 14",
+            "tags": [
+                "secuencias",
+                "suma",
+                "patrones"
+            ]
+        },
+        {
+            "question": "Si llueve, uso paraguas. Uso paraguas. ¿Llueve seguro?",
+            "answer": "No necesariamente",
+            "hint": "Puede haber otra razón para usar paraguas",
+            "explanation": "Que llueva implica usar paraguas, pero usar paraguas no significa que llueva (puede ser sol)",
+            "tags": [
+                "condicional",
+                "causa-efecto",
+                "razonamiento"
+            ]
+        },
+        {
+            "question": "¿Qué no tiene ruedas: coche, mesa, bicicleta, camión?",
+            "answer": "mesa",
+            "hint": "Las ruedas sirven para moverse",
+            "explanation": "La mesa no tiene ruedas habitualmente; los demás objetos sí",
+            "tags": [
+                "clasificación",
+                "características",
+                "objetos"
+            ]
+        },
+        {
+            "question": "Completa: 1, 4, 9, 16, ?",
+            "answer": "25",
+            "hint": "Son números multiplicados por sí mismos: 1×1, 2×2...",
+            "explanation": "5×5 = 25",
+            "tags": [
+                "secuencias",
+                "cuadrados",
+                "patrones"
+            ]
+        },
+        {
+            "question": "David es mayor que Sofía. Sofía es mayor que Ana. ¿Quién es la menor?",
+            "answer": "Ana",
+            "hint": "Ordena de mayor a menor",
+            "explanation": "David > Sofía > Ana, entonces Ana es la menor",
+            "tags": [
+                "comparación",
+                "edades",
+                "orden"
+            ]
+        },
+        {
+            "question": "¿Qué sigue: grande, chico, grande, chico, ?",
+            "answer": "grande",
+            "hint": "Repite el orden que ves",
+            "explanation": "El patrón se repite: grande, chico...",
+            "tags": [
+                "patrones",
+                "tamaños",
+                "repetición"
+            ]
+        },
+        {
+            "question": "Ningún pez tiene patas. Este animal tiene patas. ¿Es pez?",
+            "answer": "No",
+            "hint": "Si los peces no tienen patas, quien las tiene no es pez",
+            "explanation": "Característica excluyente: pez → sin patas → con patas → no es pez",
+            "tags": [
+                "lógica deductiva",
+                "animales",
+                "negación"
+            ]
+        },
+        {
+            "question": "Número que falta: 12, 14, 16, ?, 20",
+            "answer": "18",
+            "hint": "Números pares consecutivos",
+            "explanation": "Se suman 2: 16 + 2 = 18",
+            "tags": [
+                "secuencias",
+                "números pares",
+                "patrones"
+            ]
+        },
+        {
+            "question": "¿Cuál no es parte del cuerpo: mano, zapato, nariz, rodilla?",
+            "answer": "zapato",
+            "hint": "Viste o cubre, no es parte de ti",
+            "explanation": "El zapato es calzado, no parte del cuerpo",
+            "tags": [
+                "clasificación",
+                "cuerpo",
+                "objetos"
+            ]
+        },
+        {
+            "question": "Si hay más días soleados que lluviosos y más lluviosos que nublados, ¿qué hay menos?",
+            "answer": "días nublados",
+            "hint": "Ordena de mayor a menor cantidad",
+            "explanation": "Soleados > lluviosos > nublados → los nublados son los menos",
+            "tags": [
+                "comparación",
+                "cantidades",
+                "tiempo"
+            ]
+        },
+        {
+            "question": "Siguiente: 20, 18, 16, 14, ?",
+            "answer": "12",
+            "hint": "Va bajando de 2 en 2",
+            "explanation": "14 - 2 = 12",
+            "tags": [
+                "secuencias",
+                "decrecimiento",
+                "números pares"
+            ]
+        },
+        {
+            "question": "Si en el recipiente hay solo bolas rojas, ¿puedo sacar una bola azul?",
+            "answer": "No",
+            "hint": "Mira qué colores hay",
+            "explanation": "Si solo hay rojas, es imposible sacar una azul",
+            "tags": [
+                "lógica",
+                "certeza",
+                "conjuntos"
+            ]
+        },
+        {
+            "question": "¿Cuál no es un número par: 2, 7, 10, 4?",
+            "answer": "7",
+            "hint": "Los pares terminan en 0, 2, 4, 6 u 8",
+            "explanation": "7 es impar; los demás son pares",
+            "tags": [
+                "clasificación",
+                "números",
+                "par-impar"
+            ]
+        },
+        {
+            "question": "Completa: 10, 13, 16, 19, ?",
+            "answer": "22",
+            "hint": "De cuánto en cuánto avanza",
+            "explanation": "Se suman 3: 19 + 3 = 22",
+            "tags": [
+                "secuencias",
+                "suma",
+                "patrones"
+            ]
+        },
+        {
+            "question": "La pluma es más corta que el lápiz y el lápiz más corto que el marcador. ¿El más largo?",
+            "answer": "el marcador",
+            "hint": "Ordena de menor a mayor longitud",
+            "explanation": "Pluma < lápiz < marcador → el marcador es el más largo",
+            "tags": [
+                "comparación",
+                "longitud",
+                "orden"
+            ]
+        }
+    ]
+}

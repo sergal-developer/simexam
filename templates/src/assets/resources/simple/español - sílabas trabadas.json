@@ -1,0 +1,643 @@
+{
+  "title": "Español: Sílabas Trabadas",
+  "tags": [
+    "español",
+    "lengua",
+    "silabas",
+    "silabas trabadas"
+  ],
+  "time": 210,
+  "questionsCount": 35,
+  "questions": [
+    {
+      "question": "¿Qué es una sílaba trabada?",
+      "answer": "sílaba terminada en consonante",
+      "hint": "La vocal no va al final",
+      "explanation": "La sílaba trabada termina con una o más consonantes después de la vocal",
+      "tags": [
+        "definición",
+        "silabas trabadas"
+      ]
+    },
+    {
+      "question": "¿'sol' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en l",
+      "explanation": "sol termina en consonante l → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'casa' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "ca-sa terminan en vocal",
+      "explanation": "Ambas sílabas terminan en a → no son trabadas",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'mar' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en r",
+      "explanation": "mar termina en consonante r → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Cuál es la sílaba trabada en 'panal'?",
+      "answer": "pan",
+      "hint": "pa-nal → la primera termina en n",
+      "explanation": "pan termina en n → sílaba trabada; nal termina en l pero la pregunta señala la primera",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'a' puede ser sílaba trabada?",
+      "answer": "no",
+      "hint": "Solo tiene vocal",
+      "explanation": "Para ser trabada necesita consonante al final",
+      "tags": [
+        "definición",
+        "silabas trabadas"
+      ]
+    },
+    {
+      "question": "¿'mes' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en s",
+      "explanation": "mes termina en consonante s → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Toda sílaba que termina en consonante es trabada?",
+      "answer": "sí",
+      "hint": "Esa es la regla",
+      "explanation": "Definición: sílaba trabada = termina en una o más consonantes",
+      "tags": [
+        "definición",
+        "reglas"
+      ]
+    },
+    {
+      "question": "¿'ca' es sílaba trabada?",
+      "answer": "no",
+      "hint": "Termina en a",
+      "explanation": "ca termina en vocal → sílaba libre",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'árbol'",
+      "answer": "bol",
+      "hint": "ár-bol → la segunda termina en l",
+      "explanation": "bol termina en l → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'flor' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en r",
+      "explanation": "flor termina en r → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'cama' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "ca-ma terminan en a",
+      "explanation": "Ambas sílabas terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'invierno'",
+      "answer": "in",
+      "hint": "in-vier-no → la primera termina en n",
+      "explanation": "in termina en n → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'luz' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en z",
+      "explanation": "luz termina en consonante z → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'pe' es sílaba trabada?",
+      "answer": "no",
+      "hint": "Termina en e",
+      "explanation": "pe termina en vocal → sílaba libre",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'templo'",
+      "answer": "tem",
+      "hint": "tem-plo → la primera termina en m",
+      "explanation": "tem termina en m → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'reloj' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en j",
+      "explanation": "reloj termina en j → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Una sílaba trabada puede tener dos consonantes al final?",
+      "answer": "sí",
+      "hint": "Ejemplo: 'paz' no, pero 'vals' sí",
+      "explanation": "vals termina en ls → sílaba trabada con dos consonantes finales",
+      "tags": [
+        "definición",
+        "reglas"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'carne'",
+      "answer": "car",
+      "hint": "car-ne → la primera termina en r",
+      "explanation": "car termina en r → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'paz' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en z",
+      "explanation": "paz termina en z → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'rio' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "ri-o → ambas terminan en vocal",
+      "explanation": "Las dos sílabas terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'alma'",
+      "answer": "al",
+      "hint": "al-ma → la primera termina en l",
+      "explanation": "al termina en l → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'mesa' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "me-sa terminan en vocal",
+      "explanation": "me y sa terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'fuente'",
+      "answer": "fuente",
+      "hint": "Una sola sílaba terminada en te? No: fuen-te → fuen termina en n",
+      "explanation": "fuen-te → fuen termina en n → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'dos' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en s",
+      "explanation": "dos termina en s → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'dia' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "di-a → terminan en vocal",
+      "explanation": "di y a terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'mundo'",
+      "answer": "mun",
+      "hint": "mun-do → la primera termina en n",
+      "explanation": "mun termina en n → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'rey' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "y actúa como consonante final",
+      "explanation": "rey termina en sonido consonántico → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'so' es sílaba trabada?",
+      "answer": "no",
+      "hint": "Termina en o",
+      "explanation": "so termina en vocal → libre",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'tarde'",
+      "answer": "tar",
+      "hint": "tar-de → la primera termina en r",
+      "explanation": "tar termina en r → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'voz' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en z",
+      "explanation": "voz termina en z → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'luna' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "lu-na terminan en vocal",
+      "explanation": "lu y na terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'campo'",
+      "answer": "cam",
+      "hint": "cam-po → la primera termina en m",
+      "explanation": "cam termina en m → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'tres' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en s",
+      "explanation": "tres termina en s → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'fe' es sílaba trabada?",
+      "answer": "no",
+      "hint": "Termina en e",
+      "explanation": "fe termina en vocal → libre",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'pasto'",
+      "answer": "pas",
+      "hint": "pas-to → la primera termina en s",
+      "explanation": "pas termina en s → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'pared' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "pa-red → red termina en d",
+      "explanation": "red termina en d → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'mora' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "mo-ra terminan en vocal",
+      "explanation": "mo y ra terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'tanto'",
+      "answer": "tan",
+      "hint": "tan-to → la primera termina en n",
+      "explanation": "tan termina en n → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'mil' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en l",
+      "explanation": "mil termina en l → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'pie' es sílaba trabada?",
+      "answer": "no",
+      "hint": "Termina en e",
+      "explanation": "pie termina en vocal → libre",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'santo'",
+      "answer": "san",
+      "hint": "san-to → la primera termina en n",
+      "explanation": "san termina en n → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'reino' tiene sílaba trabada?",
+      "answer": "sí",
+      "hint": "rei-no → rei termina en i? No: i es vocal → no, la respuesta correcta es no",
+      "explanation": "rei-no → ambas terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'carnal'",
+      "answer": "car",
+      "hint": "car-nal → ambas son trabadas, la primera es car",
+      "explanation": "car termina en r → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'bien' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en n",
+      "explanation": "bien termina en n → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'tía' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "tí-a → terminan en vocal",
+      "explanation": "tí y a terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'cantar'",
+      "answer": "tar",
+      "hint": "can-tar → ambas son trabadas, la segunda es tar",
+      "explanation": "tar termina en r → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'sal' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en l",
+      "explanation": "sal termina en l → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'lago' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "la-go terminan en vocal",
+      "explanation": "la y go terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'fuerte'",
+      "answer": "fuer",
+      "hint": "fuer-te → la primera termina en r",
+      "explanation": "fuer termina en r → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'más' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en s",
+      "explanation": "más termina en s → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'hola' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "ho-la terminan en vocal",
+      "explanation": "ho y la terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'dentro'",
+      "answer": "den",
+      "hint": "den-tro → la primera termina en n",
+      "explanation": "den termina en n → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'pan' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "Termina en n",
+      "explanation": "pan termina en n → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'rioja' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "rio-ja terminan en vocal",
+      "explanation": "rio y ja terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'monte'",
+      "answer": "mon",
+      "hint": "mon-te → la primera termina en n",
+      "explanation": "mon termina en n → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'feliz' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "fe-liz → la segunda termina en z",
+      "explanation": "liz termina en z → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'silla' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "si-lla terminan en vocal",
+      "explanation": "si y lla terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'cordero'",
+      "answer": "cor",
+      "hint": "cor-de-ro → la primera termina en r",
+      "explanation": "cor termina en r → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'azul' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "a-zul → la segunda termina en l",
+      "explanation": "zul termina en l → sílaba trabada",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿'copa' tiene sílaba trabada?",
+      "answer": "no",
+      "hint": "co-pa terminan en vocal",
+      "explanation": "co y pa terminan en vocal → libres",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "Sílaba trabada en 'frente'",
+      "answer": "fren",
+      "hint": "fren-te → la primera termina en n",
+      "explanation": "fren termina en n → sílaba trabada",
+      "tags": [
+        "identificación",
+        "división"
+      ]
+    },
+    {
+      "question": "¿'jardín' es sílaba trabada?",
+      "answer": "sí",
+      "hint": "jar-dín → ambas son trabadas",
+      "explanation": "jar termina en r, dín termina en n → ambas trabadas",
+      "tags": [
+        "identificación",
+        "ejemplos"
+      ]
+    }
+  ]
+}

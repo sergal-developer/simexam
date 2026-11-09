@@ -1,0 +1,523 @@
+{
+  "title": "Español: Identificación de vocales, consonantes y División Silábica",
+  "tags": [
+    "español",
+    "lengua",
+    "fonética",
+    "silabas"
+  ],
+  "time": 150,
+  "questionsCount": 35,
+  "questions": [
+    {
+      "question": "¿Cuántas vocales hay en el español?",
+      "answer": "5",
+      "hint": "Son letras que suenan solas",
+      "explanation": "Las vocales son a, e, i, o, u",
+      "tags": [
+        "vocales",
+        "identificación"
+      ]
+    },
+    {
+      "question": "¿Qué letra es vocal: b o a?",
+      "answer": "a",
+      "hint": "Empieza la lista de vocales",
+      "explanation": "a es vocal; b es consonante",
+      "tags": [
+        "vocales",
+        "identificación"
+      ]
+    },
+    {
+      "question": "¿Es m una vocal o consonante?",
+      "answer": "consonante",
+      "hint": "No está en el grupo a-e-i-o-u",
+      "explanation": "m es consonante porque no es vocal",
+      "tags": [
+        "consonantes",
+        "identificación"
+      ]
+    },
+    {
+      "question": "Nombre una vocal cerrada",
+      "answer": "i",
+      "hint": "Tiene sonido corto y cerrado",
+      "explanation": "Las cerradas son i y u",
+      "tags": [
+        "vocales",
+        "clasificación"
+      ]
+    },
+    {
+      "question": "¿Es o vocal abierta o cerrada?",
+      "answer": "abierta",
+      "hint": "La boca se abre más al pronunciarla",
+      "explanation": "a, e, o son vocales abiertas",
+      "tags": [
+        "vocales",
+        "clasificación"
+      ]
+    },
+    {
+      "question": "¿Qué tipo de letra no es vocal?",
+      "answer": "consonante",
+      "hint": "Necesita una vocal para formar sílaba",
+      "explanation": "Las consonantes nunca son vocales",
+      "tags": [
+        "consonantes",
+        "definición"
+      ]
+    },
+    {
+      "question": "¿Es r consonante?",
+      "answer": "sí",
+      "hint": "No pertenece a a-e-i-o-u",
+      "explanation": "r es una consonante sonora",
+      "tags": [
+        "consonantes",
+        "identificación"
+      ]
+    },
+    {
+      "question": "Escribe la vocal e",
+      "answer": "e",
+      "hint": "Es la segunda vocal",
+      "explanation": "e es la segunda vocal del alfabeto",
+      "tags": [
+        "vocales",
+        "identificación"
+      ]
+    },
+    {
+      "question": "¿Es u vocal cerrada?",
+      "answer": "sí",
+      "hint": "Junto con i forma el grupo cerrado",
+      "explanation": "i y u son vocales cerradas",
+      "tags": [
+        "vocales",
+        "clasificación"
+      ]
+    },
+    {
+      "question": "¿Es z vocal o consonante?",
+      "answer": "consonante",
+      "hint": "Su sonido depende de una vocal",
+      "explanation": "z es consonante fricativa",
+      "tags": [
+        "consonantes",
+        "identificación"
+      ]
+    },
+    {
+      "question": "¿Qué es una sílaba?",
+      "answer": "unidad de sonido",
+      "hint": "Se pronuncia en un solo golpe de voz",
+      "explanation": "La sílaba es la unidad mínima de pronunciación",
+      "tags": [
+        "sílabas",
+        "definición"
+      ]
+    },
+    {
+      "question": "¿Toda sílaba lleva una vocal?",
+      "answer": "sí",
+      "hint": "Es el núcleo de la sílaba",
+      "explanation": "La vocal es el núcleo obligatorio de toda sílaba",
+      "tags": [
+        "sílabas",
+        "formación"
+      ]
+    },
+    {
+      "question": "¿Puede haber sílaba sin vocal?",
+      "answer": "no",
+      "hint": "La vocal es el centro de la sílaba",
+      "explanation": "En español no existe sílaba sin vocal",
+      "tags": [
+        "sílabas",
+        "formación"
+      ]
+    },
+    {
+      "question": "Divide 'casa' en sílabas",
+      "answer": "ca-sa",
+      "hint": "Corta entre la vocal y la consonante siguiente",
+      "explanation": "ca-sa tiene dos sílabas",
+      "tags": [
+        "división silábica",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Cuántas sílabas tiene 'sol'?",
+      "answer": "1",
+      "hint": "Se pronuncia de una sola vez",
+      "explanation": "sol es palabra monosílaba",
+      "tags": [
+        "sílabas",
+        "conteo"
+      ]
+    },
+    {
+      "question": "Divide 'papel' en sílabas",
+      "answer": "pa-pel",
+      "hint": "Separa tras la primera vocal",
+      "explanation": "pa-pel tiene dos sílabas",
+      "tags": [
+        "división silábica",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Qué es el núcleo silábico?",
+      "answer": "la vocal",
+      "hint": "Es la parte central de la sílaba",
+      "explanation": "La vocal siempre es el núcleo de la sílaba",
+      "tags": [
+        "sílabas",
+        "estructura"
+      ]
+    },
+    {
+      "question": "Divide 'libro' en sílabas",
+      "answer": "li-bro",
+      "hint": "Corta tras la primera vocal",
+      "explanation": "li-bro tiene dos sílabas",
+      "tags": [
+        "división silábica",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Cuántas sílabas tiene 'amigo'?",
+      "answer": "3",
+      "hint": "Cuenta cada golpe de voz",
+      "explanation": "a-mi-go: tres sílabas",
+      "tags": [
+        "sílabas",
+        "conteo"
+      ]
+    },
+    {
+      "question": "Divide 'flor' en sílabas",
+      "answer": "flor",
+      "hint": "No se puede dividir",
+      "explanation": "flor es una sola sílaba",
+      "tags": [
+        "división silábica",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Qué es el ataque silábico?",
+      "answer": "consonantes antes del núcleo",
+      "hint": "Vienen antes de la vocal",
+      "explanation": "El ataque son los sonidos previos a la vocal",
+      "tags": [
+        "sílabas",
+        "estructura"
+      ]
+    },
+    {
+      "question": "Divide 'coche' en sílabas",
+      "answer": "co-che",
+      "hint": "Separa entre o y ch",
+      "explanation": "co-che tiene dos sílabas",
+      "tags": [
+        "división silábica",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Dos consonantes juntas se separan?",
+      "answer": "sí, normalmente",
+      "hint": "Salvo que formen grupo inseparable",
+      "explanation": "ll, ch, rr no se separan; el resto sí",
+      "tags": [
+        "división silábica",
+        "reglas"
+      ]
+    },
+    {
+      "question": "Divide 'llave' en sílabas",
+      "answer": "lla-ve",
+      "hint": "ll no se divide",
+      "explanation": "lla-ve: ll forma un bloque inseparable",
+      "tags": [
+        "división silábica",
+        "reglas"
+      ]
+    },
+    {
+      "question": "¿Qué es la coda silábica?",
+      "answer": "sonidos tras la vocal",
+      "hint": "Vienen al final de la sílaba",
+      "explanation": "La coda va después del núcleo",
+      "tags": [
+        "sílabas",
+        "estructura"
+      ]
+    },
+    {
+      "question": "Divide 'pluma' en sílabas",
+      "answer": "plu-ma",
+      "hint": "pl va junto",
+      "explanation": "plu-ma: pl es grupo inseparable",
+      "tags": [
+        "división silábica",
+        "reglas"
+      ]
+    },
+    {
+      "question": "¿Cuántas sílabas tiene 'escuela'?",
+      "answer": "3",
+      "hint": "es-cue-la",
+      "explanation": "es-cue-la: tres sílabas",
+      "tags": [
+        "sílabas",
+        "conteo"
+      ]
+    },
+    {
+      "question": "Divide 'perro' en sílabas",
+      "answer": "pe-rro",
+      "hint": "rr no se separa",
+      "explanation": "pe-rro: rr se mantiene junto",
+      "tags": [
+        "división silábica",
+        "reglas"
+      ]
+    },
+    {
+      "question": "¿Un diptongo forma una sílaba?",
+      "answer": "sí",
+      "hint": "Dos vocales juntas en un solo golpe",
+      "explanation": "ai, eu, etc. forman una sola sílaba",
+      "tags": [
+        "sílabas",
+        "diptongo"
+      ]
+    },
+    {
+      "question": "Divide 'aire' en sílabas",
+      "answer": "ai-re",
+      "hint": "ai es diptongo, una sílaba",
+      "explanation": "ai-re: dos sílabas, ai junta",
+      "tags": [
+        "división silábica",
+        "diptongo"
+      ]
+    },
+    {
+      "question": "¿Hiato es una o dos sílabas?",
+      "answer": "dos",
+      "hint": "Las vocales se separan",
+      "explanation": "En hiato las vocales van en sílabas distintas",
+      "tags": [
+        "sílabas",
+        "hiato"
+      ]
+    },
+    {
+      "question": "Divide 'león' en sílabas",
+      "answer": "le-ón",
+      "hint": "Lleva tilde en la segunda vocal",
+      "explanation": "le-ón: hiato por tilde",
+      "tags": [
+        "división silábica",
+        "hiato"
+      ]
+    },
+    {
+      "question": "¿bl se separa al dividir?",
+      "answer": "no",
+      "hint": "Es pareja inseparable",
+      "explanation": "bl, cl, pl etc. no se separan",
+      "tags": [
+        "división silábica",
+        "reglas"
+      ]
+    },
+    {
+      "question": "Divide 'abrir' en sílabas",
+      "answer": "a-brir",
+      "hint": "br va junto",
+      "explanation": "a-brir: br es pareja inseparable",
+      "tags": [
+        "división silábica",
+        "reglas"
+      ]
+    },
+    {
+      "question": "¿ch se separa en división?",
+      "answer": "no",
+      "hint": "Es dígrafo, se mantiene unido",
+      "explanation": "ch siempre va junto en la misma sílaba",
+      "tags": [
+        "división silábica",
+        "dígrafos"
+      ]
+    },
+    {
+      "question": "Divide 'ancho' en sílabas",
+      "answer": "an-cho",
+      "hint": "ch va junto",
+      "explanation": "an-cho: ch permanece unido",
+      "tags": [
+        "división silábica",
+        "dígrafos"
+      ]
+    },
+    {
+      "question": "¿Dos vocales iguales forman hiato?",
+      "answer": "sí",
+      "hint": "Se pronuncian por separado",
+      "explanation": "aa, ee, oo siempre son hiato",
+      "tags": [
+        "sílabas",
+        "hiato"
+      ]
+    },
+    {
+      "question": "Divide 'zapato' en sílabas",
+      "answer": "za-pa-to",
+      "hint": "Una consonante entre vocales va con la siguiente",
+      "explanation": "za-pa-to: tres sílabas",
+      "tags": [
+        "división silábica",
+        "reglas"
+      ]
+    },
+    {
+      "question": "¿Una consonante entre vocales va con la anterior?",
+      "answer": "no",
+      "hint": "Va con la vocal que le sigue",
+      "explanation": "e-je: j va con la segunda e",
+      "tags": [
+        "división silábica",
+        "reglas"
+      ]
+    },
+    {
+      "question": "Divide 'carnal' en sílabas",
+      "answer": "car-nal",
+      "hint": "Dos consonantes: una con cada sílaba",
+      "explanation": "car-nal: r con la primera, n con la segunda",
+      "tags": [
+        "división silábica",
+        "reglas"
+      ]
+    },
+    {
+      "question": "¿gu antes de e,i forma diptongo?",
+      "answer": "sí",
+      "hint": "La u no se pronuncia",
+      "explanation": "gue, gui forman una sola sílaba",
+      "tags": [
+        "sílabas",
+        "diptongo"
+      ]
+    },
+    {
+      "question": "Divide 'diferente' en sílabas",
+      "answer": "di-fe-ren-te",
+      "hint": "Corta entre vocales y consonantes simples",
+      "explanation": "di-fe-ren-te: cuatro sílabas",
+      "tags": [
+        "división silábica",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Qué es palabra monosílaba?",
+      "answer": "tiene una sílaba",
+      "hint": "Ejemplo: paz, mes, luz",
+      "explanation": "Las de una sola sílaba son monosílabas",
+      "tags": [
+        "sílabas",
+        "clasificación"
+      ]
+    },
+    {
+      "question": "Divide 'reír' en sílabas",
+      "answer": "re-ír",
+      "hint": "Tilde rompe el diptongo",
+      "explanation": "re-ír: hiato por tilde en i",
+      "tags": [
+        "división silábica",
+        "hiato"
+      ]
+    },
+    {
+      "question": "¿tr se separa al dividir?",
+      "answer": "no",
+      "hint": "Pertenece a parejas inseparables",
+      "explanation": "tr, pr, fr etc. no se separan",
+      "tags": [
+        "división silábica",
+        "reglas"
+      ]
+    },
+    {
+      "question": "Divide 'tren' en sílabas",
+      "answer": "tren",
+      "hint": "No se divide",
+      "explanation": "tren es una sola sílaba",
+      "tags": [
+        "división silábica",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Cuántas sílabas tiene 'corazón'?",
+      "answer": "3",
+      "hint": "co-ra-zón",
+      "explanation": "co-ra-zón: tres sílabas",
+      "tags": [
+        "sílabas",
+        "conteo"
+      ]
+    },
+    {
+      "question": "Divide 'buen' en sílabas",
+      "answer": "buen",
+      "hint": "Es diptongo, no se divide",
+      "explanation": "buen es una sola sílaba",
+      "tags": [
+        "división silábica",
+        "diptongo"
+      ]
+    },
+    {
+      "question": "¿Québec lleva hiato?",
+      "answer": "sí",
+      "hint": "e acentuada más e",
+      "explanation": "Que-bec: hiato entre las dos e",
+      "tags": [
+        "división silábica",
+        "hiato"
+      ]
+    },
+    {
+      "question": "Divide 'escritorio' en sílabas",
+      "answer": "es-cri-to-rio",
+      "hint": "cr va junto",
+      "explanation": "es-cri-to-rio: cuatro sílabas",
+      "tags": [
+        "división silábica",
+        "ejemplos"
+      ]
+    },
+    {
+      "question": "¿Cuántas sílabas tiene 'instrucción'?",
+      "answer": "3",
+      "hint": "ins-truc-ción",
+      "explanation": "ins-truc-ción: tres sílabas",
+      "tags": [
+        "sílabas",
+        "conteo"
+      ]
+    }
+  ]
+}
