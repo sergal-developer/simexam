@@ -84,6 +84,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     gradePerfect: icons.Sparkles,
   }
   uxUtils = new UxUtils();
+  listRevealAnimation = '';
 
   constructor(private commonServices: CommonServices,
     private uiServices: UiServices,
@@ -261,12 +262,16 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
   async showView(name: 'empty' | 'dashboard' | 'details', after?: Function) {
+    this.listRevealAnimation = '';
     const newIndex = this.uxContentView.findIndex(form => form.name == name);
     this.uxView = this.uxContentView[newIndex].class as '-view-1' | '-view-2' | '-view-3';
     this.uxContentIndex = newIndex;
 
+
+    this.listRevealAnimation = 'list-reveal --reveal-bottom';
     await this.uxUtils.wait(1500);
     this.valueChange(this.uxContentView[newIndex].name);
+
     if (after) { after() }
   }
 

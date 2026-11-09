@@ -10,6 +10,7 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
 export class MatInputComponent implements OnInit, ControlValueAccessor {
     //#region INPUT/OUTPUT
     @Input() formName: string = '';
+    @Input() className: string = '';
     @Input() title: string = '';
     @Input() mesageError: string = '';
     @Input() type: 'regex' | 'color' | 'date' | 'datetime-local' | 'email' | 'file' | 'hidden' | 'image' | 'month' | 'number' | 'password' | 'radio' | 'range' | 'reset' | 'search' | 'submit' | 'tel' | 'text' | 'time' | 'url' | 'week' = 'text';
@@ -20,12 +21,12 @@ export class MatInputComponent implements OnInit, ControlValueAccessor {
         minNum: number | null,
         regex: any
     } = {
-        maxNum: null,
-        minNum: 0,
-        regex: null
-    };
+            maxNum: null,
+            minNum: 0,
+            regex: null
+        };
     @Output() onChange = new EventEmitter();
- 
+
     //#endregion
 
     //#region INTERNAL-PROPERTIES

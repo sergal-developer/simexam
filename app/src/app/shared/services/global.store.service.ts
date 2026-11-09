@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ComponentStore } from '@ngrx/component-store';
-import { LanguageDTO, PermissionsDTO, ThemeDTO, UserDTO } from '../data/entities/dtos';
+import { LanguageDTO, PermissionsDTO, SettingsDTO, ThemeDTO, UserDTO } from '../data/entities/dtos';
 import { take } from 'rxjs';
 
 export interface GlobalAppState {
@@ -72,6 +72,10 @@ export class AppStateStore extends ComponentStore<GlobalAppState> {
 
   readonly setColors = this.updater((state, colors: Array<any>[]) => ({
     ...state, colors, _colors: colors
+  }));
+
+  readonly setSettings = this.updater((state, settings: SettingsDTO) => ({
+    ...state, settings,
   }));
 
   private _getUser() {

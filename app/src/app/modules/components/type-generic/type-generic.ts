@@ -3,7 +3,7 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
 import { TranslateService } from '@ngx-translate/core';
 import { icons } from 'lucide';
 import { AnswerDTO, AttemptDTO, getAnswerDTO, getQuestionDTO, normalizeQuestionaryDTO, QuestionaryDTO, QuestionDTO } from 'src/app/shared/data/entities/dtos';
-import { UITypeStatus } from 'src/app/shared/data/entities/dtos/ui.dto';
+import { UIMainStates, UITypeStatus } from 'src/app/shared/data/entities/dtos/ui.dto';
 import { QuizType } from 'src/app/shared/data/enumerables/enumerables';
 import { DigitRange, Generator, MathOperators, MathQuestion } from 'src/app/shared/data/utils/generator.services';
 import { CommonServices } from 'src/app/shared/services/common.services';
@@ -18,13 +18,14 @@ import { UiServices } from 'src/app/shared/services/ui.services';
 export class TypeGenericComponent implements OnInit {
   //#region INPUTS / OUTPUTS
   @Input() questionary: QuestionaryDTO = null;
-  @Input() translateLabels: { [key: string]: string } = {};
+  @Input() translateLabels: { [key: string]: string } | any = {};
   @Output() onChange = new EventEmitter();
   //#endregion INPUTS / OUTPUTS
 
   //#region INTERNAL
   index = 0;
   luIcon = {
+    settings: icons.SlidersHorizontal,
     left: icons.ChevronLeft,
     right: icons.ChevronRight,
     register: icons.UserPlus,
@@ -47,6 +48,13 @@ export class TypeGenericComponent implements OnInit {
     operationMinus: icons.Minus,
     operationDivide: icons.Divide,
     operationMultiplication: icons.X,
+
+    trivia: icons.ListTodo,
+    simple: icons.PlayingCards,
+    trueFalse: icons.Drama,
+    popularity: icons.Vote,
+    mathQuest: icons.Brain,
+    reading: icons.BookOpenText,
   };
 
   formQuestion: FormGroup = new FormGroup({
@@ -74,6 +82,16 @@ export class TypeGenericComponent implements OnInit {
     showPopular: false,
   }
 
+  types = [
+    { name: 'trivia', id: 'trivia', icon: icons.ListTodo, selected: false },
+    { name: 'simple', id: 'simple', icon: icons.PlayingCards, selected: false },
+    { name: 'true-false', id: 'true-false', icon: icons.Drama, selected: false },
+    { name: 'popularity', id: 'popularity', icon: icons.Vote, selected: false },
+    { name: 'math-quest', id: 'math-quest', icon: icons.Brain, selected: false },
+    { name: 'reading', id: 'reading', icon: icons.BookOpenText, selected: false },
+  ];
+  currentType = { name: 'trivia', id: 'trivia', icon: icons.ListTodo, selected: false };
+
   _generator = new Generator()
 
   // varaibles only for math quests
@@ -95,6 +113,10 @@ export class TypeGenericComponent implements OnInit {
     estimatedTime: 10,
   };
 
+  uxView: string = '-view-1';
+  uxViewMain: string = '-view-1';
+  uxCountScreen: string = '-count-1';
+
   //#endregion INTERNAL
 
   //#region LIFECICLE
@@ -111,9 +133,26 @@ export class TypeGenericComponent implements OnInit {
   //#region DATA
   async init() {
     this.index = 0;
-    console.log('this.index: ', this.index);
     this.setCurrentQuestion();
     this.setupQuestionaryType();
+
+    // update type labels to current lenguage
+    this.types.map(ty => {
+      ty.name = ty.id == 'trivia' ? this.translateLabels.quiz_type_trivia :
+        ty.id == 'simple' ? this.translateLabels.quiz_type_simple :
+          ty.id == 'true-false' ? this.translateLabels.quiz_type_true_false :
+            ty.id == 'popularity' ? this.translateLabels.quiz_type_popularity :
+              ty.id == 'math-quest' ? this.translateLabels.quiz_type_math_quest :
+                ty.id == 'reading' ? this.translateLabels.quiz_type_reading :
+                  this.translateLabels.quiz_default;
+
+
+      ty.selected = this.questionary.type == ty.id;
+      return ty;
+    });
+
+    this.currentType = this.types.find(x => x.selected);
+    console.log('this.questionary.type: ', this.questionary.type);
   }
 
   async setQuestionary(questionary: QuestionaryDTO) {
@@ -132,7 +171,11 @@ export class TypeGenericComponent implements OnInit {
       time: [question.time],
       answers: [],
     });
+
+    const total = (this.questionary.questions as QuestionDTO[]).length;
+    this.uxCountScreen = `-count-${total}`;
     this.setAnswersFormOfQuestion();
+    this.setCurrentQuestionView();
   }
 
   setAnswersFormOfQuestion() {
@@ -196,16 +239,6 @@ export class TypeGenericComponent implements OnInit {
     this.questionary.updatedDate = new Date().getTime();
     this.setCurrentQuestion();
     this.emitQuestionary(options.updateData);
-  }
-
-  private emitQuestionary(savedata: boolean) {
-    console.log('emitQuestionary: ', savedata);
-    const event: UITypeStatus = {
-      index: this.index,
-      questionary: normalizeQuestionaryDTO(this.questionary),
-      savedata: savedata,
-    }
-    this.onChange.emit(event);
   }
 
   canEnableNext() {
@@ -282,7 +315,12 @@ export class TypeGenericComponent implements OnInit {
     (this.questionary.questions as QuestionDTO[]).push(...questions);
     this.questionary = normalizeQuestionaryDTO(this.questionary);
     console.log('this.questionary: ', this.questionary);
+
+    const total = (this.questionary.questions as QuestionDTO[]).length;
+    this.uxCountScreen = `-count-${total}`;
+
     this.setCurrentQuestion();
+    this.setEditorView();
   }
   //#endregion DATA
 
@@ -302,6 +340,8 @@ export class TypeGenericComponent implements OnInit {
   prev() {
     if (this.index != 0) {
       this.index--;
+
+      this.setCurrentQuestionView();
       this.updateQuestionaryPosition({ finish: false, updateData: false });
     }
   }
@@ -311,6 +351,7 @@ export class TypeGenericComponent implements OnInit {
     if (this.index >= this.questionary.questions.length) {
       this.createNewQuestionForm();
     }
+    this.setCurrentQuestionView();
     this.updateQuestionaryPosition({ finish: false, updateData: false });
   }
 
@@ -319,16 +360,18 @@ export class TypeGenericComponent implements OnInit {
   }
 
   onInputChange(evt: { control: string, value: any }, index: number = null) {
-    console.log('evt: ', evt);
-    this.synchronizeFormToQuestionary();
     if (evt.control == 'answer' && index != null) {
-      const answers = (this.questionary.questions[this.index] as QuestionDTO).answers;
-      const lastIndex = answers.length ? answers.length - 1 : null;
-      if (lastIndex != null && answers[answers.length - 1].answer != '') {
+      const formArray = (this.formQuestion.get('answers') as FormArray);
+      const formArrayLength = formArray.controls.length || 0;
+      const formOptionLast = (formArray.controls[formArrayLength - 1] as FormGroup).get('answer').value;
+
+      if (formArrayLength != 0 && formOptionLast != '') {
         (this.questionary.questions[this.index] as QuestionDTO).answers.push(getAnswerDTO('', 0));
         this.getFormAnswers().push(this.createNewAnswerForm());
       }
     }
+
+    this.synchronizeFormToQuestionary();
 
     if (this.questionary.type == QuizType.reading) {
       // set proposed time
@@ -369,6 +412,59 @@ export class TypeGenericComponent implements OnInit {
     });
     this.formQuestion.setControl('answers', this.fb.array(controls));
   }
+
+  deleteQuestion() {
+    const questions = (this.questionary.questions as QuestionDTO[]).filter((item, index) => index != this.index);
+    console.log('questions: ', this.questionary.questions.length, questions.length);
+    if (this.index >= questions.length) {
+      this.index = questions.length != 0 ? questions.length - 1 : 0;
+    }
+    this.questionary.questions = questions;
+    this.setCurrentQuestion();
+
+
+    console.log('this.index: ', this.index);
+
+  }
+
+  updateType(type: { id: string, name: string, icon: any }) {
+    // update type
+    if (this.questionary.type != type.id) {
+      this.questionary.type = QuizType[type.id];
+
+      this.types.map(ty => {
+        ty.selected = this.questionary.type == ty.id;
+        return ty;
+      });
+      this.currentType = this.types.find(x => x.selected);
+      this.setQuestionary(this.questionary);
+    }
+  }
+
+  setEditorView() {
+    this.uxViewMain = `-view-1`;
+    this.emitUIUpdate('question');
+  }
+
+  setOptionsView() {
+    this.uxViewMain = `-view-2`;
+    this.emitUIUpdate('options');
+  }
+
+  private emitQuestionary(savedata: boolean) {
+    console.log('emitQuestionary: ', savedata);
+    const event: UITypeStatus = {
+      index: this.index,
+      questionary: normalizeQuestionaryDTO(this.questionary),
+      savedata: savedata,
+    }
+    this.onChange.emit(event);
+  }
+
+  private emitUIUpdate(value: string) {
+    const states: UIMainStates = { action: 'ui_update', substate: value }
+    this.onChange.emit(states);
+  }
   //#endregion EVENTS
 
   //#region CONVERTERS
@@ -401,6 +497,9 @@ export class TypeGenericComponent implements OnInit {
     _questions.push(question);
     // normalize values
     this.questionary = normalizeQuestionaryDTO(this.questionary);
+
+    const total = (this.questionary.questions as QuestionDTO[]).length;
+    this.uxCountScreen = `-count-${total}`;
   }
 
   createNewAnswerForm(answerValue?: AnswerDTO) {
@@ -424,9 +523,19 @@ export class TypeGenericComponent implements OnInit {
   synchronizeFormToQuestionary() {
     const values = this.formQuestion.value;
     // get and save values of questonarie
-    const join = { ...(this.questionary.questions[this.index] as QuestionDTO), ...values };
-    (this.questionary.questions[this.index] as QuestionDTO) = join;
+    const question = (this.questionary.questions[this.index] as QuestionDTO);
+
+    question.question = values.question;
+    question.answer = values.answer;
+    question.explanation = values.explanation;
+    question.hint = values.hint;
+    question.time = values.time;
+    question.answers = values.answers;
+
+    // const join = { ...(this.questionary.questions[this.index] as QuestionDTO), ...values };
+    // (this.questionary.questions[this.index] as QuestionDTO) = join;
     this.questionary = normalizeQuestionaryDTO(this.questionary);
+    console.log('this.questionary: ', this.questionary);
   }
 
   async setFormControl(options?:
@@ -453,6 +562,14 @@ export class TypeGenericComponent implements OnInit {
         resolve(true);
       }, miliseconds);
     });
+  }
+
+  private setCurrentQuestionView() {
+    this.uxView = `-view-${this.index + 1}`;
+  }
+
+  private getCurrentQuestion() {
+    return (this.questionary.questions[this.index] as QuestionDTO);
   }
   //#endregion CONVERTERS
 

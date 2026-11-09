@@ -36,7 +36,7 @@
                             <div class="arrange --row-nowrap --center">
 
                                 <div class="-avatar -avatar-size-60  -avatar-border-width-2"
-                                    *ngIf="!profileUI.avatarEdit" (click)="editAvatar()">
+                                    *ngIf="!profileUI.avatarEdit && !profileUI.usernameEdit" (click)="editAvatar()">
                                     <img [attr.src]="profile.avatarUrl">
                                 </div>
 
@@ -63,7 +63,7 @@
 
                             <div class="arrange --row --center">
                                 <ng-container *ngFor="let item of defaultAvatars">
-                                    <div class="-avatar -avatar-size-60 -avatar-border-width-2"
+                                    <div class="-avatar -avatar-size-60 -avatar-border-width-2 list-reveal-initial {{ listAvatarAnimation }}"
                                         [ngClass]="{'selected': item.selected }" *ngIf="profileUI.avatarEdit"
                                         (click)="selectAvatar(item)">
                                         <img [attr.src]="item.url" [attr.alt]="item.url">
@@ -72,7 +72,7 @@
                             </div>
                         </ng-container>
 
-                        <ng-container>
+                        <ng-container *ngIf="settings">
                             <div class="divider"></div>
 
                             <div class="-title -title-size-180">{{ 'permission_theme' | translate }}</div>
@@ -153,7 +153,7 @@
 
                             <div class="divider"></div>
                             <div
-                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center">
+                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center 2">
                                 <div class="-text -text-size-130">{{ 'permission_create' | translate }}</div>
                                 <div class="arrange --margin-left-auto" (click)="tooglePermission('create')"
                                     [ngClass]="{'active': settings.permissions.create }">
@@ -166,7 +166,7 @@
 
                             <div class="divider"></div>
                             <div
-                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center">
+                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center 2">
                                 <div class="-text -text-size-130">{{ 'permission_edit' | translate }}</div>
                                 <div class="arrange --margin-left-auto" (click)="tooglePermission('edit')"
                                     [ngClass]="{'active': settings.permissions.edit }">
@@ -179,7 +179,7 @@
 
                             <div class="divider"></div>
                             <div
-                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center">
+                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center 2">
                                 <div class="-text -text-size-130">{{ 'permission_duplicate' | translate }}</div>
                                 <div class="arrange --margin-left-auto" (click)="tooglePermission('duplicate')"
                                     [ngClass]="{'active': settings.permissions.duplicate }">
@@ -192,7 +192,7 @@
 
                             <div class="divider"></div>
                             <div
-                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center">
+                                class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center 2">
                                 <div class="-text -text-size-130">{{ 'permission_delete' | translate }}</div>
                                 <div class="arrange --margin-left-auto" (click)="tooglePermission('delete')"
                                     [ngClass]="{'active': settings.permissions.delete }">
@@ -204,7 +204,7 @@
                             </div>
                             <div class="divider"></div>
 
-                            <div class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center"
+                            <div class="arrange --row-nowrap --justify-left --aling-center --padding-direct --padding-left-0 --align-center 2"
                                 *ngIf="false">
                                 <div class="-text -text-size-130">{{ 'permission_ia' | translate }}</div>
                                 <div class="arrange --margin-left-auto" (click)="tooglePermission('ai')"

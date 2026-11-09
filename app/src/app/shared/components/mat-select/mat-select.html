@@ -1,4 +1,4 @@
-<div class="mat-form-field">
+<div class="mat-form-field" [class.open]="isOpen">
     <div class="mat-label" [ngClass]="{'empty': isEmpty && !placeholder, 'disabled': isDisabled }">
         <div class="mat-label-text">{{ title }}</div>
 
@@ -21,8 +21,7 @@
             </div>
         </div>
 
-        <div class="mat-error"
-            *ngIf="control?.invalid && (control?.dirty || control?.touched)"
+        <div class="mat-error" *ngIf="control?.invalid && (control?.dirty || control?.touched)"
             [ngClass]="{'error': control?.errors }">
             <div *ngIf="control?.errors">
                 {{ mesageError }}

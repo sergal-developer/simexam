@@ -321,7 +321,10 @@ $arrange-justifications: (
 .list-reveal {
     opacity: 0;
     transform: translateY(12px) scale(0.9);
-    animation: list-reveal 0.4s ease-out forwards;
+    animation-name: list-reveal;
+    animation-duration: 400ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 
     @for $i from 1 through 50 {
         &:nth-child(#{$i}) {
@@ -330,7 +333,45 @@ $arrange-justifications: (
     }
 
     &-initial {
-        opacity: 0;
+        opacity: 0
+    }
+
+    &.-- {
+        &reveal-left {
+            opacity: 0;
+            transform: translate(-20px, 0) scale(0.9);
+            animation-name: list-reveal-left;
+        }
+
+        &reveal-right {
+            opacity: 0;
+            transform: translate(20px, 0) scale(0.9);
+            animation-name: list-reveal-right;
+        }
+
+        &reveal-top {
+            opacity: 0;
+            transform: translate(0, 20px) scale(0.9);
+            animation-name: list-reveal-top;
+        }
+
+        &reveal-bottom {
+            opacity: 0;
+            transform: translate(0, -20px) scale(0.9);
+            animation-name: list-reveal-bottom;
+        }
+    }
+}
+
+.list-unreveal {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    animation: list-aunreveal 0.4s ease-out forwards;
+
+    @for $i from 1 through 50 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{($i - 1) * 0.1}s;
+        }
     }
 }
 
@@ -413,29 +454,29 @@ $background-positions: (
         shape-5: translate(28%, 150%) scale(2),
         shape-6: translate(30%, 58%) scale(1) rotate(100deg)),
 
-    alination5: (shape-1: translate(46%, 200%) scale(1.4),
-        shape-2: translate(-66%, 114%) scale(1.7),
-        shape-3: translate(-13%, 141%) scale(1),
-        shape-4: translate(13%, 78%) scale(1.5),
-        shape-5: translate(-20%, 168%) scale(2),
-        shape-6: translate(0%, 400%) scale(1.5),
-        shape-7: translate(98%, 229%) scale(1)),
-
-    alination6: (shape-1: translate(80%, 60%) scale(1.4),
-        shape-2: translate(50%, 87%) scale(2),
-        shape-3: translate(-13%, 141%) scale(1),
-        shape-4: translate(13%, 78%) scale(1.5),
-        shape-5: translate(-20%, 168%) scale(2),
-        shape-6: translate(-90%, 187%) scale(2.5),
+    alination5: (shape-1: translate(20%, 250%) scale(3),
+        shape-2: translate(0%, -280%) scale(4, 1),
+        shape-3: translate(19%, 178%) scale(3),
+        shape-4: translate(12%, 228%) scale(2),
+        shape-5: translate(20%, 92%) scale(2),
+        shape-6: translate(10%, 243%) scale(1),
         shape-7: translate(-98%, 262%) scale(1.5)),
 
-    alination7: (shape-1: translate(0%, 252%) scale(2),
-        shape-2: translate(0, 140%) scale(2),
-        shape-3: translate(0, 128%) scale(2),
-        shape-4: translate(0, 36%) scale(1.4),
-        shape-5: translate(-21%, -11%) scale(2.5),
-        shape-6: translate(-40%, 86%) scale(1.2),
-        shape-7: translate(0%, 200%) scale(3)),
+    alination6: (shape-1: translate(20%, -180%) scale(3),
+        shape-2: translate(14%, 82%) scale(2),
+        shape-3: translate(19%, 200%) scale(3),
+        shape-4: translate(12%, 228%) scale(2),
+        shape-5: translate(28%, 236%) scale(4, 2),
+        shape-6: translate(10%, 243%) scale(1),
+        shape-7: translate(-98%, 262%) scale(1.5)),
+
+    alination7: (shape-1: translate(20%, 250%) scale(2),
+        shape-2: translate(14%, 170%) scale(2.5),
+        shape-3: translate(19%, 178%) scale(2),
+        shape-4: translate(12%, 250%) scale(2),
+        shape-5: translate(20%, 92%) scale(1),
+        shape-6: translate(10%, 43%) scale(2),
+        shape-7: translate(-98%, 262%) scale(3)),
 
     alination8: (shape-1: translate(0%, 117%) scale(2),
         shape-2: translate(-111%, 60%) scale(2.5) rotate(45deg),
@@ -606,6 +647,27 @@ $background-positions: (
         }
     }
 
+    &.__quizcreate,
+    &.__quizedit {
+        .background-item {
+            opacity: 0.5;
+        }
+
+        @include background-position(alination5);
+
+        &.question {
+            @include background-position(alination5);
+        }
+
+        &.options {
+            @include background-position(alination6);
+        }
+
+        &.option2 {
+            @include background-position(alination5);
+        }
+    }
+
     &.__settings {
         .background-item {
             opacity: 0.5;
@@ -642,6 +704,7 @@ $background-positions: (
         justify-content: flex-start !important;
 
         transition: margin-left 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        transition: margin-left 400ms cubic-bezier(1, .39, 0, .59);
         will-change: margin-left;
 
         @for $i from 2 through 300 {
@@ -659,7 +722,7 @@ $background-positions: (
 
     &-view {
         width: 100vw;
-        transition: transform 400ms, margin 400ms;
+        transition: transform 400ms, margin-left 400ms;
         transform: translate(0, 0);
     }
 }
@@ -698,6 +761,7 @@ $badge-states: (
     justify-content: center;
     text-align: center;
     transition: color 300ms, background-color 300ms, border-color 300ms;
+    gap: var(--space-joined);
 
     &.inverted {
         color: var(--badge-background);
@@ -957,6 +1021,7 @@ $badge-states: (
         color: var(--accent);
     }
 }
+
 
 // #endregion COMPONENTS
 

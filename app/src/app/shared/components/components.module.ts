@@ -10,14 +10,16 @@ import { MatSelectComponent } from "./mat-select/mat-select.component";
 import { ModalComponent } from "./modal/modal.component";
 import { MorphIconComponent } from "./morph-icon/morph-icon.component";
 import { SectionDinamicComponent } from "./section-dinamic/section-dinamic.component";
+import { AccordionItemComponent } from "./accordion/accordion.component";
 
-@NgModule ( {
-    imports : [
+@NgModule({
+    imports: [
         CommonModule,
         FormsModule,
         ReactiveFormsModule
     ],
     declarations: [
+        AccordionItemComponent,
         LogoComponent,
         MatInputComponent,
         MatAutocompleteComponent,
@@ -28,6 +30,7 @@ import { SectionDinamicComponent } from "./section-dinamic/section-dinamic.compo
         SectionDinamicComponent
     ],
     exports: [
+        AccordionItemComponent,
         LogoComponent,
         MatInputComponent,
         MatAutocompleteComponent,
@@ -40,5 +43,5 @@ import { SectionDinamicComponent } from "./section-dinamic/section-dinamic.compo
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA
     ]
-} )
+})
 export class ComponentsModule { }

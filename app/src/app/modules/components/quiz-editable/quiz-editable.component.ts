@@ -75,6 +75,7 @@ export class QuizEditableComponent implements OnInit {
   _utilsUX = new UxUtils();
 
   luIcon = {
+    settings: icons.SlidersHorizontal,
     language: icons.Globe,
     user: icons.UserRound,
     avatar: icons.SquareUserRound,
@@ -89,6 +90,9 @@ export class QuizEditableComponent implements OnInit {
     hint: icons.Info,
     time: icons.Timer,
   }
+
+  uxView = '-view-1';
+  headerActive = true;
   //#endregion INTERNAL
 
   //#region LIFECYCLE
@@ -156,8 +160,9 @@ export class QuizEditableComponent implements OnInit {
 
       _questionary.title = _defaultTitle;
       _questionary.type = _type;
-    }
 
+      this.setEditorView();
+    }
 
     // update type labels to current lenguage
     this.types.map(ty => {
@@ -224,10 +229,8 @@ export class QuizEditableComponent implements OnInit {
   }
 
   async onChangeChildren(event: UITypeStatus | UIMainStates) {
-    console.log('onChangeByParent: ', event);
     if ((event as UIMainStates).action) {
-      const evt: UIMainStates = (event as UIMainStates);
-      this.onChange.emit({ action: evt.action, value: evt.substate });
+      this.updateUIMainStates((event as UIMainStates))
       return;
     }
 
@@ -281,6 +284,21 @@ export class QuizEditableComponent implements OnInit {
       }
     }
   }
+
+  gotoOptions() {
+    this.setOptionsView();
+  }
+
+  gotoEditor() {
+    this.setEditorView();
+  }
+
+  updateUIMainStates(event: UIMainStates) {
+    console.log('updateUIMainStates: ', event);
+
+    this.headerActive = event.substate != 'options';
+    this.onChange.emit({ action: event.action, value: event.substate });
+  }
   //#endregion EVENTS
 
   //#region CONVERTERS
@@ -324,5 +342,14 @@ export class QuizEditableComponent implements OnInit {
     }
     return `${titleLabel} - ${typeLabel}`;
   }
+
+  private setEditorView() {
+    this.uxView = `-view-1`;
+  }
+
+  private setOptionsView() {
+    this.uxView = `-view-2`;
+  }
+
   //#endregion CONVERTERS
 }

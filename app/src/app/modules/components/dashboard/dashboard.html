@@ -33,33 +33,37 @@
 
                 <!-- SCREEN EMPTY -->
                 <div class="screen-slider-view">
-                    <div class="arrange --column --center">
-                        <div class="arrange --column --height-98-vh --center --padding-group  --gap-relation">
-                            <div class="-svg -svg-size-150 -svg-stroke-07">
-                                <lu-icon class="mainIcon" [icon]="luIcon.empty"></lu-icon>
-                            </div>
-                            <div class="-title -title-size-240">{{ 'empty_exam_title' | translate }}</div>
-                            <div class="-title -title-size-130">{{ 'empty_exam_subtitle' | translate }}</div>
+                    <ng-container *ngIf="uxView == '-view-1'">
+                        <div class="arrange --column --center">
+                            <div class="arrange --column --height-98-vh --center --padding-group  --gap-relation">
+                                <div class="-svg -svg-size-150 -svg-stroke-07">
+                                    <lu-icon class="mainIcon" [icon]="luIcon.empty"></lu-icon>
+                                </div>
+                                <div class="-title -title-size-240">{{ 'empty_exam_title' | translate }}</div>
+                                <div class="-title -title-size-130">{{ 'empty_exam_subtitle' | translate }}</div>
 
-                            <div class="arrange --padding-group">
-                                <button (click)="selectQuiz()">
-                                    <lu-icon [icon]="luIcon.new"></lu-icon>
-                                    <div>{{ 'new_quiz' | translate }}</div>
-                                </button>
+                                <div class="arrange --padding-group">
+                                    <button (click)="selectQuiz()">
+                                        <lu-icon [icon]="luIcon.new"></lu-icon>
+                                        <div>{{ 'new_quiz' | translate }}</div>
+                                    </button>
+                                </div>
                             </div>
+
                         </div>
-
-                    </div>
+                    </ng-container>
                 </div>
 
                 <!-- SCREEN ACTIVITY/DASHBOARD -->
                 <div class="screen-slider-view">
-                    <div class="arrange --column --justify-between --padding-group --padding-top-0 --padding-bottom-0">
-                        <ng-container *ngIf="uxView == '-view-2'">
+                    <ng-container *ngIf="uxView == '-view-2'">
+                        <div
+                            class="arrange --column --justify-between --padding-group --padding-top-0 --padding-bottom-0">
+
                             <!-- <div class="exam-section centred"> -->
                             <div class="arrange --column --gaps-linked">
                                 <ng-container *ngFor="let quiz of listQuestionnaire">
-                                    <div class="quiz-card _{{quiz.type}}">
+                                    <div class="quiz-card _{{quiz.type}} list-reveal-initial {{ listRevealAnimation }}">
                                         <div class="qc-icon">
                                             <lu-icon [icon]="luIcon.mathQuest"
                                                 *ngIf="quiz.type == 'math-quest'"></lu-icon>
@@ -86,16 +90,18 @@
 
                             </div>
                             <!-- </div> -->
-                        </ng-container>
-                    </div>
+                        </div>
+                    </ng-container>
                 </div>
 
                 <!-- SCREEN DETAILS/QUIZ -->
                 <div class="screen-slider-view">
-                    <div class="arrange --column --justify-between --padding-group --padding-top-0 --padding-bottom-0">
-                        <ng-container *ngIf="currentQuestionnaire && uxView == '-view-3'">
+                    <ng-container *ngIf="currentQuestionnaire && uxView == '-view-3'">
+                        <div
+                            class="arrange --column --justify-between --padding-group --padding-top-0 --padding-bottom-0">
 
-                            <div class="arrange --column --padding-top-10">
+
+                            <div class="arrange --column --padding-top-10 ">
                                 <div class="arrange --width-100">
                                     <div class="arrange --row-nowrap --align-center">
                                         <lu-icon [icon]="luIcon.martQuest"
@@ -125,7 +131,7 @@
                                 </div>
 
                                 <div class="arrange --row-nowrap --align-center collection-actions"
-                                    *ngIf="actionsAttempts">
+                                    [ngClass]="{'list-reveal --reveal-left': actionsAttempts }" *ngIf="actionsAttempts">
                                     <ng-container *ngIf="permissions.duplicate">
                                         <button class="small" (click)="duplicateQuiz(currentQuestionnaire)">
                                             {{ 'permission_duplicate' | translate }}
@@ -169,7 +175,7 @@
                                 <div class="arrange">
                                     <ng-container *ngIf="listAttempts.length">
                                         <div class="arrange --column --width-100">
-                                            <div class="quiz-card arrange --width-100 _grade {{ attempt._grade }}"
+                                            <div class="quiz-card arrange --width-100 _grade {{ attempt._grade }} list-reveal --reveal-top"
                                                 *ngFor="let attempt of listAttempts; let i = index">
                                                 <div class="qc-icon">
                                                     <lu-icon [icon]="luIcon.asterisk"></lu-icon>
@@ -239,9 +245,8 @@
                                 </div>
 
                             </div>
-
-                        </ng-container>
-                    </div>
+                        </div>
+                    </ng-container>
                 </div>
 
             </div>

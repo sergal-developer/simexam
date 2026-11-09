@@ -1,248 +1,347 @@
-<div class="screen-wrapper arrange columns" *ngIf="questionary && questionary.questions[index]">
-    <ng-container>
-        <section-dinamic design="glass">
-            <div class="screen-container arrange columns paddings-direct gaps-joined">
-                <div class="arrange row gaps-joined font_variable paddings-direct">
-                    <div class="item _help_section">
-                        <!-- <span class="material-icons _accent color">help</span> -->
-                        <div>{{ 'help_quiz_title' | translate }}</div>
-                    </div>
-                </div>
-                <div class="arrange row centers gaps-joined font_variable">
-                    <div class="item" (click)="saveData()">
-                        <div class="badge secondary">
-                            <div>{{ 'save' | translate }}</div>
-                            <lu-icon [icon]="luIcon.save"></lu-icon>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="badge accent">
-                            <b class="number">{{ index + 1 }}</b>
-                            <div>{{ 'form_of_range' | translate }}</div>
-                            <b class="number">{{ getTotalQuestions() }}</b>
-                            <!-- <lu-icon [icon]="luIcon.counter"></lu-icon> -->
-                        </div>
-                    </div>
-                    <div class="item" (click)="toogleFormControl('showQuestion')">
-                        <div class="badge" [ngClass]="{'primary': formControl.showQuestion }">
-                            <lu-icon [icon]="luIcon.question"></lu-icon>
-                            <div>{{ 'question' | translate }}</div>
-                            <lu-icon class="highlight" [icon]="luIcon.check"
-                                *ngIf="formQuestion.get('question').value"></lu-icon>
-                        </div>
-                    </div>
-                    <div class="item" (click)="toogleFormControl('showAnswer')">
-                        <div class="badge" [ngClass]="{'primary': formControl.showAnswer }">
-                            <lu-icon [icon]="luIcon.answer"></lu-icon>
-                            <div>{{ 'answer' | translate }}</div>
-                            <lu-icon class="highlight" [icon]="luIcon.check"
-                                *ngIf="formQuestion.get('answer').value"></lu-icon>
-                        </div>
-                    </div>
-                    <div class="item" (click)="toogleFormControl('showExplanation')">
-                        <div class="badge" [ngClass]="{'primary': formControl.showExplanation }">
-                            <lu-icon [icon]="luIcon.explanation"></lu-icon>
-                            <div>{{ 'explanation' | translate }}</div>
-                            <lu-icon class="highlight" [icon]="luIcon.check"
-                                *ngIf="formQuestion.get('explanation').value"></lu-icon>
-                        </div>
-                    </div>
-                    <div class="item" (click)="toogleFormControl('showHint')">
-                        <div class="badge" [ngClass]="{'primary': formControl.showHint }">
-                            <lu-icon [icon]="luIcon.hint"></lu-icon>
-                            <div>{{ 'hint' | translate }}</div>
-                            <lu-icon class="highlight" [icon]="luIcon.check"
-                                *ngIf="formQuestion.get('hint').value"></lu-icon>
-                        </div>
-                    </div>
-                    <div class="item" (click)="toogleFormControl('showTime')">
-                        <div class="badge" [ngClass]="{'primary': formControl.showTime }">
-                            <lu-icon [icon]="luIcon.time"></lu-icon>
-                            <div>{{ 'time' | translate }}</div>
-                            <div class="highlight" *ngIf="formQuestion.get('time').value">{{
-                                formQuestion.get('time').value }}s</div>
-                        </div>
-                    </div>
+<div class="arrange --column --height-90-vh --gap-0" *ngIf="questionary">
+    <!-- MAIN SCREEN SLIDER -->
+    <div id="quiz-edit-screen-slider" class="screen-slider">
+        <div class="screen-slider-container -count-2 {{ uxViewMain }}">
 
-                    <div class="item" (click)="toogleFormControl('showAnswers')">
-                        <div class="badge" [ngClass]="{'primary': formControl.showAnswers }">
-                            <lu-icon [icon]="luIcon.answers"></lu-icon>
-                            <div>{{ 'answers' | translate }}</div>
-                            <div class="highlight"
-                                *ngIf="formQuestion.get('answers').value && formQuestion.get('answers').value.length">
-                                ({{ formQuestion.get('answers').value.length }})</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section-dinamic>
+            <!-- SCREEN EDITOR -->
+            <div class="screen-slider-view">
+                <div class="arrange --column">
 
-        <ng-container *ngIf="questionary.type == 'math-quest'">
-            <section-dinamic design="glass">
-                <div class="arrange columns paddings-direct gaps-joined">
-                    <div class="arrange row gaps-joined font_variable paddings-direct">
-                        <div class="item _help_section">
-                            <div>{{ 'help_quiz_title' | translate }}</div>
-                        </div>
-                    </div>
-                    <div class="arrange row centers gaps-joined font_variable">
-                        <div class="arrange stacked gaps-joined">
-                            <div class="badge">
-                                <div>Operations</div>
+                    <div class="arrange --column">
 
-                                <div class="badge" [ngClass]="{'primary': mathOperators.plus }"
-                                    (click)="updateOperation('plus')">
-                                    <lu-icon [icon]="luIcon.operationPlus"></lu-icon>
+                        <div class="joined-elements arrange --padding-group --padding-bottom-0">
+                            <button class="element arrange --padding-left-5 --padding-right-5">
+                                <lu-icon [icon]="luIcon.counter"></lu-icon>
+                                <div class="arrange --row-nowrap -text -text-size-90 --justify-start --gap-joined">
+                                    <b class="number">{{ index + 1 }}</b>
+                                    <div>{{ 'form_of_range' | translate }}</div>
+                                    <b class="number">{{ getTotalQuestions() }}</b>
                                 </div>
-                                <div class="badge" [ngClass]="{'primary': mathOperators.minus }"
-                                    (click)="updateOperation('minus')">
-                                    <lu-icon [icon]="luIcon.operationMinus"></lu-icon>
+                            </button>
+                            <button class="element arrange --padding-left-5 --padding-right-5" (click)="saveData()">
+                                <lu-icon [icon]="luIcon.save"></lu-icon>
+                                <div class="-text -text-size-90">
+                                    {{ 'save' | translate }}
                                 </div>
-                                <div class="badge" [ngClass]="{'primary': mathOperators.divide }"
-                                    (click)="updateOperation('divide')">
-                                    <lu-icon [icon]="luIcon.operationDivide"></lu-icon>
-                                </div>
-                                <div class="badge" [ngClass]="{'primary': mathOperators.multiplication }"
-                                    (click)="updateOperation('multiplication')">
-                                    <lu-icon [icon]="luIcon.operationMultiplication"></lu-icon>
-                                </div>
-                            </div>
+                            </button>
+                            <button class="element arrange --padding-left-5 --padding-right-5"
+                                (click)="deleteQuestion()">
+                                <div class="-text -text-size-90">Eliminar</div>
+                                <lu-icon [icon]="luIcon.trash"></lu-icon>
+                            </button>
+                            <button class="element arrange --padding-left-5 --padding-right-5"
+                                (click)="setOptionsView()">
+                                <div class="-text -text-size-90">Opciones</div>
+                                <lu-icon [icon]="luIcon.settings"></lu-icon>
 
-                        </div>
-
-                        <div class="arrange stacked gaps-joined">
-                            <div class="badge">
-                                <div>Numbers</div>
-
-                                <div class="badge form">
-                                    <div>Min</div>
-                                    <input type="number" [formControl]="formMathQuest.get('min')"
-                                        (input)="onInputChangeMathQuest($event)">
-
-                                </div>
-                                <div class="badge form">
-                                    <div>Max</div>
-                                    <input type="number" [formControl]="formMathQuest.get('max')"
-                                        (input)="onInputChangeMathQuest($event)">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="arrange stacked gaps-joined">
-                            <div class="badge">
-                                <div>Levels</div>
-
-                                <div class="badge form">
-                                    <input type="number" [formControl]="formMathQuest.get('levels')"
-                                        (input)="onInputChangeMathQuest($event)">
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="item">
-                            <button [disabled]="canGenerateMathQuest()" (click)="generateMathQuest()">
-                                <div>Generate</div>
                             </button>
                         </div>
-                    </div>
-                </div>
-            </section-dinamic>
-        </ng-container>
 
-        <section-dinamic design="glass">
-            <div class="screen-container arrange columns paddings-direct gaps-joined">
-                <div class="item font_variable" [ngClass]="{'hidden': !formControl.showQuestion }">
-                    <mat-input [title]="'question' | translate" [mesageError]="'form_required_question' | translate"
-                        [formControl]="formQuestion.get('question')" [multiline]="true"
-                        (onChange)="onInputChange($event)">
-                    </mat-input>
-                </div>
-                <div class="item font_variable" [ngClass]="{'hidden': !formControl.showAnswer }">
-                    <mat-input [title]="'answer' | translate" [mesageError]="'form_required_answer' | translate"
-                        [formControl]="formQuestion.get('answer')" [multiline]="true"
-                        (onChange)="onInputChange($event)">
-                    </mat-input>
-                </div>
-                <div class="item font_variable" [ngClass]="{'hidden': !formControl.showExplanation }">
-                    <mat-input [title]="'explanation' | translate"
-                        [mesageError]="'form_required_explanation' | translate"
-                        [formControl]="formQuestion.get('explanation')" [multiline]="true"
-                        (onChange)="onInputChange($event)">
-                    </mat-input>
-                </div>
-                <div class="item font_variable" [ngClass]="{'hidden': !formControl.showHint }">
-                    <mat-input [title]="'hint' | translate" [mesageError]="'form_required_hint' | translate"
-                        [formControl]="formQuestion.get('hint')" [multiline]="true" (onChange)="onInputChange($event)">
-                    </mat-input>
-                </div>
-                <div class="item font_variable" [ngClass]="{'hidden': !formControl.showTime }">
-                    <mat-input [title]="'time' | translate" type="number"
-                        [mesageError]="'form_required_time' | translate" [formControl]="formQuestion.get('time')"
-                        (onChange)="onInputChange($event)">
-                    </mat-input>
-                </div>
+                        <ng-container *ngIf="questionary && questionary.questions[index]">
 
-                <ng-container *ngIf="!formQuestion.get('answers').controls.length">
-                    <div class="arrange columns paddings" [ngClass]="{'hidden': !formControl.showAnswers }">
-                        <div class="item arrange stacked centers font_variable" (click)="setAnswersFormOfQuestion()">
-                            <lu-icon [icon]="luIcon.addAnswers"></lu-icon>
-                            <div>{{ 'add' | translate }} {{ 'answer' | translate }}</div>
-                        </div>
-                    </div>
-                </ng-container>
-                <ng-container *ngIf="formQuestion.get('answers').controls.length">
-                    <div class="arrange columns gaps" [ngClass]="{'hidden': !formControl.showAnswers }">
-                        <ng-container *ngFor="let answer of formQuestion.get('answers').controls; index as i">
-                            <div class="item arrange stacked font_variable middle --justify-between"
-                                [ngClass]="{'_accent color': answer.get('isCorrect')?.value }">
-                                <button class="link" (click)="setCorrectAnswer(answer, i)"
-                                    *ngIf="questionary.type != 'popularity'">
-                                    <lu-icon *ngIf="!answer.get('isCorrect')?.value" [icon]="luIcon.question"></lu-icon>
-                                    <lu-icon *ngIf="answer.get('isCorrect')?.value"
-                                        [icon]="luIcon.questionCorrect"></lu-icon>
-                                </button>
-                                <div class="arrange width-100">
-                                    <mat-input class="small-field" [title]="'opcion' | translate"
-                                        [mesageError]="'form_required_opcion' | translate"
-                                        [formControl]="answer.get('answer')" [formName]="'answer'" [multiline]="true"
-                                        (onChange)="onInputChange($event, i)">
-                                    </mat-input>
+                            <!-- MAIN SCREEN SLIDER -->
+                            <div id="quiz-list-screen-slider"
+                                class="arrange --justify-left --align-start screen-slider">
+                                <div class="screen-slider-container {{ uxCountScreen }} {{ uxView }}">
+
+                                    <div class="screen-slider-view"
+                                        *ngFor="let item of questionary.questions; index as i">
+                                        <ng-container *ngIf="index == i">
+                                            <div
+                                                class="arrange --column --padding-group --padding-top-0 --padding-bottom-0">
+
+                                                <div class="arrange --column --height-max-70-vh --overflow-y-auto">
+                                                    <div class="item font_variable"
+                                                        [ngClass]="{'hidden': !formControl.showQuestion }">
+                                                        <mat-input className="simple" [title]="'question' | translate"
+                                                            [mesageError]="'form_required_question' | translate"
+                                                            [formControl]="formQuestion.get('question')"
+                                                            [multiline]="true" (onChange)="onInputChange($event)">
+                                                        </mat-input>
+                                                    </div>
+                                                    <div class="item font_variable"
+                                                        [ngClass]="{'hidden': !formControl.showAnswer }">
+                                                        <mat-input className="simple" [title]="'answer' | translate"
+                                                            [mesageError]="'form_required_answer' | translate"
+                                                            [formControl]="formQuestion.get('answer')"
+                                                            [multiline]="true" (onChange)="onInputChange($event)">
+                                                        </mat-input>
+                                                    </div>
+                                                    <div class="item font_variable"
+                                                        [ngClass]="{'hidden': !formControl.showExplanation }">
+                                                        <mat-input className="simple"
+                                                            [title]="'explanation' | translate"
+                                                            [mesageError]="'form_required_explanation' | translate"
+                                                            [formControl]="formQuestion.get('explanation')"
+                                                            [multiline]="true" (onChange)="onInputChange($event)">
+                                                        </mat-input>
+                                                    </div>
+                                                    <div class="item font_variable"
+                                                        [ngClass]="{'hidden': !formControl.showHint }">
+                                                        <mat-input className="simple" [title]="'hint' | translate"
+                                                            [mesageError]="'form_required_hint' | translate"
+                                                            [formControl]="formQuestion.get('hint')" [multiline]="true"
+                                                            (onChange)="onInputChange($event)">
+                                                        </mat-input>
+                                                    </div>
+                                                    <div class="item font_variable"
+                                                        [ngClass]="{'hidden': !formControl.showTime }">
+                                                        <mat-input className="simple" [title]="'time' | translate"
+                                                            type="number"
+                                                            [mesageError]="'form_required_time' | translate"
+                                                            [formControl]="formQuestion.get('time')"
+                                                            (onChange)="onInputChange($event)">
+                                                        </mat-input>
+                                                    </div>
+
+                                                    <ng-container *ngIf="!formQuestion.get('answers').controls.length">
+                                                        <div class="arrange --column"
+                                                            [ngClass]="{'hidden': !formControl.showAnswers }">
+                                                            <div class="item arrange stacked centers font_variable"
+                                                                (click)="setAnswersFormOfQuestion()">
+                                                                <lu-icon [icon]="luIcon.addAnswers"></lu-icon>
+                                                                <div>{{ 'add' | translate }} {{ 'answer' | translate }}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ng-container>
+                                                    <ng-container *ngIf="formQuestion.get('answers').controls.length">
+                                                        <div class="arrange --column --gap"
+                                                            [ngClass]="{'hidden': !formControl.showAnswers }">
+                                                            <ng-container
+                                                                *ngFor="let answer of formQuestion.get('answers').controls; index as i">
+                                                                <div class="item arrange --row-nowrap --justify-between"
+                                                                    [ngClass]="{'_accent color': answer.get('isCorrect')?.value }">
+                                                                    <button class="link"
+                                                                        (click)="setCorrectAnswer(answer, i)"
+                                                                        *ngIf="questionary.type != 'popularity'">
+                                                                        <lu-icon *ngIf="!answer.get('isCorrect')?.value"
+                                                                            [icon]="luIcon.question"></lu-icon>
+                                                                        <lu-icon *ngIf="answer.get('isCorrect')?.value"
+                                                                            [icon]="luIcon.questionCorrect"></lu-icon>
+                                                                    </button>
+                                                                    <div class="arrange --width-100">
+                                                                        <mat-input className="simple"
+                                                                            [title]="'opcion' | translate"
+                                                                            [mesageError]="'form_required_opcion' | translate"
+                                                                            [formControl]="answer.get('answer')"
+                                                                            [formName]="'answer'" [multiline]="true"
+                                                                            (onChange)="onInputChange($event, i)">
+                                                                        </mat-input>
+                                                                    </div>
+                                                                    <div class="arrange" style="width: 130px;"
+                                                                        [ngClass]="{'hidden': !formControl.showPopular }">
+                                                                        <mat-input className="simple"
+                                                                            [title]="'popularity' | translate"
+                                                                            type="number"
+                                                                            [mesageError]="'form_required_popularity' | translate"
+                                                                            [formControl]="answer.get('popular')"
+                                                                            [formName]="'popular'"
+                                                                            (onChange)="onInputChange($event, i)">
+                                                                        </mat-input>
+                                                                    </div>
+                                                                    <button class="link" (click)="deleteAnswer(i)"
+                                                                        *ngIf="!answer.get('isCorrect')?.value">
+                                                                        <lu-icon [icon]="luIcon.trash"></lu-icon>
+                                                                    </button>
+                                                                </div>
+
+                                                            </ng-container>
+                                                        </div>
+                                                    </ng-container>
+                                                </div>
+
+
+
+                                                <div class="joined-elements --margin-top-auto">
+                                                    <button class="element" (click)="prev()" *ngIf="index != 0">
+                                                        <lu-icon [icon]="luIcon.left"></lu-icon>
+                                                        <span>{{ 'action_prev' | translate }}</span>
+                                                    </button>
+
+                                                    <button class="element" (click)="next()"
+                                                        [disabled]="canEnableNext()">
+                                                        <span>{{ 'action_next' | translate }}</span>
+                                                        <lu-icon [icon]="luIcon.right"></lu-icon>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </ng-container>
+                                    </div>
                                 </div>
-                                <div class="arrange" style="width: 130px;"
-                                    [ngClass]="{'hidden': !formControl.showPopular }">
-                                    <mat-input class="small-field" [title]="'popularity' | translate" type="number"
-                                        [mesageError]="'form_required_popularity' | translate"
-                                        [formControl]="answer.get('popular')" [formName]="'popular'"
-                                        (onChange)="onInputChange($event, i)">
-                                    </mat-input>
-                                </div>
-                                <button class="link" (click)="deleteAnswer(i)" *ngIf="!answer.get('isCorrect')?.value">
-                                    <lu-icon [icon]="luIcon.trash"></lu-icon>
-                                </button>
                             </div>
+
 
                         </ng-container>
                     </div>
-                </ng-container>
-
+                </div>
             </div>
-        </section-dinamic>
 
-        <div class="_navbarFixedBottom">
-            <div class="_navOfButtons">
-                <button (click)="prev()" *ngIf="index != 0">
-                    <lu-icon [icon]="luIcon.left"></lu-icon>
-                    <span>{{ 'action_prev' | translate }}</span>
-                </button>
+            <!-- SCREEN OPTIONS -->
+            <div class="screen-slider-view">
+                <div class="arrange --column --padding-group --gap-joined --padding-bottom-0 --gap-group">
+                    <div class="arrange --align-center">
+                        <div class="item" (click)="setEditorView()">
+                            <lu-icon [icon]="luIcon.back"></lu-icon>
+                        </div>
+                        <div class="-title -title-size-250">Options</div>
+                    </div>
 
-                <button (click)="next()" [disabled]="canEnableNext()">
-                    <span>{{ 'action_next' | translate }}</span>
-                    <lu-icon [icon]="luIcon.right"></lu-icon>
-                </button>
+                    <div class="arrange --align-center">
+                        <div class="-text -text-uppercase -text-size-120 -text-bold">Activity</div>
+                        <div class="-text -text-uppercase -text-size-120">{{ currentType.name }}</div>
+                    </div>
+
+                    <div class="joined-elements">
+                        <button class="element arrange --padding-left-20 --padding-right-20" (click)="updateType(type)"
+                            *ngFor="let type of types" [ngClass]="{'active': type.id == questionary.type }">
+                            <lu-icon [icon]="type.icon"></lu-icon>
+                            <div class="element-text">{{ type.name }}</div>
+                        </button>
+                    </div>
+
+                    <div class="arrange --align-center">
+                        <div class="-text -text-uppercase -text-size-120 -text-bold">Controls</div>
+                        <!-- <div class="-text -text-uppercase -text-size-120">{{ currentType.name }}</div> -->
+                    </div>
+
+                    <div class="arrange --row --center">
+                        <div class="item _help_section">
+                            <!-- <span class="material-icons _accent color">help</span> -->
+                            <div>{{ 'help_quiz_title' | translate }}</div>
+                        </div>
+
+                        <div class="item" (click)="toogleFormControl('showQuestion')">
+                            <div class="badge" [ngClass]="{'active': formControl.showQuestion }">
+                                <lu-icon [icon]="luIcon.question"></lu-icon>
+                                <div>{{ 'question' | translate }}</div>
+                                <lu-icon class="highlight" [icon]="luIcon.check"
+                                    *ngIf="formQuestion.get('question').value"></lu-icon>
+                            </div>
+                        </div>
+                        <div class="item" (click)="toogleFormControl('showAnswer')">
+                            <div class="badge" [ngClass]="{'active': formControl.showAnswer }">
+                                <lu-icon [icon]="luIcon.answer"></lu-icon>
+                                <div>{{ 'answer' | translate }}</div>
+                                <lu-icon class="highlight" [icon]="luIcon.check"
+                                    *ngIf="formQuestion.get('answer').value"></lu-icon>
+                            </div>
+                        </div>
+                        <div class="item" (click)="toogleFormControl('showExplanation')">
+                            <div class="badge" [ngClass]="{'active': formControl.showExplanation }">
+                                <lu-icon [icon]="luIcon.explanation"></lu-icon>
+                                <div>{{ 'explanation' | translate }}</div>
+                                <lu-icon class="highlight" [icon]="luIcon.check"
+                                    *ngIf="formQuestion.get('explanation').value"></lu-icon>
+                            </div>
+                        </div>
+                        <div class="item" (click)="toogleFormControl('showHint')">
+                            <div class="badge" [ngClass]="{'active': formControl.showHint }">
+                                <lu-icon [icon]="luIcon.hint"></lu-icon>
+                                <div>{{ 'hint' | translate }}</div>
+                                <lu-icon class="highlight" [icon]="luIcon.check"
+                                    *ngIf="formQuestion.get('hint').value"></lu-icon>
+                            </div>
+                        </div>
+                        <div class="item" (click)="toogleFormControl('showTime')">
+                            <div class="badge" [ngClass]="{'active': formControl.showTime }">
+                                <lu-icon [icon]="luIcon.time"></lu-icon>
+                                <div>{{ 'time' | translate }}</div>
+                                <div class="highlight" *ngIf="formQuestion.get('time').value">{{
+                                    formQuestion.get('time').value }}s</div>
+                            </div>
+                        </div>
+
+                        <div class="item" (click)="toogleFormControl('showAnswers')">
+                            <div class="badge" [ngClass]="{'active': formControl.showAnswers }">
+                                <lu-icon [icon]="luIcon.answers"></lu-icon>
+                                <div>{{ 'answers' | translate }}</div>
+                                <div class="highlight"
+                                    *ngIf="formQuestion.get('answers').value && formQuestion.get('answers').value.length">
+                                    ({{ formQuestion.get('answers').value.length }})</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ng-container *ngIf="questionary.type == 'math-quest'">
+
+                        <div class="arrange --align-center">
+                            <div class="-text -text-uppercase -text-size-120 -text-bold">Generators</div>
+                        </div>
+
+                        <div class="arrange --column">
+                            <div class="arrange row gaps-joined font_variable paddings-direct">
+                                <div class="item _help_section">
+                                    <div>{{ 'help_quiz_title' | translate }}</div>
+                                </div>
+                            </div>
+                            <div class="arrange row centers gaps-joined font_variable --width-100">
+                                <div class="arrange --row-nowrap --center">
+                                    <div class="-text -text-size-110 -text-bold">Operations</div>
+
+                                    <button class="small" [ngClass]="{'active': mathOperators.plus }"
+                                        (click)="updateOperation('plus')">
+                                        <lu-icon [icon]="luIcon.operationPlus"></lu-icon>
+                                    </button>
+                                    <button class="small" [ngClass]="{'active': mathOperators.minus }"
+                                        (click)="updateOperation('minus')">
+                                        <lu-icon [icon]="luIcon.operationMinus"></lu-icon>
+                                    </button>
+                                    <button class="small" [ngClass]="{'active': mathOperators.divide }"
+                                        (click)="updateOperation('divide')">
+                                        <lu-icon [icon]="luIcon.operationDivide"></lu-icon>
+                                    </button>
+                                    <button class="small" [ngClass]="{'active': mathOperators.multiplication }"
+                                        (click)="updateOperation('multiplication')">
+                                        <lu-icon [icon]="luIcon.operationMultiplication"></lu-icon>
+                                    </button>
+                                </div>
+
+                                <div class="arrange --row-nowrap --center --width-100">
+                                    <div class="-text -text-size-110 -text-bold">Numbers (min/max)</div>
+
+                                    <div class="-text -text-size-100">
+                                        <mat-input [title]="'Minimun'" type="number"
+                                            [formControl]="formMathQuest.get('min')" [formName]="'minimun'"
+                                            (onChange)="onInputChangeMathQuest($event)">
+                                        </mat-input>
+                                    </div>
+
+                                    <div class="-text -text-size-100">
+                                        <mat-input [title]="'Maximun'" type="number"
+                                            [formControl]="formMathQuest.get('max')" [formName]="'maximun'"
+                                            (onChange)="onInputChangeMathQuest($event)">
+                                        </mat-input>
+                                    </div>
+
+                                </div>
+
+                                <div class="arrange --row-nowrap --center --width-100">
+                                    <div class="-text -text-size-110 -text-bold">Levels</div>
+
+                                    <div class="-text -text-size-100">
+                                        <mat-input [title]="'Levels'" type="number"
+                                            [formControl]="formMathQuest.get('min')" [formName]="'levels'"
+                                            (onChange)="onInputChangeMathQuest($event)">
+                                        </mat-input>
+                                    </div>
+                                </div>
+
+                                <div class="arrange --row-nowrap --center --width-100">
+                                    <button [disabled]="canGenerateMathQuest()" (click)="generateMathQuest()">
+                                        <div>Generate</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </ng-container>
+                </div>
             </div>
+
         </div>
-    </ng-container>
+    </div>
+
+
 
 </div>

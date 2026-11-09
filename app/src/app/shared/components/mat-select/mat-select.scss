@@ -147,6 +147,14 @@ mat-select {
                 }
             }
         }
+
+        &.open {
+            z-index: 1000;
+
+            .mat-label {
+                z-index: 1000;
+            }
+        }
     }
 
     // .flat-form {

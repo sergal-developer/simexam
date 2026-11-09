@@ -1,22 +1,23 @@
-<div class="_animation_state" *ngIf="formDescription">
-    <div class="arrange columns gaps">
-        <div class="arrange stacked --justify-between">
-            <div class="item" (click)="gotoDashboard()">
-                <lu-icon [icon]="luIcon.back"></lu-icon>
-            </div>
-            <div class="item">
-                <mat-input [title]="'form_title' | translate" [mesageError]="'form_title_required' | translate"
-                    [formControl]="formDescription.get('title')" (onChange)="updateValue($event)">
-                </mat-input>
-            </div>
-            <div class="item">
-                <mat-select [title]="'form_type' | translate" [mesageError]="'form_type_required' | translate"
-                    [options]="types" displayProperty="name" valueProperty="id" placeholder=""
-                    [formControl]="formDescription.get('type')" (selectionChange)="updateValue($event)">
-                </mat-select>
+<div class="arrange --full-screen" *ngIf="formDescription">
+    <div class="arrange --full-screen --gap-0 glass glass-no-border">
+        <!-- MODULE HEADER -->
+        <div class="arrange --width-screen --padding-group --padding-bottom-0 --height-8-vh" *ngIf="headerActive">
+            <div class="arrange --row-nowrap --align-center --justify-between --width-100">
+                <ng-container>
+                    <div class="item" (click)="gotoDashboard()">
+                        <lu-icon [icon]="luIcon.back"></lu-icon>
+                    </div>
+                    <div class="arrange --width-100">
+                        <mat-input class="arrange --width-100" [title]="'form_title' | translate"
+                            [mesageError]="'form_title_required' | translate"
+                            [formControl]="formDescription.get('title')" (onChange)="updateValue($event)">
+                        </mat-input>
+                    </div>
+                </ng-container>
             </div>
         </div>
 
+        <!-- CONTAINER GENERIC -->
         <ng-container *ngIf="questionary">
             <type-generic [questionary]="questionary" [translateLabels]="translateLabels"
                 (onChange)="onChangeChildren($event)"></type-generic>

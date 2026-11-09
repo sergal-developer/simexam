@@ -38,7 +38,7 @@
 
             <div class="screen-slider-view">
                 <quiz-editable [quizId]="submodule" [typeQuiz]="type" class="_screen screen_quiz"
-                    *ngIf="screen === _screen.quizedit"></quiz-editable>
+                    *ngIf="screen === _screen.quizedit" (onChange)="onChangeUI($event)"></quiz-editable>
             </div>
 
             <div class="screen-slider-view">

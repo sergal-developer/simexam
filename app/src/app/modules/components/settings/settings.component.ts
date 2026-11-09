@@ -1,10 +1,11 @@
 import { Component, EventEmitter, OnInit, Output, ViewEncapsulation, } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { icons } from 'lucide';
-import { SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
+import { PermissionsDTO, SettingsDTO, ThemeDTO, ThemePropertiesDTO, UserDTO } from 'src/app/shared/data/entities/dtos';
 import { UxUtils } from 'src/app/shared/data/utils/uxUtils';
 import { CommonServices } from 'src/app/shared/services/common.services';
+import { AppStateStore } from 'src/app/shared/services/global.store.service';
 import { UiServices } from 'src/app/shared/services/ui.services';
 
 @Component({
@@ -78,6 +79,7 @@ export class SettingsComponent implements OnInit {
     propActive: icons.ToggleRight,
   }
 
+  listAvatarAnimation = '';
   defaultAvatars = [
     { url: "/assets/avatar-1.svg", selected: false },
     { url: "/assets/avatar-2.svg", selected: false },
@@ -87,9 +89,19 @@ export class SettingsComponent implements OnInit {
     { url: "/assets/avatar-6.svg", selected: false },
     { url: "/assets/avatar-7.svg", selected: false },
     { url: "/assets/avatar-8.svg", selected: false },
+    { url: "/assets/avatar-9.svg", selected: false },
+    { url: "/assets/avatar-10.svg", selected: false },
+    { url: "/assets/avatar-11.svg", selected: false },
+    { url: "/assets/avatar-12.svg", selected: false },
+    { url: "/assets/avatar-13.svg", selected: false },
+    { url: "/assets/avatar-14.svg", selected: false }
   ];
+
   availableThemes = ['light', 'dark']
-  form: FormGroup;
+  form: FormGroup = new FormGroup({
+    name: new FormControl('', Validators.required)
+  });
+
   themeProps: Array<{ name: string, value: string }> = null;
   customizeColorsMode = false;
 
@@ -98,7 +110,7 @@ export class SettingsComponent implements OnInit {
   constructor(private commonServices: CommonServices,
     private uiServices: UiServices,
     private translate: TranslateService,
-    private fb: FormBuilder
+    public store: AppStateStore
   ) { }
 
   ngOnInit() {
@@ -107,14 +119,15 @@ export class SettingsComponent implements OnInit {
 
   //#region DATA
   async getSettings() {
-    this.settings = await this.commonServices.getSettingCompleteById();
-    this.profile = await this.commonServices.getCurrentUser();
+    let state = await this.store.getAll();
 
-    this.form = this.fb.group({
-      name: [this.profile.userName, Validators.required],
-    });
+    this.form.get('name').setValue(state.user.userName);
     this.form.get('name').disable();
 
+    this.settings = state;
+    this.profile = state.user;
+
+    this.updatePermission();
     try {
       const currentTheme = this.settings._themes.find(x => x.id == this.settings.theme);
       if (currentTheme) {
@@ -123,27 +136,12 @@ export class SettingsComponent implements OnInit {
     } catch (error) {
       console.info('error: ', error);
     }
+
   }
 
   tooglePermission(id: 'ai' | 'create' | 'delete' | 'duplicate' | 'edit') {
     this.settings.permissions[id] = !this.settings.permissions[id];
     this.updatePermission();
-  }
-
-  async updatePermission() {
-    if (this.updating) { return; }
-    this.updating = true;
-
-    await this.commonServices.saveSettings({
-      language: this.settings.language,
-      permissions: this.settings.permissions,
-      theme: this.settings.theme,
-      settingId: this.settings.settingId
-    });
-    this.settings = await this.commonServices.getCurrentSettings();
-    this.uiServices.notification('Permisos actualizados');
-    this.updating = false;
-
   }
 
   async changeLanguage(language) {
@@ -155,12 +153,7 @@ export class SettingsComponent implements OnInit {
     this.settings.language = language;
 
     this.translate.setDefaultLang(this.settings.language);
-    await this.commonServices.saveSettings({
-      language: this.settings.language,
-      permissions: this.settings.permissions,
-      theme: this.settings.theme,
-      settingId: this.settings.settingId
-    });
+    await this.updatePermission();
   }
 
   async changeTheme(theme) {
@@ -169,12 +162,7 @@ export class SettingsComponent implements OnInit {
       const theme = this.settings._themes.find(x => x.id == this.settings.theme);
       if (theme) {
         this.uiServices.applyTheme(theme);
-        await this.commonServices.saveSettings({
-          language: this.settings.language,
-          permissions: this.settings.permissions,
-          theme: this.settings.theme,
-          settingId: this.settings.settingId
-        });
+        await this.updatePermission();
         try {
           this.themeProps = this.getKeysThemeProps(theme.content as ThemePropertiesDTO);
         } catch (error) { }
@@ -182,6 +170,59 @@ export class SettingsComponent implements OnInit {
     }
     this.updatePermission();
   }
+
+  private async updatePermission() {
+    if (this.updating) { return; }
+    this.updating = true;
+
+    await this.commonServices.saveSettings({
+      language: this.settings.language,
+      permissions: this.settings.permissions,
+      theme: this.settings.theme,
+      settingId: this.settings.settingId
+    });
+
+    this.settings = await this.commonServices.getCurrentSettings();
+
+    this.store.setLanguage(this.settings.language);
+    this.store.setPermissions((this.settings.permissions as PermissionsDTO));
+    this.store.setTheme(this.settings.theme);
+
+    const response = await this.store.getAll();
+    console.log('response: ', response);
+    // this.uiServices.notification('Permisos actualizados');
+    this.updating = false;
+  }
+
+  private async saveDataProfile() {
+    const user: UserDTO = {
+      age: this.profile.age,
+      avatarBody: this.profile.avatarBody,
+      avatarUrl: this.profile.avatarUrl,
+      current: this.profile.current,
+      userName: this.profile.userName,
+      uuid: this.profile.uuid,
+      userId: this.profile.userId,
+    };
+    const result = await this.commonServices.saveUser(user);
+    this.store.setUser(result);
+    return result;
+  }
+
+  private valueChange(value: string) {
+    this.onChange.emit({ action: 'ui_update', value: value });
+  }
+
+  async showView(name: 'empty' | 'dashboard' | 'details', after?: Function) {
+    const newIndex = this.uxContentView.findIndex(form => form.name == name);
+    this.uxView = this.uxContentView[newIndex].class as '-view-1' | '-view-2' | '-view-3';
+    this.uxContentIndex = newIndex;
+
+    await this.uxUtils.wait(500);
+    this.valueChange(this.uxContentView[newIndex].name);
+    if (after) { after() }
+  }
+
   //#endregion DATA
 
   //#region EVENTS
@@ -198,12 +239,18 @@ export class SettingsComponent implements OnInit {
     // SAVE DATA 
   }
 
-  editAvatar() {
+  async editAvatar() {
+    if (this.profileUI.avatarEdit) {
+      this.listAvatarAnimation = 'list-unreveal';
+      await this.uxUtils.wait(1500);
+    }
+
     this.profileUI.avatarEdit = !this.profileUI.avatarEdit;
     if (this.profileUI.avatarEdit) {
       this.defaultAvatars.map((avatar) => {
         avatar.selected = avatar.url == this.profile.avatarUrl;
       });
+      this.listAvatarAnimation = 'list-reveal';
     } else {
       this.saveDataProfile();
     }
@@ -253,23 +300,6 @@ export class SettingsComponent implements OnInit {
     }
   }
 
-  async saveDataProfile() {
-    const user: UserDTO = {
-      age: this.profile.age,
-      avatarBody: this.profile.avatarBody,
-      avatarUrl: this.profile.avatarUrl,
-      current: this.profile.current,
-      userName: this.profile.userName,
-      uuid: this.profile.uuid,
-      userId: this.profile.userId,
-    };
-    const result = await this.commonServices.saveUser(user);
-    return result;
-  }
-
-  valueChange(value: string) {
-    this.onChange.emit({ action: 'ui_update', value: value });
-  }
 
   // #region IMPORT/EXPORTS
   export() {
@@ -359,7 +389,6 @@ export class SettingsComponent implements OnInit {
     return result;
   }
 
-
   //#endregion
 
 
@@ -367,14 +396,6 @@ export class SettingsComponent implements OnInit {
 
 
   //#region CONVERTERS
-  async showView(name: 'empty' | 'dashboard' | 'details', after?: Function) {
-    const newIndex = this.uxContentView.findIndex(form => form.name == name);
-    this.uxView = this.uxContentView[newIndex].class as '-view-1' | '-view-2' | '-view-3';
-    this.uxContentIndex = newIndex;
 
-    await this.uxUtils.wait(500);
-    this.valueChange(this.uxContentView[newIndex].name);
-    if (after) { after() }
-  }
   //#endregion CONVERTERS
 }
