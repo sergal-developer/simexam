@@ -54,6 +54,12 @@
                     (onChange)="onChangeChildren($event)"></type-trivia>
                 <type-true-false *ngIf="attempt.type == 'true-false'" [attempt]="attempt"
                     (onChange)="onChangeChildren($event)"></type-true-false>
+
+                <type-game-attention *ngIf="attempt.type == 'attention'" [attempt]="attempt"></type-game-attention>
+                <type-game-language *ngIf="attempt.type == 'mental-math'" [attempt]="attempt"></type-game-language>
+                <type-game-memory *ngIf="attempt.type == 'memory'" [attempt]="attempt"></type-game-memory>
+                <!-- <type-game-mental *ngIf="attempt.type == 'mental-math'" [attempt]="attempt"></type-game-mental> -->
+
             </div>
         </ng-container>
         <ng-container *ngIf="!attempt">

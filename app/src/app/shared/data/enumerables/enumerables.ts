@@ -80,5 +80,18 @@ export enum QuizType {
     'true-false' = 'true-false',
     popularity = 'popularity',
     'math-quest' = 'math-quest',
-    'reading' = 'reading'
+    'reading' = 'reading',
+    attention = 'attention',
+    memory = 'memory',
+    'mental-math' = 'mental-math',
+    language = 'language',
+}
+
+export enum GameType {
+    findPais = 'findPais',
+    countItems = 'countItems',
+    language = 'language',
+    attention = 'attention',
+    memory = 'memory',
+    'mental-math' = 'mental-math',
 }

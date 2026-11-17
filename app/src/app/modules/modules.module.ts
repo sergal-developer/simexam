@@ -27,6 +27,10 @@ import { TypeSimpleComponent } from './components/type-simple/type-simple.compon
 import { TypetTriviaComponent } from './components/type-trivia/type-trivia.component';
 import { TypeTrueFalseComponent } from './components/type-true-false/type-true-false.component';
 import { TypeGenericComponent } from './components/type-generic/type-generic';
+import { TypeGameAttentionComponent } from './components/type-game-attention/type-game-attention.component';
+import { TypeGameLanguageComponent } from './components/type-game-language/type-game-language.component';
+import { TypeGameMemoryComponent } from './components/type-game-memory/type-game-memory.component';
+import { TypeGameMentalComponent } from './components/type-game-mental-math/type-game-mental.component';
 
 @NgModule({
   imports: [
@@ -56,6 +60,10 @@ import { TypeGenericComponent } from './components/type-generic/type-generic';
     TypeSimpleComponent,
     TypetTriviaComponent,
     TypeTrueFalseComponent,
+    TypeGameAttentionComponent,
+    TypeGameLanguageComponent,
+    TypeGameMemoryComponent,
+    TypeGameMentalComponent,
     QuizEditableComponent,
     QuizSelectorComponent,
     RegisterComponent,
@@ -77,6 +85,10 @@ import { TypeGenericComponent } from './components/type-generic/type-generic';
     TypeSimpleComponent,
     TypetTriviaComponent,
     TypeTrueFalseComponent,
+    TypeGameAttentionComponent,
+    TypeGameLanguageComponent,
+    TypeGameMemoryComponent,
+    TypeGameMentalComponent,
     QuizEditableComponent,
     QuizSelectorComponent,
     RegisterComponent,
@@ -84,14 +96,14 @@ import { TypeGenericComponent } from './components/type-generic/type-generic';
     SplashComponent,
     LogComponent,
     DbClientComponent,
-    
+
   ],
   providers: [EventBusService, CommonServices, UiServices],
 })
-export class MainModule {}
+export class MainModule { }
 
 export let modulePackage: ModulePackage = {
-  modules: [ MainModule ],
+  modules: [MainModule],
   routes: [
     { path: '', component: SplashComponent },
     { path: ':module', component: ModuleComponent },

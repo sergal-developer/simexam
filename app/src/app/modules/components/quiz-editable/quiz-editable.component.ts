@@ -32,6 +32,9 @@ export class QuizEditableComponent implements OnInit {
     { name: 'popularity', id: 'popularity', control: 'type' },
     { name: 'math-quest', id: 'math-quest', control: 'type' },
     { name: 'reading', id: 'reading', control: 'type' },
+    { name: 'attention', id: 'attention', control: 'type' },
+    { name: 'memory', id: 'memory', control: 'type' },
+    { name: 'mentalMath', id: 'mentalMath', control: 'type' },
   ];
 
   questionary: QuestionaryDTO = null;
@@ -244,6 +247,7 @@ export class QuizEditableComponent implements OnInit {
       this.onLoading = true;
       this.index = evt.index;
       const _questionary = normalizeQuestionaryDTO(evt.questionary);
+      console.log('_questionary: ', _questionary);
 
       if (evt.savedata) {
         const response = await this.saveQuestionary(_questionary);

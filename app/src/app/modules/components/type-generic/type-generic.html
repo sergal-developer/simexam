@@ -100,7 +100,8 @@
                                                             <div class="item arrange stacked centers font_variable"
                                                                 (click)="setAnswersFormOfQuestion()">
                                                                 <lu-icon [icon]="luIcon.addAnswers"></lu-icon>
-                                                                <div>{{ 'add' | translate }} {{ 'answer' | translate }}
+                                                                <div>{{ 'add' | translate }} {{ 'answer' | translate
+                                                                    }}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -151,8 +152,6 @@
                                                     </ng-container>
                                                 </div>
 
-
-
                                                 <div class="joined-elements --margin-top-auto">
                                                     <button class="element" (click)="prev()" *ngIf="index != 0">
                                                         <lu-icon [icon]="luIcon.left"></lu-icon>
@@ -189,12 +188,25 @@
 
                     <div class="arrange --align-center">
                         <div class="-text -text-uppercase -text-size-120 -text-bold">Activity</div>
-                        <div class="-text -text-uppercase -text-size-120">{{ currentType.name }}</div>
+                        <div class="-text -text-uppercase -text-size-120">{{ currentType?.name || '' }}</div>
                     </div>
 
                     <div class="joined-elements">
                         <button class="element arrange --padding-left-20 --padding-right-20" (click)="updateType(type)"
                             *ngFor="let type of types" [ngClass]="{'active': type.id == questionary.type }">
+                            <lu-icon [icon]="type.icon"></lu-icon>
+                            <div class="element-text">{{ type.name }}</div>
+                        </button>
+                    </div>
+
+                    <div class="arrange --align-center">
+                        <div class="-text -text-uppercase -text-size-120 -text-bold">Games</div>
+                        <div class="-text -text-uppercase -text-size-120">{{ currentGame?.name || '' }}</div>
+                    </div>
+
+                    <div class="joined-elements">
+                        <button class="element arrange --padding-left-20 --padding-right-20" (click)="updateGame(type)"
+                            *ngFor="let type of games" [ngClass]="{'active': type.id == questionary.type }">
                             <lu-icon [icon]="type.icon"></lu-icon>
                             <div class="element-text">{{ type.name }}</div>
                         </button>
@@ -336,6 +348,7 @@
                         </div>
 
                     </ng-container>
+
                 </div>
             </div>
 

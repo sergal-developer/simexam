@@ -90,7 +90,15 @@ export class TypeGenericComponent implements OnInit {
     { name: 'math-quest', id: 'math-quest', icon: icons.Brain, selected: false },
     { name: 'reading', id: 'reading', icon: icons.BookOpenText, selected: false },
   ];
+
+  games = [
+    { name: 'attention', id: 'attention', icon: icons.GamepadDirectional, selected: false },
+    { name: 'memory', id: 'memory', icon: icons.PlayingCardsFan, selected: false },
+    { name: 'mental-math', id: 'mental-math', icon: icons.PlayingCards, selected: false },
+  ]
+
   currentType = { name: 'trivia', id: 'trivia', icon: icons.ListTodo, selected: false };
+  currentGame: { name: string, id: string, icon: any, selected: boolean } = null;
 
   _generator = new Generator()
 
@@ -159,6 +167,11 @@ export class TypeGenericComponent implements OnInit {
     this.questionary = questionary;
     this.setupQuestionaryType();
     this.setCurrentQuestion();
+  }
+
+  async setGame(questionary: QuestionaryDTO) {
+    this.questionary = questionary;
+    this.setupQuestionaryType();
   }
 
   setCurrentQuestion() {
@@ -232,6 +245,16 @@ export class TypeGenericComponent implements OnInit {
     }
     if (this.questionary.type == QuizType['math-quest']) {
       this.setFormControl({ question: true, answers: true, time: true });
+    }
+
+    if (this.questionary.type == QuizType.attention) {
+      this.setFormControl({ explanation: true, answers: true, time: true });
+    }
+    if (this.questionary.type == QuizType.memory) {
+      this.setFormControl({ explanation: true, answers: true, time: true });
+    }
+    if (this.questionary.type == QuizType['mental-math']) {
+      this.setFormControl({ question: true, hint: true, answers: true, time: true });
     }
   }
 
@@ -430,6 +453,7 @@ export class TypeGenericComponent implements OnInit {
   updateType(type: { id: string, name: string, icon: any }) {
     // update type
     if (this.questionary.type != type.id) {
+      this.currentGame = null;
       this.questionary.type = QuizType[type.id];
 
       this.types.map(ty => {
@@ -438,6 +462,21 @@ export class TypeGenericComponent implements OnInit {
       });
       this.currentType = this.types.find(x => x.selected);
       this.setQuestionary(this.questionary);
+    }
+  }
+
+  updateGame(type: { id: string, name: string, icon: any }) {
+    // update type
+    if (this.questionary.type != type.id) {
+      this.currentType = null;
+      this.questionary.type = QuizType[type.id];
+
+      this.games.map(ty => {
+        ty.selected = this.questionary.type == ty.id;
+        return ty;
+      });
+      this.currentGame = this.games.find(x => x.selected);
+      this.setGame(this.questionary);
     }
   }
 
